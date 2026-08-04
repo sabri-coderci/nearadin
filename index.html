@@ -3,21 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nearadin</title>
-</head>
-<body style="margin:0; display:flex; justify-content:center; align-items:center; min-height:100vh; background:#f4f4f4;">
-<script id="_wauaay">var _wau = _wau || []; _wau.push(["classic", "vxrvxnyhi9", "aay"]);</script><script async src="//waust.at/c.js"></script>
- <br> <script id="_wau1z9">var _wau = _wau || []; _wau.push(["map", "vbnak01zea", "1z9", "344", "172", "green", "default-red"]);</script><script async src="//waust.at/m.js"></script> 
-    
-    <!-- Admatic AUTO ads START -->
-<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
-<script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-<!-- Admatic AUTO ads END -->
-    
-    <!-- Admatic Reklam Kodu -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins> 
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <meta name="description" content="Nearadin.net - Hızlı ve dinamik arama motoru, güncel takvim ve saat bilgileri.">
+    <meta name="keywords" content="arama motoru, nearadin, takvim, saat, google arama, güncel arama">
+    <meta name="author" content="Nearadin">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph (Sosyal Medya ve SEO) -->
+    <meta property="og:title" content="Nearadin.net | Dinamik Arama ve Takvim">
+    <meta property="og:description" content="Hızlı ve özelleştirilmiş arama deneyimi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nearadin.net/">
+
+    <title>Nearadin.net | Dinamik Arama ve Takvim</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Custom Search Engine (CSE) Script -->
+    <!-- YOUR_SEARCH_ENGINE_ID alanını kendi Google CSE ID'niz ile değiştirin -->
+    <script async src="https://cse.google.com/cse.js?cx=YOUR_SEARCH_ENGINE_ID"></script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Widget / Sidebar Stilleri */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        /* Digital Clock */
+        .clock-container {
+            text-align: center;
+        }
+
+        #time {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        #date {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* Dynamic Calendar */
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .day-name {
+            font-weight: 600;
+            color: var(--text-muted);
+            padding-bottom: 5px;
+        }
+
+        .day {
+            padding: 8px 0;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .day.today {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Search Container */
+        .search-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Google CSE Özelleştirme Stilleri */
+        .gsc-control-cse {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .gsc-search-button-v2 {
+            background-color: var(--primary) !important;
+            border-radius: 8px !important;
+        }
+
+        input.gsc-input {
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border-radius: 8px !important;
+            border: 1px solid #334155 !important;
+            padding: 10px !important;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nearadin.net</h1>
+    </header>
+
+    <main>
+        <!-- Sol Yan Menü: Saat & Takvim -->
+        <aside class="sidebar">
+            <div class="widget clock-container">
+                <div id="time">00:00:00</div>
+                <div id="date">Yükleniyor...</div>
+            </div>
+
+            <div class="widget">
+                <div class="calendar-header">
+                    <h3 id="month-year">Takvim</h3>
+                </div>
+                <div class="calendar-days" id="calendar-days">
+                    <!-- Dinamik gün başlıkları ve gün değerleri JS ile eklenecek -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Ana İçerik: Google Arama Alanı -->
+        <section class="search-section">
+            <h2 style="margin-bottom: 20px; font-size: 1.4rem;">Web'de Arayın</h2>
+            
+            <!-- Google Programmable Search Engine Kutusu -->
+            <div class="gcse-search"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nearadin.net - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        // --- 1. Canlı Saat Fonksiyonu ---
+        function updateClock() {
+            const now = new Date();
+            
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('date').textContent = now.toLocaleDateString('tr-TR', options);
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- 2. Dinamik Takvim Fonksiyonu ---
+        function renderCalendar() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const today = now.getDate();
+
+            const monthNames = [
+                "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+                "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+            ];
+
+            document.getElementById('month-year').textContent = `${monthNames[month]} ${year}`;
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const lastDay = new Date(year, month + 1, 0).getDate();
+
+            const daysContainer = document.getElementById('calendar-days');
+            daysContainer.innerHTML = '';
+
+            const dayNames = ['Pz', 'Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct'];
+            dayNames.forEach(day => {
+                const dayEl = document.createElement('div');
+                dayEl.classList.add('day-name');
+                dayEl.textContent = day;
+                daysContainer.appendChild(dayEl);
+            });
+
+            // Ayın ilk gününden önceki boşluklar (Pazar = 0 indeksi ayarlaması)
+            for (let i = 0; i < firstDayIndex; i++) {
+                const emptyEl = document.createElement('div');
+                daysContainer.appendChild(emptyEl);
+            }
+
+            // Günleri doldur
+            for (let day = 1; day <= lastDay; day++) {
+                const dayEl = document.createElement('div');
+                dayEl.classList.add('day');
+                if (day === today) {
+                    dayEl.classList.add('today');
+                }
+                dayEl.textContent = day;
+                daysContainer.appendChild(dayEl);
+            }
+        }
+
+        renderCalendar();
+    </script>
 </body>
 </html>
-
