@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Nearadin.net - Hızlı ve dinamik arama motoru, güncel takvim ve saat bilgileri.">
     <meta name="keywords" content="arama motoru, nearadin, takvim, saat, google arama, güncel arama">
     <meta name="author" content="Nearadin">
@@ -19,9 +19,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Custom Search Engine (CSE) Script -->
-    <!-- YOUR_SEARCH_ENGINE_ID alanını kendi Google CSE ID'niz ile değiştirin -->
-    <script async src="https://cse.google.com/cse.js?cx=a33464712b4234607"></script>
+    <!-- Google Custom Search Engine (CSE) Script (Eklenen CX Kodu) -->
+    <script async src="https://cse.google.com/cse.js?cx=A33464712b4234607"></script>
 
     <style>
         :root {
@@ -40,22 +39,27 @@
             font-family: 'Inter', sans-serif;
         }
 
-        body {
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
             background-color: var(--bg);
             color: var(--text);
             min-height: 100vh;
+        }
+
+        body {
             display: flex;
             flex-direction: column;
         }
 
         header {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: var(--accent);
             letter-spacing: 1px;
         }
@@ -65,58 +69,52 @@
             max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 15px;
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 30px;
+            grid-template-columns: 280px 1fr;
+            gap: 20px;
         }
 
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Widget / Sidebar Stilleri */
+        /* Sidebar Stilleri */
         .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .widget {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .widget h3 {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 12px;
             color: var(--accent);
         }
 
-        /* Digital Clock */
+        /* Saat Stilleri */
         .clock-container {
             text-align: center;
         }
 
         #time {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #ffffff;
         }
 
         #date {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             margin-top: 5px;
         }
 
-        /* Dynamic Calendar */
+        /* Takvim Stilleri */
         .calendar-header {
             display: flex;
             justify-content: space-between;
@@ -126,10 +124,10 @@
 
         .calendar-days {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 3px;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .day-name {
@@ -139,9 +137,10 @@
         }
 
         .day {
-            padding: 8px 0;
+            padding: 6px 0;
             border-radius: 6px;
             background: rgba(255, 255, 255, 0.02);
+            word-break: break-all;
         }
 
         .day.today {
@@ -150,40 +149,156 @@
             font-weight: 700;
         }
 
-        /* Search Container */
+        /* Arama Bölümü */
         .search-section {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 25px;
+            padding: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            overflow: hidden;
         }
 
-        /* Google CSE Özelleştirme Stilleri */
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ------------------------------------------------------------- */
+        /* GOOGLE CSE OVERRIDE - Koyu Tema ve Mobil Uyum Düzenlemeleri   */
+        /* ------------------------------------------------------------- */
         .gsc-control-cse {
             background-color: transparent !important;
             border: none !important;
             padding: 0 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        form.gsc-search-box {
+            margin-bottom: 15px !important;
+        }
+
+        table.gsc-search-box {
+            margin-bottom: 0 !important;
+        }
+
+        .gsc-input-box {
+            background-color: #0f172a !important;
+            border: 1px solid #334155 !important;
+            border-radius: 8px !important;
+        }
+
+        input.gsc-input {
+            background-color: transparent !important;
+            color: #ffffff !important;
+            padding: 8px 12px !important;
+            font-size: 0.95rem !important;
+            text-indent: 0 !important;
         }
 
         .gsc-search-button-v2 {
             background-color: var(--primary) !important;
             border-radius: 8px !important;
+            padding: 10px 16px !important;
+            margin-left: 5px !important;
+            border: none !important;
         }
 
-        input.gsc-input {
+        .gsc-search-button-v2 svg {
+            fill: #ffffff !important;
+        }
+
+        .gsc-webResult.gsc-result {
+            background-color: transparent !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            padding: 12px 0 !important;
+        }
+
+        .gs-title, .gs-title * {
+            color: var(--accent) !important;
+            text-decoration: none !important;
+            font-size: 1rem !important;
+            line-height: 1.3 !important;
+        }
+
+        .gs-title:hover {
+            text-decoration: underline !important;
+        }
+
+        .gs-snippet {
+            color: var(--text-muted) !important;
+            font-size: 0.85rem !important;
+            line-height: 1.4 !important;
+            margin-top: 4px !important;
+        }
+
+        .gsc-url-top, .gsc-url-bottom {
+            color: #4ade80 !important;
+            font-size: 0.75rem !important;
+        }
+
+        .gs-image-box {
+            max-width: 100% !important;
+        }
+
+        .gs-promotion {
             background-color: #0f172a !important;
-            color: #ffffff !important;
-            border-radius: 8px !important;
-            border: 1px solid #334155 !important;
-            padding: 10px !important;
+            border-color: #334155 !important;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .gsc-pagination-number {
+            background-color: #0f172a !important;
+            color: var(--text) !important;
+            border: 1px solid #334155 !important;
+            border-radius: 4px !important;
+            padding: 4px 8px !important;
+        }
+
+        .gsc-pagination-active-page {
+            background-color: var(--primary) !important;
+            color: #fff !important;
+        }
+
+        .gs-spelling, .gs-result .gs-title b {
+            color: #f43f5e !important;
+        }
+
+        /* ------------------------------------------------------------- */
+        /* MOBİL UYUM (RESPONSIVE) MEDYA SORGULARI */
+        /* ------------------------------------------------------------- */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            #time {
+                font-size: 1.8rem;
+            }
+
+            .search-section {
+                padding: 12px;
+            }
+
+            table.gsc-search-box, 
+            table.gsc-search-box td {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .gsc-search-button-v2 {
+                width: 100% !important;
+                margin: 8px 0 0 0 !important;
+                box-sizing: border-box !important;
+            }
         }
     </style>
 </head>
@@ -213,7 +328,7 @@
 
         <!-- Ana İçerik: Google Arama Alanı -->
         <section class="search-section">
-            <h2 style="margin-bottom: 20px; font-size: 1.4rem;">Web'de Arayın</h2>
+            <h2 style="margin-bottom: 15px; font-size: 1.2rem; color: var(--accent);">Web'de Arayın</h2>
             
             <!-- Google Programmable Search Engine Kutusu -->
             <div class="gcse-search"></div>
@@ -269,13 +384,11 @@
                 daysContainer.appendChild(dayEl);
             });
 
-            // Ayın ilk gününden önceki boşluklar (Pazar = 0 indeksi ayarlaması)
             for (let i = 0; i < firstDayIndex; i++) {
                 const emptyEl = document.createElement('div');
                 daysContainer.appendChild(emptyEl);
             }
 
-            // Günleri doldur
             for (let day = 1; day <= lastDay; day++) {
                 const dayEl = document.createElement('div');
                 dayEl.classList.add('day');
