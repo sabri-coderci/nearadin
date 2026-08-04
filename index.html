@@ -3,59 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nearadin Forum - Tartışmalar ve Yorumlar</title>
-    
-    <!-- Giscus'un eşleşme (mapping) yapabilmesi için gerekli Open Graph etiketi -->
-    <meta property="og:title" content="Nearadin Ana Forum Tartışması">
-    
+    <title>Ne Aradın Forum</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f6f8fa;
-            color: #24292e;
-        }
-        header {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #e1e4e8;
-            padding-bottom: 10px;
-        }
-        .forum-container {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #e1e4e8;
-            min-height: 200px;
-        }
+        body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        h1 { text-align: center; color: #333; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Nearadin Topluluk Forumu</h1>
-        <p>Topluluğumuza katılın, sorularınızı sorun ve fikirlerinizi paylaşın.</p>
-    </header>
+    <h1>Ne Aradın Topluluk Forumu</h1>
 
-    <!-- Forum İçerik Alanı -->
-    <main class="forum-container">
-        <script src="https://giscus.app/client.js"
-                data-repo="sabri-coderci/nearadin"
-                data-repo-id="R_kgDOTs_riQ"
-                data-category="General"
-                data-category-id="DIC_kwDOTs_ric4CkW0a"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="light"
-                data-lang="tr"
-                crossorigin="anonymous"
-                async>
-        </script>
-    </main>
+    <!-- Giscus Forum Kutusu -->
+    <script src="https://giscus.app/client.js"
+            data-repo="sabri-coderci/nearadin"
+            data-repo-id="R_kgDOTs_riQ"
+            data-category="General"
+            data-category-id="DIC_kwDOTs_ric4CkW0a"
+            data-discussion-number="2"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="tr"
+            crossorigin="anonymous"
+            async>
+    </script>
 
 </body>
 </html>
