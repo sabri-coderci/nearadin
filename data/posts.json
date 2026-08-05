@@ -1,1 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Yapay Zeka Alanındaki Son Gelişmeler ve Trendler",
+    "category": "teknoloji",
+    "categoryName": "Teknoloji",
+    "date": "2026-08-01",
+    "summary": "Yapay zeka modellerinin güncel durumu ve yazılım geliştiricilere sağladığı kolaylıklar.",
+    "slug": "yapay-zeka-son-gelismeler"
+  },
+  {
+    "id": 2,
+    "title": "Web Geliştiriciler İçin Performans Optimization Teknikleri",
+    "category": "teknoloji",
+    "categoryName": "Teknoloji",
+    "date": "2026-07-28",
+    "summary": "Statik sitelerde ve web uygulamalarında yüklenme sürelerini düşürmek için pratik yöntemler.",
+    "slug": "web-performans-teknikleri"
+  },
+  {
+    "id": 3,
+    "title": "Topluluk Kuralları ve Forum Kullanım Rehberi",
+    "category": "genel",
+    "categoryName": "Genel Tartışma",
+    "date": "2026-07-15",
+    "summary": "Ne Aradın topluluğunda saygılı ve verimli bilgi paylaşımı için dikkat edilmesi gereken hususlar.",
+    "slug": "topluluk-kurallari"
+  }
+]
 
