@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Ne Aradın Topluluk">
     
-    <!-- Canonical URL (Alan adınız nearadin.net olarak güncellendi) -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.nearadin.net/">
 
     <!-- Open Graph / Facebook & WhatsApp Meta Etiketleri -->
@@ -26,10 +26,9 @@
     <meta name="twitter:title" content="Ne Aradın Topluluk Forumu">
     <meta name="twitter:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
 
-    <!-- Performans ve Hız Optimize (Preconnect) -->
+    <!-- Performans Optimize -->
     <link rel="preconnect" href="https://giscus.app">
     <link rel="preconnect" href="https://static.cdn.admatic.com.tr">
-    <link rel="dns-prefetch" href="//waust.at">
 
     <!-- CSS Stilleri -->
     <style>
@@ -74,7 +73,7 @@
         .ad-container {
             margin: 20px 0;
             text-align: center;
-            min-height: 90px; /* Reklam kaymalarını engellemek için minimum yükseklik */
+            min-height: 90px;
         }
     </style>
 </head>
@@ -93,7 +92,7 @@
     <!-- Admatic AUTO ads END -->
 
     <main>
-        <!-- SEO Odaklı Açıklama Metni (Indexlenmeyi Kolaylaştırır) -->
+        <!-- SEO Odaklı Açıklama Metni -->
         <section class="forum-intro">
             <h2>Topluluğumuza Hoş Geldiniz</h2>
             <p><strong>Ne Aradın Topluluk Forumu</strong>, merak ettiğiniz sorulara yanıt bulabileceğiniz, fikirlerinizi özgürce paylaşabileceğiniz ve güncel konular hakkında tartışabileceğiniz bir bilgi platformudur. Aşağıdaki yorum alanından tartışmalara katılabilir, kendi görüşlerinizi belirtebilirsiniz.</p>
@@ -120,10 +119,20 @@
         </section>
     </main>
 
-    <!-- Sayaç ve Analytics -->
+    <!-- Sayaç (Google Botu Olmayan Gerçek Kullanıcılar İçin Yüklenir) -->
     <footer>
-        <script id="_waur7f">var _wau = _wau || []; _wau.push(["dynamic", "w749je0juj", "r7f", "c4302bffffff", "small"]);</script>
-        <script async src="//waust.at/d.js"></script>
+        <script>
+            // Arama motoru botlarını tespit et ve sayacı botlara yükleme
+            if (!/bot|google|baidu|bing|msn|teoma|slurp|yandex/i.test(navigator.userAgent)) {
+                var _wau = _wau || []; 
+                _wau.push(["dynamic", "w749je0juj", "r7f", "c4302bffffff", "small"]);
+                
+                var d = document.createElement("script");
+                d.src = "//waust.at/d.js";
+                d.async = true;
+                document.body.appendChild(d);
+            }
+        </script>
     </footer>
 
 </body>
