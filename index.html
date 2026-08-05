@@ -3,29 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Ne Aradın - Topluluk Forumu</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Temel SEO Meta Etiketleri -->
+    <title>Ne Aradın? - Topluluk Forumu - Sorular, Cevaplar ve Tartışmalar</title>
+    <meta name="description" content="Ne Aradın Topluluk Forumu'na katılın. Güncel konuları tartışın, sorularınızı sorun ve topluluğumuzla bilgi paylaşımında bulunun.">
+    <meta name="keywords" content="ne aradın, forum, topluluk, bilgi paylaşımı, tartışma forumu, soru cevap">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Ne Aradın Topluluk">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.nearadin.net/">
+
+    <!-- Open Graph / Facebook & WhatsApp Meta Etiketleri -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nearadin.net/">
+    <meta property="og:title" content="Ne Aradın Topluluk Forumu">
+    <meta property="og:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
+    <meta property="og:image" content="https://www.nearadin.net/og-image.jpg">
+
+    <!-- Twitter Card Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ne Aradın Topluluk Forumu">
+    <meta name="twitter:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
+
+    <!-- Performans Optimize -->
+    <link rel="preconnect" href="https://giscus.app">
+    <link rel="preconnect" href="https://static.cdn.admatic.com.tr">
+
+    <!-- CSS Stilleri -->
+    <style>
+        :root {
+            --primary-color: #24292e;
+            --text-color: #333333;
+            --bg-color: #f6f8fa;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            max-width: 850px; 
+            margin: 20px auto; 
+            padding: 0 15px; 
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h1 { 
+            color: var(--primary-color); 
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .forum-intro {
+            background-color: var(--bg-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #e1e4e8;
+        }
+        .forum-intro h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .forum-intro p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .ad-container {
+            margin: 20px 0;
+            text-align: center;
+            min-height: 90px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Kategori Navigasyonu -->
-    <nav class="category-nav">
-        <a href="?" class="nav-btn" data-cat="all">Tüm Konular</a>
-        <a href="?kategori=teknoloji" class="nav-btn" data-cat="teknoloji">Teknoloji</a>
-        <a href="?kategori=genel" class="nav-btn" data-cat="genel">Genel Tartışma</a>
-    </nav>
-
-    <!-- Dinamik Başlık ve Açıklama -->
-    <header class="category-header">
-        <h1 id="dynamic-category-title">Tüm Konular</h1>
-        <p id="dynamic-category-desc">Topluluğumuzdaki tüm içerik ve paylaşımları inceleyin.</p>
+    <!-- Header Alanı -->
+    <header>
+        <h1>Ne Aradın? <br> Topluluk Forumu</h1>
     </header>
 
-    <!-- İçerik Listesi Kapsayıcısı -->
-    <main id="posts-container" class="posts-grid">
-        <!-- JavaScript içerikleri buraya yükleyecek -->
+    <!-- Admatic AUTO ads START -->
+    <div class="ad-container">
+        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js" async></script>
+    </div>
+    <!-- Admatic AUTO ads END -->
+
+    <main>
+        <!-- SEO Odaklı Açıklama Metni -->
+        <section class="forum-intro">
+            <h2>Topluluğumuza Hoş Geldiniz</h2>
+            <p><strong>Ne Aradın Topluluk Forumu</strong>, merak ettiğiniz sorulara yanıt bulabileceğiniz, fikirlerinizi özgürce paylaşabileceğiniz ve güncel konular hakkında tartışabileceğiniz bir bilgi platformudur. Aşağıdaki yorum alanından tartışmalara katılabilir, kendi görüşlerinizi belirtebilirsiniz.</p>
+        </section>
+
+        <!-- Yorum/Forum Modülü (Giscus) -->
+        <section id="comments-section">
+            <script src="https://giscus.app/client.js"
+                    data-repo="sabri-coderci/nearadin"
+                    data-repo-id="R_kgDOTs_riQ"
+                    data-category="General"
+                    data-category-id="DIC_kwDOTs_ric4CkW0a"
+                    data-mapping="number"
+                    data-term="2"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="light"
+                    data-lang="tr"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </section>
     </main>
 
-    <script src="app.js"></script>
+    <!-- Sayaç (Google Botu Olmayan Gerçek Kullanıcılar İçin Yüklenir) -->
+    <footer>
+        <script>
+            // Arama motoru botlarını tespit et ve sayacı botlara yükleme
+            if (!/bot|google|baidu|bing|msn|teoma|slurp|yandex/i.test(navigator.userAgent)) {
+                var _wau = _wau || []; 
+                _wau.push(["dynamic", "w749je0juj", "r7f", "c4302bffffff", "small"]);
+                
+                var d = document.createElement("script");
+                d.src = "//waust.at/d.js";
+                d.async = true;
+                document.body.appendChild(d);
+            }
+        </script>
+    </footer>
+
 </body>
 </html>
