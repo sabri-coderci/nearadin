@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Arama Sonuçları - Ne Aradın?</title>
+    <style>
+        .results-list { list-style: none; padding: 0; }
+        .result-item { background: #fff; border: 1px solid #e1e4e8; padding: 15px; margin-bottom: 10px; border-radius: 6px; }
+        .result-item a { color: #0366d6; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .result-item a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h2>Arama Sonuçları: <span id="search-keyword"></span></h2>
+    <div id="results-container">Yükleniyor...</div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        const repoPath = "sabri-coderci/nearadin";
+
+        if (query) {
+            document.getElementById('search-keyword').innerText = query;
+
+            // GitHub Search API (Discussions & Issues)
+            fetch(`https://api.github.com/search/issues?q=repo:${repoPath}+is:discussion+${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('results-container');
+                    
+                    if (!data.items || data.items.length === 0) {
+                        container.innerHTML = "<p>Sonuç bulunamadı.</p>";
+                        return;
+                    }
+
+                    let html = '<ul class="results-list">';
+                    data.items.forEach(item => {
+                        html += `
+                            <li class="result-item">
+                                <a href="${item.html_url}" target="_blank" rel="noopener noreferrer">${item.title}</a>
+                                <p>${item.body ? item.body.substring(0, 140) + '...' : ''}</p>
+                            </li>
+                        `;
+                    });
+                    html += '</ul>';
+                    container.innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById('results-container').innerText = "Sonuçlar çekilirken bir hata oluştu.";
+                });
+        } else {
+            document.getElementById('results-container').innerText = "Lütfen geçerli bir arama terimi girin.";
+        }
+    </script>
+</body>
+</html>
 
