@@ -26,20 +26,20 @@
     <meta name="twitter:title" content="Ne Aradın Topluluk Forumu">
     <meta name="twitter:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DiscussionForumPosting",
-  "headline": "Ne Aradın? - Topluluk Forumu",
-  "description": "Güncel tartışmalar ve bilgi paylaşımı platformu.",
-  "author": {
-    "@type": "Organization",
-    "name": "Ne Aradın Topluluk"
-  }
-}
-</script>
+    <!-- Structured Data (JSON-LD Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DiscussionForumPosting",
+      "headline": "Ne Aradın? - Topluluk Forumu",
+      "description": "Güncel tartışmalar ve bilgi paylaşımı platformu.",
+      "author": {
+        "@type": "Organization",
+        "name": "Ne Aradın Topluluk"
+      }
+    }
+    </script>
 
-    
     <!-- Performans Optimize -->
     <link rel="preconnect" href="https://giscus.app">
     <link rel="preconnect" href="https://static.cdn.admatic.com.tr">
@@ -68,6 +68,51 @@
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
+        /* --- ARAMA FORMU STİLLERİ (EKLENDİ) --- */
+        .search-container {
+            margin: 20px 0 30px 0;
+            width: 100%;
+        }
+        .search-form {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .search-input {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            outline: none;
+            background-color: #ffffff;
+            color: #24292e;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .search-input:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+        }
+        .search-button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #2ea44f;
+            border: 1px solid rgba(27,31,36,0.15);
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background-color 0.2s;
+        }
+        .search-button:hover {
+            background-color: #2c974b;
+        }
+        /* -------------------------------------- */
+
         .forum-intro {
             background-color: var(--bg-color);
             padding: 15px 20px;
@@ -112,19 +157,19 @@
             <p><strong>Ne Aradın Topluluk Forumu</strong>, merak ettiğiniz sorulara yanıt bulabileceğiniz, fikirlerinizi özgürce paylaşabileceğiniz ve güncel konular hakkında tartışabileceğiniz bir bilgi platformudur. Aşağıdaki yorum alanından tartışmalara katılabilir, kendi görüşlerinizi belirtebilirsiniz.</p>
         </section>
 
-       <form class="search-form" action="https://github.com/sabri-coderci/nearadin/discussions" method="GET" target="_blank">
-    <!-- GitHub arama parametresi 'discussions_q' dur -->
-    <input 
-        type="text" 
-        name="discussions_q" 
-        class="search-input" 
-        placeholder="Forumda veya GitHub konularında ara..." 
-        required
-    >
-    <button type="submit" class="search-button">Ara</button>
-</form>
-
-
+        <!-- Arama Formu (Düzeltildi) -->
+        <section class="search-container">
+            <form class="search-form" action="https://github.com/sabri-coderci/nearadin/discussions" method="GET" target="_blank">
+                <input 
+                    type="text" 
+                    name="discussions_q" 
+                    class="search-input" 
+                    placeholder="Forumda veya GitHub konularında ara..." 
+                    required
+                >
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+        </section>
 
         <!-- Yorum/Forum Modülü (Giscus) -->
         <section id="comments-section">
