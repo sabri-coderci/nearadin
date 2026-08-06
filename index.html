@@ -112,11 +112,18 @@
             <p><strong>Ne Aradın Topluluk Forumu</strong>, merak ettiğiniz sorulara yanıt bulabileceğiniz, fikirlerinizi özgürce paylaşabileceğiniz ve güncel konular hakkında tartışabileceğiniz bir bilgi platformudur. Aşağıdaki yorum alanından tartışmalara katılabilir, kendi görüşlerinizi belirtebilirsiniz.</p>
         </section>
 
-        <!-- Form yeni sekmede/sayfada sonuç açar -->
-<form action="search.html" method="GET" target="_blank">
-    <input type="text" name="q" placeholder="Konu veya kelime arayın..." required>
-    <button type="submit">Ara</button>
+       <form class="search-form" action="https://github.com/sabri-coderci/nearadin/discussions" method="GET" target="_blank">
+    <!-- GitHub arama parametresi 'discussions_q' dur -->
+    <input 
+        type="text" 
+        name="discussions_q" 
+        class="search-input" 
+        placeholder="Forumda veya GitHub konularında ara..." 
+        required
+    >
+    <button type="submit" class="search-button">Ara</button>
 </form>
+
 
 
         <!-- Yorum/Forum Modülü (Giscus) -->
