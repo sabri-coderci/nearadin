@@ -70,7 +70,7 @@ def fetch_and_generate():
             <p>{summary}</p>
 
             <div class="card-footer">
-                <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
+                <a href="{link}" target="_blank" rel="noopener">Haberi Oku →</a>
                 <span>Canlı Akış</span>
             </div>
         </div>
