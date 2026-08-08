@@ -63,7 +63,13 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
+<!-- Admatic AUTO ads START -->
+<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
+<script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+<!-- Admatic AUTO ads END -->
+
     <header>nearadin.net - SON DAKİKA</header>
+    <script id="_wauvgw">var _wau = _wau || []; _wau.push(["dynamic", "7jdp69gi36", "vgw", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
     <div class="container">
         <div class="info-box">
             <div><strong>Kaynak:</strong> Canlı Haber Akışı</div>
