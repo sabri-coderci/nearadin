@@ -1,0 +1,30 @@
+name: nearadin.net Otomatik Haber Güncelleyici
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Depoyu Cek
+      uses: actions/checkout@v3
+
+    - name: Python Ortamini Kur
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Haberleri Cek ve HTML Uret
+      run: python fetch_news.py
+
+    - name: Degisiklikleri Push Et
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add index.html
+        git commit -m "Otomatik Guncelleme: $(date +'%Y-%m-%d %H:%M')" || exit 0
+        git push
