@@ -21,6 +21,22 @@ def clean_summary(raw_html, max_chars=180):
         text = text[:max_chars].rsplit(' ', 1)[0] + "..."
     return text
 
+def generate_sitemap():
+    """Google botlarının siteyi hızlıca taraması için dinamik sitemap.xml üretir"""
+    now_iso = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
+    sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nearadin.net/</loc>
+    <lastmod>{now_iso}</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>'''
+    
+    with open("sitemap.xml", "w", encoding="utf-8") as f:
+        f.write(sitemap_content)
+
 def fetch_and_generate():
     req = urllib.request.Request(
         RSS_URL, 
@@ -35,8 +51,8 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # Haber sayısı 30 adete çıkarıldı
-    for index, item in enumerate(items[:30]):
+    # 30 Adet haber işleniyor
+    for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
@@ -46,21 +62,12 @@ def fetch_and_generate():
         
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
-        
-        news_id = f"news-item-{index}"
 
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
             <p>{summary}</p>
-            
-            <!-- Tepki Emojileri -->
-            <div class="emoji-reactions">
-                <button onclick="addReaction('{news_id}', 'like', this)">👍 <span class="count">0</span></button>
-                <button onclick="addReaction('{news_id}', 'surprised', this)">😮 <span class="count">0</span></button>
-                <button onclick="addReaction('{news_id}', 'angry', this)">😡 <span class="count">0</span></button>
-            </div>
 
             <div class="card-footer">
                 <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
@@ -78,6 +85,10 @@ def fetch_and_generate():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>nearadin.net - SON DAKİKA</title>
+    <!-- Google Bot Yönlendirici Meta Etiketleri -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://nearadin.net/" />
+    
     <style>
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; }}
         header {{ background: #0056b3; color: white; text-align: center; padding: 20px 10px; font-size: 24px; font-weight: bold; }}
@@ -86,15 +97,7 @@ def fetch_and_generate():
         .card {{ background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
         .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
         .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }}
-        .card p {{ color: #555; font-size: 14px; margin-bottom: 12px; line-height: 1.5; }}
-        
-        /* Emoji Butonları Stili */
-        .emoji-reactions {{ display: flex; gap: 10px; margin-bottom: 15px; padding-top: 5px; }}
-        .emoji-reactions button {{ background: #f0f2f5; border: 1px solid #e4e6eb; border-radius: 20px; padding: 6px 12px; font-size: 14px; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; align-items: center; gap: 5px; }}
-        .emoji-reactions button:hover {{ background: #e4e6eb; transform: scale(1.05); }}
-        .emoji-reactions button:active {{ transform: scale(0.95); }}
-        .emoji-reactions .count {{ font-size: 12px; font-weight: bold; color: #555; }}
-
+        .card p {{ color: #555; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }}
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
         .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
         .widget-box {{ text-align: center; margin: 20px 0; }}
@@ -120,38 +123,16 @@ def fetch_and_generate():
         <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
         <script async src="//waust.at/d.js"></script>
     </div>
-
-    <!-- Emoji Tıklama Mantığı -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {{
-            const reactions = JSON.parse(localStorage.getItem("news_reactions") || "{{}}");
-            for (const [id, types] of Object.entries(reactions)) {{
-                for (const [type, count] of Object.entries(types)) {{
-                    const btn = document.querySelector(`[onclick*="'${{id}}', '${{type}}'"] .count`);
-                    if (btn) btn.innerText = count;
-                }}
-            }}
-        }});
-
-        function addReaction(newsId, type, btnElement) {{
-            let reactions = JSON.parse(localStorage.getItem("news_reactions") || "{{}}");
-            
-            if (!reactions[newsId]) reactions[newsId] = {{}};
-            if (!reactions[newsId][type]) reactions[newsId][type] = 0;
-
-            reactions[newsId][type] += 1;
-            localStorage.setItem("news_reactions", JSON.stringify(reactions));
-
-            const countSpan = btnElement.querySelector(".count");
-            countSpan.innerText = reactions[newsId][type];
-        }}
-    </script>
 </body>
 </html>
 '''
 
+    # HTML Dosyasını Oluştur
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
+        
+    # Sitemap Dosyasını Oluştur
+    generate_sitemap()
 
 if __name__ == "__main__":
     fetch_and_generate()
