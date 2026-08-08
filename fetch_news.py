@@ -19,12 +19,13 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # Haber sayısını 20 adete çıkardık
+    # BURA: [:20] yazarak haber sayısını 20 yaptık
     for item in items[:20]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
+        pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ''
         
-        # Google News başlıklarındaki kaynak isimlerini temizleme
+        # Google News başlıklarındaki kaynak isimlerini temizleme (isteğe bağlı)
         clean_title = title.rsplit(' - ', 1)[0]
         
         news_html_cards += f'''
@@ -59,7 +60,6 @@ def fetch_and_generate():
         .card p {{ color: #666; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }}
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
         .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
-        .widget-box {{ text-align: center; margin: 20px 0; }}
     </style>
 </head>
 <body>
@@ -71,15 +71,9 @@ def fetch_and_generate():
         </div>
         {news_html_cards}
     </div>
-
-    <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
-    <div class="widget-box">
-        <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
-        <script async src="//waust.at/d.js"></script>
-    </div>
-
 </body>
 </html>
+'''
 
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
