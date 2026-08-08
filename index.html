@@ -3,210 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Temel SEO Meta Etiketleri -->
-    <title>Ne Aradın? - Topluluk Forumu - Sorular, Cevaplar ve Tartışmalar</title>
-    <meta name="description" content="Ne Aradın Topluluk Forumu'na katılın. Güncel konuları tartışın, sorularınızı sorun ve topluluğumuzla bilgi paylaşımında bulunun.">
-    <meta name="keywords" content="ne aradın, forum, topluluk, bilgi paylaşımı, tartışma forumu, soru cevap">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Ne Aradın Topluluk">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.nearadin.net/">
-
-    <!-- Open Graph / Facebook & WhatsApp Meta Etiketleri -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nearadin.net/">
-    <meta property="og:title" content="Ne Aradın Topluluk Forumu">
-    <meta property="og:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
-    <meta property="og:image" content="https://www.nearadin.net/og-image.jpg">
-
-    <!-- Twitter Card Meta Etiketleri -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ne Aradın Topluluk Forumu">
-    <meta name="twitter:description" content="Güncel tartışmalar ve bilgi paylaşımı için Ne Aradın Topluluk Forumu'na davetlisiniz.">
-
-    <!-- Structured Data (JSON-LD Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "DiscussionForumPosting",
-      "headline": "Ne Aradın? - Topluluk Forumu",
-      "description": "Güncel tartışmalar ve bilgi paylaşımı platformu.",
-      "author": {
-        "@type": "Organization",
-        "name": "Ne Aradın Topluluk"
-      }
-    }
-    </script>
-
-    <!-- Performans Optimize -->
-    <link rel="preconnect" href="https://giscus.app">
-    <link rel="preconnect" href="https://static.cdn.admatic.com.tr">
-
-    <!-- CSS Stilleri -->
+    <title>Son Dakika Haberleri - nearadin.net</title>
+    <meta name="description" content="nearadin.net ile en son dakika haberleri, Türkiye ve dünyadan sıcak gelişmeleri anında takip edin.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nearadin.net/">
     <style>
-        :root {
-            --primary-color: #24292e;
-            --text-color: #333333;
-            --bg-color: #f6f8fa;
-        }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-            max-width: 850px; 
-            margin: 20px auto; 
-            padding: 0 15px; 
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        h1 { 
-            color: var(--primary-color); 
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        /* --- ARAMA FORMU STİLLERİ (EKLENDİ) --- */
-        .search-container {
-            margin: 20px 0 30px 0;
-            width: 100%;
-        }
-        .search-form {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        .search-input {
-            flex: 1;
-            padding: 12px 16px;
-            font-size: 1rem;
-            border: 1px solid #d0d7de;
-            border-radius: 6px;
-            outline: none;
-            background-color: #ffffff;
-            color: #24292e;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        .search-input:focus {
-            border-color: #0969da;
-            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
-        }
-        .search-button {
-            padding: 12px 20px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            background-color: #2ea44f;
-            border: 1px solid rgba(27,31,36,0.15);
-            border-radius: 6px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: background-color 0.2s;
-        }
-        .search-button:hover {
-            background-color: #2c974b;
-        }
-        /* -------------------------------------- */
-
-        .forum-intro {
-            background-color: var(--bg-color);
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            border: 1px solid #e1e4e8;
-        }
-        .forum-intro h2 {
-            font-size: 1.3rem;
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .forum-intro p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-            min-height: 90px;
-        }
+        :root { --primary: #0056b3; --bg: #f4f6f9; --card-bg: #ffffff; --border: #e2e8f0; --text: #212529; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        .header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        .meta-bar { background: #fff; padding: 10px 15px; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 20px; font-size: 14px; display: flex; justify-content: space-between; }
+        .news-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin-bottom: 15px; }
+        .news-tag { background: #e9ecef; color: #d9534f; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; }
+        .news-title { margin: 10px 0; font-size: 18px; }
+        .news-title a { color: var(--text); text-decoration: none; }
+        .news-title a:hover { color: var(--primary); }
+        .news-excerpt { font-size: 14px; color: #495057; }
+        .news-footer { font-size: 12px; color: #6c757d; border-top: 1px solid #f1f3f5; padding-top: 8px; margin-top: 10px; }
+        .news-source { font-weight: 600; color: var(--primary); }
+        .footer { text-align: center; padding: 20px; font-size: 13px; color: #6c757d; border-top: 1px solid var(--border); margin-top: 30px; }
     </style>
 </head>
 <body>
-
-    <!-- Header Alanı -->
-    <header>
-        <h1>Ne Aradın? <br> Topluluk Forumu</h1>
+    <header class="header">
+        <h1>nearadin.net - SON DAKİKA</h1>
     </header>
-
-    <!-- Admatic AUTO ads START -->
-    <div class="ad-container">
-        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js" async></script>
+    <div class="container">
+        <div class="meta-bar">
+            <span><strong>Kaynak:</strong> Canlı Haber Akışı</span>
+            <span><strong>Son Güncelleme:</strong> 08.08.2026 20:07</span>
+        </div>
+        <div class="news-grid">
+            
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5wcHB6Tl9QT3dKSXR4Q0pnYUNJT0R6b2Y5SHVXS0ZMTFBMU1pISEZ0ekVmeDNkMWYtWUlFaHpUaVppUkQ5Nkg3SDV3cTdKaTBsZ0QtSjFORmozYUtjRmpMYVo1bjVBMllQaEZBLUI5Nk1LcGlFMkNPQjVfRWlzd9IBfEFVX3lxTE1WQ3dCZHp2S2dJRm0tMk11YThDM2I3SWhPLTZITkltYlFJd0xILWt4ZXpXQjFNT1FROHlORWVPZzVQVWRDTldSRUN0SDIwUHlFU3hWTk1VR090Y2VYN2FKSnE4cTE3b2o1UW9oUmxqOHBLdlllVlhPX1MyZFc?oc=5" target="_blank" rel="noopener noreferrer">Ümraniyespor: 1 Puan İyidir</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQWFlCU3ZqUm9YS1hLczhaaXFDZ3B1eC11cXExUEFQQVVuYVAxOV9MbmxHMGJHX3JQaHVOVFJKbEpBRU9PY3VMbUhmMDNRZUo3ZGFKUDFRMUJVbE44U0pkMlZYZTNnSElKWlRJTXAtUjJrQmtfODBnVS14blAyR2hIelhFYUlzR2hGQTc4SjBoRmPSAY8BQVVfeXFMTlFzSl9Ia1MtaXQ5V1g4V1lpV3Fnc194dTVnaFZqV3NnVmVPT3pHU3lLNk9OeXNHU3EyNWJ6al80LVIybXBvOGZSV0ZuYzB2c1VOZl9uVmRvZU9QeTBsOEhFNURqUzJ0ZExtYU1Vb3hnZngwVkM1djNpeGdIZWlEY0FzaTBHeHhYdGZ0YVdRWlU?oc=5" target="_blank" rel="noopener noreferrer">Rizespor, Pyramids'ı 2-1 Devirdi</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMFdHU2FCVmZ0c3M2YUxlRWs5VjFzZTVEVk9IaktobWwxS2RmYjNGVjFCUFVKT2VfRWZ4Q0wxUHpHdU51Z0h6X2wtWkEtMDctOXQ2NHpMbU1Db25HM3lGMTNhd0hMTE9xNDRia2RGTmxaejJDcHNjdWJJWmZTOHpFTVdvODBkNm1L0gGHAUFVX3lxTE0yN2E4LXd4MEdwc3NHeUcyS0lYTW5ZRlhpZ0c2R3VuVi1sYU1TcE8wMFJQX0c5OWFXdkxEaVlabXBYWDFNZEx2alF6bHVVcFFoSW04WmxzYl9ycmJvWVJRc3prLUxiNndaM1dWNlkxRVp2a0dpNkRxMjVPdkV5cnk0TUdWajR1Zw?oc=5" target="_blank" rel="noopener noreferrer">Sivasspor Teknik Direktörü İyimser</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWGJyYjlGRnRMMkw1OElUM3pPXzhzTzFZZnZyYmdJTlZ2N3VKSGRacERHdTVjMHVqLVg1TjlBMHpFZHdVN0tRb2hrdTlJbGFpRXR0N1NoZEpIY2VyME5SNThOZnAwV1Awa0Q3Mkdyc0pZaWdVMXhnaGItT2JFZDVqVVkzVVRPdVNwVUlr0gGKAUFVX3lxTE5BeUYyYWlGMXlmc0ZJTkJ0Ykk0VnJXYzJOS1Vxb2FTU0g5R3RfZ09INzZKVDVfYTdTeDlDMEZZQS1xck9DZktZZG04NFJ3ZnNCbm5KWlhKM3FSSV95alk4OXpFbV9Wc2Y2b3RVcS1PV19rWERfcG5wZEh1cnRCUl9KOXVsVlNOdEpYZw?oc=5" target="_blank" rel="noopener noreferrer">Fenerbahçe Sturm Graz'a Hazırlanıyor</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQVmlVSEEwdVZhWXJKT01lT0FhYjJjVUhxblg5a1lTV3JVaWpVTWxLemczQVEyaUVxY21NQXA2VkdPNkFwV1h5Z2hoeEM5cE1JcENQYnEwZnB2MDNEbWYwMVloZVBZTkdoV3hncGxNMl9DS3ZIRm5LS2dKV1pkQWdETzhZYXR2ejJvTVR0Ylp4RDdjazNUQl8zemVCS3JoUdIBnAFBVV95cUxQcndPRXBzTjF3bTJISmdOVU5fUElsM1MwODN1elo0Uy1XTUluQkdDbEllM3ljTlNhNjFXdS1xNTBEWVpyVFV1UlQ3WUJQNloxSk00V0t6LUxBQmljdEt2UUtWOUF1X0VWcThUT1dQUU1IbE9IeWpZUHhOeE1RZTJNYlh5ZjlDVG14X3JQYmlxdGhYelRjZlp2SVZOck0?oc=5" target="_blank" rel="noopener noreferrer">Mardin 1969 Teknik Direktörü Cingöz'ün Transfer Planları</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNc21DTktnMmtlVlNJcTdUUjl5SHVsYjBmeS1keE9NTC1ac3I4WW41U21OVjMtSjRsMGowVHRjWkFidW8tT1g4LVotOVhnMG1WeXQ5UEMzdDhGTFF0WHlWeWhrRDB1U3hhMHRlcUVFcVdsOU1fck9JMlNVeksteF9Ja2dDV2pCaWNFaWtKVHQxa1V1ZjI3VFHSAZQBQVVfeXFMTUVMUUxBa0R5blVIM3Z1OHRjMWV4Q1Y0TDdrckRQSjYxaXZ4V0NEZGxpaDh5WjJEd2E2Q3RuQXVJRHhoS2JQVzAxdHVYUEhRa2JTbUY4czluajkyTjl6dUFTUGNVRzFBMW1td3FRMmZlUjRfdXd1MmJQVDk5V1JzVnktZW9STW1DR3dFQzE4U2k1Q3lQaw?oc=5" target="_blank" rel="noopener noreferrer">İsmail Köybaşı'nın Jübilesinde Göztepe Galip</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNYUk3QlBJb0wyM1U3R0gtWHRlOG1TcTlGOFB3b29nOWVkdlBHeDBHU0Ntd2lzeHFGc1g5RnExYnhaNC1sLUpmN1ktak9HOXNLeXo2WGw1S25JN2xOMjBzNXJXUl96VnRkcE1jNkNaOWZFdGVRdHR6TmxFUUIxUkFUTGlfem_SAYMBQVVfeXFMUGJ0aDV3OXJKNUlPNkZwc1RINGtqM3JyUnVya01lazZRcGxQd09UVnh1aDBOakF4NFRqd0s1SW5kelV4amRfck5FT0FTZ0RvQkx3OUtvdnRMc0dUeThWSnpYellrTzdJWVRqSlk5Ul9KcUtXS0lFM1FqeDFVMURodU1VWXc?oc=5" target="_blank" rel="noopener noreferrer">Göztepe, Trabzonspor'u 2-1 Yendi</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <span class="news-tag">Son Dakika</span>
+                <h3 class="news-title"><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPSkZULTd6cFQ4WW9hLURYbkJkb3Zwb2dpa2JlU1M4TXlsZWtfSHFYSVV4MXI5NnNGdnA4OVMwTzF0QmlfQUxsR00xWFFXWEloc3pMZng0SzFDMjM1RElQcDNRem9DeV83c3hBbTF5ODNHakNOaWRNTWhKaGNqQ2xZalFqZDl2UzN0NEdHa3ZiSnpoWGJGaE4w0gGWAUFVX3lxTE45enNYcExfSU5Vcnd2dmVCQWF6X3RtUXpTc2xzMHRBRWtTb28yT1VvTzNuWENnOGF2TG91QWxqbHNQeThGOEpGRGpzUHprWEtOSjZUTEtPVjl4V0FJMlRlbWdKbWJ5bnJ2ZURVU2xxZTdvU1JhZ1JPYjg0ZWtqOWdkYlZrbjFyNG9MTEV6SWJBdE1xUkFQdw?oc=5" target="_blank" rel="noopener noreferrer">Esenler Erokspor, Sivasspor ile Berabere Kaldı</a></h3>
+                <p class="news-excerpt">Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+                <div class="news-footer">
+                    <span class="news-source">nearadin.net (Son Dakika)</span> • Canlı Akış
+                </div>
+            </article>
+        
+        </div>
+        <footer class="footer">
+            <p>&copy; 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+        </footer>
     </div>
-    <!-- Admatic AUTO ads END -->
-
-    <main>
-        <!-- SEO Odaklı Açıklama Metni -->
-        <section class="forum-intro">
-            <h2>Topluluğumuza Hoş Geldiniz</h2>
-            <p><strong>Ne Aradın Topluluk Forumu</strong>, merak ettiğiniz sorulara yanıt bulabileceğiniz, fikirlerinizi özgürce paylaşabileceğiniz ve güncel konular hakkında tartışabileceğiniz bir bilgi platformudur. Aşağıdaki yorum alanından tartışmalara katılabilir, kendi görüşlerinizi belirtebilirsiniz.</p>
-        </section>
-
-        <!-- Arama Formu (Düzeltildi) -->
-        <section class="search-container">
-            <form class="search-form" action="https://github.com/sabri-coderci/nearadin/discussions" method="GET" target="_blank">
-                <input 
-                    type="text" 
-                    name="discussions_q" 
-                    class="search-input" 
-                    placeholder="Forumda veya GitHub konularında ara..." 
-                    required
-                >
-                <button type="submit" class="search-button">Ara</button>
-            </form>
-        </section>
-
-        <!-- Yorum/Forum Modülü (Giscus) -->
-        <section id="comments-section">
-            <script src="https://giscus.app/client.js"
-                    data-repo="sabri-coderci/nearadin"
-                    data-repo-id="R_kgDOTs_riQ"
-                    data-category="General"
-                    data-category-id="DIC_kwDOTs_ric4CkW0a"
-                    data-mapping="number"
-                    data-term="2"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="bottom"
-                    data-theme="light"
-                    data-lang="tr"
-                    crossorigin="anonymous"
-                    async>
-            </script>
-        </section>
-    </main>
-
-    <!-- Sayaç (Google Botu Olmayan Gerçek Kullanıcılar İçin Yüklenir) -->
-    <footer>
-        <script>
-            // Arama motoru botlarını tespit et ve sayacı botlara yükleme
-            if (!/bot|google|baidu|bing|msn|teoma|slurp|yandex/i.test(navigator.userAgent)) {
-                var _wau = _wau || []; 
-                _wau.push(["dynamic", "w749je0juj", "r7f", "c4302bffffff", "small"]);
-                
-                var d = document.createElement("script");
-                d.src = "//waust.at/d.js";
-                d.async = true;
-                document.body.appendChild(d);
-            }
-        </script>
-    </footer>
-
 </body>
 </html>
