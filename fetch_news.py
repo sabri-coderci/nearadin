@@ -7,29 +7,18 @@ import re
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
-def clean_summary(raw_html, max_chars=200):
+def clean_summary(raw_html, max_chars=180):
     if not raw_html:
         return ""
-    
-    # 1. HTML etiketlerini ve Script/Style içeriklerini temizle
     text = re.sub(r'<script.*?>.*?</script>', '', raw_html, flags=re.DOTALL)
     text = re.sub(r'<style.*?>.*?</style>', '', text, flags=re.DOTALL)
     text = re.sub(r'<.*?>', '', text)
-    
-    # 2. HTML karakter kodlarını çöz (&nbsp;, &amp; vs.)
     text = html.unescape(text).strip()
-    
-    # 3. Fazla boşlukları ve yeni satırları temizle
     text = re.sub(r'\s+', ' ', text)
-    
-    # 4. Google News RSS özetinin sonundaki kaynak listesini temizle (örn: Hürriyet, Milliyet vb.)
     if ' font' in text:
         text = text.split(' font')[0]
-        
-    # 5. Belirlenen karakter sınırına göre kes
     if len(text) > max_chars:
         text = text[:max_chars].rsplit(' ', 1)[0] + "..."
-        
     return text
 
 def fetch_and_generate():
@@ -46,27 +35,33 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # 20 Adet haber işleniyor
-    for item in items[:30]:
+    # Haber sayısı 30 adete çıkarıldı
+    for index, item in enumerate(items[:30]):
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
         
-        # Google News başlıklarındaki kaynak isimlerini temizleme
         clean_title = title.rsplit(' - ', 1)[0]
-        
-        # Türkçe haber özetini temizleme (Max 180 Karakter)
         summary = clean_summary(description, max_chars=180)
         
-        # Eğer özet çekilemezse yedek Türkçe metin koy
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
         
+        news_id = f"news-item-{index}"
+
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
             <p>{summary}</p>
+            
+            <!-- Tepki Emojileri -->
+            <div class="emoji-reactions">
+                <button onclick="addReaction('{news_id}', 'like', this)">👍 <span class="count">0</span></button>
+                <button onclick="addReaction('{news_id}', 'surprised', this)">😮 <span class="count">0</span></button>
+                <button onclick="addReaction('{news_id}', 'angry', this)">😡 <span class="count">0</span></button>
+            </div>
+
             <div class="card-footer">
                 <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -91,18 +86,26 @@ def fetch_and_generate():
         .card {{ background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
         .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
         .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }}
-        .card p {{ color: #555; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }}
+        .card p {{ color: #555; font-size: 14px; margin-bottom: 12px; line-height: 1.5; }}
+        
+        /* Emoji Butonları Stili */
+        .emoji-reactions {{ display: flex; gap: 10px; margin-bottom: 15px; padding-top: 5px; }}
+        .emoji-reactions button {{ background: #f0f2f5; border: 1px solid #e4e6eb; border-radius: 20px; padding: 6px 12px; font-size: 14px; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; align-items: center; gap: 5px; }}
+        .emoji-reactions button:hover {{ background: #e4e6eb; transform: scale(1.05); }}
+        .emoji-reactions button:active {{ transform: scale(0.95); }}
+        .emoji-reactions .count {{ font-size: 12px; font-weight: bold; color: #555; }}
+
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
         .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
         .widget-box {{ text-align: center; margin: 20px 0; }}
     </style>
 </head>
 <body>
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
 
-<!-- Admatic AUTO ads START -->
-<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
-<script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-<!-- Admatic AUTO ads END -->
     <header>nearadin.net - SON DAKİKA</header>
     <div class="container">
         <div class="info-box">
@@ -118,6 +121,31 @@ def fetch_and_generate():
         <script async src="//waust.at/d.js"></script>
     </div>
 
+    <!-- Emoji Tıklama Mantığı -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {{
+            const reactions = JSON.parse(localStorage.getItem("news_reactions") || "{{}}");
+            for (const [id, types] of Object.entries(reactions)) {{
+                for (const [type, count] of Object.entries(types)) {{
+                    const btn = document.querySelector(`[onclick*="'${{id}}', '${{type}}'"] .count`);
+                    if (btn) btn.innerText = count;
+                }}
+            }}
+        }});
+
+        function addReaction(newsId, type, btnElement) {{
+            let reactions = JSON.parse(localStorage.getItem("news_reactions") || "{{}}");
+            
+            if (!reactions[newsId]) reactions[newsId] = {{}};
+            if (!reactions[newsId][type]) reactions[newsId][type] = 0;
+
+            reactions[newsId][type] += 1;
+            localStorage.setItem("news_reactions", JSON.stringify(reactions));
+
+            const countSpan = btnElement.querySelector(".count");
+            countSpan.innerText = reactions[newsId][type];
+        }}
+    </script>
 </body>
 </html>
 '''
