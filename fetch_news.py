@@ -12,7 +12,7 @@ def get_news():
     
     articles = []
     # En güncel 8 haberi çek
-    for item in root.findall('./channel/item')[:8]:
+    for item in root.findall('./channel/item')[:20]:
         title = item.find('title').text if item.find('title') is not None else ""
         link = item.find('link').text if item.find('link') is not None else "#"
         
