@@ -15,21 +15,32 @@
         .card h2 { margin: 0 0 10px 0; font-size: 18px; color: #111; }
         .card p { color: #666; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }
         .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }
-        .card-footer a { color: #0056b3; text-decoration: none; font-weight: bold; }
+        .read-btn { background: #0056b3; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 13px; font-weight: bold; }
+        .read-btn:hover { background: #004085; }
+        .widget-box { text-align: center; margin: 25px 0; }
+
+        /* Modal (Açılır Pencere) Stilleri */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: white; width: 92%; max-width: 900px; height: 85vh; border-radius: 10px; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+        .modal-header { background: #0056b3; color: white; padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+        .modal-header h3 { margin: 0; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 65%; }
+        .modal-actions a { color: white; text-decoration: underline; margin-right: 12px; font-size: 13px; }
+        .close-btn { background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .modal-body { flex: 1; border: none; width: 100%; height: 100%; }
     </style>
 </head>
 <body>
 <!-- Admatic AUTO ads START -->
-<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
+<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
 <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
 <!-- Admatic AUTO ads END -->
 
     <header>nearadin.net - SON DAKİKA</header>
-    <script id="_wauvgw">var _wau = _wau || []; _wau.push(["dynamic", "7jdp69gi36", "vgw", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    
     <div class="container">
         <div class="info-box">
             <div><strong>Kaynak:</strong> Canlı Haber Akışı</div>
-            <div><strong>Son Güncelleme:</strong> 08.08.2026 20:33</div>
+            <div><strong>Son Güncelleme:</strong> 08.08.2026 20:38</div>
         </div>
         
         <div class="card">
@@ -37,7 +48,7 @@
             <h2>Mekke Ortak Savunma Anlaşması | Dışişleri Bakanı Hakan Fidan: Anlaşma bir ülkeyi hedef almıyor</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxONGtVU19BcFdscnlUekx1SDUtcFpvVTZjaXlZVjlheTc1NEJTNF8wU1pLdlRqelJ6dFpnX18xcEhEZ25aM0ZFZk9nc1ZDX0FUYUFOeWlLVS1ESHlrN1RhcGVhVGN0WFVRdlhpbUtvNkVpVzZraGF5RWs0Y3ZNbVgwVnltczdzWFU0emhYNnEyaDlfajVsYi1xU3Y1RThpcEtTX1ZvaWNJN3l5U09L0gGyAUFVX3lxTFBxMURHOEtyLTBBYXpCbE5xejRjMk1nMU5seDRzRUpHMDJTd1ZyZm9URWo4eWc4TlRDd3VaeTV4QlFQbTRvUzhQcUh3aE5pbjJLMGttX3FkOUZMbU9jM3dCWDEyMDBfU251M3hKUG9ONy05V24yTm9jZmUxVk9SeWotM0kzVGlmQjBGWktZOElZdERtT1RhNWVrLXJzdU1manhSZERjTVpSRlZiUUc4RHJuU1E?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMirAFBVV95cUxONGtVU19BcFdscnlUekx1SDUtcFpvVTZjaXlZVjlheTc1NEJTNF8wU1pLdlRqelJ6dFpnX18xcEhEZ25aM0ZFZk9nc1ZDX0FUYUFOeWlLVS1ESHlrN1RhcGVhVGN0WFVRdlhpbUtvNkVpVzZraGF5RWs0Y3ZNbVgwVnltczdzWFU0emhYNnEyaDlfajVsYi1xU3Y1RThpcEtTX1ZvaWNJN3l5U09L0gGyAUFVX3lxTFBxMURHOEtyLTBBYXpCbE5xejRjMk1nMU5seDRzRUpHMDJTd1ZyZm9URWo4eWc4TlRDd3VaeTV4QlFQbTRvUzhQcUh3aE5pbjJLMGttX3FkOUZMbU9jM3dCWDEyMDBfU251M3hKUG9ONy05V24yTm9jZmUxVk9SeWotM0kzVGlmQjBGWktZOElZdERtT1RhNWVrLXJzdU1manhSZERjTVpSRlZiUUc4RHJuU1E?oc=5', 'Mekke Ortak Savunma Anlaşması | Dışişleri Bakanı Hakan Fidan: Anlaşma bir ülkeyi hedef almıyor')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -47,7 +58,7 @@
             <h2>Bakan Uraloğlu açıkladı: 7 saatten 1 saat 45 dakikaya düşecek - Son Dakika Flaş Haberler | Video</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOdzczcUhOSXBBeDh0OGh5Q2htUkJyejF3c1hzTERJRWlRT3c0Ql9WN1hsSFJ4MXpEdHl1bXhuX1EtUDZ4bFNJR0dxRTlCUzJXRWJMcXdna1o5UHdFTmY1ZENrN0txTFNmdklTVTVjenNOZzBVUDRQNXJJOWVWYmdJbGkteHowdWxKTm9lRHU4STdEelM0Y1k1QUtXZWZQR2dHdWc?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiogFBVV95cUxOdzczcUhOSXBBeDh0OGh5Q2htUkJyejF3c1hzTERJRWlRT3c0Ql9WN1hsSFJ4MXpEdHl1bXhuX1EtUDZ4bFNJR0dxRTlCUzJXRWJMcXdna1o5UHdFTmY1ZENrN0txTFNmdklTVTVjenNOZzBVUDRQNXJJOWVWYmdJbGkteHowdWxKTm9lRHU4STdEelM0Y1k1QUtXZWZQR2dHdWc?oc=5', 'Bakan Uraloğlu açıkladı: 7 saatten 1 saat 45 dakikaya düşecek - Son Dakika Flaş Haberler | Video')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -57,7 +68,7 @@
             <h2>Suç örgütleriyle mücadele | Bakan Gürlek: Asla meydanı boş sanmayın, yeni bir boyuta geçeceğiz</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSWJsUHpXWGY2a1F3eFZ3blQ3M21wYVBqZWhKUUdYUWJPeTJVVnpkY19ZZEhsSHJPN1FiYUpRZlpYYTcyZEhGaHd6bVNia2FSM2ZKVFV0bXZPLTZ0YVIza2w2N0FFeVl3azZfcHRuc0E5dEVtU05YQnFxN3JHMzVuLVN5T2JLaW5FbFNKMXdnaGpxby1aOVNqLTdyaHlFSzl2V2pMZXFZZVBCT1U?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSWJsUHpXWGY2a1F3eFZ3blQ3M21wYVBqZWhKUUdYUWJPeTJVVnpkY19ZZEhsSHJPN1FiYUpRZlpYYTcyZEhGaHd6bVNia2FSM2ZKVFV0bXZPLTZ0YVIza2w2N0FFeVl3azZfcHRuc0E5dEVtU05YQnFxN3JHMzVuLVN5T2JLaW5FbFNKMXdnaGpxby1aOVNqLTdyaHlFSzl2V2pMZXFZZVBCT1U?oc=5', 'Suç örgütleriyle mücadele | Bakan Gürlek: Asla meydanı boş sanmayın, yeni bir boyuta geçeceğiz')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -67,17 +78,7 @@
             <h2>2 faili meçhul cinayet aydınlatıldı: Bakan Gürlek duyurdu</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOdTFpRFRianRKMHlBbVdoWVFzMUJYSlJhZ1JBcE5zejZYYkdWY0laWVdLRHBDTGhlb2FockV0V25aVTNvYWpHRDVmRmtFWElkeVcxaHRpVnZldlN0VHpVVy1jV3NQY3pPUVZFTXpmUTJiTldIX1liWVZvUTJYZTlzRFpYUFRldFhyeFVVcUg0aU50WjjSAZgBQVVfeXFMTnZERF9EV2p2WlpzcmsxNldQbVFFT1UwZGhxTDFMdFFSdURudFhFb3dDTjNYblVydXluYU9hOThWV1dNS1p4eVRoVnFzNGJSZFNwT0VVNTRNdDFidUN5T282a0s3eW5wZ1JQbjF6RWk1Mzg4YlI2NmFWWEVWTEhNcnNBNV9TUHJ6T0tWdGhXazdxa2V5ZzRwT3E?oc=5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Menderes Belediyesi'ndeki soruşturmada karar: Belediye Başkanı İlkay Çiçek'in de aralarında bulunduğu 10 kişi tutuklandı</h2>
-            <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
-            <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdGViRTR6d1NheVcxM2QwcnFBWE05UFZvVVdKbXZoY01seUw1WG9hYmdEM3V2dXBMZWN5T3pHd2d0Q1FjajRza0haT3V6al9YUWJTOUxSQWR0cWlQMWtieXNDc1diWnVYNms3dk1uZGV6X2R3S2I5aHo2WHNuVnJ2UUQyN1NUSTgzRmQ2SUdpZURERzVGZ3FBTjh3LXcwcFFkMkFVTFBzbEtvMEVKNkJzMGwyYUlXbGkwVTlsWDUzbzNPbHFUWVhGSjlmRG8zTTFHbWpFSkFCdEp5YVRaUlF3ajd5ZGxUc3NKOUhN?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMikwFBVV95cUxOdTFpRFRianRKMHlBbVdoWVFzMUJYSlJhZ1JBcE5zejZYYkdWY0laWVdLRHBDTGhlb2FockV0V25aVTNvYWpHRDVmRmtFWElkeVcxaHRpVnZldlN0VHpVVy1jV3NQY3pPUVZFTXpmUTJiTldIX1liWVZvUTJYZTlzRFpYUFRldFhyeFVVcUg0aU50WjjSAZgBQVVfeXFMTnZERF9EV2p2WlpzcmsxNldQbVFFT1UwZGhxTDFMdFFSdURudFhFb3dDTjNYblVydXluYU9hOThWV1dNS1p4eVRoVnFzNGJSZFNwT0VVNTRNdDFidUN5T282a0s3eW5wZ1JQbjF6RWk1Mzg4YlI2NmFWWEVWTEhNcnNBNV9TUHJ6T0tWdGhXazdxa2V5ZzRwT3E?oc=5', '2 faili meçhul cinayet aydınlatıldı: Bakan Gürlek duyurdu')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -87,7 +88,17 @@
             <h2>12-18 yaş grubunda ağır suçlar için uygulanan ceza sınırları yükseltildi!</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdXBHcXZpcFBpQXQyUDdGeDVFMzF4VHpQU3NBZF90UzJlY0dZbEdadDhCdmxFcVdYLUt2amdEOTZfOGNfdkF5TW0xMmtucWtzMkFLd3U4b1dHR0dic3Z3cHBIZGZER0plWHZHSWRCZV83ek1rLXY0bkNfRkhmUWNnSXlYai1NWERkMkpfcC14c1BpdExGQU5pWHZVX0p4UUdISlJMUkxhZ1pJUQ?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdXBHcXZpcFBpQXQyUDdGeDVFMzF4VHpQU3NBZF90UzJlY0dZbEdadDhCdmxFcVdYLUt2amdEOTZfOGNfdkF5TW0xMmtucWtzMkFLd3U4b1dHR0dic3Z3cHBIZGZER0plWHZHSWRCZV83ek1rLXY0bkNfRkhmUWNnSXlYai1NWERkMkpfcC14c1BpdExGQU5pWHZVX0p4UUdISlJMUkxhZ1pJUQ?oc=5', '12-18 yaş grubunda ağır suçlar için uygulanan ceza sınırları yükseltildi!')">Haberi Sitede Oku →</button>
+                <span>Canlı Akış</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <span class="badge">SON DAKİKA</span>
+            <h2>Menderes Belediyesi'ndeki soruşturmada karar: Belediye Başkanı İlkay Çiçek'in de aralarında bulunduğu 10 kişi tutuklandı</h2>
+            <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+            <div class="card-footer">
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdGViRTR6d1NheVcxM2QwcnFBWE05UFZvVVdKbXZoY01seUw1WG9hYmdEM3V2dXBMZWN5T3pHd2d0Q1FjajRza0haT3V6al9YUWJTOUxSQWR0cWlQMWtieXNDc1diWnVYNms3dk1uZGV6X2R3S2I5aHo2WHNuVnJ2UUQyN1NUSTgzRmQ2SUdpZURERzVGZ3FBTjh3LXcwcFFkMkFVTFBzbEtvMEVKNkJzMGwyYUlXbGkwVTlsWDUzbzNPbHFUWVhGSjlmRG8zTTFHbWpFSkFCdEp5YVRaUlF3ajd5ZGxUc3NKOUhN?oc=5', 'Menderes Belediyesi'ndeki soruşturmada karar: Belediye Başkanı İlkay Çiçek'in de aralarında bulunduğu 10 kişi tutuklandı')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -97,7 +108,7 @@
             <h2>Cumhurbaşkanı Yardımcısı Yılmaz'dan çerçeve yasa ve Demirtaş açıklaması</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbm5FMjR5NThiS1VvTmRWeG5XMVRGdTBaeldBeHoyNXkzS0NrN0RmOHFKalFTZjVVX1YyblEzR2ZtWXEwU2dBMU56WGdWaXZwTDFNYnRiVGMzb2Jkb3UxNFEyWEhLQXFuUFdFM250QmI3NkZHZ3lfZjZ6RzUwY09SeUpGeUYyODNhc3V3NUNEdVlXTXFIdzFsb1hhaXlqcndsZFJudHZtbmNTdw?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbm5FMjR5NThiS1VvTmRWeG5XMVRGdTBaeldBeHoyNXkzS0NrN0RmOHFKalFTZjVVX1YyblEzR2ZtWXEwU2dBMU56WGdWaXZwTDFNYnRiVGMzb2Jkb3UxNFEyWEhLQXFuUFdFM250QmI3NkZHZ3lfZjZ6RzUwY09SeUpGeUYyODNhc3V3NUNEdVlXTXFIdzFsb1hhaXlqcndsZFJudHZtbmNTdw?oc=5', 'Cumhurbaşkanı Yardımcısı Yılmaz'dan çerçeve yasa ve Demirtaş açıklaması')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -107,7 +118,7 @@
             <h2>YENİ Parti Manisa il başkanı tutuklandı</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE8xak5DRENEUm9jLVkzbGQ0N05CTC1HU3ZYS01xX25YTENYVEdIRVNQZHVCcEgza250VmZXTWdRTlVmQXlnTGoyWTNEN1ltM1MxVnFvaXA2TmRrVlNxeXNDUjdkSU41NTh0U2RrcF82a01EWEU?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMic0FVX3lxTE8xak5DRENEUm9jLVkzbGQ0N05CTC1HU3ZYS01xX25YTENYVEdIRVNQZHVCcEgza250VmZXTWdRTlVmQXlnTGoyWTNEN1ltM1MxVnFvaXA2TmRrVlNxeXNDUjdkSU41NTh0U2RrcF82a01EWEU?oc=5', 'YENİ Parti Manisa il başkanı tutuklandı')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -117,7 +128,17 @@
             <h2>Dışarıdan getirilen sütün parasını istediler: Hesabı gören aile şok oldu</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOZE1HVXBlN3FYYzE3NHNvMHlPdkk3UHhhR1FLMFpUWWxvRUlHY2NLNVB0cDNkZmJoQ29FR09FNnZ0U3dzRExHNzNvUmRjYUN2dXZoNGs0U0NteVE5aW9pYnpBOXFHc3FUbGQyTk5fY0VESGtsNTcwaFZGTXJRaEwxc0FMb3FDVTl4UDQ0RGIzRWU5OTI0LVhJRzR5TmwwcGE2SDFxN05fdw?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMipwFBVV95cUxOZE1HVXBlN3FYYzE3NHNvMHlPdkk3UHhhR1FLMFpUWWxvRUlHY2NLNVB0cDNkZmJoQ29FR09FNnZ0U3dzRExHNzNvUmRjYUN2dXZoNGs0U0NteVE5aW9pYnpBOXFHc3FUbGQyTk5fY0VESGtsNTcwaFZGTXJRaEwxc0FMb3FDVTl4UDQ0RGIzRWU5OTI0LVhJRzR5TmwwcGE2SDFxN05fdw?oc=5', 'Dışarıdan getirilen sütün parasını istediler: Hesabı gören aile şok oldu')">Haberi Sitede Oku →</button>
+                <span>Canlı Akış</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <span class="badge">SON DAKİKA</span>
+            <h2>Düğün gününde katil oldu! Damat adayı dünyaevi yerine cezaevine girdi</h2>
+            <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
+            <div class="card-footer">
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMilAFBVV95cUxOTnNUNEJDZWJEZkNRWDlQMTdaNzRxZEhmNHY4Sm9JM2xQbDJBWi1vNUNkbWMyRVN4VVdaUjA3aWFITWJ2YmZKY0hNWGo1bTlEc0hTRkUzOFZIYnFBLWFETUZHVE1HQ2daLW11QzNOb194UWhRMnVTMFlvb0s1aUltRWk0TzVpR2hqd0lGdHUxLTBhaVVV0gGPAUFVX3lxTFBHZ2ZCMWNSaGVsa0l1REdYNGt0RHBtcmtoeFJlM290eE9fUEVlbzJRaHlURi1Ta0ZaejFRZU9XZVJDV01UUHY2U0U5azZjZXQ0YkgxbzJWNzVGZWVvaEU4Zm1yeEdkR1JqN3VZMDgzMzF6dUczYkVGTkZOWjRndHBVUFZvdUJzeVhaX2J4ZnVN?oc=5', 'Düğün gününde katil oldu! Damat adayı dünyaevi yerine cezaevine girdi')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -127,7 +148,7 @@
             <h2>İran: ABD mutabakatı ihlal etti, biz de karşılık verdik</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPbDl0b3ZRa0hWQnU2R2ZTOTd5aGZLeVhWdVZZU3ktb3ZVN2FvZ3lkaV90a1Rhb1NPRVdvSmFBczJsbGc2RTd2eC0xSldkamY5TUU0SVQzY1FNeHhPTklUWHZiS0pnMk5DT2IwYjJCR2M5TndGM3BWc1VfTjV2MXhLSXJmUlFfU292UzF1ZUxNUUFzbVU?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMikwFBVV95cUxPbDl0b3ZRa0hWQnU2R2ZTOTd5aGZLeVhWdVZZU3ktb3ZVN2FvZ3lkaV90a1Rhb1NPRVdvSmFBczJsbGc2RTd2eC0xSldkamY5TUU0SVQzY1FNeHhPTklUWHZiS0pnMk5DT2IwYjJCR2M5TndGM3BWc1VfTjV2MXhLSXJmUlFfU292UzF1ZUxNUUFzbVU?oc=5', 'İran: ABD mutabakatı ihlal etti, biz de karşılık verdik')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -137,7 +158,7 @@
             <h2>ABD basını: Trump'ın üst düzey generali İran savaşından çıkış yolu arıyor</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQZnpfRzY4cFVWdmk5bkhReHNSRFVLbVMwZXgzYTFrbzZ1eTlzb1YxMFNfTlloeXBUcGlwQ1cydlVIUkNLR1Vzc1U3blMxZWo4SU9vSjI3WmxBeERKODlrS2p2WnlYUkxxanI5b2VNeUZIbllna29rSWlKbzJwVUwzRkxOczYtWDBwNkFzN1F3VkNuS2E1VGR6ZTZtNTZRVmhtbXl0MEdpOA?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMipwFBVV95cUxQZnpfRzY4cFVWdmk5bkhReHNSRFVLbVMwZXgzYTFrbzZ1eTlzb1YxMFNfTlloeXBUcGlwQ1cydlVIUkNLR1Vzc1U3blMxZWo4SU9vSjI3WmxBeERKODlrS2p2WnlYUkxxanI5b2VNeUZIbllna29rSWlKbzJwVUwzRkxOczYtWDBwNkFzN1F3VkNuS2E1VGR6ZTZtNTZRVmhtbXl0MEdpOA?oc=5', 'ABD basını: Trump'ın üst düzey generali İran savaşından çıkış yolu arıyor')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -147,17 +168,17 @@
             <h2>ABD Senatosu, Todd Blanche'ın Adalet Bakanı olmasına onay verdi</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUlQbm1iX3I1X2dtbFl0eWlUU2FNSjVWeUVYd3JZZXVpenJjOEI3bEdyNFNfbjYtQUNRSFNVYTR1TF9NdlZOVHlPRzJwOWRWR2tGZG51dW16V094ZzFDVzVWWnZMa29hOVVaRW9lZTcyb25JMjc2TkZlTDhBYmppU0drT1ZneDJNOFJXR3F0SG5vaExFcXV5THRVWGFQU196RTdQNg?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUlQbm1iX3I1X2dtbFl0eWlUU2FNSjVWeUVYd3JZZXVpenJjOEI3bEdyNFNfbjYtQUNRSFNVYTR1TF9NdlZOVHlPRzJwOWRWR2tGZG51dW16V094ZzFDVzVWWnZMa29hOVVaRW9lZTcyb25JMjc2TkZlTDhBYmppU0drT1ZneDJNOFJXR3F0SG5vaExFcXV5THRVWGFQU196RTdQNg?oc=5', 'ABD Senatosu, Todd Blanche'ın Adalet Bakanı olmasına onay verdi')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
         
         <div class="card">
             <span class="badge">SON DAKİKA</span>
-            <h2>Ceuta sonrası Schengen krizi büyüyor</h2>
+            <h2>Çiçeği burnunda cumhurbaşkanı koltuğa oturmadan ülkenin başkentini gözden çıkardı</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDMWUwNWRzNnhsbEl2NXl6WW1zaXVJSmFZOUV3NTNGR0ktcE5xQjhvcXB3RjV6a2F4Qm8wVjMxUFZfenhnSm0zSmg4Z210aGdUUGdrT3ZaekI3Vk9h0gFiQVVfeXFMTUs3YWhxU1ZpRWhkSE1TaVlrN0FoOE91Q0l3VkFlc3pLZ2hKMXlLTzR5SHA5LTBpeWoxSnludUNEa1FUcXpIOUIya3BVUEUwOVZTSV9nNnpnc0M3eVBYcmI2a3c?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMitAFBVV95cUxOX0I0TlYtX1BDRzNNSVBvSGRaV0w3MmZuaDhYZXM5azNhVjYzLThoUUU3RDBXa1VsbE9vSUt1UXhJamRVSkdHNDNDRnN6eTZ5aWd6Ny13RDJWY3VYVC1CVlF3N01yUGtaNFlXcXFtN0c3aXM5Y25qdHZGS1pUME4wUnpsY05fVHFqeTd5cVFTamFBOEc3TTQ0WkE2M0FZcFBGZGlDUDhpY0tqLU9TMFlybU5EWlU?oc=5', 'Çiçeği burnunda cumhurbaşkanı koltuğa oturmadan ülkenin başkentini gözden çıkardı')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -167,7 +188,7 @@
             <h2>Altında yükseliş sürecek mi? Yıl sonu için gram altında rakam verdi: "Bekleyin" - Finans haberlerinin doğru adresi - Mynet Finans Haber</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNN09OaHd5Z0tzdzZjeDhzZ21aODFXYkpOcGwyTVRFbzF1WjAzcnVxM1dqTXNlVExQbjYtVkpPOWE1MkhGdHo5T1hPdG5XLXlnbjRteUdkRU9NSmtMV2oyWVRGMmZGS1owQlpzUzhXUi1ZVVMxRmJYTzZFTXAxTjc3UXp0dUd2TFFVVFFlaVByNHVaQ3RZajJNQ0g1VVA2Tm5OblNsYUJJdE9SWWxPcWJIc0NZWk5xZkpwVEJEOC1MQkRlUjdf0gG2AUFVX3lxTE5iVW1YNUhpdWVaUVViaDRYVVYyQ3pVRHNHWjFSd2I0OWlaTVpKOFdjVmxYOGk3Y1luOHgwT3NIOUhRMHZwbDVtaTB5c2NWUnR2UEJyNGJpTWhBSmVRU1ozV0szWDFuUDRhUjhpdlBYVFg2aFhBOWtUYjNBWnR5bjJRYVJUTFE0NWc4eTF1QXlmcFJXR2ppUl92NXczYl9FS3VodHZYanNROV9KSDVxamhQcFNvRDRn?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMixAFBVV95cUxNN09OaHd5Z0tzdzZjeDhzZ21aODFXYkpOcGwyTVRFbzF1WjAzcnVxM1dqTXNlVExQbjYtVkpPOWE1MkhGdHo5T1hPdG5XLXlnbjRteUdkRU9NSmtMV2oyWVRGMmZGS1owQlpzUzhXUi1ZVVMxRmJYTzZFTXAxTjc3UXp0dUd2TFFVVFFlaVByNHVaQ3RZajJNQ0g1VVA2Tm5OblNsYUJJdE9SWWxPcWJIc0NZWk5xZkpwVEJEOC1MQkRlUjdf0gG2AUFVX3lxTE5iVW1YNUhpdWVaUVViaDRYVVYyQ3pVRHNHWjFSd2I0OWlaTVpKOFdjVmxYOGk3Y1luOHgwT3NIOUhRMHZwbDVtaTB5c2NWUnR2UEJyNGJpTWhBSmVRU1ozV0szWDFuUDRhUjhpdlBYVFg2aFhBOWtUYjNBWnR5bjJRYVJUTFE0NWc4eTF1QXlmcFJXR2ppUl92NXczYl9FS3VodHZYanNROV9KSDVxamhQcFNvRDRn?oc=5', 'Altında yükseliş sürecek mi? Yıl sonu için gram altında rakam verdi: "Bekleyin" - Finans haberlerinin doğru adresi - Mynet Finans Haber')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -177,7 +198,7 @@
             <h2>Altın neden yükseliyor? Fiyatları yukarı taşıyan 5 kritik gelişme</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPc1hGeXlEajhiZ1VSNVNJZXB1OEtKYW1xUXNybmQ3ZXRZOW9tMTZQeklCNG9xQktJVWJRTTZhV1NUM1FkaE1SUGRwUG43aFRhUnBFQnN5ZmNYeERsWm1jcDRZWjRyaElQRkFfbGxqMHF3T19sOGsyRUg4bElIR1c5QXhzdzBjT2dpeWczMVpfZlhkcnViUlhnV0dQZVUxdVhpQWVWXzIxYzZUWlk0NkdJZDJMR1FUWFU?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMitwFBVV95cUxPc1hGeXlEajhiZ1VSNVNJZXB1OEtKYW1xUXNybmQ3ZXRZOW9tMTZQeklCNG9xQktJVWJRTTZhV1NUM1FkaE1SUGRwUG43aFRhUnBFQnN5ZmNYeERsWm1jcDRZWjRyaElQRkFfbGxqMHF3T19sOGsyRUg4bElIR1c5QXhzdzBjT2dpeWczMVpfZlhkcnViUlhnV0dQZVUxdVhpQWVWXzIxYzZUWlk0NkdJZDJMR1FUWFU?oc=5', 'Altın neden yükseliyor? Fiyatları yukarı taşıyan 5 kritik gelişme')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -187,7 +208,7 @@
             <h2>Gaz stokları eriyor: Avrupa'nın korktuğu başına geliyor</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNZkl2N2xjT2hyYnhhNWRZVTZ0NExJZzNCSkJEMWV0Sk9JdGdjTFRWRTI4WDRiQ085UFVsa1dyOTg5azVMa2o1T2hBeGtLdEdxYUFOM1JSRUx3d0NCU3V6bFNkOXZYT2RfTU53dXRrQmZvQnVqcXhaZ3NXNGZFTFJPYlVuWDVUVW53WFNvTzU3Ry0?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMikAFBVV95cUxNZkl2N2xjT2hyYnhhNWRZVTZ0NExJZzNCSkJEMWV0Sk9JdGdjTFRWRTI4WDRiQ085UFVsa1dyOTg5azVMa2o1T2hBeGtLdEdxYUFOM1JSRUx3d0NCU3V6bFNkOXZYT2RfTU53dXRrQmZvQnVqcXhaZ3NXNGZFTFJPYlVuWDVUVW53WFNvTzU3Ry0?oc=5', 'Gaz stokları eriyor: Avrupa'nın korktuğu başına geliyor')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -197,7 +218,7 @@
             <h2>847 bin Bitcoin'i olan milyarder Micheal Saylor: Zengin olmak istiyorsanız ev almayın</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxORDIxYmtlMmVOWnpOdE5oVjJEeFZmcW14d0xWa19teGF0ZkVRanRwQ1hyZGU3WFhWT2RxcGRHckdjbjB3Wjh2X2lhVUs5eFNscllnSnV4MW9iVnU2NUduenZrem50bjVQZk1DMlFFN19icldmazhVSm5wNGswU25lRnpZRTg5RzBXMGtBSGRwMXlVak5wWmU1RjBKUC1hd1JoTHNqczFSU2UtX1F5Tk55ZzNpVWtkdERCMWc?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiugFBVV95cUxORDIxYmtlMmVOWnpOdE5oVjJEeFZmcW14d0xWa19teGF0ZkVRanRwQ1hyZGU3WFhWT2RxcGRHckdjbjB3Wjh2X2lhVUs5eFNscllnSnV4MW9iVnU2NUduenZrem50bjVQZk1DMlFFN19icldmazhVSm5wNGswU25lRnpZRTg5RzBXMGtBSGRwMXlVak5wWmU1RjBKUC1hd1JoTHNqczFSU2UtX1F5Tk55ZzNpVWtkdERCMWc?oc=5', '847 bin Bitcoin'i olan milyarder Micheal Saylor: Zengin olmak istiyorsanız ev almayın')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -207,31 +228,57 @@
             <h2>Bursa'da görsel şov başlıyor! Bu sahilde gözler yukarı çevrilecek</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNa0Q1Q2lQOUkxTE52RTl0RlRtajNXRHFYa1RzSFk1U2hLelhVb2ZaZ3RuQ01iTjc1eVZFT3djVGhyeXBLOEpQWlZqOVVQdTZocERaTGNWaDhkY3dxU1VqWVV1R3E2cF8wQkNNMWhkMmN1TlpQRnZWdy1ycWlFajM1NW1vdHplZk5WS2ZIcWg2TkNIM2t5ZnFWMjZlQXZ4RjhzbFhzQ2lOS2RvRlpTYnlFT21R0gG0AUFVX3lxTFBFRnNUQTl1VGhLNFNPcVpkWF9zVTJUNGpVejNVU2E3MnRCRzdkb0d4a1RKZS00eUxlWFVKbW5YVlBpVUNMQWdFQ0FveGNFTzhIYlp0UWRzcWw5R3JRemNNTFRSYTRUajVLS2hTVC03OVZkVXZOOUhrZ1JudWJrWDZMSENSY2wyZVBWVm9JYmtVLTZkV0ZpcTktRjg5WVBaSVVDeGN3amJhdHdJbHZhSjB6SzNVZQ?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMisgFBVV95cUxNa0Q1Q2lQOUkxTE52RTl0RlRtajNXRHFYa1RzSFk1U2hLelhVb2ZaZ3RuQ01iTjc1eVZFT3djVGhyeXBLOEpQWlZqOVVQdTZocERaTGNWaDhkY3dxU1VqWVV1R3E2cF8wQkNNMWhkMmN1TlpQRnZWdy1ycWlFajM1NW1vdHplZk5WS2ZIcWg2TkNIM2t5ZnFWMjZlQXZ4RjhzbFhzQ2lOS2RvRlpTYnlFT21R0gG0AUFVX3lxTFBFRnNUQTl1VGhLNFNPcVpkWF9zVTJUNGpVejNVU2E3MnRCRzdkb0d4a1RKZS00eUxlWFVKbW5YVlBpVUNMQWdFQ0FveGNFTzhIYlp0UWRzcWw5R3JRemNNTFRSYTRUajVLS2hTVC03OVZkVXZOOUhrZ1JudWJrWDZMSENSY2wyZVBWVm9JYmtVLTZkV0ZpcTktRjg5WVBaSVVDeGN3amJhdHdJbHZhSjB6SzNVZQ?oc=5', 'Bursa'da görsel şov başlıyor! Bu sahilde gözler yukarı çevrilecek')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
         
         <div class="card">
             <span class="badge">SON DAKİKA</span>
-            <h2>Çıkarılabilir Bataryalı Telefonlar Geri Dönüyor</h2>
+            <h2>ReVolt RS6 benzinli motosiklet için yeni A101 fırsatı [13 Ağustos 2026] - Teknoloji haberleri</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE4zZ0N0OVZNZWc0T1MwZ2RUeVpFSnJ6VTRmMXdETnRDM3BpZVI2S0kwMU95a1JYRm9Tc2RzYlJzR3hSNlVJaGNsSkZZVzB6UGk5TEFmUXRrUUxuc0Y3eUxLT1JQeWNNV3VPZ2owVDhMNk55QzFBaXpCUkR6QdIBgwFBVV95cUxOeThpck9ncE1udVpRYmdBSnRtZDM0akNUbXFDdFVESHdab3lNWXNscXJpbUhPcDF6NUJLOC1NNUxDWnBERzVmRnlMcVpzWjlFUHN5dEtPTjc2cHdfdFhQTXNiVnlkcmFteE5sWkFMdUNfdU5IUkcxQ0lmZkd1dElWUlg4WQ?oc=5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Toshiba 65UV2363DT televizyon için yeni A101 fırsatı [13-19 Ağustos 2026] - Teknoloji haberleri</h2>
-            <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
-            <div class="card-footer">
-                <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNaDRYNGdFelF6NVJ1UGxIUDJjQ1AzaDQxU1Myd0tucGNueUJDMGFsV3haVEpNUjhRdVlxLWRPODJURHNMc1czUjBVeXdsUkppaHo1Z0xlS3RGSms3YW50VUlCWW11bFd2Nk9ia2JROG5BcGd3bDBvdExwNGU5UjR3aU9Za1IwNHFFTzVuOXAydEVQRFB4R2NhR0dlTQ?oc=5" target="_blank" rel="noopener">Habere Git →</a>
+                <button class="read-btn" onclick="openNews('https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNNUV0Zm05aElSUGRPYVc5VVJ1Tmd3dm5GblVMc3RUdlE2NGtkMUg1dDVUM0FUZXhwUllCbC1MMUJ4Y1J2cHZUUmpuM3E?oc=5', 'ReVolt RS6 benzinli motosiklet için yeni A101 fırsatı [13 Ağustos 2026] - Teknoloji haberleri')">Haberi Sitede Oku →</button>
                 <span>Canlı Akış</span>
             </div>
         </div>
         
     </div>
+
+    <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
+    <div class="widget-box">
+        <script id="_wauvgw">var _wau = _wau || []; _wau.push(["dynamic", "7jdp69gi36", "vgw", "c4302bffffff", "small"]);</script>
+        <script async src="//waust.at/d.js"></script>
+    </div>
+
+    <!-- Sitede Oku Açılır Penceresi (Modal) -->
+    <div id="newsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Haber Detayı</h3>
+                <div class="modal-actions">
+                    <a id="externalLink" href="#" target="_blank">Orijinal Sayfada Aç ↗</a>
+                    <button class="close-btn" onclick="closeNews()">Kapat ✖</button>
+                </div>
+            </div>
+            <iframe id="newsFrame" class="modal-body" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openNews(url, title) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('newsFrame').src = url;
+            document.getElementById('externalLink').href = url;
+            document.getElementById('newsModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeNews() {
+            document.getElementById('newsModal').style.display = 'none';
+            document.getElementById('newsFrame').src = '';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 </body>
 </html>
