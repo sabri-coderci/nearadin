@@ -12,7 +12,49 @@ def clean_html(text):
         return ""
     # HTML etiketlerini ve özel karakterleri temizle
     clean = re.sub('<.*?>', '', text)
+    clean = re.sub(r'\s+', ' ', clean)
     return html.unescape(clean).strip()
+
+def fetch_article_text(url, max_chars=220):
+    """
+    Haberin kendi web sayfasına bağlanır ve içeriğinden 
+    belirlenen karakter sayısı kadar metin çeker.
+    """
+    try:
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
+        )
+        # Yönlendirmeleri takip ederek gerçek habere ulaşıyoruz
+        with urllib.request.urlopen(req, timeout=5) as response:
+            html_content = response.read().decode('utf-8', errors='ignore')
+            
+            # 1. Öncelik: Paragraf <p> etiketlerinin içindeki metinleri topla
+            paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', html_content, re.IGNORECASE | re.DOTALL)
+            full_text = ""
+            for p in paragraphs:
+                cleaned_p = clean_html(p)
+                # Anlamsız çok kısa cümleleri eliyoruz
+                if len(cleaned_p) > 30:
+                    full_text += " " + cleaned_p
+                    if len(full_text) >= max_chars:
+                        break
+            
+            if full_text.strip():
+                extracted = full_text.strip()
+                return extracted[:max_chars] + "..." if len(extracted) > max_chars else extracted
+
+            # 2. Öncelik (Yedek): Meta description'dan çek
+            meta_desc = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', html_content, re.IGNORECASE)
+            if meta_desc:
+                extracted = clean_html(meta_desc.group(1))
+                if len(extracted) > 20:
+                    return extracted[:max_chars] + "..." if len(extracted) > max_chars else extracted
+
+    except Exception:
+        pass # Bağlantı zaman aşımına uğrarsa yedek metne düşer
+        
+    return ""
 
 def fetch_and_generate():
     req = urllib.request.Request(
@@ -28,25 +70,29 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # 20 Adet haber çekiliyor
+    # 20 Adet haber işleniyor
     for item in items[:20]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
-        description = item.find('description').text if item.find('description') is not None else ''
+        rss_desc = item.find('description').text if item.find('description') is not None else ''
         
         # Google News başlıklarındaki kaynak isimlerini temizleme
         clean_title = title.rsplit(' - ', 1)[0]
         
-        # Haber içeriğinden kısa özeti temizleme ve çekme
-        summary = clean_html(description)
-        if not summary:
-            summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
+        # HABERİN KENDİ SAYFASINDAN METİN ÇEKME (220 Karakter Sınırı)
+        site_summary = fetch_article_text(link, max_chars=220)
+        
+        # Eğer siteden çekilemezse RSS'teki açıklamayı veya varsayılan metni kullan
+        if not site_summary:
+            site_summary = clean_html(rss_desc)
+        if not site_summary:
+            site_summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
         
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
-            <p>{summary}</p>
+            <p>{site_summary}</p>
             <div class="card-footer">
                 <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -78,10 +124,6 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
-<!-- Admatic AUTO ads START -->
-<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
-<script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-<!-- Admatic AUTO ads END -->
     <header>nearadin.net - SON DAKİKA</header>
     <div class="container">
         <div class="info-box">
