@@ -7,59 +7,35 @@ import re
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
-def clean_html(text):
-    if not text:
+def clean_summary(raw_html, max_chars=200):
+    if not raw_html:
         return ""
-    # HTML etiketlerini ve özel karakterleri temizle
-    clean = re.sub('<.*?>', '', text)
-    clean = re.sub(r'\s+', ' ', clean)
-    return html.unescape(clean).strip()
-
-def fetch_article_text(url, max_chars=220):
-    """
-    Haberin kendi web sayfasına bağlanır ve içeriğinden 
-    belirlenen karakter sayısı kadar metin çeker.
-    """
-    try:
-        req = urllib.request.Request(
-            url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
-        )
-        # Yönlendirmeleri takip ederek gerçek habere ulaşıyoruz
-        with urllib.request.urlopen(req, timeout=5) as response:
-            html_content = response.read().decode('utf-8', errors='ignore')
-            
-            # 1. Öncelik: Paragraf <p> etiketlerinin içindeki metinleri topla
-            paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', html_content, re.IGNORECASE | re.DOTALL)
-            full_text = ""
-            for p in paragraphs:
-                cleaned_p = clean_html(p)
-                # Anlamsız çok kısa cümleleri eliyoruz
-                if len(cleaned_p) > 30:
-                    full_text += " " + cleaned_p
-                    if len(full_text) >= max_chars:
-                        break
-            
-            if full_text.strip():
-                extracted = full_text.strip()
-                return extracted[:max_chars] + "..." if len(extracted) > max_chars else extracted
-
-            # 2. Öncelik (Yedek): Meta description'dan çek
-            meta_desc = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', html_content, re.IGNORECASE)
-            if meta_desc:
-                extracted = clean_html(meta_desc.group(1))
-                if len(extracted) > 20:
-                    return extracted[:max_chars] + "..." if len(extracted) > max_chars else extracted
-
-    except Exception:
-        pass # Bağlantı zaman aşımına uğrarsa yedek metne düşer
+    
+    # 1. HTML etiketlerini ve Script/Style içeriklerini temizle
+    text = re.sub(r'<script.*?>.*?</script>', '', raw_html, flags=re.DOTALL)
+    text = re.sub(r'<style.*?>.*?</style>', '', text, flags=re.DOTALL)
+    text = re.sub(r'<.*?>', '', text)
+    
+    # 2. HTML karakter kodlarını çöz (&nbsp;, &amp; vs.)
+    text = html.unescape(text).strip()
+    
+    # 3. Fazla boşlukları ve yeni satırları temizle
+    text = re.sub(r'\s+', ' ', text)
+    
+    # 4. Google News RSS özetinin sonundaki kaynak listesini temizle (örn: Hürriyet, Milliyet vb.)
+    if ' font' in text:
+        text = text.split(' font')[0]
         
-    return ""
+    # 5. Belirlenen karakter sınırına göre kes
+    if len(text) > max_chars:
+        text = text[:max_chars].rsplit(' ', 1)[0] + "..."
+        
+    return text
 
 def fetch_and_generate():
     req = urllib.request.Request(
         RSS_URL, 
-        headers={'User-Agent': 'Mozilla/5.0'}
+        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     )
     
     response = urllib.request.urlopen(req)
@@ -74,25 +50,23 @@ def fetch_and_generate():
     for item in items[:20]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
-        rss_desc = item.find('description').text if item.find('description') is not None else ''
+        description = item.find('description').text if item.find('description') is not None else ''
         
         # Google News başlıklarındaki kaynak isimlerini temizleme
         clean_title = title.rsplit(' - ', 1)[0]
         
-        # HABERİN KENDİ SAYFASINDAN METİN ÇEKME (220 Karakter Sınırı)
-        site_summary = fetch_article_text(link, max_chars=220)
+        # Türkçe haber özetini temizleme (Max 180 Karakter)
+        summary = clean_summary(description, max_chars=180)
         
-        # Eğer siteden çekilemezse RSS'teki açıklamayı veya varsayılan metni kullan
-        if not site_summary:
-            site_summary = clean_html(rss_desc)
-        if not site_summary:
-            site_summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
+        # Eğer özet çekilemezse yedek Türkçe metin koy
+        if not summary or len(summary) < 15:
+            summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
         
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
-            <p>{site_summary}</p>
+            <p>{summary}</p>
             <div class="card-footer">
                 <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
