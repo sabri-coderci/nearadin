@@ -19,20 +19,21 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
+    # Haber sayısını 20 adete çıkardık
     for item in items[:20]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
         
+        # Google News başlıklarındaki kaynak isimlerini temizleme
         clean_title = title.rsplit(' - ', 1)[0]
         
-        # 'Habere Git' bağlantısını JavaScript fonksiyonuna yönlendirdik
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
             <p>Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında.</p>
             <div class="card-footer">
-                <button class="read-btn" onclick="openNews('{link}', '{clean_title}')">Haberi Sitede Oku →</button>
+                <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -57,18 +58,8 @@ def fetch_and_generate():
         .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; }}
         .card p {{ color: #666; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }}
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
-        .read-btn {{ background: #0056b3; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 13px; font-weight: bold; }}
-        .read-btn:hover {{ background: #004085; }}
+        .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
         .widget-box {{ text-align: center; margin: 20px 0; }}
-
-        /* Modal (Açılır Pencere) Stilleri */
-        .modal-overlay {{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; }}
-        .modal-content {{ background: white; width: 90%; max-width: 900px; height: 85vh; border-radius: 10px; display: flex; flex-direction: column; overflow: hidden; position: relative; }}
-        .modal-header {{ background: #0056b3; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }}
-        .modal-header h3 {{ margin: 0; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70%; }}
-        .modal-actions a {{ color: white; text-decoration: underline; margin-right: 15px; font-size: 13px; }}
-        .close-btn {{ background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }}
-        .modal-body {{ flex: 1; border: none; width: 100%; height: 100%; }}
     </style>
 </head>
 <body>
@@ -81,41 +72,12 @@ def fetch_and_generate():
         {news_html_cards}
     </div>
 
-    <!-- Haber Oku Açılır Pencere (Modal) -->
-    <div id="newsModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle">Haber Detayı</h3>
-                <div class="modal-actions">
-                    <a id="externalLink" href="#" target="_blank">Yeni Sekmede Aç ↗</a>
-                    <button class="close-btn" onclick="closeNews()">Kapat ✖</button>
-                </div>
-            </div>
-            <iframe id="newsFrame" class="modal-body" src=""></iframe>
-        </div>
-    </div>
-
     <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
     <div class="widget-box">
         <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
         <script async src="//waust.at/d.js"></script>
     </div>
 
-    <script>
-        function openNews(url, title) {{
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('newsFrame').src = url;
-            document.getElementById('externalLink').href = url;
-            document.getElementById('newsModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Arka plan kaymasını engelle
-        }}
-
-        function closeNews() {{
-            document.getElementById('newsModal').style.display = 'none';
-            document.getElementById('newsFrame').src = '';
-            document.body.style.overflow = 'auto';
-        }}
-    </script>
 </body>
 </html>
 '''
