@@ -47,7 +47,7 @@ def fetch_and_generate():
     news_html_cards = ""
     
     # 20 Adet haber işleniyor
-    for item in items[:20]:
+    for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
