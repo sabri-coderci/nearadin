@@ -5,21 +5,8 @@ import html
 import re
 import urllib.parse
 
-# Tek Kaynak: Google News Türkiye RSS
+# Google News Türkiye RSS Akışı (Tüm yerel ve ulusal haberler gelir)
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
-
-def resolve_google_url(google_url):
-    """Kütüphane kullanmadan Google yönlendirmesini gerçek haber sitesi adresine çözer."""
-    try:
-        req = urllib.request.Request(
-            google_url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        )
-        # HTTP Yönlendirmesini takip ederek nihai adresi alıyoruz
-        with urllib.request.urlopen(req, timeout=4) as response:
-            return response.geturl()
-    except Exception:
-        return google_url
 
 def clean_summary(raw_html, max_chars=180):
     if not raw_html:
@@ -72,8 +59,7 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # 25 adet güncel haber işleniyor
-    for item in items[:25]:
+    for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         google_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
@@ -84,9 +70,7 @@ def fetch_and_generate():
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
-        # Google Linkini Asıl Kaynağa Çöz (Yerel/Ulusal fark etmez)
-        real_url = resolve_google_url(google_link)
-        encoded_link = urllib.parse.quote(real_url, safe='')
+        encoded_link = urllib.parse.quote(google_link.strip(), safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
         news_html_cards += f'''
