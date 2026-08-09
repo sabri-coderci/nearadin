@@ -32,6 +32,24 @@ def generate_sitemap():
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://nearadin.net/son-depremler/</loc>
+    <lastmod>{now_iso}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/kripto-para/</loc>
+    <lastmod>{now_iso}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/</loc>
+    <lastmod>{now_iso}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>'''
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
