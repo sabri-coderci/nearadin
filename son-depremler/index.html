@@ -4,20 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Son Depremler - Canlı Deprem Listesi - nearadin.net</title>
-    <meta name="description" content="Türkiye ve yakın çevresindeki son dakika canlı deprem listesi, büyüklükleri ve derinlikleri." />
+    <meta name="description" content="Türkiye ve yakın çevresindeki son dakika canlı deprem listesi." />
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; margin: 0; padding: 15px; }
         .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #0056b3; color: white; }
+        .mag { font-weight: bold; padding: 3px 6px; border-radius: 4px; color: white; background: #28a745; }
+        .mag-high { background: #dc3545; }
         .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: bold; }
-        iframe { width: 100%; height: 600px; border: none; border-radius: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
         <h1>Son Depremler (Canlı Akış)</h1>
-        <iframe src="https://m.koeri.boun.edu.tr/dvm/sondepremler.asp"></iframe>
+        <table>
+            <thead>
+                <tr>
+                    <th>Saat</th>
+                    <th>Büyüklük</th>
+                    <th>Yer</th>
+                </tr>
+            </thead>
+            <tbody id="eq-data">
+                <tr><td colspan="3" style="text-align:center;">Veriler yükleniyor...</td></tr>
+            </tbody>
+        </table>
     </div>
+
+    <script>
+        async function loadLocalEarthquakes() {
+            const tbody = document.getElementById('eq-data');
+            try {
+                // Kendi sunucumuzdaki json dosyasını çekiyoruz (CORS engeli İMKANSIZDIR)
+                const res = await fetch('./earthquakes.json?v=' + new Date().getTime());
+                const data = await res.json();
+
+                if (!data || data.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">Deprem kaydı bulunamadı.</td></tr>';
+                    return;
+                }
+
+                tbody.innerHTML = '';
+                data.forEach(eq => {
+                    const magVal = parseFloat(eq.mag) || 0;
+                    const isHigh = magVal >= 4.0;
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${eq.time}</td>
+                            <td><span class="mag ${isHigh ? 'mag-high' : ''}">${eq.mag}</span></td>
+                            <td>${eq.location}</td>
+                        </tr>
+                    `;
+                });
+            } catch (err) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:red;">Veri okunamadı. Otomatik güncelleme bekleniyor...</td></tr>';
+            }
+        }
+
+        loadLocalEarthquakes();
+    </script>
 </body>
 </html>
