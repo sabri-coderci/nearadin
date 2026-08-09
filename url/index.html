@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Yönlendiriliyor - nearadin.net</title>
+    <!-- Admatic Reklam / Google Meta Etiketleri -->
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; text-align: center; }
+        .redirect-box { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+        h1 { font-size: 20px; color: #333; margin-bottom: 15px; }
+        p { color: #666; font-size: 15px; }
+        .timer { font-size: 28px; font-weight: bold; color: #0056b3; margin: 20px 0; }
+        .btn { display: inline-block; background: #0056b3; color: white; text-decoration: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
+        .btn:hover { background: #004085; }
+        .ad-area { margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="redirect-box">
+        <span style="background:#ffebee; color:#c62828; font-size:12px; font-weight:bold; padding:4px 8px; border-radius:4px;">SON DAKİKA HABERİ</span>
+        <h1 id="news-title">Seçtiğiniz Habere Yönlendiriliyorsunuz...</h1>
+        <p>Aşağıdaki sayacın dolmasının ardından kaynak siteye otomatik olarak aktarılacaksınız.</p>
+        
+        <div class="timer" id="countdown">3</div>
+
+        <!-- Admatic Reklam Alanı -->
+        <div class="ad-area">
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+        </div>
+
+        <a href="#" id="target-link" class="btn">Hemen Habere Git →</a>
+    </div>
+
+    <script>
+        // URL'den ?q= parametresindeki hedef adresi alma
+        const urlParams = new URLSearchParams(window.location.search);
+        let targetUrl = urlParams.get('q');
+
+        if (targetUrl) {
+            // Eğer Google'ın yönlendirme parametresi geldiyse temizle
+            if (targetUrl.includes("url?q=")) {
+                targetUrl = targetUrl.split("url?q=")[1].split("&")[0];
+            }
+            targetUrl = decodeURIComponent(targetUrl);
+
+            document.getElementById('target-link').href = targetUrl;
+
+            // 3 Saniyelik Geri Sayım ve Otomatik Yönlendirme
+            let seconds = 3;
+            const countdownEl = document.getElementById('countdown');
+            const timer = setInterval(() => {
+                seconds--;
+                countdownEl.innerText = seconds;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    window.location.href = targetUrl;
+                }
+            }, 1000);
+        } else {
+            // Eğer link parametresi yoksa ana sayfaya döndür
+            window.location.href = "https://nearadin.net/";
+        }
+    </script>
+</body>
+</html>
