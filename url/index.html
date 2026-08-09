@@ -15,9 +15,9 @@
             background: #f4f6f9;
         }
 
-        /* Üst Bilgi ve Reklam Çubuğu */
+        /* Üst Bar */
         .top-bar {
-            height: 75px;
+            height: 60px;
             background: #0056b3;
             color: white;
             display: flex;
@@ -46,17 +46,11 @@
             font-size: 13px;
         }
 
-        /* Reklam Alanı Çerçevesi */
-        .ad-box {
-            max-height: 60px;
-            overflow: hidden;
-        }
-
         /* İçerik Alanı */
         .content-area {
             position: relative;
             width: 100%;
-            height: calc(100% - 115px); /* Üst bar + Alt sayaç yüksekliği düşüldü */
+            height: calc(100% - 100px); /* Top bar + Bottom counter */
         }
 
         iframe {
@@ -70,36 +64,7 @@
             background: white;
         }
 
-        .loading-card {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 90%;
-            width: 400px;
-            z-index: 1;
-        }
-
-        .loading-card h2 { font-size: 18px; color: #333; margin-bottom: 10px; }
-        .loading-card p { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.4; }
-        
-        .btn-direct {
-            display: inline-block;
-            background: #0056b3;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* Alt Ziyaretçi Sayacı Barı */
+        /* Alt Sayaç Alanı */
         .bottom-counter {
             height: 40px;
             background: #ffffff;
@@ -122,22 +87,11 @@
     <!-- Üst Bar -->
     <div class="top-bar">
         <a href="https://nearadin.net/" class="brand">← nearadin.net</a>
-        
-        <div class="ad-box">
-            <!-- Ekstrem dar alan reklam uyumu için -->
-        </div>
-
-        <a href="https://nearadin.net/" class="btn-close">Ana Sayfa</a>
+        <a href="https://nearadin.net/" class="btn-close">Ana Sayfaya Dön</a>
     </div>
 
     <!-- İçerik Alanı -->
     <div class="content-area">
-        <div class="loading-card">
-            <h2>Haber Kaynağına Bağlanılıyor...</h2>
-            <p>Orijinal haber sayfasına aktarılıyorsunuz. Sayfa yüklenmezse aşağıdaki butona tıklayabilirsiniz.</p>
-            <a href="#" id="direct-btn" class="btn-direct">Habere Git →</a>
-        </div>
-
         <iframe id="news-frame" src=""></iframe>
     </div>
 
@@ -153,13 +107,7 @@
 
         if (targetUrl) {
             targetUrl = decodeURIComponent(targetUrl);
-
-            if (targetUrl.includes("news.google.com")) {
-                window.location.href = targetUrl;
-            } else {
-                document.getElementById('direct-btn').href = targetUrl;
-                document.getElementById('news-frame').src = targetUrl;
-            }
+            document.getElementById('news-frame').src = targetUrl;
         } else {
             window.location.href = "https://nearadin.net/";
         }
