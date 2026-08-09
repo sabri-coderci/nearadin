@@ -37,6 +37,16 @@ def generate_sitemap():
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
 
+def generate_robots_txt():
+    """Tüm arama motoru botlarına izin veren ve sitemap adresini belirten robots.txt üretir"""
+    robots_content = """User-agent: *
+Allow: /
+
+Sitemap: https://nearadin.net/sitemap.xml
+"""
+    with open("robots.txt", "w", encoding="utf-8") as f:
+        f.write(robots_content)
+
 def fetch_and_generate():
     req = urllib.request.Request(
         RSS_URL, 
@@ -70,7 +80,7 @@ def fetch_and_generate():
             <p>{summary}</p>
 
             <div class="card-footer">
-                <a href="{link}" target="_blank" rel="noopener">Haberi Oku →</a>
+                <a href="{link}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
             </div>
         </div>
@@ -133,6 +143,9 @@ def fetch_and_generate():
         
     # Sitemap Dosyasını Oluştur
     generate_sitemap()
+    
+    # Robots.txt Dosyasını Oluştur
+    generate_robots_txt()
 
 if __name__ == "__main__":
     fetch_and_generate()
