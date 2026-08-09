@@ -12,11 +12,12 @@
             height: 100%;
             overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f4f6f9;
         }
 
         /* Üst Bilgi ve Reklam Çubuğu */
         .top-bar {
-            height: 70px;
+            height: 75px;
             background: #0056b3;
             color: white;
             display: flex;
@@ -25,7 +26,7 @@
             padding: 0 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             position: relative;
-            z-index: 10;
+            z-index: 100;
         }
 
         .top-bar a.brand {
@@ -35,72 +36,130 @@
             font-weight: bold;
         }
 
-        .top-bar .ad-box {
+        .top-bar .btn-close {
+            background: #ffffff;
+            color: #0056b3;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        /* Reklam Alanı Çerçevesi */
+        .ad-box {
             max-height: 60px;
             overflow: hidden;
         }
 
-        .top-bar .btn-close {
-            background: #ffffff;
-            color: #c62828;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-
-        /* Haberin Gösterileceği İframe Kutusu */
-        .iframe-container {
+        /* İçerik Alanı */
+        .content-area {
+            position: relative;
             width: 100%;
-            height: calc(100% - 70px);
-            background: #fff;
+            height: calc(100% - 115px); /* Üst bar + Alt sayaç yüksekliği düşüldü */
         }
 
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: white;
+        }
+
+        .loading-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 90%;
+            width: 400px;
+            z-index: 1;
+        }
+
+        .loading-card h2 { font-size: 18px; color: #333; margin-bottom: 10px; }
+        .loading-card p { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.4; }
+        
+        .btn-direct {
+            display: inline-block;
+            background: #0056b3;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Alt Ziyaretçi Sayacı Barı */
+        .bottom-counter {
+            height: 40px;
+            background: #ffffff;
+            border-top: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
 
     <!-- Admatic AUTO ads START -->
-<ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492"   class="adm-ads-area"></ins>
-<script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-<!-- Admatic AUTO ads END -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
 
-    <!-- Sitenizin Üst Menüsü ve Admatic Reklamı -->
+    <!-- Üst Bar -->
     <div class="top-bar">
         <a href="https://nearadin.net/" class="brand">← nearadin.net</a>
         
-        <!-- Admatic Reklam Alanı -->
         <div class="ad-box">
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Ekstrem dar alan reklam uyumu için -->
         </div>
 
-        <a href="https://nearadin.net/" class="btn-close">Ana Sayfaya Dön</a>
+        <a href="https://nearadin.net/" class="btn-close">Ana Sayfa</a>
     </div>
 
-    <!-- Dış Sayfanın Gösterileceği Alan -->
-    <div class="iframe-container">
-        <iframe id="news-frame" src="" title="Haber İçeriği" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+    <!-- İçerik Alanı -->
+    <div class="content-area">
+        <div class="loading-card">
+            <h2>Haber Kaynağına Bağlanılıyor...</h2>
+            <p>Orijinal haber sayfasına aktarılıyorsunuz. Sayfa yüklenmezse aşağıdaki butona tıklayabilirsiniz.</p>
+            <a href="#" id="direct-btn" class="btn-direct">Habere Git →</a>
+        </div>
+
+        <iframe id="news-frame" src=""></iframe>
+    </div>
+
+    <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
+    <div class="bottom-counter">
+        <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
+        <script async src="//waust.at/d.js"></script>
     </div>
 
     <script>
-        // URL'deki ?q= parametresinden hedef haber linkini alıp iframe'e yükler
         const urlParams = new URLSearchParams(window.location.search);
         let targetUrl = urlParams.get('q');
 
         if (targetUrl) {
-            if (targetUrl.includes("url?q=")) {
-                targetUrl = targetUrl.split("url?q=")[1].split("&")[0];
-            }
             targetUrl = decodeURIComponent(targetUrl);
-            
-            document.getElementById('news-frame').src = targetUrl;
+
+            if (targetUrl.includes("news.google.com")) {
+                window.location.href = targetUrl;
+            } else {
+                document.getElementById('direct-btn').href = targetUrl;
+                document.getElementById('news-frame').src = targetUrl;
+            }
         } else {
             window.location.href = "https://nearadin.net/";
         }
