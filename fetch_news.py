@@ -5,10 +5,19 @@ import html
 import re
 import urllib.parse
 
-# Google News Türkiye RSS Akışı (Tüm yerel ve ulusal haberler gelir)
+# Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
-def clean_summary(raw_html, max_chars=180):
+def extract_image_url(description_html):
+    """RSS açıklama metni içerisindeki img src adresini yakalar."""
+    if not description_html:
+        return None
+    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', description_html)
+    if match:
+        return match.group(1)
+    return None
+
+def clean_summary(raw_html, max_chars=160):
     if not raw_html:
         return ""
     text = re.sub(r'<script.*?>.*?</script>', '', raw_html, flags=re.DOTALL)
@@ -59,26 +68,35 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    for item in items[:30]:
+    # 25 adet güncel haber işleniyor
+    for item in items[:25]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         google_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
         
         clean_title = html.unescape(title).rsplit(' - ', 1)[0]
-        summary = clean_summary(description, max_chars=180)
+        summary = clean_summary(description, max_chars=160)
         
+        # Görsel adresini ayıkla (varsayılan yedek görsel ekli)
+        image_url = extract_image_url(description)
+        if not image_url:
+            image_url = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop"
+
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
         encoded_link = urllib.parse.quote(google_link.strip(), safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
+        # SEO ve Görsel Odaklı Kart Yapısı
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
-            <p>{summary}</p>
-
+            <div class="card-content">
+                <img src="{image_url}" alt="{clean_title}" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>{summary}</p>
+            </div>
             <div class="card-footer">
                 <a href="{custom_redirect_url}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -94,7 +112,8 @@ def fetch_and_generate():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <title>nearadin.net - SON DAKİKA</title>
+    <title>nearadin.net - SON DAKİKA HABERLERİ</title>
+    <meta name="description" content="En son dakika haberler, güncel gelişmeler ve yerel haberler nearadin.net üzerinde!" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://nearadin.net/" />
     
@@ -105,11 +124,20 @@ def fetch_and_generate():
         .info-box {{ background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; }}
         .card {{ background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
         .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
-        .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }}
-        .card p {{ color: #555; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }}
+        .card h2 {{ margin: 0 0 12px 0; font-size: 18px; color: #111; line-height: 1.4; }}
+        
+        /* Görsel ve Özet Düzeni */
+        .card-content {{ display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }}
+        .news-thumb {{ width: 120px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background-color: #eee; }}
+        .card p {{ color: #555; font-size: 14px; margin: 0; line-height: 1.5; }}
+        
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
         .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
         .widget-box {{ text-align: center; margin: 20px 0; }}
+
+        @media (max-width: 480px) {{
+            .news-thumb {{ width: 90px; height: 65px; }}
+        }}
     </style>
 </head>
 <body>
