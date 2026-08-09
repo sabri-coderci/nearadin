@@ -23,6 +23,7 @@ def clean_summary(raw_html, max_chars=180):
     return text
 
 def generate_sitemap():
+    """Google botlarının siteyi hızlıca taraması için dinamik sitemap.xml üretir"""
     now_iso = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
     sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -33,10 +34,12 @@ def generate_sitemap():
     <priority>1.0</priority>
   </url>
 </urlset>'''
+    
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
 
 def generate_robots_txt():
+    """Tüm arama motoru botlarına izin veren ve sitemap adresini belirten robots.txt üretir"""
     robots_content = """User-agent: *
 Allow: /
 
@@ -97,8 +100,10 @@ def fetch_and_generate():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>nearadin.net - SON DAKİKA</title>
+    <!-- Google Bot Yönlendirici Meta Etiketleri -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://nearadin.net/" />
+    
     <style>
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; }}
         header {{ background: #0056b3; color: white; text-align: center; padding: 20px 10px; font-size: 24px; font-weight: bold; }}
@@ -114,8 +119,10 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
+    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
 
     <header>nearadin.net - SON DAKİKA</header>
     <div class="container">
@@ -126,6 +133,7 @@ def fetch_and_generate():
         {news_html_cards}
     </div>
 
+    <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
     <div class="widget-box">
         <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
         <script async src="//waust.at/d.js"></script>
@@ -134,10 +142,14 @@ def fetch_and_generate():
 </html>
 '''
 
+    # HTML Dosyasını Oluştur
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
         
+    # Sitemap Dosyasını Oluştur
     generate_sitemap()
+    
+    # Robots.txt Dosyasını Oluştur
     generate_robots_txt()
 
 if __name__ == "__main__":
