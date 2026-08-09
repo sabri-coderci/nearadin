@@ -37,29 +37,46 @@
     </div>
 
     <script>
-        async function fetchEarthquakes() {
-            try {
-                const res = await fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live?limit=30');
-                const data = await res.json();
-                const tbody = document.getElementById('eq-data');
-                tbody.innerHTML = '';
+    async function fetchEarthquakes() {
+        const tbody = document.getElementById('eq-data');
+        try {
+            // AFAD RSS verisini JSON'a çeviren güvenli CORS proxy
+            const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fdeprem.afad.gov.tr%2Frss');
+            const data = await res.json();
 
-                data.result.forEach(eq => {
-                    const isHigh = eq.mag >= 4.0;
-                    tbody.innerHTML += `
-                        <tr>
-                            <td>${eq.date.split(' ')[1]}</td>
-                            <td><span class="mag ${isHigh ? 'mag-high' : ''}">${eq.mag}</span></td>
-                            <td>${eq.title}</td>
-                            <td>${eq.depth} km</td>
-                        </tr>
-                    `;
-                });
-            } catch (err) {
-                document.getElementById('eq-data').innerHTML = '<tr><td colspan="4">Veriler alınamadı.</td></tr>';
+            if (!data.items || data.items.length === 0) {
+                throw new Error("Veri bulunamadı");
             }
+
+            tbody.innerHTML = '';
+
+            data.items.slice(0, 30).forEach(item => {
+                // AFAD başlık formatı: "Büyüklük : 2.1 | Yer : ... | Tarih : ..."
+                const titleParts = item.title.split('|');
+                const mag = parseFloat(titleParts[0].replace('Büyüklük :', '').trim()) || 0.0;
+                const location = titleParts[1] ? titleParts[1].replace('Yer :', '').trim() : item.title;
+                const pubDate = new Date(item.pubDate);
+                const timeStr = pubDate.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+
+                const isHigh = mag >= 4.0;
+
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${timeStr}</td>
+                        <td><span class="mag ${isHigh ? 'mag-high' : ''}">${mag.toFixed(1)}</span></td>
+                        <td>${location}</td>
+                        <td>-</td>
+                    </tr>
+                `;
+            });
+        } catch (err) {
+            console.error("Deprem servisi hatası:", err);
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:red;">Deprem verileri şu anda yüklenemedi. Lütfen az sonra tekrar deneyin.</td></tr>';
         }
-        fetchEarthquakes();
-    </script>
+    }
+
+    fetchEarthquakes();
+</script>
+
 </body>
 </html>
