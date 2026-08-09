@@ -21,6 +21,10 @@
         .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }
         .card-footer a { color: #0056b3; text-decoration: none; font-weight: bold; }
         .widget-box { text-align: center; margin: 20px 0; }
+        .widgets-nav { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 5px; }
+.widget-btn { background: white; padding: 10px 15px; border-radius: 8px; text-decoration: none; color: #333; font-weight: bold; font-size: 13px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 6px; white-space: nowrap; border: 1px solid #e1e4e8; }
+.widget-btn:hover { background: #0056b3; color: white; }
+
     </style>
 </head>
 <body>
@@ -31,6 +35,12 @@
 
     <header>nearadin.net - SON DAKİKA</header>
     <div class="container">
+        <div class="widgets-nav">
+    <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
+    <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
+    <a href="/hava-durumu/" class="widget-btn">☀️ Hava Durumu</a>
+</div>
+
         <div class="info-box">
             <div><strong>Kaynak:</strong> Canlı Haber Akışı</div>
             <div><strong>Son Güncelleme:</strong> 09.08.2026 20:20</div>
