@@ -8,6 +8,28 @@ import urllib.parse
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
+def resolve_url(google_url):
+    """Google News'in karmaşık RSS linkini gerçek haber sitesi URL'sine dönüştürür."""
+    try:
+        req = urllib.request.Request(
+            google_url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'},
+            method='HEAD' # Sadece header bilgilerini çekerek hızı artırır
+        )
+        with urllib.request.urlopen(req, timeout=4) as response:
+            return response.geturl()
+    except Exception:
+        # Eğer HEAD isteği başarısız olursa normal GET dener
+        try:
+            req = urllib.request.Request(
+                google_url, 
+                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            )
+            with urllib.request.urlopen(req, timeout=4) as response:
+                return response.geturl()
+        except Exception:
+            return google_url
+
 def clean_summary(raw_html, max_chars=180):
     if not raw_html:
         return ""
@@ -60,9 +82,10 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
+    # 30 Adet haber işleniyor
     for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
-        link = item.find('link').text if item.find('link') is not None else '#'
+        raw_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
         
         clean_title = title.rsplit(' - ', 1)[0]
@@ -71,7 +94,9 @@ def fetch_and_generate():
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
-        encoded_link = urllib.parse.quote(link, safe='')
+        # Real URL Çözümlemesi
+        real_link = resolve_url(raw_link)
+        encoded_link = urllib.parse.quote(real_link, safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
         news_html_cards += f'''
