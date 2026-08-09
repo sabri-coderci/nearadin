@@ -8,30 +8,7 @@ import urllib.parse
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
-def extract_image_url(item, description_html):
-    """RSS item'ı içinden veya description metninden haber görselini yakalamaya çalışır."""
-    
-    # 1. RSS içindeki media:content veya enclosure etiketlerini kontrol et
-    for elem in item:
-        if elem.tag.endswith('content') or elem.tag.endswith('thumbnail'):
-            url = elem.attrib.get('url')
-            if url:
-                return url
-        if elem.tag == 'enclosure':
-            url = elem.attrib.get('url')
-            if url and 'image' in elem.attrib.get('type', ''):
-                return url
-
-    # 2. Description HTML içinde img src var mı kontrol et
-    if description_html:
-        match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', description_html)
-        if match:
-            return match.group(1)
-
-    # 3. Bulunamazsa None döndür
-    return None
-
-def clean_summary(raw_html, max_chars=160):
+def clean_summary(raw_html, max_chars=180):
     if not raw_html:
         return ""
     text = re.sub(r'<script.*?>.*?</script>', '', raw_html, flags=re.DOTALL)
@@ -82,35 +59,26 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    for idx, item in enumerate(items[:25]):
+    for item in items[:25]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         google_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
         
         clean_title = html.unescape(title).rsplit(' - ', 1)[0]
-        summary = clean_summary(description, max_chars=160)
+        summary = clean_summary(description, max_chars=180)
         
-        # Görsel adresini çekmeye çalış
-        image_url = extract_image_url(item, description)
-        
-        # Eğer haberde görsel yoksa dinamik/farklı bir kategori görseli koy
-        if not image_url:
-            image_url = f"https://picsum.photos/200/130?random={idx}"
-
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
         encoded_link = urllib.parse.quote(google_link.strip(), safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
+        # Resimsiz, Şık ve Temiz Haber Kartı
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>{clean_title}</h2>
-            <div class="card-content">
-                <img src="{image_url}" alt="{clean_title}" class="news-thumb" loading="lazy" width="120" height="80">
-                <p>{summary}</p>
-            </div>
+            <p>{summary}</p>
             <div class="card-footer">
                 <a href="{custom_redirect_url}" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -138,19 +106,11 @@ def fetch_and_generate():
         .info-box {{ background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; }}
         .card {{ background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
         .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
-        .card h2 {{ margin: 0 0 12px 0; font-size: 18px; color: #111; line-height: 1.4; }}
-        
-        .card-content {{ display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }}
-        .news-thumb {{ width: 120px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background-color: #eee; }}
-        .card p {{ color: #555; font-size: 14px; margin: 0; line-height: 1.5; }}
-        
+        .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }}
+        .card p {{ color: #555; font-size: 14px; margin: 0 0 15px 0; line-height: 1.5; }}
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
         .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
         .widget-box {{ text-align: center; margin: 20px 0; }}
-
-        @media (max-width: 480px) {{
-            .news-thumb {{ width: 90px; height: 65px; }}
-        }}
     </style>
 </head>
 <body>
