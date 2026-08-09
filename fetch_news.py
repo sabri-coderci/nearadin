@@ -4,14 +4,20 @@ import datetime
 import html
 import re
 import urllib.parse
+from googlenewsdecoder import new_decod_v1
 
-# Doğrudan haber sitelerinin RSS akışları (Google kısıtlamalarına takılmaz)
-RSS_SOURCES = [
-    "https://www.sozcu.com.tr/rss/tum-haberler.xml",
-    "https://www.haberturk.com/rss/kategori/gundem.xml",
-    "https://www.ntv.com.tr/gundem.rss",
-    "https://www.trthaber.com/gundem_articles.rss"
-]
+# Google News Türkiye RSS Akışı
+RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
+
+def get_real_url(google_url):
+    """Google News RSS yönlendirme linkini haberin orijinal web adresine çözer."""
+    try:
+        decoded_url = new_decod_v1(google_url)
+        if decoded_url and decoded_url.get("status"):
+            return decoded_url["decoded_url"]
+    except Exception:
+        pass
+    return google_url
 
 def clean_summary(raw_html, max_chars=180):
     if not raw_html:
@@ -38,7 +44,6 @@ def generate_sitemap():
     <priority>1.0</priority>
   </url>
 </urlset>'''
-    
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
 
@@ -52,29 +57,23 @@ Sitemap: https://nearadin.net/sitemap.xml
         f.write(robots_content)
 
 def fetch_and_generate():
-    all_items = []
-
-    # Farklı kaynaklardan haber topla
-    for rss_url in RSS_SOURCES:
-        try:
-            req = urllib.request.Request(
-                rss_url, 
-                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-            )
-            response = urllib.request.urlopen(req, timeout=5)
-            xml_data = response.read()
-            root = ET.fromstring(xml_data)
-            items = root.findall('./channel/item')
-            all_items.extend(items[:8]) # Her kaynaktan en taze haberleri al
-        except Exception:
-            continue
-
+    req = urllib.request.Request(
+        RSS_URL, 
+        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    )
+    
+    response = urllib.request.urlopen(req)
+    xml_data = response.read()
+    
+    root = ET.fromstring(xml_data)
+    items = root.findall('./channel/item')
+    
     news_html_cards = ""
     
-    # 30 adet haber oluştur
-    for item in all_items[:30]:
+    # 30 adet haber işleniyor
+    for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
-        link = item.find('link').text if item.find('link') is not None else '#'
+        google_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
         
         clean_title = html.unescape(title).rsplit(' - ', 1)[0]
@@ -83,8 +82,9 @@ def fetch_and_generate():
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
-        # Artık link doğrudan sozcu.com.tr / ntv.com.tr vb. şeklinde saf URL gelecek!
-        encoded_link = urllib.parse.quote(link.strip(), safe='')
+        # GOOGLE LINKINI GERÇEK KAYNAK LINKINE ÇÖZÜYORUZ
+        real_url = get_real_url(google_link)
+        encoded_link = urllib.parse.quote(real_url, safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
         news_html_cards += f'''
