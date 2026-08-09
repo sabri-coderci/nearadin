@@ -8,13 +8,27 @@ import urllib.parse
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
-def extract_image_url(description_html):
-    """RSS açıklama metni içerisindeki img src adresini yakalar."""
-    if not description_html:
-        return None
-    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', description_html)
-    if match:
-        return match.group(1)
+def extract_image_url(item, description_html):
+    """RSS item'ı içinden veya description metninden haber görselini yakalamaya çalışır."""
+    
+    # 1. RSS içindeki media:content veya enclosure etiketlerini kontrol et
+    for elem in item:
+        if elem.tag.endswith('content') or elem.tag.endswith('thumbnail'):
+            url = elem.attrib.get('url')
+            if url:
+                return url
+        if elem.tag == 'enclosure':
+            url = elem.attrib.get('url')
+            if url and 'image' in elem.attrib.get('type', ''):
+                return url
+
+    # 2. Description HTML içinde img src var mı kontrol et
+    if description_html:
+        match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', description_html)
+        if match:
+            return match.group(1)
+
+    # 3. Bulunamazsa None döndür
     return None
 
 def clean_summary(raw_html, max_chars=160):
@@ -68,8 +82,7 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # 25 adet güncel haber işleniyor
-    for item in items[:25]:
+    for idx, item in enumerate(items[:25]):
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         google_link = item.find('link').text if item.find('link') is not None else '#'
         description = item.find('description').text if item.find('description') is not None else ''
@@ -77,10 +90,12 @@ def fetch_and_generate():
         clean_title = html.unescape(title).rsplit(' - ', 1)[0]
         summary = clean_summary(description, max_chars=160)
         
-        # Görsel adresini ayıkla (varsayılan yedek görsel ekli)
-        image_url = extract_image_url(description)
+        # Görsel adresini çekmeye çalış
+        image_url = extract_image_url(item, description)
+        
+        # Eğer haberde görsel yoksa dinamik/farklı bir kategori görseli koy
         if not image_url:
-            image_url = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop"
+            image_url = f"https://picsum.photos/200/130?random={idx}"
 
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
@@ -88,7 +103,6 @@ def fetch_and_generate():
         encoded_link = urllib.parse.quote(google_link.strip(), safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
-        # SEO ve Görsel Odaklı Kart Yapısı
         news_html_cards += f'''
         <div class="card">
             <span class="badge">SON DAKİKA</span>
@@ -126,7 +140,6 @@ def fetch_and_generate():
         .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
         .card h2 {{ margin: 0 0 12px 0; font-size: 18px; color: #111; line-height: 1.4; }}
         
-        /* Görsel ve Özet Düzeni */
         .card-content {{ display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }}
         .news-thumb {{ width: 120px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background-color: #eee; }}
         .card p {{ color: #555; font-size: 14px; margin: 0; line-height: 1.5; }}
