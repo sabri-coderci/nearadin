@@ -9,74 +9,15 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; margin: 0; padding: 15px; }
         .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
-        table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #0056b3; color: white; }
-        .mag { font-weight: bold; padding: 3px 6px; border-radius: 4px; color: white; background: #28a745; }
-        .mag-high { background: #dc3545; }
         .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: bold; }
+        iframe { width: 100%; height: 600px; border: none; border-radius: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
         <h1>Son Depremler (Canlı Akış)</h1>
-        <table id="eq-table">
-            <thead>
-                <tr>
-                    <th>Tarih / Saat</th>
-                    <th>Büyüklük</th>
-                    <th>Yer</th>
-                    <th>Derinlik</th>
-                </tr>
-            </thead>
-            <tbody id="eq-data">
-                <tr><td colspan="4" style="text-align:center;">Deprem verileri yükleniyor...</td></tr>
-            </tbody>
-        </table>
+        <iframe src="https://m.koeri.boun.edu.tr/dvm/sondepremler.asp"></iframe>
     </div>
-
-    <script>
-    async function fetchEarthquakes() {
-        const tbody = document.getElementById('eq-data');
-        try {
-            // AFAD RSS verisini JSON'a çeviren güvenli CORS proxy
-            const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fdeprem.afad.gov.tr%2Frss');
-            const data = await res.json();
-
-            if (!data.items || data.items.length === 0) {
-                throw new Error("Veri bulunamadı");
-            }
-
-            tbody.innerHTML = '';
-
-            data.items.slice(0, 30).forEach(item => {
-                // AFAD başlık formatı: "Büyüklük : 2.1 | Yer : ... | Tarih : ..."
-                const titleParts = item.title.split('|');
-                const mag = parseFloat(titleParts[0].replace('Büyüklük :', '').trim()) || 0.0;
-                const location = titleParts[1] ? titleParts[1].replace('Yer :', '').trim() : item.title;
-                const pubDate = new Date(item.pubDate);
-                const timeStr = pubDate.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-
-                const isHigh = mag >= 4.0;
-
-                tbody.innerHTML += `
-                    <tr>
-                        <td>${timeStr}</td>
-                        <td><span class="mag ${isHigh ? 'mag-high' : ''}">${mag.toFixed(1)}</span></td>
-                        <td>${location}</td>
-                        <td>-</td>
-                    </tr>
-                `;
-            });
-        } catch (err) {
-            console.error("Deprem servisi hatası:", err);
-            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:red;">Deprem verileri şu anda yüklenemedi. Lütfen az sonra tekrar deneyin.</td></tr>';
-        }
-    }
-
-    fetchEarthquakes();
-</script>
-
 </body>
 </html>
