@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <title>nearadin.net - SON DAKİKA</title>
+    <title>nearadin.net - SON DAKİKA HABERLERİ</title>
+    <meta name="description" content="En son dakika haberler, güncel gelişmeler ve yerel haberler nearadin.net üzerinde!" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://nearadin.net/" />
     
@@ -15,11 +16,20 @@
         .info-box { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; }
         .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .badge { background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
-        .card h2 { margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }
-        .card p { color: #555; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }
+        .card h2 { margin: 0 0 12px 0; font-size: 18px; color: #111; line-height: 1.4; }
+        
+        /* Görsel ve Özet Düzeni */
+        .card-content { display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }
+        .news-thumb { width: 120px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background-color: #eee; }
+        .card p { color: #555; font-size: 14px; margin: 0; line-height: 1.5; }
+        
         .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }
         .card-footer a { color: #0056b3; text-decoration: none; font-weight: bold; }
         .widget-box { text-align: center; margin: 20px 0; }
+
+        @media (max-width: 480px) {
+            .news-thumb { width: 90px; height: 65px; }
+        }
     </style>
 </head>
 <body>
@@ -32,14 +42,16 @@
     <div class="container">
         <div class="info-box">
             <div><strong>Kaynak:</strong> Canlı Haber Akışı</div>
-            <div><strong>Son Güncelleme:</strong> 09.08.2026 11:14</div>
+            <div><strong>Son Güncelleme:</strong> 09.08.2026 11:21</div>
         </div>
         
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Dışişleri Bakanı Fidan: (Mekke Anlaşması) Bize saldırmayan hiçbir ülke hedefimizde değil</h2>
-            <p>Dışişleri Bakanı Fidan: (Mekke Anlaşması) Bize saldırmayan hiçbir ülke hedefimizde değil Anadolu AjansıAklı karışıklar için Mekke Anlaşması | Ahmet HAKAN Köşe Yazısı...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Dışişleri Bakanı Fidan: (Mekke Anlaşması) Bize saldırmayan hiçbir ülke hedefimizde değil" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Dışişleri Bakanı Fidan: (Mekke Anlaşması) Bize saldırmayan hiçbir ülke hedefimizde değil Anadolu AjansıAklı karışıklar için Mekke Anlaşması | Ahmet HAKAN Köşe...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiwwFBVV95cUxPR0Zudk44akF6WEhSalZ6Nm1COHBpdTVmaFhtVkpKZktNLXhpZ2NMMVZvRWtBemNYUmhtWGN5SS1NbGgtVk9MUzFRQnVCNm5MZ2xUNmZod1oyNnphamp4VFRLZmU4S0xwSGZ4dXhHMVMzUlRhM0owVG1nT3VGVVpOcmxOTGtJMFNWTVNDUE8xZXdkcjBiT2dxN0lFZTRweVRyN1VWcVZ5bU5ubnVpVWhTUktPa013Wk1nYVpnTzZoRzA4UkU%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -49,8 +61,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Daha imzalar kurumadan İran destekli Husiler, Suudi Arabistan'ı vurdu</h2>
-            <p>Daha imzalar kurumadan İran destekli Husiler, Suudi Arabistan'ı vurdu Sözcü GazetesiSuudi Arabistan'da Aramco rafinerisine İHA saldırısı HürriyetHusiler açıkladı! 'Suudi...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Daha imzalar kurumadan İran destekli Husiler, Suudi Arabistan'ı vurdu" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Daha imzalar kurumadan İran destekli Husiler, Suudi Arabistan'ı vurdu Sözcü GazetesiSuudi Arabistan'da Aramco rafinerisine İHA saldırısı HürriyetHusiler...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiowFBVV95cUxQN0NYRzhUWnNPbC1CZ09LZWdka1JfaVhiSDNFTVR6MFZHUWY0aExabDI1eDRiZUJCTHQtcWVER2RJdmctM1kxWEN4ZzJ6eGNBd3hOblFweVVod0t2c3lKelV0M0QydzFTSUczbzdodkRmOC1WdlE2Sl9uQ0tpUUlsclBDQ3AzWU92TTRVTXRfM052ZTcteFdBNmFfQXFhLUZHWjVr%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -60,8 +74,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>14 yaşında asgari ücretin 3 katını kazanıyor. 6 saatte günlük kazancı 3 bin lirayı buluyor</h2>
-            <p>14 yaşında asgari ücretin 3 katını kazanıyor. 6 saatte günlük kazancı 3 bin lirayı buluyor NTV Haber14 yaşındaki limonatacı ayda 90 bin lira kazanıyor Haberler14 yaşında kendi...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="14 yaşında asgari ücretin 3 katını kazanıyor. 6 saatte günlük kazancı 3 bin lirayı buluyor" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>14 yaşında asgari ücretin 3 katını kazanıyor. 6 saatte günlük kazancı 3 bin lirayı buluyor NTV Haber14 yaşındaki limonatacı ayda 90 bin lira kazanıyor...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMi0AFBVV95cUxQamc2cGUtcjZGM25qNVJRQjhiYWU2Uk9vMHJmcUptY01aQllNRVc3bDN5aVN3N1dzMlBtMzZFejM1WDlDSFFXeXlTd1U0aFB2M2xac20wM0haMExPY2hVMnFCamdSMmZnc1REdHY0N2trZEZMUlF3TTNZZUQ1VW5yRnp0d3dvVVBDUVFZODlHd21pM3Zjb1hpVUl1ZlYybm1uNWViRURoVFA1N3hzSEFwb0tucFBFU1NESWxUWVZ2SnROQkdiakxQbThVcS1rNEtH0gHWAUFVX3lxTE1GblNXS3N4cGRwVEp2MTNTeW5lWS01aEktRWhQd0Q3M29kYVBmc2RIaDJTNEg2MjFQLVBocDJJYjd2a3V6VTdaX05iMXRoa1RrY3VfV2hIV1RRcUJsNDJ3OTNaZ2dfUGstUlRNcUNYZ3ExN3J5bkhQUS02bW45TFlMZjlLeUppUnN5ZGI5VVM5Ui1sNUNrNllOWTN4eU9yZTlXb1BSSWF2VFRhSVU0eHdTeHhqNWs3NUF4YXowYUVlSGp2NDVySWRXcjZfZHZnUHFxSVR5a3c%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -71,8 +87,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>İran: Hürmüz'de anlaşma yakın ancak şartlar yerine gelmeli</h2>
-            <p>İran: Hürmüz'de anlaşma yakın ancak şartlar yerine gelmeli Bloomberghtİran'dan Hürmüz mesajı: ABD şartlarımızı kabul edene kadar abluka sürecek Hürriyetİran Dışişleri Bakanı...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="İran: Hürmüz'de anlaşma yakın ancak şartlar yerine gelmeli" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>İran: Hürmüz'de anlaşma yakın ancak şartlar yerine gelmeli Bloomberghtİran'dan Hürmüz mesajı: ABD şartlarımızı kabul edene kadar abluka sürecek Hürriyetİran...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMimAFBVV95cUxOZVpKc1VXTFc2Snh0OXdDTXhxT0tfM1pEOVB1VkVlMFJ1SUhrMTFSWDU4NVYxOS1RM1FkZ3ZEc1dxTURRNzBBTFg2YzNwMUZ0Nk5paVg0YVgwY2VRQW1SdXNqRjFFd0VzTnlKS1JnX1M1b1dZTGZaNDNXc25ob0RqWEhLa1pfcVIzSWRtVE93UUZCUTVKNVhxYg%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -82,8 +100,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>CHP, Menderes Belediyesi Başkanvekilliği seçiminde aday çıkaracak: Yeni Parti, belediye AK Parti’ye gitsin istemiyorsa bizi desteklesin</h2>
-            <p>CHP, Menderes Belediyesi Başkanvekilliği seçiminde aday çıkaracak: Yeni Parti, belediye AK Parti’ye gitsin istemiyorsa bizi desteklesin t24.com.trGoogle Haberler uygulamasında...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="CHP, Menderes Belediyesi Başkanvekilliği seçiminde aday çıkaracak: Yeni Parti, belediye AK Parti’ye gitsin istemiyorsa bizi desteklesin" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>CHP, Menderes Belediyesi Başkanvekilliği seçiminde aday çıkaracak: Yeni Parti, belediye AK Parti’ye gitsin istemiyorsa bizi desteklesin T24Google Haberler...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMi_AFBVV95cUxNUDJBMVJjUkJMS29HNzdpenRJUV9GSURJTENELUpGeEZERW9wY1J4R0JWMjZQa0h1Qm1OX2NYUnFyeFRaTUtHZmxCTXF4cDlSNFp1REZuVk5kdm50Z0pkVnZWYm9udmVIcnphazZPa1dKa3FkNmZteWtHd2cwNlZMTEI3aG8xQmtheENtQ2J4S0lSbjVDbDdRTTRvNUNOWnpvZUMyazlzTWttUjFnT1drR2VlQ3JNa1VPeWxDaFJBRE1RTUxWQlUzQmlVMGloMC0yZlVUTmVTTGp2M1g5YVlZR2VMUERBOGVTZTR2LWlqNTdJNEpKaG1CZUlPTnk%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -93,8 +113,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Plajlarda yeni dönem</h2>
-            <p>Plajlarda yeni dönem BloomberghtPlajlarda yeni dönem başlıyor. Bakanlık işgallere müdahale edecek NTV HaberÇevre, Şehircilik ve İklim Değişikliği Bakanlığı kıyı ve sahil...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Plajlarda yeni dönem" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Plajlarda yeni dönem BloomberghtÇevre, Şehircilik ve İklim Değişikliği Bakanlığı kıyı ve sahil şeritlerinde düzenleme yapabilecek HabertürkPlajlarda yeni dönem...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiZ0FVX3lxTE1OeFZNU2ZDYVZhZDhRcktIM1kyZW9aUnVabVNMdVJnWEN4akE3OVZaZElQZnI5VVowcU9pcmx0WHlQZ0JweUp4RjhzWGx0S2ZScTRxdUdEcHkxcnYteHl6akFHbnhWdnc%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -104,8 +126,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Beş soruda süreç ve çerçeve yasa - Yusuf Karadaş</h2>
-            <p>Beş soruda süreç ve çerçeve yasa - Yusuf Karadaş evrensel.netÇerçeve yasa teklifi Adalet Komisyonu'nda kabul edildi: Maddeler neler? BBCSüreç yasası teklifi komisyondan geçti....</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Beş soruda süreç ve çerçeve yasa - Yusuf Karadaş" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Beş soruda süreç ve çerçeve yasa - Yusuf Karadaş Evrensel.netÇerçeve yasa teklifi Adalet Komisyonu'nda kabul edildi: Maddeler neler? BBCSüreç yasası teklifi...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMid0FVX3lxTE52OXR2Q0kxNGhSVC1iSmhPT2xhOTcxcDZvQVNyZzdZcUxySkNmVlVzcEJiYlRpcTNXUTFqYmlCZWl0YmpuLV9BcDJsZUxuWDQ1dGt0dEhaZ2VmZ2lNNWliSDI2eGhmRi1kQWJJOURNMTNFQmJRRjM4%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -115,8 +139,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Bahçeli'nin 'Evine dönmeli' dediği Demirtaş için Erdoğan'ın yardımcısından şaşırtan sözler</h2>
-            <p>Bahçeli'nin 'Evine dönmeli' dediği Demirtaş için Erdoğan'ın yardımcısından şaşırtan sözler Sözcü GazetesiBahçeli "Demirtaş evine dönmeli" çağrısı yapmıştı! Erdoğan'ın...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Bahçeli'nin 'Evine dönmeli' dediği Demirtaş için Erdoğan'ın yardımcısından şaşırtan sözler" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Bahçeli'nin 'Evine dönmeli' dediği Demirtaş için Erdoğan'ın yardımcısından şaşırtan sözler Sözcü GazetesiDemirtaş'ın serbest bırakılabileceği formülü...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMivgFBVV95cUxNRjd3UENyOFJaMFdoVjAwSDRmQWhXaFlZVXZ0XzlBWTR3SWU0VWJoUzI3Z3g0dlJaUktNUExHZjlKdGJhZURNNlB2TnlKeHZ2dEl0bHpKSU5mUVppRmZRc0VUdl8yM01LMGNJNl95R1FMZklYY3dBM1RxMTBCYU1nYlFrdEJ2REswemJLczRERk5ETDBUQTg0RDk2U2dlOGQxcmhtcXFHbUx3M09OellINkF1WGMtYUhtaThXMm1R%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -126,8 +152,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>'Suça sürüklenen çocuk' düzenlemesi Meclis'te kabul edildi</h2>
-            <p>'Suça sürüklenen çocuk' düzenlemesi Meclis'te kabul edildi DikenSuça sürüklenen çocuk yasası TBMM'de kabul edildi NTV HaberÇocuk suçluluğuna yeni düzenleme: 10 soruda merak...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="'Suça sürüklenen çocuk' düzenlemesi Meclis'te kabul edildi" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>'Suça sürüklenen çocuk' düzenlemesi Meclis'te kabul edildi DikenSuça sürüklenen çocuk yasası TBMM'de kabul edildi NTV HaberÇocuk suçluluğuna yeni düzenleme: 10...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiiAFBVV95cUxNLVU3R1VjQk5PTnBNZm9nZ253MnlDQVRQZFc2ZEZaUjNfdnBORWk0WVk0VGRRZkpNUU5jV2lyeW9USmpBNjVidHpBT1ZDcHNQTjlCWGRqQzY3NV9tbUc5MFV0ZE1IN2ZYN09DZmVTc24xYm9DalRRdDRJbEduck9FLU5vR3VUeVZp%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -137,8 +165,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Öğrenci affı ve yükseköğretime ilişkin düzenlemeler Resmi Gazete'de</h2>
-            <p>Öğrenci affı ve yükseköğretime ilişkin düzenlemeler Resmi Gazete'de NTV HaberYÖK'ten öğrenci affı açıklaması. Kimleri kapsıyor, başvurular ne zaman ve nasıl yapılacak? NTV...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Öğrenci affı ve yükseköğretime ilişkin düzenlemeler Resmi Gazete'de" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Öğrenci affı ve yükseköğretime ilişkin düzenlemeler Resmi Gazete'de NTV HaberÖğrenci affı Resmi Gazete'de: Üniversiteye dönüş için 4 ay süre TRT HaberÖğrenci...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMisgFBVV95cUxPWDJCV3dfU2hVSkJrRnMtRWpNWGkyYldlSU01aUxmcjhad045VDNnNm1NaGxxQ0c3MjlWUEd1YUU2aW43dkJsWG5qZDN1NlFVQ09YV05UVlI0bnJ3azhwenctaVFyT0ZJY0RxWXEwdVkxLXFrOXNnc0hqY2ZCcEVUelJ6OGgySUlCdmJ6dFlqbkJHUU9NZ0hNUGRHU2hjOUJiUkx0LWUtNVB2S3NPMEdhVXFn0gG3AUFVX3lxTE10VTdvcmx5ZlRuZWNjZFhUemVpWWFYRXh5Slh5NW1rYm9OaDdKYzlWbWgtUkVWVXZ6YUwwaFBmYW5WMC1ETkNPZ3NIZW5iVU1kdnp3RE9NTUFRaWQ1ZzZGWnZ2amxkdHJBX3JXQkhSQ3VtZUNmWHlFd2ZXbTJfRHNWTGUzUjlKVFNZNFBDbGpwckxKMXZ4VmVGMERNVW9KRlJDMmYyLTZ4S3g2SkFlZEIzWC1qVUJ6aw%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -148,8 +178,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>İsrail 'yalnız saldırıya' hazırlanıyor: Tel Aviv'den İran'a karşı operasyon sinyali</h2>
-            <p>İsrail 'yalnız saldırıya' hazırlanıyor: Tel Aviv'den İran'a karşı operasyon sinyali Hürriyet"Video, İsrail'in İran'a düzenlediği füze saldırısını gösteriyor" iddiası Anadolu...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="İsrail 'yalnız saldırıya' hazırlanıyor: Tel Aviv'den İran'a karşı operasyon sinyali" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>İsrail 'yalnız saldırıya' hazırlanıyor: Tel Aviv'den İran'a karşı operasyon sinyali Hürriyet"Video, İsrail'in İran'a düzenlediği füze saldırısını gösteriyor"...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMivgFBVV95cUxOelJDSVZpZWpvV1FvT1lzVWxwTnZPcTRvdGtPenNpdXNLYWdQV1dyaFVBV3Q0SU8yaGJvNk5ad2RtVEkweERNSWU3eC11OF95MUVGV1ZsQzgwd3otOGdmeURJelg5eWx0alRfaHRXeTdKbVlhWldVeW43Q1JwMDhab2xqWXFGVnhteXpMaGdKbC1ZUTJ0eWlTcWwwazVseHlodkI5aGFFcXdwMHhOQTJJTERZUTJWMU1oSnd6MEJ3%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -158,9 +190,24 @@
         
         <div class="card">
             <span class="badge">SON DAKİKA</span>
+            <h2>Pentagon'dan savunma şirketlerine mühimmat stoku için hızlanma talebi</h2>
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Pentagon'dan savunma şirketlerine mühimmat stoku için hızlanma talebi" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Pentagon'dan savunma şirketlerine mühimmat stoku için hızlanma talebi BloomberghtCNN: ABD'nin mühimmat stoklarının tükendiğine dair sızıntılar İran'ı...</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiqAFBVV95cUxOSXFDS09Db2NKWXc1d3JadElzWWVIVldIbVAwTDhWNjJublJYVU9rczZqa19FVnh2MmpGSkdWQUxuU3B6TmdiM0ZTZjNVV0xGMnlYQ1liYnB3YXd0RkNKUk5vNGVYQ2s1anB1eFpRWTNXdGtwWmJJbGY5NHZhU1VGbDFKUTMwZ1lTTVo5c25kLTZzeDdqcy1wVmd2cUo0YlVTNHRWeWxSUXc%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
+                <span>Canlı Akış</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <span class="badge">SON DAKİKA</span>
             <h2>Kanada alevlerle boğuşuyor... 20 bin kişi için tahliye emri verildi</h2>
-            <p>Kanada alevlerle boğuşuyor... 20 bin kişi için tahliye emri verildi CumhuriyetKanada'daki orman yangını hızla büyüyor: 20 bin kişiye tahliye emri İhlas Haber Ajansı...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Kanada alevlerle boğuşuyor... 20 bin kişi için tahliye emri verildi" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Kanada alevlerle boğuşuyor... 20 bin kişi için tahliye emri verildi CumhuriyetKanada'daki orman yangını hızla büyüyor: 20 bin kişiye tahliye emri İhlas Haber...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMirAFBVV95cUxQak5RZmZlb00tZVJDNHRFT2NVdVl0Ymw4bEdHMFBJZk9jdThwSUY2OHZlU2t3WFZqUnpGbTlMMXVXZXo1RHJVQmhKMDgzbXVXMzJta1p1UGNESDB5dGJ2djZrMnhsZ0hIQUdRMEROT0hldG5RUkRDNmtUS3FJc0d1S2VnMDdseTN5OGM2bzBLNDZ3V3lZa184MTlMenAwMVBnTlY4RVQtNG9Ubi04%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -170,8 +217,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Siyonist vahşet</h2>
-            <p>Siyonist vahşet Sabahİsrail'in Gazze'ye saldırılarında can kaybı 73 bin 386'ya yükseldi Anadolu Ajansıİsrail'in Gazze'de düzenlediği saldırılarda ölü ve yaralılar var Anadolu...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Siyonist vahşet" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Siyonist vahşet Sabahİsrail'in Gazze'ye saldırılarında can kaybı 73 bin 386'ya yükseldi Anadolu Ajansıİsrail'in Gazze'de düzenlediği saldırılarda ölü ve...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiZEFVX3lxTE50NVdZS2ZUSFBRZUljSmstLV9IQzNabjdDS21ucFF0NFh1TUMyTUxRQXhTSlVaSFNzQ3BvNm50WmZJaHVJNkxad0FTa3IxQmdjcmdCUkRiQ1NPazFJM2hONW0yQVQ%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -180,20 +229,11 @@
         
         <div class="card">
             <span class="badge">SON DAKİKA</span>
-            <h2>Rusya Ukrayna’da kritik noktaları hedef aldı: Peş peşe vurdu</h2>
-            <p>Rusya Ukrayna’da kritik noktaları hedef aldı: Peş peşe vurdu Sözcü GazetesiRusya'dan Ukrayna limanlarına peş peşe saldırılar HürriyetUkrayna ordusu: Karadeniz'de Rus gölge...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMilwFBVV95cUxPQlVrZHlqbkNpVUdrNGd4MlRNbHFZTXlvRUp0dUw1MGIzemppSDBtek90SUNNbWYzR21QN2RrMnVPZjU3dDMyUjJGZ2lCNWVUTWxUeFNXeFhOckZWQmJ6MVZGanV2dXFqLVE4TU9TeUZva2FYOU54c29HOUdEWC00VDU0ZG4zZk5YWDBFWk43SjZGclVUbGZv%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
             <h2>Altın yükselişte hisseler takipte - Zeynep Aktaş</h2>
-            <p>Altın yükselişte hisseler takipte - Zeynep Aktaş MilliyetAltında dengeler sil baştan değişti: İşte masadaki yeni rakam Sözcü GazetesiBankaların altın ajandası: Hangi kurum ne...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Altın yükselişte hisseler takipte - Zeynep Aktaş" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Altın yükselişte hisseler takipte - Zeynep Aktaş MilliyetAltın için dudak uçuklatan tahmin! Dev banka rakam verdi HaberlerAltın neden yükseliyor? Fiyatları...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMilgFBVV95cUxPa0N1VWdYSUNsZ2NlM3lPRV8tMEY1LVBiSy1wTkN4OE9fSTV3Ti1sdU1fdC1CUGFTUjQycU43QkFzS0l2ZWdYZDV0UWpHRU5sY0llTFpuN3JpSWw3QVI2ZERkQUhfRUhySkV1dkx3cTZ4TzJrUklVa01hY2k2aTBVQlBHamFqdHEzdjBELWgxZW9XenRaU1E%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -203,8 +243,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Sandalyede duran servet: Gösterişin sınırını zorladı</h2>
-            <p>Sandalyede duran servet: Gösterişin sınırını zorladı Sözcü Gazetesi</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Sandalyede duran servet: Gösterişin sınırını zorladı" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Sandalyede duran servet: Gösterişin sınırını zorladı Sözcü Gazetesi</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMijAFBVV95cUxOWUdWRkJGOGNGc1dWR3MwSWhhVXcwZzlfWkNIcmVJZzE4UVpFYTVuUVczMElVNmJmaXVqUlB6TDNYYTUzaTBsaTQyZjU4VDQ5dGhzQW8zR0F2bUFxV1hzTTRnd1hucXQtRU5zTHNnb0tRaXM0Vy1mTjRnZzdkdEZ6VWduQ0RCazdCZWphdw%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -214,8 +256,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Otomobil devini mahkemelik eden olay: Sürücülerin cildini yaktı</h2>
-            <p>Otomobil devini mahkemelik eden olay: Sürücülerin cildini yaktı Sözcü GazetesiMercedes-Benz'de "AMG logosu" krizi: Sürücülerin sırtında yanık oluştu... Toplu dava açıldı |...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Otomobil devini mahkemelik eden olay: Sürücülerin cildini yaktı" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Otomobil devini mahkemelik eden olay: Sürücülerin cildini yaktı Sözcü GazetesiMercedes-Benz'de "AMG logosu" krizi: Sürücülerin sırtında yanık oluştu... Toplu...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMimwFBVV95cUxPYVlmUnJ0UHc2SUJyWUVfd2JkYXFkbkg5X0FOLTBnRjl2TGxwQVl4ZVZtZnhBbkdFREx1bFhDOThCMGhicC1kYS05S0lMMFZlUC11Q2FkMEZrc3dFdWJtN09adFY0eGRuMURuWjBIdThMMEUxdE5WYnZ4OE5sd0lManlfeFVNdWxNU19hSlRad1BPRDRFbGJJTHhOWQ%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -225,8 +269,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>19 çalışanı olan şirket borsanın zirvesine oturdu</h2>
-            <p>19 çalışanı olan şirket borsanın zirvesine oturdu Sözcü GazetesiBorsanın devleri belli oldu! 3 şirketin piyasa değeri 1 trilyon lirayı aştı Haber 7Fonların gözdesi zirveye koşuyor...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="19 çalışanı olan şirket borsanın zirvesine oturdu" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>19 çalışanı olan şirket borsanın zirvesine oturdu Sözcü GazetesiBorsanın devleri belli oldu! 3 şirketin piyasa değeri 1 trilyon lirayı aştı Haber 7Fonların...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiigFBVV95cUxNaUdxRTNjeDVpOGNKbVJLRXlfX3g3aHJEV0YzWUFURUd6VHpTTDRIZ1ZaMFZSTFFjUEExRGQzcDNTWkJzdngtUjNseTVHdk9JelE3RzBybW1nZEhONXhPTzNpRVFHQmVWYkNKRFNkdzBfUGtaUlBiTEZ6V2JsaDhjMG5xQkhiNE4wdUE%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -236,8 +282,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Samsung Galaxy Tab S12+ ve Galaxy Tab S12 Ultra ortaya çıktı - Teknoloji haberleri</h2>
-            <p>Samsung Galaxy Tab S12+ ve Galaxy Tab S12 Ultra ortaya çıktı Teknoloji haberleri - LOGGalaxy Tab S12 Ultra'nın Geekbench puanları sızdırıldı: Dimensity 9500 işlemcisi üstün...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Samsung Galaxy Tab S12+ ve Galaxy Tab S12 Ultra ortaya çıktı - Teknoloji haberleri" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Samsung Galaxy Tab S12+ ve Galaxy Tab S12 Ultra ortaya çıktı Teknoloji haberleri - LOGGalaxy Tab S12 Ultra'nın Geekbench puanları sızdırıldı: Dimensity 9500...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiiwFBVV95cUxOR3hPTjExR0toa3VxQWhkTnJobGIySktsRVRiV3llVFZoZHNrbU0yWHk2S3JuejFoaTh1aDZUbTJOaXA1UU00Qi1RVmlMZ2x1czhxOVNDVEhlSnRXTmxRemlfSGNLV25Uem9KUEE4TmNka3AtWjF3NGJDQmpWUUhuaTdiZ3JZZk96c1E0%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -247,8 +295,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Samsung Galaxy Z Fold 8 sahibi bir kişi, cihazının arka kameralarını söktü - Teknoloji haberleri</h2>
-            <p>Samsung Galaxy Z Fold 8 sahibi bir kişi, cihazının arka kameralarını söktü Teknoloji haberleri - LOGSamsung Galaxy Z Fold 8 & Flip 8 rekora koşuyor: Ön sipariş rakamları açıklandı...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Samsung Galaxy Z Fold 8 sahibi bir kişi, cihazının arka kameralarını söktü - Teknoloji haberleri" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Samsung Galaxy Z Fold 8 sahibi bir kişi, cihazının arka kameralarını söktü Teknoloji haberleri - LOGSamsung Galaxy Z Fold 8 & Flip 8 rekora koşuyor: Ön sipariş...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMingFBVV95cUxPN1VOa01Ed3o2c2VRUU9pWlB6Y1gyaGlTenRidlM2TzF4eUdTRkEySGRFQ3hCYzVsZG9hQWhJVWw1bmpULXoxVXBLdEV5aUJBUHpOMW1HRWl5OGhJYU03d3I4WjJfc2FpOXhFanpYZndvam1Eb2N0NXBwV20wSzZ6SlRfYjAxVDJGWkdQSnJDT2hUajBTMmhXc2Z6bWEzZw%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -258,8 +308,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>iOS 27 Güncellemesi ile AirPods’a Neler Geliyor?</h2>
-            <p>iOS 27 Güncellemesi ile AirPods’a Neler Geliyor? ShiftDelete.NetiOS 27 ne zaman çıkacak? iOS 27 özellikleri: iOS 27 hangi telefonlara gelecek? | Teknoloji Haberleri GZTApple...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="iOS 27 Güncellemesi ile AirPods’a Neler Geliyor?" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>iOS 27 Güncellemesi ile AirPods’a Neler Geliyor? ShiftDelete.NetiOS 27 ne zaman çıkacak? iOS 27 özellikleri: iOS 27 hangi telefonlara gelecek? | Teknoloji...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiekFVX3lxTE9sbzZFNW10akxZV1BfMGd5VElEV1BhY0Y3akxFcm92c29HLXhudjI5OEFSOHE0dUhVdkZjQjFLbzRodkpjcWwzTHVURUFrMUdtdnFnZUI0Vjk2M243eXNHUkVJZU1oZEpUOTNlWFpLVnhjdUVCczdWUW1B0gGCAUFVX3lxTE1pYVNldGlkeTZPNzd5VGlHcUpFQTk3V1hmSHBPNDJtTzJVLUJraFVHUVQ1enFGSVQzS0xCcW1vd3MzYXpDM25rOTFOV2JVMzZEOE00aFhyOWpsR3p5TURyb0E5U2lGUlNuSFBrRTNPMEx3VGFoSXNEYVBCaW5MdXI0Nnc%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -269,8 +321,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Yeni iddia: “Apple, iPhone 17 serisine 10 Ağustos’ta zam yapabilir” - Teknoloji haberleri</h2>
-            <p>Yeni iddia: “Apple, iPhone 17 serisine 10 Ağustos’ta zam yapabilir” Teknoloji haberleri - LOGiPhone 17 serisine zam geliyor, 10 Ağustos iddiası DonanımHaberiPhone 18 ne zaman...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Yeni iddia: “Apple, iPhone 17 serisine 10 Ağustos’ta zam yapabilir” - Teknoloji haberleri" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Yeni iddia: “Apple, iPhone 17 serisine 10 Ağustos’ta zam yapabilir” Teknoloji haberleri - LOGiPhone 17 serisine zam geliyor, 10 Ağustos iddiası...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMijwFBVV95cUxQcWQ2SmFGZ0lQM3hXbTNGQ0xwSnVDQmdkZnNUNkhfbzh6OS1Ka0xJUXpuelMwR2pEZDkxeWxqWlo1M182d1FQWXY5SEl3X1hOYkk2OTZnRjRSSTRBRkdjMF9pVHNSZFlqTjB4NjctcnlFUFhRS3VHamFLR0kwWHliZVVpd2l0bEZBbk5IYzc2Zw%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -280,8 +334,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Son dakika. Şarkıcı Cansever hayatını kaybetti</h2>
-            <p>Son dakika. Şarkıcı Cansever hayatını kaybetti NTV HaberÜnlü isimlerden Cansever'e veda... 'Güzel yüreğini hiç unutmayacağım' HürriyetCansever öldü mü, neden öldü? Cansever kaç...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Son dakika. Şarkıcı Cansever hayatını kaybetti" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Son dakika. Şarkıcı Cansever hayatını kaybetti NTV HaberÜnlü isimlerden Cansever'e veda... 'Güzel yüreğini hiç unutmayacağım' HürriyetCansever’in vefatında...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMikwFBVV95cUxNNndFUUNjZjdtOUZ6c2hyYzJpX2U2WC1pOVQ2X3lCbnFVRVEydnRKM1F1c0tyeGl3S080Y1ZDeWtnQjlQajJtdXhJMVJHWFdxc29CZHdNT2xkczV5V0pwUWhMM240UGxLSXBkODFlUnBOX05SQ3VwLXVPRXQ3d0lHcVBnd0xVYU5FNlBMUW9UZ1JDQ2_SAZgBQVVfeXFMT01sQmlJRC13SFhNamdWWVRfbVRwcl81NzlYb21ZdkoxaTNkaWZNZ1JwcVRiYndmTWZkRU1xOUxhR3ZwM3RSRlFsRGhwYURRY25WMjlhOEM0bXBMVXo0X1ZWX0xXZXdUT2stcEh5WUZFZzRYeU1RSERsNmtrYVExN254azVHelppOXFfMDd0c3VLVTRMWk42RW0%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -291,8 +347,10 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>MasterChef ana kadroya giren 20. ve son yarışmacı belli oldu 8 Ağustos 2026 | Dün akşam MasterChef ana kadroya kim girdi, kim kazandı, yukarı kim çıktı? İşte MasterChef son bölümde önlüğü kazanan yarışmacı!</h2>
-            <p>MasterChef ana kadroya giren 20. ve son yarışmacı belli oldu 8 Ağustos 2026 | Dün akşam MasterChef ana kadroya kim girdi, kim kazandı, yukarı kim çıktı? İşte MasterChef son...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="MasterChef ana kadroya giren 20. ve son yarışmacı belli oldu 8 Ağustos 2026 | Dün akşam MasterChef ana kadroya kim girdi, kim kazandı, yukarı kim çıktı? İşte MasterChef son bölümde önlüğü kazanan yarışmacı!" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>MasterChef ana kadroya giren 20. ve son yarışmacı belli oldu 8 Ağustos 2026 | Dün akşam MasterChef ana kadroya kim girdi, kim kazandı, yukarı kim çıktı? İşte...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMi7wFBVV95cUxQaXpHZEhzc21admFSV3F3RllqZk9xRzM1UEVWNUNucGpkRHE4ZTJfMVdHUElnRnc1czI3eHh4bllBVWlXRVRTYWtuZWx4TlhfNkhwYVBGTFEwYkhkYmhUR0pPZmNtX0VUTVRyYTIwRzBPalBkTEp2dzNJTWJDQll6Zjc4VlQ3dkw3endMUDdGUU9OaFRxRE5TVEdGMW8xZ3RseGtIN19vYU1JdXFaZ0pITEFoQTVsOG9ZV0dScExydkRtVWt6QlpQUlEyaWJkQTFEelhSbVF0S1B1THFHZXhRa1E4UEc2ZVlrLXNTMnA5VQ%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
@@ -302,65 +360,12 @@
         <div class="card">
             <span class="badge">SON DAKİKA</span>
             <h2>Birol Güven'in acı günü! Annesini son yolculuğuna uğurladı</h2>
-            <p>Birol Güven'in acı günü! Annesini son yolculuğuna uğurladı MilliyetBirol Güven'in annesi, son yolculuğuna uğurlandı HabertürkAnneye acı veda SabahBirol Güven'in acı günü! Annesi...</p>
-
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt="Birol Güven'in acı günü! Annesini son yolculuğuna uğurladı" class="news-thumb" loading="lazy" width="120" height="80">
+                <p>Birol Güven'in acı günü! Annesini son yolculuğuna uğurladı MilliyetBirol Güven'in annesi, son yolculuğuna uğurlandı HabertürkAnneye acı veda SabahBirol...</p>
+            </div>
             <div class="card-footer">
                 <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiogFBVV95cUxOSE15WXg4TjUxRmVkWnZNbFowS1ZPSFV6SmtFYXd0c1V4YjZHSjAzbjRibnFhSzk0ei16VHdtX2lreG5nVWFUVHd2ZU13Yjd6d3dYQ2ZqT3ViNjFrWWJfbUc0QkxTTEhYSU1BN0p5d19VelJlMXp0V3BWNkdpcVhaaHZqaUdDelpPSi13cHIzODhiSkpxSnB4V1FUVEYzUkRKMmc%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Rihanna Türkiye'de açtığı marka davasını kazandı</h2>
-            <p>Rihanna Türkiye'de açtığı marka davasını kazandı t24.com.trRihanna Türkiye'de açtığı davayı kazandı Sözcü GazetesiRihanna'nın Türkiye'de Dava Açıp Kazandığı Ortaya Çıktı...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMiiAFBVV95cUxObVBNS2NGd0t5eE1XXy0yV1J4VkQ1bW9id3gwd3dDVTZmeV85ZGswX1dzNWVfQTJkOGhQMnRjQ1N4a3ctblE5X0Vpby1odVhhWGp2TEt3ZVdMM1NSZ2pFQWR1ZFkzby1PRmxFRFRMQm5rU1hQajhOakcwNnRkNFFjMThvZXhKVkZH%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Fenerbahçe-OH Leuven maçında hakem skandalı: Oyuncular uyardı</h2>
-            <p>Fenerbahçe-OH Leuven maçında hakem skandalı: Oyuncular uyardı FanatikFenerbahçe'nin Şampiyonlar Ligi maçında skandal hakem hatası Sözcü GazetesiFenerbahçe arsaVev, Avrupa...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMipAFBVV95cUxPQ21sczl3T3dreUNnXzlxaW9JZDB3OWd1dmNWVlhqQUJ2akJ1SUZVa0d1WVdwMWEyak82WTE0QnpPbU9wX2lzR0lFMEd2V3BOU3dHajlwaUVFU2h2clcyNGw0NGFLSzR1aG1raElCU2pMeUgzZ0ZfeURDNlJqSTBTa19kR2pkWUwwMXd0TEd1Qlk5VmxjdE1ibllFR2VJT2JWNDFEdg%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Galatasaray'da Batrakov olmazsa Mora bitecek! İşte yapılan son teklif</h2>
-            <p>Galatasaray'da Batrakov olmazsa Mora bitecek! İşte yapılan son teklif HürriyetGalatasaray iki yıldızı bitirdi: Okan Buruk'un seçtiği isim imzayı atacak Sözcü GazetesiRoma, Rodrigo...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMitAFBVV95cUxNanhtSUZFOGN6VjluQXBxWWtnS045NHJ5b1ZFYzYtbHllLXRTZ2lucWpWUmI3dnhYb3loQXVBWXVveDExd2JhbHM0X1ZUV3lCZzU2OEFBM1M1NHhVMzd1TWZIY0dFR0ctRDdXazkxT1I4U3hxdjhaZWc1enhvYU13YUFNNGotOUQ4MHRLMUdPTlN4bzJJN1NfNVoyMURfbGhaUENKeVpzQWlXRlZFdmdTemozZEw%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Eski antrenörü Nübel'i anlattı: Neuer'in varisi</h2>
-            <p>Eski antrenörü Nübel'i anlattı: Neuer'in varisi FanatikBeşiktaş - Hradec Kralove maçının hakemi açıklandı! HürriyetBeşiktaş-Hradec Kralove rövanş maçını İsviçreli hakem Urs...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMikgFBVV95cUxQSzA4cnBmVjJpV05OYjh3azQ2Rk9lMHJvUW1hdzY5dDVjYmpjemVaQlByNzVIT2VTRnk2UXY5eHlPSGZqT2VkWC01UjNhandURzhOV2MwVkNhbDkxTTdtUmNGbzJ2cXRwRWxmbkpOZFZNX0JFSklMOHhkb1R6Sk1YTFVEMlQtVHhIbUFRbU9EVGhXUQ%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>Renato Veiga'dan koridorda tek kelimelik Galatasaray açıklaması! Masadaki para ortaya çıktı</h2>
-            <p>Renato Veiga'dan koridorda tek kelimelik Galatasaray açıklaması! Masadaki para ortaya çıktı NTVSporGalatasaray-Villarreal maçı öncesi flaş transfer zirvesi! - Son dakika...</p>
-
-            <div class="card-footer">
-                <a href="https://nearadin.net/url/?q=https%3A%2F%2Fnews.google.com%2Frss%2Farticles%2FCBMizAFBVV95cUxPam1sX3V4bzVkMmg5NGFVQ3pUQ1VGcnF2dlY1RmdlOTRyNFBESzQ3dGp0c0FrSUQtZFo1Y0daMVk4dWRleWp6cWVUUFBUQl9lakphUk5fdE1rNEhFQ1IyY2tPbDBpNVM4bGNJTUl0Ul9YMktCMWotUnZGVkdKTXp3N3dXZ09pd0phQ0d1cHZGdXBEeEViTzVtc3ZtRDdyT29pQi1IbjhTTHZTZ0tRYTlBcDBkLVVheENHUG92djVfSnR5RWVjWTZQdUJxY0bSAdIBQVVfeXFMT0xXY0xqQnNKdjRiVGtUbTBuM19pZEVnYXpOeG50RlpkSU1FM1ZTTTg3Wk1HU04xcTMxaU9ZcHh0UW1YaWxfblAzSUpkVnQ2bWptUG5hb0xfX0JtTWtLSzcwa3o5SlVzYnlFWHhDa0NROEl5RnZfaEdGa3dXY0RkX3kzYkszMzJ5UEVGQm9IZDRQMkU2NXRXb0FZc1ZGWnRkVTlYdmR2UGstVFYydWtEMEZwOEpJWVI1QlFya2RMMnRqOWYyTmY0Vkx5aDFKVTFaLWpn%3Foc%3D5" target="_blank" rel="noopener">Habere Git →</a>
                 <span>Canlı Akış</span>
             </div>
         </div>
