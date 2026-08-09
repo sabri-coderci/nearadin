@@ -86,7 +86,9 @@ def fetch_and_generate():
         </div>
         '''
 
-    now = datetime.datetime.now().strftime("%d.%m.%Y %H:%M")
+    tz_turkey = datetime.timezone(datetime.timedelta(hours=3))
+    now = datetime.datetime.now(tz_turkey).strftime("%d.%m.%Y %H:%M")
+
 
     html_content = f'''<!DOCTYPE html>
 <html lang="tr">
