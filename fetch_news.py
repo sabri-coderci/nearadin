@@ -23,7 +23,6 @@ def clean_summary(raw_html, max_chars=180):
     return text
 
 def generate_sitemap():
-    """Google botlarının siteyi hızlıca taraması için dinamik sitemap.xml üretir"""
     now_iso = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
     sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -39,7 +38,6 @@ def generate_sitemap():
         f.write(sitemap_content)
 
 def generate_robots_txt():
-    """Tüm arama motoru botlarına izin veren ve sitemap adresini belirten robots.txt üretir"""
     robots_content = """User-agent: *
 Allow: /
 
@@ -62,7 +60,6 @@ def fetch_and_generate():
     
     news_html_cards = ""
     
-    # 30 Adet haber işleniyor
     for item in items[:30]:
         title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
         link = item.find('link').text if item.find('link') is not None else '#'
@@ -74,7 +71,6 @@ def fetch_and_generate():
         if not summary or len(summary) < 15:
             summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
 
-        # LINKI ÖZEL YÖNLENDİRME URL'SİNE ÇEVİRME
         encoded_link = urllib.parse.quote(link, safe='')
         custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
 
@@ -100,7 +96,6 @@ def fetch_and_generate():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>nearadin.net - SON DAKİKA</title>
-    <!-- Google Bot Yönlendirici Meta Etiketleri -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://nearadin.net/" />
     
@@ -142,14 +137,10 @@ def fetch_and_generate():
 </html>
 '''
 
-    # HTML Dosyasını Oluştur
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
         
-    # Sitemap Dosyasını Oluştur
     generate_sitemap()
-    
-    # Robots.txt Dosyasını Oluştur
     generate_robots_txt()
 
 if __name__ == "__main__":
