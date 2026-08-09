@@ -5,6 +5,47 @@ import html
 import re
 import urllib.parse
 
+import json
+
+def fetch_earthquakes():
+    """Kandilli / AFAD verilerini backend'de çekip local JSON yapar."""
+    try:
+        # AFAD resmi RSS akışı
+        afad_url = "https://deprem.afad.gov.tr/rss"
+        req = urllib.request.Request(afad_url, headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req, timeout=10)
+        xml_data = response.read()
+        
+        root = ET.fromstring(xml_data)
+        items = root.findall('./channel/item')
+        
+        eq_list = []
+        for item in items[:30]:
+            title = item.find('title').text if item.find('title') is not None else ''
+            pubDate = item.find('pubDate').text if item.find('pubDate') is not None else ''
+            
+            # Format: Büyüklük : 2.1 | Yer : ... | Tarih : ...
+            parts = title.split('|')
+            mag = parts[0].replace('Büyüklük :', '').strip() if len(parts) > 0 else '0.0'
+            location = parts[1].replace('Yer :', '').strip() if len(parts) > 1 else title
+            
+            eq_list.append({
+                "time": pubDate.split(' ')[4][:5] if len(pubDate.split(' ')) > 4 else "-",
+                "mag": mag,
+                "location": location,
+                "depth": "-"
+            })
+            
+        with open("son-depremler/earthquakes.json", "w", encoding="utf-8") as f:
+            json.dump(eq_list, f, ensure_ascii=False, indent=2)
+            
+    except Exception as e:
+        print(f"Deprem çekme hatası: {e}")
+
+# fetch_and_generate() içindeki kodların en sonuna ekleyin:
+# fetch_earthquakes()
+
+
 # Google News Türkiye RSS Akışı
 RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
 
