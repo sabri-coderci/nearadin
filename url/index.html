@@ -101,16 +101,24 @@
         <script async src="//waust.at/d.js"></script>
     </div>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        let targetUrl = urlParams.get('q');
+   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    let targetUrl = urlParams.get('q');
 
-        if (targetUrl) {
-            targetUrl = decodeURIComponent(targetUrl);
-            document.getElementById('news-frame').src = targetUrl;
+    if (targetUrl) {
+        targetUrl = decodeURIComponent(targetUrl);
+
+        // Eğer URL halen bir Google News yönlendirme linkiyse iframe'e zorlama, doğrudan adrese git!
+        if (targetUrl.includes("news.google.com")) {
+            window.location.href = targetUrl;
         } else {
-            window.location.href = "https://nearadin.net/";
+            // Temiz linkler (ntv, sozcu vb.) için iframe içinde aç
+            document.getElementById('news-frame').src = targetUrl;
         }
-    </script>
+    } else {
+        window.location.href = "https://nearadin.net/";
+    }
+</script>
+
 </body>
 </html>
