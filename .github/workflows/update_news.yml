@@ -1,4 +1,4 @@
-name: nearadin.net Otomatik Haber Güncelleyici
+name: nearadin.net Otomatik Haber Guncelleme
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,13 +18,18 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Haberleri Cek ve HTML Uret
+    - name: Kutuphaneleri Kur
+      run: |
+        python -m pip install --upgrade pip
+        pip install googlenewsdecoder
+
+    - name: Haberi Cek ve HTML Uret
       run: python fetch_news.py
 
-    - name: Degisiklikleri Push Et
+    - name: Degisiklikleri Commit Et ve Pusa Et
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Otomatik Guncelleme: $(date +'%Y-%m-%d %H:%M')" || exit 0
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add index.html sitemap.xml robots.txt
+        git commit -m "Otomatik haber guncellemesi [skip ci]" || exit 0
         git push
