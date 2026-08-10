@@ -14,12 +14,11 @@
 
     <div id="loading" class="loading">Haber Yükleniyor...</div>
     
-    <!-- sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-         dış sitelerin frame busting yaparak nearadin.net'ten kaçmasını engeller -->
+    <!-- allow-same-origin KALDIRILDI: Bu sayede iframe içindeki site ana sayfayı (top/parent) değiştiremez. -->
     <iframe 
         id="news-frame" 
         style="display:none;" 
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        sandbox="allow-scripts allow-forms allow-popups allow-modals"
         onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
     </iframe>
 
@@ -31,9 +30,13 @@
             targetUrl = decodeURIComponent(targetUrl);
             const frame = document.getElementById('news-frame');
 
-            // Doğrudan iframe içerisine yüklüyoruz.
-            // window.location.href ile siteden fırlatma mantığını kaldırdık!
-            frame.src = targetUrl;
+            // Eğer link Google News olarak kaldıysa iframe engeline takılmaması için yeni sekmede açtır veya doğrudan yönlendir
+            if (targetUrl.includes('news.google.com')) {
+                window.location.replace(targetUrl);
+            } else {
+                // Temiz haber adresi ise iframe içinde güvenle aç
+                frame.src = targetUrl;
+            }
         } else {
             window.location.href = "https://nearadin.net/";
         }
