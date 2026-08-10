@@ -21,6 +21,20 @@
         sandbox="allow-scripts allow-forms allow-popups allow-modals"
         onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
     </iframe>
+<script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let targetUrl = urlParams.get('q');
 
-   ody>
+        if (targetUrl) {
+            targetUrl = decodeURIComponent(targetUrl);
+            const frame = document.getElementById('news-frame');
+
+            // Hiçbir koşulda window.location kullanmıyoruz.
+            // Sadece iframe src'ye yüklüyoruz.
+            frame.src = targetUrl;
+        } else {
+            window.location.href = "https://nearadin.net/";
+        }
+    </script>
+  <body>
 </html>
