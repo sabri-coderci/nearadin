@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import datetime
 import re
 import os
+import shutil  # Klasör temizleme işlemi için
 import tweepy  # X (Twitter) paylaşımı için
 
 def slugify(text):
@@ -19,7 +20,7 @@ def slugify(text):
     return text
 
 def post_to_x(latest_news):
-    """Sadece en son çıkan 1 haberi X (Twitter) hesabında estetik bir formatta paylaşır."""
+    """En son çıkan haberi X üzerinde zengin bir formatta paylaşır."""
     api_key = os.environ.get("X_API_KEY")
     api_secret = os.environ.get("X_API_SECRET")
     access_token = os.environ.get("X_ACCESS_TOKEN")
@@ -39,13 +40,13 @@ def post_to_x(latest_news):
             access_token_secret=access_secret
         )
 
-        # Haber özetini 100 karakterle sınırla (Tweet sınırını aşmamak için)
+        title = latest_news['title']
         desc_preview = latest_news['desc'][:100] + "..." if len(latest_news['desc']) > 100 else latest_news['desc']
 
         # Şık ve Tıklanabilir Tweet Formatı
         tweet_text = (
             f"🚨 SON DAKİKA HABERİ\n\n"
-            f"📌 {latest_news['title']}\n\n"
+            f"📌 {title}\n\n"
             f"📝 {desc_preview}\n\n"
             f"🔗 Detaylar için tıklayın:\n{latest_news['full_url']}\n\n"
             f"#sondakika #haber #gundem"
@@ -63,6 +64,9 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
+    # --- ESKİ / ÇÖP DOSYALARI TEMİZLEME ADIMI ---
+    if os.path.exists("haber"):
+        shutil.rmtree("haber")  # Birikmiş eski/tekrarlayan dosyaları siler
     os.makedirs("haber", exist_ok=True)
 
     # --- SAYAÇ VE CANLI ZİYARETÇİ KODU (Who's Amung Us) ---
@@ -114,7 +118,9 @@ def fetch_and_generate():
 
             time_str = pub_date[17:22] if len(pub_date) >= 22 else ""
             slug = slugify(clean_title[:60])
-            page_name = f"{slug}-{idx+1}.html"
+            
+            # --- SABİT URL YAPISI ---
+            page_name = f"{slug}.html"
             internal_link = f"/haber/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
 
@@ -149,7 +155,7 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-                   # --- DETAY SAYFASI HTML (X Card Destekli) ---
+            # --- DETAY SAYFASI HTML (Belirttiğin Görsel Eklendi) ---
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -160,18 +166,18 @@ def fetch_and_generate():
     <link rel="canonical" href="{news['full_url']}" />
 
     <!-- X (Twitter) Card Meta Etiketleri -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{news['title']}" />
-<meta name="twitter:description" content="{news['desc'][:150]}..." />
-<meta name="twitter:site" content="@nearadin2026" />
-<!-- Haber İçin Temsili Görsel (Kartın üzerinde çıkacak olan resim) -->
-<meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{news['title']}" />
+    <meta name="twitter:description" content="{news['desc'][:150]}..." />
+    <meta name="twitter:site" content="@nearadin2026" />
+    <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
-    <!-- Open Graph / Facebook Etiketleri -->
+    <!-- Open Graph / Facebook Meta Etiketleri -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
+    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -346,7 +352,7 @@ def fetch_and_generate():
 
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{sitemap_content if 'sitemap_content' in locals() else ''}{sitemap_items}</urlset>'''
+{sitemap_items}</urlset>'''
 
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
@@ -355,7 +361,7 @@ def fetch_and_generate():
 
         # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
         if news_list:
-            post_to_x(news_list[0])  # En güncel haberi yeni formatta paylaşıyoruz
+            post_to_x(news_list[0])
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
