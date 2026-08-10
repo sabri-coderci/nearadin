@@ -1,4 +1,4 @@
-name: nearadin.net Otomatik Haber Guncelleme
+name: nearadin.net Otomatik Haber
 
 on:
   schedule:
@@ -11,21 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Depoyu Cek
-      uses: actions/checkout@v3
+      - name: Depoyu Cek
+        uses: actions/checkout@v3
 
-    - name: Python Ortamini Kur
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Python Ortamini Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Haberi Cek ve HTML Uret
-      run: python fetch_news.py
+      - name: Install dependencies
+        run: |
+          pip install googlenewsdecoder
 
-    - name: Degisiklikleri Commit Et ve Push Et
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add index.html sitemap.xml robots.txt
-        git commit -m "Otomatik haber guncellemesi [skip ci]" || exit 0
-        git push
+      - name: Haberi Cek ve HTML Uret
+        run: python fetch_news.py
+
+      - name: Degisiklikleri Commit Et ve Push Et
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html sitemap.xml robots.txt
+          git commit -m "Otomatik haber guncellemesi [skip ci]" || exit 0
+          git push
