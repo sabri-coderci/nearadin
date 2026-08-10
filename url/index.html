@@ -14,7 +14,7 @@
 
     <div id="loading" class="loading">Haber Yükleniyor...</div>
     
-    <!-- allow-same-origin KALDIRILDI: Bu sayede iframe içindeki site ana sayfayı (top/parent) değiştiremez. -->
+    <!-- allow-same-origin kaldırıldı: dış siteler ana sayfayı yönlendiremez -->
     <iframe 
         id="news-frame" 
         style="display:none;" 
@@ -30,13 +30,9 @@
             targetUrl = decodeURIComponent(targetUrl);
             const frame = document.getElementById('news-frame');
 
-            // Eğer link Google News olarak kaldıysa iframe engeline takılmaması için yeni sekmede açtır veya doğrudan yönlendir
-            if (targetUrl.includes('news.google.com')) {
-                window.location.replace(targetUrl);
-            } else {
-                // Temiz haber adresi ise iframe içinde güvenle aç
-                frame.src = targetUrl;
-            }
+            // Hiçbir koşulda window.location kullanmıyoruz.
+            // Sadece iframe src'ye yüklüyoruz.
+            frame.src = targetUrl;
         } else {
             window.location.href = "https://nearadin.net/";
         }
