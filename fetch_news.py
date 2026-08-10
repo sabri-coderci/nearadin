@@ -1,6 +1,64 @@
+import urllib.request
+import urllib.parse
+import xml.etree.ElementTree as ET
 import datetime
 
-def generate_page():
+def fetch_google_search_news():
+    # Google Arama -> Haberler Sekmesinin Birebir Resmi Akışı
+    rss_url = "https://news.google.com/rss/search?q=haberler&hl=tr&gl=TR&ceid=TR:tr"
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    
+    req = urllib.request.Request(rss_url, headers=headers)
+    
+    try:
+        response = urllib.request.urlopen(req, timeout=15)
+        xml_data = response.read()
+
+        root = ET.fromstring(xml_data)
+        items = root.findall('./channel/item')
+
+        cards_html = ""
+        for item in items[:15]:  # İlk 15 haberi al
+            title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
+            original_link = item.find('link').text if item.find('link') is not None else '#'
+
+            # Kaynak ve Başlık Ayıklama
+            source_name = "Google Haberler"
+            clean_title = title
+            if " - " in title:
+                parts = title.rsplit(" - ", 1)
+                clean_title = parts[0]
+                source_name = parts[1]
+
+            # Yönlendirme Formatınız: https://nearadin.net/url/?q=...
+            redirect_link = f"https://nearadin.net/url/?q={urllib.parse.quote(original_link)}"
+
+            cards_html += f'''
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">{source_name}</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="{redirect_link}">{clean_title}</a>
+                </h2>
+                <div class="card-footer">
+                    <a href="{redirect_link}" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            '''
+        return cards_html
+
+    except Exception as e:
+        print(f"Veri Çekme Hatası: {e}")
+        return "<p style='text-align:center; padding:20px;'>Haberler yüklenirken bir hata oluştu.</p>"
+
+def generate_site():
+    news_html = fetch_google_search_news()
+
     # Türkiye Saati (UTC+3)
     tz_tr = datetime.timezone(datetime.timedelta(hours=3))
     last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
@@ -25,18 +83,16 @@ def generate_page():
         
         .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; }}
         
-        /* Haber Kartı Stilleri */
+        /* Haber Kartları */
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
-        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }}
+        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; }}
         .news-title a {{ color: #050505; text-decoration: none; }}
         .news-title a:hover {{ color: #1877f2; }}
-        .news-snippet {{ font-size: 13px; color: #4b4f56; margin-bottom: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
-        .loading-text {{ text-align: center; padding: 20px; color: #666; font-size: 14px; }}
     </style>
 </head>
 <body>
@@ -55,64 +111,18 @@ def generate_page():
             <span>Son Güncelleme: <strong>{last_update}</strong></span>
         </div>
 
-        <main id="news-container">
-            <div class="loading-text">Google Arama sonuçları yükleniyor...</div>
+        <main>
+            {news_html}
         </main>
     </div>
 
-    <!-- Sizin Paylaştığınız JSONP Mimarisi -->
-    <script type="text/javascript">
-        (function() {{
-            var query = "haberler";
-            var cx = "a33464712b4234607";
-            var freeUrl = "https://cse.google.com/cse/element/v1?cx=" + cx + "&q=" + encodeURIComponent(query) + "&callback=googleCseCallback";
-
-            window.googleCseCallback = function(data) {{
-                var container = document.getElementById("news-container");
-                
-                if (data && data.results && data.results.length > 0) {{
-                    container.innerHTML = "";
-                    data.results.forEach(function(item) {{
-                        var title = item.titleNoFormatting || item.title || "Başlıksız";
-                        var rawLink = item.unescapedUrl || item.url || "#";
-                        var snippet = item.content || "";
-                        var source = item.visibleUrl || "Google Arama";
-
-                        // İstediğiniz Yönlendirme Formatı
-                        var redirectLink = "https://nearadin.net/url/?q=" + encodeURIComponent(rawLink);
-
-                        var cardHtml = `
-                            <article class="news-card">
-                                <div class="card-header">
-                                    <span class="badge">SON DAKİKA</span>
-                                    <span class="source">${{source}}</span>
-                                </div>
-                                <h2 class="news-title">
-                                    <a href="${{redirectLink}}">${{title}}</a>
-                                </h2>
-                                <p class="news-snippet">${{snippet}}</p>
-                                <div class="card-footer">
-                                    <a href="${{redirectLink}}" class="read-btn">Habere Git →</a>
-                                </div>
-                            </article>
-                        `;
-                        container.innerHTML += cardHtml;
-                    }});
-                }} else {{
-                    container.innerHTML = "<div class='loading-text'>Sonuç bulunamadı.</div>";
-                }}
-            }};
-
-            var script = document.createElement('script');
-            script.src = freeUrl;
-            document.body.appendChild(script);
-        }})();
-    </script>
 </body>
 </html>'''
 
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(full_html)
+        
+    print("index.html başarıyla oluşturuldu.")
 
 if __name__ == "__main__":
-    generate_page()
+    generate_site()
