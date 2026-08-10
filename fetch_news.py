@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import datetime
 import re
 import os
+import tweepy  # X (Twitter) paylaşımı için
 
 def slugify(text):
     text = text.lower()
@@ -17,6 +18,44 @@ def slugify(text):
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
 
+def post_to_x(latest_news):
+    """Sadece en son çıkan 1 haberi X (Twitter) hesabında estetik bir formatta paylaşır."""
+    api_key = os.environ.get("X_API_KEY")
+    api_secret = os.environ.get("X_API_SECRET")
+    access_token = os.environ.get("X_ACCESS_TOKEN")
+    access_secret = os.environ.get("X_ACCESS_SECRET")
+
+    # API Anahtarları tanımlı değilse adımı atla
+    if not all([api_key, api_secret, access_token, access_secret]):
+        print("X API anahtarları bulunamadı. Tweet atma adımı atlanıyor.")
+        return
+
+    try:
+        # Tweepy v2 Client (X Free API ile uyumlu)
+        client = tweepy.Client(
+            consumer_key=api_key,
+            consumer_secret=api_secret,
+            access_token=access_token,
+            access_token_secret=access_secret
+        )
+
+        # Haber özetini 100 karakterle sınırla (Tweet sınırını aşmamak için)
+        desc_preview = latest_news['desc'][:100] + "..." if len(latest_news['desc']) > 100 else latest_news['desc']
+
+        # Şık ve Tıklanabilir Tweet Formatı
+        tweet_text = (
+            f"🚨 SON DAKİKA HABERİ\n\n"
+            f"📌 {latest_news['title']}\n\n"
+            f"📝 {desc_preview}\n\n"
+            f"🔗 Detaylar için tıklayın:\n{latest_news['full_url']}\n\n"
+            f"#sondakika #haber #gundem"
+        )
+        
+        response = client.create_tweet(text=tweet_text)
+        print(f"X (Twitter) paylaşımı başarılı! Tweet ID: {response.data['id']}")
+    except Exception as e:
+        print(f"X (Twitter) paylaşımında hata oluştu: {e}")
+
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
     
@@ -28,9 +67,8 @@ def fetch_and_generate():
 
     # --- SAYAÇ VE CANLI ZİYARETÇİ KODU (Who's Amung Us) ---
     whos_amung_us_code = '''
-    <div class="visitor-counter" style="text-align: center; margin-top: 25px; padding: 10px 0;">
-        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script>
-        <script async src="//waust.at/d.js"></script>
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
     </div>
     '''
 
@@ -292,12 +330,16 @@ def fetch_and_generate():
 
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{sitemap_items}</urlset>'''
+{sitemap_content if 'sitemap_content' in locals() else ''}{sitemap_items}</urlset>'''
 
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
-            
-        print("Who's Amung Us canlı sayaç kodu başarıyla eklendi.")
+
+        print("Sayfalar ve sitemap başarıyla oluşturuldu.")
+
+        # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
+        if news_list:
+            post_to_x(news_list[0])  # En güncel haberi yeni formatta paylaşıyoruz
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
