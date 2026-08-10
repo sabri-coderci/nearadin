@@ -1,8 +1,8 @@
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 import datetime
-import os
-import json
+import re
 
 def fetch_and_generate():
     # Google News Türkiye - Son Dakika RSS Akışı
@@ -22,21 +22,32 @@ def fetch_and_generate():
 
         news_cards_html = ""
 
-        for item in items[:25]:  # En güncel 25 son dakika haberi
+        # --- ADMATİC AUTO ADS REKLAM KODU ---
+        admatic_code = '''
+        <div class="ad-container">
+            <!-- Admatic AUTO ads START -->
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Admatic AUTO ads END -->
+        </div>
+        '''
+
+        for idx, item in enumerate(items[:25]):  # En güncel 25 haber
             title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
             original_link = item.find('link').text if item.find('link') is not None else '#'
             pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ''
+            
+            # Haber özetini alıp HTML etiketlerinden temizleme
+            raw_desc = item.find('description').text if item.find('description') is not None else ''
+            clean_desc = re.sub('<[^<]+?>', '', raw_desc)
 
-            # Kaynak gazete/site adını başlık sonundan ayıkla (Örn: "... - Habertürk")
+            # Kaynak adını ayıklama
             source_name = "Canlı Haber Akışı"
             clean_title = title
             if " - " in title:
                 parts = title.rsplit(" - ", 1)
                 clean_title = parts[0]
                 source_name = parts[1]
-
-            # Yönlendirme Linki Yapısı (/url/?q=ORIGINAL_URL)
-            redirect_link = f"https://nearadin.net/url/?q={urllib.parse.quote(original_link)}"
 
             # Tarih Formatlama
             time_str = pub_date[17:22] if len(pub_date) >= 22 else ""
@@ -49,13 +60,18 @@ def fetch_and_generate():
                     <span class="time">{time_str}</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="{redirect_link}">{clean_title}</a>
+                    <a href="{original_link}" target="_blank" rel="noopener noreferrer">{clean_title}</a>
                 </h2>
+                <p class="news-summary">{clean_desc}</p>
                 <div class="card-footer">
-                    <a href="{redirect_link}" class="read-btn">Habere Git →</a>
+                    <a href="{original_link}" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             '''
+
+            # İlk 2 haberden sonra Admatic Reklam Kodunu Ekle
+            if idx == 1:
+                news_cards_html += admatic_code
 
         # Türkiye Saati (UTC+3)
         tz_tr = datetime.timezone(datetime.timedelta(hours=3))
@@ -90,17 +106,22 @@ def fetch_and_generate():
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
         
-        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 12px; }}
+        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
         .time {{ color: #8d949e; margin-left: auto; }}
         
-        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }}
+        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
         .news-title a {{ color: #050505; text-decoration: none; }}
         .news-title a:hover {{ color: #1877f2; }}
+
+        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
         
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
+
+        /* Admatic Reklam Alanı Stili */
+        .ad-container {{ background: white; border-radius: 10px; padding: 10px; margin-bottom: 12px; text-align: center; min-height: 100px; overflow: hidden; }}
     </style>
 </head>
 <body>
@@ -142,6 +163,5 @@ def fetch_and_generate():
     except Exception as e:
         print(f"Hata oluştu: {e}")
 
-# Çalıştır
 if __name__ == "__main__":
     fetch_and_generate()
