@@ -178,7 +178,7 @@ def fetch_and_generate():
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
-    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
