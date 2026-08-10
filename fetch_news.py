@@ -2,41 +2,54 @@ import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
 import datetime
+import json
 import re
 
-def resolve_google_link(google_url):
+def decode_google_news_url(source_url):
     """
-    Google News'in şifrelenmiş linklerini pure Python (HTTP) ile çözer.
-    Ek kütüphane veya tarayıcı sürücüsü gerektirmez.
+    Google News'in CBMi şifreli linklerini Google'ın kendi decode 
+    API mantığını simüle ederek doğrudan orijinal haber URL'sine çevirir.
     """
     try:
-        req = urllib.request.Request(
-            google_url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        )
-        with urllib.request.urlopen(req, timeout=5) as response:
-            final_url = response.geturl()
-            if "news.google.com" not in final_url:
-                return final_url
+        if "news.google.com" not in source_url:
+            return source_url
+
+        # URL'den article ID'sini yakala
+        match = re.search(r'articles/([^?]+)', source_url)
+        if not match:
+            return source_url
+        
+        article_id = match.group(1)
+
+        # Google'ın iç çözücü RPC endpoint'ine istek atıyoruz
+        req_url = "https://news.google.com/_/DotsDataUi/data/batchexecute"
+        rpc_payload = f'[[["FsvBbe","[\\"{article_id}\\",1,null,null,null,null,null,0]",null,"generic"]]]'
+        
+        data = urllib.parse.urlencode({'f.req': rpc_payload}).encode('utf-8')
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+
+        req = urllib.request.Request(req_url, data=data, headers=headers)
+        with urllib.request.urlopen(req, timeout=8) as response:
+            res_text = response.read().decode('utf-8')
             
-            # HTML içinden hedef URL'i regex ile yakalama (Fallback)
-            html_content = response.read().decode('utf-8', errors='ignore')
-            urls = re.findall(r'data-n-head-a2a="true" href="(.*?)"', html_content)
-            if urls:
-                return urls[0]
-            urls_c = re.findall(r'c-wiz url="(.*?)"', html_content)
-            if urls_c:
-                return urls_c[0]
+            # Yanıt içerisinden orijinal URL'yi (http/https) çekiyoruz
+            urls = re.findall(r'https?://[^\s"\\\]]+', res_text)
+            for u in urls:
+                if "news.google.com" not in u and "google.com" not in u:
+                    return u
     except Exception as e:
-        print(f"Link çözme uyarısı ({google_url[:30]}...): {e}")
+        print(f"URL Çözme Hatası ({source_url[:30]}...): {e}")
     
-    return google_url
+    return source_url
 
 def fetch_google_search_news():
     rss_url = "https://news.google.com/rss/search?q=haberler&hl=tr&gl=TR&ceid=TR:tr"
     
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
     
     req = urllib.request.Request(rss_url, headers=headers)
@@ -53,8 +66,8 @@ def fetch_google_search_news():
             title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
             google_link = item.find('link').text if item.find('link') is not None else '#'
 
-            # Orijinal habere çözme
-            real_link = resolve_google_link(google_link)
+            # Google'ın şifresini çözüp doğrudan orijinal linki alıyoruz
+            real_link = decode_google_news_url(google_link)
 
             # Kaynak ve Başlık Ayıklama
             source_name = "Haber Akışı"
@@ -64,7 +77,8 @@ def fetch_google_search_news():
                 clean_title = parts[0]
                 source_name = parts[1]
 
-            # Link yönlendirmesi
+            # Eğer link başarıyla çözüldüyse yönlendirme servisine gönder,
+            # Çözülemediyse kullanıcının sayfada kalması için Google linkini kırarak gönder.
             if "news.google.com" in real_link:
                 redirect_link = real_link
             else:
