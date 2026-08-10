@@ -1,215 +1,140 @@
 import urllib.request
-import xml.etree.ElementTree as ET
-import datetime
-import html
-import re
 import urllib.parse
-
 import json
+import datetime
 import os
-import json
-
-def fetch_earthquakes():
-    """Kandilli / AFAD verilerini backend'de çekip local JSON yapar."""
-    try:
-        # Klasör yoksa otomatik oluştur
-        if not os.path.exists("son-depremler"):
-            os.makedirs("son-depremler")
-
-        afad_url = "https://deprem.afad.gov.tr/rss"
-        req = urllib.request.Request(afad_url, headers={'User-Agent': 'Mozilla/5.0'})
-        response = urllib.request.urlopen(req, timeout=10)
-        xml_data = response.read()
-        
-        root = ET.fromstring(xml_data)
-        items = root.findall('./channel/item')
-        
-        eq_list = []
-        for item in items[:30]:
-            title = item.find('title').text if item.find('title') is not None else ''
-            pubDate = item.find('pubDate').text if item.find('pubDate') is not None else ''
-            
-            parts = title.split('|')
-            mag = parts[0].replace('Büyüklük :', '').strip() if len(parts) > 0 else '0.0'
-            location = parts[1].replace('Yer :', '').strip() if len(parts) > 1 else title
-            
-            eq_list.append({
-                "time": pubDate.split(' ')[4][:5] if len(pubDate.split(' ')) > 4 else "-",
-                "mag": mag,
-                "location": location
-            })
-            
-        with open("son-depremler/earthquakes.json", "w", encoding="utf-8") as f:
-            json.dump(eq_list, f, ensure_ascii=False, indent=2)
-            
-        print("Deprem verileri başarıyla yazıldı.")
-            
-    except Exception as e:
-        print(f"Deprem çekme hatası: {e}")
-
-
-
-# fetch_and_generate() içindeki kodların en sonuna ekleyin:
-# fetch_earthquakes()
-
-
-# Google News Türkiye RSS Akışı
-RSS_URL = "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
-
-def clean_summary(raw_html, max_chars=180):
-    if not raw_html:
-        return ""
-    text = re.sub(r'<script.*?>.*?</script>', '', raw_html, flags=re.DOTALL)
-    text = re.sub(r'<style.*?>.*?</style>', '', text, flags=re.DOTALL)
-    text = re.sub(r'<.*?>', '', text)
-    text = html.unescape(text).strip()
-    text = re.sub(r'\s+', ' ', text)
-    if ' font' in text:
-        text = text.split(' font')[0]
-    if len(text) > max_chars:
-        text = text[:max_chars].rsplit(' ', 1)[0] + "..."
-    return text
-
-def generate_sitemap():
-    now_iso = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
-    sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://nearadin.net/</loc>
-    <lastmod>{now_iso}</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-depremler/</loc>
-    <lastmod>{now_iso}</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nearadin.net/kripto-para/</loc>
-    <lastmod>{now_iso}</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nearadin.net/hava-durumu/</loc>
-    <lastmod>{now_iso}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>'''
-    with open("sitemap.xml", "w", encoding="utf-8") as f:
-        f.write(sitemap_content)
-
-def generate_robots_txt():
-    robots_content = """User-agent: *
-Allow: /
-
-Sitemap: https://nearadin.net/sitemap.xml
-"""
-    with open("robots.txt", "w", encoding="utf-8") as f:
-        f.write(robots_content)
 
 def fetch_and_generate():
-    req = urllib.request.Request(
-        RSS_URL, 
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    )
+    # Google Özel Arama API Bilgileri
+    api_key = os.environ.get("G_API_KEY", "AIzaSyDMEJ6_O7vYVwYJqmHYu9U_qr3UDO0DJow")
+    cx_id = os.environ.get("G_CX", "a33464712b4234607")
+    query = "haberler"
     
-    response = urllib.request.urlopen(req)
-    xml_data = response.read()
+    # Custom Search API Endpoint
+    url = f"https://www.googleapis.com/customsearch/v1?key={api_key}&cx={cx_id}&q={urllib.parse.quote(query)}&hl=tr"
     
-    root = ET.fromstring(xml_data)
-    items = root.findall('./channel/item')
+    news_cards_html = ""
     
-    news_html_cards = ""
-    
-    for item in items[:25]:
-        title = item.find('title').text if item.find('title') is not None else 'Başlıksız Haber'
-        google_link = item.find('link').text if item.find('link') is not None else '#'
-        description = item.find('description').text if item.find('description') is not None else ''
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req, timeout=15)
+        data = json.loads(response.read().decode('utf-8'))
         
-        clean_title = html.unescape(title).rsplit(' - ', 1)[0]
-        summary = clean_summary(description, max_chars=180)
+        items = data.get('items', [])
         
-        if not summary or len(summary) < 15:
-            summary = "Gündemdeki son gelişmeler, sıcak başlıklar ve detaylar nearadin.net farkıyla anında yayında."
+        for item in items:
+            title = item.get('title', 'Başlıksız')
+            original_link = item.get('link', '#')
+            snippet = item.get('snippet', '')
+            
+            # Yayıncı kaynak adını alma (Örn: haberturk.com)
+            source_name = item.get('displayLink', 'Google Arama').replace('www.', '')
 
-        encoded_link = urllib.parse.quote(google_link.strip(), safe='')
-        custom_redirect_url = f"https://nearadin.net/url/?q={encoded_link}"
+            # /url/?q= yönlendirme yapısı
+            redirect_link = f"https://nearadin.net/url/?q={urllib.parse.quote(original_link)}"
 
-        # Resimsiz, Şık ve Temiz Haber Kartı
-        news_html_cards += f'''
-        <div class="card">
-            <span class="badge">SON DAKİKA</span>
-            <h2>{clean_title}</h2>
-            <p>{summary}</p>
-            <div class="card-footer">
-                <a href="{custom_redirect_url}" target="_blank" rel="noopener">Habere Git →</a>
-                <span>Canlı Akış</span>
-            </div>
-        </div>
-        '''
+            news_cards_html += f'''
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">{source_name}</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="{redirect_link}">{title}</a>
+                </h2>
+                <p class="news-snippet">{snippet}</p>
+                <div class="card-footer">
+                    <a href="{redirect_link}" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            '''
 
-    tz_turkey = datetime.timezone(datetime.timedelta(hours=3))
-    now = datetime.datetime.now(tz_turkey).strftime("%d.%m.%Y %H:%M")
+    except Exception as e:
+        print(f"Google Custom Search Hatası: {e}")
+        news_cards_html = "<p style='text-align:center; padding:20px;'>Haber akışı şu anda yüklenemiyor.</p>"
 
+    # Türkiye Saati (UTC+3)
+    tz_tr = datetime.timezone(datetime.timedelta(hours=3))
+    last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
 
-    html_content = f'''<!DOCTYPE html>
+    # Ana Sayfa HTML Tasarımı
+    full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <title>nearadin.net - SON DAKİKA HABERLERİ</title>
-    <meta name="description" content="En son dakika haberler, güncel gelişmeler ve yerel haberler nearadin.net üzerinde!" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://nearadin.net/" />
-    
+    <title>nearadin.net - Son Dakika Haberleri ve Canlı Akış</title>
+    <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı haber akışı." />
     <style>
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; }}
-        header {{ background: #0056b3; color: white; text-align: center; padding: 20px 10px; font-size: 24px; font-weight: bold; }}
-        .container {{ max-width: 800px; margin: 20px auto; padding: 0 15px; }}
-        .info-box {{ background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; }}
-        .card {{ background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
-        .badge {{ background: #ffebee; color: #c62828; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }}
-        .card h2 {{ margin: 0 0 10px 0; font-size: 18px; color: #111; line-height: 1.4; }}
-        .card p {{ color: #555; font-size: 14px; margin: 0 0 15px 0; line-height: 1.5; }}
-        .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; font-size: 13px; color: #888; }}
-        .card-footer a {{ color: #0056b3; text-decoration: none; font-weight: bold; }}
-        .widget-box {{ text-align: center; margin: 20px 0; }}
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; padding-bottom: 30px; }}
+        
+        header {{ background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }}
+        
+        .container {{ max-width: 680px; margin: 0 auto; padding: 12px; }}
+
+        /* Servis Butonları Paneli */
+        .widgets-nav {{ display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }}
+        .widgets-nav::-webkit-scrollbar {{ display: none; }}
+        .widget-btn {{ background: white; padding: 8px 14px; border-radius: 20px; text-decoration: none; color: #333; font-weight: 600; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 5px; white-space: nowrap; border: 1px solid #e4e6eb; }}
+        .widget-btn:hover {{ background: #e7f3ff; color: #1877f2; border-color: #1877f2; }}
+
+        /* Güncelleme Bilgisi Bandı */
+        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; }}
+        
+        /* Haber Kartları */
+        .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
+        .news-card:active {{ transform: scale(0.99); }}
+        
+        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
+        .source {{ font-weight: 600; color: #4b4f56; }}
+        
+        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }}
+        .news-title a {{ color: #050505; text-decoration: none; }}
+        .news-title a:hover {{ color: #1877f2; }}
+
+        .news-snippet {{ font-size: 13px; color: #4b4f56; margin-bottom: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+        
+        .card-footer {{ display: flex; justify-content: flex-end; }}
+        .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
     </style>
 </head>
 <body>
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
-    <header>nearadin.net - SON DAKİKA</header>
+    <header>
+        nearadin.net - SON DAKİKA
+    </header>
+
     <div class="container">
-        <div class="info-box">
-            <div><strong>Kaynak:</strong> Canlı Haber Akışı</div>
-            <div><strong>Son Güncelleme:</strong> {now}</div>
+        
+        <!-- Hızlı Servisler -->
+        <div class="widgets-nav">
+            <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
+            <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
+            <a href="/hava-durumu/" class="widget-btn">☀️ Hava Durumu</a>
         </div>
-        {news_html_cards}
+
+        <!-- Güncelleme Zamanı -->
+        <div class="status-bar">
+            <span>Kaynak: <strong>Google Özel Arama</strong></span>
+            <span>Son Güncelleme: <strong>{last_update}</strong></span>
+        </div>
+
+        <!-- Haber Listesi -->
+        <main>
+            {news_cards_html}
+        </main>
+
     </div>
 
-    <!-- Whos.Amung.Us Ziyaretçi Sayacı -->
-    <div class="widget-box">
-        <script id="_wauc41">var _wau = _wau || []; _wau.push(["dynamic", "0bq3jkzwyz", "c41", "c4302bffffff", "small"]);</script>
-        <script async src="//waust.at/d.js"></script>
-    </div>
 </body>
-</html>
-'''
+</html>'''
 
     with open("index.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
+        f.write(full_html)
         
-    generate_sitemap()
-    generate_robots_txt()
+    print("index.html Google Özel Arama verileriyle başarıyla yenilendi.")
 
 if __name__ == "__main__":
     fetch_and_generate()
