@@ -2,9 +2,8 @@ name: nearadin.net Otomatik Haber
 
 on:
   schedule:
-    # Her 15 dakikada bir tetikle
     - cron: '*/15 * * * *'
-  workflow_dispatch: # Manuel tetikleme butonu ekler
+  workflow_dispatch:
 
 jobs:
   build-deploy:
@@ -18,10 +17,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip install googlenewsdecoder
 
       - name: Haberi Cek ve HTML Uret
         run: python fetch_news.py
