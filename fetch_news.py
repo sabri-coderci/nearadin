@@ -25,7 +25,6 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # Haber sayfalarının kaydedileceği klasör
     os.makedirs("haber", exist_ok=True)
 
     try:
@@ -34,10 +33,7 @@ def fetch_and_generate():
         xml_data = response.read()
 
         root = ET.fromstring(xml_data)
-        items = root.findall('./channel/item')
-
-        news_cards_html = ""
-        sitemap_urls = []
+        raw_items = root.findall('./channel/item')[:25] # İlk 25 haber
 
         # --- ADMATİC AUTO ADS REKLAM KODU ---
         admatic_code = '''
@@ -54,7 +50,10 @@ def fetch_and_generate():
         last_update = now.strftime("%d.%m.%Y %H:%M")
         last_update_iso = now.strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
-        for idx, item in enumerate(items[:25]):
+        news_list = []
+
+        # 1. Aşama: Tüm haber verilerini önceden işle
+        for idx, item in enumerate(raw_items):
             title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
             original_link = item.find('link').text if item.find('link') is not None else '#'
             pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ''
@@ -70,25 +69,53 @@ def fetch_and_generate():
                 source_name = parts[1]
 
             time_str = pub_date[17:22] if len(pub_date) >= 22 else ""
-
-            # SEO Uyumlu İç Link Yapısı
             slug = slugify(clean_title[:60])
-            internal_page_name = f"{slug}-{idx+1}.html"
-            internal_link = f"/haber/{internal_page_name}"
-            full_internal_url = f"https://nearadin.net{internal_link}"
+            page_name = f"{slug}-{idx+1}.html"
+            internal_link = f"/haber/{page_name}"
+            full_url = f"https://nearadin.net{internal_link}"
 
-            sitemap_urls.append(full_internal_url)
+            news_list.append({
+                "idx": idx,
+                "title": clean_title,
+                "original_link": original_link,
+                "desc": clean_desc,
+                "source": source_name,
+                "time": time_str,
+                "page_name": page_name,
+                "internal_link": internal_link,
+                "full_url": full_url
+            })
 
-            # -------------------------------------------------------------
-            # 1. TEKİL HABER DETAY SAYFASINI ÜRET (/haber/haber-basligi.html)
-            # -------------------------------------------------------------
+        news_cards_html = ""
+        sitemap_urls = []
+
+        # 2. Aşama: Sayfaları ve Anasayfayı Üret
+        for news in news_list:
+            sitemap_urls.append(news["full_url"])
+
+            # "Diğer Son Dakika Haberleri" listesi oluştur (Mevcut haber hariç 5 haber)
+            other_news_html = ""
+            other_count = 0
+            for other_news in news_list:
+                if other_news["idx"] != news["idx"] and other_count < 5:
+                    other_news_html += f'''
+                    <li style="margin-bottom: 10px;">
+                        <a href="{other_news['internal_link']}" style="color: #050505; text-decoration: none; font-weight: 600; font-size: 14px; display: block; line-height: 1.3;">
+                            • {other_news['title']}
+                        </a>
+                        <span style="font-size: 11px; color: #65676b;">{other_news['source']} - {other_news['time']}</span>
+                    </li>'''
+                    other_count += 1
+
+            # --- DETAY SAYFASI HTML ---
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{clean_title} - nearadin.net Haber</title>
-    <meta name="description" content="{clean_desc[:150]}..." />
+    <title>{news['title']} - nearadin.net</title>
+    <meta name="description" content="{news['desc'][:150]}..." />
+    <link rel="canonical" href="{news['full_url']}" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 40px; }}
@@ -100,11 +127,16 @@ def fetch_and_generate():
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         h1 {{ font-size: 22px; margin-bottom: 15px; color: #050505; line-height: 1.3; }}
         p {{ font-size: 15px; color: #333; margin-bottom: 20px; line-height: 1.6; }}
-        .actions {{ display: flex; flex-direction: column; gap: 10px; margin-top: 25px; }}
+        .actions {{ display: flex; flex-direction: column; gap: 10px; margin-top: 25px; margin-bottom: 25px; }}
         .btn {{ display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }}
         .btn-primary {{ background: #1877f2; color: white; }}
         .btn-secondary {{ background: #e4e6eb; color: #050505; }}
         .ad-container {{ margin: 20px 0; text-align: center; min-height: 100px; }}
+        
+        /* Diğer Haberler Alanı */
+        .related-news {{ background: #f7f8fa; border-radius: 8px; padding: 15px; border: 1px solid #e4e6eb; margin-top: 20px; }}
+        .related-title {{ font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }}
+        .related-list {{ list-style: none; }}
     </style>
 </head>
 <body>
@@ -115,52 +147,56 @@ def fetch_and_generate():
         <article class="article-card">
             <div class="meta-info">
                 <span class="badge">SON DAKİKA</span>
-                <span>Kaynak: <strong>{source_name}</strong></span>
-                <span>Saat: <strong>{time_str}</strong></span>
+                <span>Kaynak: <strong>{news['source']}</strong></span>
+                <span>Saat: <strong>{news['time']}</strong></span>
             </div>
-            <h1>{clean_title}</h1>
-            <p>{clean_desc}</p>
+            <h1>{news['title']}</h1>
+            <p>{news['desc']}</p>
             
             {admatic_code}
 
             <div class="actions">
-                <a href="{original_link}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
+                <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
                 <a href="/" class="btn btn-secondary">← Tüm Son Dakika Haberlerine Dön</a>
+            </div>
+
+            <!-- Diğer Son Dakika Haberleri -->
+            <div class="related-news">
+                <div class="related-title">🔥 Diğer Son Dakika Gelişmeleri</div>
+                <ul class="related-list">
+                    {other_news_html}
+                </ul>
             </div>
         </article>
     </div>
 </body>
 </html>'''
 
-            with open(f"haber/{internal_page_name}", "w", encoding="utf-8") as f:
+            with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
-            # -------------------------------------------------------------
-            # 2. ANASAYFA KARTINI OLUŞTUR (Sitenin İçi Linkiyle)
-            # -------------------------------------------------------------
+            # --- ANASAYFA KART KODU ---
             news_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">{source_name}</span>
-                    <span class="time">{time_str}</span>
+                    <span class="source">{news['source']}</span>
+                    <span class="time">{news['time']}</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="{internal_link}">{clean_title}</a>
+                    <a href="{news['internal_link']}">{news['title']}</a>
                 </h2>
-                <p class="news-summary">{clean_desc}</p>
+                <p class="news-summary">{news['desc']}</p>
                 <div class="card-footer">
-                    <a href="{internal_link}" class="read-btn">Detayı Oku →</a>
+                    <a href="{news['internal_link']}" class="read-btn">Detayı Oku →</a>
                 </div>
             </article>
             '''
 
-            if idx == 1:
+            if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # -------------------------------------------------------------
-        # 3. ANASAYFA (index.html) OLUŞTUR
-        # -------------------------------------------------------------
+        # --- ANASAYFA (index.html) ---
         full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -234,9 +270,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # -------------------------------------------------------------
-        # 4. SITEMAP.XML OLUŞTUR (Detay Sayfalarını İçerir)
-        # -------------------------------------------------------------
+        # --- SITEMAP.XML ---
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -259,7 +293,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
             
-        print("index.html, haber detay sayfaları ve sitemap.xml başarıyla oluşturuldu.")
+        print("Tüm haber detay sayfaları 'Diğer Haberler' bölümüyle birlikte güncellendi.")
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
