@@ -6,7 +6,6 @@ import re
 import os
 
 def slugify(text):
-    """Haber başlığından SEO uyumlu URL yapısı oluşturur."""
     text = text.lower()
     replacements = {
         'ı': 'i', 'ğ': 'g', 'ü': 'u', 'ş': 's', 'ö': 'o', 'ç': 'c',
@@ -27,13 +26,21 @@ def fetch_and_generate():
 
     os.makedirs("haber", exist_ok=True)
 
+    # --- SAYAÇ VE CANLI ZİYARETÇİ KODU (Who's Amung Us) ---
+    whos_amung_us_code = '''
+    <div class="visitor-counter" style="text-align: center; margin-top: 25px; padding: 10px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script>
+        <script async src="//waust.at/d.js"></script>
+    </div>
+    '''
+
     try:
         req = urllib.request.Request(rss_url, headers=headers)
         response = urllib.request.urlopen(req, timeout=15)
         xml_data = response.read()
 
         root = ET.fromstring(xml_data)
-        raw_items = root.findall('./channel/item')[:25] # İlk 25 haber
+        raw_items = root.findall('./channel/item')[:25]
 
         # --- ADMATİC AUTO ADS REKLAM KODU ---
         admatic_code = '''
@@ -52,7 +59,6 @@ def fetch_and_generate():
 
         news_list = []
 
-        # 1. Aşama: Tüm haber verilerini önceden işle
         for idx, item in enumerate(raw_items):
             title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
             original_link = item.find('link').text if item.find('link') is not None else '#'
@@ -89,11 +95,9 @@ def fetch_and_generate():
         news_cards_html = ""
         sitemap_urls = []
 
-        # 2. Aşama: Sayfaları ve Anasayfayı Üret
         for news in news_list:
             sitemap_urls.append(news["full_url"])
 
-            # "Diğer Son Dakika Haberleri" listesi oluştur (Mevcut haber hariç 5 haber)
             other_news_html = ""
             other_count = 0
             for other_news in news_list:
@@ -132,8 +136,6 @@ def fetch_and_generate():
         .btn-primary {{ background: #1877f2; color: white; }}
         .btn-secondary {{ background: #e4e6eb; color: #050505; }}
         .ad-container {{ margin: 20px 0; text-align: center; min-height: 100px; }}
-        
-        /* Diğer Haberler Alanı */
         .related-news {{ background: #f7f8fa; border-radius: 8px; padding: 15px; border: 1px solid #e4e6eb; margin-top: 20px; }}
         .related-title {{ font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }}
         .related-list {{ list-style: none; }}
@@ -160,13 +162,14 @@ def fetch_and_generate():
                 <a href="/" class="btn btn-secondary">← Tüm Son Dakika Haberlerine Dön</a>
             </div>
 
-            <!-- Diğer Son Dakika Haberleri -->
             <div class="related-news">
                 <div class="related-title">🔥 Diğer Son Dakika Gelişmeleri</div>
                 <ul class="related-list">
                     {other_news_html}
                 </ul>
             </div>
+
+            {whos_amung_us_code}
         </article>
     </div>
 </body>
@@ -175,7 +178,6 @@ def fetch_and_generate():
             with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
-            # --- ANASAYFA KART KODU ---
             news_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
@@ -262,6 +264,8 @@ def fetch_and_generate():
             {news_cards_html}
         </main>
 
+        {whos_amung_us_code}
+
     </div>
 
 </body>
@@ -293,7 +297,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
             
-        print("Tüm haber detay sayfaları 'Diğer Haberler' bölümüyle birlikte güncellendi.")
+        print("Who's Amung Us canlı sayaç kodu başarıyla eklendi.")
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
