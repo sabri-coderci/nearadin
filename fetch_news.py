@@ -149,7 +149,7 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # --- DETAY SAYFASI HTML ---
+                   # --- DETAY SAYFASI HTML (X Card Destekli) ---
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -158,6 +158,19 @@ def fetch_and_generate():
     <title>{news['title']} - nearadin.net</title>
     <meta name="description" content="{news['desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
+
+    <!-- X (Twitter) Card Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{news['title']}" />
+    <meta name="twitter:description" content="{news['desc'][:150]}..." />
+    <meta name="twitter:site" content="@nearadin2026" />
+
+    <!-- Open Graph / Facebook Etiketleri -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{news['title']}" />
+    <meta property="og:description" content="{news['desc'][:150]}..." />
+    <meta property="og:url" content="{news['full_url']}" />
+
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 40px; }}
@@ -179,6 +192,7 @@ def fetch_and_generate():
         .related-list {{ list-style: none; }}
     </style>
 </head>
+
 <body>
     <header>
         <a href="/">nearadin.net - Son Dakika</a>
