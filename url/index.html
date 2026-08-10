@@ -13,7 +13,15 @@
 <body>
 
     <div id="loading" class="loading">Haber Yükleniyor...</div>
-    <iframe id="news-frame" style="display:none;" onload="document.getElementById('loading').style.display='none'; this.style.display='block';"></iframe>
+    
+    <!-- sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+         dış sitelerin frame busting yaparak nearadin.net'ten kaçmasını engeller -->
+    <iframe 
+        id="news-frame" 
+        style="display:none;" 
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
+    </iframe>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -23,13 +31,9 @@
             targetUrl = decodeURIComponent(targetUrl);
             const frame = document.getElementById('news-frame');
 
-            // Eğer Google bağlantısıysa doğrudan yönlendir ya da çöz
-            if (targetUrl.includes('news.google.com')) {
-                // Google linkini doğrudan açıyoruz, tarayıcı arka planda asıl siteye gidecektir
-                window.location.href = targetUrl;
-            } else {
-                frame.src = targetUrl;
-            }
+            // Doğrudan iframe içerisine yüklüyoruz.
+            // window.location.href ile siteden fırlatma mantığını kaldırdık!
+            frame.src = targetUrl;
         } else {
             window.location.href = "https://nearadin.net/";
         }
