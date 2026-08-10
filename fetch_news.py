@@ -87,7 +87,11 @@ def fetch_and_generate():
         # --- ADMATİC AUTO ADS REKLAM KODU ---
         admatic_code = '''
         <div class="ad-container">
-        <p>reklam alanı</p>
+        
+            <!-- Admatic AUTO ads START -->
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Admatic AUTO ads END -->
         </div>
         '''
 
@@ -301,10 +305,6 @@ def fetch_and_generate():
 </head>
 <body>
 
-            <!-- Admatic AUTO ads START -->
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-            <!-- Admatic AUTO ads END -->
     <header>
         nearadin.net - SON DAKİKA
     </header>
