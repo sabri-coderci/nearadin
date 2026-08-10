@@ -26,17 +26,22 @@
         .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }
         .news-card:active { transform: scale(0.99); }
         
-        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 12px; }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
         .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
         .source { font-weight: 600; color: #4b4f56; }
         .time { color: #8d949e; margin-left: auto; }
         
-        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
         .news-title a { color: #050505; text-decoration: none; }
         .news-title a:hover { color: #1877f2; }
+
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         
         .card-footer { display: flex; justify-content: flex-end; }
         .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+
+        /* Admatic Reklam Alanı Stili */
+        .ad-container { background: white; border-radius: 10px; padding: 10px; margin-bottom: 12px; text-align: center; min-height: 100px; overflow: hidden; }
     </style>
 </head>
 <body>
@@ -57,7 +62,7 @@
         <!-- Güncelleme Zamanı -->
         <div class="status-bar">
             <span>Kaynak: <strong>Google Canlı Akış</strong></span>
-            <span>Son Güncelleme: <strong>10.08.2026 14:11</strong></span>
+            <span>Son Güncelleme: <strong>10.08.2026 17:21</strong></span>
         </div>
 
         <!-- Haber Listesi -->
@@ -66,28 +71,82 @@
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">Sözcü Gazetesi</span>
-                    <span class="time">10:54</span>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">14:09</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxOeFNLTEg4aUo4N2JCVzZoNHM1ZkktOE9mS3Nfd0w1M1RZREtQVkREQUI2VklnNGpYNTliYXhkQlNjSGlzbDZ4VGR6UXNnd1hiQzFYN0NITlU2MU9BekJfVUw1THRBQkVfZ0dhTklIR09odm5KQ2lXc3o2Zzl5WTVhYVA5TldaeDhhYXJCckNiSXRTSWJPcFUzenVkSngxa2M%3Foc%3D5">Son dakika... Galatasaray muhabiri Burhan Can Terzi gözaltına alındı</a>
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQVGdyTUpCTVdhR2UzQUpkeXV3X2ZrOUhSU3U5VEx4NDZDdnlGMmFvUDRiTk1DLXBOSFhjNEFqbFJsTnE0b0I0elhzVVVXNEVvOWMxbzhfbFlqbV91aHh4SzVNa296eGtIWU5ZaGRHOENYalhkZThFZUZBSXN3alNSWWpON3BBTWlSNmU5NjN5OEpocDB4d0w3LVBXeGl4eGdVSTgtTQ?oc=5" target="_blank" rel="noopener noreferrer">Hatay'da orman yangını! Havadan ve karadan müdahale ediliyor</a>
                 </h2>
+                <p class="news-summary">Hatay'da orman yangını! Havadan ve karadan müdahale ediliyor&nbsp;&nbsp;Hürriyet</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxOeFNLTEg4aUo4N2JCVzZoNHM1ZkktOE9mS3Nfd0w1M1RZREtQVkREQUI2VklnNGpYNTliYXhkQlNjSGlzbDZ4VGR6UXNnd1hiQzFYN0NITlU2MU9BekJfVUw1THRBQkVfZ0dhTklIR09odm5KQ2lXc3o2Zzl5WTVhYVA5TldaeDhhYXJCckNiSXRTSWJPcFUzenVkSngxa2M%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQVGdyTUpCTVdhR2UzQUpkeXV3X2ZrOUhSU3U5VEx4NDZDdnlGMmFvUDRiTk1DLXBOSFhjNEFqbFJsTnE0b0I0elhzVVVXNEVvOWMxbzhfbFlqbV91aHh4SzVNa296eGtIWU5ZaGRHOENYalhkZThFZUZBSXN3alNSWWpON3BBTWlSNmU5NjN5OEpocDB4d0w3LVBXeGl4eGdVSTgtTQ?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">Son Dakika</span>
-                    <span class="time">10:52</span>
+                    <span class="source">Fanatik</span>
+                    <span class="time">11:58</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMimgFBVV95cUxOZTlxLVFyVjB0WnI1c2s5RktUZFhXNnVkQXdxYzB5bVBYZ0F1M3I4SHNicEUwZ2tiaDJYLWJOdzNLa0g0RVA1X0o1eFJzbGg4NUV2YWJ0U1pDMm9RMk5vYmt6cEtwdmtTSFdlSDJWdG5yN0RRdkc2ZVhMbXdwT2dYbHg2YW5jVFhmS0VEbXotYlNfbzlPbzhuT01n0gGYAUFVX3lxTE1XdnRZTUV6dnR3NWc4Sms4dGlUX0VSVS1zNjVDbXVVZlpfSWhhRTIyOU5DSnlwb2NMaTlnd2ZTOXFUbTFNU21PM3FqQTlPZm83RVZIOEtUUFBWMEt4T0pXYlBRZ2thbVNLeDI0MG9xS3dBWV9ZcUtqY3FxamJmMEJsSjktOEd4c09kbUJIV25sU01xSUFrb21j%3Foc%3D5">Galatasaray muhabiri Burhan Can Terzi gözaltına alındı</a>
+                    <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRW4xdkNxMUJDdUMwanV4SzZIellwWC1lN0tKcUpfT053TGhUWlpaajdoQ3VoRXFIQWVFT1NJaWhkaTV4YnR1dXU4QVlCaWxkRndYV3haQUVLdDIySmNIYXJTMjJxbXlCWXk0TUx4SkkyeC1NTlhFVm5OMmk2V3hFdlB5cHg0XzZWV2FNdlFUZUhCaXgxZzBEUU1VWnJtZ1doUlV3VS11R1BRLUpJVEl0SlFGb0ItbU02RzdWdkxwOFNmd1A3bHp1MmN1UFBTcUxDdDRDdFJkN3lpT1YxWWlNMQ?oc=5" target="_blank" rel="noopener noreferrer">CANLI | Fenerbahçe dünya yıldızı forveti İstanbul'a getiriyor! İtalyan basını son dakika gelişmesini duyurdu</a>
                 </h2>
+                <p class="news-summary">CANLI | Fenerbahçe dünya yıldızı forveti İstanbul'a getiriyor! İtalyan basını son dakika gelişmesini duyurdu&nbsp;&nbsp;Fanatik</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMimgFBVV95cUxOZTlxLVFyVjB0WnI1c2s5RktUZFhXNnVkQXdxYzB5bVBYZ0F1M3I4SHNicEUwZ2tiaDJYLWJOdzNLa0g0RVA1X0o1eFJzbGg4NUV2YWJ0U1pDMm9RMk5vYmt6cEtwdmtTSFdlSDJWdG5yN0RRdkc2ZVhMbXdwT2dYbHg2YW5jVFhmS0VEbXotYlNfbzlPbzhuT01n0gGYAUFVX3lxTE1XdnRZTUV6dnR3NWc4Sms4dGlUX0VSVS1zNjVDbXVVZlpfSWhhRTIyOU5DSnlwb2NMaTlnd2ZTOXFUbTFNU21PM3FqQTlPZm83RVZIOEtUUFBWMEt4T0pXYlBRZ2thbVNLeDI0MG9xS3dBWV9ZcUtqY3FxamJmMEJsSjktOEd4c09kbUJIV25sU01xSUFrb21j%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRW4xdkNxMUJDdUMwanV4SzZIellwWC1lN0tKcUpfT053TGhUWlpaajdoQ3VoRXFIQWVFT1NJaWhkaTV4YnR1dXU4QVlCaWxkRndYV3haQUVLdDIySmNIYXJTMjJxbXlCWXk0TUx4SkkyeC1NTlhFVm5OMmk2V3hFdlB5cHg0XzZWV2FNdlFUZUhCaXgxZzBEUU1VWnJtZ1doUlV3VS11R1BRLUpJVEl0SlFGb0ItbU02RzdWdkxwOFNmd1A3bHp1MmN1UFBTcUxDdDRDdFJkN3lpT1YxWWlNMQ?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+        <div class="ad-container">
+            <!-- Admatic AUTO ads START -->
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Admatic AUTO ads END -->
+        </div>
+        
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">12:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNRmRHTERTNlNoa3IzcWNDdXlWcXdYS2g1VEpaY0NTMHBGRXJqZE0yY1VmM1ZNZm9OTzY1ZmV5R0ZzaW9iLWxyWHpGMXZkMDNJeGR1aFZEbGh5bzlPT25wM1RDXzBGX2p4Nlkzd3h1OElyLXBVVERieXdOd3FuSE9MSnFKdGp2R0w0MURGc3RBZm92ck93SVBpV2ZPMjbSAZgBQVVfeXFMTWIxVm5iRDl6eHNFWG0tNG5ndjdzTi0wSzBYSnQtbHJKV3hQaUNxVEY1NEFjdlBzZkhrNUxrZ3ZlenJWNDdYUlVvMHRXQl9wd0NHZllxTGdLZVhkLWpLR2h2bDlsd3RWVndFOHZOSjM5dkFMWkZXV0l4QmtpeFQtMUlqYXBRSUkydW1wS2lMalBZazM3c09meVA?oc=5" target="_blank" rel="noopener noreferrer">Özgür Özel kürsüde! Yeni Parti 'çerçeve yasa' için kararını verdi</a>
+                </h2>
+                <p class="news-summary">Özgür Özel kürsüde! Yeni Parti 'çerçeve yasa' için kararını verdi&nbsp;&nbsp;Son Dakika</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNRmRHTERTNlNoa3IzcWNDdXlWcXdYS2g1VEpaY0NTMHBGRXJqZE0yY1VmM1ZNZm9OTzY1ZmV5R0ZzaW9iLWxyWHpGMXZkMDNJeGR1aFZEbGh5bzlPT25wM1RDXzBGX2p4Nlkzd3h1OElyLXBVVERieXdOd3FuSE9MSnFKdGp2R0w0MURGc3RBZm92ck93SVBpV2ZPMjbSAZgBQVVfeXFMTWIxVm5iRDl6eHNFWG0tNG5ndjdzTi0wSzBYSnQtbHJKV3hQaUNxVEY1NEFjdlBzZkhrNUxrZ3ZlenJWNDdYUlVvMHRXQl9wd0NHZllxTGdLZVhkLWpLR2h2bDlsd3RWVndFOHZOSjM5dkFMWkZXV0l4QmtpeFQtMUlqYXBRSUkydW1wS2lMalBZazM3c09meVA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Halk TV</span>
+                    <span class="time">07:44</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOOC1pTWdVaWF3cG9XdWpzZ0I2emFWUjdiQWM3NUZ0OUhmSGpDZUZkV1l3dERYX0dFQWJ5T2xCOWc3VUszbkVzZWxEYU50Ny01YWpfWUlQQzRXNEE4aG0tRUlaREF2MlB0R0Qwb05DY0VhcFVfYi1SclQwek0zN1luVGd4Z0hmUVgxaGRRY1BUMFZwRmdSQUprci10ZXlFdVF2MHdCdUtPNWpmX24tUHRhczRnRVRqMXdxRndfNw?oc=5" target="_blank" rel="noopener noreferrer">Son Dakika | YENİ Parti'de kritik kapalı grup! Çerçeve yasa tavrında ilk sinyal geldi</a>
+                </h2>
+                <p class="news-summary">Son Dakika | YENİ Parti'de kritik kapalı grup! Çerçeve yasa tavrında ilk sinyal geldi&nbsp;&nbsp;Halk TV</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOOC1pTWdVaWF3cG9XdWpzZ0I2emFWUjdiQWM3NUZ0OUhmSGpDZUZkV1l3dERYX0dFQWJ5T2xCOWc3VUszbkVzZWxEYU50Ny01YWpfWUlQQzRXNEE4aG0tRUlaREF2MlB0R0Qwb05DY0VhcFVfYi1SclQwek0zN1luVGd4Z0hmUVgxaGRRY1BUMFZwRmdSQUprci10ZXlFdVF2MHdCdUtPNWpmX24tUHRhczRnRVRqMXdxRndfNw?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">08:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQc1lVMnEzYmJOVFF5Y2c1WnRUSTlRRThwUnZzSDRQY3gzU0lQbVNMcUhGZXZud2xScnR0UDlqVlVNZkFsSDFPMVROdUthVFMzMGlnYTFlMWEtcjhzd004RnFYcVA2Y1kteTQ2X09idFdicnUwVXZkSmxOdzhCMURqR1hIc2ExM2k0YXl1Y3pJRFAzYWFWRDZYblRpNjU1eUxwRF9z?oc=5" target="_blank" rel="noopener noreferrer">Son Dakika... Özgür Özel, 'çerçeve yasa' kararını açıkladı</a>
+                </h2>
+                <p class="news-summary">Son Dakika... Özgür Özel, 'çerçeve yasa' kararını açıkladı&nbsp;&nbsp;Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQc1lVMnEzYmJOVFF5Y2c1WnRUSTlRRThwUnZzSDRQY3gzU0lQbVNMcUhGZXZud2xScnR0UDlqVlVNZkFsSDFPMVROdUthVFMzMGlnYTFlMWEtcjhzd004RnFYcVA2Y1kteTQ2X09idFdicnUwVXZkSmxOdzhCMURqR1hIc2ExM2k0YXl1Y3pJRFAzYWFWRDZYblRpNjU1eUxwRF9z?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
@@ -98,220 +157,11 @@
                     <span class="time">06:41</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiwAFBVV95cUxQSWtFUXVxNG5VSUc5Zld5ZWdEY19CYmlzbVc0bS1GLUtybTZfaWZGZjNrYUo0dDBXNHE1b01TZG10cVlHNXJjR2Y4RHdjRkpRYTVETUlJUE9EczBrRnp1cVpiVTdxUWxnQmNTUDl3WU9iQUM5eUl2X1hwSDl5TWJTOVZvNFhJdnBjeXVDZWlnYVc4UWpOekd4U1ViTUNTN04zcDgyWlNxVGlEdFloOUkwTkRCeWZCb0FId0lTMUVnUUU%3Foc%3D5">Galatasaray'a 22 milyon Euro'luk Yunan yıldız! Bu transfer çok konuşulur</a>
+                    <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSWtFUXVxNG5VSUc5Zld5ZWdEY19CYmlzbVc0bS1GLUtybTZfaWZGZjNrYUo0dDBXNHE1b01TZG10cVlHNXJjR2Y4RHdjRkpRYTVETUlJUE9EczBrRnp1cVpiVTdxUWxnQmNTUDl3WU9iQUM5eUl2X1hwSDl5TWJTOVZvNFhJdnBjeXVDZWlnYVc4UWpOekd4U1ViTUNTN04zcDgyWlNxVGlEdFloOUkwTkRCeWZCb0FId0lTMUVnUUU?oc=5" target="_blank" rel="noopener noreferrer">Galatasaray'a 22 milyon Euro'luk Yunan yıldız! Bu transfer çok konuşulur</a>
                 </h2>
+                <p class="news-summary">Galatasaray'a 22 milyon Euro'luk Yunan yıldız! Bu transfer çok konuşulur&nbsp;&nbsp;A Spor</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiwAFBVV95cUxQSWtFUXVxNG5VSUc5Zld5ZWdEY19CYmlzbVc0bS1GLUtybTZfaWZGZjNrYUo0dDBXNHE1b01TZG10cVlHNXJjR2Y4RHdjRkpRYTVETUlJUE9EczBrRnp1cVpiVTdxUWxnQmNTUDl3WU9iQUM5eUl2X1hwSDl5TWJTOVZvNFhJdnBjeXVDZWlnYVc4UWpOekd4U1ViTUNTN04zcDgyWlNxVGlEdFloOUkwTkRCeWZCb0FId0lTMUVnUUU%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Fanatik</span>
-                    <span class="time">08:51</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiwgFBVV95cUxON0hzLUg1Vlg3Q0kzVnYzVnFBLTRWZ2FzbmVnalA0ZU1lRjdLQlFQQ0R6NTRPNy1OZi1uY2RXSUhXdXBLWDNlRlJzTVZmSnZaQkhrQU1hMnVybE1qeXdlZHRkUmdfQm43dXJnSzJ5OTdOQjdMUUNsa3pQdy0tUTY0UkhRRzdJYVFod3piMXl2YUZWNTFwdDk5MlNheHR2VEZ2N28tbV9tZ0duVHBzOHVEb0Z5MGhNaHZYd3c1UlJTYWhadw%3Foc%3D5">🚨SON DAKİKA | GALATASARAY 50 MİLYON EURO'LUK TRANSFERİ TAMAMLADI!</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiwgFBVV95cUxON0hzLUg1Vlg3Q0kzVnYzVnFBLTRWZ2FzbmVnalA0ZU1lRjdLQlFQQ0R6NTRPNy1OZi1uY2RXSUhXdXBLWDNlRlJzTVZmSnZaQkhrQU1hMnVybE1qeXdlZHRkUmdfQm43dXJnSzJ5OTdOQjdMUUNsa3pQdy0tUTY0UkhRRzdJYVFod3piMXl2YUZWNTFwdDk5MlNheHR2VEZ2N28tbV9tZ0duVHBzOHVEb0Z5MGhNaHZYd3c1UlJTYWhadw%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">CNN Türk</span>
-                    <span class="time">10:08</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiuAFBVV95cUxNM1BRZ1UtR0l5b2d0NWxLZUdxMEItOGZXUEZDOE5jWTNVSzFzaFNjT1VhS01aUTNCQ1hsOHBoOEQ0SzItRWloNU1iMG1ZWk9nREg1NWJHQ2tCTlZCLWNoRXFnUXE2UzJoMUR6Q3BvM2lwZEFRaG9ieGJLQWoyZXMzVW5lTnN2cW9XejVoY0k0UUR1ZUpuRnFMa3p4anA0TW9qaTQ5d0x5Z0hKN3hzd1BEUnpKSFk4YVBH%3Foc%3D5">Terörsüz Türkiye Yasası Teklifi Meclis'te! Gözler Genel Kurul Görüşmelerinde: Terörsüz Türkiye Yasası Neleri Kapsıyor?</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiuAFBVV95cUxNM1BRZ1UtR0l5b2d0NWxLZUdxMEItOGZXUEZDOE5jWTNVSzFzaFNjT1VhS01aUTNCQ1hsOHBoOEQ0SzItRWloNU1iMG1ZWk9nREg1NWJHQ2tCTlZCLWNoRXFnUXE2UzJoMUR6Q3BvM2lwZEFRaG9ieGJLQWoyZXMzVW5lTnN2cW9XejVoY0k0UUR1ZUpuRnFMa3p4anA0TW9qaTQ5d0x5Z0hKN3hzd1BEUnpKSFk4YVBH%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Cumhuriyet</span>
-                    <span class="time">20:45</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi4gFBVV95cUxPZzVTOWpVUzJJRl9RUHllQWYwY2lMcGt6U0k3YklTLUpQbnZGMWpqWlA2YzVETXdZZ3FNdGJJM0FOd0wyUi1tWG5na0VGbk1NSWxlMkJlSWcxcXFOT2NkWVRDeDY0dDhZVU84SHM3TXBlMXcwc2Qzd0ZSd1FKNnJ5VnRtZHVxMXFpUHBBTlJDRWhRdlp0clZpb1lONTh4d0VvQjN4MDFhcHBLYUttbElCaGxuSmM4R3FoZ05FNEs4amlaZVB6Z3dyT29ZXzUxUTJVVjM3STdwb29yTXJteUlXbEFn%3Foc%3D5">Son Dakika... Şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren kanun teklifi, yasalaştı!</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi4gFBVV95cUxPZzVTOWpVUzJJRl9RUHllQWYwY2lMcGt6U0k3YklTLUpQbnZGMWpqWlA2YzVETXdZZ3FNdGJJM0FOd0wyUi1tWG5na0VGbk1NSWxlMkJlSWcxcXFOT2NkWVRDeDY0dDhZVU84SHM3TXBlMXcwc2Qzd0ZSd1FKNnJ5VnRtZHVxMXFpUHBBTlJDRWhRdlp0clZpb1lONTh4d0VvQjN4MDFhcHBLYUttbElCaGxuSmM4R3FoZ05FNEs4amlaZVB6Z3dyT29ZXzUxUTJVVjM3STdwb29yTXJteUlXbEFn%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Habertürk</span>
-                    <span class="time">11:03</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiqwFBVV95cUxPYjhvcmlObHdaWHNoVndvT05TV0ZKLXl4cGZzdVpURS1rMmtETzRGVjU2TEh3QmtxdUNkVXZyZE1FYVM4c2hPbUdJZnI5RWFtMjFTakx6TFZ5Rm5ZS3NVNmlFQVV0X3U5WFlmczBGMG1PWGc1R1VGTm5qYVlxWGs3YV9KaXJPSDV5T0tPRmRWc3ZnT1ZYMTRkNmdOSzhnOVBoY2JtcElzeHBWMkU%3Foc%3D5">Çerçeve yasa bugün Meclis'te! İşte son gelişmeler</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiqwFBVV95cUxPYjhvcmlObHdaWHNoVndvT05TV0ZKLXl4cGZzdVpURS1rMmtETzRGVjU2TEh3QmtxdUNkVXZyZE1FYVM4c2hPbUdJZnI5RWFtMjFTakx6TFZ5Rm5ZS3NVNmlFQVV0X3U5WFlmczBGMG1PWGc1R1VGTm5qYVlxWGs3YV9KaXJPSDV5T0tPRmRWc3ZnT1ZYMTRkNmdOSzhnOVBoY2JtcElzeHBWMkU%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Fotomaç</span>
-                    <span class="time">10:51</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMirwFBVV95cUxOaU94Sk9KUEJUaldadENMY0h5WUVKS0pQcDJjUzFMNjN1S0Z1c2xsVHhRMUlieExhVjZnVTRaY1pNenZ1dl82S011WG00RDBvUnB0X1dyLVZGZ2lTZnZtNmJ5V3Bia0dTMnJZeFdXQmdtY3o4eGtJSng1OEhPa3l4aGJGVV8zUFZkSGV5YVJ2Y0FnVy1wbF93VG1YN3BvakI5TEFGZzlwa0ltYlAzTUFR%3Foc%3D5">Dünyaca ünlü gazeteci Fenerbahçe’nin yeni transferini duyurdu! - Son dakika Fenerbahçe haberleri</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMirwFBVV95cUxOaU94Sk9KUEJUaldadENMY0h5WUVKS0pQcDJjUzFMNjN1S0Z1c2xsVHhRMUlieExhVjZnVTRaY1pNenZ1dl82S011WG00RDBvUnB0X1dyLVZGZ2lTZnZtNmJ5V3Bia0dTMnJZeFdXQmdtY3o4eGtJSng1OEhPa3l4aGJGVV8zUFZkSGV5YVJ2Y0FnVy1wbF93VG1YN3BvakI5TEFGZzlwa0ltYlAzTUFR%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Sabah</span>
-                    <span class="time">11:31</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMioAFBVV95cUxNU19tSUR3aHpVTlNMeUxOZ0wzSDhPY0ZVOE1XemJZSWVFQXdMTzlhcGc0bGw1bVU2dEp2N0luZHktV2JtZVJvSGg4QXJ1WjZyM3p6MXh5M01qYzdKWENjZkVuYU9lcTBWOURYWlk3am9TMjZsUGl3ak5abjJFWW9Nd0RpZTVmN0E3YlpvUTl4R0VVcnpiY2tuSFpvcWs3dGpT%3Foc%3D5">SON DAKİKA | UltraAslan lideri Sebahattin Şirin gözaltına alındı: Evindeki aramada çıkanlar şaşırttı!</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMioAFBVV95cUxNU19tSUR3aHpVTlNMeUxOZ0wzSDhPY0ZVOE1XemJZSWVFQXdMTzlhcGc0bGw1bVU2dEp2N0luZHktV2JtZVJvSGg4QXJ1WjZyM3p6MXh5M01qYzdKWENjZkVuYU9lcTBWOURYWlk3am9TMjZsUGl3ak5abjJFWW9Nd0RpZTVmN0E3YlpvUTl4R0VVcnpiY2tuSFpvcWs3dGpT%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Milliyet</span>
-                    <span class="time">11:28</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiswFBVV95cUxPYnZQRUNWQzVYT3dZdzAwWnBWOEt4dkdqZmZEN0FrdE95MWdSS0E4VHJCU0w4VDVJUHNLOUNmVjRkaUdBOFd6UzJBQzFzRkdLWlUwWUxuaVRCSEFBMjF3WGR3VDVmWG5uNnZTZGNTbEJVOUFELTYxZ2ItN0tGV09qcl9FSXJJdzFBSGdQZWVKaUZBQzFsUnlwaUlPdmg2b0NFemUtdHh6cnNOYjBaeU13ZS1VRQ%3Foc%3D5">Son dakika... Galatasaray tribün lideri Sebahattin Şirin gözaltına alındı</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiswFBVV95cUxPYnZQRUNWQzVYT3dZdzAwWnBWOEt4dkdqZmZEN0FrdE95MWdSS0E4VHJCU0w4VDVJUHNLOUNmVjRkaUdBOFd6UzJBQzFzRkdLWlUwWUxuaVRCSEFBMjF3WGR3VDVmWG5uNnZTZGNTbEJVOUFELTYxZ2ItN0tGV09qcl9FSXJJdzFBSGdQZWVKaUZBQzFsUnlwaUlPdmg2b0NFemUtdHh6cnNOYjBaeU13ZS1VRQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Habertürk</span>
-                    <span class="time">08:43</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi-gFBVV95cUxNdzZKWFNoYVNxdG1pSHlRZThhOC1XaUFrV2JVV2Rxal9aa0luUnlNZEpuaG1sVmpKUExoUWhqTDZIel8wODNFaWdDQ01lLTRvdTF1cEs2TVFndkdwQ29VMXFPZm1qVUlaaTNiV2NjR3hFMmxkTW1fZW8tWVRfMC1UaGZzV2dCNWhTY2ZENlh2WjNqWXZkdmdobmpmU2pHUWVfcml2alVhVzQzTldhNGNtMktPelc1SFY4UjJQZDNyRjk3dUxkODRlNXIxU2d3WGg0VHZNNnFTZ01LOFh0VWtybm5Mc04tM2xkY2dvNUhGM24zTGxBMWpIcnJn%3Foc%3D5">Gözaltına alınan ultrAslan tribün lideri Şirin'in evinde yapılan aramada 65 milyon TL'lik ziynet ve döviz çıktı</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi-gFBVV95cUxNdzZKWFNoYVNxdG1pSHlRZThhOC1XaUFrV2JVV2Rxal9aa0luUnlNZEpuaG1sVmpKUExoUWhqTDZIel8wODNFaWdDQ01lLTRvdTF1cEs2TVFndkdwQ29VMXFPZm1qVUlaaTNiV2NjR3hFMmxkTW1fZW8tWVRfMC1UaGZzV2dCNWhTY2ZENlh2WjNqWXZkdmdobmpmU2pHUWVfcml2alVhVzQzTldhNGNtMktPelc1SFY4UjJQZDNyRjk3dUxkODRlNXIxU2d3WGg0VHZNNnFTZ01LOFh0VWtybm5Mc04tM2xkY2dvNUhGM24zTGxBMWpIcnJn%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Cumhuriyet</span>
-                    <span class="time">07:02</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiswFBVV95cUxPcVhXbDlTbjYyaURDMFl0X3l3ZUxvdnhsMHVFUTgzb3lCWFhqdTYzb0NITzhwMkNuV2gwbWtTbjZxTFQ5aXRyTHVyWWhGQkVpQ2FnREJwcUNtYUNWZHU2di1BeXVRWWM0bV96U1JCYkhELUN1MnNPU1RScE1ZZ19RN1VoTE1MNy1LVlI4VDZRUnRIOS1Nakd1aGF5U2oxbDdMUUgwOHYzVnlvb2pYNTJDY2hXTQ%3Foc%3D5">Konya Cezaevi'nde isyan iddiası: İl Emniyet Müdürlüğü açıklama yaptı</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiswFBVV95cUxPcVhXbDlTbjYyaURDMFl0X3l3ZUxvdnhsMHVFUTgzb3lCWFhqdTYzb0NITzhwMkNuV2gwbWtTbjZxTFQ5aXRyTHVyWWhGQkVpQ2FnREJwcUNtYUNWZHU2di1BeXVRWWM0bV96U1JCYkhELUN1MnNPU1RScE1ZZ19RN1VoTE1MNy1LVlI4VDZRUnRIOS1Nakd1aGF5U2oxbDdMUUgwOHYzVnlvb2pYNTJDY2hXTQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Habertürk</span>
-                    <span class="time">09:30</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiyAFBVV95cUxPd1cyNVJFNm94dmhIdl9NQzZ4SUVPQW1oR003V3UxVlpWSzZxZkpPalN5UE9VamM2Nk1RQnVSTmFRNW1laDFGaWFZV0xKeU5zV20xbTJYaDUySFM5VGJIMW11UENPTzZXbW5sWWdhcG5TR1BPaWFMWlZGU0F2MnJtaF95aE0tSU1TVElKeGtsNWpfTmFSa3VkVG5YV0dNODdHQTNzdnhaRVRmOHhOWm9YTU1wVXllSnhYR2dXcDY4cHFrV3gzd2dtQQ%3Foc%3D5">Konya'da cezaevinde isyan paylaşımı yapan 8 kişi hakkında gözaltı kararı çıkarıldı</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiyAFBVV95cUxPd1cyNVJFNm94dmhIdl9NQzZ4SUVPQW1oR003V3UxVlpWSzZxZkpPalN5UE9VamM2Nk1RQnVSTmFRNW1laDFGaWFZV0xKeU5zV20xbTJYaDUySFM5VGJIMW11UENPTzZXbW5sWWdhcG5TR1BPaWFMWlZGU0F2MnJtaF95aE0tSU1TVElKeGtsNWpfTmFSa3VkVG5YV0dNODdHQTNzdnhaRVRmOHhOWm9YTU1wVXllSnhYR2dXcDY4cHFrV3gzd2dtQQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Sabah</span>
-                    <span class="time">09:04</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi2gFBVV95cUxPR1BlaUF5dDZ5WnRuNkp3MEtPenpUS0ppaGt3UjZRUlZqN3lVOXZDRXBNMm1iU1lmc2NsVjJ0aWx4UW81Zm1TcjJ1TXozYnh2MHBGeUl2c3BDLURETFVjREZFZXBoZWJoUmo0V25TQ2NrcXpZWS1LSnM5SnFqRU5qZGxkRC13c29lNTNfbDc5M1AyXy1LYkdnTHpPVnlMeWkyeU0weVRzWHBzdFpiOFhsX3BBTFdQMnNrZmJzZDUwS0x5eFVxYlVHWmN1cmJaNlJDTGpra2tLcVBiUQ%3Foc%3D5">SON DAKİKA | Konya E tipi kapalı cezaeviyle ilgili yalan paylaşımlara soruşturma: 8 gözaltı kararı verildi!</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi2gFBVV95cUxPR1BlaUF5dDZ5WnRuNkp3MEtPenpUS0ppaGt3UjZRUlZqN3lVOXZDRXBNMm1iU1lmc2NsVjJ0aWx4UW81Zm1TcjJ1TXozYnh2MHBGeUl2c3BDLURETFVjREZFZXBoZWJoUmo0V25TQ2NrcXpZWS1LSnM5SnFqRU5qZGxkRC13c29lNTNfbDc5M1AyXy1LYkdnTHpPVnlMeWkyeU0weVRzWHBzdFpiOFhsX3BBTFdQMnNrZmJzZDUwS0x5eFVxYlVHWmN1cmJaNlJDTGpra2tLcVBiUQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Son Dakika</span>
-                    <span class="time">10:28</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMilwFBVV95cUxNUkthdXB6aTZ6cXRFSWhrM1k4Vk1FbWY1T2xEb2RSYk5OcFlqNjk0eGZkczFMMTRPZGRpTFJ6R3JGa3JNSTdYOXhnVl9kSDhkWGZXbWUyOUw4bDQwTk5MVHB3c3VyMmZzV1ViZ2M1dm1pNU4yNThzMW5aY3RSNTBCczNXUjM4MVRsWTBOS2wtd2xqTFdoV1dz0gGWAUFVX3lxTE92SlcwX3BRazFuRmFMeldvT0pfS0Frb3lIVFVWNFNNa2REc0w0dnI4QTFTZUdLeVd2WmdUcFVzNlIxZ25kbnpLMDY4REl0cXFWd1BaaEdZTVJVeDEzVGg0cUN6bS1zaDZhWlVrbUt6dXlBMkstSkJ0eEQtSnIzakkxUjRDWVpqblVBQnd4djlUUGRjS3N1UQ%3Foc%3D5">Trabzonspor'dan bir bomba daha mı? Yıldız ismin şartları soruldu</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMilwFBVV95cUxNUkthdXB6aTZ6cXRFSWhrM1k4Vk1FbWY1T2xEb2RSYk5OcFlqNjk0eGZkczFMMTRPZGRpTFJ6R3JGa3JNSTdYOXhnVl9kSDhkWGZXbWUyOUw4bDQwTk5MVHB3c3VyMmZzV1ViZ2M1dm1pNU4yNThzMW5aY3RSNTBCczNXUjM4MVRsWTBOS2wtd2xqTFdoV1dz0gGWAUFVX3lxTE92SlcwX3BRazFuRmFMeldvT0pfS0Frb3lIVFVWNFNNa2REc0w0dnI4QTFTZUdLeVd2WmdUcFVzNlIxZ25kbnpLMDY4REl0cXFWd1BaaEdZTVJVeDEzVGg0cUN6bS1zaDZhWlVrbUt6dXlBMkstSkJ0eEQtSnIzakkxUjRDWVpqblVBQnd4djlUUGRjS3N1UQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">A Spor</span>
-                    <span class="time">09:10</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMitgFBVV95cUxOUV9Na1hXVV95SXZ2LURXWVBvcmU2N0FJY25BOHJrZG5TMHhybklldFpISHVSR2tNWWlLT005QldMR3l0czQtUll4QndsSWtqX3Vfdk1XWEFIbWMzTzdfMVJyZkxmMnoxWFY3UFBsYjc0RjdUT3BZY2N6aEtkU2VoSXpEU2hLMkpfYTc1a2h6TjdYQUx5bElUS05mNkUyQ2ZlRjhNM1BTbXdEVGdXRmN0Qk9vd0pkZw%3Foc%3D5">SON DAKİKA: Trabzonspor'da Salih Malkoçoğlu Al Jazira'ya transfer oldu!</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMitgFBVV95cUxOUV9Na1hXVV95SXZ2LURXWVBvcmU2N0FJY25BOHJrZG5TMHhybklldFpISHVSR2tNWWlLT005QldMR3l0czQtUll4QndsSWtqX3Vfdk1XWEFIbWMzTzdfMVJyZkxmMnoxWFY3UFBsYjc0RjdUT3BZY2N6aEtkU2VoSXpEU2hLMkpfYTc1a2h6TjdYQUx5bElUS05mNkUyQ2ZlRjhNM1BTbXdEVGdXRmN0Qk9vd0pkZw%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">NTVSpor</span>
-                    <span class="time">21:41</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMipgFBVV95cUxPWGRiWWl4Z1dLa1N4dG15RVUwWDc2U3dpNlM4UG9Nby1sNWNjaGIwejJnSnhoWWJfbXBnaFFvekRCdzZvN0c2RGV5WmwzaHotUF9Sd0RobDFHaF9FSVVJbVpDREJ2dTRXbko5ei1mUlZXQ3VEMkdBSDM5RF80eS0zSVVuZElfMWFMSm96cXZhVVVPdmJPN3lYMEhpY1dKYUdQS1dxTWxB0gGrAUFVX3lxTFBuWEZ0SmdidnRCSEVVWG9obTdFMTJWdGd1SURfaGc2N3VQbDdaY0RfY21vQXE0dVVKZFJNNjlxSnZuQjY5RzNMSUVmbGRMeU56MmRoejJXMUt1RmtMU25UVEZiMGgwVzhIMHp1Q1VEWFdOMGhtenRZZHZJdFZDWFZHNEpmMDh0THVPejRMTFRaY0VHWkt3YkcyVHFyLUl0ektlcWMyTnVEYUo5QQ%3Foc%3D5">Darwin Nunez'de her şey tamam: Transferde son dakika gelişmesi</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMipgFBVV95cUxPWGRiWWl4Z1dLa1N4dG15RVUwWDc2U3dpNlM4UG9Nby1sNWNjaGIwejJnSnhoWWJfbXBnaFFvekRCdzZvN0c2RGV5WmwzaHotUF9Sd0RobDFHaF9FSVVJbVpDREJ2dTRXbko5ei1mUlZXQ3VEMkdBSDM5RF80eS0zSVVuZElfMWFMSm96cXZhVVVPdmJPN3lYMEhpY1dKYUdQS1dxTWxB0gGrAUFVX3lxTFBuWEZ0SmdidnRCSEVVWG9obTdFMTJWdGd1SURfaGc2N3VQbDdaY0RfY21vQXE0dVVKZFJNNjlxSnZuQjY5RzNMSUVmbGRMeU56MmRoejJXMUt1RmtMU25UVEZiMGgwVzhIMHp1Q1VEWFdOMGhtenRZZHZJdFZDWFZHNEpmMDh0THVPejRMTFRaY0VHWkt3YkcyVHFyLUl0ektlcWMyTnVEYUo5QQ%3Foc%3D5" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">Halk TV</span>
-                    <span class="time">08:46</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiowFBVV95cUxNYy1NWTl0YnZaX2FpU0cwWHNQU3VoUEJMYURUS2ZvWGZqSW14cDhiVUhrZHBTNTllTFdXRVBlMmFIOUl4bXI2TXRkY212cUN3ZWJPZU1WRnRmT3V5eXRfZDdEYUdxOGU1S0pVYWpIYVYxZXJNQUY1R21UUkZoc09odnowSW1QcjVpd2FUZUpYYzVORUsxQVlIMVY4MzB4UndOMDZB%3Foc%3D5">Son Dakika | Madenciler Enerji Bakanlığı önünde gözaltına alındı</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiowFBVV95cUxNYy1NWTl0YnZaX2FpU0cwWHNQU3VoUEJMYURUS2ZvWGZqSW14cDhiVUhrZHBTNTllTFdXRVBlMmFIOUl4bXI2TXRkY212cUN3ZWJPZU1WRnRmT3V5eXRfZDdEYUdxOGU1S0pVYWpIYVYxZXJNQUY1R21UUkZoc09odnowSW1QcjVpd2FUZUpYYzVORUsxQVlIMVY4MzB4UndOMDZB%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSWtFUXVxNG5VSUc5Zld5ZWdEY19CYmlzbVc0bS1GLUtybTZfaWZGZjNrYUo0dDBXNHE1b01TZG10cVlHNXJjR2Y4RHdjRkpRYTVETUlJUE9EczBrRnp1cVpiVTdxUWxnQmNTUDl3WU9iQUM5eUl2X1hwSDl5TWJTOVZvNFhJdnBjeXVDZWlnYVc4UWpOekd4U1ViTUNTN04zcDgyWlNxVGlEdFloOUkwTkRCeWZCb0FId0lTMUVnUUU?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
@@ -322,38 +172,161 @@
                     <span class="time">03:50</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiqAFBVV95cUxNaW11XzJPUTU1d2txNzVueXY5WVo5b3dzNk5zT3JIWnhwb2dqYXRQUElrNTZKbmpwczFXblBIQWNCNElVSklkT0RHUm4tbDZ3MUVBSk0xV3U2MFVzM0lJWmUtRGJOYm9YSUlGRUNOS2M3MlFwZ1VaeHRfcFpCTkU2SUoxY0pNVURQZ3lyUGhtTmpNeW1wMXNTb191RzFrYnNsblI2NlpkQjg%3Foc%3D5">Lukaku’dan transfer resti! Fenerbahçe’ye gelebilmek için... - Son dakika Fenerbahçe haberleri</a>
+                    <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNOVJwenk4Z2lEaTJKVTEwYjVRZTVpak1Bc2MwUnJKRE9DQmYtYUxDd0ktbGZPM00yYzI4cUlnTzJtcmphQk1yWUZZVTItdnQweTd3NTB0RG5mSVFwS3VJR1JmdGxTNXozcGxqRm5RVGxjZDR4NGNSM2E5VjczNU55SGk2WTRsSWtGbGpyQlkyQ0RpLTBBX0RPWG5LVDAzWWVLVUtZMV9EMTVKUmNMbzZNSklLb1ZBMTF4ZHc?oc=5" target="_blank" rel="noopener noreferrer">Galatasaray'dan o isim için flaş karar! Yeni sezonda takımda tutulacak</a>
                 </h2>
+                <p class="news-summary">Galatasaray'dan o isim için flaş karar! Yeni sezonda takımda tutulacak&nbsp;&nbsp;Fotomaç</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMiqAFBVV95cUxNaW11XzJPUTU1d2txNzVueXY5WVo5b3dzNk5zT3JIWnhwb2dqYXRQUElrNTZKbmpwczFXblBIQWNCNElVSklkT0RHUm4tbDZ3MUVBSk0xV3U2MFVzM0lJWmUtRGJOYm9YSUlGRUNOS2M3MlFwZ1VaeHRfcFpCTkU2SUoxY0pNVURQZ3lyUGhtTmpNeW1wMXNTb191RzFrYnNsblI2NlpkQjg%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNOVJwenk4Z2lEaTJKVTEwYjVRZTVpak1Bc2MwUnJKRE9DQmYtYUxDd0ktbGZPM00yYzI4cUlnTzJtcmphQk1yWUZZVTItdnQweTd3NTB0RG5mSVFwS3VJR1JmdGxTNXozcGxqRm5RVGxjZDR4NGNSM2E5VjczNU55SGk2WTRsSWtGbGpyQlkyQ0RpLTBBX0RPWG5LVDAzWWVLVUtZMV9EMTVKUmNMbzZNSklLb1ZBMTF4ZHc?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">TRT Haber</span>
-                    <span class="time">10:22</span>
+                    <span class="source">Sabah</span>
+                    <span class="time">12:59</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMipAFBVV95cUxNUDRyX3BhZkFvTzdWNUlzMjcyeVRlQkNfYmtKdGt3d3dWdGZ3aDhRcEpEOGJxX05pcDM3OF9Hb3pwbFdBSmtXSXpha0lQQ3BObU1sVTA3RWQ0clV3VkZ1cFZ5VXl4b2UyX0hjZTFKYUU2V2tUemFOY1RIN3ZwdVhCOGRFNlVwNmpDRzB3N0dXUnJmaGR2QkoyZ1dhWEVmSHU5eGV0WA%3Foc%3D5">Bakan Fidan, Fransız ve Alman mevkidaşlarıyla görüştü</a>
+                    <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPMFdNTkhJdEJIc19PRS0xQ1NyR1M2WG8xWjgzVDB0ZDdJSG1wcG5LY2lmQlBNQVZYeFJidGh0bmQ1Q0JMTWFnSnNaVnVhc2ZCZFZHd2pjTTdGWVZETUoyamd1UUJ5T01fQlFiRmVGOVROdFpHVEFucWZBd1EydVFlb3hoN1czaHFSei14WA?oc=5" target="_blank" rel="noopener noreferrer">Son dakika: Kolombiya'da 7.4 büyüklüğünde deprem!</a>
                 </h2>
+                <p class="news-summary">Son dakika: Kolombiya'da 7.4 büyüklüğünde deprem!&nbsp;&nbsp;Sabah</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMipAFBVV95cUxNUDRyX3BhZkFvTzdWNUlzMjcyeVRlQkNfYmtKdGt3d3dWdGZ3aDhRcEpEOGJxX05pcDM3OF9Hb3pwbFdBSmtXSXpha0lQQ3BObU1sVTA3RWQ0clV3VkZ1cFZ5VXl4b2UyX0hjZTFKYUU2V2tUemFOY1RIN3ZwdVhCOGRFNlVwNmpDRzB3N0dXUnJmaGR2QkoyZ1dhWEVmSHU5eGV0WA%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPMFdNTkhJdEJIc19PRS0xQ1NyR1M2WG8xWjgzVDB0ZDdJSG1wcG5LY2lmQlBNQVZYeFJidGh0bmQ1Q0JMTWFnSnNaVnVhc2ZCZFZHd2pjTTdGWVZETUoyamd1UUJ5T01fQlFiRmVGOVROdFpHVEFucWZBd1EydVFlb3hoN1czaHFSei14WA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">Halk TV</span>
-                    <span class="time">10:13</span>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">13:05</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMivAFBVV95cUxOOC1pTWdVaWF3cG9XdWpzZ0I2emFWUjdiQWM3NUZ0OUhmSGpDZUZkV1l3dERYX0dFQWJ5T2xCOWc3VUszbkVzZWxEYU50Ny01YWpfWUlQQzRXNEE4aG0tRUlaREF2MlB0R0Qwb05DY0VhcFVfYi1SclQwek0zN1luVGd4Z0hmUVgxaGRRY1BUMFZwRmdSQUprci10ZXlFdVF2MHdCdUtPNWpmX24tUHRhczRnRVRqMXdxRndfNw%3Foc%3D5">Son Dakika | YENİ Parti'de kritik kapalı grup! Çerçeve yasa tavrında ilk sinyal geldi</a>
+                    <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQTTRiSVVBeDZYbTlSd09aS3N4OVVkYXNBbGU5Njh5d3VKVWdYcDRCQ1ZySG9IU0ZBajZOM2pDbHlYMUpybUZVNTdGWElKbzlROHBVZnA2OHczbEJHOGtqcmJvcXAtRm4tYUViZGtqcGQ0Y242YThDS29oRDBPRllHX25Sb0FDcEk1MGI4VA?oc=5" target="_blank" rel="noopener noreferrer">SON DAKİKA... Kolombiya'da 7.4 büyüklüğünde deprem</a>
                 </h2>
+                <p class="news-summary">SON DAKİKA... Kolombiya'da 7.4 büyüklüğünde deprem&nbsp;&nbsp;CNN Türk</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMivAFBVV95cUxOOC1pTWdVaWF3cG9XdWpzZ0I2emFWUjdiQWM3NUZ0OUhmSGpDZUZkV1l3dERYX0dFQWJ5T2xCOWc3VUszbkVzZWxEYU50Ny01YWpfWUlQQzRXNEE4aG0tRUlaREF2MlB0R0Qwb05DY0VhcFVfYi1SclQwek0zN1luVGd4Z0hmUVgxaGRRY1BUMFZwRmdSQUprci10ZXlFdVF2MHdCdUtPNWpmX24tUHRhczRnRVRqMXdxRndfNw%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQTTRiSVVBeDZYbTlSd09aS3N4OVVkYXNBbGU5Njh5d3VKVWdYcDRCQ1ZySG9IU0ZBajZOM2pDbHlYMUpybUZVNTdGWElKbzlROHBVZnA2OHczbEJHOGtqcmJvcXAtRm4tYUViZGtqcGQ0Y242YThDS29oRDBPRllHX25Sb0FDcEk1MGI4VA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Haber 7</span>
+                    <span class="time">13:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxONXNTY05Ydnpab0lROHZPR0xLb2hBRTgtam82ZGNPY05sVkt4S0ZxVlFYUTVOVC1GeEpiNmdyVnllaG5MX0M3d2xuQVQtU0xqQnBOOHpGbGU4YlJVQVZ6Z3ZXNG5CZWFaR3ptMUl5Qnh5NlhVTEJCbWo4Y1BfSExBTGdpa2VBU29SRTFCNnI2OUEtWVZIREUw0gGfAUFVX3lxTFBfUi1sX3AzQ0FTWV9nVC02cERFdEdHSHRkZ3JCd21oYnd4cFNRcnZkdjdsRUtZcHloSU1rbzNjb0NtMzJQN2ZJd1EwaFR6b3BkQVFxOEprWlRHOFZCV0p1ZWQ3Mnl3UUs4OF9mbnlZZkNLX25JaG5xa1RDSEEyRUtEOFVQQ2o1TXRISFI1SGpMcDd6bGtneEk4cmVpR0tuNA?oc=5" target="_blank" rel="noopener noreferrer">Son dakika: Kolombiya'da büyük deprem! 7,4'le sallandı</a>
+                </h2>
+                <p class="news-summary">Son dakika: Kolombiya'da büyük deprem! 7,4'le sallandı&nbsp;&nbsp;Haber 7</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxONXNTY05Ydnpab0lROHZPR0xLb2hBRTgtam82ZGNPY05sVkt4S0ZxVlFYUTVOVC1GeEpiNmdyVnllaG5MX0M3d2xuQVQtU0xqQnBOOHpGbGU4YlJVQVZ6Z3ZXNG5CZWFaR3ptMUl5Qnh5NlhVTEJCbWo4Y1BfSExBTGdpa2VBU29SRTFCNnI2OUEtWVZIREUw0gGfAUFVX3lxTFBfUi1sX3AzQ0FTWV9nVC02cERFdEdHSHRkZ3JCd21oYnd4cFNRcnZkdjdsRUtZcHloSU1rbzNjb0NtMzJQN2ZJd1EwaFR6b3BkQVFxOEprWlRHOFZCV0p1ZWQ3Mnl3UUs4OF9mbnlZZkNLX25JaG5xa1RDSEEyRUtEOFVQQ2o1TXRISFI1SGpMcDd6bGtneEk4cmVpR0tuNA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">10:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOeFNLTEg4aUo4N2JCVzZoNHM1ZkktOE9mS3Nfd0w1M1RZREtQVkREQUI2VklnNGpYNTliYXhkQlNjSGlzbDZ4VGR6UXNnd1hiQzFYN0NITlU2MU9BekJfVUw1THRBQkVfZ0dhTklIR09odm5KQ2lXc3o2Zzl5WTVhYVA5TldaeDhhYXJCckNiSXRTSWJPcFUzenVkSngxa2M?oc=5" target="_blank" rel="noopener noreferrer">Son dakika... Galatasaray muhabiri Burhan Can Terzi gözaltına alındı</a>
+                </h2>
+                <p class="news-summary">Son dakika... Galatasaray muhabiri Burhan Can Terzi gözaltına alındı&nbsp;&nbsp;Sözcü Gazetesi</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOeFNLTEg4aUo4N2JCVzZoNHM1ZkktOE9mS3Nfd0w1M1RZREtQVkREQUI2VklnNGpYNTliYXhkQlNjSGlzbDZ4VGR6UXNnd1hiQzFYN0NITlU2MU9BekJfVUw1THRBQkVfZ0dhTklIR09odm5KQ2lXc3o2Zzl5WTVhYVA5TldaeDhhYXJCckNiSXRTSWJPcFUzenVkSngxa2M?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">12:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM1BRZ1UtR0l5b2d0NWxLZUdxMEItOGZXUEZDOE5jWTNVSzFzaFNjT1VhS01aUTNCQ1hsOHBoOEQ0SzItRWloNU1iMG1ZWk9nREg1NWJHQ2tCTlZCLWNoRXFnUXE2UzJoMUR6Q3BvM2lwZEFRaG9ieGJLQWoyZXMzVW5lTnN2cW9XejVoY0k0UUR1ZUpuRnFMa3p4anA0TW9qaTQ5d0x5Z0hKN3hzd1BEUnpKSFk4YVBH?oc=5" target="_blank" rel="noopener noreferrer">Terörsüz Türkiye Yasası Teklifi Meclis'te! Gözler Genel Kurul Görüşmelerinde: Terörsüz Türkiye Yasası Neleri Kapsıyor?</a>
+                </h2>
+                <p class="news-summary">Terörsüz Türkiye Yasası Teklifi Meclis'te! Gözler Genel Kurul Görüşmelerinde: Terörsüz Türkiye Yasası Neleri Kapsıyor?&nbsp;&nbsp;CNN Türk</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM1BRZ1UtR0l5b2d0NWxLZUdxMEItOGZXUEZDOE5jWTNVSzFzaFNjT1VhS01aUTNCQ1hsOHBoOEQ0SzItRWloNU1iMG1ZWk9nREg1NWJHQ2tCTlZCLWNoRXFnUXE2UzJoMUR6Q3BvM2lwZEFRaG9ieGJLQWoyZXMzVW5lTnN2cW9XejVoY0k0UUR1ZUpuRnFMa3p4anA0TW9qaTQ5d0x5Z0hKN3hzd1BEUnpKSFk4YVBH?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Habertürk</span>
+                    <span class="time">12:29</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYjhvcmlObHdaWHNoVndvT05TV0ZKLXl4cGZzdVpURS1rMmtETzRGVjU2TEh3QmtxdUNkVXZyZE1FYVM4c2hPbUdJZnI5RWFtMjFTakx6TFZ5Rm5ZS3NVNmlFQVV0X3U5WFlmczBGMG1PWGc1R1VGTm5qYVlxWGs3YV9KaXJPSDV5T0tPRmRWc3ZnT1ZYMTRkNmdOSzhnOVBoY2JtcElzeHBWMkU?oc=5" target="_blank" rel="noopener noreferrer">Çerçeve yasa bugün Meclis'te! İşte son gelişmeler</a>
+                </h2>
+                <p class="news-summary">Çerçeve yasa bugün Meclis'te! İşte son gelişmeler&nbsp;&nbsp;Habertürk</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYjhvcmlObHdaWHNoVndvT05TV0ZKLXl4cGZzdVpURS1rMmtETzRGVjU2TEh3QmtxdUNkVXZyZE1FYVM4c2hPbUdJZnI5RWFtMjFTakx6TFZ5Rm5ZS3NVNmlFQVV0X3U5WFlmczBGMG1PWGc1R1VGTm5qYVlxWGs3YV9KaXJPSDV5T0tPRmRWc3ZnT1ZYMTRkNmdOSzhnOVBoY2JtcElzeHBWMkU?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">20:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZzVTOWpVUzJJRl9RUHllQWYwY2lMcGt6U0k3YklTLUpQbnZGMWpqWlA2YzVETXdZZ3FNdGJJM0FOd0wyUi1tWG5na0VGbk1NSWxlMkJlSWcxcXFOT2NkWVRDeDY0dDhZVU84SHM3TXBlMXcwc2Qzd0ZSd1FKNnJ5VnRtZHVxMXFpUHBBTlJDRWhRdlp0clZpb1lONTh4d0VvQjN4MDFhcHBLYUttbElCaGxuSmM4R3FoZ05FNEs4amlaZVB6Z3dyT29ZXzUxUTJVVjM3STdwb29yTXJteUlXbEFn?oc=5" target="_blank" rel="noopener noreferrer">Son Dakika... Şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren kanun teklifi, yasalaştı!</a>
+                </h2>
+                <p class="news-summary">Son Dakika... Şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren kanun teklifi, yasalaştı!&nbsp;&nbsp;Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZzVTOWpVUzJJRl9RUHllQWYwY2lMcGt6U0k3YklTLUpQbnZGMWpqWlA2YzVETXdZZ3FNdGJJM0FOd0wyUi1tWG5na0VGbk1NSWxlMkJlSWcxcXFOT2NkWVRDeDY0dDhZVU84SHM3TXBlMXcwc2Qzd0ZSd1FKNnJ5VnRtZHVxMXFpUHBBTlJDRWhRdlp0clZpb1lONTh4d0VvQjN4MDFhcHBLYUttbElCaGxuSmM4R3FoZ05FNEs4amlaZVB6Z3dyT29ZXzUxUTJVVjM3STdwb29yTXJteUlXbEFn?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">11:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPYnZQRUNWQzVYT3dZdzAwWnBWOEt4dkdqZmZEN0FrdE95MWdSS0E4VHJCU0w4VDVJUHNLOUNmVjRkaUdBOFd6UzJBQzFzRkdLWlUwWUxuaVRCSEFBMjF3WGR3VDVmWG5uNnZTZGNTbEJVOUFELTYxZ2ItN0tGV09qcl9FSXJJdzFBSGdQZWVKaUZBQzFsUnlwaUlPdmg2b0NFemUtdHh6cnNOYjBaeU13ZS1VRQ?oc=5" target="_blank" rel="noopener noreferrer">Son dakika... Galatasaray tribün lideri Sebahattin Şirin gözaltına alındı</a>
+                </h2>
+                <p class="news-summary">Son dakika... Galatasaray tribün lideri Sebahattin Şirin gözaltına alındı&nbsp;&nbsp;Milliyet</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPYnZQRUNWQzVYT3dZdzAwWnBWOEt4dkdqZmZEN0FrdE95MWdSS0E4VHJCU0w4VDVJUHNLOUNmVjRkaUdBOFd6UzJBQzFzRkdLWlUwWUxuaVRCSEFBMjF3WGR3VDVmWG5uNnZTZGNTbEJVOUFELTYxZ2ItN0tGV09qcl9FSXJJdzFBSGdQZWVKaUZBQzFsUnlwaUlPdmg2b0NFemUtdHh6cnNOYjBaeU13ZS1VRQ?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Sabah</span>
+                    <span class="time">08:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxOb3VoNVBZdXVYWkppRGh4cXgxOG9hWm44Sm15V0JYS3JGM1hIWGFTOW9yZk1Ub2s0RzFIQUdMVzRiZ2Q0UGJhNDU0cHVKSmM3ZkFMZ2lzS2tidHA5cC1JdXNYa2VlWV9yZHNjdnRrcHhfcFJ2eVBaU3Y0MVp3dUxCUjZ3QzBwbWE4YTFKTlFtM2Y5bUZZOHBIUkItOUI2djljVkVWbC14b0RObjlOT2IwdlhOYW1rMlVyU2IwU1loM3BnbFNxU0VXQjhEX1l4NVhRb3ZGd0M5azlYXzZVT1VuS19yNF9HR1dmV0xHTVBLNA?oc=5" target="_blank" rel="noopener noreferrer">SON DAKİKA | Dün gözaltına alınmıştı! 8.5 saat arama yapıldı: UltrAslan lideri Sebahattin Şirin'in evinden servet çıktı...</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Dün gözaltına alınmıştı! 8.5 saat arama yapıldı: UltrAslan lideri Sebahattin Şirin'in evinden servet çıktı...&nbsp;&nbsp;Sabah</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxOb3VoNVBZdXVYWkppRGh4cXgxOG9hWm44Sm15V0JYS3JGM1hIWGFTOW9yZk1Ub2s0RzFIQUdMVzRiZ2Q0UGJhNDU0cHVKSmM3ZkFMZ2lzS2tidHA5cC1JdXNYa2VlWV9yZHNjdnRrcHhfcFJ2eVBaU3Y0MVp3dUxCUjZ3QzBwbWE4YTFKTlFtM2Y5bUZZOHBIUkItOUI2djljVkVWbC14b0RObjlOT2IwdlhOYW1rMlVyU2IwU1loM3BnbFNxU0VXQjhEX1l4NVhRb3ZGd0M5azlYXzZVT1VuS19yNF9HR1dmV0xHTVBLNA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Habertürk</span>
+                    <span class="time">08:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNdzZKWFNoYVNxdG1pSHlRZThhOC1XaUFrV2JVV2Rxal9aa0luUnlNZEpuaG1sVmpKUExoUWhqTDZIel8wODNFaWdDQ01lLTRvdTF1cEs2TVFndkdwQ29VMXFPZm1qVUlaaTNiV2NjR3hFMmxkTW1fZW8tWVRfMC1UaGZzV2dCNWhTY2ZENlh2WjNqWXZkdmdobmpmU2pHUWVfcml2alVhVzQzTldhNGNtMktPelc1SFY4UjJQZDNyRjk3dUxkODRlNXIxU2d3WGg0VHZNNnFTZ01LOFh0VWtybm5Mc04tM2xkY2dvNUhGM24zTGxBMWpIcnJn?oc=5" target="_blank" rel="noopener noreferrer">Gözaltına alınan ultrAslan tribün lideri Şirin'in evinde yapılan aramada 65 milyon TL'lik ziynet ve döviz çıktı</a>
+                </h2>
+                <p class="news-summary">Gözaltına alınan ultrAslan tribün lideri Şirin'in evinde yapılan aramada 65 milyon TL'lik ziynet ve döviz çıktı&nbsp;&nbsp;Habertürk</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNdzZKWFNoYVNxdG1pSHlRZThhOC1XaUFrV2JVV2Rxal9aa0luUnlNZEpuaG1sVmpKUExoUWhqTDZIel8wODNFaWdDQ01lLTRvdTF1cEs2TVFndkdwQ29VMXFPZm1qVUlaaTNiV2NjR3hFMmxkTW1fZW8tWVRfMC1UaGZzV2dCNWhTY2ZENlh2WjNqWXZkdmdobmpmU2pHUWVfcml2alVhVzQzTldhNGNtMktPelc1SFY4UjJQZDNyRjk3dUxkODRlNXIxU2d3WGg0VHZNNnFTZ01LOFh0VWtybm5Mc04tM2xkY2dvNUhGM24zTGxBMWpIcnJn?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
@@ -361,13 +334,59 @@
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
                     <span class="source">Son Dakika</span>
-                    <span class="time">06:59</span>
+                    <span class="time">13:01</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxQWXZIUV8zLVlfNWpZc1J4TUFjcnlENkR3aXZjTnluTWFabW11SUl0aWhIck5Mek1KTUlabkRZZDI4WndPbThGSktWMHU2YVRWQzFtSmF0Z2YxamY3UFZmelhLajc4RG9PSFQ2dWNHa0tfZlh1bGJERmp3V3R3WElwTWk5R05wcEFoWWFoSkJQM0pkOWlqVGI4MW14eVlZTnfSAZoBQVVfeXFMT0RTdEd0Y0xzcWRueXpWTW9HLW9OOXJVN2lKN3lZbWJmREx6QnliNWMwRXQ2SGdnMUk0R0FvV2I4Vk10MUU0Sy1nYklkRjFWUW5DQWpHYk5EZmRLWHhFS19sY0ZqdV9QNlEzQWg2WF9MSWQyWFVfdmFfU3VPVmcwYzVhd01wRlQtSFpZdnF6SWZiRHg5ZkhobUJTQQ%3Foc%3D5">Türkiye'nin iki dev kuruluşu satılıyor! Biri 1,1 milyar TL</a>
+                    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQamVURjZaMXFYTHJiOTl2a1dHcGdVU0pkM2tLTXczZWNhUTVWQ1Iyem9lVHduTTlJZ2lFQldLZGNYNVQzT3VFQnlyRkExTGExOE9lamRiaHA0MTdJOUxPYWYyVm9rSUphLUg4WllmNWYzZGhEWkNfSnpwZzlnaW1KTnR2cWtvTUp0emo1WEhsREJWV2pxdmlidEtRWFLSAZsBQVVfeXFMTjdxVXl3a2pLYko3YlVSaVZWU3htQm53c1lDa1I1UVhvbURsY01mTnBkaFNlUzRQb1dvV2ZzSEVfQWtiVnZ2MjkzRlhNR0Y2Qy1jWEMtRVZTOTl2MnZuTWVyd1VtRFlkTTluYk51aFdDUi1Pa2dTNmRqeU1zZFI2OWRfZUw5RTc4YzdzdlV5QnE2elBIbjVfTm5BVUE?oc=5" target="_blank" rel="noopener noreferrer">İstanbul'a geliyor! İşte Fenerbahçe'nin yeni forveti</a>
                 </h2>
+                <p class="news-summary">İstanbul'a geliyor! İşte Fenerbahçe'nin yeni forveti&nbsp;&nbsp;Son Dakika</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxQWXZIUV8zLVlfNWpZc1J4TUFjcnlENkR3aXZjTnluTWFabW11SUl0aWhIck5Mek1KTUlabkRZZDI4WndPbThGSktWMHU2YVRWQzFtSmF0Z2YxamY3UFZmelhLajc4RG9PSFQ2dWNHa0tfZlh1bGJERmp3V3R3WElwTWk5R05wcEFoWWFoSkJQM0pkOWlqVGI4MW14eVlZTnfSAZoBQVVfeXFMT0RTdEd0Y0xzcWRueXpWTW9HLW9OOXJVN2lKN3lZbWJmREx6QnliNWMwRXQ2SGdnMUk0R0FvV2I4Vk10MUU0Sy1nYklkRjFWUW5DQWpHYk5EZmRLWHhFS19sY0ZqdV9QNlEzQWg2WF9MSWQyWFVfdmFfU3VPVmcwYzVhd01wRlQtSFpZdnF6SWZiRHg5ZkhobUJTQQ%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQamVURjZaMXFYTHJiOTl2a1dHcGdVU0pkM2tLTXczZWNhUTVWQ1Iyem9lVHduTTlJZ2lFQldLZGNYNVQzT3VFQnlyRkExTGExOE9lamRiaHA0MTdJOUxPYWYyVm9rSUphLUg4WllmNWYzZGhEWkNfSnpwZzlnaW1KTnR2cWtvTUp0emo1WEhsREJWV2pxdmlidEtRWFLSAZsBQVVfeXFMTjdxVXl3a2pLYko3YlVSaVZWU3htQm53c1lDa1I1UVhvbURsY01mTnBkaFNlUzRQb1dvV2ZzSEVfQWtiVnZ2MjkzRlhNR0Y2Qy1jWEMtRVZTOTl2MnZuTWVyd1VtRFlkTTluYk51aFdDUi1Pa2dTNmRqeU1zZFI2OWRfZUw5RTc4YzdzdlV5QnE2elBIbjVfTm5BVUE?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">10:55</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT2NRdGlZZmhSTElOMG9xU1BCWDBfTnZzLWtDMXYxaG9RT29PRnlGUGZUUmxfdGV0d09vUXBFdWJBaml1WXNpMm40b0ZWcFFINDJzYVUyQlFTcVBTeWVMNnpzTmZBMnpLLVpEUGpQa1FpTHNkRE1LdkJ0T1Y3NkQ2Zy1mby1vNlQxb2c1OFQ2NDBJQkliQ0I1TnZjTjZzd3ZrN2JVLWlsUllsd0pRWnl5MlF1YS1qbUdS?oc=5" target="_blank" rel="noopener noreferrer">Cezaevinde "isyan" haberlerine yalanlama: Sahte paylaşımlara 8 gözaltı</a>
+                </h2>
+                <p class="news-summary">Cezaevinde "isyan" haberlerine yalanlama: Sahte paylaşımlara 8 gözaltı&nbsp;&nbsp;TRT Haber</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT2NRdGlZZmhSTElOMG9xU1BCWDBfTnZzLWtDMXYxaG9RT29PRnlGUGZUUmxfdGV0d09vUXBFdWJBaml1WXNpMm40b0ZWcFFINDJzYVUyQlFTcVBTeWVMNnpzTmZBMnpLLVpEUGpQa1FpTHNkRE1LdkJ0T1Y3NkQ2Zy1mby1vNlQxb2c1OFQ2NDBJQkliQ0I1TnZjTjZzd3ZrN2JVLWlsUllsd0pRWnl5MlF1YS1qbUdS?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Dünya Gazetesi</span>
+                    <span class="time">13:02</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3hSc2dfZVBpVE16UUg0dzZNejFrUW44S19GRXVBRlltMi1UWElXcXlCeV9iNHBWVUdyRDc0TXpSdm1WNjRCYjh6WjNtNFZtVks2WEZqcmJiaEpiWmgtdHVraGhvamJrY0VHXzZYOUtVUkRtQ3JFU0ROd1Z1M05BTDBiczItVjNMNmlkSkljMDY2VDQwUGJEUFRISHlmUUhEM1ozeA?oc=5" target="_blank" rel="noopener noreferrer">Son dakika... Kolombiya'da 7.2 ve 7.5 büyüklüğünde peş peşe deprem</a>
+                </h2>
+                <p class="news-summary">Son dakika... Kolombiya'da 7.2 ve 7.5 büyüklüğünde peş peşe deprem&nbsp;&nbsp;Dünya Gazetesi</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3hSc2dfZVBpVE16UUg0dzZNejFrUW44S19GRXVBRlltMi1UWElXcXlCeV9iNHBWVUdyRDc0TXpSdm1WNjRCYjh6WjNtNFZtVks2WEZqcmJiaEpiWmgtdHVraGhvamJrY0VHXzZYOUtVUkRtQ3JFU0ROd1Z1M05BTDBiczItVjNMNmlkSkljMDY2VDQwUGJEUFRISHlmUUhEM1ozeA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">NTVSpor</span>
+                    <span class="time">09:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOT1VrRXI0cFItUUJuN095c0EtclN0ZTBIMTUtZzE5YlZwbGZhSGJsMjhjc0dwazhaOEJLenhxTVAtYlFyX3c2R2NWb0ZsWF94VENoX0FjTV9vamVCczR5TmNhZVU3U3FkWnFVNk5tLVl3WXF1WWRka29mZGlmc1lOU3ZMNzd2RjVGbFk0emxsQTNfZ0NSQmp4WjJtTDQtV2hfWFdiT0U4U0thR01HWEQ5RzRDYk1xQThnVWFJ0gHAAUFVX3lxTE93RDhGR2VQemJrUzR1VmlnX2tXb1lXVnVoZ1B0c0c4bUhTem0xYjBxc0l1QVF5OF8wSUtCQTlvc1BaNTFkYWxVT1BGZjdPREIwYXZabkNENTRKVEU1ekVnbm5hbzk4NTRxR3I4QnJzWEtzajRKYVUzVzFVR01FYW1OSzVfcUNDLXV2enNJbnpscktPQmludnVmRGozU0RIMW42ZXhlYUhkTGdicW9sN1RMTmZ3ZEZrem1zckUwTTBRVA?oc=5" target="_blank" rel="noopener noreferrer">Fenerbahçe'nin Sturm Graz maçı kamp kadrosu belli oldu: 3 eksik var</a>
+                </h2>
+                <p class="news-summary">Fenerbahçe'nin Sturm Graz maçı kamp kadrosu belli oldu: 3 eksik var&nbsp;&nbsp;NTVSpor</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOT1VrRXI0cFItUUJuN095c0EtclN0ZTBIMTUtZzE5YlZwbGZhSGJsMjhjc0dwazhaOEJLenhxTVAtYlFyX3c2R2NWb0ZsWF94VENoX0FjTV9vamVCczR5TmNhZVU3U3FkWnFVNk5tLVl3WXF1WWRka29mZGlmc1lOU3ZMNzd2RjVGbFk0emxsQTNfZ0NSQmp4WjJtTDQtV2hfWFdiT0U4U0thR01HWEQ5RzRDYk1xQThnVWFJ0gHAAUFVX3lxTE93RDhGR2VQemJrUzR1VmlnX2tXb1lXVnVoZ1B0c0c4bUhTem0xYjBxc0l1QVF5OF8wSUtCQTlvc1BaNTFkYWxVT1BGZjdPREIwYXZabkNENTRKVEU1ekVnbm5hbzk4NTRxR3I4QnJzWEtzajRKYVUzVzFVR01FYW1OSzVfcUNDLXV2enNJbnpscktPQmludnVmRGozU0RIMW42ZXhlYUhkTGdicW9sN1RMTmZ3ZEZrem1zckUwTTBRVA?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
@@ -378,10 +397,11 @@
                     <span class="time">04:00</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxNN0JTc2hTMkxNVFE5UG82ekUzbmlqQnR2Tjl1T3lWbHhzVHpmcjlSQ2lQRHpjRjd1M2lrT1BzaEhvcUpPd3RDbmtuUEdPVURucnViekRadDRrMlh4YVdPdkVPV1RSZzBGcEx6bFRjWVVBWks1ZWY3S3ZiV3ppZlNNOURzV2dUX01ncEVXZi1VVEJhYnlBUmYxbGZNVjkyZ2M%3Foc%3D5">Galatasaray'da transfer isyanı! Taraftar ayağa kalktı</a>
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNN0JTc2hTMkxNVFE5UG82ekUzbmlqQnR2Tjl1T3lWbHhzVHpmcjlSQ2lQRHpjRjd1M2lrT1BzaEhvcUpPd3RDbmtuUEdPVURucnViekRadDRrMlh4YVdPdkVPV1RSZzBGcEx6bFRjWVVBWks1ZWY3S3ZiV3ppZlNNOURzV2dUX01ncEVXZi1VVEJhYnlBUmYxbGZNVjkyZ2M?oc=5" target="_blank" rel="noopener noreferrer">Galatasaray'da transfer isyanı! Taraftar ayağa kalktı</a>
                 </h2>
+                <p class="news-summary">Galatasaray'da transfer isyanı! Taraftar ayağa kalktı&nbsp;&nbsp;Hürriyet</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMinwFBVV95cUxNN0JTc2hTMkxNVFE5UG82ekUzbmlqQnR2Tjl1T3lWbHhzVHpmcjlSQ2lQRHpjRjd1M2lrT1BzaEhvcUpPd3RDbmtuUEdPVURucnViekRadDRrMlh4YVdPdkVPV1RSZzBGcEx6bFRjWVVBWks1ZWY3S3ZiV3ppZlNNOURzV2dUX01ncEVXZi1VVEJhYnlBUmYxbGZNVjkyZ2M%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNN0JTc2hTMkxNVFE5UG82ekUzbmlqQnR2Tjl1T3lWbHhzVHpmcjlSQ2lQRHpjRjd1M2lrT1BzaEhvcUpPd3RDbmtuUEdPVURucnViekRadDRrMlh4YVdPdkVPV1RSZzBGcEx6bFRjWVVBWks1ZWY3S3ZiV3ppZlNNOURzV2dUX01ncEVXZi1VVEJhYnlBUmYxbGZNVjkyZ2M?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
@@ -392,24 +412,41 @@
                     <span class="time">21:00</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi7gFBVV95cUxPLW01OXh5SE45aWRNUVNpSlZUbHhRSWIydTllMFVtUlNwbFVvVzBHaV92eU1ZNlctVGk0eGljY0I5Znc0WVlkMVR6R3UtZzkzZXlnclNicE5QQ3VPZW9BTHVUYkM4VUZVM0pzNHM0MC1HOV9TeXpKM3llT042YjdFY1VfU3YzczN4MHJpd29MQ2prMzJaUVNITzhKVFZ2M1ZGNUFPRjNQRHI1Ul9MSVU3Q0c3V1JKTWNkSmVBZk0ydEg2SC1oUTA5TUl6NHlZb1dROERxQV9QN0dkLUZldzkxenQ4M2laNGJRNTU3MVB30gHzAUFVX3lxTE9JbFpPc1FPR01Bc2RUa1BOWWlGbGp5Z2ZPZ0lSVldYTUM0aHhfOEZpREFvaVlmUXFJSm11d09uMWFfaG9FcEFtUFhlYm96S2ZqcWJoVDhoNnBia2ZBZ1pwem5ZOG16MGpXbExwRmFnc1YyaHJLTnJaVGZyQXZ3TDM3elRTbzlkRldqYUR2cktPZkRFUVRSeUl0MkwtWkR4WjRHVVRLOXJTaS1SYzRPcmczS29oeDduTXZWUlRjQ2dseWVyUlBYZWg5Z0R1VW0wNnRzMzktYUM1WW5GdkxxN0VHWEh3UEt2cVRjOUhtYTBESFFVaw%3Foc%3D5">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 10 Ağustos 2026</a>
+                    <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPLW01OXh5SE45aWRNUVNpSlZUbHhRSWIydTllMFVtUlNwbFVvVzBHaV92eU1ZNlctVGk0eGljY0I5Znc0WVlkMVR6R3UtZzkzZXlnclNicE5QQ3VPZW9BTHVUYkM4VUZVM0pzNHM0MC1HOV9TeXpKM3llT042YjdFY1VfU3YzczN4MHJpd29MQ2prMzJaUVNITzhKVFZ2M1ZGNUFPRjNQRHI1Ul9MSVU3Q0c3V1JKTWNkSmVBZk0ydEg2SC1oUTA5TUl6NHlZb1dROERxQV9QN0dkLUZldzkxenQ4M2laNGJRNTU3MVB30gHzAUFVX3lxTE9JbFpPc1FPR01Bc2RUa1BOWWlGbGp5Z2ZPZ0lSVldYTUM0aHhfOEZpREFvaVlmUXFJSm11d09uMWFfaG9FcEFtUFhlYm96S2ZqcWJoVDhoNnBia2ZBZ1pwem5ZOG16MGpXbExwRmFnc1YyaHJLTnJaVGZyQXZ3TDM3elRTbzlkRldqYUR2cktPZkRFUVRSeUl0MkwtWkR4WjRHVVRLOXJTaS1SYzRPcmczS29oeDduTXZWUlRjQ2dseWVyUlBYZWg5Z0R1VW0wNnRzMzktYUM1WW5GdkxxN0VHWEh3UEt2cVRjOUhtYTBESFFVaw?oc=5" target="_blank" rel="noopener noreferrer">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 10 Ağustos 2026</a>
                 </h2>
+                <p class="news-summary">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 10 Ağustos 2026&nbsp;&nbsp;NTV Haber</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMi7gFBVV95cUxPLW01OXh5SE45aWRNUVNpSlZUbHhRSWIydTllMFVtUlNwbFVvVzBHaV92eU1ZNlctVGk0eGljY0I5Znc0WVlkMVR6R3UtZzkzZXlnclNicE5QQ3VPZW9BTHVUYkM4VUZVM0pzNHM0MC1HOV9TeXpKM3llT042YjdFY1VfU3YzczN4MHJpd29MQ2prMzJaUVNITzhKVFZ2M1ZGNUFPRjNQRHI1Ul9MSVU3Q0c3V1JKTWNkSmVBZk0ydEg2SC1oUTA5TUl6NHlZb1dROERxQV9QN0dkLUZldzkxenQ4M2laNGJRNTU3MVB30gHzAUFVX3lxTE9JbFpPc1FPR01Bc2RUa1BOWWlGbGp5Z2ZPZ0lSVldYTUM0aHhfOEZpREFvaVlmUXFJSm11d09uMWFfaG9FcEFtUFhlYm96S2ZqcWJoVDhoNnBia2ZBZ1pwem5ZOG16MGpXbExwRmFnc1YyaHJLTnJaVGZyQXZ3TDM3elRTbzlkRldqYUR2cktPZkRFUVRSeUl0MkwtWkR4WjRHVVRLOXJTaS1SYzRPcmczS29oeDduTXZWUlRjQ2dseWVyUlBYZWg5Z0R1VW0wNnRzMzktYUM1WW5GdkxxN0VHWEh3UEt2cVRjOUhtYTBESFFVaw%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPLW01OXh5SE45aWRNUVNpSlZUbHhRSWIydTllMFVtUlNwbFVvVzBHaV92eU1ZNlctVGk0eGljY0I5Znc0WVlkMVR6R3UtZzkzZXlnclNicE5QQ3VPZW9BTHVUYkM4VUZVM0pzNHM0MC1HOV9TeXpKM3llT042YjdFY1VfU3YzczN4MHJpd29MQ2prMzJaUVNITzhKVFZ2M1ZGNUFPRjNQRHI1Ul9MSVU3Q0c3V1JKTWNkSmVBZk0ydEg2SC1oUTA5TUl6NHlZb1dROERxQV9QN0dkLUZldzkxenQ4M2laNGJRNTU3MVB30gHzAUFVX3lxTE9JbFpPc1FPR01Bc2RUa1BOWWlGbGp5Z2ZPZ0lSVldYTUM0aHhfOEZpREFvaVlmUXFJSm11d09uMWFfaG9FcEFtUFhlYm96S2ZqcWJoVDhoNnBia2ZBZ1pwem5ZOG16MGpXbExwRmFnc1YyaHJLTnJaVGZyQXZ3TDM3elRTbzlkRldqYUR2cktPZkRFUVRSeUl0MkwtWkR4WjRHVVRLOXJTaS1SYzRPcmczS29oeDduTXZWUlRjQ2dseWVyUlBYZWg5Z0R1VW0wNnRzMzktYUM1WW5GdkxxN0VHWEh3UEt2cVRjOUhtYTBESFFVaw?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
             <article class="news-card">
                 <div class="card-header">
                     <span class="badge">SON DAKİKA</span>
-                    <span class="source">Milliyet</span>
-                    <span class="time">07:11</span>
+                    <span class="source">Fotomaç</span>
+                    <span class="time">08:25</span>
                 </div>
                 <h2 class="news-title">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMijgFBVV95cUxPdGdsbXFYcUxfZzhXTkFxSFExNE5qemVVQmJSRHhjU0tWdkFydHNLZmFLaEhYT2V5cjR5VF8zSGRSeFlsbHJXQ2JrN09vSUNLc1JWY2tyZ2ZVLVI0amNUUWZsdURWeUFIdzM2RlR2Vm1FU1dHc21IZ1N1RnR3YUQtZTFDNzZRY05sN0FHaHd3%3Foc%3D5">Son dakika... LGS yerleştirme 1. nakil sonuçları açıklandı</a>
+                    <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNc2NYaXBYOWk0LTVJX2RfVUU2Z1Myd2tfRmhBamhOTkR4VThrWnBfd0JfdlREaUZWVmhXMU1qUEJUS09IRVcwQW9VNTRPaTFPTGpySmE4ckp0MnJzRXdBS3o2UEtaT19zek9abzZQc0RCR1NYeGQtWXNWRVh3Rk4zTjVCWVkwZkRWcVh0SUZ6b3dzRzNoYWpTYWtVellPOVNKUW1HRkRvaTI0cEp2RVBr?oc=5" target="_blank" rel="noopener noreferrer">Galatasaray'dan savunmaya yerli hamlesi! İşte transfer formülü</a>
                 </h2>
+                <p class="news-summary">Galatasaray'dan savunmaya yerli hamlesi! İşte transfer formülü&nbsp;&nbsp;Fotomaç</p>
                 <div class="card-footer">
-                    <a href="https://nearadin.net/url/?q=https%3A//news.google.com/rss/articles/CBMijgFBVV95cUxPdGdsbXFYcUxfZzhXTkFxSFExNE5qemVVQmJSRHhjU0tWdkFydHNLZmFLaEhYT2V5cjR5VF8zSGRSeFlsbHJXQ2JrN09vSUNLc1JWY2tyZ2ZVLVI0amNUUWZsdURWeUFIdzM2RlR2Vm1FU1dHc21IZ1N1RnR3YUQtZTFDNzZRY05sN0FHaHd3%3Foc%3D5" class="read-btn">Habere Git →</a>
+                    <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNc2NYaXBYOWk0LTVJX2RfVUU2Z1Myd2tfRmhBamhOTkR4VThrWnBfd0JfdlREaUZWVmhXMU1qUEJUS09IRVcwQW9VNTRPaTFPTGpySmE4ckp0MnJzRXdBS3o2UEtaT19zek9abzZQc0RCR1NYeGQtWXNWRVh3Rk4zTjVCWVkwZkRWcVh0SUZ6b3dzRzNoYWpTYWtVellPOVNKUW1HRkRvaTI0cEp2RVBr?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">10:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc0gyOENoaW42cGEyUVNxZTktVm8xTzNhSnRjSWdQYzNBWjZIMFZjallvX0F1SDZjSktvN2xCSWZocTNqSWpGQUlBNU9aOHBFT005UjIyd0FwWi1nUXNDd3p0bmhvOHAtTERZWnBpZFh0RTBXRkFrb1lwZTFFMEg4M3RJWDZkVW93azIzUVo0NVgxZkI3Wm5ncWhBVlVMTzB6ZS1JUDlsdnVQamtsanZTWW9oZlh5dzVjazRHaTNJbnRBZw?oc=5" target="_blank" rel="noopener noreferrer">Cumhurbaşkanı Erdoğan, halkın oylarıyla başladığı görevde 12 yılı tamamladı</a>
+                </h2>
+                <p class="news-summary">Cumhurbaşkanı Erdoğan, halkın oylarıyla başladığı görevde 12 yılı tamamladı&nbsp;&nbsp;TRT Haber</p>
+                <div class="card-footer">
+                    <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc0gyOENoaW42cGEyUVNxZTktVm8xTzNhSnRjSWdQYzNBWjZIMFZjallvX0F1SDZjSktvN2xCSWZocTNqSWpGQUlBNU9aOHBFT005UjIyd0FwWi1nUXNDd3p0bmhvOHAtTERZWnBpZFh0RTBXRkFrb1lwZTFFMEg4M3RJWDZkVW93azIzUVo0NVgxZkI3Wm5ncWhBVlVMTzB6ZS1JUDlsdnVQamtsanZTWW9oZlh5dzVjazRHaTNJbnRBZw?oc=5" target="_blank" rel="noopener noreferrer" class="read-btn">Habere Git →</a>
                 </div>
             </article>
             
