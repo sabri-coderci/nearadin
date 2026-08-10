@@ -1,4 +1,4 @@
-Name: nearadin.net Otomatik Haber
+name: nearadin.net Otomatik Haber
 
 on:
   schedule:
