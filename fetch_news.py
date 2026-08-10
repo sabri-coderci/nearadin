@@ -205,7 +205,7 @@ def fetch_and_generate():
 <body>
 
     <header>
-        <a href="/">nearadin.net - Son Dakika</a>
+        <a href="/">Son Dakika - nearadin.net</a>
     </header>
     <div class="container">
         <article class="article-card">
