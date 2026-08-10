@@ -159,11 +159,13 @@ def fetch_and_generate():
     <meta name="description" content="{news['desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
 
-    <!-- X (Twitter) Card Etiketleri -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{news['title']}" />
-    <meta name="twitter:description" content="{news['desc'][:150]}..." />
-    <meta name="twitter:site" content="@nearadin2026" />
+    <!-- X (Twitter) Card Meta Etiketleri -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{news['title']}" />
+<meta name="twitter:description" content="{news['desc'][:150]}..." />
+<meta name="twitter:site" content="@nearadin2026" />
+<!-- Haber İçin Temsili Görsel (Kartın üzerinde çıkacak olan resim) -->
+<meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
     <!-- Open Graph / Facebook Etiketleri -->
     <meta property="og:type" content="article" />
