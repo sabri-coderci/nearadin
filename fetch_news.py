@@ -1,66 +1,66 @@
 import urllib.request
 import urllib.parse
-import xml.etree.ElementTree as ET
+import json
 import datetime
 
-def fetch_search_news():
-    # Google Arama News RSS Akışı (Doğrudan Arama Mantığı)
-    rss_url = "https://news.google.com/rss/search?q=haberler&hl=tr&gl=TR&ceid=TR:tr"
+# --- GOOGLE CUSTOM SEARCH BİLGİLERİNİZ ---
+# Buradaki tırnak içine kendi API Key ve CX değerinizi yapıştırın:
+GOOGLE_API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek" 
+SEARCH_ENGINE_CX = "a33464712b4234607" 
+
+def fetch_google_custom_search(query="haberler"):
+    """
+    Google Custom Search JSON API kullanarak q=haberler araması yapar.
+    Doğrudan haber sitelerinin kendi (yalın) URL'lerini döndürür.
+    """
+    encoded_query = urllib.parse.quote(query)
     
+    url = f"https://www.googleapis.com/customsearch/v1?q={encoded_query}&key={GOOGLE_API_KEY}&cx={SEARCH_ENGINE_CX}&hl=tr&gl=tr&num=10"
+
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
-    
-    req = urllib.request.Request(rss_url, headers=headers)
-    
+
+    req = urllib.request.Request(url, headers=headers)
+
     try:
-        response = urllib.request.urlopen(req, timeout=15)
-        xml_data = response.read()
+        with urllib.request.urlopen(req, timeout=15) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            items = data.get('items', [])
 
-        root = ET.fromstring(xml_data)
-        items = root.findall('./channel/item')
+            cards_html = ""
+            for item in items:
+                clean_title = item.get('title', 'Başlıksız')
+                real_link = item.get('link', '#')
+                display_link = item.get('displayLink', 'Haber Kaynağı')
 
-        cards_html = ""
-        for item in items[:15]:  # İlk 15 haberi alıyoruz
-            title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
-            raw_link = item.find('link').text if item.find('link') is not None else '#'
+                # Link doğrudan sizin /url/?q= yönlendiricinize bağlanır.
+                # Custom Search kullandığımız için real_link zaten doğrudan orijinal sitedir (sozcu, birgun vb.)
+                redirect_link = f"https://nearadin.net/url/?q={urllib.parse.quote(real_link)}"
 
-            # Kaynak ve Başlık Ayıklama
-            source_name = "Haber Akışı"
-            clean_title = title
-            if " - " in title:
-                parts = title.rsplit(" - ", 1)
-                clean_title = parts[0]
-                source_name = parts[1]
-
-            # Google News bağlantısını aşmak ve doğrudan orijinal kaynağa yönlendirmek için:
-            # Eğer bağlantı Google linki içeriyorsa bile parametre olarak temiz URL yolluyoruz.
-            redirect_link = f"https://nearadin.net/url/?q={urllib.parse.quote(raw_link)}"
-
-            cards_html += f'''
-            <article class="news-card">
-                <div class="card-header">
-                    <span class="badge">SON DAKİKA</span>
-                    <span class="source">{source_name}</span>
-                </div>
-                <h2 class="news-title">
-                    <a href="{redirect_link}">{clean_title}</a>
-                </h2>
-                <div class="card-footer">
-                    <a href="{redirect_link}" class="read-btn">Habere Git →</a>
-                </div>
-            </article>
-            '''
-        return cards_html
+                cards_html += f'''
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">ARAMA SONUCU</span>
+                        <span class="source">{display_link}</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="{redirect_link}">{clean_title}</a>
+                    </h2>
+                    <div class="card-footer">
+                        <a href="{redirect_link}" class="read-btn">Sonuca Git →</a>
+                    </div>
+                </article>
+                '''
+            return cards_html if cards_html else "<p style='text-align:center; padding:20px;'>Sonuç bulunamadı.</p>"
 
     except Exception as e:
-        print(f"Veri Çekme Hatası: {e}")
-        return "<p style='text-align:center; padding:20px;'>Haber akışı şu anda güncellenemiyor.</p>"
+        print(f"API Arama Hatası: {e}")
+        return f"<p style='text-align:center; padding:20px;'>Arama sonuçları yüklenemedi. (Hata: {e})</p>"
 
 def generate_site():
-    news_html = fetch_search_news()
+    search_html = fetch_google_custom_search(query="haberler")
 
-    # Türkiye Saati (UTC+3)
     tz_tr = datetime.timezone(datetime.timedelta(hours=3))
     last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
 
@@ -69,8 +69,8 @@ def generate_site():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nearadin.net - Son Dakika Haberler</title>
-    <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı haber akışı." />
+    <title>nearadin.net - Canlı Arama Sonuçları</title>
+    <meta name="description" content="nearadin.net canlı arama sonuçları ve haber akışı." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; padding-bottom: 30px; }}
@@ -88,7 +88,7 @@ def generate_site():
         
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
-        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
+        .badge {{ background: #e7f3ff; color: #1877f2; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
         
         .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; }}
@@ -101,7 +101,7 @@ def generate_site():
 </head>
 <body>
 
-    <header>nearadin.net - SON DAKİKA</header>
+    <header>nearadin.net - CANLI ARAMA</header>
 
     <div class="container">
         <div class="widgets-nav">
@@ -111,12 +111,12 @@ def generate_site():
         </div>
 
         <div class="status-bar">
-            <span>Kaynak: <strong>Canlı Arama Akışı</strong></span>
-            <span>Son Güncelleme: <strong>{last_update}</strong></span>
+            <span>Sorgu: <strong>q=haberler</strong></span>
+            <span>Güncelleme: <strong>{last_update}</strong></span>
         </div>
 
         <main>
-            {news_html}
+            {search_html}
         </main>
     </div>
 
@@ -125,8 +125,6 @@ def generate_site():
 
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(full_html)
-        
-    print("index.html başarıyla güncellendi.")
 
 if __name__ == "__main__":
     generate_site()
