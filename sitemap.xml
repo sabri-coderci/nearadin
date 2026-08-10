@@ -2,25 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nearadin.net/</loc>
-    <lastmod>2026-08-10T05:11:56+00:00</lastmod>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/son-depremler/</loc>
-    <lastmod>2026-08-10T05:11:56+00:00</lastmod>
-    <changefreq>hourly</changefreq>
+    <loc>https://nearadin.net/haber/canli-fenerbahce-dunya-yildizi-forveti-istanbula-getiriyo-1.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/kripto-para/</loc>
-    <lastmod>2026-08-10T05:11:56+00:00</lastmod>
-    <changefreq>hourly</changefreq>
+    <loc>https://nearadin.net/haber/terorsuz-turkiye-yasasi-teklifi-mecliste-gozler-genel-kuru-2.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/hava-durumu/</loc>
-    <lastmod>2026-08-10T05:11:56+00:00</lastmod>
+    <loc>https://nearadin.net/haber/son-dakika-tbmmde-cerceve-yasa-gorusmesi-maddelere-ge-3.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/tbmmde-kritik-gun-cerceve-yasa-icin-partilerin-tutumu-netl-4.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/galatasaraya-22-milyon-euroluk-yunan-yildiz-bu-transfer-c-5.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/galatasaraydan-o-isim-icin-flas-karar-yeni-sezonda-takimda-6.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-erdogandan-avusturya-ile-yeni-donem-mesaji-s-7.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-galatasaray-muhabiri-burhan-can-terzi-gozaltin-8.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-ozgur-ozel-cerceve-yasa-kararini-acikladi-9.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/yeni-partide-21-milletvekili-cerceve-yasaya-hayir-diyecek-10.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-surec-yasasi-oncesinde-yeni-partide-kapali-gru-11.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-ultraaslan-lideri-sebahattin-sirin-gozaltina-al-12.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-galatasaray-tribun-lideri-sebahattin-sirin-goz-13.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/gozaltina-alinan-ultraslan-tribun-lideri-sirinin-evinde-yap-14.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-akp-ile-butlan-chpsinin-etimesgut-ittifaki-ye-15.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/etimesgut-belediyesinde-baskanvekili-belli-oldu-16.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-haberi-etimesgut-belediyesinde-baskan-vekili-be-17.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-sanliurfada-yanan-aractan-kadin-cansiz-bedeni-c-18.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/cezaevinde-isyan-haberlerine-yalanlama-sahte-paylasimlara-19.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-depremler-listesi-10-agustos-2026-canli-ve-anlik-20.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/italyan-basinindan-flas-iddia-besiktasin-gundemindeki-yild-21.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-meclise-yurumek-isteyen-gazilere-polis-ablukas-22.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/son-dakika-kolombiyada-74-buyuklugunde-deprem-23.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/kolombiyada-74-buyuklugunde-deprem-24.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/galatasaraydan-savunmaya-yerli-hamlesi-iste-transfer-formu-25.html</loc>
+    <lastmod>2026-08-10T19:23:42+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
