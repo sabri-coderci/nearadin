@@ -82,7 +82,7 @@ def fetch_and_generate():
         xml_data = response.read()
 
         root = ET.fromstring(xml_data)
-        raw_items = root.findall('./channel/item')[:25]
+        raw_items = root.findall('./channel/item')[:50]
 
         # --- ADMATİC AUTO ADS REKLAM KODU ---
         admatic_code = '''
