@@ -5,7 +5,7 @@ import datetime
 
 # --- GOOGLE CUSTOM SEARCH BİLGİLERİNİZ ---
 # Buradaki tırnak içine kendi API Key ve CX değerinizi yapıştırın:
-GOOGLE_API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek" 
+GOOGLE_API_KEY = "AIzaSyDMEJ6_O7vYVwYJqmHYu9U_qr3UDO0DJow" 
 SEARCH_ENGINE_CX = "a33464712b4234607" 
 
 def fetch_google_custom_search(query="haberler"):
