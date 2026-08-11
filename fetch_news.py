@@ -62,7 +62,7 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # ARŞİV KORUMA: Klasörü silmiyoruz, varsa tutuyoruz, yoksa oluşturuyoruz.
+    # ARŞİV KORUMA: Haberler klasörünü silmiyoruz, varsa tutuyoruz, yoksa oluşturuyoruz.
     os.makedirs("haber", exist_ok=True)
 
     # Canlı Ziyaretçi Kodu (Who's Amung Us)
@@ -98,7 +98,7 @@ def fetch_and_generate():
 
         parsed_items = []
 
-        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele
+        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele (43200 sn)
         for item in raw_items:
             pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
             
@@ -161,11 +161,8 @@ def fetch_and_generate():
             })
 
         news_cards_html = ""
-        sitemap_urls = []
 
         for news in news_list:
-            sitemap_urls.append(news["full_url"])
-
             other_news_html = ""
             other_count = 0
             for other_news in news_list:
@@ -285,7 +282,7 @@ def fetch_and_generate():
 </body>
 </html>'''
 
-            # Dosya zaten varsa bile üzerine yazar, yoksa yeni oluşturur (Klasör silinmediği için eski haberler korunur)
+            # Haber dosyasını kalıcı kaydediyoruz
             with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
@@ -386,7 +383,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # Sitemap.xml Güncellemesi
+        # --- DİNAMİK ARŞİVLİ SITEMAP.XML OLUŞTURMA ---
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -394,12 +391,16 @@ def fetch_and_generate():
     <priority>1.0</priority>
   </url>\n'''
 
-        for url in sitemap_urls:
-            sitemap_items += f'''  <url>
-    <loc>{url}</loc>
+        # haber/ klasöründeki TÜM eski ve yeni html dosyalarını tarayıp sitemap'e dahil eder
+        if os.path.exists("haber"):
+            for file_name in os.listdir("haber"):
+                if file_name.endswith(".html"):
+                    page_url = f"https://nearadin.net/haber/{file_name}"
+                    sitemap_items += f'''  <url>
+    <loc>{page_url}</loc>
     <lastmod>{last_update_iso}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>\n'''
 
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -409,9 +410,9 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Sayfalar ve sitemap başarıyla oluşturuldu.")
+        print("Sayfalar, arşivler ve sitemap.xml başarıyla oluşturuldu.")
 
-        # X (Twitter) Otomatik Paylaşım
+        # X (Twitter) Otomatik Paylaşımı
         if news_list:
             post_to_x(news_list[0])
 
