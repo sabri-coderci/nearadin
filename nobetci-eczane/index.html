@@ -23,7 +23,6 @@
         select { flex: 1; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-size: 15px; background: #fff; outline: none; }
         select:disabled { background-color: #f0f2f5; cursor: not-allowed; opacity: 0.7; }
         
-        /* Frame Konteyner Yapısı */
         .iframe-wrapper {
             width: 100%;
             max-width: 100%;
@@ -55,111 +54,99 @@
             <p class="subtitle">İl ve ilçenizi seçerek anlık nöbetçi eczane listesini ve iletişim bilgilerini görüntüleyebilirsiniz.</p>
             
             <div class="filter-box">
-                <!-- 81 İL LİSTESİ -->
-                <select id="citySelect" onchange="onCityChange()">
-                    <option value="">-- İl Seçiniz --</option>
-                    <option value="1">Adana</option>
-                    <option value="2">Adıyaman</option>
-                    <option value="3">Afyonkarahisar</option>
-                    <option value="4">Ağrı</option>
-                    <option value="5">Amasya</option>
-                    <option value="6">Ankara</option>
-                    <option value="7">Antalya</option>
-                    <option value="8">Artvin</option>
-                    <option value="9">Aydın</option>
-                    <option value="10">Balıkesir</option>
-                    <option value="11">Bilecik</option>
-                    <option value="12">Bingöl</option>
-                    <option value="13">Bitlis</option>
-                    <option value="14">Bolu</option>
-                    <option value="15">Burdur</option>
-                    <option value="16">Bursa</option>
-                    <option value="17">Çanakkale</option>
-                    <option value="18">Çankırı</option>
-                    <option value="19">Çorum</option>
-                    <option value="20">Denizli</option>
-                    <option value="21">Diyarbakır</option>
-                    <option value="22">Edirne</option>
-                    <option value="23">ElazSorunun kaynağı şudur: `eczaneler.gen.tr` servisinin sunduğu `iframe.php` parametresi, ilçe sorgularında ilçe adının sadece Türkçe karakter veya küçük/büyük harf uyumuna değil, doğrudan **kendi sistemindeki özelilçe URL parametrelerine** ihtiyaç duyar. 
-
-Ayrıca sadece `lokasyon` parametresi ilçe özelinde çağrıldığında bazı durumlarda boş sayfa dönebilir.
-
-Bunu çözmek için script tarafındaki parametre gönderimini ve `districtData` yapısını doğrudan çalışan slug mantığına göre revize ettik. Güncellenmiş tam HTML kodu aşağıdadır:
-
-```html
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nöbetçi Eczaneler - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli 81 il ve tüm ilçeleri için güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }
-        header a { color: white; text-decoration: none; }
-        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
-        
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; text-align: center; }
-        p.subtitle { color: #65676b; font-size: 13px; text-align: center; margin-bottom: 20px; }
-        
-        .filter-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        @media(min-width: 480px) {
-            .filter-box { flex-direction: row; }
-        }
-        select { flex: 1; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-size: 15px; background: #fff; outline: none; }
-        select:disabled { background-color: #f0f2f5; cursor: not-allowed; opacity: 0.7; }
-        
-        .iframe-wrapper {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #ffffff;
-            border: 1px solid #e4e6eb;
-            min-height: 380px;
-        }
-
-        iframe.pharmacy-frame {
-            width: 100%;
-            height: 520px;
-            border: none;
-            display: block;
-        }
-
-        .btn-home { display: block; text-align: center; background: #e4e6eb; color: #050505; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
-        .loading-text { text-align: center; color: #8d949e; padding: 40px 0; font-size: 14px; }
-    </style>
-</head>
-<body>
-    <header><a href="/">nearadin.net - Nöbetçi Eczaneler</a></header>
-    
-    <div class="container">
-        <div class="card">
-            <h1>🏥 Nöbetçi Eczane Sorgulama</h1>
-            <p class="subtitle">İl ve ilçenizi seçerek anlık nöbetçi eczane listesini ve iletişim bilgilerini görüntüleyebilirsiniz.</p>
-            
-            <div class="filter-box">
+                <!-- 81 İL SEÇİM ALANI -->
                 <select id="citySelect" onchange="onCityChange()">
                     <option value="">-- İl Seçiniz --</option>
                     <option value="1" data-slug="adana">Adana</option>
+                    <option value="2" data-slug="adiyaman">Adıyaman</option>
+                    <option value="3" data-slug="afyonkarahisar">Afyonkarahisar</option>
+                    <option value="4" data-slug="agri">Ağrı</option>
+                    <option value="5" data-slug="amasya">Amasya</option>
                     <option value="6" data-slug="ankara">Ankara</option>
                     <option value="7" data-slug="antalya">Antalya</option>
+                    <option value="8" data-slug="artvin">Artvin</option>
+                    <option value="9" data-slug="aydin">Aydın</option>
+                    <option value="10" data-slug="balikesir">Balıkesir</option>
+                    <option value="11" data-slug="bilecik">Bilecik</option>
+                    <option value="12" data-slug="bingol">Bingöl</option>
+                    <option value="13" data-slug="bitlis">Bitlis</option>
+                    <option value="14" data-slug="bolu">Bolu</option>
+                    <option value="15" data-slug="burdur">Burdur</option>
                     <option value="16" data-slug="bursa">Bursa</option>
+                    <option value="17" data-slug="canakkale">Çanakkale</option>
+                    <option value="18" data-slug="cankiri">Çankırı</option>
+                    <option value="19" data-slug="corum">Çorum</option>
+                    <option value="20" data-slug="denizli">Denizli</option>
+                    <option value="21" data-slug="diyarbakir">Diyarbakır</option>
+                    <option value="22" data-slug="edirne">Edirne</option>
+                    <option value="23" data-slug="elazig">Elazığ</option>
+                    <option value="24" data-slug="erzincan">Erzincan</option>
+                    <option value="25" data-slug="erzurum">Erzurum</option>
+                    <option value="26" data-slug="eskisehir">Eskişehir</option>
+                    <option value="27" data-slug="gaziantep">Gaziantep</option>
+                    <option value="28" data-slug="giresun">Giresun</option>
+                    <option value="29" data-slug="gumushane">Gümüşhane</option>
+                    <option value="30" data-slug="hakkari">Hakkari</option>
+                    <option value="31" data-slug="hatay">Hatay</option>
+                    <option value="32" data-slug="isparta">Isparta</option>
+                    <option value="33" data-slug="mersin">Mersin</option>
                     <option value="34" data-slug="istanbul">İstanbul</option>
                     <option value="35" data-slug="izmir">İzmir</option>
+                    <option value="36" data-slug="kars">Kars</option>
+                    <option value="37" data-slug="kastamonu">Kastamonu</option>
+                    <option value="38" data-slug="kayseri">Kayseri</option>
+                    <option value="39" data-slug="kirklareli">Kırklareli</option>
+                    <option value="40" data-slug="kirsehir">Kırşehir</option>
                     <option value="41" data-slug="kocaeli">Kocaeli</option>
                     <option value="42" data-slug="konya">Konya</option>
+                    <option value="43" data-slug="kutahya">Kütahya</option>
+                    <option value="44" data-slug="malatya">Malatya</option>
+                    <option value="45" data-slug="manisa">Manisa</option>
+                    <option value="46" data-slug="kahramanmaras">Kahramanmaraş</option>
+                    <option value="47" data-slug="mardin">Mardin</option>
+                    <option value="48" data-slug="mugla">Muğla</option>
+                    <option value="49" data-slug="mus">Muş</option>
+                    <option value="50" data-slug="nevsehir">Nevşehir</option>
+                    <option value="51" data-slug="nigde">Niğde</option>
+                    <option value="52" data-slug="ordu">Ordu</option>
+                    <option value="53" data-slug="rize">Rize</option>
+                    <option value="54" data-slug="sakarya">Sakarya</option>
+                    <option value="55" data-slug="samsun">Samsun</option>
+                    <option value="56" data-slug="siirt">Siirt</option>
+                    <option value="57" data-slug="sinop">Sinop</option>
+                    <option value="58" data-slug="sivas">Sivas</option>
+                    <option value="59" data-slug="tekirdag">Tekirdağ</option>
+                    <option value="60" data-slug="tokat">Tokat</option>
+                    <option value="61" data-slug="trabzon">Trabzon</option>
+                    <option value="62" data-slug="tunceli">Tunceli</option>
+                    <option value="63" data-slug="sanliurfa">Şanlıurfa</option>
+                    <option value="64" data-slug="usak">Uşak</option>
+                    <option value="65" data-slug="van">Van</option>
+                    <option value="66" data-slug="yozgat">Yozgat</option>
+                    <option value="67" data-slug="zonguldak">Zonguldak</option>
+                    <option value="68" data-slug="aksaray">Aksaray</option>
+                    <option value="69" data-slug="bayburt">Bayburt</option>
+                    <option value="70" data-slug="karaman">Karaman</option>
+                    <option value="71" data-slug="kirikkale">Kırıkkale</option>
+                    <option value="72" data-slug="batman">Batman</option>
+                    <option value="73" data-slug="sirnak">Şırnak</option>
+                    <option value="74" data-slug="bartin">Bartın</option>
+                    <option value="75" data-slug="ardahan">Ardahan</option>
+                    <option value="76" data-slug="igdir">Iğdır</option>
+                    <option value="77" data-slug="yalova">Yalova</option>
+                    <option value="78" data-slug="karabuk">Karabük</option>
+                    <option value="79" data-slug="kilis">Kilis</option>
+                    <option value="80" data-slug="osmaniye">Osmaniye</option>
+                    <option value="81" data-slug="duzce">Düzce</option>
                 </select>
 
+                <!-- İLÇE SEÇİM ALANI -->
                 <select id="districtSelect" onchange="loadPharmacyFrame()" disabled>
                     <option value="">-- Tüm İlçeler --</option>
                 </select>
             </div>
 
+            <!-- FRAME LİSTELEME ALANI -->
             <div id="iframeContainer" class="iframe-wrapper">
                 <div class="loading-text">
                     Lütfen eczane listesini görmek için il seçiniz.
@@ -171,7 +158,6 @@ Bunu çözmek için script tarafındaki parametre gönderimini ve `districtData`
     </div>
 
     <script>
-        // İlgili servisin tanıdığı doğrudan slug değerleri
         const districtData = {
             "34": [
                 { name: "Beşiktaş", slug: "besiktas" },
@@ -183,19 +169,27 @@ Bunu çözmek için script tarafındaki parametre gönderimini ve `districtData`
                 { name: "Pendik", slug: "pendik" },
                 { name: "Ümraniye", slug: "umraniye" },
                 { name: "Esenyurt", slug: "esenyurt" },
-                { name: "Ataşehir", slug: "atasehir" }
+                { name: "Ataşehir", slug: "atasehir" },
+                { name: "Bakırköy", slug: "bakirkoy" },
+                { name: "Maltepe", slug: "maltepe" },
+                { name: "Sarıyer", slug: "sariyer" }
             ],
             "6": [
                 { name: "Çankaya", slug: "cankaya" },
                 { name: "Keçiören", slug: "kecioren" },
                 { name: "Yenimahalle", slug: "yenimahalle" },
-                { name: "Mamak", slug: "mamak" }
+                { name: "Mamak", slug: "mamak" },
+                { name: "Etimesgut", slug: "etimesgut" },
+                { name: "Gölbaşı", slug: "golbasi" },
+                { name: "Sincan", slug: "sincan" }
             ],
             "35": [
                 { name: "Konak", slug: "konak" },
                 { name: "Karşıyaka", slug: "karsiyaka" },
                 { name: "Bornova", slug: "bornova" },
-                { name: "Buca", slug: "buca" }
+                { name: "Buca", slug: "buca" },
+                { name: "Çeşme", slug: "cesme" },
+                { name: "Urla", slug: "urla" }
             ]
         };
 
@@ -236,11 +230,10 @@ Bunu çözmek için script tarafındaki parametre gönderimini ve `districtData`
                 return;
             }
 
-            let frameUrl = `[https://www.eczaneler.gen.tr/iframe.php?lokasyon=$](https://www.eczaneler.gen.tr/iframe.php?lokasyon=$){cityCode}`;
+            let frameUrl = `https://www.eczaneler.gen.tr/iframe.php?lokasyon=${cityCode}`;
 
-            // İlçe seçildiğinde kaynak adresi doğru biçim olan "il-ilce" kalıbına aktarılır
             if (districtSlug && citySlug) {
-                frameUrl = `[https://www.eczaneler.gen.tr/iframe.php?lokasyon=$](https://www.eczaneler.gen.tr/iframe.php?lokasyon=$){citySlug}-${districtSlug}`;
+                frameUrl = `https://www.eczaneler.gen.tr/iframe.php?lokasyon=${citySlug}-${districtSlug}`;
             }
 
             container.innerHTML = `
@@ -261,8 +254,21 @@ Bunu çözmek için script tarafındaki parametre gönderimini ve `districtData`
                     <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
                     <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
                 </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
