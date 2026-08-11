@@ -1,0 +1,162 @@
+<div id="browser-simulation-container" style="width: 100%; min-height: 500px; margin: 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <div style="display: flex; align-items: center; background: #f1f3f4; padding: 10px 15px; border-radius: 8px 8px 0 0; border: 1px solid #ccc; border-bottom: none;">
+    <div style="display: flex; gap: 6px; margin-right: 15px;">
+      <span style="width: 12px; height: 12px; background: #ff5f56; border-radius: 50%; display: inline-block;"></span>
+      <span style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
+      <span style="width: 12px; height: 12px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+    </div>
+    <div id="browser-address-field" style="flex-grow: 1; background: #fff; padding: 5px 12px; border-radius: 16px; font-size: 13px; color: #5f6368; border: 1px solid #dadce0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+      Yükleniyor...
+    </div>
+  </div>
+
+  <div id="browser-content-viewport" style="width: 100%; background: #fff; border: 1px solid #ccc; border-radius: 0 0 8px 8px; padding: 20px; box-sizing: border-box; min-height: 450px;">
+    <div id="viewport-loader" style="text-align: center; padding: 60px 20px; color: #5f6368;">
+      <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #1a73e8; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+      İçerik güvenli tünelden çekiliyor...
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+/* Çekilen haber içeriğinin sitenizde şık durması için temel stil */
+.extracted-content p { font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 15px; }
+.extracted-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 15px 0; }
+.extracted-content h1 { font-size: 24px; color: #111; margin-bottom: 20px; }
+</style>
+
+<script>
+(function() {
+  const addressField = document.getElementById('browser-address-field');
+  const viewport = document.getElementById('browser-content-viewport');
+
+  function getCleanTargetUrl() {
+    const fullHref = window.location.href;
+    const urlMatches = fullHref.match(/https?:\/\/[^\s&]+/g);
+    if (urlMatches && urlMatches.length > 1) return decodeURIComponent(urlMatches[1]);
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    let q = urlParams.get('q');
+    return q ? decodeURIComponent(q) : null;
+  }
+
+  const targetUrl = getCleanTargetUrl();
+  if (!targetUrl) {
+    addressField.innerText = "Hata: URL Bulunamadı";
+    viewport.innerHTML = '<div style="color:#d93025; text-align:center;">Geçerli bir sorgu bulunamadı.</div>';
+    return;
+  }
+
+  addressField.innerText = targetUrl;
+
+  // Medya ve YouTube Kontrolleri
+  const ytRegExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const ytMatch = targetUrl.match(ytRegExp);
+
+  if (ytMatch && ytMatch[2].length === 11) {
+    // YouTube durumu
+    viewport.style.padding = "0";
+    viewport.innerHTML = `<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000;"><iframe src="https://www.youtube.com/embed/${ytMatch[2]}?autoplay=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe></div>`;
+  } else if (targetUrl.match(/\.(jpeg|jpg|gif|png|webp|svg)$/i)) {
+    // Görsel durumu
+    viewport.innerHTML = `<div style="text-align:center;"><img src="${targetUrl}" style="max-width:100%; height:auto;" /></div>`;
+  } else if (targetUrl.match(/\.(pdf)$/i)) {
+    // PDF durumu
+    viewport.style.padding = "0";
+    viewport.innerHTML = `<iframe src="https://docs.google.com/gview?url=${encodeURIComponent(targetUrl)}&embedded=true" style="width:100%; height:700px; border:none;"></iframe>`;
+  } else {
+    // WEB SAYFASI/HABER DURUMU: Doğrudan içeriği kazıma (Scraping) altyapısı
+    // AllOrigins proxy ağını kullanarak hedef sitenin ham HTML kodunu çekiyoruz
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+        // Gelen ham HTML'i sanal bir dökümana dönüştür
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data.contents, 'text/html');
+        
+        // CNN Türk ve standart haber sitelerinin ana gövdesini (metinlerini) bulmaya çalış
+        // Genelde makaleler <article> içinde veya belirli sınıflarda yer alır
+        const articleContent = doc.querySelector('article') || doc.querySelector('.news-content') || doc.querySelector('.detail-content') || doc.body;
+        
+        // Gereksiz script, link ve reklam alanlarını temizle (Ziyaretçi sitenizde kalsın diye)
+        const scripts = articleContent.getElementsByTagName('script');
+        while (scripts.length > 0) scripts[0].parentNode.removeChild(scripts[0]);
+        
+        const styleTags = articleContent.getElementsByTagName('style');
+        while (styleTags.length > 0) styleTags[0].parentNode.removeChild(styleTags[0]);
+
+        // Temizlenen içeriği kendi sayfamıza gömüyoruz
+        viewport.innerHTML = `
+          <div class="extracted-content" style="max-width: 800px; margin: 0 auto;">
+            <div style="margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #eee; font-size:12px; color:#666;">
+              📰 Bu içerik özgün kaynaktan anlık olarak güvenli modda derlenmiştir. Orijinal haline <a href="${targetUrl}" target="_blank" rel="nofollow" style="color:#1a73e8;">buradan</a> ulaşabilirsiniz.
+            </div>
+            ${articleContent.innerHTML}
+          </div>`;
+      })
+      .catch(err => {
+        // Eğer her şeye rağmen bir hata oluşursa (Sunucu çökerse) güvenli çıkış kapısı sun:
+        viewport.innerHTML = `
+          <div style="text-align:center; padding:40px 10px;">
+            <p style="color:#333; font-size:16px;">Bu sitenin katı güvenlik politikaları nedeniyle içerik doğrudan sayfaya yansıtılamadı.</p>
+            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer nofollow" style="display:inline-block; margin-top:15px; padding:12px 25px; background:#1a73e8; color:#fff; text-decoration:none; border-radius:4px; font-weight:bold;">İçeriği Yeni Sekmede Aç</a>
+          </div>`;
+      });
+  }
+})();
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+(function() {
+  const addressField = document.getElementById('browser-address-field');
+  const viewport = document.getElementById('browser-content-viewport');
+
+  // URL temizleme ve algılama fonksiyonu
+  function getCleanTargetUrl() {
+    const fullHref = window.location.href;
+    const urlParams = new URLSearchParams(window.location.search);
+    let q = urlParams.get('q');
+
+    if (q) return decodeURIComponent(q).trim();
+
+    const postTitleEl = document.querySelector('h1') || document.querySelector('.post-title') || document.querySelector('.entry-title');
+    if (postTitleEl) {
+      let titleText = postTitleEl.innerText.trim();
+      if (titleText.includes('http')) {
+        const lastHttp = titleText.lastIndexOf('http');
+        if (lastHttp !== -1) titleText = titleText.substring(lastHttp);
+      }
+      if (titleText.includes('httpswww')) {
+        titleText = titleText.replace('httpswww', 'https://www');
+      }
+      return titleText;
+    }
+    return null;
+  }
+
+  let targetUrl = getCleanTargetUrl();
+
+  if (!targetUrl) {
+    if (addressField) addressField.innerText = "Hata: URL Bulunamadı";
+    if (viewport) viewport.innerHTML = '<div style="color:#d93025; text-align:center; padding:20px;">Geçerli bir sorgu bulunamadı.</div>';
+    return;
+  }
+
+  if (!/^https?:\/\//i.test(targetUrl)) {
+    targetUrl = 'https://' + targetUrl;
+  }
+
+  if (addressField) addressField.innerText = targetUrl;
+
+  // 🚀 PROXY'SİZ DOĞRUDAN IFRAME YÜKLEME (Döngüde takılmayı önler)
+  viewport.style.padding = "0";
+  viewport.style.height = "750px"; 
+  viewport.innerHTML = '<iframe src="' + targetUrl + '" style="width:100%; height:100%; border:none; background:#fff;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>';
+
+})();
+//]]>
+</script>
