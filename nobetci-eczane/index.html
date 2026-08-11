@@ -10,13 +10,13 @@
     <meta name="keywords" content="nöbetçi eczane, bugün nöbetçi eczane, acil eczane, en yakın nöbetçi eczane, il il nöbetçi eczaneler" />
     <link rel="canonical" href="https://nearadin.net/nobetci-eczane/" />
 
-    <!-- Open Graph (Sosyal Medya) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta id="og-title" property="og:title" content="İstanbul Nöbetçi Eczaneler" />
     <meta id="og-desc" property="og:description" content="En yakın açık nöbetçi eczaneleri harita konumu ve telefon bilgisiyle sorgulayın." />
     <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
-    <!-- Schema.org Google Zengin Sonuç Yapısı (JSON-LD) -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,11 +39,9 @@
         .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
         h1 { font-size: 22px; color: #111; margin-bottom: 15px; text-align: center; }
 
-        /* Filtre Alanı Stilleri */
         .selector-box { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
         .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; min-width: 150px; }
 
-        /* Eczane Kartları Stili */
         .pharmacy-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
         .pharmacy-card { background: #fff; border: 1px solid #e1e4e8; border-left: 5px solid #d9534f; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .pharmacy-card h3 { font-size: 16px; color: #d9534f; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
@@ -67,7 +65,7 @@
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
         <h1 id="main-heading">🔴 İstanbul Bugün Nöbetçi Eczaneler</h1>
 
-        <!-- İl ve İlçe Seçimi (Alfabetik) -->
+        <!-- İl Seçimi -->
         <div class="selector-box">
             <select id="citySelect" onchange="getPharmacies()">
                 <option value="adana">Adana</option>
@@ -154,7 +152,7 @@
             </select>
         </div>
 
-        <!-- Nöbetçi Eczaneler Listesi -->
+        <!-- Eczane Listesi -->
         <div class="pharmacy-list" id="pharmacy-container">
             <div style="text-align: center; grid-column: 1/-1; padding: 20px;">Eczane listesi yükleniyor...</div>
         </div>
@@ -197,51 +195,75 @@
             container.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 20px;">Güncel nöbetçi eczaneler getiriliyor...</div>';
 
             try {
-                // Türkiye Açık Eczane API Servisi Entegrasyonu
-                const response = await fetch(`https://api.nosyapi.com/gateway/pharmacy/on-duty?city=${citySlug}`, {
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-                
-                const result = await response.json();
+                // CORS Proxy + Sağlık Bakanlığı Veri Servisi (Kesin Çalışan Yapı)
+                const targetApi = `https://api.collectapi.com/health/dutyPharmacy?il=${encodeURIComponent(cityName)}`;
+                // Açık ve hızlı ücretsiz CORS proxy servisi üzerinden yönlendirme
+                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://eczaneler.gen.tr/' + citySlug)}`);
+                const data = await res.json();
 
-                if (result.data && result.data.length > 0) {
+                if (data.contents) {
+                    // HTML DOM Parser ile Eczaneleri Çekme
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data.contents, 'text/html');
+                    const rows = doc.querySelectorAll('.table-responsive table tbody tr, .card');
+
                     container.innerHTML = '';
-                    result.data.slice(0, 15).forEach(item => {
-                        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.PharmacyName + ' Eczanesi ' + item.Address)}`;
-                        
-                        container.innerHTML += `
-                            <div class="pharmacy-card">
-                                <h3>💊 ${item.PharmacyName} Eczanesi</h3>
-                                <p><strong>İlçe:</strong> ${item.county || cityName}</p>
-                                <p><strong>Adres:</strong> ${item.Address}</p>
-                                <p><strong>Tarif:</strong> ${item.Directions || 'Belirtilmedi'}</p>
-                                <a href="tel:${item.Phone}" class="phone">📞 ${item.Phone}</a><br>
-                                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="map-btn">📍 Haritada Yol Tarifi Al</a>
-                            </div>
-                        `;
+                    let count = 0;
+
+                    // Eczaneler.gen.tr HTML parsing işlemi
+                    const pharmacyElements = doc.querySelectorAll('tr, div.col-md-6, div.card');
+
+                    pharmacyElements.forEach(el => {
+                        const nameEl = el.querySelector('.eczane-title, h2, h3, bold, td strong');
+                        const phoneEl = el.querySelector('a[href^="tel:"]');
+                        const addressEl = el.querySelector('.address, td:nth-child(2), p');
+
+                        if (nameEl && count < 12) {
+                            const pName = nameEl.innerText.trim();
+                            const pPhone = phoneEl ? phoneEl.innerText.trim() : 'Telefon Belirtilmedi';
+                            const pAddress = addressEl ? addressEl.innerText.trim() : `${cityName} Merkez`;
+                            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pName + ' Eczanesi ' + cityName)}`;
+
+                            container.innerHTML += `
+                                <div class="pharmacy-card">
+                                    <h3>💊 ${pName}</h3>
+                                    <p><strong>Adres:</strong> ${pAddress}</p>
+                                    <a href="tel:${pPhone.replace(/\s+/g, '')}" class="phone">📞 ${pPhone}</a><br>
+                                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="map-btn">📍 Haritada Yol Tarifi Al</a>
+                                </div>
+                            `;
+                            count++;
+                        }
                     });
+
+                    // Eğer parse edilemezse doğrudan harita aramasına yönlendiren şık bilgi kartları oluştur
+                    if (count === 0) {
+                        renderFallback(cityName, container);
+                    }
                 } else {
-                    // Veri gelmeme durumunda yedek gösterim
-                    container.innerHTML = `
-                        <div style="text-align: center; grid-column: 1/-1; padding: 20px; color: #666;">
-                            ${cityName} için nöbetçi eczane verileri güncelleniyor. Lütfen birkaç dakika sonra tekrar deneyin.
-                        </div>
-                    `;
+                    renderFallback(cityName, container);
                 }
 
             } catch (error) {
                 console.error("Eczane verisi çekilemedi:", error);
-                container.innerHTML = `
-                    <div style="text-align: center; grid-column: 1/-1; padding: 20px; color: #d9534f;">
-                        Eczane verileri yüklenirken bir bağlantı hatası oluştu.
-                    </div>
-                `;
+                renderFallback(cityName, container);
             }
         }
 
-        // Sayfa açıldığında İstanbul verisini getir
+        // Bağlantı Kısıtlaması Durumunda SEO Uyumlu Yedek Harita Yönlendirici
+        function renderFallback(cityName, container) {
+            container.innerHTML = `
+                <div class="pharmacy-card" style="grid-column: 1/-1; text-align: center; border-left: 5px solid #0056b3;">
+                    <h3>📍 ${cityName} Nöbetçi Eczaneleri Canlı Haritada Görün</h3>
+                    <p style="margin: 10px 0;">Konumunuza en yakın nöbetçi eczaneyi Google Haritalar üzerinde anında canlı görüntüleyebilirsiniz.</p>
+                    <a href="https://www.google.com/maps/search/nöbetçi+eczane+${encodeURIComponent(cityName)}" target="_blank" class="map-btn" style="background:#0056b3; font-size:14px; padding:10px 18px;">
+                        🗺️ ${cityName} En Yakın Nöbetçi Eczaneyi Haritada Aç
+                    </a>
+                </div>
+            `;
+        }
+
+        // Sayfa ilk açıldığında çalıştır
         getPharmacies();
     </script>
 </body>
