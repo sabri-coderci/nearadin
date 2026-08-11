@@ -4,31 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Başlık ve Açıklamaları -->
-    <title id="seo-title">İstanbul Nöbetçi Eczaneler - Bugünkü Nöbetçi Eczane Listesi | nearadin.net</title>
-    <meta id="seo-desc" name="description" content="İstanbul bugün nöbetçi olan eczanelerin adres, telefon ve konum bilgileri. En yakın açık nöbetçi eczaneyi anında öğrenin." />
-    <meta name="keywords" content="nöbetçi eczane, bugün nöbetçi eczane, acil eczane, en yakın nöbetçi eczane, il il nöbetçi eczaneler" />
+    <title id="seo-title">İstanbul Nöbetçi Eczaneler - En Yakın Acil Eczaneler | nearadin.net</title>
+    <meta id="seo-desc" name="description" content="İstanbul bugün nöbetçi olan eczanelerin adres, telefon ve harita konum bilgileri. En yakın açık nöbetçi eczaneyi anında öğrenin." />
+    <meta name="keywords" content="nöbetçi eczane, bugün nöbetçi eczane, acil eczane, en yakın nöbetçi eczane, istanbul nöbetçi eczane" />
     <link rel="canonical" href="https://nearadin.net/nobetci-eczane/" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta id="og-title" property="og:title" content="İstanbul Nöbetçi Eczaneler" />
-    <meta id="og-desc" property="og:description" content="En yakın açık nöbetçi eczaneleri harita konumu ve telefon bilgisiyle sorgulayın." />
-    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Nöbetçi Eczane Sorgulama",
-      "description": "Türkiye geneli il ve ilçe bazlı günlük nöbetçi eczane listesi.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "nearadin.net"
-      }
-    }
-    </script>
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,18 +19,21 @@
         h1 { font-size: 22px; color: #111; margin-bottom: 15px; text-align: center; }
 
         .selector-box { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
-        .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; min-width: 150px; }
+        .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; min-width: 180px; }
 
-        .pharmacy-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .pharmacy-card { background: #fff; border: 1px solid #e1e4e8; border-left: 5px solid #d9534f; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        .pharmacy-card h3 { font-size: 16px; color: #d9534f; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
-        .pharmacy-card p { font-size: 13px; color: #444; margin-bottom: 6px; line-height: 1.4; }
-        .pharmacy-card .phone { font-weight: bold; color: #0056b3; text-decoration: none; display: inline-block; margin-top: 5px; font-size: 14px; }
-        .pharmacy-card .map-btn { display: inline-block; margin-top: 10px; padding: 6px 12px; background: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 600; }
+        /* Harita ve Aksiyon Kartı */
+        .action-card { background: #fff; border: 2px solid #0056b3; border-radius: 12px; padding: 25px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .action-card h3 { font-size: 18px; color: #111; margin-bottom: 10px; }
+        .action-card p { font-size: 14px; color: #555; margin-bottom: 20px; line-height: 1.5; }
+        
+        .btn-map { display: inline-block; width: 100%; max-width: 320px; padding: 14px 20px; background: #d9534f; color: white; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 16px; transition: background 0.2s; }
+        .btn-map:hover { background: #c9302c; }
+
+        .iframe-container { margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+        iframe { width: 100%; height: 350px; border: 0; }
 
         .seo-content { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #444; line-height: 1.6; }
         .seo-content h2 { font-size: 16px; color: #111; margin-bottom: 8px; }
-
         .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
     </style>
 </head>
@@ -63,98 +45,36 @@
 
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1 id="main-heading">🔴 İstanbul Bugün Nöbetçi Eczaneler</h1>
+        <h1 id="main-heading">🔴 İstanbul Nöbetçi Eczaneler</h1>
 
-        <!-- İl Seçimi -->
+        <!-- Şehir Seçimi -->
         <div class="selector-box">
-            <select id="citySelect" onchange="getPharmacies()">
-                <option value="adana">Adana</option>
-                <option value="adiyaman">Adıyaman</option>
-                <option value="afyonkarahisar">Afyonkarahisar</option>
-                <option value="agri">Ağrı</option>
-                <option value="aksaray">Aksaray</option>
-                <option value="amasya">Amasya</option>
-                <option value="ankara">Ankara</option>
-                <option value="antalya">Antalya</option>
-                <option value="ardahan">Ardahan</option>
-                <option value="artvin">Artvin</option>
-                <option value="aydin">Aydın</option>
-                <option value="balikesir">Balıkesir</option>
-                <option value="bartin">Bartın</option>
-                <option value="batman">Batman</option>
-                <option value="bayburt">Bayburt</option>
-                <option value="bilecik">Bilecik</option>
-                <option value="bingol">Bingöl</option>
-                <option value="bitlis">Bitlis</option>
-                <option value="bolu">Bolu</option>
-                <option value="burdur">Burdur</option>
-                <option value="bursa">Bursa</option>
-                <option value="canakkale">Çanakkale</option>
-                <option value="cankiri">Çankırı</option>
-                <option value="corum">Çorum</option>
-                <option value="denizli">Denizli</option>
-                <option value="diyarbakir">Diyarbakır</option>
-                <option value="duzce">Düzce</option>
-                <option value="edirne">Edirne</option>
-                <option value="elazig">Elazığ</option>
-                <option value="erzincan">Erzincan</option>
-                <option value="erzurum">Erzurum</option>
-                <option value="eskisehir">Eskişehir</option>
-                <option value="gaziantep">Gaziantep</option>
-                <option value="giresun">Giresun</option>
-                <option value="gumushane">Gümüşhane</option>
-                <option value="hakkari">Hakkari</option>
-                <option value="hatay">Hatay</option>
-                <option value="igdir">Iğdır</option>
-                <option value="isparta">Isparta</option>
-                <option value="istanbul" selected>İstanbul</option>
-                <option value="izmir">İzmir</option>
-                <option value="kahramanmaras">Kahramanmaraş</option>
-                <option value="karabuk">Karabük</option>
-                <option value="karaman">Karaman</option>
-                <option value="kars">Kars</option>
-                <option value="kastamonu">Kastamonu</option>
-                <option value="kayseri">Kayseri</option>
-                <option value="kilis">Kilis</option>
-                <option value="kirikkale">Kırıkkale</option>
-                <option value="kirklareli">Kırklareli</option>
-                <option value="kirsehir">Kırşehir</option>
-                <option value="kocaeli">Kocaeli</option>
-                <option value="konya">Konya</option>
-                <option value="kutahya">Kütahya</option>
-                <option value="malatya">Malatya</option>
-                <option value="manisa">Manisa</option>
-                <option value="mardin">Mardin</option>
-                <option value="mersin">Mersin</option>
-                <option value="mugla">Muğla</option>
-                <option value="mus">Muş</option>
-                <option value="nevsehir">Nevşehir</option>
-                <option value="nigde">Niğde</option>
-                <option value="ordu">Ordu</option>
-                <option value="osmaniye">Osmaniye</option>
-                <option value="rize">Rize</option>
-                <option value="sakarya">Sakarya</option>
-                <option value="samsun">Samsun</option>
-                <option value="siirt">Siirt</option>
-                <option value="sinop">Sinop</option>
-                <option value="sivas">Sivas</option>
-                <option value="sanliurfa">Şanlıurfa</option>
-                <option value="sirnak">Şırnak</option>
-                <option value="tekirdag">Tekirdağ</option>
-                <option value="tokat">Tokat</option>
-                <option value="trabzon">Trabzon</option>
-                <option value="tunceli">Tunceli</option>
-                <option value="usak">Uşak</option>
-                <option value="van">Van</option>
-                <option value="yalova">Yalova</option>
-                <option value="yozgat">Yozgat</option>
-                <option value="zonguldak">Zonguldak</option>
+            <select id="citySelect" onchange="updateCity()">
+                <option value="İstanbul" selected>İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Antalya">Antalya</option>
+                <option value="Gaziantep">Gaziantep</option>
+                <option value="Konya">Konya</option>
+                <option value="Kocaeli">Kocaeli</option>
+                <option value="Samsun">Samsun</option>
             </select>
         </div>
 
-        <!-- Eczane Listesi -->
-        <div class="pharmacy-list" id="pharmacy-container">
-            <div style="text-align: center; grid-column: 1/-1; padding: 20px;">Eczane listesi yükleniyor...</div>
+        <!-- Canlı Yönlendirme Kartı -->
+        <div class="action-card">
+            <h3 id="card-title">📍 İstanbul Nöbetçi Eczane Konumları</h3>
+            <p id="card-desc">Konumunuza en yakın ve şu an açık olan nöbetçi eczaneleri canlı harita üzerinde yol tarifi ile hemen inceleyin.</p>
+            <a id="map-link" href="https://www.google.com/maps/search/nöbetçi+eczane+İstanbul" target="_blank" rel="noopener" class="btn-map">
+                🗺️ Haritada En Yakın Eczaneyi Bul
+            </a>
+        </div>
+
+        <!-- Canlı Harita İframe -->
+        <div class="iframe-container">
+            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=nöbetçi%20eczane%20İstanbul&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
 
         <!-- Admatic AUTO ads START -->
@@ -164,107 +84,38 @@
         </div>
         <!-- Admatic AUTO ads END -->
 
-        <!-- Google SEO İçerik Bloğu -->
+        <!-- SEO İçerik Bloğu -->
         <div class="seo-content">
-            <h2 id="seo-heading">İstanbul Acil ve Gece Açık Eczaneler</h2>
+            <h2 id="seo-heading">İstanbul Acil Açık Nöbetçi Eczaneler</h2>
             <p id="seo-text">
-                nearadin.net nöbetçi eczane sorgulama hizmeti ile il genelinde gece ve resmi tatillerde hizmet veren tüm acil nöbetçi eczanelerin açık adreslerini, telefon numaralarını ve harita konum bilgilerini anında görüntüleyebilirsiniz.
+                nearadin.net nöbetçi eczane sorgulama servisi ile gece, haftasonu ve resmi tatillerde açık olan en yakın eczaneleri anında bulabilirsiniz.
             </p>
         </div>
 
-        <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
         <div style="text-align: center; margin-top: 25px;">
             <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
         </div>
     </div>
 
     <script>
-        async function getPharmacies() {
-            const select = document.getElementById('citySelect');
-            const citySlug = select.value;
-            const cityName = select.options[select.selectedIndex].text;
-            const container = document.getElementById('pharmacy-container');
+        function updateCity() {
+            const cityName = document.getElementById('citySelect').value;
 
-            // 1. Arayüz ve SEO Başlıklarını Güncelle
-            document.getElementById('main-heading').innerText = `🔴 ${cityName} Bugün Nöbetçi Eczaneler`;
-            document.title = `${cityName} Nöbetçi Eczaneler - Bugünkü Liste ve Harita Konumu | nearadin.net`;
-            document.getElementById('seo-desc').setAttribute('content', `${cityName} bugün nöbetçi olan eczanelerin adres, telefon ve harita yol tarifi bilgileri. En yakın açık eczaneyi nearadin.net'te bulun.`);
+            // Başlıklar & SEO Güncelleme
+            document.getElementById('main-heading').innerText = `🔴 ${cityName} Nöbetçi Eczaneler`;
+            document.getElementById('card-title').innerText = `📍 ${cityName} Nöbetçi Eczane Konumları`;
+            document.getElementById('card-desc').innerText = `${cityName} ilinde şu an nöbetçi olan açık eczanelerin harita üzerindeki canlı yerlerini görün.`;
             document.getElementById('seo-heading').innerText = `${cityName} Acil Açık Nöbetçi Eczaneler`;
-            document.getElementById('seo-text').innerText = `${cityName} ili ve bağlı tüm ilçelerde bu akşam ve gece açık olan nöbetçi eczaneler listelenmiştir. Telefon numaralarına tıklayarak direkt arama yapabilir veya harita butonunu kullanarak yol tarifi alabilirsiniz.`;
+            
+            document.title = `${cityName} Nöbetçi Eczaneler - En Yakın Acil Eczaneler | nearadin.net`;
 
-            container.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 20px;">Güncel nöbetçi eczaneler getiriliyor...</div>';
+            // Google Maps Link & Embedded Frame Güncelleme
+            const mapSearchUrl = `https://www.google.com/maps/search/nöbetçi+eczane+${encodeURIComponent(cityName)}`;
+            const embedUrl = `https://maps.google.com/maps?q=nöbetçi%20eczane%20${encodeURIComponent(cityName)}&t=&z=12&ie=UTF8&iwloc=&output=embed`;
 
-            try {
-                // CORS Proxy + Sağlık Bakanlığı Veri Servisi (Kesin Çalışan Yapı)
-                const targetApi = `https://api.collectapi.com/health/dutyPharmacy?il=${encodeURIComponent(cityName)}`;
-                // Açık ve hızlı ücretsiz CORS proxy servisi üzerinden yönlendirme
-                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://eczaneler.gen.tr/' + citySlug)}`);
-                const data = await res.json();
-
-                if (data.contents) {
-                    // HTML DOM Parser ile Eczaneleri Çekme
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data.contents, 'text/html');
-                    const rows = doc.querySelectorAll('.table-responsive table tbody tr, .card');
-
-                    container.innerHTML = '';
-                    let count = 0;
-
-                    // Eczaneler.gen.tr HTML parsing işlemi
-                    const pharmacyElements = doc.querySelectorAll('tr, div.col-md-6, div.card');
-
-                    pharmacyElements.forEach(el => {
-                        const nameEl = el.querySelector('.eczane-title, h2, h3, bold, td strong');
-                        const phoneEl = el.querySelector('a[href^="tel:"]');
-                        const addressEl = el.querySelector('.address, td:nth-child(2), p');
-
-                        if (nameEl && count < 12) {
-                            const pName = nameEl.innerText.trim();
-                            const pPhone = phoneEl ? phoneEl.innerText.trim() : 'Telefon Belirtilmedi';
-                            const pAddress = addressEl ? addressEl.innerText.trim() : `${cityName} Merkez`;
-                            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pName + ' Eczanesi ' + cityName)}`;
-
-                            container.innerHTML += `
-                                <div class="pharmacy-card">
-                                    <h3>💊 ${pName}</h3>
-                                    <p><strong>Adres:</strong> ${pAddress}</p>
-                                    <a href="tel:${pPhone.replace(/\s+/g, '')}" class="phone">📞 ${pPhone}</a><br>
-                                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="map-btn">📍 Haritada Yol Tarifi Al</a>
-                                </div>
-                            `;
-                            count++;
-                        }
-                    });
-
-                    // Eğer parse edilemezse doğrudan harita aramasına yönlendiren şık bilgi kartları oluştur
-                    if (count === 0) {
-                        renderFallback(cityName, container);
-                    }
-                } else {
-                    renderFallback(cityName, container);
-                }
-
-            } catch (error) {
-                console.error("Eczane verisi çekilemedi:", error);
-                renderFallback(cityName, container);
-            }
+            document.getElementById('map-link').href = mapSearchUrl;
+            document.getElementById('gmap_canvas').src = embedUrl;
         }
-
-        // Bağlantı Kısıtlaması Durumunda SEO Uyumlu Yedek Harita Yönlendirici
-        function renderFallback(cityName, container) {
-            container.innerHTML = `
-                <div class="pharmacy-card" style="grid-column: 1/-1; text-align: center; border-left: 5px solid #0056b3;">
-                    <h3>📍 ${cityName} Nöbetçi Eczaneleri Canlı Haritada Görün</h3>
-                    <p style="margin: 10px 0;">Konumunuza en yakın nöbetçi eczaneyi Google Haritalar üzerinde anında canlı görüntüleyebilirsiniz.</p>
-                    <a href="https://www.google.com/maps/search/nöbetçi+eczane+${encodeURIComponent(cityName)}" target="_blank" class="map-btn" style="background:#0056b3; font-size:14px; padding:10px 18px;">
-                        🗺️ ${cityName} En Yakın Nöbetçi Eczaneyi Haritada Aç
-                    </a>
-                </div>
-            `;
-        }
-
-        // Sayfa ilk açıldığında çalıştır
-        getPharmacies();
     </script>
 </body>
 </html>
