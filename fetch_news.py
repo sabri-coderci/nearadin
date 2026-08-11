@@ -88,10 +88,6 @@ def fetch_and_generate():
         admatic_code = '''
         <div class="ad-container">
         
-            <!-- Admatic AUTO ads START -->
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-            <!-- Admatic AUTO ads END -->
         </div>
         '''
 
@@ -204,6 +200,12 @@ def fetch_and_generate():
 
 <body>
 
+
+            <!-- Admatic AUTO ads START -->
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Admatic AUTO ads END -->
+
     <header>
         <a href="/">Son Dakika - nearadin.net</a>
     </header>
@@ -217,7 +219,7 @@ def fetch_and_generate():
             <h1>{news['title']}</h1>
             <p>{news['desc']}</p>
             
-            {admatic_code}
+        
 
             <div class="actions">
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
