@@ -5,7 +5,8 @@ import os
 from bs4 import BeautifulSoup
 
 def generate_earthquakes_json():
-    url = "www.koeri.boun.edu.tr/scripts/lst2.asp"
+    # Protokol (http://) eklendi
+    url = "http://www.koeri.boun.edu.tr/scripts/lst2.asp"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
     }
@@ -43,13 +44,16 @@ def generate_earthquakes_json():
 
                 # SADECE 4.0 VE ÜZERİ DEPREMLERİ AL
                 if mag_val >= 4.0:
-                    location = " ".join(parts[8:-1])
+                    # Konum adının sonundaki "İlksel" vb. gereksiz kısımları ayıklama
+                    raw_location = " ".join(parts[8:])
+                    location = re.sub(r'\s+(İlksel|REVISE01|REVISE02|REVISE03).*$', '', raw_location, flags=i)
+                    
                     earthquakes.append({
                         "date": date,
                         "time": time,
                         "mag": f"{mag_val:.1f}",
                         "depth": depth,
-                        "location": location
+                        "location": location.strip()
                     })
 
         # `son-depremler` klasörüne JSON dosyasını kaydet
