@@ -150,7 +150,7 @@ def fetch_and_generate():
 
     footer_html = get_footer_html()
     
-    # Yardımcı/servis sayfalarını ortak footer ile oluştur
+    # Yardımcı/servis sayfalarını oluştur/güncelle
     create_auxiliary_pages(footer_html)
 
     try:
@@ -199,7 +199,7 @@ def fetch_and_generate():
         parsed_items = parsed_items[:50]
 
         news_list = []
-        archive_dates_map = {} # Tarihlere göre ilk haberi saklamak için
+        daily_news_grouped = {} # Güne göre haberleri toplamak için
 
         for idx, entry in enumerate(parsed_items):
             item = entry['item']
@@ -231,11 +231,7 @@ def fetch_and_generate():
             internal_link = f"/haber/{date_folder}/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
 
-            # O tarihe ait yönlendirilecek ilk haber bağını kaydet
-            if date_str not in archive_dates_map:
-                archive_dates_map[date_str] = internal_link
-
-            news_list.append({
+            news_data = {
                 "idx": idx,
                 "title": clean_title,
                 "original_link": original_link,
@@ -248,7 +244,16 @@ def fetch_and_generate():
                 "internal_link": internal_link,
                 "full_url": full_url,
                 "iso_date": dt_tr.strftime("%Y-%m-%dT%H:%M:%S+03:00")
-            })
+            }
+
+            news_list.append(news_data)
+
+            if date_folder not in daily_news_grouped:
+                daily_news_grouped[date_folder] = {
+                    "date_str": date_str,
+                    "news_items": []
+                }
+            daily_news_grouped[date_folder]["news_items"].append(news_data)
 
         news_cards_html = ""
 
@@ -356,7 +361,7 @@ def fetch_and_generate():
             
             <div class="actions">
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
-                <a href="/" class="btn btn-secondary">← Tüm Son Dakika Haberlerine Dön</a>
+                <a href="/haber/{news['date_folder']}/" class="btn btn-secondary">← {news['date_str']} Tarihli Tüm Haberlere Dön</a>
             </div>
 
             <div class="related-news">
@@ -397,6 +402,75 @@ def fetch_and_generate():
 
             if news["idx"] == 1:
                 news_cards_html += admatic_code
+
+        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI (haber/YYYY/MM/DD/index.html) ---
+        for folder_path, group_data in daily_news_grouped.items():
+            day_cards_html = ""
+            for idx, d_news in enumerate(group_data["news_items"]):
+                day_cards_html += f'''
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">{d_news['source']}</span>
+                        <span class="time">{d_news['time']}</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="{d_news['internal_link']}">{d_news['title']}</a>
+                    </h2>
+                    <p class="news-summary">{d_news['desc']}</p>
+                    <div class="card-footer">
+                        <a href="{d_news['internal_link']}" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                '''
+                if idx == 1:
+                    day_cards_html += admatic_code
+
+            daily_index_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{group_data['date_str']} Tarihli Son Dakika Haberleri - nearadin.net</title>
+    <meta name="description" content="{group_data['date_str']} gününe ait tüm son dakika haberleri ve gelişmeleri akışı." />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
+        header {{ background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }}
+        header a {{ color: white; text-decoration: none; }}
+        .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }}
+        .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
+        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
+        .source {{ font-weight: 600; color: #4b4f56; }}
+        .time {{ color: #8d949e; margin-left: auto; }}
+        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
+        .news-title a {{ color: #050505; text-decoration: none; }}
+        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }}
+        .card-footer {{ display: flex; justify-content: flex-end; }}
+        .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+    </style>
+</head>
+<body>
+    <header><a href="/">nearadin.net - SON DAKİKA</a></header>
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 {group_data['date_str']} Tarihli Haber Listesi</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            {day_cards_html}
+        </main>
+        {whos_amung_us_code}
+    </div>
+    {footer_html}
+</body>
+</html>'''
+            with open(f"haber/{folder_path}/index.html", "w", encoding="utf-8") as f:
+                f.write(daily_index_html)
 
         # Anasayfa (index.html)
         full_html = f'''<!DOCTYPE html>
@@ -479,7 +553,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # XML Sitemap & Arşiv Sayfası Hazırlığı
+        # XML Sitemap & Arşiv Yapısı
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -491,6 +565,8 @@ def fetch_and_generate():
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>\n'''
+
+        archive_dates_dict = {}
 
         if os.path.exists("haber"):
             for root_dir, dirs, files in os.walk("haber"):
@@ -511,18 +587,18 @@ def fetch_and_generate():
                         if len(path_parts) >= 3:
                             year, month, day = path_parts[0], path_parts[1], path_parts[2]
                             d_str = f"{day}.{month}.{year}"
-                            if d_str not in archive_dates_map:
-                                archive_dates_map[d_str] = f"/haber/{clean_rel_path}"
+                            folder_link = f"/haber/{year}/{month}/{day}/"
+                            archive_dates_dict[d_str] = folder_link
 
-        # Tıklanabilir Günlük Arşiv Sayfası (arsiv/index.html)
+        # Ana Arşiv Sayfası (arsiv/index.html) -> Doğrudan gün klasörlerine yönlendirir
         archive_list_html = ""
-        for date_item in sorted(list(archive_dates_map.keys()), reverse=True):
-            target_link = archive_dates_map[date_item]
+        for date_item in sorted(list(archive_dates_dict.keys()), reverse=True):
+            folder_link = archive_dates_dict[date_item]
             archive_list_html += f'''
             <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
-                <a href="{target_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
-                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {date_item} Tarihli Haberler</span>
-                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Taranabilir Dizin →</span>
+                <a href="{folder_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
+                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {date_item} Tarihli Tüm Haberler</span>
+                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
                 </a>
             </li>'''
 
@@ -565,7 +641,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Sistem tamamen güncellendi: Tıklanabilir arşiv, ortak footer ve sitemap oluşturuldu.")
+        print("Günlük indeks sayfaları başarıyla oluşturuldu ve sistem güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
