@@ -1,0 +1,66 @@
+import urllib.request
+import re
+import json
+import os
+from bs4 import BeautifulSoup
+
+def generate_earthquakes_json():
+    url = "http://www.koeri.boun.edu.tr/scripts/lst2.asp"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
+    }
+
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        response = urllib.request.urlopen(req, timeout=15)
+        html_content = response.read().decode('iso-8859-9') # Türkçe karakter seti
+
+        soup = BeautifulSoup(html_content, 'html.parser')
+        pre_tag = soup.find('pre')
+
+        if not pre_tag:
+            print("Kandilli veri formatı okunamadı.")
+            return
+
+        lines = pre_tag.text.split('\n')
+        earthquakes = []
+
+        for line in lines[5:]:
+            line = line.strip()
+            if not line or line.startswith('--------------'):
+                continue
+            
+            parts = re.split(r'\s+', line)
+            if len(parts) >= 9:
+                date = parts[0]
+                time = parts[1][:5]
+                depth = parts[4]
+
+                try:
+                    mag_val = float(parts[6])  # ML Büyüklüğü
+                except ValueError:
+                    continue
+
+                # SADECE 4.0 VE ÜZERİ DEPREMLERİ AL
+                if mag_val >= 4.0:
+                    location = " ".join(parts[8:-1])
+                    earthquakes.append({
+                        "date": date,
+                        "time": time,
+                        "mag": f"{mag_val:.1f}",
+                        "depth": depth,
+                        "location": location
+                    })
+
+        # `son-depremler` klasörüne JSON dosyasını kaydet
+        os.makedirs("son-depremler", exist_ok=True)
+        with open("son-depremler/earthquakes.json", "w", encoding="utf-8") as f:
+            json.dump(earthquakes, f, ensure_ascii=False, indent=2)
+
+        print(f"earthquakes.json başarıyla oluşturuldu. Toplam 4.0+ deprem sayısı: {len(earthquakes)}")
+
+    except Exception as e:
+        print(f"Deprem verisi oluşturulurken hata: {e}")
+
+if __name__ == "__main__":
+    generate_earthquakes_json()
