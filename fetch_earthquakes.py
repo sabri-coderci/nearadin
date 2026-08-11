@@ -3,7 +3,7 @@ import re
 import os
 from bs4 import BeautifulSoup
 
-def generate_earthquakes_html():
+def generate_earthquakes_page():
     url = "http://www.koeri.boun.edu.tr/scripts/lst2.asp"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
@@ -50,9 +50,9 @@ def generate_earthquakes_html():
                             "location": location.strip()
                         })
     except Exception as e:
-        print(f"Deprem verisi çekilirken hata: {e}")
+        print(f"Deprem verisi çekilirken hata oluştu: {e}")
 
-    # Deprem Kartları HTML Yapısını Oluşturma
+    # Deprem Kartları HTML Yapısını Hazırla
     cards_html = ""
     if earthquakes:
         for eq in earthquakes:
@@ -68,9 +68,9 @@ def generate_earthquakes_html():
             </div>
             '''
     else:
-        cards_html = '<div class="loading">Son kaydedilen 4.0 veya üzeri deprem bulunmamaktadır.</div>'
+        cards_html = '<div class="loading">Son günlerde kaydedilen 4.0 veya üzeri deprem bulunmamaktadır.</div>'
 
-    # HTML Şablonu
+    # Doğrudan HTML Sayfasını Üret
     full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -151,12 +151,12 @@ def generate_earthquakes_html():
 </html>
 '''
 
-    # Dosyayı kaydet
+    # `son-depremler/index.html` olarak kaydet
     os.makedirs("son-depremler", exist_ok=True)
     with open("son-depremler/index.html", "w", encoding="utf-8") as f:
         f.write(full_html)
 
-    print(f"son-depremler/index.html başarıyla güncellendi. Toplam 4.0+ deprem sayısı: {len(earthquakes)}")
+    print(f"son-depremler/index.html oluşturuldu! Toplam deprem: {len(earthquakes)}")
 
 if __name__ == "__main__":
-    generate_earthquakes_html()
+    generate_earthquakes_page()
