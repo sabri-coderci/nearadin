@@ -123,51 +123,6 @@ def get_footer_html():
     </footer>
     '''
 
-def create_auxiliary_pages(footer_html):
-    """Diğer servis/ara sayfaları aynı Header ve Footer ile oluşturur veya günceller."""
-    pages = {
-        "nobetci-eczane": ("Nöbetçi Eczaneler - nearadin.net", "Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri."),
-        "son-depremler": ("Son Depremler - nearadin.net", "Kandilli ve AFAD verileriyle son dakika anlık deprem listesi."),
-        "kripto-para": ("Kripto Para Piyasası - nearadin.net", "Bitcoin, Ethereum ve güncel kripto para canlı fiyat takibi."),
-        "hava-durumu": ("Hava Durumu - nearadin.net", "İllere göre anlık ve günlük hava durumu tahminleri.")
-    }
-
-    for folder, (title, desc) in pages.items():
-        os.makedirs(folder, exist_ok=True)
-        header_html = get_header_html(title)
-        page_html = f'''<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <meta name="description" content="{desc}" />
-    <style>
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
-        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }}
-        h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
-        p {{ color: #65676b; font-size: 14px; margin-bottom: 20px; }}
-        .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }}
-    </style>
-</head>
-<body>
-    {header_html}
-    <div class="container">
-        <div class="card">
-            <h1>{title}</h1>
-            <p>{desc}</p>
-            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
-        </div>
-    </div>
-    {footer_html}
-</body>
-</html>'''
-        with open(f"{folder}/index.html", "w", encoding="utf-8") as f:
-            f.write(page_html)
-
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
     
@@ -187,8 +142,8 @@ def fetch_and_generate():
     footer_html = get_footer_html()
     header_html = get_header_html("nearadin.net - SON DAKİKA")
     
-    # Yardımcı/servis sayfalarını oluştur/güncelle
-    create_auxiliary_pages(footer_html)
+    # NOT: create_auxiliary_pages fonksiyonu buradan tamamen kaldırılmıştır. 
+    # Böylece son-depremler ve diğer servis sayfalarınızın içeriği asla ezilmeyecektir.
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -653,7 +608,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Hamburger menü entegre edildi, sayfalar başarıyla güncellendi.")
+        print("Betik başarıyla çalıştı, servis sayfaları korundu.")
 
         if news_list:
             post_to_x(news_list[0])
