@@ -62,7 +62,7 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # ARŞİV KORUMA: Haberler klasörünü silmiyoruz, varsa tutuyoruz, yoksa oluşturuyoruz.
+    # ARŞİV KORUMA: Haberler klasörünü silmiyoruz
     os.makedirs("haber", exist_ok=True)
 
     # Canlı Ziyaretçi Kodu (Who's Amung Us)
@@ -80,7 +80,7 @@ def fetch_and_generate():
         root = ET.fromstring(xml_data)
         raw_items = root.findall('./channel/item')
 
-        # Admatic Auto Ads Reklam Kodu
+        # Admatic Auto Ads Reklam Kodu (Kapsayıcı Düzeltildi)
         admatic_code = '''
        <div class="ad-container">
           <!-- Admatic AUTO ads START -->
@@ -98,7 +98,6 @@ def fetch_and_generate():
 
         parsed_items = []
 
-        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele (43200 sn)
         for item in raw_items:
             pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
             
@@ -116,7 +115,6 @@ def fetch_and_generate():
                     'pub_date_raw': pub_date_raw
                 })
 
-        # 2. Aşama: Güncelden eskiye doğru sırala
         parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
         parsed_items = parsed_items[:50]
 
@@ -240,7 +238,11 @@ def fetch_and_generate():
         .btn {{ display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }}
         .btn-primary {{ background: #1877f2; color: white; }}
         .btn-secondary {{ background: #e4e6eb; color: #050505; }}
-        .ad-container {{ margin: 20px 0; text-align: center; min-height: 100px; }}
+        
+        /* DÜZELTİLEN REKLAM ALANI CSS'İ */
+        .ad-container {{ margin: 0 0 12px 0; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+
         .related-news {{ background: #f7f8fa; border-radius: 8px; padding: 15px; border: 1px solid #e4e6eb; margin-top: 20px; }}
         .related-title {{ font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }}
         .related-list {{ list-style: none; }}
@@ -282,7 +284,6 @@ def fetch_and_generate():
 </body>
 </html>'''
 
-            # Haber dosyasını kalıcı kaydediyoruz
             with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
@@ -346,7 +347,9 @@ def fetch_and_generate():
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
 
-        .ad-container {{ background: white; border-radius: 10px; padding: 10px; margin-bottom: 12px; text-align: center; min-height: 100px; overflow: hidden; }}
+        /* DÜZELTİLEN REKLAM KUTUSU (Boş Kaldığında Yükseklik Kaplamaz) */
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
@@ -383,7 +386,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # --- DİNAMİK ARŞİVLİ SITEMAP.XML OLUŞTURMA ---
+        # Sitemap.xml
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -391,7 +394,6 @@ def fetch_and_generate():
     <priority>1.0</priority>
   </url>\n'''
 
-        # haber/ klasöründeki TÜM eski ve yeni html dosyalarını tarayıp sitemap'e dahil eder
         if os.path.exists("haber"):
             for file_name in os.listdir("haber"):
                 if file_name.endswith(".html"):
@@ -410,9 +412,8 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Sayfalar, arşivler ve sitemap.xml başarıyla oluşturuldu.")
+        print("Boşluk sorunu giderildi! Sayfalar ve sitemap başarıyla oluşturuldu.")
 
-        # X (Twitter) Otomatik Paylaşımı
         if news_list:
             post_to_x(news_list[0])
 
