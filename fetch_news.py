@@ -342,6 +342,7 @@ def fetch_and_generate():
     <div class="container">
         
         <div class="widgets-nav">
+            <a href="/nobetci-eczane/" class="widget-btn">🪙 Nöbetçi Eczane</a>            
             <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
             <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
             <a href="/hava-durumu/" class="widget-btn">☀️ Hava Durumu</a>
