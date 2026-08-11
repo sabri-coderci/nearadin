@@ -3,24 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canlı Hava Durumu Tahmini - nearadin.net</title>
-    <meta name="description" content="Türkiye genelinde canlı ve 7 günlük il il hava durumu tahminleri." />
+    <title>Canlı Hava Durumu Tahmini (İl İl MGM Verileri) - nearadin.net</title>
+    <meta name="description" content="Türkiye geneli il ve ilçe canlı hava durumu tahminleri. Meteoroloji Genel Müdürlüğü (MGM) anlık hava durumu verileri." />
+    <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Canlı Hava Durumu Tahmini - nearadin.net" />
+    <meta property="og:description" content="Türkiye geneli il il canlı hava durumu ve 5 günlük tahminler." />
+    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; margin: 0; padding: 15px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #1c1e21; padding: 15px 12px 40px 12px; }
+        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; margin: -15px -12px 20px -12px; }
+        header a { color: white; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
         h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
-        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: bold; }
+        
+        .info-box { background: #e7f3ff; color: #0056b3; padding: 12px; border-radius: 6px; font-size: 13px; margin-bottom: 20px; border: 1px solid #bfe0ff; text-align: center; line-height: 1.4; }
+        
+        .selector-box { margin-bottom: 20px; text-align: center; }
+        .selector-box label { font-size: 14px; font-weight: 600; margin-right: 8px; }
+        .selector-box select { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none; }
+
+        .weather-frame-container { width: 100%; min-height: 420px; border: none; border-radius: 8px; overflow: hidden; }
+        .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
     </style>
 </head>
 <body>
+
+    <header>
+        <a href="/">nearadin.net - Son Dakika</a>
+    </header>
+
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1>İl İl Canlı Hava Durumu</h1>
-        <!-- WeatherWidget.io Entegrasyonu -->
-        <a class="weatherwidget-io" href="https://forecast7.com/tr/399332881/turkey/" data-label_1="TÜRKİYE" data-label_2="HAVA DURUMU" data-theme="pure">TÜRKİYE HAVA DURUMU</a>
-        <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-        </script>
+        <h1>☀️ İl ve İlçe Canlı Hava Durumu</h1>
+
+        <div class="info-box">
+            📌 Meteoroloji Genel Müdürlüğü (MGM) anlık hava durumu ve 5 günlük tahmin verileridir.
+        </div>
+
+        <!-- Şehir Seçim Alanı -->
+        <div class="selector-box">
+            <label for="citySelect">Şehir Seçin:</label>
+            <select id="citySelect" onchange="changeCity()">
+                <option value="ISTANBUL" selected>İstanbul</option>
+                <option value="ANKARA">Ankara</option>
+                <option value="IZMIR">İzmir</option>
+                <option value="BITLIS">Bitlis</option>
+                <option value="ADANA">Adana</option>
+                <option value="ANTALYA">Antalya</option>
+                <option value="BURSA">Bursa</option>
+                <option value="DIYARBAKIR">Diyarbakır</option>
+                <option value="ERZURUM">Erzurum</option>
+                <option value="GAZIANTEP">Gaziantep</option>
+                <option value="KONYA">Konya</option>
+                <option value="TRABZON">Trabzon</option>
+                <!-- İhtiyaca göre diğer iller eklenebilir -->
+            </select>
+        </div>
+
+        <!-- Admatic AUTO ads START -->
+        <div class="ad-container">
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+        </div>
+        <!-- Admatic AUTO ads END -->
+
+        <!-- MGM Resmi Hava Durumu Widget Alanı -->
+        <div style="text-align: center;" id="mgm-widget-area">
+            <!-- Varsayılan olarak İSTANBUL yüklenir -->
+            <iframe id="mgmIframe" src="https://www.mgm.gov.tr/sunduklarimiz/v2/tahmin/il-ve-ilceler.aspx?m=ISTANBUL&baslik=G&bg=FFF&tf=14" width="100%" height="410" frameborder="0" scrolling="no" style="border:none;"></iframe>
+        </div>
+
+        <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
+        <div style="text-align: center; margin-top: 25px;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
     </div>
+
+    <script>
+        function changeCity() {
+            const city = document.getElementById('citySelect').value;
+            const iframe = document.getElementById('mgmIframe');
+            // MGM resmi sunduğu widget URL yapısı
+            iframe.src = `https://www.mgm.gov.tr/sunduklarimiz/v2/tahmin/il-ve-ilceler.aspx?m=${city}&baslik=G&bg=FFF&tf=14`;
+        }
+    </script>
+
 </body>
 </html>
