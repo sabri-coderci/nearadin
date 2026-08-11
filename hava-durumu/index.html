@@ -3,282 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Dinamik SEO Başlığı ve Açıklaması (JS ile Şehre Göre Değişecek) -->
-    <title id="seo-title">İstanbul Hava Durumu - Canlı ve 7 Günlük Hava Tahmini | nearadin.net</title>
-    <meta id="seo-desc" name="description" content="İstanbul canlı hava durumu, bugün ve 7 günlük detaylı hava tahmini. Sıcaklık, nem ve rüzgar oranları anlık olarak nearadin.net'te." />
-    <meta name="keywords" content="hava durumu, canlı hava durumu, 7 günlük hava tahmini, il il hava durumu, bugün hava nasıl" />
-    <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta id="og-title" property="og:title" content="İstanbul Hava Durumu - Canlı Tahminler" />
-    <meta id="og-desc" property="og:description" content="Anlık sıcaklık, nem ve 7 günlük detaylı il il hava durumu tahminleri." />
-    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
-
-    <!-- Schema.org Google Zengin Sonuç Yapısı (JSON-LD) -->
-    <script type="application/ld+json" id="seo-schema">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Canlı Hava Durumu Tahmini",
-      "description": "Türkiye geneli 81 il için canlı ve 7 günlük hava durumu tahminleri.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "nearadin.net"
-      }
-    }
-    </script>
-
+    <title>Hava Durumu - nearadin.net</title>
+    <meta name="description" content="İllere göre anlık ve günlük hava durumu tahminleri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #1c1e21; padding: 15px 12px 40px 12px; }
-        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; margin: -15px -12px 20px -12px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
+        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }
         header a { color: white; text-decoration: none; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
-        h1 { font-size: 22px; color: #111; margin-bottom: 15px; text-align: center; }
-        
-        .selector-box { margin-bottom: 20px; text-align: center; }
-        .selector-box label { font-size: 15px; font-weight: 600; margin-right: 8px; }
-        .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; max-width: 100%; }
-
-        .weather-card { background: linear-gradient(135deg, #0056b3, #0088ff); color: white; border-radius: 12px; padding: 25px; text-align: center; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,86,179,0.2); }
-        .weather-card .temp { font-size: 48px; font-weight: bold; margin: 10px 0; }
-        .weather-card .status { font-size: 18px; opacity: 0.9; text-transform: capitalize; }
-        .weather-card .details { display: flex; justify-content: space-around; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; font-size: 14px; }
-
-        .forecast-title { font-size: 16px; font-weight: bold; margin: 20px 0 10px 0; color: #333; }
-        .forecast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 10px; }
-        .forecast-item { background: #f8f9fa; padding: 12px 5px; border-radius: 8px; text-align: center; border: 1px solid #eee; font-size: 13px; }
-        .forecast-item .day { font-weight: 600; color: #555; margin-bottom: 5px; }
-        .forecast-item .icon { font-size: 22px; margin: 5px 0; }
-        .forecast-item .temps { font-weight: bold; color: #111; }
-
-        /* SEO Metin Bloğu */
-        .seo-content { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #444; line-height: 1.6; }
-        .seo-content h2 { font-size: 16px; color: #111; margin-bottom: 8px; }
-
-        .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
+        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }
+        h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
+        p { color: #65676b; font-size: 14px; margin-bottom: 20px; }
+        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <a href="/">nearadin.net - Son Dakika</a>
-    </header>
-
+    <header><a href="/">Hava Durumu - nearadin.net</a></header>
     <div class="container">
-        <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1 id="main-heading">☀️ İstanbul Canlı Hava Durumu ve 7 Günlük Tahmin</h1>
-
-        <!-- Alfabetik Şehir Seçim Alanı -->
-        <div class="selector-box">
-            <label for="citySelect">Şehir Seçin:</label>
-            <select id="citySelect" onchange="getWeather()">
-                <option value="37.58,36.93">Adana</option>
-                <option value="37.76,38.28">Adıyaman</option>
-                <option value="38.73,30.54">Afyonkarahisar</option>
-                <option value="39.72,43.05">Ağrı</option>
-                <option value="38.37,34.03">Aksaray</option>
-                <option value="40.65,35.83">Amasya</option>
-                <option value="39.92,32.85">Ankara</option>
-                <option value="36.88,30.70">Antalya</option>
-                <option value="37.57,44.28">Ardahan</option>
-                <option value="41.18,41.82">Artvin</option>
-                <option value="37.85,27.84">Aydın</option>
-                <option value="39.65,27.88">Balıkesir</option>
-                <option value="41.64,32.33">Bartın</option>
-                <option value="37.88,41.13">Batman</option>
-                <option value="40.26,40.23">Bayburt</option>
-                <option value="40.14,29.97">Bilecik</option>
-                <option value="38.88,40.49">Bingöl</option>
-                <option value="38.40,42.11">Bitlis</option>
-                <option value="40.73,31.61">Bolu</option>
-                <option value="37.78,30.28">Burdur</option>
-                <option value="40.18,29.06">Bursa</option>
-                <option value="40.15,26.41">Çanakkale</option>
-                <option value="40.55,33.62">Çankırı</option>
-                <option value="40.55,34.95">Çorum</option>
-                <option value="37.77,29.08">Denizli</option>
-                <option value="37.91,40.23">Diyarbakır</option>
-                <option value="40.84,31.16">Düzce</option>
-                <option value="41.68,26.56">Edirne</option>
-                <option value="38.67,39.22">Elazığ</option>
-                <option value="39.75,39.49">Erzincan</option>
-                <option value="39.90,41.27">Erzurum</option>
-                <option value="39.78,30.52">Eskişehir</option>
-                <option value="37.06,37.38">Gaziantep</option>
-                <option value="40.91,38.39">Giresun</option>
-                <option value="40.46,39.48">Gümüşhane</option>
-                <option value="37.58,43.73">Hakkari</option>
-                <option value="36.40,36.35">Hatay</option>
-                <option value="39.82,41.93">Iğdır</option>
-                <option value="37.76,30.55">Isparta</option>
-                <option value="41.01,28.97" selected>İstanbul</option>
-                <option value="38.42,27.14">İzmir</option>
-                <option value="37.57,36.92">Kahramanmaraş</option>
-                <option value="41.25,41.19">Karabük</option>
-                <option value="37.18,33.22">Karaman</option>
-                <option value="40.60,43.10">Kars</option>
-                <option value="41.38,33.78">Kastamonu</option>
-                <option value="38.73,35.48">Kayseri</option>
-                <option value="36.81,37.24">Kilis</option>
-                <option value="39.85,33.51">Kırıkkale</option>
-                <option value="41.73,27.22">Kırklareli</option>
-                <option value="39.15,34.16">Kırşehir</option>
-                <option value="40.77,29.92">Kocaeli</option>
-                <option value="37.87,32.48">Konya</option>
-                <option value="39.42,29.98">Kütahya</option>
-                <option value="38.35,38.31">Malatya</option>
-                <option value="38.63,27.43">Manisa</option>
-                <option value="37.31,40.74">Mardin</option>
-                <option value="36.80,34.64">Mersin</option>
-                <option value="37.21,28.36">Muğla</option>
-                <option value="38.74,41.49">Muş</option>
-                <option value="38.62,34.71">Nevşehir</option>
-                <option value="37.97,34.68">Niğde</option>
-                <option value="40.98,37.88">Ordu</option>
-                <option value="37.07,36.25">Osmaniye</option>
-                <option value="41.02,40.52">Rize</option>
-                <option value="40.77,30.40">Sakarya</option>
-                <option value="41.29,36.33">Samsun</option>
-                <option value="37.93,41.94">Siirt</option>
-                <option value="42.02,35.15">Sinop</option>
-                <option value="39.75,37.01">Sivas</option>
-                <option value="37.17,38.79">Şanlıurfa</option>
-                <option value="37.52,42.46">Şırnak</option>
-                <option value="40.98,27.51">Tekirdağ</option>
-                <option value="40.31,36.55">Tokat</option>
-                <option value="41.00,39.72">Trabzon</option>
-                <option value="39.11,39.55">Tunceli</option>
-                <option value="38.68,29.40">Uşak</option>
-                <option value="38.50,43.38">Van</option>
-                <option value="40.65,29.27">Yalova</option>
-                <option value="39.82,34.81">Yozgat</option>
-                <option value="41.45,31.79">Zonguldak</option>
-            </select>
-        </div>
-
-        <!-- Anlık Hava Durumu Kartı -->
-        <div class="weather-card" id="weather-card">
-            <h2 id="city-name">İstanbul</h2>
-            <div class="temp" id="current-temp">--°C</div>
-            <div class="status" id="weather-status">Yükleniyor...</div>
-            <div class="details">
-                <div>💨 Rüzgar: <span id="wind-speed">-- km/s</span></div>
-                <div>💧 Nem: <span id="humidity">%--</span></div>
-            </div>
-        </div>
-
-        <!-- Admatic AUTO ads START -->
-        <div class="ad-container">
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-        </div>
-        <!-- Admatic AUTO ads END -->
-
-        <!-- 7 Günlük Tahmin -->
-        <div class="forecast-title" id="forecast-heading">📅 İstanbul 7 Günlük Hava Tahmini</div>
-        <div class="forecast-grid" id="forecast-grid">
-            <!-- JS ile dolacak -->
-        </div>
-
-        <!-- Google SEO İçerik Alanı (Dinamik Arama Motoru Metni) -->
-        <div class="seo-content">
-            <h2 id="seo-heading">Anlık ve 7 Günlük İl İl Hava Tahmin Raporu</h2>
-            <p id="seo-text">
-                Türkiye'nin 81 ili için anlık hava durumu, güncel sıcaklık değerleri, rüzgar hızı ve nem oranlarını nearadin.net farkıyla takip edebilirsiniz. Seçtiğiniz şehre ait 7 günlük detaylı tahminler düzenli olarak güncellenmektedir.
-            </p>
-        </div>
-
-        <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
-        <div style="text-align: center; margin-top: 25px;">
-            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        <div class="card">
+            <h1>Hava Durumu - nearadin.net</h1>
+            <p>İllere göre anlık ve günlük hava durumu tahminleri.</p>
+            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
+            <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
     </div>
-
-    <script>
-        const weatherCodes = {
-            0: { text: "Açık", icon: "☀️" },
-            1: { text: "Çoğunlukla Açık", icon: "🌤️" },
-            2: { text: "Parçalı Bulutlu", icon: "⛅" },
-            3: { text: "Kapalı / Bulutlu", icon: "☁️" },
-            45: { text: "Sisli", icon: "🌫️" },
-            51: { text: "Hafif Çiseleme", icon: "🌧️" },
-            61: { text: "Hafif Yağmurlu", icon: "🌧️" },
-            63: { text: "Yağmurlu", icon: "🌧️" },
-            65: { text: "Şiddetli Yağmur", icon: "🌧️" },
-            71: { text: "Hafif Karlı", icon: "🌨️" },
-            73: { text: "Karlı", icon: "❄️" },
-            95: { text: "Gökgürültülü Yağışlı", icon: "⛈️" }
-        };
-
-        async function getWeather() {
-            const select = document.getElementById('citySelect');
-            const [lat, lon] = select.value.split(',');
-            const cityName = select.options[select.selectedIndex].text;
-            
-            // 1. Arayüz Başlıklarını Güncelle
-            document.getElementById('city-name').innerText = cityName;
-            document.getElementById('main-heading').innerText = `☀️ ${cityName} Canlı Hava Durumu ve 7 Günlük Tahmin`;
-            document.getElementById('forecast-heading').innerText = `📅 ${cityName} 7 Günlük Hava Tahmini`;
-
-            // 2. Google SEO Meta Etiketlerini Dinamik Güncelle
-            document.title = `${cityName} Hava Durumu - Canlı ve 7 Günlük Hava Tahmini | nearadin.net`;
-            document.getElementById('seo-desc').setAttribute('content', `${cityName} canlı hava durumu, bugün ve 7 günlük detaylı hava tahmini. ${cityName} için anlık sıcaklık, nem ve rüzgar bilgisi nearadin.net'te.`);
-            document.getElementById('og-title').setAttribute('content', `${cityName} Hava Durumu - Canlı Tahminler`);
-            document.getElementById('og-desc').setAttribute('content', `${cityName} canlı hava durumu ve 7 günlük tahmin raporu.`);
-            
-            // 3. SEO Metin Bloğunu Şehre Göre Özelleştir
-            document.getElementById('seo-heading').innerText = `${cityName} Hava Durumu Raporu`;
-            document.getElementById('seo-text').innerText = `${cityName} iline ait anlık hava durumu verileri, bugün hissedilen sıcaklık, rüzgar hızı ve nem oranı listelenmiştir. ${cityName} için hazırlanan 7 günlük hava tahmin raporu sayesinde haftalık planlarınızı güvenle yapabilirsiniz.`;
-
-            try {
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`;
-                const res = await fetch(url);
-                const data = await res.json();
-
-                // Anlık Veriler
-                const current = data.current;
-                const codeInfo = weatherCodes[current.weather_code] || { text: "Açık", icon: "☀️" };
-                
-                document.getElementById('current-temp').innerText = `${Math.round(current.temperature_2m)}°C`;
-                document.getElementById('weather-status').innerText = `${codeInfo.icon} ${codeInfo.text}`;
-                document.getElementById('wind-speed').innerText = `${Math.round(current.wind_speed_10m)} km/s`;
-                document.getElementById('humidity').innerText = `%${current.relative_humidity_2m}`;
-
-                // 7 Günlük Tahmin
-                const forecastGrid = document.getElementById('forecast-grid');
-                forecastGrid.innerHTML = '';
-
-                const days = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
-
-                for (let i = 0; i < 7; i++) {
-                    const date = new Date(data.daily.time[i]);
-                    const dayName = days[date.getDay()];
-                    const dayCode = data.daily.weather_code[i];
-                    const dayIcon = (weatherCodes[dayCode] || { icon: "☀️" }).icon;
-                    const maxTemp = Math.round(data.daily.temperature_2m_max[i]);
-                    const minTemp = Math.round(data.daily.temperature_2m_min[i]);
-
-                    forecastGrid.innerHTML += `
-                        <div class="forecast-item">
-                            <div class="day">${i === 0 ? 'Bugün' : dayName}</div>
-                            <div class="icon">${dayIcon}</div>
-                            <div class="temps">${maxTemp}° / <small style="color:#666">${minTemp}°</small></div>
-                        </div>
-                    `;
-                }
-
-            } catch (err) {
-                console.error("Hava durumu çekilemedi:", err);
-                document.getElementById('weather-status').innerText = "Veri alınamadı!";
-            }
-        }
-
-        // Sayfa açıldığında varsayılan şehir (İstanbul) için çalıştır
-        getWeather();
-    </script>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
