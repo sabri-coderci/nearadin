@@ -6,6 +6,7 @@ import re
 import os
 import shutil  # Klasör temizleme işlemi için
 import tweepy  # X (Twitter) paylaşımı için
+from email.utils import parsedate_to_datetime # Tarih parse etmek için eklendi
 
 def slugify(text):
     text = text.lower()
@@ -82,12 +83,15 @@ def fetch_and_generate():
         xml_data = response.read()
 
         root = ET.fromstring(xml_data)
-        raw_items = root.findall('./channel/item')[:50]
+        raw_items = root.findall('./channel/item')
 
         # --- ADMATİC AUTO ADS REKLAM KODU ---
         admatic_code = '''
         <div class="ad-container">
-        
+            <!-- Admatic AUTO ads START -->
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+            <!-- Admatic AUTO ads END -->
         </div>
         '''
 
@@ -96,12 +100,41 @@ def fetch_and_generate():
         last_update = now.strftime("%d.%m.%Y %H:%M")
         last_update_iso = now.strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
+        parsed_items = []
+
+        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 6 saatlik olanları filtrele
+        for item in raw_items:
+            pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
+            
+            pub_datetime = None
+            if pub_date_raw:
+                try:
+                    pub_datetime = parsedate_to_datetime(pub_date_raw)
+                except Exception:
+                    pub_datetime = now
+
+            # Son 6 saat kontrolü (6 saat = 21600 saniye)
+            if pub_datetime and (now - pub_datetime).total_seconds() <= 21600:
+                parsed_items.append({
+                    'item': item,
+                    'pub_datetime': pub_datetime,
+                    'pub_date_raw': pub_date_raw
+                })
+
+        # 2. Aşama: Güncelden eskiye doğru sırala (Yeniden Eskiye)
+        parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
+
+        # Maksimum 50 haber al
+        parsed_items = parsed_items[:50]
+
         news_list = []
 
-        for idx, item in enumerate(raw_items):
+        for idx, entry in enumerate(parsed_items):
+            item = entry['item']
+            pub_datetime = entry['pub_datetime']
+
             title = item.find('title').text if item.find('title') is not None else 'Başlıksız'
             original_link = item.find('link').text if item.find('link') is not None else '#'
-            pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ''
             
             raw_desc = item.find('description').text if item.find('description') is not None else ''
             clean_desc = re.sub('<[^<]+?>', '', raw_desc)
@@ -113,7 +146,8 @@ def fetch_and_generate():
                 clean_title = parts[0]
                 source_name = parts[1]
 
-            time_str = pub_date[17:22] if len(pub_date) >= 22 else ""
+            # Saat bilgisini Türkiye saat dilimine uyarlayarak al
+            time_str = pub_datetime.astimezone(tz_tr).strftime("%H:%M") if pub_datetime else ""
             slug = slugify(clean_title[:60])
             
             # --- SABİT URL YAPISI ---
@@ -152,7 +186,7 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # --- DETAY SAYFASI HTML (Belirttiğin Görsel Eklendi) ---
+            # --- DETAY SAYFASI HTML ---
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -200,11 +234,7 @@ def fetch_and_generate():
 
 <body>
 
-
-            <!-- Admatic AUTO ads START -->
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-            <!-- Admatic AUTO ads END -->
+    {admatic_code}
 
     <header>
         <a href="/">Son Dakika - nearadin.net</a>
@@ -219,8 +249,6 @@ def fetch_and_generate():
             <h1>{news['title']}</h1>
             <p>{news['desc']}</p>
             
-        
-
             <div class="actions">
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
                 <a href="/" class="btn btn-secondary">← Tüm Son Dakika Haberlerine Dön</a>
@@ -365,7 +393,7 @@ def fetch_and_generate():
 
         # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
         if news_list:
-            post_to_x(news_list[0])
+            post_to_x(news_list[0])  # En yeni haberi tweet atar
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
