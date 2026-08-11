@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nöbetçi Eczaneler - Canlı Veri (eczaneler.gen.tr) - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli 81 il ve tüm ilçeleri için eczaneler.gen.tr kaynaklı güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
+    <title>Nöbetçi Eczaneler - nearadin.net</title>
+    <meta name="description" content="Türkiye geneli 81 il ve tüm ilçeleri için güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -23,7 +23,7 @@
         select { flex: 1; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-size: 15px; background: #fff; outline: none; }
         select:disabled { background-color: #f0f2f5; cursor: not-allowed; opacity: 0.7; }
         
-        /* Canlı Eczane Kartları */
+        /* Eczane Kartları */
         .pharmacy-card { background: #ffffff; border: 1px solid #e4e6eb; border-left: 5px solid #d93025; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
         .pharmacy-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
         .pharmacy-name { font-size: 17px; font-weight: bold; color: #1c1e21; }
@@ -36,7 +36,6 @@
         .btn-home { display: block; text-align: center; background: #e4e6eb; color: #050505; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; }
         
         .loading-spinner { text-align: center; color: #0056b3; font-weight: bold; padding: 30px 0; }
-        .source-tag { font-size: 11px; color: #8d949e; text-align: right; margin-top: 10px; display: block; }
     </style>
 </head>
 <body>
@@ -44,13 +43,13 @@
     
     <div class="container">
         <div class="card">
-            <h1>🏥 Canlı Nöbetçi Eczane Sorgulama</h1>
-            <p class="subtitle">İl ve ilçenizi seçerek <strong>eczaneler.gen.tr</strong> üzerinden anlık nöbetçi eczane listesini görüntüleyin.</p>
+            <h1>🏥 Nöbetçi Eczane Sorgulama</h1>
+            <p class="subtitle">İl ve ilçenizi seçerek anlık nöbetçi eczane listesini ve iletişim bilgilerini görüntüleyebilirsiniz.</p>
             
             <div class="filter-box">
                 <!-- 81 İL LİSTESİ -->
                 <select id="citySelect" onchange="onCityChange()">
-                    <option value="">-- İl Seçiniz (81 İl) --</option>
+                    <option value="">-- İl Seçiniz --</option>
                     <option value="adana">Adana</option>
                     <option value="adiyaman">Adıyaman</option>
                     <option value="afyon">Afyonkarahisar</option>
@@ -215,7 +214,7 @@
             "tokat": ["Merkez", "Erbaa", "Turhal", "Niksar"],
             "trabzon": ["Ortahisar", "Akcaabat", "Arakli"],
             "tunceli": ["Merkez"],
-            "sanliurfa": ["Haliliye", "Eyyubiye", "Karakopru", "Siverek", "Viransehir"],
+            "sanliurfa": ["Haliliye", "Eyyubiye", "Karaköprü", "Siverek", "Viransehir"],
             "usak": ["Merkez"],
             "van": ["Ipekyolu", "Tusba", "Edremit", "Ercis"],
             "yozgat": ["Merkez", "Sorgun"],
@@ -258,15 +257,6 @@
             fetchPharmaciesLive();
         }
 
-        function slugifyTR(text) {
-            return text.toString().toLowerCase()
-                .replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u')
-                .replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c')
-                .replace(/i̇/g, 'i')
-                .replace(/[^a-z0-9-]/g, '')
-                .replace(/--+/g, '-');
-        }
-
         async function fetchPharmaciesLive() {
             const citySelect = document.getElementById('citySelect');
             const districtSelect = document.getElementById('districtSelect');
@@ -280,9 +270,8 @@
                 return;
             }
 
-            listContainer.innerHTML = '<div class="loading-spinner">🔄 eczaneler.gen.tr adresinden veriler çekiliyor...</div>';
+            listContainer.innerHTML = '<div class="loading-spinner">🔄 Güncel nöbetçi eczaneler sorgulanıyor...</div>';
 
-            // Target URL yapısı
             let targetPath = `nobetci-${city}`;
             if (district && district !== "") {
                 targetPath += `-${district}`;
@@ -296,7 +285,7 @@
                 const data = await response.json();
 
                 if (!data.contents) {
-                    throw new Error("Veri alınamadı");
+                    throw new Error("Veri yüklenemedi");
                 }
 
                 const parser = new DOMParser();
@@ -315,7 +304,7 @@
                     if (nameEl && (phoneEl || addressEl)) {
                         count++;
                         const name = nameEl.textContent.trim();
-                        const address = addressEl ? addressEl.textContent.trim() : "Adres bilgisi mevcut değil";
+                        const address = addressEl ? addressEl.textContent.trim() : "Adres bilgisi bulunamadı";
                         const phone = phoneEl ? phoneEl.textContent.trim() : "";
                         const phoneHref = phoneEl ? phoneEl.getAttribute("href") : "#";
                         const desc = descEl ? descEl.textContent.trim() : "";
@@ -335,24 +324,16 @@
                 });
 
                 if (count > 0) {
-                    listContainer.innerHTML = htmlOutput + `<span class="source-tag">Veri Kaynağı: eczaneler.gen.tr (Canlı)</span>`;
+                    listContainer.innerHTML = htmlOutput;
                 } else {
-                    // Sayfadan tablo biçiminde okunamazsa yedek doğrudan bağlantı mesajı
-                    listContainer.innerHTML = `
-                        <div style="text-align: center; padding: 20px 0;">
-                            <p style="color: #333; margin-bottom: 12px;">Seçilen bölge için eczane detayları bulundu.</p>
-                            <a href="${targetUrl}" target="_blank" rel="nofollow" class="pharmacy-phone">↗ Eczaneler.gen.tr Üzerinde Canlı Gör</a>
-                        </div>
-                    `;
+                    listContainer.innerHTML = '<div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">Seçilen bölgede aktif nöbetçi eczane kaydı bulunamadı.</div>';
                 }
 
             } catch (error) {
                 console.error("Veri çekme hatası:", error);
                 listContainer.innerHTML = `
                     <div style="text-align: center; color: #d93025; padding: 20px 0; font-size: 14px;">
-                        Anlık veri çekilirken bir bağlantı hatası oluştu. 
-                        <br><br>
-                        <a href="${targetUrl}" target="_blank" rel="nofollow" class="pharmacy-phone">Resmi Sayfadan Canlı İncele ↗</a>
+                        Veriler güncellenirken bir bağlantı sorunu oluştu. Lütfen tekrar deneyin.
                     </div>
                 `;
             }
