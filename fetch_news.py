@@ -113,8 +113,8 @@ def fetch_and_generate():
                 except Exception:
                     pub_datetime = now
 
-            # Son 6 saat kontrolü (6 saat = 21600 saniye)
-            if pub_datetime and (now - pub_datetime).total_seconds() <= 21600:
+            # Son 6 saat kontrolü (12 saat = 43200 saniye)
+            if pub_datetime and (now - pub_datetime).total_seconds() <= 43200:
                 parsed_items.append({
                     'item': item,
                     'pub_datetime': pub_datetime,
