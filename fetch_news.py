@@ -4,10 +4,9 @@ import xml.etree.ElementTree as ET
 import datetime
 import re
 import os
-import shutil  # Klasör temizleme işlemi için
-import html    # HTML Entitiy'leri (&quot; vb.) çözmek için eklendi
+import html    # HTML Entity'leri (&quot; vb.) çözmek için
 import tweepy  # X (Twitter) paylaşımı için
-from email.utils import parsedate_to_datetime # Tarih parse etmek için
+from email.utils import parsedate_to_datetime
 
 def slugify(text):
     text = text.lower()
@@ -63,9 +62,7 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # Eski / Çöp Dosyaları Temizleme
-    if os.path.exists("haber"):
-        shutil.rmtree("haber")
+    # ARŞİV KORUMA: Klasörü silmiyoruz, varsa tutuyoruz, yoksa oluşturuyoruz.
     os.makedirs("haber", exist_ok=True)
 
     # Canlı Ziyaretçi Kodu (Who's Amung Us)
@@ -94,14 +91,14 @@ def fetch_and_generate():
         '''
 
         tz_tr = datetime.timezone(datetime.timedelta(hours=3))
-        now = datetime.datetime.now(datetime.timezone.utc) # UTC olarak karşılaştırma kolaylığı
+        now = datetime.datetime.now(datetime.timezone.utc)
         
         last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
         last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
         parsed_items = []
 
-        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele (43200 saniye)
+        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele
         for item in raw_items:
             pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
             
@@ -112,7 +109,6 @@ def fetch_and_generate():
                 except Exception:
                     pub_datetime = now
 
-            # UTC Zaman Karşılaştırması
             if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 43200:
                 parsed_items.append({
                     'item': item,
@@ -135,7 +131,7 @@ def fetch_and_generate():
             
             raw_desc = item.find('description').text if item.find('description') is not None else ''
             clean_desc = re.sub('<[^<]+?>', '', raw_desc)
-            clean_desc = html.unescape(clean_desc)  # HTML karakterlerini düzgün metne dönüştürür (&quot; -> ")
+            clean_desc = html.unescape(clean_desc)
             clean_title = html.unescape(title)
 
             source_name = "Canlı Haber Akışı"
@@ -289,6 +285,7 @@ def fetch_and_generate():
 </body>
 </html>'''
 
+            # Dosya zaten varsa bile üzerine yazar, yoksa yeni oluşturur (Klasör silinmediği için eski haberler korunur)
             with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
@@ -389,7 +386,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # Sitemap.xml
+        # Sitemap.xml Güncellemesi
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
