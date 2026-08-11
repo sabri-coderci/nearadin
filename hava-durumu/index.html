@@ -71,7 +71,7 @@
             <h1>☀️ 5 Günlük Hava Durumu</h1>
             <p>İlini seçerek önümüzdeki 5 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
             
-            <!-- İl Seçim Menüsü (Koordinatları ile birlikte) -->
+            <!-- İl Seçim Menüsü -->
             <div class="city-select-box">
                 <label for="citySelect">İl Seçiniz:</label>
                 <select id="citySelect" onchange="getWeatherData()">
@@ -110,7 +110,7 @@
                     <option value="32|37.7648|30.5566">32 - Isparta</option>
                     <option value="33|36.8000|34.6333">33 - Mersin</option>
                     <option value="35|38.4192|27.1287">35 - İzmir</option>
-                    <option value="36|36.6000|43.0833">36 - Kars</option>
+                    <option value="36|40.6017|43.0975">36 - Kars</option>
                     <option value="37|41.3887|33.7827">37 - Kastamonu</option>
                     <option value="38|38.7312|35.4787">38 - Kayseri</option>
                     <option value="39|41.7333|27.2167">39 - Kırklareli</option>
@@ -243,7 +243,6 @@
             }
         }
 
-        // Sayfa açıldığında İstanbul için veriyi getir
         getWeatherData();
     </script>
 
