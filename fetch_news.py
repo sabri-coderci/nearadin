@@ -4,8 +4,8 @@ import xml.etree.ElementTree as ET
 import datetime
 import re
 import os
-import html    # HTML Entity'leri (&quot; vb.) çözmek için
-import tweepy  # X (Twitter) paylaşımı için
+import html
+import tweepy
 from email.utils import parsedate_to_datetime
 
 def slugify(text):
@@ -21,7 +21,7 @@ def slugify(text):
     return text
 
 def post_to_x(latest_news):
-    """En son çıkan haberi X üzerinde zengin bir formatta paylaşır."""
+    """En son çıkan haberi X üzerinde paylaşır."""
     api_key = os.environ.get("X_API_KEY")
     api_secret = os.environ.get("X_API_SECRET")
     access_token = os.environ.get("X_ACCESS_TOKEN")
@@ -55,6 +55,34 @@ def post_to_x(latest_news):
     except Exception as e:
         print(f"X (Twitter) paylaşımında hata oluştu: {e}")
 
+def get_footer_html():
+    """Ortak Footer Bileşeni"""
+    return '''
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır. Otomatik canlı haber akış sistemi.</p>
+            </div>
+        </div>
+    </footer>
+    '''
+
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
     
@@ -62,10 +90,9 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # ARŞİV KORUMA: Haberler klasörünü silmiyoruz
     os.makedirs("haber", exist_ok=True)
+    os.makedirs("arsiv", exist_ok=True)
 
-    # Canlı Ziyaretçi Kodu (Who's Amung Us)
     whos_amung_us_code = '''
     <div style="text-align: center; margin: 20px 0;">
         <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
@@ -80,7 +107,6 @@ def fetch_and_generate():
         root = ET.fromstring(xml_data)
         raw_items = root.findall('./channel/item')
 
-        # Admatic Auto Ads Reklam Kodu (Kapsayıcı Düzeltildi)
         admatic_code = '''
        <div class="ad-container">
           <!-- Admatic AUTO ads START -->
@@ -138,11 +164,17 @@ def fetch_and_generate():
                 clean_title = parts[0]
                 source_name = parts[1]
 
-            time_str = pub_datetime.astimezone(tz_tr).strftime("%H:%M") if pub_datetime else ""
-            slug = slugify(clean_title[:60])
+            dt_tr = pub_datetime.astimezone(tz_tr)
+            time_str = dt_tr.strftime("%H:%M")
+            date_folder = dt_tr.strftime("%Y/%m/%d") # haber/2026/08/11/
+            date_str = dt_tr.strftime("%d.%m.%Y")
             
+            # Gün bazlı klasör yapısı hazırlığı
+            os.makedirs(f"haber/{date_folder}", exist_ok=True)
+
+            slug = slugify(clean_title[:60])
             page_name = f"{slug}.html"
-            internal_link = f"/haber/{page_name}"
+            internal_link = f"/haber/{date_folder}/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
 
             news_list.append({
@@ -152,13 +184,16 @@ def fetch_and_generate():
                 "desc": clean_desc,
                 "source": source_name,
                 "time": time_str,
+                "date_str": date_str,
+                "date_folder": date_folder,
                 "page_name": page_name,
                 "internal_link": internal_link,
                 "full_url": full_url,
-                "iso_date": pub_datetime.astimezone(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
+                "iso_date": dt_tr.strftime("%Y-%m-%dT%H:%M:%S+03:00")
             })
 
         news_cards_html = ""
+        footer_html = get_footer_html()
 
         for news in news_list:
             other_news_html = ""
@@ -198,7 +233,6 @@ def fetch_and_generate():
     <meta property="og:url" content="{news['full_url']}" />
     <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
 
-    <!-- JSON-LD SEO Structured Data -->
     <script type="application/ld+json">
     {{
       "@context": "https://schema.org",
@@ -225,10 +259,10 @@ def fetch_and_generate():
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; padding-bottom: 40px; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
         header a {{ color: white; text-decoration: none; }}
-        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; }}
+        .container {{ max-width: 680px; margin: 20px auto 0 auto; padding: 0 12px; }}
         .article-card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .meta-info {{ display: flex; gap: 10px; font-size: 13px; color: #65676b; margin-bottom: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
@@ -238,11 +272,8 @@ def fetch_and_generate():
         .btn {{ display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }}
         .btn-primary {{ background: #1877f2; color: white; }}
         .btn-secondary {{ background: #e4e6eb; color: #050505; }}
-        
-        /* DÜZELTİLEN REKLAM ALANI CSS'İ */
         .ad-container {{ margin: 0 0 12px 0; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
-
         .related-news {{ background: #f7f8fa; border-radius: 8px; padding: 15px; border: 1px solid #e4e6eb; margin-top: 20px; }}
         .related-title {{ font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }}
         .related-list {{ list-style: none; }}
@@ -260,8 +291,8 @@ def fetch_and_generate():
         <article class="article-card">
             <div class="meta-info">
                 <span class="badge">SON DAKİKA</span>
+                <span>Tarih: <strong>{news['date_str']} - {news['time']}</strong></span>
                 <span>Kaynak: <strong>{news['source']}</strong></span>
-                <span>Saat: <strong>{news['time']}</strong></span>
             </div>
             <h1>{news['title']}</h1>
             <p>{news['desc']}</p>
@@ -281,10 +312,14 @@ def fetch_and_generate():
             {whos_amung_us_code}
         </article>
     </div>
+
+    {footer_html}
 </body>
 </html>'''
 
-            with open(f"haber/{news['page_name']}", "w", encoding="utf-8") as f:
+            # Gün bazlı klasöre kaydediyoruz
+            file_path = f"haber/{news['date_folder']}/{news['page_name']}"
+            with open(file_path, "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
             news_cards_html += f'''
@@ -317,11 +352,11 @@ def fetch_and_generate():
     <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı haber akışı." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; padding-bottom: 30px; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
         
         header {{ background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }}
         
-        .container {{ max-width: 680px; margin: 0 auto; padding: 12px; }}
+        .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
 
         .widgets-nav {{ display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }}
         .widgets-nav::-webkit-scrollbar {{ display: none; }}
@@ -347,7 +382,6 @@ def fetch_and_generate():
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
 
-        /* DÜZELTİLEN REKLAM KUTUSU (Boş Kaldığında Yükseklik Kaplamaz) */
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
@@ -361,6 +395,7 @@ def fetch_and_generate():
     <div class="container">
         
         <div class="widgets-nav">
+            <a href="/arsiv/" class="widget-btn" style="background:#e7f3ff; color:#1877f2;">📅 Günlük Arşiv</a>
             <a href="/nobetci-eczane/" class="widget-btn">🏥 Nöbetçi Eczane</a>            
             <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
             <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
@@ -380,31 +415,93 @@ def fetch_and_generate():
 
     </div>
 
+    {footer_html}
+
 </body>
 </html>'''
 
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # Sitemap.xml
+        # --- GÜN BAZLI ARŞİV SAYFASI VE DİNAMİK SITEMAP ---
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
+  </url>\n  <url>
+    <loc>https://nearadin.net/arsiv/</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>\n'''
 
+        # Klasördeki tüm HTML dosyalarını tarayıp gün bazıyla arşiv dizini oluşturuyoruz
+        archive_dates = set()
+
         if os.path.exists("haber"):
-            for file_name in os.listdir("haber"):
-                if file_name.endswith(".html"):
-                    page_url = f"https://nearadin.net/haber/{file_name}"
-                    sitemap_items += f'''  <url>
+            for root_dir, dirs, files in os.walk("haber"):
+                for file_name in files:
+                    if file_name.endswith(".html"):
+                        rel_path = os.path.relpath(os.path.join(root_dir, file_name), "haber")
+                        clean_rel_path = rel_path.replace("\\", "/")
+                        page_url = f"https://nearadin.net/haber/{clean_rel_path}"
+                        
+                        sitemap_items += f'''  <url>
     <loc>{page_url}</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>\n'''
+                        
+                        # Tarih klasörlerini ayıkla (örnek: haber/2026/08/11/...)
+                        path_parts = clean_rel_path.split('/')
+                        if len(path_parts) >= 3:
+                            year, month, day = path_parts[0], path_parts[1], path_parts[2]
+                            archive_dates.add(f"{day}.{month}.{year}")
 
+        # Arşiv Sayfası (arsiv/index.html)
+        archive_list_html = ""
+        for date_item in sorted(list(archive_dates), reverse=True):
+            archive_list_html += f'''
+            <li style="background: white; padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 600; color: #333;">📅 {date_item} Tarihli Haber Arşivi</span>
+                <span style="font-size: 12px; color: #1877f2; font-weight: bold;">Taranabilir Dizin ✓</span>
+            </li>'''
+
+        archive_page_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Arşivi - nearadin.net</title>
+    <meta name="description" content="nearadin.net gün bazlı geçmiş son dakika haber arşivleri." />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
+        header a {{ color: white; text-decoration: none; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
+        h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
+        ul {{ list-style: none; }}
+    </style>
+</head>
+<body>
+    <header><a href="/">nearadin.net - HABER ARŞİVİ</a></header>
+    <div class="container">
+        <h1>Gün Bazlı Haber Arşivi</h1>
+        <ul>
+            {archive_list_html if archive_list_html else '<p>Henüz arşivlenmiş gün bulunmuyor.</p>'}
+        </ul>
+    </div>
+    {footer_html}
+</body>
+</html>'''
+
+        with open("arsiv/index.html", "w", encoding="utf-8") as f:
+            f.write(archive_page_html)
+
+        # XML Sitemap Kaydetme
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {sitemap_items}</urlset>'''
@@ -412,7 +509,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Boşluk sorunu giderildi! Sayfalar ve sitemap başarıyla oluşturuldu.")
+        print("Gün bazlı arşiv, Footer ve sitemap.xml başarıyla güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
