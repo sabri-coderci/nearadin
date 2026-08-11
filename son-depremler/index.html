@@ -76,37 +76,44 @@
             <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
         </div>
     </div>
-
-    <script>
-        async function loadLocalEarthquakes() {
-            const tbody = document.getElementById('eq-data');
-            try {
-                // Önbelleği önlemek için timestamp ekliyoruz
-                const res = await fetch('./earthquakes.json?v=' + new Date().getTime());
-                const data = await res.json();
-
-                if (!data || data.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">Son saatlerde 4.0 ve üzeri deprem kaydedilmedi.</td></tr>';
-                    return;
-                }
-
-                tbody.innerHTML = '';
-                data.forEach(eq => {
-                    tbody.innerHTML += `
-                        <tr>
-                            <td><strong>${eq.time}</strong> <small style="color:#666;">(${eq.date})</small></td>
-                            <td><span class="mag mag-high">${eq.mag}</span></td>
-                            <td><strong>${eq.location}</strong></td>
-                            <td>${eq.depth} km</td>
-                        </tr>
-                    `;
-                });
-            } catch (err) {
-                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:red; padding: 20px;">Veri okunamadı. Otomatik güncelleme bekleniyor...</td></tr>';
+<script>
+    async function loadLocalEarthquakes() {
+        const tbody = document.getElementById('eq-data');
+        try {
+            // Tam yolu ( /son-depremler/earthquakes.json ) belirterek çağırıyoruz
+            const res = await fetch('/son-depremler/earthquakes.json?v=' + new Date().getTime());
+            
+            if (!res.ok) {
+                throw new Error("HTTP Hata: " + res.status);
             }
-        }
 
-        loadLocalEarthquakes();
-    </script>
+            const data = await res.json();
+
+            // Eğer 4.0 üstü deprem yoksa (JSON boş liste ise)
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #555;">Son saatlerde 4.0 ve üzeri büyüklükte deprem kaydedilmedi.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = '';
+            data.forEach(eq => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><strong>${eq.time}</strong> <small style="color:#666;">(${eq.date})</small></td>
+                        <td><span class="mag mag-high">${eq.mag}</span></td>
+                        <td><strong>${eq.location}</strong></td>
+                        <td>${eq.depth} km</td>
+                    </tr>
+                `;
+            });
+        } catch (err) {
+            console.error("Deprem verisi çekilemedi:", err);
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#555; padding: 20px;">Son saatlerde 4.0 ve üzeri büyüklükte deprem kaydedilmedi.</td></tr>';
+        }
+    }
+
+    loadLocalEarthquakes();
+</script>
+
 </body>
 </html>
