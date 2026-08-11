@@ -4,35 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Son Depremler - nearadin.net</title>
-    <meta name="description" content="Kandilli ve AFAD verileriyle son dakika anlık deprem listesi." />
+    <meta name="description" content="Kandilli Rasathanesi verileriyle son dakika anlık deprem listesi." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
+        
+        /* Header */
+        header { background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        header a { color: white; text-decoration: none; font-size: 18px; font-weight: bold; }
+        #hamburgerBtn { background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none; }
+        #dropdownNav { display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden; }
+        #dropdownNav ul { list-style: none; margin: 0; padding: 0; }
+        #dropdownNav li { border-bottom: 1px solid #f0f2f5; }
+        #dropdownNav a { display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        /* Content */
         .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }
-        h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
-        p { color: #65676b; font-size: 14px; margin-bottom: 20px; }
-        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; text-align: center; }
+        p.subtitle { color: #65676b; font-size: 13px; text-align: center; margin-bottom: 20px; }
+
+        /* Deprem Listesi Kart Yapısı */
+        .eq-list { display: flex; flex-direction: column; gap: 12px; }
+        .eq-item { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .eq-left { display: flex; flex-direction: column; gap: 4px; text-align: left; }
+        .eq-location { font-size: 15px; font-weight: bold; color: #1c1e21; }
+        .eq-meta { font-size: 12px; color: #65676b; }
+        .eq-badge { min-width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: white; flex-shrink: 0; margin-left: 10px; }
+        
+        .bg-low { background-color: #2e7d32; }
+        .bg-medium { background-color: #f57c00; }
+        .bg-high { background-color: #d32f2f; }
+
+        .status-msg { text-align: center; padding: 20px; color: #65676b; font-size: 14px; }
+        .btn-home { display: block; text-align: center; background: #1877f2; color: white; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
+
+        /* Footer */
+        footer { background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both; }
+        .footer-inner { max-width: 680px; margin: 0 auto; }
+        .footer-flex { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px; }
     </style>
 </head>
 <body>
     
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">Son Depremler - nearadin.net</a>
-        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
-        
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
-            <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+    <header>
+        <a href="/">Son Depremler - nearadin.net</a>
+        <button id="hamburgerBtn">☰</button>
+        <nav id="dropdownNav">
+            <ul>
+                <li><a href="/">🏠 Anasayfa</a></li>
+                <li><a href="/arsiv/">📅 Günlük Arşiv</a></li>
+                <li><a href="/nobetci-eczane/">🏥 Nöbetçi Eczane</a></li>
+                <li><a href="/son-depremler/">🔴 Son Depremler</a></li>
+                <li><a href="/kripto-para/">🪙 Kripto Piyasası</a></li>
+                <li><a href="/hava-durumu/">☀️ Hava Durumu</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="container">
+        <div class="card">
+            <h1>🔴 Son Depremler</h1>
+            <p class="subtitle">Kandilli Rasathanesi verileriyle anlık son depremler listesi.</p>
+            
+            <div id="eqList" class="eq-list">
+                <div class="status-msg">Deprem verileri yükleniyor...</div>
+            </div>
+
+            <a href="/" class="btn-home">← Anasayfaya Dön</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-flex">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri ve canlı servis akışı.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Mobil Menü
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('hamburgerBtn');
             const nav = document.getElementById('dropdownNav');
@@ -47,44 +114,43 @@
                     }
                 });
             }
+            loadEarthquakes();
         });
+
+        // Live Earthquake Data Fetcher
+        async function loadEarthquakes() {
+            const container = document.getElementById('eqList');
+            try {
+                const response = await fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live');
+                const data = await response.json();
+
+                if (data.status && data.result.length > 0) {
+                    container.innerHTML = '';
+                    // Son 20 deprem
+                    data.result.slice(0, 20).forEach(eq => {
+                        const mag = parseFloat(eq.mag);
+                        let badgeClass = 'bg-low';
+                        if (mag >= 4.5) badgeClass = 'bg-high';
+                        else if (mag >= 3.0) badgeClass = 'bg-medium';
+
+                        const html = `
+                            <div class="eq-item">
+                                <div class="eq-left">
+                                    <div class="eq-location">📍 ${eq.title}</div>
+                                    <div class="eq-meta">📅 ${eq.date} | 🔽 Derinlik: ${eq.depth} km</div>
+                                </div>
+                                <div class="eq-badge ${badgeClass}">${mag.toFixed(1)}</div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', html);
+                    });
+                } else {
+                    container.innerHTML = '<div class="status-msg">Deprem verisi bulunamadı.</div>';
+                }
+            } catch (err) {
+                container.innerHTML = '<div class="status-msg">Veri alınırken bir hata oluştu. Lütfen tekrar deneyin.</div>';
+            }
+        }
     </script>
-    
-    <div class="container">
-        <div class="card">
-            <h1>Son Depremler - nearadin.net</h1>
-            <p>Kandilli ve AFAD verileriyle son dakika anlık deprem listesi.</p>
-            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
-        </div>
-    </div>
-    
-    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
-        <div style="max-width: 680px; margin: 0 auto;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
-                <div style="flex: 1; min-width: 200px;">
-                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
-                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
-                </div>
-                <div style="flex: 1; min-width: 140px;">
-                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
-                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-    
 </body>
 </html>
