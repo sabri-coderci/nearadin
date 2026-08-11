@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hava Durumu - nearadin.net</title>
-    <meta name="description" content="İllere göre anlık ve günlük canlı hava durumu tahminleri." />
+    <meta name="description" content="81 ilin anlık ve günlük 5 günlük hava durumu tahminleri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -33,11 +33,12 @@
         .weather-desc { font-size: 16px; opacity: 0.9; text-transform: capitalize; }
         .weather-details { display: flex; justify-content: space-around; width: 100%; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 12px; font-size: 13px; }
 
-        /* Öne Çıkan İller Listesi */
-        .cities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; text-align: left; }
-        .city-card { background: #f8f9fa; border: 1px solid #e4e6eb; border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; }
-        .city-name { font-weight: bold; font-size: 14px; color: #1c1e21; }
-        .city-temp { font-weight: bold; color: #0056b3; font-size: 15px; }
+        /* 5 Günlük Tahmin Alanı */
+        .forecast-title { font-size: 16px; font-weight: bold; color: #1c1e21; margin: 20px 0 10px 0; text-align: left; }
+        .forecast-grid { display: flex; flex-direction: column; gap: 8px; }
+        .forecast-item { background: #f8f9fa; border: 1px solid #e4e6eb; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+        .forecast-date { font-weight: 600; color: #1c1e21; }
+        .forecast-temps { font-weight: bold; color: #0056b3; }
 
         .btn-home { display: block; text-align: center; background: #1877f2; color: white; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
 
@@ -66,10 +67,118 @@
 
     <div class="container">
         <div class="card">
-            <h1>☀️ Canlı Hava Durumu</h1>
-            <p class="subtitle">İllere göre anlık sıcaklık ve detaylı hava tahminleri.</p>
+            <h1>☀️ 81 İl Hava Durumu</h1>
+            <p class="subtitle">İstediğiniz ili seçerek anlık ve 5 günlük hava tahminlerine ulaşın.</p>
             
-            <!-- Şehir Seçici -->
+            <!-- 81 İl Seçici -->
+            <select id="citySelect" class="select-city" onchange="getWeather(this.value)">
+                <option value="Adana">01 - Adana</option>
+                <option value="Adıyaman">02 - Adıyaman</option>
+                <option value="Afyonkarahisar">03 - Afyonkarahisar</option>
+                <option value="Ağrı">04 - Ağrı</option>
+                <option value="Amasya">05 - Amasya</option>
+                <option value="Ankara" selected>06 - Ankara</option>
+                <option value="Antalya">07 - Antalya</option>
+                <option value="Artvin">08 - Artvin</option>
+                <option value="Aydın">09 - Aydın</option>
+                <option value="Balıkesir">10 - Balıkesir</option>
+                <option value="Bilecik">11 - Bilecik</option>
+                <option value="Bingöl">12 - Bingöl</option>
+                <option value="Bitlis">13 - Bitlis</option>
+                <option value="Bolu">14 - Bolu</option>
+                <option value="Burdur">15 - Burdur</option>
+                <option value="Bursa">16 - Bursa</option>
+                <option value="Çanakkale">17 - Çanakkale</option>
+                <option value="Çankırı">18 - Çankırı</option>
+                <option value="Çorum">19 - Çorum</option>
+                <option value="Denizli">20 - Denizli</option>
+                <option value="Diyarbakır">21 - Diyarbakır</option>
+                <option value="Edirne">22 - Edirne</option>
+                <option value="Elazığ">23 - Elazığ</option>
+                <option value="Erzincan">24 - Erzincan</option>
+                <option value="Erzurum">25 - Erzurum</option>
+Türkiye'deki **81 ilin tamamını** ve önümüzdeki günlere ait **günlük tahminleri (7 günlük hava durumu)** görüntüleyebilmeniz için kodları güncelledim. 
+
+Bu güncelleme ile:
+1. Listeye Türkiye'nin 81 ili alfabetik sırayla eklendi.
+2. Seçilen ilin sadece anlık hava durumu değil, aynı zamanda **günlük (haftalık) tahminleri** de kartlar halinde listelenmeye başlandı.
+
+Güncellenmiş `hava-durumu/index.html` kodlarını aşağıda bulabilirsiniz:
+
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu - nearadin.net</title>
+    <meta name="description" content="81 ilin anlık ve günlük 7 günlük canlı hava durumu tahminleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
+        
+        /* Header */
+        header { background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        header a { color: white; text-decoration: none; font-size: 18px; font-weight: bold; }
+        #hamburgerBtn { background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none; }
+        #dropdownNav { display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden; }
+        #dropdownNav ul { list-style: none; margin: 0; padding: 0; }
+        #dropdownNav li { border-bottom: 1px solid #f0f2f5; }
+        #dropdownNav a { display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        /* Container & Cards */
+        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; text-align: center; }
+        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; }
+        p.subtitle { color: #65676b; font-size: 13px; margin-bottom: 20px; }
+
+        /* Şehir Seçim Kutusu */
+        .select-city { width: 100%; padding: 12px; border: 1px solid #ccd0d5; border-radius: 8px; font-size: 15px; background: #f7f8fa; margin-bottom: 20px; outline: none; font-weight: 600; color: #1c1e21; }
+
+        /* Ana Hava Kartı */
+        .weather-hero { background: linear-gradient(135deg, #0056b3, #0088ff); color: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .weather-temp { font-size: 42px; font-weight: bold; margin: 5px 0; }
+        .weather-desc { font-size: 16px; opacity: 0.9; text-transform: capitalize; }
+        .weather-details { display: flex; justify-content: space-around; width: 100%; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 12px; font-size: 13px; }
+
+        /* Günlük Tahmin Listesi */
+        .forecast-title { font-size: 16px; font-weight: bold; color: #1c1e21; text-align: left; margin-bottom: 12px; }
+        .forecast-list { display: flex; flex-direction: column; gap: 8px; }
+        .forecast-item { display: flex; justify-content: space-between; align-items: center; background: #f8f9fa; border: 1px solid #e4e6eb; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+        .forecast-day { font-weight: 600; color: #1c1e21; text-align: left; }
+        .forecast-temp { font-weight: bold; color: #0056b3; }
+
+        .btn-home { display: block; text-align: center; background: #1877f2; color: white; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
+
+        /* Footer */
+        footer { background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both; }
+        .footer-inner { max-width: 680px; margin: 0 auto; }
+        .footer-flex { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="/">Hava Durumu - nearadin.net</a>
+        <button id="hamburgerBtn">☰</button>
+        <nav id="dropdownNav">
+            <ul>
+                <li><a href="/">🏠 Anasayfa</a></li>
+                <li><a href="/arsiv/">📅 Günlük Arşiv</a></li>
+                <li><a href="/nobetci-eczane/">🏥 Nöbetçi Eczane</a></li>
+                <li><a href="/son-depremler/">🔴 Son Depremler</a></li>
+                <li><a href="/kripto-para/">🪙 Kripto Piyasası</a></li>
+                <li><a href="/hava-durumu/">☀️ Hava Durumu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h1>☀️ 81 İl Canlı Hava Durumu</h1>
+            <p class="subtitle">İllere göre anlık ve 7 günlük detaylı hava tahminleri.</p>
+            
+            <!-- 81 İl Seçici -->
             <select id="citySelect" class="select-city" onchange="getWeather(this.value)">
                 <option value="Adana">Adana</option>
                 <option value="Adıyaman">Adıyaman</option>
@@ -165,6 +274,12 @@
                 </div>
             </div>
 
+            <!-- Günlük Tahminler Bölümü -->
+            <div class="forecast-title">📅 7 Günlük Hava Tahmini</div>
+            <div id="forecastList" class="forecast-list">
+                <div style="font-size: 13px; color: #65676b; padding: 10px;">Tahminler yükleniyor...</div>
+            </div>
+
             <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
     </div>
@@ -186,30 +301,44 @@
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="[https://x.com/nearadin2026](https://x.com/nearadin2026)" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Şehir Koordinatları (Open-Meteo için)
+        // 81 İl Koordinat Listesi (Enlem ve Boylamlar)
         const cityCoords = {
-            "İstanbul": { lat: 41.01, lon: 28.97 },
-            "Ankara": { lat: 39.93, lon: 32.85 },
-            "İzmir": { lat: 38.42, lon: 27.14 },
-            "Bursa": { lat: 40.18, lon: 29.06 },
-            "Antalya": { lat: 36.89, lon: 30.71 },
-            "Adana": { lat: 37.00, lon: 35.32 },
-            "Gaziantep": { lat: 37.06, lon: 37.38 },
-            "Konya": { lat: 37.87, lon: 32.48 },
-            "Trabzon": { lat: 41.00, lon: 39.72 },
-            "Diyarbakır": { lat: 37.91, lon: 40.24 },
-            "Eskişehir": { lat: 39.78, lon: 30.52 },
-            "Samsun": { lat: 41.29, lon: 36.33 }
+            "Adana": { lat: 37.00, lon: 35.32 }, "Adıyaman": { lat: 37.76, lon: 38.27 }, "Afyonkarahisar": { lat: 38.75, lon: 30.55 },
+            "Ağrı": { lat: 39.71, lon: 43.05 }, "Amasya": { lat: 40.64, lon: 35.83 }, "Ankara": { lat: 39.93, lon: 32.85 },
+            "Antalya": { lat: 36.89, lon: 30.71 }, "Artvin": { lat: 41.18, lon: 41.82 }, "Aydın": { lat: 37.84, lon: 27.84 },
+            "Balıkesir": { lat: 39.64, lon: 27.88 }, "Bilecik": { lat: 40.14, lon: 29.97 }, "Bingöl": { lat: 38.88, lon: 40.49 },
+            "Bitlis": { lat: 38.40, lon: 42.10 }, "Bolu": { lat: 40.73, lon: 31.60 }, "Burdur": { lat: 37.72, lon: 30.28 },
+            "Bursa": { lat: 40.18, lon: 29.06 }, "Çanakkale": { lat: 40.15, lon: 26.41 }, "Çankırı": { lat: 40.60, lon: 33.61 },
+            "Çorum": { lat: 40.55, lon: 34.95 }, "Denizli": { lat: 37.77, lon: 29.08 }, "Diyarbakır": { lat: 37.91, lon: 40.24 },
+            "Edirne": { lat: 41.67, lon: 26.55 }, "Elazığ": { lat: 38.67, lon: 39.22 }, "Erzincan": { lat: 39.75, lon: 39.50 },
+            "Erzurum": { lat: 39.90, lon: 41.27 }, "Eskişehir": { lat: 39.78, lon: 30.52 }, "Gaziantep": { lat: 37.06, lon: 37.38 },
+            "Giresun": { lat: 40.91, lon: 38.38 }, "Gümüşhane": { lat: 40.46, lon: 39.48 }, "Hakkari": { lat: 37.58, lon: 43.74 },
+            "Hatay": { lat: 36.20, lon: 36.16 }, "Isparta": { lat: 37.76, lon: 30.55 }, "Mersin": { lat: 36.80, lon: 34.63 },
+            "İstanbul": { lat: 41.01, lon: 28.97 }, "İzmir": { lat: 38.42, lon: 27.14 }, "Kars": { lat: 40.60, lon: 43.09 },
+            "Kastamonu": { lat: 41.38, lon: 33.78 }, "Kayseri": { lat: 38.72, lon: 35.48 }, "Kırklareli": { lat: 41.73, lon: 27.22 },
+            "Kırşehir": { lat: 39.14, lon: 34.16 }, "Kocaeli": { lat: 40.76, lon: 29.94 }, "Konya": { lat: 37.87, lon: 32.48 },
+            "Kütahya": { lat: 39.42, lon: 29.98 }, "Malatya": { lat: 38.35, lon: 38.33 }, "Manisa": { lat: 38.61, lon: 27.42 },
+            "Kahramanmaraş": { lat: 37.58, lon: 36.93 }, "Mardin": { lat: 37.32, lon: 40.73 }, "Muğla": { lat: 37.21, lon: 28.36 },
+            "Muş": { lat: 38.74, lon: 41.49 }, "Nevşehir": { lat: 38.62, lon: 34.71 }, "Niğde": { lat: 37.96, lon: 34.68 },
+            "Ordu": { lat: 40.98, lon: 37.87 }, "Rize": { lat: 41.02, lon: 40.52 }, "Sakarya": { lat: 40.75, lon: 30.40 },
+            "Samsun": { lat: 41.29, lon: 36.33 }, "Siirt": { lat: 37.93, lon: 41.94 }, "Sinop": { lat: 42.02, lon: 35.15 },
+            "Sivas": { lat: 39.74, lon: 37.01 }, "Tekirdağ": { lat: 39.98, lon: 27.50 }, "Tokat": { lat: 40.31, lon: 36.55 },
+            "Trabzon": { lat: 41.00, lon: 39.72 }, "Tunceli": { lat: 39.10, lon: 39.54 }, "Şanlıurfa": { lat: 37.15, lon: 38.79 },
+            "Uşak": { lat: 38.68, lon: 29.40 }, "Van": { lat: 38.50, lon: 43.37 }, "Yozgat": { lat: 39.81, lon: 34.81 },
+            "Zonguldak": { lat: 41.45, lon: 31.79 }, "Aksaray": { lat: 38.36, lon: 34.03 }, "Bayburt": { lat: 40.25, lon: 40.22 },
+            "Karaman": { lat: 37.17, lon: 33.22 }, "Kırıkkale": { lat: 39.84, lon: 33.58 }, "Batman": { lat: 37.88, lon: 41.12 },
+            "Şırnak": { lat: 37.52, lon: 42.45 }, "Bartın": { lat: 41.63, lon: 32.33 }, "Ardahan": { lat: 41.11, lon: 42.70 },
+            "Iğdır": { lat: 39.91, lon: 44.04 }, "Yalova": { lat: 40.65, lon: 29.26 }, "Karabük": { lat: 41.20, lon: 32.62 },
+            "Kilis": { lat: 36.71, lon: 37.11 }, "Osmaniye": { lat: 37.07, lon: 36.24 }, "Düzce": { lat: 40.84, lon: 31.15 }
         };
 
-        // WMO Hava Durumu Kodları Açıklamaları
         function getWeatherDescription(code) {
             if (code === 0) return "Açık / Güneşli ☀️";
             if (code >= 1 && code <= 3) return "Parçalı Bulutlu ⛅";
@@ -222,7 +351,6 @@
             return "Açık ☀️";
         }
 
-        // Mobil Menü Mantığı
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('hamburgerBtn');
             const nav = document.getElementById('dropdownNav');
@@ -237,11 +365,9 @@
                     }
                 });
             }
-            // Varsayılan olarak İstanbul verisini çek
             getWeather('İstanbul');
         });
 
-        // Hava Durumu Verisi Çeken Fonksiyon
         async function getWeather(cityName) {
             const coords = cityCoords[cityName];
             if (!coords) return;
@@ -249,9 +375,10 @@
             document.getElementById('selectedCity').innerText = cityName;
             document.getElementById('selectedTemp').innerText = "--°C";
             document.getElementById('selectedCode').innerText = "Güncelleniyor...";
+            document.getElementById('forecastList').innerHTML = '<div style="font-size: 13px; color: #65676b; padding: 10px;">Tahminler yükleniyor...</div>';
 
             try {
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&current_weather=true&hourly=relativehumidity_2m`;
+                const url = `[https://api.open-meteo.com/v1/forecast?latitude=$](https://api.open-meteo.com/v1/forecast?latitude=$){coords.lat}&longitude=${coords.lon}&current_weather=true&hourly=relativehumidity_2m&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`;
                 const response = await fetch(url);
                 const data = await response.json();
 
@@ -266,8 +393,30 @@
                     document.getElementById('selectedWind').innerText = `${wind} km/s`;
                     document.getElementById('selectedHumidity').innerText = `%${humidity}`;
                 }
+
+                if (data.daily) {
+                    const forecastContainer = document.getElementById('forecastList');
+                    forecastContainer.innerHTML = '';
+                    
+                    for (let i = 0; i < data.daily.time.length; i++) {
+                        const dateObj = new Date(data.daily.time[i]);
+                        const dayName = dateObj.toLocaleDateString('tr-TR', { weekday: 'long', day: 'numeric', month: 'short' });
+                        const maxTemp = Math.round(data.daily.temperature_2m_max[i]);
+                        const minTemp = Math.round(data.daily.temperature_2m_min[i]);
+                        const codeDesc = getWeatherDescription(data.daily.weathercode[i]);
+
+                        const itemHTML = `
+                            <div class="forecast-item">
+                                <div class="forecast-day">${dayName} <span style="font-size:11px; color:#65676b; display:block;">${codeDesc}</span></div>
+                                <div class="forecast-temp">${maxTemp}°C / <span style="color:#65676b; font-weight:normal;">${minTemp}°C</span></div>
+                            </div>
+                        `;
+                        forecastContainer.insertAdjacentHTML('beforeend', itemHTML);
+                    }
+                }
             } catch (error) {
                 document.getElementById('selectedCode').innerText = "Veri alınamadı.";
+                document.getElementById('forecastList').innerHTML = '<div style="font-size: 13px; color: #d32f2f; padding: 10px;">Tahminler alınamadı.</div>';
             }
         }
     </script>
