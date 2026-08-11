@@ -86,14 +86,14 @@ def fetch_and_generate():
         raw_items = root.findall('./channel/item')
 
         # --- ADMATİC AUTO ADS REKLAM KODU ---
-        admatic_code = '''
-        <div class="ad-container">
-            <!-- Admatic AUTO ads START -->
-            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-            <!-- Admatic AUTO ads END -->
-        </div>
-        '''
+        # admatic_code = '''
+       # <div class="ad-container">
+          #  <!-- Admatic AUTO ads START -->
+          #  <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+          #  <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+          #  <!-- Admatic AUTO ads END -->
+       # </div>
+      #  '''
 
         tz_tr = datetime.timezone(datetime.timedelta(hours=3))
         now = datetime.datetime.now(tz_tr)
