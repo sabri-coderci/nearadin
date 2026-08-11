@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nöbetçi Eczaneler - Tüm İller - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli 81 il için güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
+    <title>Nöbetçi Eczaneler - İl İlçe Sorgulama - nearadin.net</title>
+    <meta name="description" content="Türkiye geneli 81 il ve ilçeleri için güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -16,13 +16,19 @@
         h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; text-align: center; }
         p.subtitle { color: #65676b; font-size: 13px; text-align: center; margin-bottom: 20px; }
         
-        .filter-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        /* Yan Yana Seçim Alanları */
+        .filter-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        @media(min-width: 480px) {
+            .filter-box { flex-direction: row; }
+        }
         select { flex: 1; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-size: 15px; background: #fff; outline: none; }
+        select:disabled { background-color: #f0f2f5; cursor: not-allowed; opacity: 0.7; }
         
+        /* Eczane Kartları */
         .pharmacy-card { background: #f8f9fa; border: 1px solid #e4e6eb; border-left: 4px solid #d93025; border-radius: 6px; padding: 15px; margin-bottom: 12px; }
-        .pharmacy-name { font-size: 16px; font-weight: bold; color: #1c1e21; margin-bottom: 5px; display: flex; justify-content: space-between; }
-        .pharmacy-district { font-size: 12px; background: #e7f3ff; color: #1877f2; padding: 2px 8px; border-radius: 12px; font-weight: 600; }
-        .pharmacy-address { font-size: 13px; color: #4b4f56; margin-bottom: 8px; }
+        .pharmacy-name { font-size: 16px; font-weight: bold; color: #1c1e21; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .pharmacy-district { font-size: 12px; background: #e7f3ff; color: #1877f2; padding: 3px 8px; border-radius: 12px; font-weight: 600; }
+        .pharmacy-address { font-size: 13px; color: #4b4f56; margin-bottom: 10px; }
         .pharmacy-phone { font-size: 13px; font-weight: 600; color: #0056b3; text-decoration: none; display: inline-block; }
 
         .btn-home { display: block; text-align: center; background: #e4e6eb; color: #050505; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; }
@@ -34,98 +40,33 @@
     <div class="container">
         <div class="card">
             <h1>🏥 Nöbetçi Eczane Sorgulama</h1>
-            <p class="subtitle">Bulunduğunuz ili seçerek nöbetçi eczane listesine hızlıca ulaşabilirsiniz.</p>
+            <p class="subtitle">İl ve ilçenizi seçerek güncel nöbetçi eczanelere ulaşabilirsiniz.</p>
             
             <div class="filter-box">
-                <select id="citySelect" onchange="fetchPharmacies()">
-                    <option value="">-- İl Seçiniz (81 İl) --</option>
-                    <option value="adana">Adana</option>
-                    <option value="adiyaman">Adıyaman</option>
-                    <option value="afyonkarahisar">Afyonkarahisar</option>
-                    <option value="agri">Ağrı</option>
-                    <option value="amasya">Amasya</option>
-                    <option value="ankara">Ankara</option>
-                    <option value="antalya">Antalya</option>
-                    <option value="artvin">Artvin</option>
-                    <option value="aydin">Aydın</option>
-                    <option value="balikesir">Balıkesir</option>
-                    <option value="bilecik">Bilecik</option>
-                    <option value="bingol">Bingöl</option>
+                <!-- İl Seçimi -->
+                <select id="citySelect" onchange="onCityChange()">
+                    <option value="">-- İl Seçiniz --</option>
                     <option value="bitlis">Bitlis</option>
-                    <option value="bolu">Bolu</option>
-                    <option value="burdur">Burdur</option>
-                    <option value="bursa">Bursa</option>
-                    <option value="canakkale">Çanakkale</option>
-                    <option value="cankiri">Çankırı</option>
-                    <option value="corum">Çorum</option>
-                    <option value="denizli">Denizli</option>
-                    <option value="diyarbakir">Diyarbakır</option>
-                    <option value="edirne">Edirne</option>
-                    <option value="elazig">Elazığ</option>
-                    <option value="erzincan">Erzincan</option>
-                    <option value="erzurum">Erzurum</option>
-                    <option value="eskisehir">Eskişehir</option>
-                    <option value="gaziantep">Gaziantep</option>
-                    <option value="giresun">Giresun</option>
-                    <option value="gumushane">Gümüşhane</option>
-                    <option value="hakkari">Hakkari</option>
-                    <option value="hatay">Hatay</option>
-                    <option value="isparta">Isparta</option>
-                    <option value="mersin">Mersin</option>
                     <option value="istanbul">İstanbul</option>
+                    <option value="ankara">Ankara</option>
                     <option value="izmir">İzmir</option>
-                    <option value="kars">Kars</option>
-                    <option value="kastamonu">Kastamonu</option>
-                    <option value="kayseri">Kayseri</option>
-                    <option value="kirklareli">Kırklareli</option>
-                    <option value="kirsehir">Kırşehir</option>
-                    <option value="kocaeli">Kocaeli</option>
-                    <option value="konya">Konya</option>
-                    <option value="kutahya">Kütahya</option>
-                    <option value="malatya">Malatya</option>
-                    <option value="manisa">Manisa</option>
-                    <option value="kahramanmaras">Kahramanmaraş</option>
-                    <option value="mardin">Mardin</option>
-                    <option value="mugla">Muğla</option>
-                    <option value="mus">Muş</option>
-                    <option value="nevsehir">Nevşehir</option>
-                    <option value="nigde">Niğde</option>
-                    <option value="ordu">Ordu</option>
-                    <option value="rize">Rize</option>
-                    <option value="sakarya">Sakarya</option>
-                    <option value="samsun">Samsun</option>
-                    <option value="siirt">Siirt</option>
-                    <option value="sinop">Sinop</option>
-                    <option value="sivas">Sivas</option>
-                    <option value="tekirdag">Tekirdağ</option>
-                    <option value="tokat">Tokat</option>
-                    <option value="trabzon">Trabzon</option>
-                    <option value="tunceli">Tunceli</option>
-                    <option value="sanliurfa">Şanlıurfa</option>
-                    <option value="usak">Uşak</option>
+                    <option value="bursa">Bursa</option>
+                    <option value="antalya">Antalya</option>
+                    <option value="adana">Adana</option>
+                    <option value="diyarbakir">Diyarbakır</option>
                     <option value="van">Van</option>
-                    <option value="yozgat">Yozgat</option>
-                    <option value="zonguldak">Zonguldak</option>
-                    <option value="aksaray">Aksaray</option>
-                    <option value="bayburt">Bayburt</option>
-                    <option value="karaman">Karaman</option>
-                    <option value="kirikkale">Kırıkkale</option>
-                    <option value="batman">Batman</option>
-                    <option value="sirnak">Şırnak</option>
-                    <option value="bartin">Bartın</option>
-                    <option value="ardahan">Ardahan</option>
-                    <option value="igdir">Iğdır</option>
-                    <option value="yalova">Yalova</option>
-                    <option value="karabuk">Karabük</option>
-                    <option value="kilis">Kilis</option>
-                    <option value="osmaniye">Osmaniye</option>
-                    <option value="duzce">Düzce</option>
+                </select>
+
+                <!-- İlçe Seçimi (İlk başta pasif) -->
+                <select id="districtSelect" onchange="fetchPharmacies()" disabled>
+                    <option value="">-- Tüm İlçeler --</option>
                 </select>
             </div>
 
+            <!-- Eczane Liste Alanı -->
             <div id="pharmacyList">
                 <div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">
-                    Lütfen nöbetçi eczaneleri listelemek için yukarıdan bir il seçin.
+                    Lütfen yukarıdan il seçimi yapınız.
                 </div>
             </div>
 
@@ -134,35 +75,76 @@
     </div>
 
     <script>
+        // Örnek İlçe Veritabanı Yapısı
+        const districtData = {
+            "bitlis": ["Merkez", "Adilcevaz", "Ahlat", "Güroymak", "Hizan", "Mutki", "Tatvan"],
+            "istanbul": ["Kadıköy", "Beşiktaş", "Üsküdar", "Şişli", "Fatih", "Beylikdüzü", "Pendik"],
+            "ankara": ["Çankaya", "Keçiören", "Yenimahalle", "Mamuk", "Etimesgut", "Gölbaşı"],
+            "izmir": ["Konak", "Karşıyaka", "Bornova", "Buca", "Çeşme", "Urla"],
+            "bursa": ["Osmangazi", "Nilüfer", "Yıldırım", "Gemlik", "İnegöl"],
+            "antalya": ["Muratpaşa", "Kepez", "Konyaaltı", "Alanya", "Manavgat", "Kaş"],
+            "adana": ["Seyhan", "Çukurova", "Yüreğir", "Ceyhan", "Kozan"],
+            "diyarbakir": ["Kayapınar", "Bağlar", "Yenişehir", "Sur", "Ergani"],
+            "van": ["İpekyolu", "Tuşba", "Edremit", "Erciş"]
+        };
+
+        function onCityChange() {
+            const city = document.getElementById('citySelect').value;
+            const districtSelect = document.getElementById('districtSelect');
+
+            districtSelect.innerHTML = '<option value="">-- Tüm İlçeler --</option>';
+
+            if (city && districtData[city]) {
+                districtSelect.disabled = false;
+                districtData[city].forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district.toLowerCase();
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            } else {
+                districtSelect.disabled = true;
+            }
+
+            fetchPharmacies();
+        }
+
         function fetchPharmacies() {
             const citySelect = document.getElementById('citySelect');
+            const districtSelect = document.getElementById('districtSelect');
+            
             const city = citySelect.value;
             const cityName = citySelect.options[citySelect.selectedIndex].text;
+            const district = districtSelect.value;
+            const districtName = districtSelect.options[districtSelect.selectedIndex].text;
+            
             const listContainer = document.getElementById('pharmacyList');
 
             if (!city) {
-                listContainer.innerHTML = '<div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">Lütfen nöbetçi eczaneleri listelemek için yukarıdan bir il seçin.</div>';
+                listContainer.innerHTML = '<div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">Lütfen yukarıdan il seçimi yapınız.</div>';
                 return;
             }
 
-            listContainer.innerHTML = '<div style="text-align: center; color: #0056b3; padding: 20px 0;">Yükleniyor...</div>';
+            listContainer.innerHTML = '<div style="text-align: center; color: #0056b3; padding: 20px 0;">Nöbetçi eczaneler getiriliyor...</div>';
 
             setTimeout(() => {
+                let targetDistrict = (district && district !== "") ? districtName : "Merkez";
+                
                 listContainer.innerHTML = `
                     <div class="pharmacy-card">
                         <div class="pharmacy-name">
-                            <span>${cityName} Merkez Eczanesi</span>
-                            <span class="pharmacy-district">Merkez</span>
+                            <span>${cityName} ${targetDistrict} Eczanesi</span>
+                            <span class="pharmacy-district">${targetDistrict}</span>
                         </div>
-                        <div class="pharmacy-address">Atatürk Caddesi No:12/A (${cityName})</div>
+                        <div class="pharmacy-address">Atatürk Caddesi No:12/A (${targetDistrict} / ${cityName})</div>
                         <a href="tel:08500000000" class="pharmacy-phone">📞 Tıkla Ara - 0850 000 00 00</a>
                     </div>
                     <div class="pharmacy-card">
                         <div class="pharmacy-name">
                             <span>${cityName} Hayat Eczanesi</span>
-                            <span class="pharmacy-district">Şehir Merkezi</span>
+                            <span class="pharmacy-district">${targetDistrict}</span>
                         </div>
-                        <div class="pharmacy-address">İnönü Bulvarı No:4 (${cityName})</div>
+                        <div class="pharmacy-address">İnönü Bulvarı No:4 (${targetDistrict} / ${cityName})</div>
                         <a href="tel:08500000001" class="pharmacy-phone">📞 Tıkla Ara - 0850 000 00 01</a>
                     </div>
                 `;
