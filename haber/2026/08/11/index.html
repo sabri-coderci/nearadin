@@ -8,8 +8,6 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
-        header { background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }
-        header a { color: white; text-decoration: none; }
         .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
         .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
         .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
@@ -27,7 +25,40 @@
     </style>
 </head>
 <body>
-    <header><a href="/">nearadin.net - SON DAKİKA</a></header>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
     <div class="container">
         <div class="status-bar">
             <span>📅 11.08.2026 Tarihli Haber Listesi</span>
@@ -35,6 +66,43 @@
         </div>
         <main>
             
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">SonDakika</span>
+                        <span class="time">21:51</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/11/trabzonspor-kasimpasa-macina-hazirlaniyor.html">Trabzonspor Kasımpaşa Maçına Hazırlanıyor</a>
+                    </h2>
+                    <p class="news-summary">Trabzonspor Kasımpaşa Maçına Hazırlanıyor  SonDakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/11/trabzonspor-kasimpasa-macina-hazirlaniyor.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">SonDakika</span>
+                        <span class="time">21:49</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/11/kocaelispor-berkan-kutluyu-transfer-etti.html">Kocaelispor Berkan Kutlu'yu Transfer Etti</a>
+                    </h2>
+                    <p class="news-summary">Kocaelispor Berkan Kutlu'yu Transfer Etti  SonDakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/11/kocaelispor-berkan-kutluyu-transfer-etti.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+       <div class="ad-container">
+          <!-- Admatic AUTO ads START -->
+           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+           <!-- Admatic AUTO ads END -->
+       </div>
+        
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -65,13 +133,6 @@
                     </div>
                 </article>
                 
-       <div class="ad-container">
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
-       </div>
-        
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -495,21 +556,6 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">Bloomberght</span>
-                        <span class="time">20:05</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/11/toyota-abdde-500-binden-fazla-araci-geri-cagiriyor.html">Toyota, ABD'de 500 binden fazla aracı geri çağırıyor</a>
-                    </h2>
-                    <p class="news-summary">Toyota, ABD'de 500 binden fazla aracı geri çağırıyor  Bloomberght</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/11/toyota-abdde-500-binden-fazla-araci-geri-cagiriyor.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
                         <span class="source">SonDakika</span>
                         <span class="time">20:02</span>
                     </div>
@@ -690,6 +736,21 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Bloomberght</span>
+                        <span class="time">19:05</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/11/iran-sartlar-yerine-getirilene-kadar-hurmuz-acilmayacak.html">İran: Şartlar yerine getirilene kadar Hürmüz açılmayacak</a>
+                    </h2>
+                    <p class="news-summary">İran: Şartlar yerine getirilene kadar Hürmüz açılmayacak  Bloomberght</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/11/iran-sartlar-yerine-getirilene-kadar-hurmuz-acilmayacak.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">SonDakika</span>
                         <span class="time">18:51</span>
                     </div>
@@ -759,36 +820,6 @@
                     <p class="news-summary">SON DAKİKA HABERİ: Cumhurbaşkanı Erdoğan, TBMM Başkanı Kurtulmuş'u kabul etti  CNN Türk</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/11/son-dakika-haberi-cumhurbaskani-erdogan-tbmm-baskani-kurtu.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">Bloomberght</span>
-                        <span class="time">18:14</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/11/ford-elektrikli-explorer-ve-caprinin-menzil-ve-performansi.html">Ford, elektrikli Explorer ve Capri'nin menzil ve performansını artırdı</a>
-                    </h2>
-                    <p class="news-summary">Ford, elektrikli Explorer ve Capri'nin menzil ve performansını artırdı  Bloomberght</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/11/ford-elektrikli-explorer-ve-caprinin-menzil-ve-performansi.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">SonDakika</span>
-                        <span class="time">17:46</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/11/arac-sahiplerine-mujde-beklenen-dev-zam-iptal-edildi.html">Araç sahiplerine müjde: Beklenen dev zam iptal edildi</a>
-                    </h2>
-                    <p class="news-summary">Araç sahiplerine müjde: Beklenen dev zam iptal edildi  SonDakika</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/11/arac-sahiplerine-mujde-beklenen-dev-zam-iptal-edildi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
