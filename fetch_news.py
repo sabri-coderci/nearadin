@@ -125,7 +125,7 @@ def get_footer_html():
     '''
 
 def fetch_and_generate():
-    rss_url = "https://news.google.com/rss/search?q=haber&hl=tr&gl=TR&ceid=TR:tr"
+    rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
