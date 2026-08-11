@@ -5,8 +5,9 @@ import datetime
 import re
 import os
 import shutil  # Klasör temizleme işlemi için
+import html    # HTML Entitiy'leri (&quot; vb.) çözmek için eklendi
 import tweepy  # X (Twitter) paylaşımı için
-from email.utils import parsedate_to_datetime # Tarih parse etmek için eklendi
+from email.utils import parsedate_to_datetime # Tarih parse etmek için
 
 def slugify(text):
     text = text.lower()
@@ -27,13 +28,11 @@ def post_to_x(latest_news):
     access_token = os.environ.get("X_ACCESS_TOKEN")
     access_secret = os.environ.get("X_ACCESS_SECRET")
 
-    # API Anahtarları tanımlı değilse adımı atla
     if not all([api_key, api_secret, access_token, access_secret]):
         print("X API anahtarları bulunamadı. Tweet atma adımı atlanıyor.")
         return
 
     try:
-        # Tweepy v2 Client (X Free API ile uyumlu)
         client = tweepy.Client(
             consumer_key=api_key,
             consumer_secret=api_secret,
@@ -44,7 +43,6 @@ def post_to_x(latest_news):
         title = latest_news['title']
         desc_preview = latest_news['desc'][:100] + "..." if len(latest_news['desc']) > 100 else latest_news['desc']
 
-        # Şık ve Tıklanabilir Tweet Formatı
         tweet_text = (
             f"🚨 SON DAKİKA HABERİ\n\n"
             f"📌 {title}\n\n"
@@ -65,12 +63,12 @@ def fetch_and_generate():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # --- ESKİ / ÇÖP DOSYALARI TEMİZLEME ADIMI ---
+    # Eski / Çöp Dosyaları Temizleme
     if os.path.exists("haber"):
-        shutil.rmtree("haber")  # Birikmiş eski/tekrarlayan dosyaları siler
+        shutil.rmtree("haber")
     os.makedirs("haber", exist_ok=True)
 
-    # --- SAYAÇ VE CANLI ZİYARETÇİ KODU (Who's Amung Us) ---
+    # Canlı Ziyaretçi Kodu (Who's Amung Us)
     whos_amung_us_code = '''
     <div style="text-align: center; margin: 20px 0;">
         <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
@@ -85,7 +83,7 @@ def fetch_and_generate():
         root = ET.fromstring(xml_data)
         raw_items = root.findall('./channel/item')
 
-        # --- ADMATİC AUTO ADS REKLAM KODU ---
+        # Admatic Auto Ads Reklam Kodu
         admatic_code = '''
        <div class="ad-container">
           <!-- Admatic AUTO ads START -->
@@ -96,13 +94,14 @@ def fetch_and_generate():
         '''
 
         tz_tr = datetime.timezone(datetime.timedelta(hours=3))
-        now = datetime.datetime.now(tz_tr)
-        last_update = now.strftime("%d.%m.%Y %H:%M")
-        last_update_iso = now.strftime("%Y-%m-%dT%H:%M:%S+03:00")
+        now = datetime.datetime.now(datetime.timezone.utc) # UTC olarak karşılaştırma kolaylığı
+        
+        last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
+        last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
         parsed_items = []
 
-        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 6 saatlik olanları filtrele
+        # 1. Aşama: Haberlerin tarihlerini ayıkla ve son 12 saatlik olanları filtrele (43200 saniye)
         for item in raw_items:
             pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
             
@@ -113,18 +112,16 @@ def fetch_and_generate():
                 except Exception:
                     pub_datetime = now
 
-            # Son 6 saat kontrolü (12 saat = 43200 saniye)
-            if pub_datetime and (now - pub_datetime).total_seconds() <= 43200:
+            # UTC Zaman Karşılaştırması
+            if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 43200:
                 parsed_items.append({
                     'item': item,
                     'pub_datetime': pub_datetime,
                     'pub_date_raw': pub_date_raw
                 })
 
-        # 2. Aşama: Güncelden eskiye doğru sırala (Yeniden Eskiye)
+        # 2. Aşama: Güncelden eskiye doğru sırala
         parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
-
-        # Maksimum 50 haber al
         parsed_items = parsed_items[:50]
 
         news_list = []
@@ -138,19 +135,18 @@ def fetch_and_generate():
             
             raw_desc = item.find('description').text if item.find('description') is not None else ''
             clean_desc = re.sub('<[^<]+?>', '', raw_desc)
+            clean_desc = html.unescape(clean_desc)  # HTML karakterlerini düzgün metne dönüştürür (&quot; -> ")
+            clean_title = html.unescape(title)
 
             source_name = "Canlı Haber Akışı"
-            clean_title = title
-            if " - " in title:
-                parts = title.rsplit(" - ", 1)
+            if " - " in clean_title:
+                parts = clean_title.rsplit(" - ", 1)
                 clean_title = parts[0]
                 source_name = parts[1]
 
-            # Saat bilgisini Türkiye saat dilimine uyarlayarak al
             time_str = pub_datetime.astimezone(tz_tr).strftime("%H:%M") if pub_datetime else ""
             slug = slugify(clean_title[:60])
             
-            # --- SABİT URL YAPISI ---
             page_name = f"{slug}.html"
             internal_link = f"/haber/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
@@ -164,7 +160,8 @@ def fetch_and_generate():
                 "time": time_str,
                 "page_name": page_name,
                 "internal_link": internal_link,
-                "full_url": full_url
+                "full_url": full_url,
+                "iso_date": pub_datetime.astimezone(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
             })
 
         news_cards_html = ""
@@ -186,7 +183,7 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # --- DETAY SAYFASI HTML ---
+            # Detay Sayfası HTML
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -196,19 +193,44 @@ def fetch_and_generate():
     <meta name="description" content="{news['desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
 
-    <!-- X (Twitter) Card Meta Etiketleri -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{news['title']}" />
     <meta name="twitter:description" content="{news['desc'][:150]}..." />
     <meta name="twitter:site" content="@nearadin2026" />
     <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
-    <!-- Open Graph / Facebook Meta Etiketleri -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
     <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
+
+    <!-- JSON-LD SEO Structured Data -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{news['title']}",
+      "description": "{news['desc'][:150]}...",
+      "datePublished": "{news['iso_date']}",
+      "dateModified": "{news['iso_date']}",
+      "mainEntityOfPage": "{news['full_url']}",
+      "author": {{
+        "@type": "Organization",
+        "name": "{news['source']}"
+      }},
+      "publisher": {{
+        "@type": "Organization",
+        "name": "nearadin.net",
+        "logo": {{
+          "@type": "ImageObject",
+          "url": "https://nearadin.net/1786394487303.png"
+        }}
+      }}
+    }}
+    </script>
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -290,7 +312,7 @@ def fetch_and_generate():
             if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # --- ANASAYFA (index.html) ---
+        # Anasayfa (index.html)
         full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -342,7 +364,7 @@ def fetch_and_generate():
     <div class="container">
         
         <div class="widgets-nav">
-            <a href="/nobetci-eczane/" class="widget-btn">🪙 Nöbetçi Eczane</a>            
+            <a href="/nobetci-eczane/" class="widget-btn">🏥 Nöbetçi Eczane</a>            
             <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
             <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
             <a href="/hava-durumu/" class="widget-btn">☀️ Hava Durumu</a>
@@ -367,7 +389,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # --- SITEMAP.XML ---
+        # Sitemap.xml
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -392,9 +414,9 @@ def fetch_and_generate():
 
         print("Sayfalar ve sitemap başarıyla oluşturuldu.")
 
-        # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
+        # X (Twitter) Otomatik Paylaşım
         if news_list:
-            post_to_x(news_list[0])  # En yeni haberi tweet atar
+            post_to_x(news_list[0])
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
