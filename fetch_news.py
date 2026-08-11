@@ -55,6 +55,43 @@ def post_to_x(latest_news):
     except Exception as e:
         print(f"X (Twitter) paylaşımında hata oluştu: {e}")
 
+def get_header_html(title_text="nearadin.net - SON DAKİKA"):
+    """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
+    return f'''
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">{title_text}</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {{
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {{
+                btn.addEventListener('click', function(e) {{
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                }});
+                document.addEventListener('click', function(e) {{
+                    if (!nav.contains(e.target) && e.target !== btn) {{
+                        nav.style.display = 'none';
+                    }}
+                }});
+            }}
+        }});
+    </script>
+    '''
+
 def get_footer_html():
     """Tüm Sayfalarda Ortak Kullanılan Standart Footer Bileşeni"""
     return '''
@@ -87,7 +124,7 @@ def get_footer_html():
     '''
 
 def create_auxiliary_pages(footer_html):
-    """Diğer servis/ara sayfaları aynı Footer ile oluşturur veya günceller."""
+    """Diğer servis/ara sayfaları aynı Header ve Footer ile oluşturur veya günceller."""
     pages = {
         "nobetci-eczane": ("Nöbetçi Eczaneler - nearadin.net", "Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri."),
         "son-depremler": ("Son Depremler - nearadin.net", "Kandilli ve AFAD verileriyle son dakika anlık deprem listesi."),
@@ -97,6 +134,7 @@ def create_auxiliary_pages(footer_html):
 
     for folder, (title, desc) in pages.items():
         os.makedirs(folder, exist_ok=True)
+        header_html = get_header_html(title)
         page_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -107,8 +145,6 @@ def create_auxiliary_pages(footer_html):
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
-        header a {{ color: white; text-decoration: none; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }}
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
@@ -117,7 +153,7 @@ def create_auxiliary_pages(footer_html):
     </style>
 </head>
 <body>
-    <header><a href="/">{title}</a></header>
+    {header_html}
     <div class="container">
         <div class="card">
             <h1>{title}</h1>
@@ -149,6 +185,7 @@ def fetch_and_generate():
     '''
 
     footer_html = get_footer_html()
+    header_html = get_header_html("nearadin.net - SON DAKİKA")
     
     # Yardımcı/servis sayfalarını oluştur/güncelle
     create_auxiliary_pages(footer_html)
@@ -199,7 +236,7 @@ def fetch_and_generate():
         parsed_items = parsed_items[:50]
 
         news_list = []
-        daily_news_grouped = {} # Güne göre haberleri toplamak için
+        daily_news_grouped = {}
 
         for idx, entry in enumerate(parsed_items):
             item = entry['item']
@@ -322,8 +359,6 @@ def fetch_and_generate():
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
-        header a {{ color: white; text-decoration: none; }}
         .container {{ max-width: 680px; margin: 20px auto 0 auto; padding: 0 12px; }}
         .article-card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .meta-info {{ display: flex; gap: 10px; font-size: 13px; color: #65676b; margin-bottom: 12px; }}
@@ -345,10 +380,8 @@ def fetch_and_generate():
 <body>
 
     {admatic_code}
+    {header_html}
 
-    <header>
-        <a href="/">Son Dakika - nearadin.net</a>
-    </header>
     <div class="container">
         <article class="article-card">
             <div class="meta-info">
@@ -403,7 +436,7 @@ def fetch_and_generate():
             if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI (haber/YYYY/MM/DD/index.html) ---
+        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI ---
         for folder_path, group_data in daily_news_grouped.items():
             day_cards_html = ""
             for idx, d_news in enumerate(group_data["news_items"]):
@@ -436,8 +469,6 @@ def fetch_and_generate():
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
-        header {{ background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }}
-        header a {{ color: white; text-decoration: none; }}
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
         .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }}
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
@@ -455,7 +486,7 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
-    <header><a href="/">nearadin.net - SON DAKİKA</a></header>
+    {header_html}
     <div class="container">
         <div class="status-bar">
             <span>📅 {group_data['date_str']} Tarihli Haber Listesi</span>
@@ -484,16 +515,9 @@ def fetch_and_generate():
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
         
-        header {{ background-color: #0056b3; color: white; padding: 15px 20px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }}
-        
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
 
-        .widgets-nav {{ display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }}
-        .widgets-nav::-webkit-scrollbar {{ display: none; }}
-        .widget-btn {{ background: white; padding: 8px 14px; border-radius: 20px; text-decoration: none; color: #333; font-weight: 600; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 5px; white-space: nowrap; border: 1px solid #e4e6eb; }}
-        .widget-btn:hover {{ background: #e7f3ff; color: #1877f2; border-color: #1877f2; }}
-
-        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }}
         
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
@@ -518,20 +542,10 @@ def fetch_and_generate():
 </head>
 <body>
 
-    <header>
-        nearadin.net - SON DAKİKA
-    </header>
+    {header_html}
 
     <div class="container">
         
-        <div class="widgets-nav">
-            <a href="/arsiv/" class="widget-btn" style="background:#e7f3ff; color:#1877f2;">📅 Günlük Arşiv</a>
-            <a href="/nobetci-eczane/" class="widget-btn">🏥 Nöbetçi Eczane</a>            
-            <a href="/son-depremler/" class="widget-btn">🔴 Son Depremler</a>
-            <a href="/kripto-para/" class="widget-btn">🪙 Kripto Piyasası</a>
-            <a href="/hava-durumu/" class="widget-btn">☀️ Hava Durumu</a>
-        </div>
-
         <div class="status-bar">
             <span>Kaynak: <strong>Google Canlı Akış</strong></span>
             <span>Son Güncelleme: <strong>{last_update}</strong></span>
@@ -590,7 +604,7 @@ def fetch_and_generate():
                             folder_link = f"/haber/{year}/{month}/{day}/"
                             archive_dates_dict[d_str] = folder_link
 
-        # Ana Arşiv Sayfası (arsiv/index.html) -> Doğrudan gün klasörlerine yönlendirir
+        # Ana Arşiv Sayfası (arsiv/index.html)
         archive_list_html = ""
         for date_item in sorted(list(archive_dates_dict.keys()), reverse=True):
             folder_link = archive_dates_dict[date_item]
@@ -612,15 +626,13 @@ def fetch_and_generate():
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
-        header a {{ color: white; text-decoration: none; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
         h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
         ul {{ list-style: none; }}
     </style>
 </head>
 <body>
-    <header><a href="/">nearadin.net - HABER ARŞİVİ</a></header>
+    {header_html}
     <div class="container">
         <h1>Gün Bazlı Haber Arşivi</h1>
         <ul>
@@ -641,7 +653,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Günlük indeks sayfaları başarıyla oluşturuldu ve sistem güncellendi.")
+        print("Hamburger menü entegre edildi, sayfalar başarıyla güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
