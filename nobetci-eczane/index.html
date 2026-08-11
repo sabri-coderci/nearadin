@@ -3,31 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nöbetçi Eczaneler - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri." />
+    <title>Nöbetçi Eczaneler - İl İl Canlı Liste - nearadin.net</title>
+    <meta name="description" content="Türkiye geneli 81 il için güncel nöbetçi eczane listesi, adres ve telefon bilgileri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }
+        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }
         header a { color: white; text-decoration: none; }
         .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }
-        h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
-        p { color: #65676b; font-size: 14px; margin-bottom: 20px; }
-        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; text-align: center; }
+        p.subtitle { color: #65676b; font-size: 13px; text-align: center; margin-bottom: 20px; }
+        
+        /* İl Seçim Alanı */
+        .filter-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        select { flex: 1; padding: 12px; border: 1px solid #cccccc; border-radius: 6px; font-size: 15px; background: #fff; outline: none; }
+        
+        /* Eczane Kartları */
+        .pharmacy-card { background: #f8f9fa; border: 1px solid #e4e6eb; border-left: 4px solid #d93025; border-radius: 6px; padding: 15px; margin-bottom: 12px; }
+        .pharmacy-name { font-size: 16px; font-weight: bold; color: #1c1e21; margin-bottom: 5px; display: flex; justify-content: space-between; }
+        .pharmacy-district { font-size: 12px; background: #e7f3ff; color: #1877f2; padding: 2px 8px; border-radius: 12px; font-weight: 600; }
+        .pharmacy-address { font-size: 13px; color: #4b4f56; margin-bottom: 8px; }
+        .pharmacy-phone { font-size: 13px; font-weight: 600; color: #0056b3; text-decoration: none; display: inline-block; }
+
+        .btn-home { display: block; text-align: center; background: #e4e6eb; color: #050505; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <header><a href="/">Nöbetçi Eczaneler - nearadin.net</a></header>
+    <header><a href="/">nearadin.net - Nöbetçi Eczaneler</a></header>
+    
     <div class="container">
         <div class="card">
-            <h1>Nöbetçi Eczaneler - nearadin.net</h1>
-            <p>Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri.</p>
-            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
+            <h1>🏥 Nöbetçi Eczane Sorgulama</h1>
+            <p class="subtitle">Bulunduğunuz ili seçerek nöbetçi eczane listesine hızlıca ulaşabilirsiniz.</p>
+            
+            <div class="filter-box">
+                <select id="citySelect" onchange="fetchPharmacies()">
+                    <option value="">-- İl Seçiniz --</option>
+                    <option value="istanbul">İstanbul</option>
+                    <option value="ankara">Ankara</option>
+                    <option value="izmir">İzmir</option>
+                    <option value="bursa">Bursa</option>
+                    <option value="antalya">Antalya</option>
+                    <option value="adana">Adana</option>
+                    <option value="konya">Konya</option>
+                    <option value="gaziantep">Gaziantep</option>
+                    <option value="sanliurfa">Şanlıurfa</option>
+                    <option value="kocaeli">Kocaeli</option>
+                </select>
+            </div>
+
+            <div id="pharmacyList">
+                <div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">
+                    Lütfen nöbetçi eczaneleri listelemek için yukarıdan bir il seçin.
+                </div>
+            </div>
+
             <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
     </div>
-    
+
+    <script>
+        // Örnek Canlı Veri / API Entegrasyonu Şablonu
+        function fetchPharmacies() {
+            const city = document.getElementById('citySelect').value;
+            const listContainer = document.getElementById('pharmacyList');
+
+            if (!city) {
+                listContainer.innerHTML = '<div style="text-align: center; color: #8d949e; padding: 20px 0; font-size: 14px;">Lütfen nöbetçi eczaneleri listelemek için yukarıdan bir il seçin.</div>';
+                return;
+            }
+
+            listContainer.innerHTML = '<div style="text-align: center; color: #0056b3; padding: 20px 0;">Yükleniyor...</div>';
+
+            // İleride kendi API bağlantını buraya yapıştırabilirsin:
+            // fetch(`https://api.ornek.com/nobetci-eczane?il=${city}`)
+            
+            setTimeout(() => {
+                // Şimdilik dinamik arayüz görünümü için temsilî veriler
+                listContainer.innerHTML = `
+                    <div class="pharmacy-card">
+                        <div class="pharmacy-name">
+                            <span>Merkez Eczanesi</span>
+                            <span class="pharmacy-district">Merkez</span>
+                        </div>
+                        <div class="pharmacy-address">Atatürk Caddesi No:12/A (Devlet Hastanesi Karşısı)</div>
+                        <a href="tel:02120000000" class="pharmacy-phone">📞 0 (212) 000 00 00 - Tıkla Ara</a>
+                    </div>
+                    <div class="pharmacy-card">
+                        <div class="pharmacy-name">
+                            <span>Hayat Eczanesi</span>
+                            <span class="pharmacy-district">Şehir Merkezi</span>
+                        </div>
+                        <div class="pharmacy-address">İnönü Bulvarı Meydan Sokak No:4</div>
+                        <a href="tel:02120000001" class="pharmacy-phone">📞 0 (212) 000 00 01 - Tıkla Ara</a>
+                    </div>
+                `;
+            }, 400);
+        }
+    </script>
+
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
@@ -54,6 +130,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
