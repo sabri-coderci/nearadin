@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Son Depremler - nearadin.net</title>
-    <meta name="description" content="AFAD ve Kandilli verileriyle son dakika anlık deprem listesi ve canlı deprem takibi." />
+    <meta name="description" content="Kandilli ve AFAD verileriyle son dakika anlık deprem listesi ve canlı deprem takibi." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -12,13 +12,18 @@
         
         .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
-        p { color: #65676b; font-size: 14px; margin-bottom: 20px; }
+        p { color: #65676b; font-size: 14px; margin-bottom: 10px; }
         
+        /* Canlı Güncelleme Saati Rozeti */
+        .update-badge { display: inline-block; background: #e6f4ea; color: #137333; font-size: 12px; font-weight: bold; padding: 5px 10px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #ceead6; }
+
         .earthquake-list { list-style: none; margin-top: 15px; }
         .earthquake-item { background: #f9f9f9; border-left: 4px solid #d93025; padding: 12px; margin-bottom: 10px; border-radius: 4px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
-        .eq-info { display: flex; flex-direction: column; gap: 3px; }
+        .eq-info { display: flex; flex-direction: column; gap: 4px; }
         .eq-title { font-weight: bold; color: #333; font-size: 14px; }
-        .eq-time { color: #888; font-size: 11px; }
+        .eq-time { color: #333; font-size: 12px; font-weight: 600; background: #eee; padding: 2px 6px; border-radius: 4px; display: inline-block; width: fit-content; }
+        .eq-depth { color: #65676b; font-size: 11px; }
+        
         .eq-mag { background: #ffebe9; color: #d93025; padding: 6px 10px; border-radius: 6px; font-weight: bold; font-size: 14px; text-align: center; min-width: 50px; }
         .loading { text-align: center; color: #65676b; padding: 20px; font-style: italic; }
 
@@ -27,6 +32,7 @@
 </head>
 <body>
 
+    <!-- Header (Ortak Menü Yapısı) -->
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
@@ -63,7 +69,8 @@
     <div class="container">
         <div class="card">
             <h1>🔴 Son Depremler</h1>
-            <p>AFAD verileriyle son dakika anlık deprem listesi canlı olarak listelenmektedir.</p>
+            <p>Kandilli ve AFAD verileriyle son dakika anlık deprem listesi canlı olarak listelenmektedir.</p>
+            <div id="updateBadge" class="update-badge">Son Güncelleme: Yükleniyor...</div>
             
             <div id="loading" class="loading">Depremler yükleniyor, lütfen bekleyin...</div>
             <ul id="earthquakeList" class="earthquake-list"></ul>
@@ -75,24 +82,29 @@
     <script>
         async function fetchEarthquakes() {
             try {
-                // AFAD açık deprem servisinden canlı verileri çekiyoruz
                 const response = await fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live');
                 const data = await response.json();
                 
                 const listEl = document.getElementById('earthquakeList');
                 const loadingEl = document.getElementById('loading');
+                const badgeEl = document.getElementById('updateBadge');
+
                 listEl.innerHTML = '';
                 loadingEl.style.display = 'none';
 
+                // Güncelleme saatini yazdır
+                const now = new Date();
+                badgeEl.innerText = `Son Güncelleme: ${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR')}`;
+
                 if(data && data.result) {
-                    // Son 20 depremi listele
                     data.result.slice(0, 20).forEach(eq => {
                         const li = document.createElement('li');
                         li.className = 'earthquake-item';
                         li.innerHTML = `
                             <div class="eq-info">
                                 <span class="eq-title">${eq.title}</span>
-                                <span class="eq-time">Tarih/Saat: ${eq.date} | Derinlik: ${eq.depth} km</span>
+                                <span class="eq-time">🕒 ${eq.date}</span>
+                                <span class="eq-depth">Derinlik: ${eq.depth} km</span>
                             </div>
                             <div class="eq-mag">${eq.mag}</div>
                         `;
