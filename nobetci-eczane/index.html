@@ -257,6 +257,20 @@
             fetchPharmaciesLive();
         }
 
+        // Zaman aşımı kontrollü istek fonksiyonu
+        async function fetchWithTimeout(url, timeout = 6000) {
+            const controller = new AbortController();
+            const id = setTimeout(() => controller.abort(), timeout);
+            try {
+                const res = await fetch(url, { signal: controller.signal });
+                clearTimeout(id);
+                return res;
+            } catch (err) {
+                clearTimeout(id);
+                throw err;
+            }
+        }
+
         async function fetchPharmaciesLive() {
             const citySelect = document.getElementById('citySelect');
             const districtSelect = document.getElementById('districtSelect');
@@ -278,18 +292,48 @@
             }
 
             const targetUrl = `https://www.eczaneler.gen.tr/${targetPath}`;
-            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`;
+
+            // Çoklu Proxy Mekanizması (Sırayla denenir)
+            const proxySources = [
+                `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`,
+                `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
+                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`
+            ];
+
+            let htmlContent = null;
+
+            for (let proxyUrl of proxySources) {
+                try {
+                    const response = await fetchWithTimeout(proxyUrl, 5000);
+                    if (!response.ok) continue;
+
+                    if (proxyUrl.includes('allorigins')) {
+                        const json = await response.json();
+                        htmlContent = json.contents;
+                    } else {
+                        htmlContent = await response.text();
+                    }
+
+                    if (htmlContent && htmlContent.length > 500) {
+                        break; // Başarılı veri alındı, döngüden çık
+                    }
+                } catch (e) {
+                    console.warn("Proxy bağlantısı başarısız, diğeri deneniyor:", proxyUrl);
+                }
+            }
+
+            if (!htmlContent) {
+                listContainer.innerHTML = `
+                    <div style="text-align: center; color: #d93025; padding: 20px 0; font-size: 14px;">
+                        Veriler çekilirken zaman aşımı oluştu. Lütfen il/ilçe seçimini yenileyin.
+                    </div>
+                `;
+                return;
+            }
 
             try {
-                const response = await fetch(proxyUrl);
-                const data = await response.json();
-
-                if (!data.contents) {
-                    throw new Error("Veri yüklenemedi");
-                }
-
                 const parser = new DOMParser();
-                const doc = parser.parseFromString(data.contents, "text/html");
+                const doc = parser.parseFromString(htmlContent, "text/html");
                 const rows = doc.querySelectorAll("table.table tr");
 
                 let htmlOutput = "";
@@ -330,10 +374,10 @@
                 }
 
             } catch (error) {
-                console.error("Veri çekme hatası:", error);
+                console.error("Ayrıştırma hatası:", error);
                 listContainer.innerHTML = `
                     <div style="text-align: center; color: #d93025; padding: 20px 0; font-size: 14px;">
-                        Veriler güncellenirken bir bağlantı sorunu oluştu. Lütfen tekrar deneyin.
+                        Nöbetçi eczane listesi okunamadı. Lütfen tekrar deneyin.
                     </div>
                 `;
             }
