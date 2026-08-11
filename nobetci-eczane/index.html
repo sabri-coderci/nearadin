@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Başlık ve Açıklamaları -->
+    <title id="seo-title">İstanbul Nöbetçi Eczaneler - Bugünkü Nöbetçi Eczane Listesi | nearadin.net</title>
+    <meta id="seo-desc" name="description" content="İstanbul bugün nöbetçi olan eczanelerin adres, telefon ve konum bilgileri. En yakın açık nöbetçi eczaneyi anında öğrenin." />
+    <meta name="keywords" content="nöbetçi eczane, bugün nöbetçi eczane, acil eczane, en yakın nöbetçi eczane, il il nöbetçi eczaneler" />
+    <link rel="canonical" href="https://nearadin.net/nobetci-eczane/" />
+
+    <!-- Open Graph (Sosyal Medya) -->
+    <meta property="og:type" content="website" />
+    <meta id="og-title" property="og:title" content="İstanbul Nöbetçi Eczaneler" />
+    <meta id="og-desc" property="og:description" content="En yakın açık nöbetçi eczaneleri harita konumu ve telefon bilgisiyle sorgulayın." />
+    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+
+    <!-- Schema.org Google Zengin Sonuç Yapısı (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Nöbetçi Eczane Sorgulama",
+      "description": "Türkiye geneli il ve ilçe bazlı günlük nöbetçi eczane listesi.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "nearadin.net"
+      }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #1c1e21; padding: 15px 12px 40px 12px; }
+        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; margin: -15px -12px 20px -12px; }
+        header a { color: white; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
+        h1 { font-size: 22px; color: #111; margin-bottom: 15px; text-align: center; }
+
+        /* Filtre Alanı Stilleri */
+        .selector-box { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+        .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; min-width: 150px; }
+
+        /* Eczane Kartları Stili */
+        .pharmacy-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .pharmacy-card { background: #fff; border: 1px solid #e1e4e8; border-left: 5px solid #d9534f; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .pharmacy-card h3 { font-size: 16px; color: #d9534f; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
+        .pharmacy-card p { font-size: 13px; color: #444; margin-bottom: 6px; line-height: 1.4; }
+        .pharmacy-card .phone { font-weight: bold; color: #0056b3; text-decoration: none; display: inline-block; margin-top: 5px; font-size: 14px; }
+        .pharmacy-card .map-btn { display: inline-block; margin-top: 10px; padding: 6px 12px; background: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 600; }
+
+        .seo-content { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #444; line-height: 1.6; }
+        .seo-content h2 { font-size: 16px; color: #111; margin-bottom: 8px; }
+
+        .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/">nearadin.net - Son Dakika</a>
+    </header>
+
+    <div class="container">
+        <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
+        <h1 id="main-heading">🔴 İstanbul Bugün Nöbetçi Eczaneler</h1>
+
+        <!-- İl ve İlçe Seçimi (Alfabetik) -->
+        <div class="selector-box">
+            <select id="citySelect" onchange="getPharmacies()">
+                <option value="adana">Adana</option>
+                <option value="adiyaman">Adıyaman</option>
+                <option value="afyonkarahisar">Afyonkarahisar</option>
+                <option value="agri">Ağrı</option>
+                <option value="aksaray">Aksaray</option>
+                <option value="amasya">Amasya</option>
+                <option value="ankara">Ankara</option>
+                <option value="antalya">Antalya</option>
+                <option value="ardahan">Ardahan</option>
+                <option value="artvin">Artvin</option>
+                <option value="aydin">Aydın</option>
+                <option value="balikesir">Balıkesir</option>
+                <option value="bartin">Bartın</option>
+                <option value="batman">Batman</option>
+                <option value="bayburt">Bayburt</option>
+                <option value="bilecik">Bilecik</option>
+                <option value="bingol">Bingöl</option>
+                <option value="bitlis">Bitlis</option>
+                <option value="bolu">Bolu</option>
+                <option value="burdur">Burdur</option>
+                <option value="bursa">Bursa</option>
+                <option value="canakkale">Çanakkale</option>
+                <option value="cankiri">Çankırı</option>
+                <option value="corum">Çorum</option>
+                <option value="denizli">Denizli</option>
+                <option value="diyarbakir">Diyarbakır</option>
+                <option value="duzce">Düzce</option>
+                <option value="edirne">Edirne</option>
+                <option value="elazig">Elazığ</option>
+                <option value="erzincan">Erzincan</option>
+                <option value="erzurum">Erzurum</option>
+                <option value="eskisehir">Eskişehir</option>
+                <option value="gaziantep">Gaziantep</option>
+                <option value="giresun">Giresun</option>
+                <option value="gumushane">Gümüşhane</option>
+                <option value="hakkari">Hakkari</option>
+                <option value="hatay">Hatay</option>
+                <option value="igdir">Iğdır</option>
+                <option value="isparta">Isparta</option>
+                <option value="istanbul" selected>İstanbul</option>
+                <option value="izmir">İzmir</option>
+                <option value="kahramanmaras">Kahramanmaraş</option>
+                <option value="karabuk">Karabük</option>
+                <option value="karaman">Karaman</option>
+                <option value="kars">Kars</option>
+                <option value="kastamonu">Kastamonu</option>
+                <option value="kayseri">Kayseri</option>
+                <option value="kilis">Kilis</option>
+                <option value="kirikkale">Kırıkkale</option>
+                <option value="kirklareli">Kırklareli</option>
+                <option value="kirsehir">Kırşehir</option>
+                <option value="kocaeli">Kocaeli</option>
+                <option value="konya">Konya</option>
+                <option value="kutahya">Kütahya</option>
+                <option value="malatya">Malatya</option>
+                <option value="manisa">Manisa</option>
+                <option value="mardin">Mardin</option>
+                <option value="mersin">Mersin</option>
+                <option value="mugla">Muğla</option>
+                <option value="mus">Muş</option>
+                <option value="nevsehir">Nevşehir</option>
+                <option value="nigde">Niğde</option>
+                <option value="ordu">Ordu</option>
+                <option value="osmaniye">Osmaniye</option>
+                <option value="rize">Rize</option>
+                <option value="sakarya">Sakarya</option>
+                <option value="samsun">Samsun</option>
+                <option value="siirt">Siirt</option>
+                <option value="sinop">Sinop</option>
+                <option value="sivas">Sivas</option>
+                <option value="sanliurfa">Şanlıurfa</option>
+                <option value="sirnak">Şırnak</option>
+                <option value="tekirdag">Tekirdağ</option>
+                <option value="tokat">Tokat</option>
+                <option value="trabzon">Trabzon</option>
+                <option value="tunceli">Tunceli</option>
+                <option value="usak">Uşak</option>
+                <option value="van">Van</option>
+                <option value="yalova">Yalova</option>
+                <option value="yozgat">Yozgat</option>
+                <option value="zonguldak">Zonguldak</option>
+            </select>
+        </div>
+
+        <!-- Nöbetçi Eczaneler Listesi -->
+        <div class="pharmacy-list" id="pharmacy-container">
+            <div style="text-align: center; grid-column: 1/-1; padding: 20px;">Eczane listesi yükleniyor...</div>
+        </div>
+
+        <!-- Admatic AUTO ads START -->
+        <div class="ad-container">
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+        </div>
+        <!-- Admatic AUTO ads END -->
+
+        <!-- Google SEO İçerik Bloğu -->
+        <div class="seo-content">
+            <h2 id="seo-heading">İstanbul Acil ve Gece Açık Eczaneler</h2>
+            <p id="seo-text">
+                nearadin.net nöbetçi eczane sorgulama hizmeti ile il genelinde gece ve resmi tatillerde hizmet veren tüm acil nöbetçi eczanelerin açık adreslerini, telefon numaralarını ve harita konum bilgilerini anında görüntüleyebilirsiniz.
+            </p>
+        </div>
+
+        <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
+        <div style="text-align: center; margin-top: 25px;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
+    </div>
+
+    <script>
+        async function getPharmacies() {
+            const select = document.getElementById('citySelect');
+            const citySlug = select.value;
+            const cityName = select.options[select.selectedIndex].text;
+            const container = document.getElementById('pharmacy-container');
+
+            // 1. Arayüz ve SEO Başlıklarını Güncelle
+            document.getElementById('main-heading').innerText = `🔴 ${cityName} Bugün Nöbetçi Eczaneler`;
+            document.title = `${cityName} Nöbetçi Eczaneler - Bugünkü Liste ve Harita Konumu | nearadin.net`;
+            document.getElementById('seo-desc').setAttribute('content', `${cityName} bugün nöbetçi olan eczanelerin adres, telefon ve harita yol tarifi bilgileri. En yakın açık eczaneyi nearadin.net'te bulun.`);
+            document.getElementById('seo-heading').innerText = `${cityName} Acil Açık Nöbetçi Eczaneler`;
+            document.getElementById('seo-text').innerText = `${cityName} ili ve bağlı tüm ilçelerde bu akşam ve gece açık olan nöbetçi eczaneler listelenmiştir. Telefon numaralarına tıklayarak direkt arama yapabilir veya harita butonunu kullanarak yol tarifi alabilirsiniz.`;
+
+            container.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 20px;">Güncel nöbetçi eczaneler getiriliyor...</div>';
+
+            try {
+                // Türkiye Açık Eczane API Servisi Entegrasyonu
+                const response = await fetch(`https://api.nosyapi.com/gateway/pharmacy/on-duty?city=${citySlug}`, {
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+                
+                const result = await response.json();
+
+                if (result.data && result.data.length > 0) {
+                    container.innerHTML = '';
+                    result.data.slice(0, 15).forEach(item => {
+                        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.PharmacyName + ' Eczanesi ' + item.Address)}`;
+                        
+                        container.innerHTML += `
+                            <div class="pharmacy-card">
+                                <h3>💊 ${item.PharmacyName} Eczanesi</h3>
+                                <p><strong>İlçe:</strong> ${item.county || cityName}</p>
+                                <p><strong>Adres:</strong> ${item.Address}</p>
+                                <p><strong>Tarif:</strong> ${item.Directions || 'Belirtilmedi'}</p>
+                                <a href="tel:${item.Phone}" class="phone">📞 ${item.Phone}</a><br>
+                                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="map-btn">📍 Haritada Yol Tarifi Al</a>
+                            </div>
+                        `;
+                    });
+                } else {
+                    // Veri gelmeme durumunda yedek gösterim
+                    container.innerHTML = `
+                        <div style="text-align: center; grid-column: 1/-1; padding: 20px; color: #666;">
+                            ${cityName} için nöbetçi eczane verileri güncelleniyor. Lütfen birkaç dakika sonra tekrar deneyin.
+                        </div>
+                    `;
+                }
+
+            } catch (error) {
+                console.error("Eczane verisi çekilemedi:", error);
+                container.innerHTML = `
+                    <div style="text-align: center; grid-column: 1/-1; padding: 20px; color: #d9534f;">
+                        Eczane verileri yüklenirken bir bağlantı hatası oluştu.
+                    </div>
+                `;
+            }
+        }
+
+        // Sayfa açıldığında İstanbul verisini getir
+        getPharmacies();
+    </script>
+</body>
+</html>
