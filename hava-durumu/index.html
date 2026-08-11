@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canlı Hava Durumu Tahmini (İl İl MGM Verileri) - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli il ve ilçe canlı hava durumu tahminleri. Meteoroloji Genel Müdürlüğü (MGM) anlık hava durumu verileri." />
+    <title>Canlı Hava Durumu Tahmini - nearadin.net</title>
+    <meta name="description" content="Türkiye geneli il il canlı hava durumu ve 7 günlük tahminler." />
     <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Canlı Hava Durumu Tahmini - nearadin.net" />
-    <meta property="og:description" content="Türkiye geneli il il canlı hava durumu ve 5 günlük tahminler." />
-    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,13 +16,22 @@
         .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
         h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
         
-        .info-box { background: #e7f3ff; color: #0056b3; padding: 12px; border-radius: 6px; font-size: 13px; margin-bottom: 20px; border: 1px solid #bfe0ff; text-align: center; line-height: 1.4; }
-        
         .selector-box { margin-bottom: 20px; text-align: center; }
-        .selector-box label { font-size: 14px; font-weight: 600; margin-right: 8px; }
-        .selector-box select { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none; }
+        .selector-box label { font-size: 15px; font-weight: 600; margin-right: 8px; }
+        .selector-box select { padding: 10px 15px; border-radius: 6px; border: 1px solid #0056b3; font-size: 15px; outline: none; background: #fff; cursor: pointer; }
 
-        .weather-frame-container { width: 100%; min-height: 420px; border: none; border-radius: 8px; overflow: hidden; }
+        .weather-card { background: linear-gradient(135deg, #0056b3, #0088ff); color: white; border-radius: 12px; padding: 25px; text-align: center; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,86,179,0.2); }
+        .weather-card .temp { font-size: 48px; font-weight: bold; margin: 10px 0; }
+        .weather-card .status { font-size: 18px; opacity: 0.9; text-transform: capitalize; }
+        .weather-card .details { display: flex; justify-content: space-around; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; font-size: 14px; }
+
+        .forecast-title { font-size: 16px; font-weight: bold; margin: 20px 0 10px 0; color: #333; }
+        .forecast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 10px; }
+        .forecast-item { background: #f8f9fa; padding: 12px 5px; border-radius: 8px; text-align: center; border: 1px solid #eee; font-size: 13px; }
+        .forecast-item .day { font-weight: 600; color: #555; margin-bottom: 5px; }
+        .forecast-item .icon { font-size: 22px; margin: 5px 0; }
+        .forecast-item .temps { font-weight: bold; color: #111; }
+
         .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
     </style>
 </head>
@@ -39,30 +43,36 @@
 
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1>☀️ İl ve İlçe Canlı Hava Durumu</h1>
-
-        <div class="info-box">
-            📌 Meteoroloji Genel Müdürlüğü (MGM) anlık hava durumu ve 5 günlük tahmin verileridir.
-        </div>
+        <h1>☀️ İl İl Canlı Hava Durumu</h1>
 
         <!-- Şehir Seçim Alanı -->
         <div class="selector-box">
             <label for="citySelect">Şehir Seçin:</label>
-            <select id="citySelect" onchange="changeCity()">
-                <option value="ISTANBUL" selected>İstanbul</option>
-                <option value="ANKARA">Ankara</option>
-                <option value="IZMIR">İzmir</option>
-                <option value="BITLIS">Bitlis</option>
-                <option value="ADANA">Adana</option>
-                <option value="ANTALYA">Antalya</option>
-                <option value="BURSA">Bursa</option>
-                <option value="DIYARBAKIR">Diyarbakır</option>
-                <option value="ERZURUM">Erzurum</option>
-                <option value="GAZIANTEP">Gaziantep</option>
-                <option value="KONYA">Konya</option>
-                <option value="TRABZON">Trabzon</option>
-                <!-- İhtiyaca göre diğer iller eklenebilir -->
+            <select id="citySelect" onchange="getWeather()">
+                <option value="39.92,32.85">Ankara</option>
+                <option value="41.01,28.97" selected>İstanbul</option>
+                <option value="38.42,27.14">İzmir</option>
+                <option value="37.00,35.32">Adana</option>
+                <option value="36.88,30.70">Antalya</option>
+                <option value="38.40,42.11">Bitlis</option>
+                <option value="40.18,29.06">Bursa</option>
+                <option value="37.91,40.23">Diyarbakır</option>
+                <option value="39.90,41.27">Erzurum</option>
+                <option value="37.06,37.38">Gaziantep</option>
+                <option value="37.87,32.48">Konya</option>
+                <option value="41.00,39.72">Trabzon</option>
             </select>
+        </div>
+
+        <!-- Anlık Hava Durumu Kartı -->
+        <div class="weather-card" id="weather-card">
+            <h2 id="city-name">İstanbul</h2>
+            <div class="temp" id="current-temp">--°C</div>
+            <div class="status" id="weather-status">Yükleniyor...</div>
+            <div class="details">
+                <div>💨 Rüzgar: <span id="wind-speed">-- km/s</span></div>
+                <div>💧 Nem: <span id="humidity">%--</span></div>
+            </div>
         </div>
 
         <!-- Admatic AUTO ads START -->
@@ -72,10 +82,10 @@
         </div>
         <!-- Admatic AUTO ads END -->
 
-        <!-- MGM Resmi Hava Durumu Widget Alanı -->
-        <div style="text-align: center;" id="mgm-widget-area">
-            <!-- Varsayılan olarak İSTANBUL yüklenir -->
-            <iframe id="mgmIframe" src="https://www.mgm.gov.tr/sunduklarimiz/v2/tahmin/il-ve-ilceler.aspx?m=ISTANBUL&baslik=G&bg=FFF&tf=14" width="100%" height="410" frameborder="0" scrolling="no" style="border:none;"></iframe>
+        <!-- 7 Günlük Tahmin -->
+        <div class="forecast-title">📅 7 Günlük Hava Tahmini</div>
+        <div class="forecast-grid" id="forecast-grid">
+            <!-- JS ile dolacak -->
         </div>
 
         <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
@@ -85,13 +95,73 @@
     </div>
 
     <script>
-        function changeCity() {
-            const city = document.getElementById('citySelect').value;
-            const iframe = document.getElementById('mgmIframe');
-            // MGM resmi sunduğu widget URL yapısı
-            iframe.src = `https://www.mgm.gov.tr/sunduklarimiz/v2/tahmin/il-ve-ilceler.aspx?m=${city}&baslik=G&bg=FFF&tf=14`;
-        }
-    </script>
+        const weatherCodes = {
+            0: { text: "Açık", icon: "☀️" },
+            1: { text: "Çoğunlukla Açık", icon: "🌤️" },
+            2: { text: "Parçalı Bulutlu", icon: "⛅" },
+            3: { text: "Kapalı / Bulutlu", icon: "☁️" },
+            45: { text: "Sisli", icon: "🌫️" },
+            51: { text: "Hafif Çiseleme", icon: "🌧️" },
+            61: { text: "Hafif Yağmurlu", icon: "🌧️" },
+            63: { text: "Yağmurlu", icon: "🌧️" },
+            65: { text: "Şiddetli Yağmur", icon: "🌧️" },
+            71: { text: "Hafif Karlı", icon: "🌨️" },
+            73: { text: "Karlı", icon: "❄️" },
+            95: { text: "Gökgürültülü Yağışlı", icon: "⛈️" }
+        };
 
+        async function getWeather() {
+            const select = document.getElementById('citySelect');
+            const [lat, lon] = select.value.split(',');
+            const cityName = select.options[select.selectedIndex].text;
+            
+            document.getElementById('city-name').innerText = cityName;
+
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`;
+                const res = await fetch(url);
+                const data = await res.json();
+
+                // Anlık Veriler
+                const current = data.current;
+                const codeInfo = weatherCodes[current.weather_code] || { text: "Açık", icon: "☀️" };
+                
+                document.getElementById('current-temp').innerText = `${Math.round(current.temperature_2m)}°C`;
+                document.getElementById('weather-status').innerText = `${codeInfo.icon} ${codeInfo.text}`;
+                document.getElementById('wind-speed').innerText = `${Math.round(current.wind_speed_10m)} km/s`;
+                document.getElementById('humidity').innerText = `%${current.relative_humidity_2m}`;
+
+                // 7 Günlük Tahmin
+                const forecastGrid = document.getElementById('forecast-grid');
+                forecastGrid.innerHTML = '';
+
+                const days = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+
+                for (let i = 0; i < 7; i++) {
+                    const date = new Date(data.daily.time[i]);
+                    const dayName = days[date.getDay()];
+                    const dayCode = data.daily.weather_code[i];
+                    const dayIcon = (weatherCodes[dayCode] || { icon: "☀️" }).icon;
+                    const maxTemp = Math.round(data.daily.temperature_2m_max[i]);
+                    const minTemp = Math.round(data.daily.temperature_2m_min[i]);
+
+                    forecastGrid.innerHTML += `
+                        <div class="forecast-item">
+                            <div class="day">${i === 0 ? 'Bugün' : dayName}</div>
+                            <div class="icon">${dayIcon}</div>
+                            <div class="temps">${maxTemp}° / <small style="color:#666">${minTemp}°</small></div>
+                        </div>
+                    `;
+                }
+
+            } catch (err) {
+                console.error("Hava durumu çekilemedi:", err);
+                document.getElementById('weather-status').innerText = "Veri alınamadı!";
+            }
+        }
+
+        // Sayfa açıldığında çalıştır
+        getWeather();
+    </script>
 </body>
 </html>
