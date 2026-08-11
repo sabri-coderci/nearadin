@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canlı Hava Durumu Tahmini - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli 81 il canlı hava durumu ve 7 günlük tahminler." />
+    
+    <!-- Dinamik SEO Başlığı ve Açıklaması (JS ile Şehre Göre Değişecek) -->
+    <title id="seo-title">İstanbul Hava Durumu - Canlı ve 7 Günlük Hava Tahmini | nearadin.net</title>
+    <meta id="seo-desc" name="description" content="İstanbul canlı hava durumu, bugün ve 7 günlük detaylı hava tahmini. Sıcaklık, nem ve rüzgar oranları anlık olarak nearadin.net'te." />
+    <meta name="keywords" content="hava durumu, canlı hava durumu, 7 günlük hava tahmini, il il hava durumu, bugün hava nasıl" />
     <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta id="og-title" property="og:title" content="İstanbul Hava Durumu - Canlı Tahminler" />
+    <meta id="og-desc" property="og:description" content="Anlık sıcaklık, nem ve 7 günlük detaylı il il hava durumu tahminleri." />
+    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+
+    <!-- Schema.org Google Zengin Sonuç Yapısı (JSON-LD) -->
+    <script type="application/ld+json" id="seo-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Canlı Hava Durumu Tahmini",
+      "description": "Türkiye geneli 81 il için canlı ve 7 günlük hava durumu tahminleri.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "nearadin.net"
+      }
+    }
+    </script>
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,7 +37,7 @@
         header a { color: white; text-decoration: none; }
         .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
-        h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
+        h1 { font-size: 22px; color: #111; margin-bottom: 15px; text-align: center; }
         
         .selector-box { margin-bottom: 20px; text-align: center; }
         .selector-box label { font-size: 15px; font-weight: 600; margin-right: 8px; }
@@ -32,6 +55,10 @@
         .forecast-item .icon { font-size: 22px; margin: 5px 0; }
         .forecast-item .temps { font-weight: bold; color: #111; }
 
+        /* SEO Metin Bloğu */
+        .seo-content { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #444; line-height: 1.6; }
+        .seo-content h2 { font-size: 16px; color: #111; margin-bottom: 8px; }
+
         .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
     </style>
 </head>
@@ -43,7 +70,7 @@
 
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1>☀️ İl İl Canlı Hava Durumu</h1>
+        <h1 id="main-heading">☀️ İstanbul Canlı Hava Durumu ve 7 Günlük Tahmin</h1>
 
         <!-- Alfabetik Şehir Seçim Alanı -->
         <div class="selector-box">
@@ -152,9 +179,17 @@
         <!-- Admatic AUTO ads END -->
 
         <!-- 7 Günlük Tahmin -->
-        <div class="forecast-title">📅 7 Günlük Hava Tahmini</div>
+        <div class="forecast-title" id="forecast-heading">📅 İstanbul 7 Günlük Hava Tahmini</div>
         <div class="forecast-grid" id="forecast-grid">
             <!-- JS ile dolacak -->
+        </div>
+
+        <!-- Google SEO İçerik Alanı (Dinamik Arama Motoru Metni) -->
+        <div class="seo-content">
+            <h2 id="seo-heading">Anlık ve 7 Günlük İl İl Hava Tahmin Raporu</h2>
+            <p id="seo-text">
+                Türkiye'nin 81 ili için anlık hava durumu, güncel sıcaklık değerleri, rüzgar hızı ve nem oranlarını nearadin.net farkıyla takip edebilirsiniz. Seçtiğiniz şehre ait 7 günlük detaylı tahminler düzenli olarak güncellenmektedir.
+            </p>
         </div>
 
         <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
@@ -184,7 +219,20 @@
             const [lat, lon] = select.value.split(',');
             const cityName = select.options[select.selectedIndex].text;
             
+            // 1. Arayüz Başlıklarını Güncelle
             document.getElementById('city-name').innerText = cityName;
+            document.getElementById('main-heading').innerText = `☀️ ${cityName} Canlı Hava Durumu ve 7 Günlük Tahmin`;
+            document.getElementById('forecast-heading').innerText = `📅 ${cityName} 7 Günlük Hava Tahmini`;
+
+            // 2. Google SEO Meta Etiketlerini Dinamik Güncelle
+            document.title = `${cityName} Hava Durumu - Canlı ve 7 Günlük Hava Tahmini | nearadin.net`;
+            document.getElementById('seo-desc').setAttribute('content', `${cityName} canlı hava durumu, bugün ve 7 günlük detaylı hava tahmini. ${cityName} için anlık sıcaklık, nem ve rüzgar bilgisi nearadin.net'te.`);
+            document.getElementById('og-title').setAttribute('content', `${cityName} Hava Durumu - Canlı Tahminler`);
+            document.getElementById('og-desc').setAttribute('content', `${cityName} canlı hava durumu ve 7 günlük tahmin raporu.`);
+            
+            // 3. SEO Metin Bloğunu Şehre Göre Özelleştir
+            document.getElementById('seo-heading').innerText = `${cityName} Hava Durumu Raporu`;
+            document.getElementById('seo-text').innerText = `${cityName} iline ait anlık hava durumu verileri, bugün hissedilen sıcaklık, rüzgar hızı ve nem oranı listelenmiştir. ${cityName} için hazırlanan 7 günlük hava tahmin raporu sayesinde haftalık planlarınızı güvenle yapabilirsiniz.`;
 
             try {
                 const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`;
@@ -229,7 +277,7 @@
             }
         }
 
-        // Sayfa ilk açıldığında çalıştır
+        // Sayfa açıldığında varsayılan şehir (İstanbul) için çalıştır
         getWeather();
     </script>
 </body>
