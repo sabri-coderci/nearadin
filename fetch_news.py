@@ -335,6 +335,10 @@ def fetch_and_generate():
 
 <body>
 
+          <!-- Admatic AUTO ads START -->
+           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+           <!-- Admatic AUTO ads END -->
     {admatic_code}
     {header_html}
 
@@ -442,6 +446,11 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
+
+          <!-- Admatic AUTO ads START -->
+           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+           <!-- Admatic AUTO ads END -->
     {header_html}
     <div class="container">
         <div class="status-bar">
@@ -498,6 +507,10 @@ def fetch_and_generate():
 </head>
 <body>
 
+          <!-- Admatic AUTO ads START -->
+           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+           <!-- Admatic AUTO ads END -->
     {header_html}
 
     <div class="container">
@@ -588,6 +601,11 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
+
+          <!-- Admatic AUTO ads START -->
+           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+           <!-- Admatic AUTO ads END -->
     {header_html}
     <div class="container">
         <h1>Gün Bazlı Haber Arşivi</h1>
