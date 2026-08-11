@@ -56,32 +56,81 @@ def post_to_x(latest_news):
         print(f"X (Twitter) paylaşımında hata oluştu: {e}")
 
 def get_footer_html():
-    """Ortak Footer Bileşeni"""
+    """Tüm Sayfalarda Ortak Kullanılan Standart Footer Bileşeni"""
     return '''
-    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6;">
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
                 <div style="flex: 1; min-width: 200px;">
                     <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
-                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı haber akış platformu.</p>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
                 </div>
                 <div style="flex: 1; min-width: 140px;">
                     <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
                         <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
                     </ul>
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
                 <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
-                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır. Otomatik canlı haber akış sistemi.</p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
     '''
+
+def create_auxiliary_pages(footer_html):
+    """Diğer servis/ara sayfaları aynı Footer ile oluşturur veya günceller."""
+    pages = {
+        "nobetci-eczane": ("Nöbetçi Eczaneler - nearadin.net", "Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri."),
+        "son-depremler": ("Son Depremler - nearadin.net", "Kandilli ve AFAD verileriyle son dakika anlık deprem listesi."),
+        "kripto-para": ("Kripto Para Piyasası - nearadin.net", "Bitcoin, Ethereum ve güncel kripto para canlı fiyat takibi."),
+        "hava-durumu": ("Hava Durumu - nearadin.net", "İllere göre anlık ve günlük hava durumu tahminleri.")
+    }
+
+    for folder, (title, desc) in pages.items():
+        os.makedirs(folder, exist_ok=True)
+        page_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content="{desc}" />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
+        header a {{ color: white; text-decoration: none; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
+        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }}
+        h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
+        p {{ color: #65676b; font-size: 14px; margin-bottom: 20px; }}
+        .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }}
+    </style>
+</head>
+<body>
+    <header><a href="/">{title}</a></header>
+    <div class="container">
+        <div class="card">
+            <h1>{title}</h1>
+            <p>{desc}</p>
+            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
+            <a href="/" class="btn-home">← Anasayfaya Dön</a>
+        </div>
+    </div>
+    {footer_html}
+</body>
+</html>'''
+        with open(f"{folder}/index.html", "w", encoding="utf-8") as f:
+            f.write(page_html)
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
@@ -98,6 +147,11 @@ def fetch_and_generate():
         <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
     </div>
     '''
+
+    footer_html = get_footer_html()
+    
+    # Yardımcı/servis sayfalarını ortak footer ile oluştur
+    create_auxiliary_pages(footer_html)
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -145,6 +199,7 @@ def fetch_and_generate():
         parsed_items = parsed_items[:50]
 
         news_list = []
+        archive_dates_map = {} # Tarihlere göre ilk haberi saklamak için
 
         for idx, entry in enumerate(parsed_items):
             item = entry['item']
@@ -166,16 +221,19 @@ def fetch_and_generate():
 
             dt_tr = pub_datetime.astimezone(tz_tr)
             time_str = dt_tr.strftime("%H:%M")
-            date_folder = dt_tr.strftime("%Y/%m/%d") # haber/2026/08/11/
+            date_folder = dt_tr.strftime("%Y/%m/%d")
             date_str = dt_tr.strftime("%d.%m.%Y")
             
-            # Gün bazlı klasör yapısı hazırlığı
             os.makedirs(f"haber/{date_folder}", exist_ok=True)
 
             slug = slugify(clean_title[:60])
             page_name = f"{slug}.html"
             internal_link = f"/haber/{date_folder}/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
+
+            # O tarihe ait yönlendirilecek ilk haber bağını kaydet
+            if date_str not in archive_dates_map:
+                archive_dates_map[date_str] = internal_link
 
             news_list.append({
                 "idx": idx,
@@ -193,7 +251,6 @@ def fetch_and_generate():
             })
 
         news_cards_html = ""
-        footer_html = get_footer_html()
 
         for news in news_list:
             other_news_html = ""
@@ -209,7 +266,7 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # Detay Sayfası HTML
+            # Haber Detay Sayfası
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -317,7 +374,6 @@ def fetch_and_generate():
 </body>
 </html>'''
 
-            # Gün bazlı klasöre kaydediyoruz
             file_path = f"haber/{news['date_folder']}/{news['page_name']}"
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(detail_html)
@@ -423,7 +479,7 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(full_html)
 
-        # --- GÜN BAZLI ARŞİV SAYFASI VE DİNAMİK SITEMAP ---
+        # XML Sitemap & Arşiv Sayfası Hazırlığı
         sitemap_items = f'''  <url>
     <loc>https://nearadin.net/</loc>
     <lastmod>{last_update_iso}</lastmod>
@@ -435,9 +491,6 @@ def fetch_and_generate():
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>\n'''
-
-        # Klasördeki tüm HTML dosyalarını tarayıp gün bazıyla arşiv dizini oluşturuyoruz
-        archive_dates = set()
 
         if os.path.exists("haber"):
             for root_dir, dirs, files in os.walk("haber"):
@@ -454,19 +507,23 @@ def fetch_and_generate():
     <priority>0.6</priority>
   </url>\n'''
                         
-                        # Tarih klasörlerini ayıkla (örnek: haber/2026/08/11/...)
                         path_parts = clean_rel_path.split('/')
                         if len(path_parts) >= 3:
                             year, month, day = path_parts[0], path_parts[1], path_parts[2]
-                            archive_dates.add(f"{day}.{month}.{year}")
+                            d_str = f"{day}.{month}.{year}"
+                            if d_str not in archive_dates_map:
+                                archive_dates_map[d_str] = f"/haber/{clean_rel_path}"
 
-        # Arşiv Sayfası (arsiv/index.html)
+        # Tıklanabilir Günlük Arşiv Sayfası (arsiv/index.html)
         archive_list_html = ""
-        for date_item in sorted(list(archive_dates), reverse=True):
+        for date_item in sorted(list(archive_dates_map.keys()), reverse=True):
+            target_link = archive_dates_map[date_item]
             archive_list_html += f'''
-            <li style="background: white; padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-weight: 600; color: #333;">📅 {date_item} Tarihli Haber Arşivi</span>
-                <span style="font-size: 12px; color: #1877f2; font-weight: bold;">Taranabilir Dizin ✓</span>
+            <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                <a href="{target_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
+                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {date_item} Tarihli Haberler</span>
+                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Taranabilir Dizin →</span>
+                </a>
             </li>'''
 
         archive_page_html = f'''<!DOCTYPE html>
@@ -501,7 +558,6 @@ def fetch_and_generate():
         with open("arsiv/index.html", "w", encoding="utf-8") as f:
             f.write(archive_page_html)
 
-        # XML Sitemap Kaydetme
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {sitemap_items}</urlset>'''
@@ -509,7 +565,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Gün bazlı arşiv, Footer ve sitemap.xml başarıyla güncellendi.")
+        print("Sistem tamamen güncellendi: Tıklanabilir arşiv, ortak footer ve sitemap oluşturuldu.")
 
         if news_list:
             post_to_x(news_list[0])
