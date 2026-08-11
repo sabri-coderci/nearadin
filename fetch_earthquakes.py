@@ -1,188 +1,162 @@
 import urllib.request
 import re
-import datetime
-from bs4 import BeautifulSoup  # pip install bs4 beautifulsoup4 (Gerekirse workflow'a ekleyin)
+import os
+from bs4 import BeautifulSoup
 
-def fetch_koeri_earthquakes():
+def generate_earthquakes_html():
     url = "http://www.koeri.boun.edu.tr/scripts/lst2.asp"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # Admatic Auto Ads Kodu
-    admatic_code = '''
-    <div style="margin: 20px 0; text-align: center; min-height: 100px;">
-        <!-- Admatic AUTO ads START -->
-        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-        <!-- Admatic AUTO ads END -->
-    </div>
-    '''
-
-    # Online Ziyaretçi Sayacı (Who's Amung Us)
-    whos_amung_us_code = '''
-    <div style="text-align: center; margin: 25px 0;">
-        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-    </div>
-    '''
+    earthquakes = []
 
     try:
         req = urllib.request.Request(url, headers=headers)
-        # Kandilli ISO-8859-9 (Türkçe) karakter seti kullanır
         response = urllib.request.urlopen(req, timeout=15)
         html_content = response.read().decode('iso-8859-9')
 
-        # <pre> etiketleri arasındaki ham metni çek
         soup = BeautifulSoup(html_content, 'html.parser')
         pre_tag = soup.find('pre')
 
-        if not pre_tag:
-            print("Kandilli veri formatı okunamadı.")
-            return
-
-        lines = pre_tag.text.split('\n')
-        earthquakes = []
-
-        # Başlık satırlarını atlayıp verileri işle
-        for line in lines[5:]:
-            line = line.strip()
-            if not line or line.startswith('--------------'):
-                continue
-            
-            parts = re.split(r'\s+', line)
-            if len(parts) >= 9:
-                date = parts[0]
-                time = parts[1][:5]  # HH:MM
-                
-                # Büyüklük tespiti (MD, ML, Mw kolonları içerisinden en doğru ML/Mw seçimi)
-                try:
-                    mag_val = float(parts[6])  # Genelde ML büyüklüğü
-                except ValueError:
+        if pre_tag:
+            lines = pre_tag.text.split('\n')
+            for line in lines[5:]:
+                line = line.strip()
+                if not line or line.startswith('--------------'):
                     continue
-
-                # SADECE 4.0 VE ÜZERİ DEPREMLERİ FİLTRELE
-                if mag_val >= 4.0:
-                    # Yer adı parçalarını birleştir (İl/İlçe parantezlerini düzgün alması için)
-                    location = " ".join(parts[8:-1]) 
+                
+                parts = re.split(r'\s+', line)
+                if len(parts) >= 9:
+                    date = parts[0]
+                    time = parts[1][:5]
                     depth = parts[4]
 
-                    earthquakes.append({
-                        "date": date,
-                        "time": time,
-                        "mag": f"{mag_val:.1f}",
-                        "depth": depth,
-                        "location": location
-                    })
+                    try:
+                        mag_val = float(parts[6])  # ML Büyüklüğü
+                    except ValueError:
+                        continue
 
-        # Tablo HTML Satırlarını Oluştur
-        rows_html = ""
-        if earthquakes:
-            for eq in earthquakes:
-                rows_html += f'''
-                <tr>
-                    <td><strong>{eq['time']}</strong> <small style="color:#666;">({eq['date']})</small></td>
-                    <td><span class="mag mag-high">{eq['mag']}</span></td>
-                    <td><strong>{eq['location']}</strong></td>
-                    <td>{eq['depth']} km</td>
-                </tr>
-                '''
-        else:
-            rows_html = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #666;">Son saatlerde 4.0 ve üzeri büyüklükte deprem kaydedilmedi.</td></tr>'
+                    # SADECE 4.0 VE ÜZERİ DEPREMLERİ AL
+                    if mag_val >= 4.0:
+                        raw_location = " ".join(parts[8:])
+                        location = re.sub(r'\s+(İlksel|REVISE\d*).*$', '', raw_location, flags=re.IGNORECASE)
+                        
+                        earthquakes.append({
+                            "date": date,
+                            "time": time,
+                            "mag": f"{mag_val:.1f}",
+                            "depth": depth,
+                            "location": location.strip()
+                        })
+    except Exception as e:
+        print(f"Deprem verisi çekilirken hata: {e}")
 
-        # SEO Uyumlu Tam HTML Çıktısı
-        tz_tr = datetime.timezone(datetime.timedelta(hours=3))
-        now_str = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
+    # Deprem Kartları HTML Yapısını Oluşturma
+    cards_html = ""
+    if earthquakes:
+        for eq in earthquakes:
+            mag = float(eq['mag'])
+            badge_class = 'bg-high' if mag >= 5.0 else 'bg-medium'
+            cards_html += f'''
+            <div class="eq-item">
+                <div class="eq-left">
+                    <div class="eq-location">📍 {eq['location']}</div>
+                    <div class="eq-meta">📅 {eq['date']} - {eq['time']} | 🔽 Derinlik: {eq['depth']} km</div>
+                </div>
+                <div class="eq-badge {badge_class}">{eq['mag']}</div>
+            </div>
+            '''
+    else:
+        cards_html = '<div class="loading">Son kaydedilen 4.0 veya üzeri deprem bulunmamaktadır.</div>'
 
-        full_page_html = f'''<!DOCTYPE html>
+    # HTML Şablonu
+    full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Son Depremler (4.0+ Üzeri) - Canlı Kandilli Rasathanesi Listesi - nearadin.net</title>
-    <meta name="description" content="Türkiye ve yakın çevresinde meydana gelen 4.0 ve üzeri büyüklükteki son dakika canlı deprem listesi. Kandilli Rasathanesi anlık verileri." />
-    <link rel="canonical" href="https://nearadin.net/son-depremler/" />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Son Depremler (4.0 ve Üzeri) - nearadin.net" />
-    <meta property="og:description" content="Kandilli Rasathanesi verileriyle Türkiye'deki 4.0 üzeri son depremler." />
-    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
-
+    <title>Son Depremler - nearadin.net</title>
+    <meta name="description" content="Kandilli ve AFAD verileriyle son dakika anlık deprem listesi." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f6f9; color: #1c1e21; padding-bottom: 40px; }}
-        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        header {{ background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; position: sticky; top: 0; z-index: 100; }}
         header a {{ color: white; text-decoration: none; }}
-        .container {{ max-width: 800px; margin: 20px auto; padding: 0 12px; }}
-        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }}
-        .info-box {{ background: #fff3cd; color: #856404; padding: 12px; border-radius: 6px; font-size: 13px; margin-bottom: 15px; border: 1px solid #ffeeba; }}
-        .back-btn {{ display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }}
-        h1 {{ font-size: 20px; color: #111; margin-bottom: 15px; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
         
-        table {{ width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; }}
-        th, td {{ padding: 12px 10px; border-bottom: 1px solid #eee; }}
-        th {{ background: #0056b3; color: white; font-weight: 600; }}
-        
-        .mag {{ font-weight: bold; padding: 4px 8px; border-radius: 4px; color: white; display: inline-block; }}
-        .mag-high {{ background: #d93025; }} /* 4.0 ve üzeri Kırmızı */
+        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
+        h1 {{ font-size: 20px; margin-bottom: 8px; color: #0056b3; text-align: center; }}
+        p.subtitle {{ color: #65676b; font-size: 13px; text-align: center; margin-bottom: 20px; }}
 
-        .status-footer {{ margin-top: 15px; font-size: 12px; color: #65676b; text-align: right; }}
+        .eq-list {{ display: flex; flex-direction: column; gap: 12px; }}
+        .eq-item {{ display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }}
+        
+        .eq-left {{ display: flex; flex-direction: column; gap: 4px; text-align: left; }}
+        .eq-location {{ font-size: 15px; font-weight: bold; color: #1c1e21; }}
+        .eq-meta {{ font-size: 12px; color: #65676b; }}
+        
+        .eq-badge {{ min-width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: white; flex-shrink: 0; margin-left: 10px; }}
+        
+        .bg-medium {{ background-color: #f57c00; }}
+        .bg-high {{ background-color: #d32f2f; }}
+
+        .loading {{ text-align: center; padding: 30px 0; color: #65676b; font-size: 14px; }}
+        .btn-home {{ display: block; text-align: center; background: #e4e6eb; color: #050505; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }}
     </style>
 </head>
 <body>
-
-    <header>
-        <a href="/">nearadin.net - Son Dakika</a>
-    </header>
-
+    <header><a href="/">nearadin.net - Son Depremler</a></header>
+    
     <div class="container">
-        <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        
         <div class="card">
-            <h1>🚨 Son Depremler (Canlı Akış)</h1>
+            <h1>🔴 Son Depremler (4.0+)</h1>
+            <p class="subtitle">Kandilli Rasathanesi verileriyle Türkiye ve yakın çevresinde meydana gelen 4.0 ve üzeri depremler.</p>
             
-            <div class="info-box">
-                📌 <strong>Not:</strong> Sayfamızda arama motoru standartları ve kullanıcı deneyimi gereği <strong>sadece 4.0 ve üzeri büyüklükteki</strong> hissettiren depremler anlık olarak listelenmektedir. Veriler Kandilli Rasathanesi kaynaklıdır.
+            <div class="eq-list">
+                {cards_html}
             </div>
 
-            {admatic_code}
-
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Saat / Tarih</th>
-                            <th>Büyüklük</th>
-                            <th>Yer</th>
-                            <th>Derinlik</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows_html}
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="status-footer">
-                Son Güncelleme: <strong>{now_str}</strong>
-            </div>
-
-            {whos_amung_us_code}
+            <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
     </div>
 
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>'''
+</html>
+'''
 
-        # Klasör ve Dosya Oluşturma (`/son-depremler/index.html`)
-        import os
-        os.makedirs("son-depremler", exist_ok=True)
-        with open("son-depremler/index.html", "w", encoding="utf-8") as f:
-            f.write(full_page_html)
+    # Dosyayı kaydet
+    os.makedirs("son-depremler", exist_ok=True)
+    with open("son-depremler/index.html", "w", encoding="utf-8") as f:
+        f.write(full_html)
 
-        print("Son Depremler sayfası (4.0+ filtreli) başarıyla oluşturuldu.")
-
-    except Exception as e:
-        print(f"Deprem verisi çekilirken hata: {e}")
+    print(f"son-depremler/index.html başarıyla güncellendi. Toplam 4.0+ deprem sayısı: {len(earthquakes)}")
 
 if __name__ == "__main__":
-    fetch_koeri_earthquakes()
+    generate_earthquakes_html()
