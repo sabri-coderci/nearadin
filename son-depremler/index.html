@@ -3,65 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Son Depremler - Canlı Deprem Listesi - nearadin.net</title>
-    <meta name="description" content="Türkiye ve yakın çevresindeki son dakika canlı deprem listesi." />
+    <title>Son Depremler (4.0+ Üzeri) - Canlı Deprem Listesi - nearadin.net</title>
+    <meta name="description" content="Türkiye ve yakın çevresindeki 4.0 ve üzeri büyüklükte son dakika canlı deprem listesi." />
+    <link rel="canonical" href="https://nearadin.net/son-depremler/" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Son Depremler (4.0 ve Üzeri) - nearadin.net" />
+    <meta property="og:description" content="Kandilli Rasathanesi verileriyle Türkiye'deki 4.0 üzeri son depremler." />
+    <meta property="og:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; margin: 0; padding: 15px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h1 { font-size: 20px; color: #111; margin-bottom: 15px; text-align: center; }
-        table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #0056b3; color: white; }
-        .mag { font-weight: bold; padding: 3px 6px; border-radius: 4px; color: white; background: #28a745; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #1c1e21; padding: 15px 12px 40px 12px; }
+        header { background-color: #0056b3; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; margin: -15px -12px 20px -12px; }
+        header a { color: white; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: 600; font-size: 14px; }
+        h1 { font-size: 20px; color: #111; margin-bottom: 15px; }
+        
+        .info-box { background: #fff3cd; color: #856404; padding: 12px; border-radius: 6px; font-size: 13px; margin-bottom: 15px; border: 1px solid #ffeeba; line-height: 1.4; }
+        
+        table { width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; }
+        th, td { padding: 12px 10px; border-bottom: 1px solid #eee; }
+        th { background: #0056b3; color: white; font-weight: 600; }
+        
+        .mag { font-weight: bold; padding: 4px 8px; border-radius: 4px; color: white; display: inline-block; }
         .mag-high { background: #dc3545; }
-        .back-btn { display: inline-block; margin-bottom: 15px; color: #0056b3; text-decoration: none; font-weight: bold; }
+
+        .ad-container { margin: 20px 0; text-align: center; min-height: 100px; }
     </style>
 </head>
 <body>
+
+    <header>
+        <a href="/">nearadin.net - Son Dakika</a>
+    </header>
+
     <div class="container">
         <a href="/" class="back-btn">← Ana Sayfaya Dön</a>
-        <h1>Son Depremler (Canlı Akış)</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Saat</th>
-                    <th>Büyüklük</th>
-                    <th>Yer</th>
-                </tr>
-            </thead>
-            <tbody id="eq-data">
-                <tr><td colspan="3" style="text-align:center;">Veriler yükleniyor...</td></tr>
-            </tbody>
-        </table>
+        <h1>🚨 Son Depremler (Canlı Akış)</h1>
+
+        <!-- 4.0 Üzeri Bilgilendirme Kutusu -->
+        <div class="info-box">
+            📌 <strong>Not:</strong> Sayfamızda kullanıcı deneyimi ve arama motoru standartları gereği <strong>sadece 4.0 ve üzeri büyüklükteki</strong> depremler listelenmektedir. Veriler Kandilli Rasathanesi kaynaklıdır.
+        </div>
+
+        <!-- Admatic AUTO ads START -->
+        <div class="ad-container">
+            <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+        </div>
+        <!-- Admatic AUTO ads END -->
+
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Saat / Tarih</th>
+                        <th>Büyüklük</th>
+                        <th>Yer</th>
+                        <th>Derinlik</th>
+                    </tr>
+                </thead>
+                <tbody id="eq-data">
+                    <tr><td colspan="4" style="text-align:center; padding: 20px;">Veriler yükleniyor...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Who's Amung Us Canlı Ziyaretçi Sayacı -->
+        <div style="text-align: center; margin-top: 25px;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
     </div>
 
     <script>
         async function loadLocalEarthquakes() {
             const tbody = document.getElementById('eq-data');
             try {
-                // Kendi sunucumuzdaki json dosyasını çekiyoruz (CORS engeli İMKANSIZDIR)
+                // Önbelleği önlemek için timestamp ekliyoruz
                 const res = await fetch('./earthquakes.json?v=' + new Date().getTime());
                 const data = await res.json();
 
                 if (!data || data.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">Deprem kaydı bulunamadı.</td></tr>';
+                    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">Son saatlerde 4.0 ve üzeri deprem kaydedilmedi.</td></tr>';
                     return;
                 }
 
                 tbody.innerHTML = '';
                 data.forEach(eq => {
-                    const magVal = parseFloat(eq.mag) || 0;
-                    const isHigh = magVal >= 4.0;
                     tbody.innerHTML += `
                         <tr>
-                            <td>${eq.time}</td>
-                            <td><span class="mag ${isHigh ? 'mag-high' : ''}">${eq.mag}</span></td>
-                            <td>${eq.location}</td>
+                            <td><strong>${eq.time}</strong> <small style="color:#666;">(${eq.date})</small></td>
+                            <td><span class="mag mag-high">${eq.mag}</span></td>
+                            <td><strong>${eq.location}</strong></td>
+                            <td>${eq.depth} km</td>
                         </tr>
                     `;
                 });
             } catch (err) {
-                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:red;">Veri okunamadı. Otomatik güncelleme bekleniyor...</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:red; padding: 20px;">Veri okunamadı. Otomatik güncelleme bekleniyor...</td></tr>';
             }
         }
 
