@@ -84,7 +84,7 @@
     <script>
         async function fetchCryptoData() {
             try {
-                const response = await fetch('https://api.coincap.io/v2/assets?limit=20');
+                const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false');
                 const data = await response.json();
                 
                 const listEl = document.getElementById('cryptoList');
@@ -92,10 +92,10 @@
                 listEl.innerHTML = '';
                 loadingEl.style.display = 'none';
 
-                if(data && data.data) {
-                    data.data.forEach(coin => {
-                        const price = parseFloat(coin.priceUsd).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-                        const change = parseFloat(coin.changePercent24Hr).toFixed(2);
+                if(Array.isArray(data) && data.length > 0) {
+                    data.forEach((coin, index) => {
+                        const price = coin.current_price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                        const change = coin.price_change_percentage_24h ? coin.price_change_percentage_24h.toFixed(2) : '0.00';
                         const changeClass = change >= 0 ? 'positive' : 'negative';
                         const changeSign = change >= 0 ? '+' : '';
 
@@ -103,7 +103,7 @@
                         li.className = 'crypto-item';
                         li.innerHTML = `
                             <div class="crypto-left">
-                                <span class="crypto-rank">#${coin.rank}</span>
+                                <span class="crypto-rank">#${index + 1}</span>
                                 <div class="crypto-info">
                                     <span class="crypto-name">${coin.name}</span>
                                     <span class="crypto-symbol">${coin.symbol}</span>
