@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nöbetçi Eczaneler - nearadin.net</title>
-    <meta name="description" content="Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri." />
+    <meta name="description" content="Türkiye'nin tüm il ve ilçeleri için güncel nöbetçi eczane listesi ve canlı eczane arama servisi." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
         .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
+        
         .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-align: center; }
         h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
-        p { color: #65676b; font-size: 14px; margin-bottom: 20px; }
-        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        p { color: #65676b; font-size: 14px; margin-bottom: 15px; }
+
+        /* İl Seçim Alanı */
+        .city-select-box { margin-bottom: 20px; }
+        .city-select-box label { display: block; font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #333; }
+        .city-select-box select { width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; background: #fff; outline: none; cursor: pointer; }
+
+        /* Widget Alanı */
+        .widget-container { margin: auto; text-align: center; width: 100%; max-width: 400px; }
+        .widget-container img { width: 100%; border-radius: 2px; }
+        .widget-container iframe { width: 100%; height: 350px; border: none; margin-top: 10px; }
+
+        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
     </style>
 </head>
 <body>
-    
+
+    <!-- Header (Ortak Menü Yapısı) -->
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">Nöbetçi Eczaneler - nearadin.net</a>
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
@@ -49,42 +62,140 @@
             }
         });
     </script>
-    
+
     <div class="container">
         <div class="card">
-            <h1>Nöbetçi Eczaneler - nearadin.net</h1>
-            <p>Türkiye geneli en güncel nöbetçi eczane listesi ve iletişim bilgileri.</p>
-            <p>Bu servis alanı canlı veri sağlayıcılarıyla otomatik senkronize edilmektedir.</p>
+            <h1>🏥 Nöbetçi Eczaneler</h1>
+            <p>Bulunduğunuz ili seçerek güncel nöbetçi eczane listesini görüntüleyebilirsiniz.</p>
+            
+            <!-- İl Seçim Menüsü -->
+            <div class="city-select-box">
+                <label for="citySelect">İl Seçiniz:</label>
+                <select id="citySelect" onchange="changeCity(this)">
+                    <option value="34" data-slug="istanbul" selected>34 - İstanbul</option>
+                    <option value="1" data-slug="adana">01 - Adana</option>
+                    <option value="2" data-slug="adiyaman">02 - Adıyaman</option>
+                    <option value="3" data-slug="afyonkarahisar">03 - Afyonkarahisar</option>
+                    <option value="4" data-slug="agri">04 - Ağrı</option>
+                    <option value="5" data-slug="amasya">05 - Amasya</option>
+                    <option value="6" data-slug="ankara">06 - Ankara</option>
+                    <option value="7" data-slug="antalya">07 - Antalya</option>
+                    <option value="8" data-slug="artvin">08 - Artvin</option>
+                    <option value="9" data-slug="aydin">09 - Aydın</option>
+                    <option value="10" data-slug="balikesir">10 - Balıkesir</option>
+                    <option value="11" data-slug="bilecik">11 - Bilecik</option>
+                    <option value="12" data-slug="bingol">12 - Bingöl</option>
+                    <option value="13" data-slug="bitlis">13 - Bitlis</option>
+                    <option value="14" data-slug="bolu">14 - Bolu</option>
+                    <option value="15" data-slug="burdur">15 - Burdur</option>
+                    <option value="16" data-slug="bursa">16 - Bursa</option>
+                    <option value="17" data-slug="canakkale">17 - Çanakkale</option>
+                    <option value="18" data-slug="cankiri">18 - Çankırı</option>
+                    <option value="19" data-slug="corum">19 - Çorum</option>
+                    <option value="20" data-slug="denizli">20 - Denizli</option>
+                    <option value="21" data-slug="diyarbakir">21 - Diyarbakır</option>
+                    <option value="22" data-slug="edirne">22 - Edirne</option>
+                    <option value="23" data-slug="elazig">23 - Elazığ</option>
+                    <option value="24" data-slug="erzincan">24 - Erzincan</option>
+                    <option value="25" data-slug="erzurum">25 - Erzurum</option>
+                    <option value="26" data-slug="eskisehir">26 - Eskişehir</option>
+                    <option value="27" data-slug="gaziantep">27 - Gaziantep</option>
+                    <option value="28" data-slug="giresun">28 - Giresun</option>
+                    <option value="29" data-slug="gumushane">29 - Gümüşhane</option>
+                    <option value="30" data-slug="hakkari">30 - Hakkari</option>
+                    <option value="31" data-slug="hatay">31 - Hatay</option>
+                    <option value="32" data-slug="isparta">32 - Isparta</option>
+                    <option value="33" data-slug="mersin">33 - Mersin</option>
+                    <option value="35" data-slug="izmir">35 - İzmir</option>
+                    <option value="36" data-slug="kars">36 - Kars</option>
+                    <option value="37" data-slug="kastamonu">37 - Kastamonu</option>
+                    <option value="38" data-slug="kayseri">38 - Kayseri</option>
+                    <option value="39" data-slug="kirklareli">39 - Kırklareli</option>
+                    <option value="40" data-slug="kirsehir">40 - Kırşehir</option>
+                    <option value="41" data-slug="kocaeli">41 - Kocaeli</option>
+                    <option value="42" data-slug="konya">42 - Konya</option>
+                    <option value="43" data-slug="kutahya">43 - Kütahya</option>
+                    <option value="44" data-slug="malatya">44 - Malatya</option>
+                    <option value="45" data-slug="manisa">45 - Manisa</option>
+                    <option value="46" data-slug="kahramanmaras">46 - Kahramanmaraş</option>
+                    <option value="47" data-slug="mardin">47 - Mardin</option>
+                    <option value="48" data-slug="mugla">48 - Muğla</option>
+                    <option value="49" data-slug="mus">49 - Muş</option>
+                    <option value="50" data-slug="nevsehir">50 - Nevşehir</option>
+                    <option value="51" data-slug="nigde">51 - Niğde</option>
+                    <option value="52" data-slug="ordu">52 - Ordu</option>
+                    <option value="53" data-slug="rize">53 - Rize</option>
+                    <option value="54" data-slug="sakarya">54 - Sakarya</option>
+                    <option value="55" data-slug="samsun">55 - Samsun</option>
+                    <option value="56" data-slug="siirt">56 - Siirt</option>
+                    <option value="57" data-slug="sinop">57 - Sinop</option>
+                    <option value="58" data-slug="sivas">58 - Sivas</option>
+                    <option value="59" data-slug="tekirdag">59 - Tekirdağ</option>
+                    <option value="60" data-slug="tokat">60 - Tokat</option>
+                    <option value="61" data-slug="trabzon">61 - Trabzon</option>
+                    <option value="62" data-slug="tunceli">62 - Tunceli</option>
+                    <option value="63" data-slug="sanliurfa">63 - Şanlıurfa</option>
+                    <option value="64" data-slug="usak">64 - Uşak</option>
+                    <option value="65" data-slug="van">65 - Van</option>
+                    <option value="66" data-slug="yozgat">66 - Yozgat</option>
+                    <option value="67" data-slug="zonguldak">67 - Zonguldak</option>
+                    <option value="68" data-slug="aksaray">68 - Aksaray</option>
+                    <option value="69" data-slug="bayburt">69 - Bayburt</option>
+                    <option value="70" data-slug="karaman">70 - Karaman</option>
+                    <option value="71" data-slug="kirikkale">71 - Kırıkkale</option>
+                    <option value="72" data-slug="batman">72 - Batman</option>
+                    <option value="73" data-slug="sirnak">73 - Şırnak</option>
+                    <option value="74" data-slug="bartin">74 - Bartın</option>
+                    <option value="75" data-slug="ardahan">75 - Ardahan</option>
+                    <option value="76" data-slug="igdir">76 - Iğdır</option>
+                    <option value="77" data-slug="yalova">77 - Yalova</option>
+                    <option value="78" data-slug="karabuk">78 - Karabük</option>
+                    <option value="79" data-slug="kilis">79 - Kilis</option>
+                    <option value="80" data-slug="osmaniye">80 - Osmaniye</option>
+                    <option value="81" data-slug="duzce">81 - Düzce</option>
+                </select>
+            </div>
+
+            <!-- İstediğiniz Yapı -->
+            <div class="widget-container">
+                <a id="eczaneLink" href="https://www.eczaneler.gen.tr/nobetci-istanbul" target="_blank">
+                    <img id="eczaneImg" src="https://www.eczaneler.gen.tr/resimler/nobetci-eczane.jpg" alt="İstanbul nöbetçi eczaneleri">
+                </a>
+                <iframe id="eczaneIframe" src="https://www.eczaneler.gen.tr/iframe.php?lokasyon=34" name="İstanbul nöbetçi eczaneleri"></iframe>
+            </div>
+
             <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
     </div>
-    
+
+    <script>
+        function changeCity(selectEl) {
+            const selectedOption = selectEl.options[selectEl.selectedIndex];
+            const lokasyonId = selectedOption.value;
+            const slug = selectedOption.getAttribute('data-slug');
+            const cityName = selectedOption.text.split(' - ')[1];
+
+            const linkEl = document.getElementById('eczaneLink');
+            const iframeEl = document.getElementById('eczaneIframe');
+            const imgEl = document.getElementById('eczaneImg');
+
+            // Bağlantıları ve kaynakları güncelle
+            linkEl.href = `https://www.eczaneler.gen.tr/nobetci-${slug}`;
+            iframeEl.src = `https://www.eczaneler.gen.tr/iframe.php?lokasyon=${lokasyonId}`;
+            iframeEl.name = `${cityName} nöbetçi eczaneleri`;
+            imgEl.alt = `${cityName} nöbetçi eczaneleri`;
+        }
+    </script>
+
+    <!-- Footer (Ortak Footer Yapısı) -->
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
-                <div style="flex: 1; min-width: 200px;">
-                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
-                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
-                </div>
-                <div style="flex: 1; min-width: 140px;">
-                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
                 <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
