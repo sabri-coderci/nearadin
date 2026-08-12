@@ -1,225 +1,161 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film İzle - Özel Sinema Portalı ve HD Film Seçkisi | nearadin.net</title>
-    <meta name="description" content="En güncel Türkçe dublaj ve altyazılı filmler, aksiyon, macera ve gerilim yapımları tek sayfada. Yüksek kalitede kesintisiz film izleyin." />
-    <meta name="keywords" content="film izle, hd film izle, türkçe dublaj film, kesintisiz sinema, online film izle" />
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
-        
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; }
-        p.subtitle { color: #65676b; font-size: 14px; margin-bottom: 20px; }
-        
-        /* Video Oynatıcı Alanı */
-        .player-container { display: none; margin-bottom: 25px; border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .player-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
-        .player-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .player-title { background: #1c1e21; color: #fff; padding: 12px 15px; font-size: 14px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-        .close-player { background: #de350b; color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; }
-
-        /* Film Liste Stilleri */
-        .movie-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .movie-item { background: #f9f9f9; border: 1px solid #e4e6eb; border-radius: 8px; padding: 12px; display: flex; gap: 12px; cursor: pointer; transition: background 0.2s, transform 0.1s; }
-        .movie-item:hover { background: #f0f4f9; transform: translateY(-1px); }
-        .movie-thumb { position: relative; width: 120px; height: 70px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background: #333; }
-        .movie-thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .play-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 86, 179, 0.85); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        
-        .movie-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; flex-grow: 1; }
-        .movie-title { font-size: 14px; font-weight: bold; color: #1c1e21; line-height: 1.3; }
-        .movie-meta { font-size: 12px; color: #65676b; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        .movie-badge { background: #e4e6eb; color: #0056b3; font-weight: 600; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
-
-        /* SEO İçerik Alanı */
-        .seo-text { margin-top: 30px; border-top: 1px solid #e4e6eb; padding-top: 20px; font-size: 13px; color: #4b4d52; line-height: 1.7; }
-        .seo-text h2 { font-size: 16px; color: #0056b3; margin-bottom: 8px; }
-
-        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
-    </style>
-</head>
-<body>
+<!-- SİNEMA KONTROL MERKEZİ VE OYNATICI -->
+<div id="sinema-kontrol-merkezi">
+    <div class="sinema-wrapper">
+        <div id="izlenen-bilgi">
+            <span class="canli-etiket">ŞU AN İZLENİYOR</span>
+            <span id="film-adi-aktif">Bir film seçin...</span>
+        </div>
+        <button id="film-kapat-btn" onclick="filmDurdur()">KAPAT ✕</button>
+    </div>
     
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
-    <!-- Header (Ortak Menü Yapısı) -->
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
-        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
-        
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
-            <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-            </ul>
-        </nav>
-    </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('hamburgerBtn');
-            const nav = document.getElementById('dropdownNav');
-            if (btn && nav) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-                });
-                document.addEventListener('click', function(e) {
-                    if (!nav.contains(e.target) && e.target !== btn) {
-                        nav.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
-
-    <div class="container">
-        <div class="card">
-            <h1>🎬 Özel Sinema Portalı - Seçkin Filmler</h1>
-            <p class="subtitle">En çok izlenen yüksek tempolu aksiyon, macera ve gerilim filmlerini aynı sayfada kesintisiz izleyin.</p>
-            
-            <!-- Canlı Oynatıcı -->
-            <div id="playerContainer" class="player-container">
-                <div class="player-title">
-                    <span id="nowPlayingTitle">Film Yükleniyor...</span>
-                    <button class="close-player" onclick="closePlayer()">✕ Kapat</button>
-                </div>
-                <div class="player-wrapper">
-                    <iframe id="movieIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Film Arşivi Listesi -->
-            <ul class="movie-list">
-                
-                <!-- Film 1 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/aYbUTg-bfUU', 'Türkçe Dublaj Aksiyon Dolu Yabancı Film - Full HD')">
-                    <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/aYbUTg-bfUU/hqdefault.jpg" alt="Aksiyon Filmi İzle">
-                        <div class="play-badge">▶</div>
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title">Aksiyon Dolu Yabancı Film - Türkçe Dublaj Full HD İzle</div>
-                        <div class="movie-meta">
-                            <span class="movie-badge">Aksiyon / Macera</span>
-                            <span>• 1 sa 42 dk</span>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Film 2 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/vcMqEy6udI8', 'Kesintisiz Yabancı Sinema Kuşağı - Türkçe Dublaj')">
-                    <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/vcMqEy6udI8/hqdefault.jpg" alt="Türkçe Dublaj Film">
-                        <div class="play-badge">▶</div>
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title">Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj Tek Parça</div>
-                        <div class="movie-meta">
-                            <span class="movie-badge">Gerilim / Suç</span>
-                            <span>• 1 sa 30 dk</span>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Film 3 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/U_uL_kFVdMU', 'Özel Sinema Seçkisi - Türkçe Dublaj Full İzle')">
-                    <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/U_uL_kFVdMU/hqdefault.jpg" alt="Full HD Film İzle">
-                        <div class="play-badge">▶</div>
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title">Özel Sinema Seçkisi - Türkçe Dublaj Yüksek Çözünürlük</div>
-                        <div class="movie-meta">
-                            <span class="movie-badge">Macera / Dram</span>
-                            <span>• 1 sa 48 dk</span>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Film 4 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/F-VEUnkkrPQ', 'En İyi Yabancı Aksiyon Filmi - Tek Parça HD')">
-                    <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/F-VEUnkkrPQ/hqdefault.jpg" alt="En İyi Aksiyon Filmi">
-                        <div class="play-badge">▶</div>
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title">En İyi Yabancı Aksiyon Filmi - Tek Parça Kesintisiz HD</div>
-                        <div class="movie-meta">
-                            <span class="movie-badge">Aksiyon</span>
-                            <span>• 3 sa 12 dk</span>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Film 5 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/U06i7AO53mM', 'Bilinmeyen Adada Hayatta Kalma Mücadelesi - Türkçe Dublaj')">
-                    <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/U06i7AO53mM/hqdefault.jpg" alt="Hayatta Kalma Filmi İzle">
-                        <div class="play-badge">▶</div>
-                    </div>
-                    <div class="movie-info">
-                        <div class="movie-title">Bilinmeyen Adada Hayatta Kalma Mücadelesi - Macera Filmi</div>
-                        <div class="movie-meta">
-                            <span class="movie-badge">Hayatta Kalma / Gizem</span>
-                            <span>• 1 sa 30 dk</span>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-
-            <!-- SEO İçerik Metni -->
-            <section class="seo-text">
-                <h2>Aynı Sayfada Hızlı ve Yüksek Kaliteli Film İzleme Deneyimi</h2>
-                <p>Sinemaseverler için özenle hazırlanan portalımızda, en popüler <strong>film izle</strong> seçeneklerini bir araya getiriyoruz. Farklı türlerdeki sürükleyici yapımları, harici sayfalara yönlenmeden doğrudan entegre ekran üzerinden yüksek çözünürlükle izleyebilirsiniz. Türkçe dublaj ve kesintisiz yayın standartlarıyla güncellenen arşivimizde aradığınız filmlere tek tıkla ulaşabilirsiniz.</p>
-            </section>
-
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
+    <div id="video-oynatici-alan">
+        <div class="video-kapsayici">
+            <iframe id="film-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen frameborder="0"></iframe>
         </div>
     </div>
+</div>
 
-    <script>
-        function playMovie(embedUrl, title) {
-            const container = document.getElementById('playerContainer');
-            const iframe = document.getElementById('movieIframe');
-            const titleEl = document.getElementById('nowPlayingTitle');
-            
-            iframe.src = embedUrl + '?autoplay=1';
-            titleEl.innerText = title;
-            container.style.display = 'block';
-            
-            container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+<!-- FİLM GALERİSİ -->
+<section class="film-galerisi">
+    <header>
+        <h2 class="galeri-baslik">Özel Sinema Seçkisi - Türkçe Dublaj</h2>
+        <p class="galeri-alt">nearadin.net tarafından derlenen yüksek çözünürlüklü yabancı filmler.</p>
+    </header>
+    <div id="canli-sonuc-listesi">
+        <div class="yukleniyor">Film arşivi yükleniyor...</div>
+    </div>
+</section>
+
+<style>
+    :root { 
+        --sinema-ana: #e74c3c; 
+        --sinema-koyu: #121212; 
+    }
+    
+    #sinema-kontrol-merkezi {
+        position: sticky; top: 0; z-index: 9999;
+        background: var(--sinema-koyu); color: #fff;
+        padding: 10px 15px; border-bottom: 3px solid var(--sinema-ana);
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    
+    .sinema-wrapper { 
+        display: flex; align-items: center; justify-content: space-between; 
+        max-width: 800px; margin: auto; 
+    }
+
+    #izlenen-bilgi { flex: 1; min-width: 0; margin-right: 15px; }
+    .canli-etiket { font-size: 10px; color: var(--sinema-ana); font-weight: bold; letter-spacing: 1px; }
+    #film-adi-aktif { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    #film-kapat-btn {
+        background: var(--sinema-ana); color: white; border: none;
+        padding: 6px 14px; border-radius: 4px; cursor: pointer;
+        font-weight: bold; font-size: 11px; flex-shrink: 0;
+        transition: 0.2s; display: none;
+    }
+    #film-kapat-btn:hover { background: #c0392b; }
+
+    #video-oynatici-alan { max-width: 800px; margin: 12px auto 5px; display: none; }
+    .video-kapsayici { 
+        position: relative; padding-bottom: 56.25%; height: 0; 
+        overflow: hidden; border-radius: 8px; background: #000;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5); 
+    }
+    .video-kapsayici iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    .film-galerisi { max-width: 800px; margin: 30px auto; font-family: 'Segoe UI', sans-serif; padding: 0 15px; }
+    .galeri-baslik { font-size: 24px; font-weight: 800; color: #222; margin: 0; }
+    .galeri-alt { color: #777; margin-bottom: 25px; font-size: 14px; }
+    
+    .film-kart-ozel {
+        display: flex; align-items: center; padding: 15px; background: #fff;
+        border-bottom: 1px solid #eee; cursor: pointer; transition: 0.3s;
+        border-radius: 6px; margin-bottom: 8px;
+    }
+    .film-kart-ozel:hover { background: #fff8f7; transform: translateX(5px); }
+    .film-kart-ozel.aktif { border-left: 6px solid var(--sinema-ana); background: #fef5f4; }
+    
+    .film-resim { width: 110px; height: 65px; border-radius: 6px; margin-right: 15px; object-fit: cover; flex-shrink: 0; }
+    .film-metin { font-weight: 600; font-size: 15px; color: #333; flex: 1; margin: 0; line-height: 1.3; }
+    .oynat-simge { color: var(--sinema-ana); font-size: 20px; margin-left: 10px; }
+    .yukleniyor { text-align: center; padding: 50px; color: #888; font-style: italic; }
+</style>
+
+<script>
+    // zentii25 / Filmler Türkçe kaynağından derlenen özel içerik listesi
+    const filmArsivi = [
+        {
+            id: 'aYbUTg-bfUU',
+            baslik: 'Aksiyon Dolu Yabancı Film - Türkçe Dublaj Full HD',
+            resim: 'https://img.youtube.com/vi/aYbUTg-bfUU/hqdefault.jpg'
+        },
+        {
+            id: 'vcMqEy6udI8',
+            baslik: 'Sürükleyici Gerilim & Macera - Türkçe Dublaj Tek Parça',
+            resim: 'https://img.youtube.com/vi/vcMqEy6udI8/hqdefault.jpg'
+        },
+        {
+            id: 'U_uL_kFVdMU',
+            baslik: 'Yüksek Tempolu Sinema Kuşağı - Türkçe Dublaj İzle',
+            resim: 'https://img.youtube.com/vi/U_uL_kFVdMU/hqdefault.jpg'
+        },
+        {
+            id: 'F-VEUnkkrPQ',
+            baslik: 'Kesintisiz Aksiyon & Suç Filmi - Full HD Sinema',
+            resim: 'https://img.youtube.com/vi/F-VEUnkkrPQ/hqdefault.jpg'
+        },
+        {
+            id: 'U06i7AO53mM',
+            baslik: 'Bilinmeyen Adada Hayatta Kalma Mücadelesi - Macera Filmi',
+            resim: 'https://img.youtube.com/vi/U06i7AO53mM/hqdefault.jpg'
         }
+    ];
 
-        function closePlayer() {
-            const container = document.getElementById('playerContainer');
-            const iframe = document.getElementById('movieIframe');
-            
-            iframe.src = '';
-            container.style.display = 'none';
-        }
-    </script>
+    function yukleFilmListesi() {
+        const container = document.getElementById('canli-sonuc-listesi');
+        container.innerHTML = '';
+        
+        filmArsivi.forEach(film => {
+            const card = document.createElement('article');
+            card.className = 'film-kart-ozel';
+            card.onclick = () => startMovie(film.id, film.baslik, card);
+            card.innerHTML = `
+                <img src="${film.resim}" class="film-resim" alt="${film.baslik}">
+                <h3 class="film-metin">${film.baslik}</h3>
+                <div class="oynat-simge">▶</div>
+            `;
+            container.appendChild(card);
+        });
+    }
 
-    <!-- Footer (Ortak Footer Yapısı) -->
-    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
-        <div style="max-width: 680px; margin: 0 auto;">
-            <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
-                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
+    function startMovie(id, title, el) {
+        const frame = document.getElementById('film-iframe');
+        const container = document.getElementById('video-oynatici-alan');
+        const btn = document.getElementById('film-kapat-btn');
+        const baslik = document.getElementById('film-adi-aktif');
+        
+        frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+        container.style.display = 'block';
+        btn.style.display = 'block';
+        baslik.innerText = title;
+        
+        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
+        el.classList.add('aktif');
+        
+        // Ekranı üstteki oynatıcıya yumuşak bir şekilde kaydır
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-</body>
-</html>
+    function filmDurdur() {
+        const frame = document.getElementById('film-iframe');
+        frame.src = '';
+        document.getElementById('video-oynatici-alan').style.display = 'none';
+        document.getElementById('film-kapat-btn').style.display = 'none';
+        document.getElementById('film-adi-aktif').innerText = 'Bir film seçin...';
+        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
+    }
+
+    // Sayfa yüklendiğinde listeyi çalıştır
+    document.addEventListener('DOMContentLoaded', yukleFilmListesi);
+</script>
