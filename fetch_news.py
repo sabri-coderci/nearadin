@@ -70,7 +70,7 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
             </ul>
         </nav>
     </header>
@@ -112,6 +112,7 @@ def get_footer_html():
                         <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
                         <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
                         <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
                     </ul>
                 </div>
@@ -123,6 +124,196 @@ def get_footer_html():
         </div>
     </footer>
     '''
+
+def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_code):
+    """film-izle/index.html Sayfasını Otomatik Oluşturur"""
+    os.makedirs("film-izle", exist_ok=True)
+    
+    film_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkçe Dublaj HD Film İzle - nearadin.net</title>
+    <meta name="description" content="nearadin.net özel sinema portalı. En güncel Türkçe dublaj yabancı filmler, aksiyon ve macera filmlerini kesintisiz izleyin." />
+    <link rel="canonical" href="https://nearadin.net/film-izle/" />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        :root {{ --sinema-ana: #e74c3c; --sinema-koyu: #121212; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
+        
+        .film-container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
+
+        /* Yapışkan Oynatıcı Barı */
+        #sinema-kontrol-merkezi {{
+            position: sticky; top: 50px; z-index: 999;
+            background: var(--sinema-koyu); color: #fff;
+            padding: 10px 14px; border-bottom: 3px solid var(--sinema-ana); width: 100%;
+            border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }}
+        .sinema-wrapper {{ display: flex; align-items: center; justify-content: space-between; }}
+        #izlenen-bilgi {{ flex: 1; min-width: 0; margin-right: 10px; }}
+        .canli-etiket {{ font-size: 9px; color: var(--sinema-ana); font-weight: bold; letter-spacing: 1px; display: block; }}
+        #film-adi-aktif {{ display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+
+        #film-kapat-btn {{
+            background: var(--sinema-ana); color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer;
+            font-weight: bold; font-size: 11px; flex-shrink: 0; display: none;
+        }}
+
+        #video-oynatici-alan {{ margin-top: 10px; display: none; width: 100%; }}
+        .video-kapsayici {{ 
+            position: relative; padding-bottom: 56.25%; height: 0; 
+            overflow: hidden; border-radius: 8px; background: #000; 
+        }}
+        .video-kapsayici iframe {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }}
+
+        /* Kart Yapıları */
+        .film-kart-ozel {{
+            display: flex; align-items: center; padding: 10px; background: #fff;
+            border: 1px solid #e4e6eb; border-radius: 8px; margin-bottom: 10px;
+            cursor: pointer; transition: transform 0.1s ease, background 0.2s; width: 100%;
+        }}
+        .film-kart-ozel:hover {{ background: #fff8f7; }}
+        .film-kart-ozel.aktif {{ border-left: 5px solid var(--sinema-ana); background: #fef5f4; }}
+        
+        .film-resim {{ width: 95px; height: 58px; border-radius: 6px; margin-right: 12px; object-fit: cover; flex-shrink: 0; }}
+        .film-metin {{ 
+            font-weight: 600; font-size: 14px; color: #1c1e21; flex: 1; min-width: 0; margin: 0;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;
+        }}
+        .oynat-simge {{ color: var(--sinema-ana); font-size: 18px; margin-left: 8px; flex-shrink: 0; }}
+        
+        .durum-alani {{ text-align: center; padding: 15px 0; }}
+        .daha-fazla-btn {{
+            background: #0056b3; color: white; border: none;
+            padding: 10px 22px; border-radius: 20px; font-weight: bold;
+            font-size: 13px; cursor: pointer; transition: 0.2s;
+        }}
+        .daha-fazla-btn:hover {{ background: #004085; }}
+        .son-yazi {{ color: #888; font-size: 12px; font-style: italic; display: none; }}
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+    </style>
+</head>
+<body>
+
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
+    {admatic_code}
+    {header_html}
+
+    <div class="film-container">
+        <!-- OYNATICI MERKEZİ -->
+        <div id="sinema-kontrol-merkezi">
+            <div class="sinema-wrapper">
+                <div id="izlenen-bilgi">
+                    <span class="canli-etiket">ŞU AN İZLENİYOR</span>
+                    <span id="film-adi-aktif">Aşağıdan bir film seçin...</span>
+                </div>
+                <button id="film-kapat-btn" onclick="filmDurdur()">KAPAT ✕</button>
+            </div>
+            
+            <div id="video-oynatici-alan">
+                <div class="video-kapsayici">
+                    <iframe id="film-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <main id="canli-sonuc-listesi"></main>
+
+        <div class="durum-alani">
+            <button id="yukle-btn" class="daha-fazla-btn" onclick="sonrakiPartiYukle()">Daha Fazla Film Yükle ➕</button>
+            <div id="son-yazi" class="son-yazi">Tüm filmler listelendi.</div>
+        </div>
+
+        {whos_amung_us_code}
+    </div>
+
+    {footer_html}
+
+<script>
+    // YouTube Film Arşivi Veri Havuzu (İstediğiniz kadar ekleme yapabilirsiniz)
+    const tumFilmler = [
+        {{ id: 'aYbUTg-bfUU', baslik: 'Yeni Film 2026 - Türkçe Dublaj Aksiyon Dolu Yabancı Film Full HD' }},
+        {{ id: 'vcMqEy6udI8', baslik: 'Sürükleyici Gerilim & Macera Filmleri - Türkçe Dublaj Tek Parça' }},
+        {{ id: 'U_uL_kFVdMU', baslik: 'Yüksek Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj İzle' }},
+        {{ id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' }},
+        {{ id: 'F5DEmClsMNA', baslik: 'Hayatta Kalmak İçin 80 Dakikan Var - Aksiyon Filmi Türkçe Dublaj' }},
+        {{ id: 'U06i7AO53mM', baslik: 'Bilinmeyen Bir Adada Uyanır - Macera ve Hayatta Kalma Filmi' }},
+        {{ id: '30j_VWvOWX8', baslik: 'İNFAZCI | En Tehlikeli Paralı Asker - Aksiyon Filmi Türkçe Dublaj' }},
+        {{ id: 'ZF6sfeS8H8M', baslik: 'Efsane Macera Sineması - Türkçe Dublaj Full İzle' }}
+    ];
+
+    const SAYFA_BASINA = 4;
+    let mevcutIndex = 0;
+
+    function sonrakiPartiYukle() {{
+        const container = document.getElementById('canli-sonuc-listesi');
+        const yukleBtn = document.getElementById('yukle-btn');
+        const sonYazi = document.getElementById('son-yazi');
+
+        const dilim = tumFilmler.slice(mevcutIndex, mevcutIndex + SAYFA_BASINA);
+
+        dilim.forEach(film => {{
+            const card = document.createElement('article');
+            card.className = 'film-kart-ozel';
+            card.onclick = () => startMovie(film.id, film.baslik, card);
+            card.innerHTML = `
+                <img src="https://img.youtube.com/vi/${{film.id}}/hqdefault.jpg" class="film-resim" alt="${{film.baslik}}">
+                <h3 class="film-metin">${{film.baslik}}</h3>
+                <div class="oynat-simge">▶</div>
+            `;
+            container.appendChild(card);
+        }});
+
+        mevcutIndex += SAYFA_BASINA;
+
+        if (mevcutIndex >= tumFilmler.length) {{
+            yukleBtn.style.display = 'none';
+            sonYazi.style.display = 'block';
+        }}
+    }}
+
+    function startMovie(id, title, el) {{
+        const frame = document.getElementById('film-iframe');
+        const container = document.getElementById('video-oynatici-alan');
+        const btn = document.getElementById('film-kapat-btn');
+        const baslik = document.getElementById('film-adi-aktif');
+        
+        frame.src = `https://www.youtube.com/embed/${{id}}?autoplay=1&rel=0`;
+        container.style.display = 'block';
+        btn.style.display = 'block';
+        baslik.innerText = title;
+        
+        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
+        el.classList.add('aktif');
+        
+        window.scrollTo({{ top: 0, behavior: 'smooth' }});
+    }}
+
+    function filmDurdur() {{
+        const frame = document.getElementById('film-iframe');
+        frame.src = '';
+        document.getElementById('video-oynatici-alan').style.display = 'none';
+        document.getElementById('film-kapat-btn').style.display = 'none';
+        document.getElementById('film-adi-aktif').innerText = 'Aşağıdan bir film seçin...';
+        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
+    }}
+
+    document.addEventListener('DOMContentLoaded', sonrakiPartiYukle);
+</script>
+
+</body>
+</html>'''
+
+    with open("film-izle/index.html", "w", encoding="utf-8") as f:
+        f.write(film_html)
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
@@ -143,8 +334,22 @@ def fetch_and_generate():
     footer_html = get_footer_html()
     header_html = get_header_html("nearadin.net - SON DAKİKA")
     
-    # NOT: create_auxiliary_pages fonksiyonu buradan tamamen kaldırılmıştır. 
-    # Böylece son-depremler ve diğer servis sayfalarınızın içeriği asla ezilmeyecektir.
+    admatic_code = '''
+   <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+   </div>
+    '''
+
+    # Film İzle sayfasını dinamik olarak oluştur
+    generate_film_page(
+        header_html=get_header_html("nearadin.net - Film İzle"),
+        footer_html=footer_html,
+        whos_amung_us_code=whos_amung_us_code,
+        admatic_code=admatic_code
+    )
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -153,15 +358,6 @@ def fetch_and_generate():
 
         root = ET.fromstring(xml_data)
         raw_items = root.findall('./channel/item')
-
-        admatic_code = '''
-       <div class="ad-container">
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
-       </div>
-        '''
 
         tz_tr = datetime.timezone(datetime.timedelta(hours=3))
         now = datetime.datetime.now(datetime.timezone.utc)
@@ -335,10 +531,11 @@ def fetch_and_generate():
 
 <body>
 
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+    
     {admatic_code}
     {header_html}
 
@@ -447,10 +644,11 @@ def fetch_and_generate():
 </head>
 <body>
 
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
     {header_html}
     <div class="container">
         <div class="status-bar">
@@ -507,14 +705,14 @@ def fetch_and_generate():
 </head>
 <body>
 
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
     {header_html}
 
     <div class="container">
-        
         <div class="status-bar">
             <span>Kaynak: <strong>Google Canlı Akış</strong></span>
             <span>Son Güncelleme: <strong>{last_update}</strong></span>
@@ -525,7 +723,6 @@ def fetch_and_generate():
         </main>
 
         {whos_amung_us_code}
-
     </div>
 
     {footer_html}
@@ -542,10 +739,17 @@ def fetch_and_generate():
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
-  </url>\n  <url>
+  </url>
+  <url>
     <loc>https://nearadin.net/arsiv/</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nearadin.net/film-izle/</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>\n'''
 
@@ -602,10 +806,11 @@ def fetch_and_generate():
 </head>
 <body>
 
-          <!-- Admatic AUTO ads START -->
-           <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-            <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-           <!-- Admatic AUTO ads END -->
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
     {header_html}
     <div class="container">
         <h1>Gün Bazlı Haber Arşivi</h1>
@@ -627,7 +832,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Betik başarıyla çalıştı, servis sayfaları korundu.")
+        print("Betik başarıyla çalıştı. Film-izle ve tüm servis sayfaları güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
