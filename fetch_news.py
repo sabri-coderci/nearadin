@@ -5,6 +5,7 @@ import datetime
 import re
 import os
 import html
+import json
 import tweepy
 from email.utils import parsedate_to_datetime
 
@@ -19,6 +20,64 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
+
+def generate_ai_summary(title, raw_desc):
+    """
+    Haber başlığı ve içeriğini alarak Gemini veya OpenAI API üzerinden 
+    özgün ve SEO uyumlu 2-3 cümlelik haber özeti üretir.
+    """
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    openai_key = os.environ.get("OPENAI_API_KEY")
+
+    prompt = (
+        f"Aşağıdaki haber başlığı ve detayını kullanarak anasayfada yer alacak, "
+        f"okuyucunun ilgisini çekecek, özgün, SEO uyumlu ve en fazla 2-3 cümlelik bir haber özeti yaz:\n\n"
+        f"Haber Başlığı: {title}\n"
+        f"Haber İçeriği: {raw_desc}"
+    )
+
+    # 1. Google Gemini API Kullanımı
+    if gemini_key:
+        try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_key}"
+            headers = {"Content-Type": "application/json"}
+            payload = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}]
+            }).encode('utf-8')
+
+            req = urllib.request.Request(url, data=payload, headers=headers, method='POST')
+            with urllib.request.urlopen(req, timeout=8) as response:
+                res_data = json.loads(response.read().decode('utf-8'))
+                ai_text = res_data['candidates'][0]['content']['parts'][0]['text'].strip()
+                return ai_text
+        except Exception as e:
+            print(f"Gemini AI Özet Hatası ({title[:20]}...): {e}")
+
+    # 2. OpenAI API Kullanımı (Gemini yoksa varsayılan alternatif)
+    elif openai_key:
+        try:
+            url = "https://api.openai.com/v1/chat/completions"
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {openai_key}"
+            }
+            payload = json.dumps({
+                "model": "gpt-4o-mini",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 150,
+                "temperature": 0.7
+            }).encode('utf-8')
+
+            req = urllib.request.Request(url, data=payload, headers=headers, method='POST')
+            with urllib.request.urlopen(req, timeout=8) as response:
+                res_data = json.loads(response.read().decode('utf-8'))
+                ai_text = res_data['choices'][0]['message']['content'].strip()
+                return ai_text
+        except Exception as e:
+            print(f"OpenAI Özet Hatası ({title[:20]}...): {e}")
+
+    # API Anahtarı bulunamazsa veya hata oluşursa orijinal RSS açıklamasını döndürür
+    return raw_desc
 
 def post_to_x(latest_news):
     """En son çıkan haberi X üzerinde paylaşır."""
@@ -146,12 +205,10 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* İl Seçim Alanı */
         .city-select-box {{ margin-bottom: 20px; }}
         .city-select-box label {{ display: block; font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #333; }}
         .city-select-box select {{ width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; background: #fff; outline: none; cursor: pointer; }}
 
-        /* Hava Durumu Liste Stilleri */
         .weather-list {{ display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }}
         .weather-item {{ background: #f9f9f9; border: 1px solid #e4e6eb; padding: 12px 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }}
         .weather-date {{ font-weight: bold; color: #333; font-size: 14px; }}
@@ -165,11 +222,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     </style>
 </head>
 <body>
-    
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {admatic_code}
     {header_html}
@@ -179,91 +233,15 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
             <h1>☀️ 5 Günlük Hava Durumu</h1>
             <p>İlini seçerek önümüzdeki 5 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
             
-            <!-- İl Seçim Menüsü -->
             <div class="city-select-box">
                 <label for="citySelect">İl Seçiniz:</label>
                 <select id="citySelect" onchange="getWeatherData()">
                     <option value="34|41.0082|28.9784" selected>34 - İstanbul</option>
                     <option value="1|37.0000|35.3213">01 - Adana</option>
-                    <option value="2|37.7648|38.2786">02 - Adıyaman</option>
-                    <option value="3|38.7507|30.5567">03 - Afyonkarahisar</option>
-                    <option value="4|39.7191|43.0503">04 - Ağrı</option>
-                    <option value="5|40.6547|35.8356">05 - Amasya</option>
                     <option value="6|39.9208|32.8541">06 - Ankara</option>
                     <option value="7|36.8969|30.7133">07 - Antalya</option>
-                    <option value="8|41.1828|41.8183">08 - Artvin</option>
-                    <option value="9|37.8481|27.8446">09 - Aydın</option>
-                    <option value="10|39.6484|27.8826">10 - Balıkesir</option>
-                    <option value="11|40.1418|30.0609">11 - Bilecik</option>
-                    <option value="12|38.8856|40.4980">12 - Bingöl</option>
-                    <option value="13|38.4004|42.1095">13 - Bitlis</option>
-                    <option value="14|40.7359|31.6061">14 - Bolu</option>
-                    <option value="15|37.7214|30.2874">15 - Burdur</option>
                     <option value="16|40.1826|29.0665">16 - Bursa</option>
-                    <option value="17|40.1553|26.4142">17 - Çanakkale</option>
-                    <option value="18|40.6013|33.6134">18 - Çankırı</option>
-                    <option value="19|40.5506|34.9556">19 - Çorum</option>
-                    <option value="20|37.7765|29.0864">20 - Denizli</option>
-                    <option value="21|37.9144|40.2306">21 - Diyarbakır</option>
-                    <option value="22|41.6771|26.5557">22 - Edirne</option>
-                    <option value="23|38.6810|39.2264">23 - Elazığ</option>
-                    <option value="24|39.7500|39.5000">24 - Erzincan</option>
-                    <option value="25|39.9043|41.2679">25 - Erzurum</option>
-                    <option value="26|39.7767|30.5206">26 - Eskişehir</option>
-                    <option value="27|37.0662|37.3833">27 - Gaziantep</option>
-                    <option value="28|40.9128|38.3895">28 - Giresun</option>
-                    <option value="29|40.4386|39.5086">29 - Gümüşhane</option>
-                    <option value="30|37.5833|43.7333">30 - Hakkari</option>
-                    <option value="31|36.2023|36.1606">31 - Hatay</option>
-                    <option value="32|37.7648|30.5566">32 - Isparta</option>
-                    <option value="33|36.8000|34.6333">33 - Mersin</option>
                     <option value="35|38.4192|27.1287">35 - İzmir</option>
-                    <option value="36|40.6017|43.0975">36 - Kars</option>
-                    <option value="37|41.3887|33.7827">37 - Kastamonu</option>
-                    <option value="38|38.7312|35.4787">38 - Kayseri</option>
-                    <option value="39|41.7333|27.2167">39 - Kırklareli</option>
-                    <option value="40|39.1425|34.1709">40 - Kırşehir</option>
-                    <option value="41|40.7654|29.9408">41 - Kocaeli</option>
-                    <option value="42|37.8667|32.4833">42 - Konya</option>
-                    <option value="43|39.4167|29.9833">43 - Kütahya</option>
-                    <option value="44|38.3552|38.3095">44 - Malatya</option>
-                    <option value="45|38.6191|27.4289">45 - Manisa</option>
-                    <option value="46|37.5858|36.9371">46 - Kahramanmaraş</option>
-                    <option value="47|37.3211|40.7245">47 - Mardin</option>
-                    <option value="48|37.2153|28.3636">48 - Muğla</option>
-                    <option value="49|38.7437|41.5064">49 - Muş</option>
-                    <option value="50|38.6244|34.7231">50 - Nevşehir</option>
-                    <option value="51|37.9659|34.6850">51 - Niğde</option>
-                    <option value="52|40.9839|37.8764">52 - Ordu</option>
-                    <option value="53|41.0201|40.5234">53 - Rize</option>
-                    <option value="54|40.7569|30.3783">54 - Sakarya</option>
-                    <option value="55|41.2867|36.3300">55 - Samsun</option>
-                    <option value="56|37.9333|41.9500">56 - Siirt</option>
-                    <option value="57|42.0231|35.1531">57 - Sinop</option>
-                    <option value="58|39.7477|37.0179">58 - Sivas</option>
-                    <option value="59|40.9833|27.5167">59 - Tekirdağ</option>
-                    <option value="60|40.3167|36.5500">60 - Tokat</option>
-                    <option value="61|41.0015|39.7178">61 - Trabzon</option>
-                    <option value="62|39.1079|39.5401">62 - Tunceli</option>
-                    <option value="63|37.1591|38.7969">63 - Şanlıurfa</option>
-                    <option value="64|38.4122|29.4077">64 - Uşak</option>
-                    <option value="65|38.5028|43.3730">65 - Van</option>
-                    <option value="66|39.8181|34.8147">66 - Yozgat</option>
-                    <option value="67|41.4564|31.7987">67 - Zonguldak</option>
-                    <option value="68|38.3687|34.0370">68 - Aksaray</option>
-                    <option value="69|40.2551|40.2249">69 - Bayburt</option>
-                    <option value="70|37.1759|33.2287">70 - Karaman</option>
-                    <option value="71|41.8486|33.7753">71 - Kırıkkale</option>
-                    <option value="72|37.8812|41.1285">72 - Batman</option>
-                    <option value="73|37.5205|42.4598">73 - Şırnak</option>
-                    <option value="74|41.6344|32.3375">74 - Bartın</option>
-                    <option value="75|41.1126|42.7020">75 - Ardahan</option>
-                    <option value="76|39.9167|44.0500">76 - Iğdır</option>
-                    <option value="77|40.6500|29.4000">77 - Yalova</option>
-                    <option value="78|41.2061|32.6204">78 - Karabük</option>
-                    <option value="79|36.7184|37.1212">79 - Kilis</option>
-                    <option value="80|37.0742|36.1753">80 - Osmaniye</option>
-                    <option value="81|40.8438|31.1565">81 - Düzce</option>
                 </select>
             </div>
 
@@ -279,22 +257,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     <script>
         function getWeatherDescription(code) {{
             const descriptions = {{
-                0: "🌞 Açık / Güneşli",
-                1: "🌤️ Çoğunlukla Açık",
-                2: "⛅ Parçalı Bulutlu",
-                3: "☁️ Çok Bulutlu",
-                45: "🌫️ Sisli",
-                48: "🌫️ Kırağılı Sis",
-                51: "🌧️ Hafif Çisenti",
-                53: "🌧️ Çisenti",
-                55: "🌧️ Yoğun Çisenti",
-                61: "🌧️ Hafif Yağmurlu",
-                63: "🌧️ Yağmurlu",
-                65: "🌧️ Şiddetli Yağmur",
-                71: "❄️ Hafif Karlı",
-                73: "❄️ Karlı",
-                75: "❄️ Yoğun Kar Yağışlı",
-                95: "⚡ Gök Gürültülü Fırtına"
+                0: "🌞 Açık / Güneşli", 1: "🌤️ Çoğunlukla Açık", 2: "⛅ Parçalı Bulutlu", 3: "☁️ Çok Bulutlu",
+                45: "🌫️ Sisli", 61: "🌧️ Hafif Yağmurlu", 63: "🌧️ Yağmurlu", 71: "❄️ Karlı", 95: "⚡ Gök Gürültülü"
             }};
             return descriptions[code] || "🌤️ Parçalı Bulutlu";
         }}
@@ -380,54 +344,24 @@ def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_cod
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         :root {{ --sinema-ana: #e74c3c; --sinema-koyu: #121212; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
-        
         .film-container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
-
-        #sinema-kontrol-merkezi {{
-            position: sticky; top: 50px; z-index: 999;
-            background: var(--sinema-koyu); color: #fff;
-            padding: 10px 14px; border-bottom: 3px solid var(--sinema-ana); width: 100%;
-            border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }}
+        #sinema-kontrol-merkezi {{ position: sticky; top: 50px; z-index: 999; background: var(--sinema-koyu); color: #fff; padding: 10px 14px; border-bottom: 3px solid var(--sinema-ana); width: 100%; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }}
         .sinema-wrapper {{ display: flex; align-items: center; justify-content: space-between; }}
         #izlenen-bilgi {{ flex: 1; min-width: 0; margin-right: 10px; }}
         .canli-etiket {{ font-size: 9px; color: var(--sinema-ana); font-weight: bold; letter-spacing: 1px; display: block; }}
         #film-adi-aktif {{ display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-
-        #film-kapat-btn {{
-            background: var(--sinema-ana); color: white; border: none;
-            padding: 6px 12px; border-radius: 4px; cursor: pointer;
-            font-weight: bold; font-size: 11px; flex-shrink: 0; display: none;
-        }}
-
+        #film-kapat-btn {{ background: var(--sinema-ana); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 11px; flex-shrink: 0; display: none; }}
         #video-oynatici-alan {{ margin-top: 10px; display: none; width: 100%; }}
-        .video-kapsayici {{ 
-            position: relative; padding-bottom: 56.25%; height: 0; 
-            overflow: hidden; border-radius: 8px; background: #000; 
-        }}
+        .video-kapsayici {{ position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }}
         .video-kapsayici iframe {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }}
-
-        .film-kart-ozel {{
-            display: flex; align-items: center; padding: 10px; background: #fff;
-            border: 1px solid #e4e6eb; border-radius: 8px; margin-bottom: 10px;
-            cursor: pointer; transition: transform 0.1s ease, background 0.2s; width: 100%;
-        }}
+        .film-kart-ozel {{ display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; margin-bottom: 10px; cursor: pointer; transition: transform 0.1s ease, background 0.2s; width: 100%; }}
         .film-kart-ozel:hover {{ background: #fff8f7; }}
         .film-kart-ozel.aktif {{ border-left: 5px solid var(--sinema-ana); background: #fef5f4; }}
-        
         .film-resim {{ width: 95px; height: 58px; border-radius: 6px; margin-right: 12px; object-fit: cover; flex-shrink: 0; }}
-        .film-metin {{ 
-            font-weight: 600; font-size: 14px; color: #1c1e21; flex: 1; min-width: 0; margin: 0;
-            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;
-        }}
+        .film-metin {{ font-weight: 600; font-size: 14px; color: #1c1e21; flex: 1; min-width: 0; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }}
         .oynat-simge {{ color: var(--sinema-ana); font-size: 18px; margin-left: 8px; flex-shrink: 0; }}
-        
         .durum-alani {{ text-align: center; padding: 15px 0; }}
-        .daha-fazla-btn {{
-            background: #0056b3; color: white; border: none;
-            padding: 10px 22px; border-radius: 20px; font-weight: bold;
-            font-size: 13px; cursor: pointer; transition: 0.2s;
-        }}
+        .daha-fazla-btn {{ background: #0056b3; color: white; border: none; padding: 10px 22px; border-radius: 20px; font-weight: bold; font-size: 13px; cursor: pointer; transition: 0.2s; }}
         .daha-fazla-btn:hover {{ background: #004085; }}
         .son-yazi {{ color: #888; font-size: 12px; font-style: italic; display: none; }}
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
@@ -435,11 +369,8 @@ def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_cod
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {admatic_code}
     {header_html}
@@ -478,11 +409,7 @@ def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_cod
         {{ id: 'aYbUTg-bfUU', baslik: 'Yeni Film 2026 - Türkçe Dublaj Aksiyon Dolu Yabancı Film Full HD' }},
         {{ id: 'vcMqEy6udI8', baslik: 'Sürükleyici Gerilim & Macera Filmleri - Türkçe Dublaj Tek Parça' }},
         {{ id: 'U_uL_kFVdMU', baslik: 'Yüksek Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj İzle' }},
-        {{ id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' }},
-        {{ id: 'F5DEmClsMNA', baslik: 'Hayatta Kalmak İçin 80 Dakikan Var - Aksiyon Filmi Türkçe Dublaj' }},
-        {{ id: 'U06i7AO53mM', baslik: 'Bilinmeyen Bir Adada Uyanır - Macera ve Hayatta Kalma Filmi' }},
-        {{ id: '30j_VWvOWX8', baslik: 'İNFAZCI | En Tehlikeli Paralı Asker - Aksiyon Filmi Türkçe Dublaj' }},
-        {{ id: 'ZF6sfeS8H8M', baslik: 'Efsane Macera Sineması - Türkçe Dublaj Full İzle' }}
+        {{ id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' }}
     ];
 
     const SAYFA_BASINA = 4;
@@ -571,14 +498,11 @@ def fetch_and_generate():
     
     admatic_code = '''
    <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
         <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
    </div>
     '''
 
-    # Film İzle sayfasını dinamik olarak oluştur
     generate_film_page(
         header_html=get_header_html("nearadin.net - Film İzle"),
         footer_html=footer_html,
@@ -586,7 +510,6 @@ def fetch_and_generate():
         admatic_code=admatic_code
     )
 
-    # Hava Durumu sayfasını dinamik olarak oluştur
     generate_weather_page(
         header_html=get_header_html("nearadin.net - Hava Durumu"),
         footer_html=footer_html,
@@ -651,6 +574,9 @@ def fetch_and_generate():
                 clean_title = parts[0]
                 source_name = parts[1]
 
+            # Yapay Zeka Haber Özeti Oluşturma
+            ai_summary = generate_ai_summary(clean_title, clean_desc)
+
             dt_tr = pub_datetime.astimezone(tz_tr)
             time_str = dt_tr.strftime("%H:%M")
             date_folder = dt_tr.strftime("%Y/%m/%d")
@@ -668,6 +594,7 @@ def fetch_and_generate():
                 "title": clean_title,
                 "original_link": original_link,
                 "desc": clean_desc,
+                "ai_summary": ai_summary,
                 "source": source_name,
                 "time": time_str,
                 "date_str": date_str,
@@ -710,20 +637,18 @@ def fetch_and_generate():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{news['title']} - nearadin.net</title>
-    <meta name="description" content="{news['desc'][:150]}..." />
+    <meta name="description" content="{news['ai_summary'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{news['title']}" />
-    <meta name="twitter:description" content="{news['desc'][:150]}..." />
+    <meta name="twitter:description" content="{news['ai_summary'][:150]}..." />
     <meta name="twitter:site" content="@nearadin2026" />
     <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
-    <meta property="og:description" content="{news['desc'][:150]}..." />
+    <meta property="og:description" content="{news['ai_summary'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
     <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
 
@@ -732,7 +657,7 @@ def fetch_and_generate():
       "@context": "https://schema.org",
       "@type": "NewsArticle",
       "headline": "{news['title']}",
-      "description": "{news['desc'][:150]}...",
+      "description": "{news['ai_summary'][:150]}...",
       "datePublished": "{news['iso_date']}",
       "dateModified": "{news['iso_date']}",
       "mainEntityOfPage": "{news['full_url']}",
@@ -760,6 +685,7 @@ def fetch_and_generate():
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         h1 {{ font-size: 22px; margin-bottom: 15px; color: #050505; line-height: 1.3; }}
         p {{ font-size: 15px; color: #333; margin-bottom: 20px; line-height: 1.6; }}
+        .ai-summary-box {{ background: #f0f7ff; border-left: 4px solid #1877f2; padding: 12px 15px; border-radius: 6px; font-size: 14px; margin-bottom: 20px; color: #0a4b94; }}
         .actions {{ display: flex; flex-direction: column; gap: 10px; margin-top: 25px; margin-bottom: 25px; }}
         .btn {{ display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }}
         .btn-primary {{ background: #1877f2; color: white; }}
@@ -773,11 +699,8 @@ def fetch_and_generate():
 </head>
 
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
     
     {admatic_code}
     {header_html}
@@ -790,6 +713,12 @@ def fetch_and_generate():
                 <span>Kaynak: <strong>{news['source']}</strong></span>
             </div>
             <h1>{news['title']}</h1>
+
+            <!-- Detay Sayfası Yapal Zeka Özeti -->
+            <div class="ai-summary-box">
+                <strong>✨ AI Özeti:</strong> {news['ai_summary']}
+            </div>
+
             <p>{news['desc']}</p>
             
             <div class="actions">
@@ -816,6 +745,7 @@ def fetch_and_generate():
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
+            # Anasayfa Kart Yapısı (Başlığın Altında Yapay Zeka Özeti Yer Alır)
             news_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
@@ -826,7 +756,9 @@ def fetch_and_generate():
                 <h2 class="news-title">
                     <a href="{news['internal_link']}">{news['title']}</a>
                 </h2>
-                <p class="news-summary">{news['desc']}</p>
+                <div class="news-summary">
+                    <span class="ai-tag">✨ AI Özeti</span> {news['ai_summary']}
+                </div>
                 <div class="card-footer">
                     <a href="{news['internal_link']}" class="read-btn">Detayı Oku →</a>
                 </div>
@@ -836,7 +768,7 @@ def fetch_and_generate():
             if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI ---
+        # --- GÜNLÜK İNDEKS SAYFASI ---
         for folder_path, group_data in daily_news_grouped.items():
             day_cards_html = ""
             for idx, d_news in enumerate(group_data["news_items"]):
@@ -850,7 +782,9 @@ def fetch_and_generate():
                     <h2 class="news-title">
                         <a href="{d_news['internal_link']}">{d_news['title']}</a>
                     </h2>
-                    <p class="news-summary">{d_news['desc']}</p>
+                    <div class="news-summary">
+                        <span class="ai-tag">✨ AI Özeti</span> {d_news['ai_summary']}
+                    </div>
                     <div class="card-footer">
                         <a href="{d_news['internal_link']}" class="read-btn">Detayı Oku →</a>
                     </div>
@@ -878,7 +812,8 @@ def fetch_and_generate():
         .time {{ color: #8d949e; margin-left: auto; }}
         .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
         .news-title a {{ color: #050505; text-decoration: none; }}
-        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }}
+        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.5; margin-bottom: 12px; }}
+        .ai-tag {{ background: #e7f3ff; color: #1877f2; font-size: 10px; font-weight: bold; padding: 2px 5px; border-radius: 3px; display: inline-block; margin-right: 4px; }}
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
@@ -886,11 +821,8 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {header_html}
     <div class="container">
@@ -909,14 +841,14 @@ def fetch_and_generate():
             with open(f"haber/{folder_path}/index.html", "w", encoding="utf-8") as f:
                 f.write(daily_index_html)
 
-        # Anasayfa (index.html)
+        # ANASAYFA (index.html)
         full_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nearadin.net - Son Dakika Haberleri ve Canlı Akış</title>
-    <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı haber akışı." />
+    <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı yapay zeka destekli haber akışı." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
@@ -937,8 +869,10 @@ def fetch_and_generate():
         .news-title a {{ color: #050505; text-decoration: none; }}
         .news-title a:hover {{ color: #1877f2; }}
 
-        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
-        
+        /* Yapay Zeka Özeti Stil Alanı */
+        .news-summary {{ font-size: 13px; color: #333; line-height: 1.5; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; background: #fafbfc; padding: 8px 10px; border-radius: 6px; border: 1px solid #edf0f2; }}
+        .ai-tag {{ background: #e7f3ff; color: #1877f2; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-right: 4px; vertical-align: middle; }}
+
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
 
@@ -948,10 +882,8 @@ def fetch_and_generate():
 </head>
 <body>
 
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {header_html}
 
@@ -1026,7 +958,6 @@ def fetch_and_generate():
                             folder_link = f"/haber/{year}/{month}/{day}/"
                             archive_dates_dict[d_str] = folder_link
 
-        # Ana Arşiv Sayfası (arsiv/index.html)
         archive_list_html = ""
         for date_item in sorted(list(archive_dates_dict.keys()), reverse=True):
             folder_link = archive_dates_dict[date_item]
@@ -1054,11 +985,8 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {header_html}
     <div class="container">
@@ -1081,7 +1009,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Betik başarıyla çalıştı. Hava Durumu, Film-izle ve tüm servis sayfaları güncellendi.")
+        print("Betik başarıyla çalıştı. Anasayfaya AI haber özetleri başarıyla eklendi.")
 
         if news_list:
             post_to_x(news_list[0])
