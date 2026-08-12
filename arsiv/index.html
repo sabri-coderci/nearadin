@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haber ArÅŸivi - nearadin.net</title>
-    <meta name="description" content="nearadin.net gÃ¼n bazlÄ± geÃ§miÅŸ son dakika haber arÅŸivleri." />
+    <title>Haber Arşivi - nearadin.net</title>
+    <meta name="description" content="nearadin.net gün bazlı geçmiş son dakika haber arşivleri." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -22,18 +22,18 @@
 
     
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKÄ°KA</a>
-        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">â˜°</button>
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸ  Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸ“… GÃ¼nlÃ¼k ArÅŸiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸ¥ NÃ¶betÃ§i Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸ”´ Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸª™ Kripto PiyasasÄ±</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">â˜€ï¸ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">ğŸ“º Film Ä°zle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
             </ul>
         </nav>
     </header>
@@ -56,19 +56,19 @@
     </script>
     
     <div class="container">
-        <h1>GÃ¼n BazlÄ± Haber ArÅŸivi</h1>
+        <h1>Gün Bazlı Haber Arşivi</h1>
         <ul>
             
             <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
                 <a href="/haber/2026/08/12/" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
-                    <span style="font-weight: 600; color: #333; font-size: 15px;">ğŸ“… 12.08.2026 Tarihli TÃ¼m Haberler</span>
-                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">TÃ¼m Liste â†’</span>
+                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 12.08.2026 Tarihli Tüm Haberler</span>
+                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
                 </a>
             </li>
             <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
                 <a href="/haber/2026/08/11/" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
-                    <span style="font-weight: 600; color: #333; font-size: 15px;">ğŸ“… 11.08.2026 Tarihli TÃ¼m Haberler</span>
-                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">TÃ¼m Liste â†’</span>
+                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 11.08.2026 Tarihli Tüm Haberler</span>
+                    <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
                 </a>
             </li>
         </ul>
@@ -79,25 +79,25 @@
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
                 <div style="flex: 1; min-width: 200px;">
                     <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
-                    <p>TÃ¼rkiye ve dÃ¼nyadan en gÃ¼ncel son dakika haberleri, anlÄ±k geliÅŸmeler ve canlÄ± servis haber akÄ±ÅŸ platformu.</p>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
                 </div>
                 <div style="flex: 1; min-width: 140px;">
-                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">HÄ±zlÄ± MenÃ¼</h4>
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">ğŸ“… GÃ¼nlÃ¼k ArÅŸiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">ğŸ¥ NÃ¶betÃ§i Eczane</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">ğŸ”´ Son Depremler</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">ğŸª™ Kripto PiyasasÄ±</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">â˜€ï¸ Hava Durumu</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">ğŸ“º Film Ä°zle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
                     </ul>
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
                 <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
-                <p>Â© 2026 nearadin.net - TÃ¼m HaklarÄ± SaklÄ±dÄ±r.</p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
