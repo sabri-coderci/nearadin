@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Film İzle - Ücretsiz ve Full HD Film İzleme Keyfi | nearadin.net</title>
-    <meta name="description" content="En güncel YouTube film izle arama sonuçları, HD kalitede yerli ve yabancı tam ekran ücretsiz filmler. Tek tıkla ve kesintisiz izleyin." />
-    <meta name="keywords" content="youtube film izle, ücretsiz film izle, full hd film, yerli film izle, yabancı film izle, online film" />
+    <title>Film İzle - En Son YouTube Film Arama Sonuçları | nearadin.net</title>
+    <meta name="description" content="YouTube üzerindeki en güncel film izle arama sonuçları. Yerli, yabancı, aksiyon ve komedi filmlerini full HD kalitede ücretsiz ve kesintisiz izleyin." />
+    <meta name="keywords" content="film izle, youtube film izle, türkçe dublaj film izle, yerli film izle, full hd film izle" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
@@ -17,9 +17,9 @@
         
         /* Video Player Alanı */
         .player-container { display: none; margin-bottom: 25px; border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .player-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */ height: 0; }
+        .player-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
         .player-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .player-title { background: #1c1e21; color: #fff; padding: 12px 15px; font-size: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+        .player-title { background: #1c1e21; color: #fff; padding: 12px 15px; font-size: 14px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
         .close-player { background: #de350b; color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; }
 
         /* Film Liste Stilleri */
@@ -32,8 +32,8 @@
         
         .movie-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; flex-grow: 1; }
         .movie-title { font-size: 14px; font-weight: bold; color: #1c1e21; line-height: 1.3; }
-        .movie-meta { font-size: 12px; color: #65676b; display: flex; gap: 10px; align-items: center; }
-        .movie-tag { background: #e4e6eb; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; color: #4b4d52; }
+        .movie-meta { font-size: 12px; color: #65676b; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .movie-channel { font-weight: 600; color: #0056b3; }
 
         /* SEO İçerik Alanı */
         .seo-text { margin-top: 30px; border-top: 1px solid #e4e6eb; padding-top: 20px; font-size: 13px; color: #4b4d52; line-height: 1.7; }
@@ -85,10 +85,10 @@
 
     <div class="container">
         <div class="card">
-            <h1>🎬 YouTube Film İzle - Popüler & Güncel Filmler</h1>
-            <p class="subtitle">YouTube üzerindeki en çok aranan ve tamamen yasal yayınlanan güncel filmleri sayfa değiştirmeden anında izleyin.</p>
+            <h1>🎬 YouTube Film İzle - Arama Sonuçları</h1>
+            <p class="subtitle">YouTube'daki "Film izle" arama sonuçlarına ait en güncel ve öne çıkan filmler listelenmektedir.</p>
             
-            <!-- Canlı Oynatıcı (Aynı Sayfada İzleme Alanı) -->
+            <!-- Canlı Oynatıcı -->
             <div id="playerContainer" class="player-container">
                 <div class="player-title">
                     <span id="nowPlayingTitle">Film Yükleniyor...</span>
@@ -99,58 +99,90 @@
                 </div>
             </div>
 
-            <!-- YouTube Arama Sonuçları / Trend Listesi -->
-            <ul class="movie-list" id="movieList">
-                <!-- Film Örneği 1 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Nostaljik Klasikler - Restorasyonlu Tam Ekran Film')">
+            <!-- YouTube Arama Sonuçları Listesi -->
+            <ul class="movie-list">
+                
+                <!-- Film 1 -->
+                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/R7ckfuT4k4w', 'Oflu Hoca 5 Evliluk | Çetin Altay FULL HD Yerli Komedi Filmi İzle')">
                     <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="YouTube film izle">
+                        <img src="https://img.youtube.com/vi/R7ckfuT4k4w/hqdefault.jpg" alt="Oflu Hoca 5 Evliluk">
                         <div class="play-badge">▶</div>
                     </div>
                     <div class="movie-info">
-                        <div class="movie-title">Nostaljik Klasikler - Restorasyonlu Tam Ekran Film</div>
+                        <div class="movie-title">Oflu Hoca 5 Evliluk | Çetin Altay FULL HD Yerli Komedi Filmi İzle</div>
                         <div class="movie-meta">
-                            <span class="movie-tag">1080p HD</span>
-                            <span>Aksiyon / Dram</span>
+                            <span class="movie-channel">Filmtime</span>
+                            <span>• 1 sa 33 dk</span>
                         </div>
                     </div>
                 </li>
 
-                <!-- Film Örneği 2 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/L_LUpnjgPso', 'Yerli Sinema Özel: Unutulmaz Türk Filmi Full İzle')">
+                <!-- Film 2 -->
+                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/hEZrPFdo_M0', 'Uçak Kazasından Sonra Issız Adada Hayatta Kalmaya Çalışan İki Yabancı | Macera Filmleri Türkçe Dublaj')">
                     <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/L_LUpnjgPso/hqdefault.jpg" alt="Yerli film izle youtube">
+                        <img src="https://img.youtube.com/vi/hEZrPFdo_M0/hqdefault.jpg" alt="Uçak Kazasından Sonra Issız Adada Hayatta Kalmaya Çalışan İki Yabancı">
                         <div class="play-badge">▶</div>
                     </div>
                     <div class="movie-info">
-                        <div class="movie-title">Yerli Sinema Özel: Unutulmaz Türk Filmi Full İzle</div>
+                        <div class="movie-title">Uçak Kazasından Sonra Issız Adada Hayatta Kalmaya Çalışan İki Yabancı | Macera Filmleri Türkçe Dublaj</div>
                         <div class="movie-meta">
-                            <span class="movie-tag">Yerli</span>
-                            <span>Komedi / Macera</span>
+                            <span class="movie-channel">FILM Z</span>
+                            <span>• 1 sa 37 dk</span>
                         </div>
                     </div>
                 </li>
 
-                <!-- Film Örneği 3 -->
-                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/3JZ_D3ELwOQ', 'Popüler Yabancı Sinema - Türkçe Dublaj HD')">
+                <!-- Film 3 -->
+                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/ih7eX8b6SGg', 'Suyun Altında Hiç Kimse Çığlığını Duyamaz | Türkçe Dublaj Gerilim Filmi')">
                     <div class="movie-thumb">
-                        <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="Ücretsiz full hd film izle">
+                        <img src="https://img.youtube.com/vi/ih7eX8b6SGg/hqdefault.jpg" alt="Suyun Altında Hiç Kimse Çığlığını Duyamaz">
                         <div class="play-badge">▶</div>
                     </div>
                     <div class="movie-info">
-                        <div class="movie-title">Popüler Yabancı Sinema - Türkçe Dublaj HD</div>
+                        <div class="movie-title">Suyun Altında Hiç Kimse Çığlığını Duyamaz | Türkçe Dublaj Gerilim Filmi</div>
                         <div class="movie-meta">
-                            <span class="movie-tag">Dublaj</span>
-                            <span>Gerilim / Bilim Kurgu</span>
+                            <span class="movie-channel">FilmNovixx</span>
+                            <span>• 1 sa 30 dk</span>
                         </div>
                     </div>
                 </li>
+
+                <!-- Film 4 -->
+                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/v0dcSc6k4aU', 'Çatlak | Full Yerli Dram Filmi | Hakan Salınmış, Giray Altınok')">
+                    <div class="movie-thumb">
+                        <img src="https://img.youtube.com/vi/v0dcSc6k4aU/hqdefault.jpg" alt="Çatlak Full Yerli Dram Filmi">
+                        <div class="play-badge">▶</div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">Çatlak | Full Yerli Dram Filmi | Hakan Salınmış, Giray Altınok</div>
+                        <div class="movie-meta">
+                            <span class="movie-channel">Videomite</span>
+                            <span>• 1 sa 21 dk</span>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Film 5 -->
+                <li class="movie-item" onclick="playMovie('https://www.youtube.com/embed/F-VEUnkkrPQ', 'En İyi Aksiyon Filmi, Tek Parça HD - Film İzle Türkçe Dublaj HD')">
+                    <div class="movie-thumb">
+                        <img src="https://img.youtube.com/vi/F-VEUnkkrPQ/hqdefault.jpg" alt="En İyi Aksiyon Filmi Tek Parça HD">
+                        <div class="play-badge">▶</div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">En İyi Aksiyon Filmi, Tek Parça HD - Film İzle Türkçe Dublaj HD</div>
+                        <div class="movie-meta">
+                            <span class="movie-channel">Mona Film</span>
+                            <span>• 3 sa 12 dk</span>
+                        </div>
+                    </div>
+                </li>
+
             </ul>
 
-            <!-- SEO Uyumlu Özgün İçerik Metni -->
+            <!-- SEO İçerik Metni -->
             <section class="seo-text">
-                <h2>Kesintisiz ve Ücretsiz YouTube Film İzleme Deneyimi</h2>
-                <p>İnternette <strong>youtube film izle</strong> seçeneğiyle yüksek çözünürlüklü ve yasal içeriklere ulaşmak artık çok daha pratik. Platformumuz, YouTube'da telifsiz ya da resmi yayıncılar tarafından açık erişime sunulmuş en güncel filmleri tek bir çatı altında toplar. Donma, kesinti ya da harici site yönlendirmeleriyle uğraşmadan, yerli ve yabancı sinemanın en seçkin örneklerini <strong>full HD kalite</strong> avantajıyla sayfamız üzerinden doğrudan oynatabilirsiniz.</p>
+                <h2>Aynı Sayfada Hızlı ve Ücretsiz Film İzleme Kolaylığı</h2>
+                <p>İnternet üzerinde <strong>film izle</strong> araması yaparak en kaliteli ve yüksek çözünürlüklü seçeneklere ulaşmak isteyen sinemaseverler için YouTube üzerindeki en güncel yapımları bir araya getiriyoruz. Aksiyon, komedi, gerilim ve yerli dram kategorilerindeki öne çıkan yapımlara harici sitelere yönlenmeden doğrudan sayfamızdaki özel oynatıcı üzerinden erişebilirsiniz. Yüksek çözünürlük ve kesintisiz izleme seçeneğiyle en popüler filmleri kolayca keşfedebilirsiniz.</p>
             </section>
 
             <a href="/" class="btn-home">← Anasayfaya Dön</a>
@@ -163,12 +195,10 @@
             const iframe = document.getElementById('youtubeIframe');
             const titleEl = document.getElementById('nowPlayingTitle');
             
-            // Player'ı aktif et ve başlığı güncelle
             iframe.src = embedUrl + '?autoplay=1';
             titleEl.innerText = title;
             container.style.display = 'block';
             
-            // Ekranı yumuşakça oynatıcıya kaydır
             container.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
@@ -176,7 +206,6 @@
             const container = document.getElementById('playerContainer');
             const iframe = document.getElementById('youtubeIframe');
             
-            // Video durdurulsun diye kaynağı temizle
             iframe.src = '';
             container.style.display = 'none';
         }
