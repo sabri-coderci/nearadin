@@ -20,9 +20,38 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .search-input {
+            flex: 1;
+            padding: 10px 14px;
+            font-size: 1rem;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            outline: none;
+        }
+        .search-input:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+        }
+        .search-button {
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #004494;
+        }
         h2 {
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             border-bottom: 2px solid #eaecef;
             padding-bottom: 12px;
         }
@@ -74,26 +103,49 @@
 <body>
 
     <div class="search-wrapper">
-        <h2>Arama Sonuçları: <span id="search-keyword"></span></h2>
-        <div id="results-results-container" class="status-message">Yükleniyor...</div>
+        <!-- Arama Formu -->
+        <form class="search-form" method="GET" action="">
+            <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi girin..." required>
+            <button type="submit" class="search-button">Ara</button>
+        </form>
+
+        <h2>Arama Sonuçları: <span id="search-keyword">-</span></h2>
+        <div id="results-results-container" class="status-message">Lütfen bir arama yapın.</div>
     </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q');
 
-        // Kendi API Key ve Search Engine ID (cx) değerlerinizi buraya ekleyin
         const API_KEY = "AIzaSyDGy58B-2N8Cr6tBnbV6DbgUQVXMmo2Pok";
         const SEARCH_ENGINE_ID = "a33464712b4234607";
 
         function escapeHtml(str) {
+            if (!str) return '';
             return str.replace(/[&<>'"]/g, 
                 tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
             );
         }
 
+        // Güvenli URL kontrolü (yalnızca http veya https kabul eder)
+        function sanitizeUrl(url) {
+            try {
+                const parsed = new URL(url);
+                if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+                    return parsed.href;
+                }
+            } catch (e) {
+                // Geçersiz URL
+            }
+            return '#';
+        }
+
         if (query) {
+            document.getElementById('search-input').value = query;
             document.getElementById('search-keyword').innerText = query;
+            
+            const container = document.getElementById('results-results-container');
+            container.innerText = "Yükleniyor...";
 
             const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${SEARCH_ENGINE_ID}&q=${encodeURIComponent(query)}`;
 
@@ -103,8 +155,6 @@
                     return response.json();
                 })
                 .then(data => {
-                    const container = document.getElementById('results-results-container');
-                    
                     if (!data.items || data.items.length === 0) {
                         container.className = "status-message";
                         container.innerHTML = "Aradığınız kriterlere uygun sonuç bulunamadı.";
@@ -113,10 +163,11 @@
 
                     let html = '<ul class="results-list">';
                     data.items.forEach(item => {
+                        const safeLink = sanitizeUrl(item.link);
                         html += `
                             <li class="result-item">
-                                <a href="${item.link}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>
-                                <div class="url">${escapeHtml(item.link)}</div>
+                                <a href="${safeLink}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>
+                                <div class="url">${escapeHtml(safeLink)}</div>
                                 <p>${escapeHtml(item.snippet || '')}</p>
                             </li>
                         `;
@@ -128,14 +179,9 @@
                 })
                 .catch(err => {
                     console.error(err);
-                    const container = document.getElementById('results-results-container');
                     container.className = "status-message error-message";
-                    container.innerText = "Sonuçlar çekilirken bir hata oluştu. Lütfen API anahtarınızı ve ayarlarınızı kontrol edin.";
+                    container.innerText = "Sonuçlar çekilirken bir hata oluştu. Lütfen API anahtarınızı ve ayarlarlarınızı kontrol edin.";
                 });
-        } else {
-            const container = document.getElementById('results-results-container');
-            container.className = "status-message";
-            container.innerText = "Lütfen geçerli bir arama terimi girin.";
         }
     </script>
 </body>
