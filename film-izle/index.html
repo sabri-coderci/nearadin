@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türkçe Dublaj HD Film İzle - nearadin.net</title>
-    <meta name="description" content="En güncel Türkçe dublaj yabancı filmler, aksiyon ve macera yapımları tek sayfada kesintisiz izleyin." />
+    <title>Özel Sinema Portalı - nearadin.net</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         :root { --sinema-ana: #e74c3c; --sinema-koyu: #121212; }
@@ -54,15 +53,15 @@
         }
         .oynat-simge { color: var(--sinema-ana); font-size: 16px; margin-left: 8px; flex-shrink: 0; }
         
-        /* Yükleniyor ve Daha Fazla Butonu */
+        /* Alt Buton ve Durum */
         .durum-alani { text-align: center; padding: 20px 0; }
         .daha-fazla-btn {
             background: var(--sinema-ana); color: white; border: none;
-            padding: 10px 20px; border-radius: 20px; font-weight: bold;
+            padding: 10px 22px; border-radius: 20px; font-weight: bold;
             font-size: 13px; cursor: pointer; transition: 0.2s;
         }
         .daha-fazla-btn:hover { background: #c0392b; }
-        .yukleniyor { color: #888; font-style: italic; font-size: 13px; }
+        .son-yazi { color: #888; font-size: 12px; font-style: italic; display: none; }
 
         @media (max-width: 480px) {
             .film-resim { width: 85px; height: 52px; margin-right: 8px; }
@@ -100,75 +99,53 @@
     <div id="canli-sonuc-listesi"></div>
 
     <div class="durum-alani">
-        <button id="yukle-btn" class="daha-fazla-btn" onclick="filmleriGetir()" style="display:none;">Daha Fazla Film Yükle ➕</button>
-        <div id="yukleniyor-yazi" class="yukleniyor">Filmler taranıyor...</div>
+        <button id="yukle-btn" class="daha-fazla-btn" onclick="sonrakiPartiYukle()">Daha Fazla Film Yükle ➕</button>
+        <div id="son-yazi" class="son-yazi">Arşivdeki tüm filmler listelendi.</div>
     </div>
 </section>
 
 <script>
-    // YouTube Data API Ayarları
-    const API_KEY = 'AIzaSyB7IgB2_xqru0dYub4yt6K7oY60bhX3D74';
-    const SEARCH_QUERY = 'zentii25 türkçe dublaj film'; // Veya aramak istediğiniz anahtar kelime
-    let nextPageToken = '';
-    let isFetching = false;
+    // Film Arşivi Veri Havuzu (İstediğiniz kadar film ekleyebilirsiniz)
+    const tumFilmler = [
+        { id: 'aYbUTg-bfUU', baslik: 'Yeni Film 2026 - Türkçe Dublaj Aksiyon Dolu Yabancı Film Full HD' },
+        { id: 'vcMqEy6udI8', baslik: 'Sürükleyici Gerilim & Macera Filmleri - Türkçe Dublaj Tek Parça' },
+        { id: 'U_uL_kFVdMU', baslik: 'Yüksek Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj İzle' },
+        { id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' },
+        { id: 'F5DEmClsMNA', baslik: 'Hayatta Kalmak İçin 80 Dakikan Var - Aksiyon Filmi Türkçe Dublaj' },
+        { id: 'U06i7AO53mM', baslik: 'Bilinmeyen Bir Adada Uyanır - Macera ve Hayatta Kalma Filmi' },
+        { id: '30j_VWvOWX8', baslik: 'İNFAZCI | En Tehlikeli Paralı Asker - Aksiyon Filmi Türkçe Dublaj' },
+        { id: 'ZF6sfeS8H8M', baslik: 'Efsane Macera Sineması - Türkçe Dublaj Full İzle' }
+    ];
 
-    async function filmleriGetir() {
-        if (isFetching) return;
-        isFetching = true;
+    const SAYFA_BASINA = 4; // Her tıklamada yüklenecek film sayısı
+    let mevcutIndex = 0;
 
-        const yukleniyorEl = document.getElementById('yukleniyor-yazi');
-        const yukleBtn = document.getElementById('yukle-btn');
-        
-        yukleniyorEl.style.display = 'block';
-        yukleniyorEl.innerText = 'Daha fazla film yükleniyor...';
-        yukleBtn.style.display = 'none';
-
-        let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=${encodeURIComponent(SEARCH_QUERY)}&type=video&key=${API_KEY}`;
-        if (nextPageToken) {
-            url += `&pageToken=${nextPageToken}`;
-        }
-
-        try {
-            const res = await fetch(url);
-            const data = await res.json();
-            
-            if (data.items && data.items.length > 0) {
-                renderFilmler(data.items);
-                nextPageToken = data.nextPageToken || '';
-                
-                if (nextPageToken) {
-                    yukleBtn.style.display = 'inline-block';
-                }
-            } else {
-                yukleniyorEl.innerText = 'Gösterilecek başka film kalmadı.';
-            }
-        } catch (e) {
-            yukleniyorEl.innerText = 'Filmler yüklenirken bağlantı hatası oluştu.';
-        } finally {
-            isFetching = false;
-            if (nextPageToken) yukleniyorEl.style.display = 'none';
-        }
-    }
-
-    function renderFilmler(items) {
+    function sonrakiPartiYukle() {
         const container = document.getElementById('canli-sonuc-listesi');
-        
-        items.forEach(item => {
-            if (item.id && item.id.videoId) {
-                const s = item.snippet;
-                const vId = item.id.videoId;
-                
-                const card = document.createElement('article');
-                card.className = 'film-kart-ozel';
-                card.onclick = () => startMovie(vId, s.title, card);
-                card.innerHTML = `
-                    <img src="${s.thumbnails.medium ? s.thumbnails.medium.url : s.thumbnails.default.url}" class="film-resim" alt="${s.title}">
-                    <h3 class="film-metin">${s.title}</h3>
-                    <div class="oynat-simge">▶</div>
-                `;
-                container.appendChild(card);
-            }
+        const yukleBtn = document.getElementById('yukle-btn');
+        const sonYazi = document.getElementById('son-yazi');
+
+        const dilim = tumFilmler.slice(mevcutIndex, mevcutIndex + SAYFA_BASINA);
+
+        dilim.forEach(film => {
+            const card = document.createElement('article');
+            card.className = 'film-kart-ozel';
+            card.onclick = () => startMovie(film.id, film.baslik, card);
+            card.innerHTML = `
+                <img src="https://img.youtube.com/vi/${film.id}/hqdefault.jpg" class="film-resim" alt="${film.baslik}">
+                <h3 class="film-metin">${film.baslik}</h3>
+                <div class="oynat-simge">▶</div>
+            `;
+            container.appendChild(card);
         });
+
+        mevcutIndex += SAYFA_BASINA;
+
+        // Tüm filmler bittiğinde butonu gizle
+        if (mevcutIndex >= tumFilmler.length) {
+            yukleBtn.style.display = 'none';
+            sonYazi.style.display = 'block';
+        }
     }
 
     function startMovie(id, title, el) {
@@ -198,7 +175,7 @@
     }
 
     // İlk Yükleme
-    document.addEventListener('DOMContentLoaded', filmleriGetir);
+    document.addEventListener('DOMContentLoaded', sonrakiPartiYukle);
 </script>
 
 </body>
