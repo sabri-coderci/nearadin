@@ -2,35 +2,112 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Arama Sonuçları - Ne Aradın?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları - Google Arama</title>
     <style>
-        .results-list { list-style: none; padding: 0; }
-        .result-item { background: #fff; border: 1px solid #e1e4e8; padding: 15px; margin-bottom: 10px; border-radius: 6px; }
-        .result-item a { color: #0366d6; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-        .result-item a:hover { text-decoration: underline; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #24292e;
+            margin: 0;
+            padding: 20px;
+        }
+        .search-wrapper {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 12px;
+        }
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .result-item {
+            border-bottom: 1px solid #eaecef;
+            padding: 16px 0;
+        }
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        .result-item a {
+            color: #1a0dab;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .result-item a:hover {
+            text-decoration: underline;
+        }
+        .result-item .url {
+            color: #006621;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            word-break: break-all;
+        }
+        .result-item p {
+            margin: 0;
+            color: #545454;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .status-message {
+            color: #586069;
+            text-align: center;
+            padding: 20px 0;
+            font-style: italic;
+        }
+        .error-message {
+            color: #d73a49;
+        }
     </style>
 </head>
 <body>
 
-    <h2>Arama Sonuçları: <span id="search-keyword"></span></h2>
-    <div id="results-container">Yükleniyor...</div>
+    <div class="search-wrapper">
+        <h2>Arama Sonuçları: <span id="search-keyword"></span></h2>
+        <div id="results-results-container" class="status-message">Yükleniyor...</div>
+    </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q');
-        const repoPath = "sabri-coderci/nearadin";
+
+        // Kendi API Key ve Search Engine ID (cx) değerlerinizi buraya ekleyin
+        const API_KEY = "BURAYA_GOOGLE_API_KEY_GIRIN";
+        const SEARCH_ENGINE_ID = "BURAYA_CX_ID_GIRIN";
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
 
         if (query) {
             document.getElementById('search-keyword').innerText = query;
 
-            // GitHub Search API (Discussions & Issues)
-            fetch(`https://api.github.com/search/issues?q=repo:${repoPath}+is:discussion+${encodeURIComponent(query)}`)
-                .then(response => response.json())
+            const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${SEARCH_ENGINE_ID}&q=${encodeURIComponent(query)}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Google API bağlantı hatası.');
+                    return response.json();
+                })
                 .then(data => {
-                    const container = document.getElementById('results-container');
+                    const container = document.getElementById('results-results-container');
                     
                     if (!data.items || data.items.length === 0) {
-                        container.innerHTML = "<p>Sonuç bulunamadı.</p>";
+                        container.className = "status-message";
+                        container.innerHTML = "Aradığınız kriterlere uygun sonuç bulunamadı.";
                         return;
                     }
 
@@ -38,22 +115,28 @@
                     data.items.forEach(item => {
                         html += `
                             <li class="result-item">
-                                <a href="${item.html_url}" target="_blank" rel="noopener noreferrer">${item.title}</a>
-                                <p>${item.body ? item.body.substring(0, 140) + '...' : ''}</p>
+                                <a href="${item.link}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>
+                                <div class="url">${escapeHtml(item.link)}</div>
+                                <p>${escapeHtml(item.snippet || '')}</p>
                             </li>
                         `;
                     });
                     html += '</ul>';
+                    
+                    container.className = "";
                     container.innerHTML = html;
                 })
                 .catch(err => {
                     console.error(err);
-                    document.getElementById('results-container').innerText = "Sonuçlar çekilirken bir hata oluştu.";
+                    const container = document.getElementById('results-results-container');
+                    container.className = "status-message error-message";
+                    container.innerText = "Sonuçlar çekilirken bir hata oluştu. Lütfen API anahtarınızı ve ayarlarınızı kontrol edin.";
                 });
         } else {
-            document.getElementById('results-container').innerText = "Lütfen geçerli bir arama terimi girin.";
+            const container = document.getElementById('results-results-container');
+            container.className = "status-message";
+            container.innerText = "Lütfen geçerli bir arama terimi girin.";
         }
     </script>
 </body>
 </html>
-
