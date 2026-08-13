@@ -128,6 +128,8 @@ def get_footer_html():
     '''
 
 
+import os
+
 def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """canli-mac-sonuclari/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("canli-mac-sonuclari", exist_ok=True)
@@ -149,7 +151,7 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* Responsive Iframe Konfigürasyonu */
+        /* Responsive Container */
         .widget-frame-container {{
             position: relative;
             width: 100%;
@@ -183,13 +185,13 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
             <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve maç programı.</p>
             
-            <!-- Kesintisiz Iframe Widget -->
+            <!-- Yönlendirmesi Engellenmiş Güvenli Iframe -->
             <div class="widget-frame-container">
                 <iframe 
                     src="https://www.macsonuclari.com.tr/widget/live" 
                     title="Canlı Maç Sonuçları" 
-                    loading="lazy"
-                    allow="autoplay">
+                    sandbox="allow-scripts allow-same-origin allow-forms"
+                    loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -203,7 +205,6 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
 
     with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
         f.write(scores_html)
-
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
