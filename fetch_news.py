@@ -151,19 +151,12 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* Responsive Container */
-        .widget-frame-container {{
-            position: relative;
-            width: 100%;
-            height: 750px;
-            background: #0b1220;
-            border-radius: 8px;
-            overflow: hidden;
-        }}
-        .widget-frame-container iframe {{
-            width: 100%;
-            height: 100%;
-            border: none;
+        /* ProScores Widget Konfigürasyonu */
+        .widget-wrapper {{ 
+            width: 100%; 
+            min-height: 600px; 
+            border-radius: 8px; 
+            overflow: hidden; 
         }}
 
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
@@ -185,14 +178,9 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
             <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve maç programı.</p>
             
-            <!-- Yönlendirmesi Engellenmiş Güvenli Iframe -->
-            <div class="widget-frame-container">
-                <iframe 
-                    src="https://www.macsonuclari.com.tr/widget/live" 
-                    title="Canlı Maç Sonuçları" 
-                    sandbox="allow-scripts allow-same-origin allow-forms"
-                    loading="lazy">
-                </iframe>
+            <!-- ProScores Widget -->
+            <div class="widget-wrapper">
+                <script src="https://widgets.proscores.app/njs/tr/prolivewidget.js" defer></script>
             </div>
         </div>
 
