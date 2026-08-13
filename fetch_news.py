@@ -135,7 +135,6 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
     fetch_news.py tarafından çalıştırılarak canli-mac-sonuclari/index.html 
     sayfasını otomatik oluşturan fonksiyon.
     """
-    # Klasör yoksa oluşturuluyor
     os.makedirs("canli-mac-sonuclari", exist_ok=True)
 
     scores_html = f'''<!DOCTYPE html>
@@ -155,10 +154,10 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; font-weight: 700; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* ProScores Widget Kapsayıcısı */
-        .widget-wrapper {{ 
+        /* Yüksekliği Uzun Tutulmuş Widget Alanı */
+        .hb-widget-content {{ 
             width: 100%; 
-            min-height: 650px; 
+            min-height: 1200px; 
             border-radius: 8px; 
             overflow: hidden; 
             background: #0b1220;
@@ -183,9 +182,10 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
             <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve güncel maç programı.</p>
             
-            <!-- Kesintisiz ProScores Canlı Skor Widget -->
-            <div class="widget-wrapper">
-                <script src="https://widgets.proscores.app/njs/tr/prolivewidget.js" defer></script>
+            <!-- ProScores Doğru Widget Yapısı -->
+            <div class="hb-widget-content">
+                <script type="text/javascript" src="https://widgets.proscores.app/njs/tr/prolivewidget.js" async></script>
+                <a href="https://www.macsonuclari1.net/" data-w="" title="iddaa sonuçları" style="display:block; text-align:center; padding:10px; font-size:10px; color:#ccc; text-decoration:none;">macsonuclari1.net</a>
             </div>
         </div>
 
@@ -199,7 +199,7 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
     with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
         f.write(scores_html)
         
-    print("✅ Canlı maç sonuçları sayfası (canli-mac-sonuclari/index.html) ProScores altyapısıyla güncellendi.")
+    print("✅ Canlı maç sonuçları sayfası güncellendi (Yükseklik: 1200px, ProScores Anchor eklendi).")
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
