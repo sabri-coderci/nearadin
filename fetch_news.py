@@ -125,6 +125,155 @@ def get_footer_html():
     </footer>
     '''
 
+def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
+    """search.html Sayfasını Otomatik Oluşturur"""
+    search_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları - nearadin.net</title>
+    <meta name="description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
+    <link rel="canonical" href="https://nearadin.net/search.html" />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
+        
+        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
+        h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
+        
+        .search-form {{ display: flex; gap: 8px; margin-bottom: 20px; }}
+        .search-input {{ flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; }}
+        .search-input:focus {{ border-color: #0056b3; box-shadow: 0 0 0 2px rgba(0,86,179,0.15); }}
+        .search-button {{ padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; }}
+        .search-button:hover {{ background-color: #004085; }}
+
+        .results-header {{ font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }}
+        
+        .results-list {{ list-style: none; padding: 0; margin: 0; }}
+        .result-item {{ background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }}
+        .result-item a {{ color: #0056b3; text-decoration: none; font-size: 15px; font-weight: bold; display: block; margin-bottom: 4px; line-height: 1.3; }}
+        .result-item a:hover {{ text-decoration: underline; }}
+        .result-item .url {{ color: #28a745; font-size: 12px; margin-bottom: 6px; word-break: break-all; }}
+        .result-item p {{ color: #4b4f56; font-size: 13px; line-height: 1.5; margin: 0; }}
+        
+        .status-message {{ text-align: center; color: #65676b; padding: 20px 0; font-style: italic; font-size: 14px; }}
+        .error-box {{ background: #fff8f7; border: 1px solid #f5c6cb; color: #721c24; padding: 18px; border-radius: 8px; text-align: center; font-size: 14px; margin-top: 10px; }}
+        .fallback-btn {{ display: inline-block; margin-top: 12px; background: #1877f2; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px; }}
+        .fallback-btn:hover {{ background: #0056b3; }}
+
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+    </style>
+</head>
+<body>
+
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
+    {admatic_code}
+    {header_html}
+
+    <div class="container">
+        <div class="card">
+            <h1>🔍 Site İçi Arama</h1>
+            <form class="search-form" method="GET" action="">
+                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required>
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+
+            <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
+            <div id="results-results-container" class="status-message">Lütfen yukarıdaki kutudan bir arama yapın.</div>
+        </div>
+
+        {whos_amung_us_code}
+    </div>
+
+    {footer_html}
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+
+        const API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek";
+        const SEARCH_ENGINE_ID = "a33464712b4234607";
+
+        function escapeHtml(str) {{
+            if (!str) return '';
+            return str.replace(/[&<>'"]/g, 
+                tag => ({{ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }}[tag] || tag)
+            );
+        }}
+
+        function sanitizeUrl(url) {{
+            try {{
+                const parsed = new URL(url);
+                if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {{
+                    return parsed.href;
+                }}
+            }} catch (e) {{}}
+            return '#';
+        }}
+
+        if (query) {{
+            document.getElementById('search-input').value = query;
+            document.getElementById('search-keyword').innerText = query;
+            
+            const container = document.getElementById('results-results-container');
+            container.innerText = "Arama sonuçları getiriliyor...";
+
+            const apiUrl = 'https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ENGINE_ID + '&q=' + encodeURIComponent(query);
+
+            fetch(apiUrl)
+                .then(response => {{
+                    if (!response.ok) throw new Error('API kotası veya bağlantı hatası.');
+                    return response.json();
+                }})
+                .then(data => {{
+                    if (!data.items || data.items.length === 0) {{
+                        container.className = "status-message";
+                        container.innerHTML = "Aradığınız kriterlere uygun haber veya içerik bulunamadı.";
+                        return;
+                    }}
+
+                    let html = '<ul class="results-list">';
+                    data.items.forEach(function(item) {{
+                        var safeLink = sanitizeUrl(item.link);
+                        var title = escapeHtml(item.title);
+                        var snippet = escapeHtml(item.snippet || '');
+                        html += '<li class="result-item">' +
+                                    '<a href="' + safeLink + '" target="_blank" rel="noopener noreferrer">' + title + '</a>' +
+                                    '<div class="url">' + safeLink + '</div>' +
+                                    '<p>' + snippet + '</p>' +
+                                '</li>';
+                    }});
+                    html += '</ul>';
+                    
+                    container.className = "";
+                    container.innerHTML = html;
+                }})
+                .catch(err => {{
+                    console.error(err);
+                    var googleFallbackUrl = 'https://www.google.com/search?q=site:nearadin.net+' + encodeURIComponent(query);
+                    
+                    container.className = "";
+                    container.innerHTML = '<div class="error-box">' +
+                        '<p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>' +
+                        '<p style="font-size:12px; margin-top:6px; color:#65676b;">Google API günlük ücretsiz sorgu limitine ulaşılmış olabilir.</p>' +
+                        '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net\'te Ara ↗</a>' +
+                    '</div>';
+                }});
+        }}
+    </script>
+</body>
+</html>'''
+
+    with open("search.html", "w", encoding="utf-8") as f:
+        f.write(search_html)
+
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
@@ -594,6 +743,14 @@ def fetch_and_generate():
         admatic_code=admatic_code
     )
 
+    # Arama sayfasını dinamik olarak oluştur
+    generate_search_page(
+        header_html=get_header_html("nearadin.net - Arama"),
+        footer_html=footer_html,
+        whos_amung_us_code=whos_amung_us_code,
+        admatic_code=admatic_code
+    )
+
     try:
         req = urllib.request.Request(rss_url, headers=headers)
         response = urllib.request.urlopen(req, timeout=15)
@@ -984,6 +1141,12 @@ def fetch_and_generate():
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://nearadin.net/search.html</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nearadin.net/arsiv/</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
@@ -1081,7 +1244,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Betik başarıyla çalıştı. Hava Durumu, Film-izle ve tüm servis sayfaları güncellendi.")
+        print("Betik başarıyla çalıştı. Hava Durumu, Film-izle, Arama (search.html) ve tüm servis sayfaları güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
