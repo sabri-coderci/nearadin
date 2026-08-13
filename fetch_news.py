@@ -127,6 +127,7 @@ def get_footer_html():
     </footer>
     '''
 
+
 def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """canli-mac-sonuclari/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("canli-mac-sonuclari", exist_ok=True)
@@ -137,7 +138,7 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canlı Maç Sonuçları ve Anlık Skor Takibi - nearadin.net</title>
-    <meta name="description" content="Süper Lig, Şampiyonlar Ligi ve dünya liglerinden güncel canlı maç sonuçları, anlık skor takibi, canlı maç anlatımları ve günün maç takvimi nearadin.net'te!" />
+    <meta name="description" content="Süper Lig, Şampiyonlar Ligi ve dünya liglerinden güncel canlı maç sonuçları, anlık skor takibi ve maç programı nearadin.net'te!" />
     <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -148,8 +149,21 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        .widget-wrapper {{ min-height: 450px; background: #0b1220; border-radius: 8px; padding: 10px; overflow: hidden; }}
-        
+        /* Responsive Iframe Konfigürasyonu */
+        .widget-frame-container {{
+            position: relative;
+            width: 100%;
+            height: 750px;
+            background: #0b1220;
+            border-radius: 8px;
+            overflow: hidden;
+        }}
+        .widget-frame-container iframe {{
+            width: 100%;
+            height: 100%;
+            border: none;
+        }}
+
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
@@ -169,24 +183,14 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
             <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve maç programı.</p>
             
-            <div class="widget-wrapper">
-                <a href="https://www.macsonuclari.com.tr/" title="canlı maç sonuçları" style="color:#22d3ee; text-decoration:none; display:block; padding:10px;">Canlı Maç Sonuçları Yükleniyor...</a>
-                <script>
-                window.MacsonuclariWidgetVars = {{
-                  "fs": "13px",
-                  "live_clr": "#22d3ee",
-                  "card_bg": "#0b1220",
-                  "card_bg2": "#0f1a2d",
-                  "row_bg": "#0f1b30",
-                  "row_bg2": "#11213a"
-                }};
-                window.MacsonuclariWidgetCs = {{
-                  "list": "all",
-                  "lang": "tr",
-                  "date": true
-                }};
-                </script>
-                <script src="https://www.macsonuclari.com.tr/widgets/tr/livewidget.js" defer></script>
+            <!-- Kesintisiz Iframe Widget -->
+            <div class="widget-frame-container">
+                <iframe 
+                    src="https://www.macsonuclari.com.tr/widget/live" 
+                    title="Canlı Maç Sonuçları" 
+                    loading="lazy"
+                    allow="autoplay">
+                </iframe>
             </div>
         </div>
 
