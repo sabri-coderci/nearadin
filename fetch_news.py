@@ -169,11 +169,6 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
 </head>
 <body>
 
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
 
@@ -263,7 +258,7 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
                     container.innerHTML = '<div class="error-box">' +
                         '<p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>' +
                         '<p style="font-size:12px; margin-top:6px; color:#65676b;">Google API günlük ücretsiz sorgu limitine ulaşılmış olabilir.</p>' +
-                        '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net\'te Ara ↗</a>' +
+                        '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net&#39;te Ara ↗</a>' +
                     '</div>';
                 }});
         }}
@@ -273,6 +268,7 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
 
     with open("search.html", "w", encoding="utf-8") as f:
         f.write(search_html)
+
 
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
