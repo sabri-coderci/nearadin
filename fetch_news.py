@@ -418,6 +418,16 @@ def generate_turksat_frequency_page(header_html, footer_html, whos_amung_us_code
         
     print("✅ Türksat Frekans Listesi (Tüm kanallar tablosuyla) başarıyla güncellendi.")
 
+if __name__ == "__main__":
+    # ... Diğer sayfa oluşturma kodlarınız ...
+
+    # 🟢 BU KISMI EKLEMENİZ GEREKİYOR:
+    generate_turksat_frequency_page(
+        header_html=header_html, 
+        footer_html=footer_html, 
+        whos_amung_us_code=whos_amung_us_code, 
+        admatic_code=admatic_code
+    )
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
