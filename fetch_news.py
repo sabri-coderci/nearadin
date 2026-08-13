@@ -127,7 +127,6 @@ def get_footer_html():
     </footer>
     '''
 
-
 import os
 
 def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
@@ -200,7 +199,6 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         f.write(scores_html)
         
     print("✅ Canlı maç sonuçları sayfası güncellendi (Yükseklik: 1200px, ProScores Anchor eklendi).")
-
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
     search_html = f'''<!DOCTYPE html>
