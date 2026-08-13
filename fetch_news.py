@@ -65,6 +65,7 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
@@ -107,6 +108,7 @@ def get_footer_html():
                     <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
                         <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
                         <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
                         <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
@@ -124,6 +126,80 @@ def get_footer_html():
         </div>
     </footer>
     '''
+
+def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
+    """canli-mac-sonuclari/index.html Sayfasını Otomatik Oluşturur"""
+    os.makedirs("canli-mac-sonuclari", exist_ok=True)
+
+    scores_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canlı Maç Sonuçları ve Anlık Skor Takibi - nearadin.net</title>
+    <meta name="description" content="Süper Lig, Şampiyonlar Ligi ve dünya liglerinden güncel canlı maç sonuçları, anlık skor takibi, canlı maç anlatımları ve günün maç takvimi nearadin.net'te!" />
+    <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
+        
+        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
+        h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
+        p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
+
+        .widget-wrapper {{ min-height: 400px; background: #0b1220; border-radius: 8px; padding: 10px; overflow: hidden; }}
+        
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+    </style>
+</head>
+<body>
+
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
+    {admatic_code}
+    {header_html}
+
+    <div class="container">
+        <div class="card">
+            <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
+            <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve maç programı.</p>
+            
+            <div class="widget-wrapper">
+                <a href="https://www.macsonuclari.com.tr/" title="canlı maç sonuçları">canlı maç sonuçları</a>
+                <script>
+                window.MacsonuclariWidgetSocketUrl = "https://api.macsonuclari.com.tr:1904";
+                window.MacsonuclariWidgetVars = {{
+                  "fs": "13px",
+                  "live_clr": "#22d3ee",
+                  "card_bg": "#0b1220",
+                  "card_bg2": "#0f1a2d",
+                  "row_bg": "#0f1b30",
+                  "row_bg2": "#11213a"
+                }};
+                window.MacsonuclariWidgetCs = {{
+                  "list": "all",
+                  "lang": "tr",
+                  "date": true
+                }};
+                </script>
+                <script async src="https://www.macsonuclari.com.tr/widgets/tr/livewidget.js"></script>
+            </div>
+        </div>
+
+        {whos_amung_us_code}
+    </div>
+
+    {footer_html}
+</body>
+</html>'''
+
+    with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
+        f.write(scores_html)
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
@@ -723,6 +799,14 @@ def fetch_and_generate():
    </div>
     '''
 
+    # Canlı Maç Sonuçları sayfasını dinamik olarak oluştur
+    generate_live_scores_page(
+        header_html=get_header_html("nearadin.net - Canlı Maç Sonuçları"),
+        footer_html=footer_html,
+        whos_amung_us_code=whos_amung_us_code,
+        admatic_code=admatic_code
+    )
+
     # Film İzle sayfasını dinamik olarak oluştur
     generate_film_page(
         header_html=get_header_html("nearadin.net - Film İzle"),
@@ -1137,6 +1221,12 @@ def fetch_and_generate():
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nearadin.net/search.html</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
@@ -1240,7 +1330,7 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Betik başarıyla çalıştı. Hava Durumu, Film-izle, Arama (search.html) ve tüm servis sayfaları güncellendi.")
+        print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html) ve tüm servis sayfaları güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
