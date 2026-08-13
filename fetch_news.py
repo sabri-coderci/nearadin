@@ -1050,6 +1050,13 @@ def fetch_and_generate():
         admatic_code=admatic_code
     )
 
+    generate_turksat_frequency_page(
+        header_html=get_header_html("nearadin.net - Arama"),
+        footer_html=footer_html,
+        whos_amung_us_code=whos_amung_us_code,
+        admatic_code=admatic_code
+    )
+
     try:
         req = urllib.request.Request(rss_url, headers=headers)
         response = urllib.request.urlopen(req, timeout=15)
