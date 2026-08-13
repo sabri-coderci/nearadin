@@ -131,7 +131,11 @@ def get_footer_html():
 import os
 
 def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """canli-mac-sonuclari/index.html Sayfasını Otomatik Oluşturur"""
+    """
+    fetch_news.py tarafından çalıştırılarak canli-mac-sonuclari/index.html 
+    sayfasını otomatik oluşturan fonksiyon.
+    """
+    # Klasör yoksa oluşturuluyor
     os.makedirs("canli-mac-sonuclari", exist_ok=True)
 
     scores_html = f'''<!DOCTYPE html>
@@ -140,7 +144,7 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canlı Maç Sonuçları ve Anlık Skor Takibi - nearadin.net</title>
-    <meta name="description" content="Süper Lig, Şampiyonlar Ligi ve dünya liglerinden güncel canlı maç sonuçları, anlık skor takibi ve maç programı nearadin.net'te!" />
+    <meta name="description" content="Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünya genelindeki tüm futbol maçlarının canlı skorları, anlık sonuçları ve maç takvimi nearadin.net'te!" />
     <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -148,15 +152,16 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
         
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
-        h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
+        h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; font-weight: 700; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* ProScores Widget Konfigürasyonu */
+        /* ProScores Widget Kapsayıcısı */
         .widget-wrapper {{ 
             width: 100%; 
-            min-height: 600px; 
+            min-height: 650px; 
             border-radius: 8px; 
             overflow: hidden; 
+            background: #0b1220;
         }}
 
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
@@ -176,9 +181,9 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
     <div class="container">
         <div class="card">
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
-            <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve maç programı.</p>
+            <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve güncel maç programı.</p>
             
-            <!-- ProScores Widget -->
+            <!-- Kesintisiz ProScores Canlı Skor Widget -->
             <div class="widget-wrapper">
                 <script src="https://widgets.proscores.app/njs/tr/prolivewidget.js" defer></script>
             </div>
@@ -193,6 +198,8 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
 
     with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
         f.write(scores_html)
+        
+    print("✅ Canlı maç sonuçları sayfası (canli-mac-sonuclari/index.html) ProScores altyapısıyla güncellendi.")
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """search.html Sayfasını Otomatik Oluşturur"""
