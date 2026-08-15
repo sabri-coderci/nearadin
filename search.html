@@ -65,87 +65,24 @@
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
             </ul>
         </nav>
-    </header><script>
-    const urlParams = new URLSearchParams(window.location.search);
-
-    // URL'de updated-max parametresi varsa anasayfaya yönlendir
-    if (urlParams.has('updated-max') || window.location.search.includes('updated-max=')) {
-        window.location.href = '/';
-    }
-
-    const query = urlParams.get('q');
-
-    const API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek";
-    const SEARCH_ENGINE_ID = "a33464712b4234607";
-
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>'"]/g, 
-            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-        );
-    }
-
-    function sanitizeUrl(url) {
-        try {
-            const parsed = new URL(url);
-            if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
-                return parsed.href;
-            }
-        } catch (e) {}
-        return '#';
-    }
-
-    if (query) {
-        document.getElementById('search-input').value = query;
-        document.getElementById('search-keyword').innerText = query;
-        
-        const container = document.getElementById('results-results-container');
-        container.innerText = "Arama sonuçları getiriliyor...";
-
-        const apiUrl = 'https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ENGINE_ID + '&q=' + encodeURIComponent(query);
-
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) throw new Error('API kotası veya bağlantı hatası.');
-                return response.json();
-            })
-            .then(data => {
-                if (!data.items || data.items.length === 0) {
-                    container.className = "status-message";
-                    container.innerHTML = "Aradığınız kriterlere uygun haber veya içerik bulunamadı.";
-                    return;
-                }
-
-                let html = '<ul class="results-list">';
-                data.items.forEach(function(item) {
-                    var safeLink = sanitizeUrl(item.link);
-                    var title = escapeHtml(item.title);
-                    var snippet = escapeHtml(item.snippet || '');
-                    html += '<li class="result-item">' +
-                                '<a href="' + safeLink + '" target="_blank" rel="noopener noreferrer">' + title + '</a>' +
-                                '<div class="url">' + safeLink + '</div>' +
-                                '<p>' + snippet + '</p>' +
-                            '</li>';
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
                 });
-                html += '</ul>';
-                
-                container.className = "";
-                container.innerHTML = html;
-            })
-            .catch(err => {
-                console.error(err);
-                var googleFallbackUrl = 'https://www.google.com/search?q=site:nearadin.net+' + encodeURIComponent(query);
-                
-                container.className = "";
-                container.innerHTML = '<div class="error-box">' +
-                    '<p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>' +
-                    '<p style="font-size:12px; margin-top:6px; color:#65676b;">Google API günlük ücretsiz sorgu limitine ulaşılmış olabilir.</p>' +
-                    '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net&#39;te Ara ↗</a>' +
-                '</div>';
-            });
-    }
-</script>
-
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
     
 
     <div class="container">
@@ -199,6 +136,10 @@
     
 
     <script>
+        if (window.location.search.includes('updated-max=')) {
+            window.location.href = '/';
+        }
+
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q');
 
