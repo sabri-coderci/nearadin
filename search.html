@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arama Sonuçları - nearadin.net</title>
-    <meta name="description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
+    <meta name="description" id="page-description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
     <link rel="canonical" href="https://nearadin.net/search.html" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +64,6 @@
 
             <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
             
-            <!-- Arama parametresi olmadığında çalışacak dinamik bilgi kutusu -->
             <div id="status-info" class="status-message" style="display: none;">
                 Lütfen aramak istediğiniz kelimeyi yukarıdaki kutuya yazarak <strong>Ara</strong> butonuna basınız.
             </div>
@@ -126,20 +125,29 @@
                 });
             }
 
-            // Arama Parametresi ve Boş Sayfa Kontrolü
+            // Arama Parametresi, Title ve Description Dinamik Güncelleme
             const urlParams = new URLSearchParams(window.location.search);
             const query = urlParams.get('q');
             const statusInfo = document.getElementById('status-info');
             const searchKeyword = document.getElementById('search-keyword');
             const searchInput = document.getElementById('search-input');
+            const pageDescription = document.getElementById('page-description');
 
             if (query && query.trim() !== '') {
                 const cleanQuery = query.trim();
+                
+                // Title doğrudan sorgu değerine eşitlenir
+                document.title = cleanQuery;
+                
+                // Description: "kelime hakkında arama sonuçları"
+                if (pageDescription) {
+                    pageDescription.setAttribute('content', cleanQuery + ' hakkında arama sonuçları');
+                }
+
                 if (searchInput) searchInput.value = cleanQuery;
                 if (searchKeyword) searchKeyword.innerText = cleanQuery;
                 if (statusInfo) statusInfo.style.display = 'none';
             } else {
-                // Sorgu bulunamadığında veya eski Blogger bağlantılarıyla gelindiğinde
                 if (searchKeyword) searchKeyword.innerText = 'Henüz arama yapılmadı';
                 if (statusInfo) statusInfo.style.display = 'block';
             }
