@@ -1,162 +1,288 @@
-<div id="browser-simulation-container" style="width: 100%; min-height: 500px; margin: 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-  <div style="display: flex; align-items: center; background: #f1f3f4; padding: 10px 15px; border-radius: 8px 8px 0 0; border: 1px solid #ccc; border-bottom: none;">
-    <div style="display: flex; gap: 6px; margin-right: 15px;">
-      <span style="width: 12px; height: 12px; background: #ff5f56; border-radius: 50%; display: inline-block;"></span>
-      <span style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
-      <span style="width: 12px; height: 12px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları - nearadin.net</title>
+    <meta name="description" id="page-description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
+    <link rel="canonical" href="https://nearadin.net/search.html" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
+        .container { max-width: 720px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }
+        
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { font-size: 20px; margin-bottom: 15px; color: #0056b3; }
+        
+        .search-form { display: flex; gap: 8px; margin-bottom: 20px; }
+        .search-input { flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; }
+        .search-input:focus { border-color: #0056b3; box-shadow: 0 0 0 2px rgba(0,86,179,0.15); }
+        .search-button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; }
+        .search-button:hover { background-color: #004085; }
+
+        .results-header { font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }
+        .status-message { text-align: center; color: #65676b; padding: 25px 15px; background: #f8f9fa; border-radius: 8px; border: 1px dashed #ccd0d5; font-size: 14px; margin-top: 10px; }
+
+        /* Tarayıcı Simülasyonu Stilleri */
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #0056b3; border-radius: 50%; width: 36px; height: 36px; animation: spin 1s linear infinite; margin: 0 auto 15px; }
+        
+        .extracted-content p { font-size: 15px; line-height: 1.6; color: #333; margin-bottom: 15px; }
+        .extracted-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 15px 0; }
+        .extracted-content h1 { font-size: 22px; color: #111; margin-bottom: 15px; }
+
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div class="ad-container">
+       <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+       <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
     </div>
-    <div id="browser-address-field" style="flex-grow: 1; background: #fff; padding: 5px 12px; border-radius: 16px; font-size: 13px; color: #5f6368; border: 1px solid #dadce0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-      Yükleniyor...
-    </div>
-  </div>
-
-  <div id="browser-content-viewport" style="width: 100%; background: #fff; border: 1px solid #ccc; border-radius: 0 0 8px 8px; padding: 20px; box-sizing: border-box; min-height: 450px;">
-    <div id="viewport-loader" style="text-align: center; padding: 60px 20px; color: #5f6368;">
-      <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #1a73e8; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
-      İçerik güvenli tünelden çekiliyor...
-    </div>
-  </div>
-</div>
-
-<style>
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-/* Çekilen haber içeriğinin sitenizde şık durması için temel stil */
-.extracted-content p { font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 15px; }
-.extracted-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 15px 0; }
-.extracted-content h1 { font-size: 24px; color: #111; margin-bottom: 20px; }
-</style>
-
-<script>
-(function() {
-  const addressField = document.getElementById('browser-address-field');
-  const viewport = document.getElementById('browser-content-viewport');
-
-  function getCleanTargetUrl() {
-    const fullHref = window.location.href;
-    const urlMatches = fullHref.match(/https?:\/\/[^\s&]+/g);
-    if (urlMatches && urlMatches.length > 1) return decodeURIComponent(urlMatches[1]);
     
-    const urlParams = new URLSearchParams(window.location.search);
-    let q = urlParams.get('q');
-    return q ? decodeURIComponent(q) : null;
-  }
-
-  const targetUrl = getCleanTargetUrl();
-  if (!targetUrl) {
-    addressField.innerText = "Hata: URL Bulunamadı";
-    viewport.innerHTML = '<div style="color:#d93025; text-align:center;">Geçerli bir sorgu bulunamadı.</div>';
-    return;
-  }
-
-  addressField.innerText = targetUrl;
-
-  // Medya ve YouTube Kontrolleri
-  const ytRegExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-  const ytMatch = targetUrl.match(ytRegExp);
-
-  if (ytMatch && ytMatch[2].length === 11) {
-    // YouTube durumu
-    viewport.style.padding = "0";
-    viewport.innerHTML = `<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000;"><iframe src="https://www.youtube.com/embed/${ytMatch[2]}?autoplay=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe></div>`;
-  } else if (targetUrl.match(/\.(jpeg|jpg|gif|png|webp|svg)$/i)) {
-    // Görsel durumu
-    viewport.innerHTML = `<div style="text-align:center;"><img src="${targetUrl}" style="max-width:100%; height:auto;" /></div>`;
-  } else if (targetUrl.match(/\.(pdf)$/i)) {
-    // PDF durumu
-    viewport.style.padding = "0";
-    viewport.innerHTML = `<iframe src="https://docs.google.com/gview?url=${encodeURIComponent(targetUrl)}&embedded=true" style="width:100%; height:700px; border:none;"></iframe>`;
-  } else {
-    // WEB SAYFASI/HABER DURUMU: Doğrudan içeriği kazıma (Scraping) altyapısı
-    // AllOrigins proxy ağını kullanarak hedef sitenin ham HTML kodunu çekiyoruz
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
-      .then(response => {
-        if (response.ok) return response.json();
-        throw new Error('Network response was not ok.');
-      })
-      .then(data => {
-        // Gelen ham HTML'i sanal bir dökümana dönüştür
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data.contents, 'text/html');
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Arama</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;" aria-label="Menü">☰</button>
         
-        // CNN Türk ve standart haber sitelerinin ana gövdesini (metinlerini) bulmaya çalış
-        // Genelde makaleler <article> içinde veya belirli sınıflarda yer alır
-        const articleContent = doc.querySelector('article') || doc.querySelector('.news-content') || doc.querySelector('.detail-content') || doc.body;
-        
-        // Gereksiz script, link ve reklam alanlarını temizle (Ziyaretçi sitenizde kalsın diye)
-        const scripts = articleContent.getElementsByTagName('script');
-        while (scripts.length > 0) scripts[0].parentNode.removeChild(scripts[0]);
-        
-        const styleTags = articleContent.getElementsByTagName('style');
-        while (styleTags.length > 0) styleTags[0].parentNode.removeChild(styleTags[0]);
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        // Temizlenen içeriği kendi sayfamıza gömüyoruz
-        viewport.innerHTML = `
-          <div class="extracted-content" style="max-width: 800px; margin: 0 auto;">
-            <div style="margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #eee; font-size:12px; color:#666;">
-              📰 Bu içerik özgün kaynaktan anlık olarak güvenli modda derlenmiştir. Orijinal haline <a href="${targetUrl}" target="_blank" rel="nofollow" style="color:#1a73e8;">buradan</a> ulaşabilirsiniz.
+    <div class="container">
+        <div class="card">
+            <h1>🔍 Site İçi Arama / Bağlantı Önizleme</h1>
+            <form class="search-form" method="GET" action="/search.html">
+                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi veya URL'yi yazın..." required>
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+
+            <div class="results-header">Sonuçlar: <span id="search-keyword" style="color: #0056b3;">-</span></div>
+            
+            <div id="status-info" class="status-message" style="display: none;">
+                Lütfen aramak istediğiniz kelimeyi veya bağlantıyı yukarıdaki kutuya yazarak <strong>Ara</strong> butonuna basınız.
             </div>
-            ${articleContent.innerHTML}
-          </div>`;
-      })
-      .catch(err => {
-        // Eğer her şeye rağmen bir hata oluşursa (Sunucu çökerse) güvenli çıkış kapısı sun:
-        viewport.innerHTML = `
-          <div style="text-align:center; padding:40px 10px;">
-            <p style="color:#333; font-size:16px;">Bu sitenin katı güvenlik politikaları nedeniyle içerik doğrudan sayfaya yansıtılamadı.</p>
-            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer nofollow" style="display:inline-block; margin-top:15px; padding:12px 25px; background:#1a73e8; color:#fff; text-decoration:none; border-radius:4px; font-weight:bold;">İçeriği Yeni Sekmede Aç</a>
-          </div>`;
-      });
-  }
-})();
-</script>
-<script type='text/javascript'>
-//<![CDATA[
-(function() {
-  const addressField = document.getElementById('browser-address-field');
-  const viewport = document.getElementById('browser-content-viewport');
 
-  // URL temizleme ve algılama fonksiyonu
-  function getCleanTargetUrl() {
-    const fullHref = window.location.href;
-    const urlParams = new URLSearchParams(window.location.search);
-    let q = urlParams.get('q');
+            <!-- TARAYICI SİMÜLASYON ALANI (Sadece URL aratıldığında görünür) -->
+            <div id="browser-simulation-container" style="display: none; width: 100%; margin: 15px 0;">
+                <div style="display: flex; align-items: center; background: #f1f3f4; padding: 10px 15px; border-radius: 8px 8px 0 0; border: 1px solid #ccc; border-bottom: none;">
+                    <div style="display: flex; gap: 6px; margin-right: 15px;">
+                        <span style="width: 12px; height: 12px; background: #ff5f56; border-radius: 50%; display: inline-block;"></span>
+                        <span style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
+                        <span style="width: 12px; height: 12px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    </div>
+                    <div id="browser-address-field" style="flex-grow: 1; background: #fff; padding: 5px 12px; border-radius: 16px; font-size: 13px; color: #5f6368; border: 1px solid #dadce0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        Yükleniyor...
+                    </div>
+                </div>
 
-    if (q) return decodeURIComponent(q).trim();
+                <div id="browser-content-viewport" style="width: 100%; background: #fff; border: 1px solid #ccc; border-radius: 0 0 8px 8px; padding: 20px; box-sizing: border-box; min-height: 400px;">
+                    <div id="viewport-loader" style="text-align: center; padding: 50px 20px; color: #5f6368;">
+                        <div class="spinner"></div>
+                        İçerik güvenli tünelden çekiliyor...
+                    </div>
+                </div>
+            </div>
 
-    const postTitleEl = document.querySelector('h1') || document.querySelector('.post-title') || document.querySelector('.entry-title');
-    if (postTitleEl) {
-      let titleText = postTitleEl.innerText.trim();
-      if (titleText.includes('http')) {
-        const lastHttp = titleText.lastIndexOf('http');
-        if (lastHttp !== -1) titleText = titleText.substring(lastHttp);
-      }
-      if (titleText.includes('httpswww')) {
-        titleText = titleText.replace('httpswww', 'https://www');
-      }
-      return titleText;
-    }
-    return null;
-  }
+            <!-- GOOGLE CSE ARAMA ALANI (Normal kelime aratıldığında görünür) -->
+            <div id="google-cse-container">
+                <script async src="https://cse.google.com/cse.js?cx=a33464712b4234607"></script>
+                <div class="gcse-searchresults-only"></div>
+            </div>
+        </div>
 
-  let targetUrl = getCleanTargetUrl();
+        <div style="text-align: center; margin: 20px 0;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script>
+            <script async src="//waust.at/d.js"></script>
+        </div>
+    </div>
 
-  if (!targetUrl) {
-    if (addressField) addressField.innerText = "Hata: URL Bulunamadı";
-    if (viewport) viewport.innerHTML = '<div style="color:#d93025; text-align:center; padding:20px;">Geçerli bir sorgu bulunamadı.</div>';
-    return;
-  }
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 720px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
 
-  if (!/^https?:\/\//i.test(targetUrl)) {
-    targetUrl = 'https://' + targetUrl;
-  }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger Menü
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
 
-  if (addressField) addressField.innerText = targetUrl;
+            // Girdi Bağlantı (URL) mi yoksa Normal Arama Kelimesi mi Kontrol Eder
+            function isUrl(str) {
+                if (!str) return false;
+                str = str.trim();
+                return /^https?:\/\//i.test(str) || /^www\./i.test(str) || /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test(str);
+            }
 
-  // 🚀 PROXY'SİZ DOĞRUDAN IFRAME YÜKLEME (Döngüde takılmayı önler)
-  viewport.style.padding = "0";
-  viewport.style.height = "750px"; 
-  viewport.innerHTML = '<iframe src="' + targetUrl + '" style="width:100%; height:100%; border:none; background:#fff;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>';
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            
+            const statusInfo = document.getElementById('status-info');
+            const searchKeyword = document.getElementById('search-keyword');
+            const searchInput = document.getElementById('search-input');
+            const pageDescription = document.getElementById('page-description');
+            
+            const browserContainer = document.getElementById('browser-simulation-container');
+            const googleCseContainer = document.getElementById('google-cse-container');
+            const addressField = document.getElementById('browser-address-field');
+            const viewport = document.getElementById('browser-content-viewport');
 
-})();
-//]]>
-</script>
+            if (query && query.trim() !== '') {
+                const cleanQuery = query.trim();
+                
+                // Form girdi alanlarını güncelle
+                if (searchInput) searchInput.value = cleanQuery;
+                if (searchKeyword) searchKeyword.innerText = cleanQuery;
+                if (statusInfo) statusInfo.style.display = 'none';
+
+                // TITLE & DESCRIPTION
+                document.title = cleanQuery;
+                if (pageDescription) {
+                    pageDescription.setAttribute('content', cleanQuery + ' hakkında arama sonuçları');
+                }
+
+                // SORGUNUN URL OLUP OLMADIĞINI KONTROL ET
+                if (isUrl(cleanQuery)) {
+                    let targetUrl = cleanQuery;
+                    if (!/^https?:\/\//i.test(targetUrl)) {
+                        targetUrl = 'https://' + targetUrl;
+                    }
+
+                    // Arama alanını kapat, Tarayıcı Simülasyonunu Aç
+                    if (googleCseContainer) googleCseContainer.style.display = 'none';
+                    if (browserContainer) browserContainer.style.display = 'block';
+                    if (addressField) addressField.innerText = targetUrl;
+
+                    // İÇERİK YÜKLEME SÜRECİ
+                    loadTargetUrl(targetUrl, viewport);
+
+                } else {
+                    // NORMAL KELİME ARAMASI: Google CSE Göster
+                    if (browserContainer) browserContainer.style.display = 'none';
+                    if (googleCseContainer) googleCseContainer.style.display = 'block';
+                }
+            } else {
+                if (searchKeyword) searchKeyword.innerText = 'Henüz arama yapılmadı';
+                if (statusInfo) statusInfo.style.display = 'block';
+                if (browserContainer) browserContainer.style.display = 'none';
+                if (googleCseContainer) googleCseContainer.style.display = 'none';
+            }
+
+            // Bağlantı İçeriğini Kazıma / Yükleme Fonksiyonu
+            function loadTargetUrl(targetUrl, viewport) {
+                const ytRegExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                const ytMatch = targetUrl.match(ytRegExp);
+
+                if (ytMatch && ytMatch[2].length === 11) {
+                    // YouTube Medya
+                    viewport.style.padding = "0";
+                    viewport.innerHTML = `<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000;"><iframe src="https://www.youtube.com/embed/${ytMatch[2]}?autoplay=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe></div>`;
+                } else if (targetUrl.match(/\.(jpeg|jpg|gif|png|webp|svg)$/i)) {
+                    // Görsel
+                    viewport.style.padding = "20px";
+                    viewport.innerHTML = `<div style="text-align:center;"><img src="${targetUrl}" style="max-width:100%; height:auto; border-radius:8px;" /></div>`;
+                } else if (targetUrl.match(/\.(pdf)$/i)) {
+                    // PDF Dökümanı
+                    viewport.style.padding = "0";
+                    viewport.innerHTML = `<iframe src="https://docs.google.com/gview?url=${encodeURIComponent(targetUrl)}&embedded=true" style="width:100%; height:600px; border:none;"></iframe>`;
+                } else {
+                    // Web Sayfası / Haber İçeriği - AllOrigins Proxy ile Kazıma
+                    viewport.style.padding = "20px";
+                    viewport.innerHTML = `
+                        <div id="viewport-loader" style="text-align: center; padding: 50px 20px; color: #5f6368;">
+                            <div class="spinner"></div>
+                            İçerik güvenli tünelden çekiliyor...
+                        </div>`;
+
+                    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
+                        .then(response => {
+                            if (response.ok) return response.json();
+                            throw new Error('Bağlantı tüneli yanıt vermedi.');
+                        })
+                        .then(data => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(data.contents, 'text/html');
+                            
+                            // Haber/Makale Gövdesini Bul
+                            const articleContent = doc.querySelector('article') || doc.querySelector('.news-content') || doc.querySelector('.detail-content') || doc.querySelector('.content') || doc.body;
+
+                            if (articleContent) {
+                                // Script ve Stilleri temizle
+                                const scripts = articleContent.getElementsByTagName('script');
+                                while (scripts.length > 0) scripts[0].parentNode.removeChild(scripts[0]);
+
+                                const styleTags = articleContent.getElementsByTagName('style');
+                                while (styleTags.length > 0) styleTags[0].parentNode.removeChild(styleTags[0]);
+
+                                viewport.innerHTML = `
+                                    <div class="extracted-content" style="max-width: 800px; margin: 0 auto;">
+                                        <div style="margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #eee; font-size:12px; color:#666;">
+                                            📰 Bu içerik özgün kaynaktan anlık olarak derlenmiştir. Orijinal haline <a href="${targetUrl}" target="_blank" rel="nofollow" style="color:#0056b3; font-weight:bold;">buradan</a> ulaşabilirsiniz.
+                                        </div>
+                                        ${articleContent.innerHTML}
+                                    </div>`;
+                            } else {
+                                throw new Error('İçerik ayrıştırılamadı.');
+                            }
+                        })
+                        .catch(err => {
+                            // Proxy başarısız olursa Güvenli Iframe yedek modunu çalıştır
+                            viewport.style.padding = "0";
+                            viewport.style.height = "600px";
+                            viewport.innerHTML = `<iframe src="${targetUrl}" style="width:100%; height:100%; border:none; background:#fff;" allowfullscreen></iframe>`;
+                        });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
