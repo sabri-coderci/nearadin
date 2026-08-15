@@ -21,6 +21,7 @@
         .search-button:hover { background-color: #004085; }
 
         .results-header { font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }
+        .status-message { text-align: center; color: #65676b; padding: 25px 15px; background: #f8f9fa; border-radius: 8px; border: 1px dashed #ccd0d5; font-size: 14px; margin-top: 10px; }
 
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
         .ad-container:empty { display: none !important; }
@@ -56,13 +57,18 @@
     <div class="container">
         <div class="card">
             <h1>🔍 Site İçi Arama</h1>
-            <form class="search-form" method="GET" action="">
+            <form class="search-form" method="GET" action="/search.html">
                 <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required>
                 <button type="submit" class="search-button">Ara</button>
             </form>
 
             <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
             
+            <!-- Arama parametresi olmadığında çalışacak dinamik bilgi kutusu -->
+            <div id="status-info" class="status-message" style="display: none;">
+                Lütfen aramak istediğiniz kelimeyi yukarıdaki kutuya yazarak <strong>Ara</strong> butonuna basınız.
+            </div>
+
             <!-- Google Ücretsiz Arama Motoru Scripti ve Sonuç Alanı -->
             <script async src="https://cse.google.com/cse.js?cx=a33464712b4234607"></script>
             <div class="gcse-searchresults-only"></div>
@@ -120,12 +126,22 @@
                 });
             }
 
-            // URL'deki 'q' değerini girdi kutusuna ve başlığa yerleştirme
+            // Arama Parametresi ve Boş Sayfa Kontrolü
             const urlParams = new URLSearchParams(window.location.search);
             const query = urlParams.get('q');
-            if (query) {
-                document.getElementById('search-input').value = query;
-                document.getElementById('search-keyword').innerText = query;
+            const statusInfo = document.getElementById('status-info');
+            const searchKeyword = document.getElementById('search-keyword');
+            const searchInput = document.getElementById('search-input');
+
+            if (query && query.trim() !== '') {
+                const cleanQuery = query.trim();
+                if (searchInput) searchInput.value = cleanQuery;
+                if (searchKeyword) searchKeyword.innerText = cleanQuery;
+                if (statusInfo) statusInfo.style.display = 'none';
+            } else {
+                // Sorgu bulunamadığında veya eski Blogger bağlantılarıyla gelindiğinde
+                if (searchKeyword) searchKeyword.innerText = 'Henüz arama yapılmadı';
+                if (statusInfo) statusInfo.style.display = 'block';
             }
         });
     </script>
