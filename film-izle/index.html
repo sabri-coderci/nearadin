@@ -62,6 +62,7 @@
         .son-yazi { color: #888; font-size: 12px; font-style: italic; display: none; }
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
         .ad-container:empty { display: none !important; }
+        .yukleniyor-mesaj { text-align: center; padding: 20px; font-size: 14px; color: #666; }
     </style>
 </head>
 <body>
@@ -71,14 +72,12 @@
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
     <!-- Admatic AUTO ads END -->
 
-    
-   <div class="ad-container">
+    <div class="ad-container">
       <!-- Admatic AUTO ads START -->
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
         <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
        <!-- Admatic AUTO ads END -->
-   </div>
-    
+    </div>
     
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Film İzle</a>
@@ -114,7 +113,6 @@
             }
         });
     </script>
-    
 
     <div class="film-container">
         <div id="sinema-kontrol-merkezi">
@@ -140,14 +138,11 @@
             <div id="son-yazi" class="son-yazi">Tüm filmler listelendi.</div>
         </div>
 
-        
-    <div style="text-align: center; margin: 20px 0;">
-        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-    </div>
-    
+        <div style="text-align: center; margin: 20px 0;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
     </div>
 
-    
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
@@ -176,47 +171,91 @@
             </div>
         </div>
     </footer>
-    
 
 <script>
-    const tumFilmler = [
-        { id: 'aYbUTg-bfUU', baslik: 'Yeni Film 2026 - Türkçe Dublaj Aksiyon Dolu Yabancı Film Full HD' },
-        { id: 'vcMqEy6udI8', baslik: 'Sürükleyici Gerilim & Macera Filmleri - Türkçe Dublaj Tek Parça' },
-        { id: 'U_uL_kFVdMU', baslik: 'Yüksek Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj İzle' },
-        { id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' },
-        { id: 'F5DEmClsMNA', baslik: 'Hayatta Kalmak İçin 80 Dakikan Var - Aksiyon Filmi Türkçe Dublaj' },
-        { id: 'U06i7AO53mM', baslik: 'Bilinmeyen Bir Adada Uyanır - Macera ve Hayatta Kalma Filmi' },
-        { id: '30j_VWvOWX8', baslik: 'İNFAZCI | En Tehlikeli Paralı Asker - Aksiyon Filmi Türkçe Dublaj' },
-        { id: 'ZF6sfeS8H8M', baslik: 'Efsane Macera Sineması - Türkçe Dublaj Full İzle' }
-    ];
+    const API_KEY = 'AIzaSyB7IgB2_xqru0dYub4yt6K7oY60bhX3D74';
+    const SEARCH_QUERY = 'film izle türkçe dublaj';
+    let nextPageToken = '';
+    let isFetching = false;
 
-    const SAYFA_BASINA = 4;
-    let mevcutIndex = 0;
+    async function fetchMovies(pageToken = '') {
+        if (isFetching) return;
+        isFetching = true;
 
-    function sonrakiPartiYukle() {
         const container = document.getElementById('canli-sonuc-listesi');
         const yukleBtn = document.getElementById('yukle-btn');
         const sonYazi = document.getElementById('son-yazi');
 
-        const dilim = tumFilmler.slice(mevcutIndex, mevcutIndex + SAYFA_BASINA);
+        if (yukleBtn) yukleBtn.innerText = 'Yükleniyor...';
 
-        dilim.forEach(film => {
-            const card = document.createElement('article');
-            card.className = 'film-kart-ozel';
-            card.onclick = () => startMovie(film.id, film.baslik, card);
-            card.innerHTML = `
-                <img src="https://img.youtube.com/vi/${film.id}/hqdefault.jpg" class="film-resim" alt="${film.baslik}">
-                <h3 class="film-metin">${film.baslik}</h3>
-                <div class="oynat-simge">▶</div>
-            `;
-            container.appendChild(card);
+        let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${encodeURIComponent(SEARCH_QUERY)}&type=video&key=${API_KEY}`;
+        if (pageToken) {
+            url += `&pageToken=${pageToken}`;
+        }
+
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            
+            if (data.items && data.items.length > 0) {
+                renderList(data.items);
+                nextPageToken = data.nextPageToken || '';
+                
+                if (!nextPageToken) {
+                    if (yukleBtn) yukleBtn.style.display = 'none';
+                    if (sonYazi) sonYazi.style.display = 'block';
+                } else {
+                    if (yukleBtn) {
+                        yukleBtn.style.display = 'inline-block';
+                        yukleBtn.innerText = 'Daha Fazla Film Yükle ➕';
+                    }
+                }
+            } else if (data.error) {
+                if (!pageToken) {
+                    container.innerHTML = `<div class="yukleniyor-mesaj">Hata oluştu: ${escapeHtml(data.error.message)}</div>`;
+                }
+                if (yukleBtn) yukleBtn.style.display = 'none';
+            } else {
+                if (yukleBtn) yukleBtn.style.display = 'none';
+                if (sonYazi) sonYazi.style.display = 'block';
+            }
+        } catch (e) {
+            if (!pageToken) {
+                container.innerHTML = `<div class="yukleniyor-mesaj">Bağlantı hatası oluştu. Lütfen tekrar deneyin.</div>`;
+            }
+            if (yukleBtn) yukleBtn.innerText = 'Tekrar Deneyin ➕';
+        } finally {
+            isFetching = false;
+        }
+    }
+
+    function renderList(items) {
+        const container = document.getElementById('canli-sonuc-listesi');
+        
+        items.forEach(item => {
+            if (item.id && item.id.videoId) {
+                const s = item.snippet;
+                const vId = item.id.videoId;
+                const card = document.createElement('article');
+                card.className = 'film-kart-ozel';
+                
+                // Başlıkta tırnak işaretleri varsa HTML'e güvenle aktar
+                const safeTitle = escapeHtml(s.title);
+                
+                card.onclick = () => startMovie(vId, s.title, card);
+                card.innerHTML = `
+                    <img src="${s.thumbnails.medium ? s.thumbnails.medium.url : s.thumbnails.default.url}" class="film-resim" alt="${safeTitle}">
+                    <h3 class="film-metin">${safeTitle}</h3>
+                    <div class="oynat-simge">▶</div>
+                `;
+                container.appendChild(card);
+            }
         });
+    }
 
-        mevcutIndex += SAYFA_BASINA;
-
-        if (mevcutIndex >= tumFilmler.length) {
-            yukleBtn.style.display = 'none';
-            sonYazi.style.display = 'block';
+    function sonrakiPartiYukle() {
+        if (nextPageToken) {
+            fetchMovies(nextPageToken);
         }
     }
 
@@ -246,7 +285,18 @@
         document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
     }
 
-    document.addEventListener('DOMContentLoaded', sonrakiPartiYukle);
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text.replace(/&/g, "&amp;")
+                   .replace(/</g, "&lt;")
+                   .replace(/>/g, "&gt;")
+                   .replace(/"/g, "&quot;")
+                   .replace(/'/g, "&#039;");
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        fetchMovies();
+    });
 </script>
 
 </body>
