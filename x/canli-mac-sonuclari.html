@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canlı Maç Sonuçları & Maç Hangi Kanalda? (Günün Maçları) - nearadin.net</title>
+    <meta name="description" content="Bugün hangi maçlar var, maçlar saat kaçta ve hangi kanalda? Süper Lig, Şampiyonlar Ligi ve dünya liglerinden canlı skorlar, anlık maç sonuçları." />
+    <meta name="keywords" content="canlı maç sonuçları, bugün hangi maç var, maç hangi kanalda, canlı skor, süper lig maçları" />
+    <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --mavi-ana: #0056b3; --koyu-metin: #1c1e21; --canli-kirmizi: #e74c3c; --yesil-durum: #27ae60; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: var(--koyu-metin); line-height: 1.5; }
+        
+        .main-container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+
+        /* Filtre Butonları */
+        .filtre-alani { display: flex; gap: 8px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; }
+        .filtre-btn {
+            background: #fff; border: 1px solid #e4e6eb; padding: 8px 16px; border-radius: 20px;
+            font-size: 13px; font-weight: 600; color: #555; cursor: pointer; white-space: nowrap; transition: 0.2s;
+        }
+        .filtre-btn.aktif, .filtre-btn:hover { background: var(--mavi-ana); color: #fff; border-color: var(--mavi-ana); }
+
+        /* Maç Kartları */
+        .lig-baslik {
+            font-size: 13px; font-weight: 700; color: #666; background: #e4e6eb;
+            padding: 6px 12px; border-radius: 6px; margin: 15px 0 8px 0; display: flex; align-items: center; justify-content: space-between;
+        }
+        .mac-kart {
+            background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 12px;
+            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: transform 0.1s ease;
+        }
+        .mac-kart:hover { border-color: #cbd5e1; }
+        
+        .mac-ust-bilgi { display: flex; justify-content: space-between; align-items: center; font-size: 11px; margin-bottom: 8px; }
+        .durum-rozeti { font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+        .durum-canli { background: #fde8e8; color: var(--canli-kirmizi); animation: blink 1.5s infinite; }
+        .durum-bitti { background: #f0f0f0; color: #777; }
+        .durum-gelec { background: #eef6ff; color: var(--mavi-ana); }
+
+        .kanal-bilgisi { font-weight: 600; color: #4b5563; background: #f3f4f6; padding: 2px 8px; border-radius: 12px; }
+
+        .mac-skor-alani { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; }
+        .takim-bilgi { display: flex; align-items: center; font-weight: 600; font-size: 14px; width: 40%; }
+        .takim-bilgi.sag { justify-content: flex-end; text-align: right; }
+        .skor-bilgi { font-size: 18px; font-weight: 800; color: #111; letter-spacing: 2px; width: 20%; text-align: center; }
+        .skor-saat { font-size: 14px; font-weight: 700; color: var(--mavi-ana); letter-spacing: 0; }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
+    <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+    </div>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Canlı Skor</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <!-- Filtreler -->
+        <div class="filtre-alani">
+            <button class="filtre-btn aktif" onclick="filtrele('hepsi')">Tüm Maçlar</button>
+            <button class="filtre-btn" onclick="filtrele('canli')">🔴 Canlı (1)</button>
+            <button class="filtre-btn" onclick="filtrele('bugun')">📅 Bugünkü Program</button>
+            <button class="filtre-btn" onclick="filtrele('bitti')">Bitenler</button>
+        </div>
+
+        <!-- Maç Listesi Bölümü -->
+        <div id="mac-listesi">
+
+            <!-- LİG 1 -->
+            <div class="lig-baslik">
+                <span>🇹🇷 Trendyol Süper Lig</span>
+                <span style="font-size: 11px; font-weight: normal;">Hafta 24</span>
+            </div>
+
+            <!-- CANLI MAÇ -->
+            <div class="mac-kart tip-canli">
+                <div class="mac-ust-bilgi">
+                    <span class="durum-rozeti durum-canli">● CANLI 73'</span>
+                    <span class="kanal-bilgisi">📺 beIN Sports 1</span>
+                </div>
+                <div class="mac-skor-alani">
+                    <div class="takim-bilgi">Galatasaray</div>
+                    <div class="skor-bilgi">2 - 1</div>
+                    <div class="takim-bilgi sag">Fenerbahçe</div>
+                </div>
+            </div>
+
+            <!-- GELECEK MAÇ -->
+            <div class="mac-kart tip-bugun">
+                <div class="mac-ust-bilgi">
+                    <span class="durum-rozeti durum-gelec">SAAT 20:00</span>
+                    <span class="kanal-bilgisi">📺 beIN Sports 2</span>
+                </div>
+                <div class="mac-skor-alani">
+                    <div class="takim-bilgi">Beşiktaş</div>
+                    <div class="skor-bilgi skor-saat">20:00</div>
+                    <div class="takim-bilgi sag">Trabzonspor</div>
+                </div>
+            </div>
+
+
+            <!-- LİG 2 -->
+            <div class="lig-baslik">
+                <span>🇪🇺 UEFA Şampiyonlar Ligi</span>
+                <span style="font-size: 11px; font-weight: normal;">Son 16 Turu</span>
+            </div>
+
+            <!-- BITEN MAÇ -->
+            <div class="mac-kart tip-bitti">
+                <div class="mac-ust-bilgi">
+                    <span class="durum-rozeti durum-bitti">MS</span>
+                    <span class="kanal-bilgisi">📺 TV8.5 / Exxen</span>
+                </div>
+                <div class="mac-skor-alani">
+                    <div class="takim-bilgi">Real Madrid</div>
+                    <div class="skor-bilgi">3 - 1</div>
+                    <div class="takim-bilgi sag">Manchester City</div>
+                </div>
+            </div>
+
+            <!-- GELECEK MAÇ -->
+            <div class="mac-kart tip-bugun">
+                <div class="mac-ust-bilgi">
+                    <span class="durum-rozeti durum-gelec">SAAT 22:00</span>
+                    <span class="kanal-bilgisi">📺 TRT Spor (Şifresiz)</span>
+                </div>
+                <div class="mac-skor-alani">
+                    <div class="takim-bilgi">Bayern Münih</div>
+                    <div class="skor-bilgi skor-saat">22:00</div>
+                    <div class="takim-bilgi sag">Arsenal</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menü Kontrolü
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        // Filtreleme Fonksiyonu
+        function filtrele(tip) {
+            const butonlar = document.querySelectorAll('.filtre-btn');
+            butonlar.forEach(b => b.classList.remove('aktif'));
+            event.target.classList.add('aktif');
+
+            const kartlar = document.querySelectorAll('.mac-kart');
+            kartlar.forEach(kart => {
+                if (tip === 'hepsi') {
+                    kart.style.display = 'block';
+                } else if (tip === 'canli' && kart.classList.contains('tip-canli')) {
+                    kart.style.display = 'block';
+                } else if (tip === 'bugun' && kart.classList.contains('tip-bugun')) {
+                    kart.style.display = 'block';
+                } else if (tip === 'bitti' && kart.classList.contains('tip-bitti')) {
+                    kart.style.display = 'block';
+                } else {
+                    kart.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
