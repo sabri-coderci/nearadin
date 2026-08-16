@@ -11,13 +11,13 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
         .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }
         
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .card { background: #ffffff; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
         h1 { font-size: 20px; margin-bottom: 15px; color: #0056b3; }
         
         .search-form { display: flex; gap: 8px; margin-bottom: 20px; }
-        .search-input { flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; }
+        .search-input { flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
         .search-input:focus { border-color: #0056b3; box-shadow: 0 0 0 2px rgba(0,86,179,0.15); }
-        .search-button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; }
+        .search-button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; transition: background-color 0.2s; }
         .search-button:hover { background-color: #004085; }
 
         .results-header { font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }
@@ -31,7 +31,7 @@
         
         .status-message { text-align: center; color: #65676b; padding: 20px 0; font-style: italic; font-size: 14px; }
         .error-box { background: #fff8f7; border: 1px solid #f5c6cb; color: #721c24; padding: 18px; border-radius: 8px; text-align: center; font-size: 14px; margin-top: 10px; }
-        .fallback-btn { display: inline-block; margin-top: 12px; background: #1877f2; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px; }
+        .fallback-btn { display: inline-block; margin-top: 12px; background: #1877f2; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px; transition: background 0.2s; }
         .fallback-btn:hover { background: #0056b3; }
 
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
@@ -40,18 +40,16 @@
 </head>
 <body>
 
-    
    <div class="ad-container">
       <!-- Admatic AUTO ads START -->
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
        <!-- Admatic AUTO ads END -->
    </div>
     
-    
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Arama</a>
-        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        <button id="hamburgerBtn" aria-label="Menüyü Aç" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
@@ -66,45 +64,25 @@
             </ul>
         </nav>
     </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('hamburgerBtn');
-            const nav = document.getElementById('dropdownNav');
-            if (btn && nav) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-                });
-                document.addEventListener('click', function(e) {
-                    if (!nav.contains(e.target) && e.target !== btn) {
-                        nav.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
-    
 
     <div class="container">
         <div class="card">
             <h1>🔍 Site İçi Arama</h1>
-            <form class="search-form" method="GET" action="">
-                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required>
+            <form class="search-form" id="searchForm" method="GET" action="">
+                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required autocomplete="off">
                 <button type="submit" class="search-button">Ara</button>
             </form>
 
             <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
-            <div id="results-results-container" class="status-message">Lütfen yukarıdaki kutudan bir arama yapın.</div>
+            <div id="results-container" class="status-message">Lütfen yukarıdaki kutudan bir arama yapın.</div>
         </div>
 
-        
-    <div style="text-align: center; margin: 20px 0;">
-        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-    </div>
-    
+        <div style="text-align: center; margin: 20px 0;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script>
+            <script async src="//waust.at/d.js"></script>
+        </div>
     </div>
 
-    
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
@@ -128,86 +106,112 @@
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow noopener" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
-    
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const query = urlParams.get('q');
-
-        const API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek";
-        const SEARCH_ENGINE_ID = "a33464712b4234607";
-
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str.replace(/[&<>'"]/g, 
-                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-            );
-        }
-
-        function sanitizeUrl(url) {
-            try {
-                const parsed = new URL(url);
-                if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
-                    return parsed.href;
-                }
-            } catch (e) {}
-            return '#';
-        }
-
-        if (query) {
-            document.getElementById('search-input').value = query;
-            document.getElementById('search-keyword').innerText = query;
-            
-            const container = document.getElementById('results-results-container');
-            container.innerText = "Arama sonuçları getiriliyor...";
-
-            const apiUrl = 'https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ENGINE_ID + '&q=' + encodeURIComponent(query);
-
-            fetch(apiUrl)
-                .then(response => {
-                    if (!response.ok) throw new Error('API kotası veya bağlantı hatası.');
-                    return response.json();
-                })
-                .then(data => {
-                    if (!data.items || data.items.length === 0) {
-                        container.className = "status-message";
-                        container.innerHTML = "Aradığınız kriterlere uygun haber veya içerik bulunamadı.";
-                        return;
-                    }
-
-                    let html = '<ul class="results-list">';
-                    data.items.forEach(function(item) {
-                        var safeLink = sanitizeUrl(item.link);
-                        var title = escapeHtml(item.title);
-                        var snippet = escapeHtml(item.snippet || '');
-                        html += '<li class="result-item">' +
-                                    '<a href="' + safeLink + '" target="_blank" rel="noopener noreferrer">' + title + '</a>' +
-                                    '<div class="url">' + safeLink + '</div>' +
-                                    '<p>' + snippet + '</p>' +
-                                '</li>';
-                    });
-                    html += '</ul>';
-                    
-                    container.className = "";
-                    container.innerHTML = html;
-                })
-                .catch(err => {
-                    console.error(err);
-                    var googleFallbackUrl = 'https://www.google.com/search?q=site:nearadin.net+' + encodeURIComponent(query);
-                    
-                    container.className = "";
-                    container.innerHTML = '<div class="error-box">' +
-                        '<p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>' +
-                        '<p style="font-size:12px; margin-top:6px; color:#65676b;">Google API günlük ücretsiz sorgu limitine ulaşılmış olabilir.</p>' +
-                        '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net&#39;te Ara ↗</a>' +
-                    '</div>';
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger Menü İşleyişi
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
                 });
-        }
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+
+            // Google Arama Arayüzü Yönetimi
+            const API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek";
+            const SEARCH_ENGINE_ID = "a33464712b4234607";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            const searchInput = document.getElementById('search-input');
+            const keywordSpan = document.getElementById('search-keyword');
+            const container = document.getElementById('results-container');
+
+            function escapeHtml(str) {
+                if (!str) return '';
+                return str.replace(/[&<>'"]/g, tag => ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    "'": '&#39;',
+                    '"': '&quot;'
+                }[tag] || tag));
+            }
+
+            function sanitizeUrl(url) {
+                try {
+                    const parsed = new URL(url);
+                    if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+                        return parsed.href;
+                    }
+                } catch (e) {}
+                return '#';
+            }
+
+            if (query && query.trim() !== '') {
+                const cleanQuery = query.trim();
+                searchInput.value = cleanQuery;
+                keywordSpan.innerText = cleanQuery;
+                container.className = "status-message";
+                container.innerText = "Arama sonuçları getiriliyor...";
+
+                const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${SEARCH_ENGINE_ID}&q=${encodeURIComponent(cleanQuery)}`;
+
+                fetch(apiUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error('API kotası veya sunucu yanıtı yetersiz.');
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (!data.items || data.items.length === 0) {
+                            container.className = "status-message";
+                            container.innerHTML = "Aradığınız kriterlere uygun haber veya içerik bulunamadı.";
+                            return;
+                        }
+
+                        let html = '<ul class="results-list">';
+                        data.items.forEach(item => {
+                            const safeLink = sanitizeUrl(item.link);
+                            const title = escapeHtml(item.title);
+                            const snippet = escapeHtml(item.snippet || '');
+                            html += `
+                                <li class="result-item">
+                                    <a href="${safeLink}" target="_blank" rel="noopener noreferrer">${title}</a>
+                                    <div class="url">${safeLink}</div>
+                                    <p>${snippet}</p>
+                                </li>`;
+                        });
+                        html += '</ul>';
+
+                        container.className = "";
+                        container.innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error('Search API Error:', err);
+                        const googleFallbackUrl = `https://www.google.com/search?q=site:nearadin.net+${encodeURIComponent(cleanQuery)}`;
+
+                        container.className = "";
+                        container.innerHTML = `
+                            <div class="error-box">
+                                <p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>
+                                <p style="font-size:12px; margin-top:6px; color:#65676b;">Google API sorgu sınırına ulaşılmış olabilir.</p>
+                                <a href="${googleFallbackUrl}" target="_blank" rel="noopener noreferrer" class="fallback-btn">Google Üzerinden nearadin.net'te Ara ↗</a>
+                            </div>`;
+                    });
+            }
+        });
     </script>
 </body>
 </html>
