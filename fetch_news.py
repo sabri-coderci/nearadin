@@ -987,8 +987,8 @@ def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_cod
 </body>
 </html>'''
 
-    with open("film-izle/index.html", "w", encoding="utf-8") as f:
-        f.write(film_html)
+  #  with open("film-izle/index.html", "w", encoding="utf-8") as f:
+       # f.write(film_html)
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
