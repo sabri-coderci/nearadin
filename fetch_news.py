@@ -561,8 +561,8 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
 </body>
 </html>'''
 
-    with open("search.html", "w", encoding="utf-8") as f:
-        f.write(search_html)
+   # with open("search.html", "w", encoding="utf-8") as f:
+        #f.write(search_html)
 
 
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
