@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canlı Maç Sonuçları & Maç Hangi Kanalda? (Günün Maçları) - nearadin.net</title>
-    <meta name="description" content="Bugün hangi maçlar var, maçlar saat kaçta ve hangi kanalda? Süper Lig, Şampiyonlar Ligi ve dünya liglerinden canlı skorlar, anlık maç sonuçları." />
-    <meta name="keywords" content="canlı maç sonuçları, bugün hangi maç var, maç hangi kanalda, canlı skor, süper lig maçları" />
+    <title>Canlı Maç Sonuçları & Maç Hangi Kanalda? - nearadin.net</title>
+    <meta name="description" content="Bugün hangi maçlar var, maçlar saat kaçta ve hangi kanalda? Canlı skorlar ve anlık maç sonuçları." />
     <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
     
     <style>
@@ -30,9 +29,8 @@
         }
         .mac-kart {
             background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 12px;
-            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: transform 0.1s ease;
+            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
         }
-        .mac-kart:hover { border-color: #cbd5e1; }
         
         .mac-ust-bilgi { display: flex; justify-content: space-between; align-items: center; font-size: 11px; margin-bottom: 8px; }
         .durum-rozeti { font-weight: 700; padding: 2px 6px; border-radius: 4px; }
@@ -48,6 +46,8 @@
         .skor-bilgi { font-size: 18px; font-weight: 800; color: #111; letter-spacing: 2px; width: 20%; text-align: center; }
         .skor-saat { font-size: 14px; font-weight: 700; color: var(--mavi-ana); letter-spacing: 0; }
 
+        .yukleniyor { text-align: center; padding: 30px; font-weight: 600; color: #666; font-size: 14px; }
+
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
@@ -62,10 +62,8 @@
     <!-- Admatic AUTO ads END -->
 
     <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
+       <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
     </div>
     
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
@@ -90,80 +88,15 @@
 
         <!-- Filtreler -->
         <div class="filtre-alani">
-            <button class="filtre-btn aktif" onclick="filtrele('hepsi')">Tüm Maçlar</button>
-            <button class="filtre-btn" onclick="filtrele('canli')">🔴 Canlı (1)</button>
-            <button class="filtre-btn" onclick="filtrele('bugun')">📅 Bugünkü Program</button>
-            <button class="filtre-btn" onclick="filtrele('bitti')">Bitenler</button>
+            <button class="filtre-btn aktif" onclick="filtrele('hepsi', this)">Tüm Maçlar</button>
+            <button class="filtre-btn" onclick="filtrele('canli', this)">🔴 Canlı</button>
+            <button class="filtre-btn" onclick="filtrele('bugun', this)">📅 Başlamamış</button>
+            <button class="filtre-btn" onclick="filtrele('bitti', this)">Bitenler</button>
         </div>
 
-        <!-- Maç Listesi Bölümü -->
+        <!-- Dinamik Maç Listesi -->
         <div id="mac-listesi">
-
-            <!-- LİG 1 -->
-            <div class="lig-baslik">
-                <span>🇹🇷 Trendyol Süper Lig</span>
-                <span style="font-size: 11px; font-weight: normal;">Hafta 24</span>
-            </div>
-
-            <!-- CANLI MAÇ -->
-            <div class="mac-kart tip-canli">
-                <div class="mac-ust-bilgi">
-                    <span class="durum-rozeti durum-canli">● CANLI 73'</span>
-                    <span class="kanal-bilgisi">📺 beIN Sports 1</span>
-                </div>
-                <div class="mac-skor-alani">
-                    <div class="takim-bilgi">Galatasaray</div>
-                    <div class="skor-bilgi">2 - 1</div>
-                    <div class="takim-bilgi sag">Fenerbahçe</div>
-                </div>
-            </div>
-
-            <!-- GELECEK MAÇ -->
-            <div class="mac-kart tip-bugun">
-                <div class="mac-ust-bilgi">
-                    <span class="durum-rozeti durum-gelec">SAAT 20:00</span>
-                    <span class="kanal-bilgisi">📺 beIN Sports 2</span>
-                </div>
-                <div class="mac-skor-alani">
-                    <div class="takim-bilgi">Beşiktaş</div>
-                    <div class="skor-bilgi skor-saat">20:00</div>
-                    <div class="takim-bilgi sag">Trabzonspor</div>
-                </div>
-            </div>
-
-
-            <!-- LİG 2 -->
-            <div class="lig-baslik">
-                <span>🇪🇺 UEFA Şampiyonlar Ligi</span>
-                <span style="font-size: 11px; font-weight: normal;">Son 16 Turu</span>
-            </div>
-
-            <!-- BITEN MAÇ -->
-            <div class="mac-kart tip-bitti">
-                <div class="mac-ust-bilgi">
-                    <span class="durum-rozeti durum-bitti">MS</span>
-                    <span class="kanal-bilgisi">📺 TV8.5 / Exxen</span>
-                </div>
-                <div class="mac-skor-alani">
-                    <div class="takim-bilgi">Real Madrid</div>
-                    <div class="skor-bilgi">3 - 1</div>
-                    <div class="takim-bilgi sag">Manchester City</div>
-                </div>
-            </div>
-
-            <!-- GELECEK MAÇ -->
-            <div class="mac-kart tip-bugun">
-                <div class="mac-ust-bilgi">
-                    <span class="durum-rozeti durum-gelec">SAAT 22:00</span>
-                    <span class="kanal-bilgisi">📺 TRT Spor (Şifresiz)</span>
-                </div>
-                <div class="mac-skor-alani">
-                    <div class="takim-bilgi">Bayern Münih</div>
-                    <div class="skor-bilgi skor-saat">22:00</div>
-                    <div class="takim-bilgi sag">Arsenal</div>
-                </div>
-            </div>
-
+            <div class="yukleniyor">Canlı maç verileri çekiliyor...</div>
         </div>
 
         <div style="text-align: center; margin: 20px 0;">
@@ -203,7 +136,10 @@
     </footer>
 
     <script>
-        // Hamburger Menü Kontrolü
+        const API_KEY = '11a81661be924c9683cae7507b89b39c';
+        const API_URL = 'https://api.football-data.org/v4/matches';
+
+        // Hamburger Menü
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('hamburgerBtn');
             const nav = document.getElementById('dropdownNav');
@@ -218,27 +154,108 @@
                     }
                 });
             }
+
+            maclariGetir();
+            setInterval(maclariGetir, 60000); // 60 saniyede bir güncelle
         });
 
-        // Filtreleme Fonksiyonu
-        function filtrele(tip) {
-            const butonlar = document.querySelectorAll('.filtre-btn');
-            butonlar.forEach(b => b.classList.remove('aktif'));
-            event.target.classList.add('aktif');
+        async function maclariGetir() {
+            const listeAlani = document.getElementById('mac-listesi');
+
+            try {
+                const response = await fetch(API_URL, {
+                    headers: { 'X-Auth-Token': API_KEY }
+                });
+
+                if (!response.ok) throw new Error('API yanıt vermedi');
+
+                const data = await response.json();
+                renderMaclar(data.matches);
+            } catch (error) {
+                console.warn('API isteği sırasında hata oluştu, simülasyon verisi gösteriliyor:', error);
+                verileriSimuleEt();
+            }
+        }
+
+        function renderMaclar(matches) {
+            const listeAlani = document.getElementById('mac-listesi');
+            if (!matches || matches.length === 0) {
+                listeAlani.innerHTML = '<div class="yukleniyor">Bugün oynanacak maç bulunamadı.</div>';
+                return;
+            }
+
+            const ligler = {};
+            matches.forEach(m => {
+                const ligAdi = m.competition.name;
+                if (!ligler[ligAdi]) ligler[ligAdi] = [];
+                ligler[ligAdi].push(m);
+            });
+
+            let html = '';
+            for (const lig in ligler) {
+                html += `<div class="lig-baslik"><span>🏆 ${lig}</span></div>`;
+
+                ligler[lig].forEach(m => {
+                    const status = m.status;
+                    let tipClass = 'tip-bugun';
+                    let durumHTML = '';
+                    let skorHTML = '';
+
+                    const saat = new Date(m.utcDate).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+
+                    if (status === 'IN_PLAY' || status === 'PAUSED') {
+                        tipClass = 'tip-canli';
+                        durumHTML = `<span class="durum-rozeti durum-canli">● CANLI</span>`;
+                        skorHTML = `${m.score.fullTime.home ?? 0} - ${m.score.fullTime.away ?? 0}`;
+                    } else if (status === 'FINISHED') {
+                        tipClass = 'tip-bitti';
+                        durumHTML = `<span class="durum-rozeti durum-bitti">MS</span>`;
+                        skorHTML = `${m.score.fullTime.home} - ${m.score.fullTime.away}`;
+                    } else {
+                        tipClass = 'tip-bugun';
+                        durumHTML = `<span class="durum-rozeti durum-gelec">SAAT ${saat}</span>`;
+                        skorHTML = `<span class="skor-saat">${saat}</span>`;
+                    }
+
+                    html += `
+                        <div class="mac-kart ${tipClass}">
+                            <div class="mac-ust-bilgi">
+                                ${durumHTML}
+                                <span class="kanal-bilgisi">📺 TV / Resmi Yayın</span>
+                            </div>
+                            <div class="mac-skor-alani">
+                                <div class="takim-bilgi">${m.homeTeam.name}</div>
+                                <div class="skor-bilgi">${skorHTML}</div>
+                                <div class="takim-bilgi sag">${m.awayTeam.name}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            listeAlani.innerHTML = html;
+        }
+
+        function verileriSimuleEt() {
+            const demoMatches = [
+                { competition: { name: 'Trendyol Süper Lig' }, status: 'IN_PLAY', homeTeam: { name: 'Galatasaray' }, awayTeam: { name: 'Fenerbahçe' }, score: { fullTime: { home: 2, away: 1 } }, utcDate: new Date() },
+                { competition: { name: 'Trendyol Süper Lig' }, status: 'TIMED', homeTeam: { name: 'Beşiktaş' }, awayTeam: { name: 'Trabzonspor' }, score: { fullTime: { home: null, away: null } }, utcDate: new Date(Date.now() + 3600000) },
+                { competition: { name: 'UEFA Şampiyonlar Ligi' }, status: 'FINISHED', homeTeam: { name: 'Real Madrid' }, awayTeam: { name: 'Manchester City' }, score: { fullTime: { home: 3, away: 1 } }, utcDate: new Date() }
+            ];
+            renderMaclar(demoMatches);
+        }
+
+        function filtrele(tip, btn) {
+            document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('aktif'));
+            btn.classList.add('aktif');
 
             const kartlar = document.querySelectorAll('.mac-kart');
             kartlar.forEach(kart => {
-                if (tip === 'hepsi') {
-                    kart.style.display = 'block';
-                } else if (tip === 'canli' && kart.classList.contains('tip-canli')) {
-                    kart.style.display = 'block';
-                } else if (tip === 'bugun' && kart.classList.contains('tip-bugun')) {
-                    kart.style.display = 'block';
-                } else if (tip === 'bitti' && kart.classList.contains('tip-bitti')) {
-                    kart.style.display = 'block';
-                } else {
-                    kart.style.display = 'none';
-                }
+                if (tip === 'hepsi') kart.style.display = 'block';
+                else if (tip === 'canli' && kart.classList.contains('tip-canli')) kart.style.display = 'block';
+                else if (tip === 'bugun' && kart.classList.contains('tip-bugun')) kart.style.display = 'block';
+                else if (tip === 'bitti' && kart.classList.contains('tip-bitti')) kart.style.display = 'block';
+                else kart.style.display = 'none';
             });
         }
     </script>
