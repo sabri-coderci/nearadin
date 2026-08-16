@@ -1,136 +1,129 @@
-<script>
-    const API_KEY = '11a81661be924c9683cae7507b89b39c';
-
-    // Hamburger Menü Kontrolü
-    document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.getElementById('hamburgerBtn');
-        const nav = document.getElementById('dropdownNav');
-        if (btn && nav) {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-            });
-            document.addEventListener('click', function(e) {
-                if (!nav.contains(e.target) && e.target !== btn) {
-                    nav.style.display = 'none';
-                }
-            });
-        }
-
-        maclariGetir();
-    });
-
-    async function maclariGetir() {
-        const listeAlani = document.getElementById('mac-listesi');
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canlı Maç Sonuçları & Maç Hangi Kanalda? - nearadin.net</title>
+    <meta name="description" content="Bugün hangi maçlar var, maçlar saat kaçta ve hangi kanalda? Canlı skorlar ve anlık maç sonuçları." />
+    <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --mavi-ana: #0056b3; --koyu-metin: #1c1e21; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: var(--koyu-metin); line-height: 1.5; }
         
-        // 5 Saniye içinde yanıt gelmezse kilitlenmeyi önlemek için AbortController
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        .main-container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
 
-        try {
-            // CORS Proxy üzerinden istek
-            const targetUrl = 'https://api.football-data.org/v4/matches';
-            const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(targetUrl);
+        .widget-kutu {
+            background: #fff; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #e4e6eb;
+            margin-top: 10px;
+        }
 
-            const response = await fetch(proxyUrl, {
-                signal: controller.signal
-            });
-            clearTimeout(timeoutId);
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
 
-            if (!response.ok) throw new Error('API Hatasi');
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
 
-            const data = await response.json();
-            if (data && data.matches) {
-                renderMaclar(data.matches);
-            } else {
-                verileriSimuleEt();
+    <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+       <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    </div>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Canlı Skor</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <!-- Canlı Maç Listesi / Widget -->
+        <div id="mac-listesi" class="widget-kutu">
+            <iframe 
+                src="https://www.scoreaxis.com/widget/live-scores?autoHeight=1&links=0&bodyBackground=%23f0f2f5&font=Segoe%20UI" 
+                width="100%" 
+                height="650" 
+                style="border:none; width:100%; overflow:hidden;" 
+                scrolling="no">
+            </iframe>
+        </div>
+
+        <!-- Sayaç Widget -->
+        <div style="text-align: center; margin: 20px 0;">
+            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menü Kontrolü
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
             }
-        } catch (error) {
-            console.warn('CORS veya Zaman Aşımı Hatası:', error);
-            // Kilitlenmeyi önlemek için otomatik yedek/demo veriyi ekrana basar
-            verileriSimuleEt();
-        }
-    }
-
-    function renderMaclar(matches) {
-        const listeAlani = document.getElementById('mac-listesi');
-        if (!matches || matches.length === 0) {
-            listeAlani.innerHTML = '<div class="yukleniyor">Bugün oynanacak maç bulunamadı.</div>';
-            return;
-        }
-
-        const ligler = {};
-        matches.forEach(m => {
-            const ligAdi = m.competition ? m.competition.name : 'Diğer Ligler';
-            if (!ligler[ligAdi]) ligler[ligAdi] = [];
-            ligler[ligAdi].push(m);
         });
-
-        let html = '';
-        for (const lig in ligler) {
-            html += `<div class="lig-baslik"><span>🏆 ${lig}</span></div>`;
-
-            ligler[lig].forEach(m => {
-                const status = m.status;
-                let tipClass = 'tip-bugun';
-                let durumHTML = '';
-                let skorHTML = '';
-
-                const saat = m.utcDate ? new Date(m.utcDate).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) : '--:--';
-
-                if (status === 'IN_PLAY' || status === 'PAUSED') {
-                    tipClass = 'tip-canli';
-                    durumHTML = `<span class="durum-rozeti durum-canli">● CANLI</span>`;
-                    skorHTML = `${m.score?.fullTime?.home ?? 0} - ${m.score?.fullTime?.away ?? 0}`;
-                } else if (status === 'FINISHED') {
-                    tipClass = 'tip-bitti';
-                    durumHTML = `<span class="durum-rozeti durum-bitti">MS</span>`;
-                    skorHTML = `${m.score?.fullTime?.home ?? 0} - ${m.score?.fullTime?.away ?? 0}`;
-                } else {
-                    tipClass = 'tip-bugun';
-                    durumHTML = `<span class="durum-rozeti durum-gelec">SAAT ${saat}</span>`;
-                    skorHTML = `<span class="skor-saat">${saat}</span>`;
-                }
-
-                html += `
-                    <div class="mac-kart ${tipClass}">
-                        <div class="mac-ust-bilgi">
-                            ${durumHTML}
-                            <span class="kanal-bilgisi">📺 TV / Resmi Yayın</span>
-                        </div>
-                        <div class="mac-skor-alani">
-                            <div class="takim-bilgi">${m.homeTeam.name}</div>
-                            <div class="skor-bilgi">${skorHTML}</div>
-                            <div class="takim-bilgi sag">${m.awayTeam.name}</div>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        listeAlani.innerHTML = html;
-    }
-
-    function verileriSimuleEt() {
-        const demoMatches = [
-            { competition: { name: 'Trendyol Süper Lig' }, status: 'IN_PLAY', homeTeam: { name: 'Galatasaray' }, awayTeam: { name: 'Fenerbahçe' }, score: { fullTime: { home: 2, away: 1 } }, utcDate: new Date() },
-            { competition: { name: 'Trendyol Süper Lig' }, status: 'TIMED', homeTeam: { name: 'Beşiktaş' }, awayTeam: { name: 'Trabzonspor' }, score: { fullTime: { home: null, away: null } }, utcDate: new Date(Date.now() + 3600000) },
-            { competition: { name: 'UEFA Şampiyonlar Ligi' }, status: 'FINISHED', homeTeam: { name: 'Real Madrid' }, awayTeam: { name: 'Manchester City' }, score: { fullTime: { home: 3, away: 1 } }, utcDate: new Date() }
-        ];
-        renderMaclar(demoMatches);
-    }
-
-    function filtrele(tip, btn) {
-        document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('aktif'));
-        btn.classList.add('aktif');
-
-        const kartlar = document.querySelectorAll('.mac-kart');
-        kartlar.forEach(kart => {
-            if (tip === 'hepsi') kart.style.display = 'block';
-            else if (tip === 'canli' && kart.classList.contains('tip-canli')) kart.style.display = 'block';
-            else if (tip === 'bugun' && kart.classList.contains('tip-bugun')) kart.style.display = 'block';
-            else if (tip === 'bitti' && kart.classList.contains('tip-bitti')) kart.style.display = 'block';
-            else kart.style.display = 'none';
-        });
-    }
-</script>
+    </script>
+</body>
+</html>
