@@ -2,63 +2,37 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arama Sonuçları - nearadin.net</title>
-    <meta name="description" id="page-description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
+    <meta name="description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
     <link rel="canonical" href="https://nearadin.net/search.html" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        
-        .container { max-width: 720px; margin: 10px auto; padding: 0 8px; width: 100%; }
-        .card { background: white; border-radius: 10px; padding: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 15px; width: 100%; }
-        
-        h1 { font-size: 18px; margin-bottom: 12px; color: #0056b3; }
-        
-        .search-form { display: flex; gap: 6px; margin-bottom: 15px; width: 100%; }
-        .search-input { flex: 1; padding: 10px 12px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; width: 100%; min-width: 0; }
-        .search-input:focus { border-color: #0056b3; box-shadow: 0 0 0 2px rgba(0,86,179,0.15); }
-        .search-button { padding: 10px 14px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; white-space: nowrap; }
-        .search-button:hover { background-color: #004085; }
-
-        .results-header { font-size: 14px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 12px; color: #333; word-break: break-word; }
-        .status-message { text-align: center; color: #65676b; padding: 20px 10px; background: #f8f9fa; border-radius: 8px; border: 1px dashed #ccd0d5; font-size: 13px; margin-top: 10px; }
-
-        /* TARAYICI SİMÜLASYONU VE MOBİL UYUM */
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .spinner { border: 3px solid #f3f3f3; border-top: 3px solid #0056b3; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 12px; }
-        
-        #browser-simulation-container { width: 100%; margin: 10px 0; display: none; }
-        #browser-content-viewport { width: 100%; background: #fff; border: 1px solid #ccc; border-radius: 0 0 8px 8px; padding: 10px; box-sizing: border-box; overflow-x: hidden; height: auto; }
-
-        /* ÇEKİLEN SİTE İÇERİĞİNİ MOBİLE ZORLA SIĞDIRMA */
-        .extracted-content { width: 100% !important; max-width: 100% !important; overflow-x: hidden; }
-        .extracted-content * { max-width: 100% !important; height: auto !important; box-sizing: border-box !important; word-wrap: break-word; }
-        .extracted-content img, .extracted-content iframe, .extracted-content video, .extracted-content table { width: 100% !important; height: auto !important; display: block; margin: 10px auto; }
-        .extracted-content p { font-size: 15px; line-height: 1.6; color: #333; margin-bottom: 12px; }
-
-        @media (max-width: 480px) {
-            .container { padding: 0 4px; margin: 5px auto; }
-            .card { padding: 10px; border-radius: 6px; }
-            #browser-content-viewport { padding: 6px; }
-        }
-
-        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
-        .ad-container:empty { display: none !important; }
+        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }
+        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { font-size: 20px; margin-bottom: 15px; color: #0056b3; }
+        .search-form { display: flex; gap: 8px; margin-bottom: 20px; }
+        .search-input { flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; }
+        .search-button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        .results-header { font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }
+        .results-list { list-style: none; padding: 0; margin: 0; }
+        .result-item { background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+        .result-item a { color: #0056b3; text-decoration: none; font-size: 15px; font-weight: bold; display: block; margin-bottom: 4px; }
+        .status-message { text-align: center; color: #65676b; padding: 20px 0; font-style: italic; font-size: 14px; }
     </style>
 </head>
 <body>
-
-    <div class="ad-container">
-       <!-- Admatic AUTO ads START -->
+    
+   <div class="ad-container">
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
-    </div>
+   </div>
     
-    <header style="background-color: #0056b3; color: white; padding: 10px 15px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold;">nearadin.net - Arama</a>
-        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 22px; cursor: pointer; padding: 0 5px; outline: none;" aria-label="Menü">☰</button>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Arama</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
@@ -73,87 +47,8 @@
             </ul>
         </nav>
     </header>
-
-    <div class="container">
-        <div class="card">
-            <h1>🔍 Site İçi Arama / Önizleme</h1>
-            <form class="search-form" method="GET" action="/search.html">
-                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelime veya URL..." required>
-                <button type="submit" class="search-button">Ara</button>
-            </form>
-
-            <div class="results-header">Sonuçlar: <span id="search-keyword" style="color: #0056b3;">-</span></div>
-            
-            <div id="status-info" class="status-message" style="display: none;">
-                Lütfen aramak istediğiniz kelimeyi veya bağlantıyı yukarıdaki kutuya yazarak <strong>Ara</strong> butonuna basınız.
-            </div>
-
-            <!-- TARAYICI SİMÜLASYON ALANI -->
-            <div id="browser-simulation-container">
-                <div style="display: flex; align-items: center; background: #f1f3f4; padding: 8px 12px; border-radius: 8px 8px 0 0; border: 1px solid #ccc; border-bottom: none;">
-                    <div style="display: flex; gap: 5px; margin-right: 10px;">
-                        <span style="width: 10px; height: 10px; background: #ff5f56; border-radius: 50%; display: inline-block;"></span>
-                        <span style="width: 10px; height: 10px; background: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
-                        <span style="width: 10px; height: 10px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
-                    </div>
-                    <div id="browser-address-field" style="flex-grow: 1; background: #fff; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #5f6368; border: 1px solid #dadce0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        Yükleniyor...
-                    </div>
-                </div>
-
-                <div id="browser-content-viewport">
-                    <div id="viewport-loader" style="text-align: center; padding: 30px 10px; color: #5f6368;">
-                        <div class="spinner"></div>
-                        İçerik çekiliyor...
-                    </div>
-                </div>
-            </div>
-
-            <!-- GOOGLE CSE ARAMA ALANI -->
-            <div id="google-cse-container">
-                <script async src="https://cse.google.com/cse.js?cx=a33464712b4234607"></script>
-                <div class="gcse-searchresults-only"></div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin: 15px 0;">
-            <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script>
-            <script async src="//waust.at/d.js"></script>
-        </div>
-    </div>
-
-    <footer style="background-color: #1c1e21; color: #90949c; padding: 20px 15px; margin-top: 30px; font-size: 13px; line-height: 1.6; clear: both;">
-        <div style="max-width: 720px; margin: 0 auto;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 15px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 15px;">
-                <div style="flex: 1; min-width: 180px;">
-                    <h3 style="color: #fff; font-size: 15px; margin-bottom: 8px;">nearadin.net</h3>
-                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
-                </div>
-                <div style="flex: 1; min-width: 130px;">
-                    <h4 style="color: #fff; font-size: 13px; margin-bottom: 8px;">Hızlı Menü</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 4px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
-                        <li style="margin-bottom: 4px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 6px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
-                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Hamburger Menü
             const btn = document.getElementById('hamburgerBtn');
             const nav = document.getElementById('dropdownNav');
             if (btn && nav) {
@@ -167,120 +62,54 @@
                     }
                 });
             }
-
-            function isUrl(str) {
-                if (!str) return false;
-                str = str.trim();
-                return /^https?:\/\//i.test(str) || /^www\./i.test(str) || /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test(str);
-            }
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('q');
-            
-            const statusInfo = document.getElementById('status-info');
-            const searchKeyword = document.getElementById('search-keyword');
-            const searchInput = document.getElementById('search-input');
-            const pageDescription = document.getElementById('page-description');
-            
-            const browserContainer = document.getElementById('browser-simulation-container');
-            const googleCseContainer = document.getElementById('google-cse-container');
-            const addressField = document.getElementById('browser-address-field');
-            const viewport = document.getElementById('browser-content-viewport');
-
-            if (query && query.trim() !== '') {
-                const cleanQuery = query.trim();
-                
-                if (searchInput) searchInput.value = cleanQuery;
-                if (searchKeyword) searchKeyword.innerText = cleanQuery;
-                if (statusInfo) statusInfo.style.display = 'none';
-
-                // TITLE & DESCRIPTION
-                document.title = cleanQuery;
-                if (pageDescription) {
-                    pageDescription.setAttribute('content', cleanQuery + ' hakkında arama sonuçları');
-                }
-
-                if (isUrl(cleanQuery)) {
-                    let targetUrl = cleanQuery;
-                    if (!/^https?:\/\//i.test(targetUrl)) {
-                        targetUrl = 'https://' + targetUrl;
-                    }
-
-                    if (googleCseContainer) googleCseContainer.style.display = 'none';
-                    if (browserContainer) browserContainer.style.display = 'block';
-                    if (addressField) addressField.innerText = targetUrl;
-
-                    loadTargetUrl(targetUrl, viewport);
-
-                } else {
-                    if (browserContainer) browserContainer.style.display = 'none';
-                    if (googleCseContainer) googleCseContainer.style.display = 'block';
-                }
-            } else {
-                if (searchKeyword) searchKeyword.innerText = 'Henüz arama yapılmadı';
-                if (statusInfo) statusInfo.style.display = 'block';
-                if (browserContainer) browserContainer.style.display = 'none';
-                if (googleCseContainer) googleCseContainer.style.display = 'none';
-            }
-
-            function loadTargetUrl(targetUrl, viewport) {
-                const ytRegExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-                const ytMatch = targetUrl.match(ytRegExp);
-
-                if (ytMatch && ytMatch[2].length === 11) {
-                    viewport.style.padding = "0";
-                    viewport.innerHTML = `<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000;"><iframe src="https://www.youtube.com/embed/${ytMatch[2]}?autoplay=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe></div>`;
-                } else if (targetUrl.match(/\.(jpeg|jpg|gif|png|webp|svg)$/i)) {
-                    viewport.style.padding = "10px";
-                    viewport.innerHTML = `<div style="text-align:center;"><img src="${targetUrl}" style="max-width:100%; height:auto; border-radius:6px;" /></div>`;
-                } else if (targetUrl.match(/\.(pdf)$/i)) {
-                    viewport.style.padding = "0";
-                    viewport.innerHTML = `<iframe src="https://docs.google.com/gview?url=${encodeURIComponent(targetUrl)}&embedded=true" style="width:100%; min-height:500px; height:80vh; border:none;"></iframe>`;
-                } else {
-                    viewport.style.padding = "10px";
-                    viewport.innerHTML = `
-                        <div id="viewport-loader" style="text-align: center; padding: 30px 10px; color: #5f6368;">
-                            <div class="spinner"></div>
-                            İçerik derleniyor...
-                        </div>`;
-
-                    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
-                        .then(response => {
-                            if (response.ok) return response.json();
-                            throw new Error('Bağlantı yanıt vermedi.');
-                        })
-                        .then(data => {
-                            const parser = new DOMParser();
-                            const doc = parser.parseFromString(data.contents, 'text/html');
-                            
-                            const articleContent = doc.querySelector('article') || doc.querySelector('.news-content') || doc.querySelector('.detail-content') || doc.querySelector('.content') || doc.body;
-
-                            if (articleContent) {
-                                const scripts = articleContent.getElementsByTagName('script');
-                                while (scripts.length > 0) scripts[0].parentNode.removeChild(scripts[0]);
-
-                                const styleTags = articleContent.getElementsByTagName('style');
-                                while (styleTags.length > 0) styleTags[0].parentNode.removeChild(styleTags[0]);
-
-                                viewport.innerHTML = `
-                                    <div class="extracted-content">
-                                        <div style="margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #eee; font-size:12px; color:#666;">
-                                            📰 Özgün kaynağa <a href="${targetUrl}" target="_blank" rel="nofollow" style="color:#0056b3; font-weight:bold;">buradan</a> ulaşabilirsiniz.
-                                        </div>
-                                        ${articleContent.innerHTML}
-                                    </div>`;
-                            } else {
-                                throw new Error('İçerik okunamadı.');
-                            }
-                        })
-                        .catch(err => {
-                            // Yedek Mod
-                            viewport.style.padding = "0";
-                            viewport.innerHTML = `<iframe src="${targetUrl}" style="width:100%; min-height:500px; height:80vh; border:none; background:#fff;" allowfullscreen></iframe>`;
-                        });
-                }
-            }
         });
     </script>
+    
+    <div class="container">
+        <div class="card">
+            <h1>🔍 Site İçi Arama</h1>
+            <form class="search-form" method="GET" action="">
+                <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required>
+                <button type="submit" class="search-button">Ara</button>
+            </form>
+            <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
+            <div id="results-results-container" class="status-message">Lütfen yukarıdaki kutudan bir arama yapın.</div>
+        </div>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
