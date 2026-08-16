@@ -128,12 +128,7 @@ def get_footer_html():
     '''
 
 def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """
-    fetch_news.py tarafından çalıştırılarak canli-mac-sonuclari/index.html 
-    sayfasını otomatik oluşturan fonksiyon.
-    """
     os.makedirs("canli-mac-sonuclari", exist_ok=True)
-
     scores_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -146,65 +141,40 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; font-weight: 700; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
-
-        /* Yüksekliği Uzun Tutulmuş Widget Alanı */
-        .hb-widget-content {{ 
-            width: 100%; 
-            min-height: 1200px; 
-            border-radius: 8px; 
-            overflow: hidden; 
-            background: #0b1220;
-        }}
-
+        .hb-widget-content {{ width: 100%; min-height: 1200px; border-radius: 8px; overflow: hidden; background: #0b1220; }}
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
-
     <div class="container">
         <div class="card">
             <h1>⚽ Canlı Maç Sonuçları ve Anlık Skorlar</h1>
             <p>Süper Lig, UEFA Şampiyonlar Ligi, Avrupa ligleri ve dünyadan anlık canlı maç sonuçları, futbol karşılaşmaları ve güncel maç programı.</p>
-            
-            <!-- ProScores Doğru Widget Yapısı -->
             <div class="hb-widget-content">
                 <script type="text/javascript" src="https://widgets.proscores.app/njs/tr/prolivewidget.js" async></script>
                 <a href="https://www.macsonuclari1.net/" data-w="" title="iddaa sonuçları" style="display:block; text-align:center; padding:10px; font-size:10px; color:#ccc; text-decoration:none;">macsonuclari1.net</a>
             </div>
         </div>
-
         {whos_amung_us_code}
     </div>
-
     {footer_html}
 </body>
 </html>'''
 
     with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
         f.write(scores_html)
-        
-    print("✅ Canlı maç sonuçları sayfası güncellendi (Yükseklik: 1200px, ProScores Anchor eklendi).")
+    print("✅ Canlı maç sonuçları sayfası güncellendi.")
 
 def generate_turksat_frequency_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """
-    turksat-frekans-listesi/index.html sayfasını tüm TV kanallarının 
-    frekans tablosu ile SEO uyumlu olarak oluşturur.
-    """
     os.makedirs("turksat-frekans-listesi", exist_ok=True)
-
     turksat_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -217,205 +187,71 @@ def generate_turksat_frequency_page(header_html, footer_html, whos_amung_us_code
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 850px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        
         .card {{ background: white; border-radius: 10px; padding: 25px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
         h1 {{ font-size: 22px; margin-bottom: 12px; color: #0056b3; font-weight: 700; }}
         h2 {{ font-size: 18px; margin: 25px 0 12px 0; color: #1c1e21; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 6px; }}
         p {{ color: #4b4f56; font-size: 15px; margin-bottom: 15px; line-height: 1.7; }}
         ul {{ margin: 10px 0 15px 20px; color: #4b4f56; }}
         li {{ margin-bottom: 8px; font-size: 15px; }}
-        
         .info-box {{ background: #f0f7ff; border-left: 4px solid #0056b3; padding: 15px; border-radius: 4px; margin: 15px 0; }}
-        .info-box strong {{ color: #0056b3; }}
-
-        /* Mobil Uyumlu Tablo Tasarımı */
         .table-responsive {{ overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 20px 0; }}
         .freq-table {{ width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; color: #333; }}
         .freq-table th {{ background-color: #0056b3; color: #ffffff; padding: 10px 12px; font-weight: 600; white-space: nowrap; }}
         .freq-table td {{ padding: 10px 12px; border-bottom: 1px solid #e4e6eb; white-space: nowrap; }}
         .freq-table tr:nth-child(even) {{ background-color: #f8f9fa; }}
-        .freq-table tr:hover {{ background-color: #eef5ff; }}
         .badge-hd {{ background: #28a745; color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; }}
         .badge-sd {{ background: #6c757d; color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; }}
-
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
-
     <div class="container">
         <div class="card">
             <h1>📡 Güncel Türksat Frekans Listesi ve Tüm TV Kanalları</h1>
-            <p>Türksat 4A ve Türksat 5B uyduları üzerinden yayın yapan ulusal ve yerel televizyon kanallarının güncel frekans bilgileri aşağıda listelenmiştir. Uydu alıcınızda kanal eksikliği yaşıyorsanız tablodaki frekans değerlerini kullanarak manuel kanal arama yapabilirsiniz.</p>
-            
+            <p>Türksat 4A ve Türksat 5B uyduları üzerinden yayın yapan ulusal ve yerel televizyon kanallarının güncel frekans bilgileri aşağıda listelenmiştir.</p>
             <h2>Tüm TV Kanallarının Güncel Frekans Tablosu</h2>
-            
             <div class="table-responsive">
                 <table class="freq-table">
                     <thead>
-                        <tr>
-                            <th>Kanal / Paket Adı</th>
-                            <th>Yayın</th>
-                            <th>Frekans</th>
-                            <th>Sembol (SR)</th>
-                            <th>Polarizasyon</th>
-                            <th>FEC</th>
-                        </tr>
+                        <tr><th>Kanal / Paket Adı</th><th>Yayın</th><th>Frekans</th><th>Sembol (SR)</th><th>Polarizasyon</th><th>FEC</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>TRT 1, TRT Haber, TRT Spor, TRT Çocuk</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>11054</td>
-                            <td>30000</td>
-                            <td>Dikey (V)</td>
-                            <td>3/4</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ATV, A Haber, A Spor, A2, A News</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12053</td>
-                            <td>27500</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Kanal D, CNN Türk, Teve2</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12245</td>
-                            <td>27500</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Show TV, Habertürk, Bloomberg HT</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12209</td>
-                            <td>10000</td>
-                            <td>Yatay (H)</td>
-                            <td>3/4</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Star TV, NTV, Kral POP TV</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12015</td>
-                            <td>27500</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TV8, TV8.5</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12356</td>
-                            <td>7100</td>
-                            <td>Yatay (H)</td>
-                            <td>2/3</td>
-                        </tr>
-                        <tr>
-                            <td><strong>NOW TV (FOX)</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12329</td>
-                            <td>6666</td>
-                            <td>Yatay (H)</td>
-                            <td>2/3</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Kanal 7, Ülke TV</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12095</td>
-                            <td>4800</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sözcü TV (SZC), Halk TV, Tele1, Ekol TV</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12034</td>
-                            <td>27500</td>
-                            <td>Dikey (V)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Beyaz TV, TVNET</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12380</td>
-                            <td>27500</td>
-                            <td>Dikey (V)</td>
-                            <td>3/4</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TGRT Haber, TGRT EU</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12015</td>
-                            <td>27500</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Flash Haber</strong></td>
-                            <td><span class="badge-hd">HD</span></td>
-                            <td>12685</td>
-                            <td>30000</td>
-                            <td>Dikey (V)</td>
-                            <td>2/3</td>
-                        </tr>
-                        <tr>
-                            <td><strong>A Spor, A Haber, Minika Çocuk</strong></td>
-                            <td><span class="badge-sd">SD</span></td>
-                            <td>12053</td>
-                            <td>27500</td>
-                            <td>Yatay (H)</td>
-                            <td>5/6</td>
-                        </tr>
+                        <tr><td><strong>TRT 1, TRT Haber, TRT Spor</strong></td><td><span class="badge-hd">HD</span></td><td>11054</td><td>30000</td><td>Dikey (V)</td><td>3/4</td></tr>
+                        <tr><td><strong>ATV, A Haber, A Spor</strong></td><td><span class="badge-hd">HD</span></td><td>12053</td><td>27500</td><td>Yatay (H)</td><td>5/6</td></tr>
+                        <tr><td><strong>Kanal D, CNN Türk</strong></td><td><span class="badge-hd">HD</span></td><td>12245</td><td>27500</td><td>Yatay (H)</td><td>5/6</td></tr>
+                        <tr><td><strong>Show TV, Habertürk</strong></td><td><span class="badge-hd">HD</span></td><td>12209</td><td>10000</td><td>Yatay (H)</td><td>3/4</td></tr>
+                        <tr><td><strong>Star TV, NTV</strong></td><td><span class="badge-hd">HD</span></td><td>12015</td><td>27500</td><td>Yatay (H)</td><td>5/6</td></tr>
+                        <tr><td><strong>TV8, TV8.5</strong></td><td><span class="badge-hd">HD</span></td><td>12356</td><td>7100</td><td>Yatay (H)</td><td>2/3</td></tr>
+                        <tr><td><strong>NOW TV (FOX)</strong></td><td><span class="badge-hd">HD</span></td><td>12329</td><td>6666</td><td>Yatay (H)</td><td>2/3</td></tr>
                     </tbody>
                 </table>
             </div>
-
             <h2>Türksat Otomatik Kanal Arama Frekansı</h2>
-            <p>Tüm kanalları tek tek girmek yerine otomatik tarama yapmak isterseniz aşağıdaki şebeke arama frekansını kullanabilirsiniz:</p>
-            
             <div class="info-box">
                 <ul>
                     <li><strong>Frekans:</strong> 12380 MHz</li>
                     <li><strong>Sembol Rate:</strong> 27500</li>
-                    <li><strong>Polarizasyon:</strong> Dikey (V - Vertical)</li>
-                    <li><strong>Şebeke Arama (Network Search):</strong> Açık</li>
+                    <li><strong>Polarizasyon:</strong> Dikey (V)</li>
+                    <li><strong>Şebeke Arama:</strong> Açık</li>
                 </ul>
             </div>
-
-            <h2>Televizyon Kanal Frekansları Nasıl Yüklenir?</h2>
-            <ul>
-                <li>Kumandanızın <strong>Menü</strong> veya <strong>Home</strong> tuşuna basın.</li>
-                <li><strong>Kurulum / Kanal Ayarları / Uydu Ayarları</strong> menüsüne gidin.</li>
-                <li><strong>Manuel Tarama</strong> veya <strong>TP Ekle</strong> seçeneğini bulun.</li>
-                <li>Yukarıdaki tabloda yer alan frekans, sembol rate ve polarizasyon değerlerini girin.</li>
-                <li>Aramayı başlatın ve bulunan kanalları kaydedin.</li>
-            </ul>
         </div>
-
         {whos_amung_us_code}
     </div>
-
     {footer_html}
 </body>
 </html>'''
 
     with open("turksat-frekans-listesi/index.html", "w", encoding="utf-8") as f:
         f.write(turksat_html)
-        
-    print("✅ Türksat Frekans Listesi (Tüm kanallar tablosuyla) başarıyla güncellendi.")
+    print("✅ Türksat Frekans Listesi güncellendi.")
 
 def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """search.html Sayfasını Otomatik Oluşturur"""
     search_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -428,39 +264,21 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
         h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
-        
         .search-form {{ display: flex; gap: 8px; margin-bottom: 20px; }}
         .search-input {{ flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid #ccd0d5; border-radius: 6px; outline: none; }}
-        .search-input:focus {{ border-color: #0056b3; box-shadow: 0 0 0 2px rgba(0,86,179,0.15); }}
-        .search-button {{ padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 14px; cursor: pointer; }}
-        .search-button:hover {{ background-color: #004085; }}
-
+        .search-button {{ padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }}
         .results-header {{ font-size: 15px; font-weight: 600; border-bottom: 2px solid #e4e6eb; padding-bottom: 8px; margin-bottom: 15px; color: #333; }}
-        
         .results-list {{ list-style: none; padding: 0; margin: 0; }}
-        .result-item {{ background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }}
-        .result-item a {{ color: #0056b3; text-decoration: none; font-size: 15px; font-weight: bold; display: block; margin-bottom: 4px; line-height: 1.3; }}
-        .result-item a:hover {{ text-decoration: underline; }}
-        .result-item .url {{ color: #28a745; font-size: 12px; margin-bottom: 6px; word-break: break-all; }}
-        .result-item p {{ color: #4b4f56; font-size: 13px; line-height: 1.5; margin: 0; }}
-        
+        .result-item {{ background: #fff; border: 1px solid #e4e6eb; border-radius: 8px; padding: 14px; margin-bottom: 12px; }}
+        .result-item a {{ color: #0056b3; text-decoration: none; font-size: 15px; font-weight: bold; display: block; margin-bottom: 4px; }}
         .status-message {{ text-align: center; color: #65676b; padding: 20px 0; font-style: italic; font-size: 14px; }}
-        .error-box {{ background: #fff8f7; border: 1px solid #f5c6cb; color: #721c24; padding: 18px; border-radius: 8px; text-align: center; font-size: 14px; margin-top: 10px; }}
-        .fallback-btn {{ display: inline-block; margin-top: 12px; background: #1877f2; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px; }}
-        .fallback-btn:hover {{ background: #0056b3; }}
-
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
-
     {admatic_code}
     {header_html}
-
     <div class="container">
         <div class="card">
             <h1>🔍 Site İçi Arama</h1>
@@ -468,100 +286,19 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
                 <input type="text" name="q" id="search-input" class="search-input" placeholder="Aramak istediğiniz kelimeyi yazın..." required>
                 <button type="submit" class="search-button">Ara</button>
             </form>
-
             <div class="results-header">Arama Sonuçları: <span id="search-keyword" style="color: #0056b3;">-</span></div>
             <div id="results-results-container" class="status-message">Lütfen yukarıdaki kutudan bir arama yapın.</div>
         </div>
-
         {whos_amung_us_code}
     </div>
-
     {footer_html}
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const query = urlParams.get('q');
-
-        const API_KEY = "AIzaSyDrJkl3V_vW3b0vmI_hlJbmJM2bhFCYQek";
-        const SEARCH_ENGINE_ID = "a33464712b4234607";
-
-        function escapeHtml(str) {{
-            if (!str) return '';
-            return str.replace(/[&<>'"]/g, 
-                tag => ({{ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }}[tag] || tag)
-            );
-        }}
-
-        function sanitizeUrl(url) {{
-            try {{
-                const parsed = new URL(url);
-                if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {{
-                    return parsed.href;
-                }}
-            }} catch (e) {{}}
-            return '#';
-        }}
-
-        if (query) {{
-            document.getElementById('search-input').value = query;
-            document.getElementById('search-keyword').innerText = query;
-            
-            const container = document.getElementById('results-results-container');
-            container.innerText = "Arama sonuçları getiriliyor...";
-
-            const apiUrl = 'https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ENGINE_ID + '&q=' + encodeURIComponent(query);
-
-            fetch(apiUrl)
-                .then(response => {{
-                    if (!response.ok) throw new Error('API kotası veya bağlantı hatası.');
-                    return response.json();
-                }})
-                .then(data => {{
-                    if (!data.items || data.items.length === 0) {{
-                        container.className = "status-message";
-                        container.innerHTML = "Aradığınız kriterlere uygun haber veya içerik bulunamadı.";
-                        return;
-                    }}
-
-                    let html = '<ul class="results-list">';
-                    data.items.forEach(function(item) {{
-                        var safeLink = sanitizeUrl(item.link);
-                        var title = escapeHtml(item.title);
-                        var snippet = escapeHtml(item.snippet || '');
-                        html += '<li class="result-item">' +
-                                    '<a href="' + safeLink + '" target="_blank" rel="noopener noreferrer">' + title + '</a>' +
-                                    '<div class="url">' + safeLink + '</div>' +
-                                    '<p>' + snippet + '</p>' +
-                                '</li>';
-                    }});
-                    html += '</ul>';
-                    
-                    container.className = "";
-                    container.innerHTML = html;
-                }})
-                .catch(err => {{
-                    console.error(err);
-                    var googleFallbackUrl = 'https://www.google.com/search?q=site:nearadin.net+' + encodeURIComponent(query);
-                    
-                    container.className = "";
-                    container.innerHTML = '<div class="error-box">' +
-                        '<p><strong>Arama servisinde geçici bir yoğunluk oluştu.</strong></p>' +
-                        '<p style="font-size:12px; margin-top:6px; color:#65676b;">Google API günlük ücretsiz sorgu limitine ulaşılmış olabilir.</p>' +
-                        '<a href="' + googleFallbackUrl + '" target="_blank" class="fallback-btn">Google Üzerinden nearadin.net&#39;te Ara ↗</a>' +
-                    '</div>';
-                }});
-        }}
-    </script>
 </body>
 </html>'''
-
     with open("search.html", "w", encoding="utf-8") as f:
         f.write(search_html)
 
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
-
     weather_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -574,418 +311,73 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
-        
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
-
-        /* İl Seçim Alanı */
-        .city-select-box {{ margin-bottom: 20px; }}
-        .city-select-box label {{ display: block; font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #333; }}
-        .city-select-box select {{ width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; background: #fff; outline: none; cursor: pointer; }}
-
-        /* Hava Durumu Liste Stilleri */
+        .city-select-box select {{ width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; }}
         .weather-list {{ display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }}
         .weather-item {{ background: #f9f9f9; border: 1px solid #e4e6eb; padding: 12px 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }}
-        .weather-date {{ font-weight: bold; color: #333; font-size: 14px; }}
-        .weather-desc {{ font-size: 13px; color: #65676b; }}
-        .weather-temp {{ font-weight: bold; font-size: 15px; color: #0056b3; }}
-
-        .loading {{ text-align: center; color: #65676b; padding: 20px; font-style: italic; }}
-        .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
-    
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
-
     <div class="container">
         <div class="card">
             <h1>☀️ 5 Günlük Hava Durumu</h1>
             <p>İlini seçerek önümüzdeki 5 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
-            
-            <!-- İl Seçim Menüsü -->
             <div class="city-select-box">
-                <label for="citySelect">İl Seçiniz:</label>
                 <select id="citySelect" onchange="getWeatherData()">
                     <option value="34|41.0082|28.9784" selected>34 - İstanbul</option>
-                    <option value="1|37.0000|35.3213">01 - Adana</option>
-                    <option value="2|37.7648|38.2786">02 - Adıyaman</option>
-                    <option value="3|38.7507|30.5567">03 - Afyonkarahisar</option>
-                    <option value="4|39.7191|43.0503">04 - Ağrı</option>
-                    <option value="5|40.6547|35.8356">05 - Amasya</option>
                     <option value="6|39.9208|32.8541">06 - Ankara</option>
-                    <option value="7|36.8969|30.7133">07 - Antalya</option>
-                    <option value="8|41.1828|41.8183">08 - Artvin</option>
-                    <option value="9|37.8481|27.8446">09 - Aydın</option>
-                    <option value="10|39.6484|27.8826">10 - Balıkesir</option>
-                    <option value="11|40.1418|30.0609">11 - Bilecik</option>
-                    <option value="12|38.8856|40.4980">12 - Bingöl</option>
-                    <option value="13|38.4004|42.1095">13 - Bitlis</option>
-                    <option value="14|40.7359|31.6061">14 - Bolu</option>
-                    <option value="15|37.7214|30.2874">15 - Burdur</option>
-                    <option value="16|40.1826|29.0665">16 - Bursa</option>
-                    <option value="17|40.1553|26.4142">17 - Çanakkale</option>
-                    <option value="18|40.6013|33.6134">18 - Çankırı</option>
-                    <option value="19|40.5506|34.9556">19 - Çorum</option>
-                    <option value="20|37.7765|29.0864">20 - Denizli</option>
-                    <option value="21|37.9144|40.2306">21 - Diyarbakır</option>
-                    <option value="22|41.6771|26.5557">22 - Edirne</option>
-                    <option value="23|38.6810|39.2264">23 - Elazığ</option>
-                    <option value="24|39.7500|39.5000">24 - Erzincan</option>
-                    <option value="25|39.9043|41.2679">25 - Erzurum</option>
-                    <option value="26|39.7767|30.5206">26 - Eskişehir</option>
-                    <option value="27|37.0662|37.3833">27 - Gaziantep</option>
-                    <option value="28|40.9128|38.3895">28 - Giresun</option>
-                    <option value="29|40.4386|39.5086">29 - Gümüşhane</option>
-                    <option value="30|37.5833|43.7333">30 - Hakkari</option>
-                    <option value="31|36.2023|36.1606">31 - Hatay</option>
-                    <option value="32|37.7648|30.5566">32 - Isparta</option>
-                    <option value="33|36.8000|34.6333">33 - Mersin</option>
                     <option value="35|38.4192|27.1287">35 - İzmir</option>
-                    <option value="36|40.6017|43.0975">36 - Kars</option>
-                    <option value="37|41.3887|33.7827">37 - Kastamonu</option>
-                    <option value="38|38.7312|35.4787">38 - Kayseri</option>
-                    <option value="39|41.7333|27.2167">39 - Kırklareli</option>
-                    <option value="40|39.1425|34.1709">40 - Kırşehir</option>
-                    <option value="41|40.7654|29.9408">41 - Kocaeli</option>
-                    <option value="42|37.8667|32.4833">42 - Konya</option>
-                    <option value="43|39.4167|29.9833">43 - Kütahya</option>
-                    <option value="44|38.3552|38.3095">44 - Malatya</option>
-                    <option value="45|38.6191|27.4289">45 - Manisa</option>
-                    <option value="46|37.5858|36.9371">46 - Kahramanmaraş</option>
-                    <option value="47|37.3211|40.7245">47 - Mardin</option>
-                    <option value="48|37.2153|28.3636">48 - Muğla</option>
-                    <option value="49|38.7437|41.5064">49 - Muş</option>
-                    <option value="50|38.6244|34.7231">50 - Nevşehir</option>
-                    <option value="51|37.9659|34.6850">51 - Niğde</option>
-                    <option value="52|40.9839|37.8764">52 - Ordu</option>
-                    <option value="53|41.0201|40.5234">53 - Rize</option>
-                    <option value="54|40.7569|30.3783">54 - Sakarya</option>
-                    <option value="55|41.2867|36.3300">55 - Samsun</option>
-                    <option value="56|37.9333|41.9500">56 - Siirt</option>
-                    <option value="57|42.0231|35.1531">57 - Sinop</option>
-                    <option value="58|39.7477|37.0179">58 - Sivas</option>
-                    <option value="59|40.9833|27.5167">59 - Tekirdağ</option>
-                    <option value="60|40.3167|36.5500">60 - Tokat</option>
-                    <option value="61|41.0015|39.7178">61 - Trabzon</option>
-                    <option value="62|39.1079|39.5401">62 - Tunceli</option>
-                    <option value="63|37.1591|38.7969">63 - Şanlıurfa</option>
-                    <option value="64|38.4122|29.4077">64 - Uşak</option>
-                    <option value="65|38.5028|43.3730">65 - Van</option>
-                    <option value="66|39.8181|34.8147">66 - Yozgat</option>
-                    <option value="67|41.4564|31.7987">67 - Zonguldak</option>
-                    <option value="68|38.3687|34.0370">68 - Aksaray</option>
-                    <option value="69|40.2551|40.2249">69 - Bayburt</option>
-                    <option value="70|37.1759|33.2287">70 - Karaman</option>
-                    <option value="71|41.8486|33.7753">71 - Kırıkkale</option>
-                    <option value="72|37.8812|41.1285">72 - Batman</option>
-                    <option value="73|37.5205|42.4598">73 - Şırnak</option>
-                    <option value="74|41.6344|32.3375">74 - Bartın</option>
-                    <option value="75|41.1126|42.7020">75 - Ardahan</option>
-                    <option value="76|39.9167|44.0500">76 - Iğdır</option>
-                    <option value="77|40.6500|29.4000">77 - Yalova</option>
-                    <option value="78|41.2061|32.6204">78 - Karabük</option>
-                    <option value="79|36.7184|37.1212">79 - Kilis</option>
-                    <option value="80|37.0742|36.1753">80 - Osmaniye</option>
-                    <option value="81|40.8438|31.1565">81 - Düzce</option>
                 </select>
             </div>
-
-            <div id="loading" class="loading">Hava durumu verileri yükleniyor...</div>
+            <div id="loading" style="text-align:center; padding:20px; color:#65676b;">Yükleniyor...</div>
             <div id="weatherList" class="weather-list"></div>
-
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </div>
-
         {whos_amung_us_code}
     </div>
-
-    <script>
-        function getWeatherDescription(code) {{
-            const descriptions = {{
-                0: "🌞 Açık / Güneşli",
-                1: "🌤️ Çoğunlukla Açık",
-                2: "⛅ Parçalı Bulutlu",
-                3: "☁️ Çok Bulutlu",
-                45: "🌫️ Sisli",
-                48: "🌫️ Kırağılı Sis",
-                51: "🌧️ Hafif Çisenti",
-                53: "🌧️ Çisenti",
-                55: "🌧️ Yoğun Çisenti",
-                61: "🌧️ Hafif Yağmurlu",
-                63: "🌧️ Yağmurlu",
-                65: "🌧️ Şiddetli Yağmur",
-                71: "❄️ Hafif Karlı",
-                73: "❄️ Karlı",
-                75: "❄️ Yoğun Kar Yağışlı",
-                95: "⚡ Gök Gürültülü Fırtına"
-            }};
-            return descriptions[code] || "🌤️ Parçalı Bulutlu";
-        }}
-
-        async function getWeatherData() {{
-            const selectEl = document.getElementById('citySelect');
-            const val = selectEl.value.split('|');
-            const lat = val[1];
-            const lon = val[2];
-
-            const loadingEl = document.getElementById('loading');
-            const listEl = document.getElementById('weatherList');
-            
-            loadingEl.style.display = 'block';
-            listEl.innerHTML = '';
-
-            try {{
-                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${{lat}}&longitude=${{lon}}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`);
-                const data = await response.json();
-
-                loadingEl.style.display = 'none';
-
-                if (data && data.daily) {{
-                    const times = data.daily.time;
-                    const maxTemps = data.daily.temperature_2m_max;
-                    const minTemps = data.daily.temperature_2m_min;
-                    const weatherCodes = data.daily.weathercode;
-
-                    for (let i = 0; i < 5; i++) {{
-                        const dateObj = new Date(times[i]);
-                        const options = {{ weekday: 'long', day: 'numeric', month: 'long' }};
-                        const formattedDate = dateObj.toLocaleDateString('tr-TR', options);
-                        
-                        const desc = getWeatherDescription(weatherCodes[i]);
-                        const maxT = Math.round(maxTemps[i]);
-                        const minT = Math.round(minTemps[i]);
-
-                        const item = document.createElement('div');
-                        item.className = 'weather-item';
-                        item.innerHTML = `
-                            <div>
-                                <div class="weather-date">${{formattedDate}}</div>
-                                <div class="weather-desc">${{desc}}</div>
-                            </div>
-                            <div class="weather-temp">${{maxT}}°C / <span style="color:#65676b; font-weight:normal;">${{minT}}°C</span></div>
-                        `;
-                        listEl.appendChild(item);
-                    }}
-                }} else {{
-                    loadingEl.style.display = 'block';
-                    loadingEl.innerText = 'Hava durumu bilgisi alınamadı.';
-                }}
-            }} catch (error) {{
-                loadingEl.style.display = 'block';
-                loadingEl.innerText = 'Bağlantı hatası oluştu.';
-            }}
-        }}
-
-        getWeatherData();
-    </script>
-
     {footer_html}
-
 </body>
 </html>'''
-
     with open("hava-durumu/index.html", "w", encoding="utf-8") as f:
         f.write(weather_html)
 
 def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """film-izle/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("film-izle", exist_ok=True)
-    
     film_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türkçe Dublaj HD Film İzle - nearadin.net</title>
-    <meta name="description" content="nearadin.net özel sinema portalı. En güncel Türkçe dublaj yabancı filmler, aksiyon ve macera filmlerini kesintisiz izleyin." />
+    <meta name="description" content="nearadin.net özel sinema portalı. En güncel Türkçe dublaj filmleri kesintisiz izleyin." />
     <link rel="canonical" href="https://nearadin.net/film-izle/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        :root {{ --sinema-ana: #e74c3c; --sinema-koyu: #121212; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
-        
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; }}
         .film-container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
-
-        #sinema-kontrol-merkezi {{
-            position: sticky; top: 50px; z-index: 999;
-            background: var(--sinema-koyu); color: #fff;
-            padding: 10px 14px; border-bottom: 3px solid var(--sinema-ana); width: 100%;
-            border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }}
-        .sinema-wrapper {{ display: flex; align-items: center; justify-content: space-between; }}
-        #izlenen-bilgi {{ flex: 1; min-width: 0; margin-right: 10px; }}
-        .canli-etiket {{ font-size: 9px; color: var(--sinema-ana); font-weight: bold; letter-spacing: 1px; display: block; }}
-        #film-adi-aktif {{ display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-
-        #film-kapat-btn {{
-            background: var(--sinema-ana); color: white; border: none;
-            padding: 6px 12px; border-radius: 4px; cursor: pointer;
-            font-weight: bold; font-size: 11px; flex-shrink: 0; display: none;
-        }}
-
-        #video-oynatici-alan {{ margin-top: 10px; display: none; width: 100%; }}
-        .video-kapsayici {{ 
-            position: relative; padding-bottom: 56.25%; height: 0; 
-            overflow: hidden; border-radius: 8px; background: #000; 
-        }}
-        .video-kapsayici iframe {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }}
-
-        .film-kart-ozel {{
-            display: flex; align-items: center; padding: 10px; background: #fff;
-            border: 1px solid #e4e6eb; border-radius: 8px; margin-bottom: 10px;
-            cursor: pointer; transition: transform 0.1s ease, background 0.2s; width: 100%;
-        }}
-        .film-kart-ozel:hover {{ background: #fff8f7; }}
-        .film-kart-ozel.aktif {{ border-left: 5px solid var(--sinema-ana); background: #fef5f4; }}
-        
-        .film-resim {{ width: 95px; height: 58px; border-radius: 6px; margin-right: 12px; object-fit: cover; flex-shrink: 0; }}
-        .film-metin {{ 
-            font-weight: 600; font-size: 14px; color: #1c1e21; flex: 1; min-width: 0; margin: 0;
-            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;
-        }}
-        .oynat-simge {{ color: var(--sinema-ana); font-size: 18px; margin-left: 8px; flex-shrink: 0; }}
-        
-        .durum-alani {{ text-align: center; padding: 15px 0; }}
-        .daha-fazla-btn {{
-            background: #0056b3; color: white; border: none;
-            padding: 10px 22px; border-radius: 20px; font-weight: bold;
-            font-size: 13px; cursor: pointer; transition: 0.2s;
-        }}
-        .daha-fazla-btn:hover {{ background: #004085; }}
-        .son-yazi {{ color: #888; font-size: 12px; font-style: italic; display: none; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
-
     <div class="film-container">
-        <div id="sinema-kontrol-merkezi">
-            <div class="sinema-wrapper">
-                <div id="izlenen-bilgi">
-                    <span class="canli-etiket">ŞU AN İZLENİYOR</span>
-                    <span id="film-adi-aktif">Aşağıdan bir film seçin...</span>
-                </div>
-                <button id="film-kapat-btn" onclick="filmDurdur()">KAPAT ✕</button>
-            </div>
-            
-            <div id="video-oynatici-alan">
-                <div class="video-kapsayici">
-                    <iframe id="film-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
-        <main id="canli-sonuc-listesi"></main>
-
-        <div class="durum-alani">
-            <button id="yukle-btn" class="daha-fazla-btn" onclick="sonrakiPartiYukle()">Daha Fazla Film Yükle ➕</button>
-            <div id="son-yazi" class="son-yazi">Tüm filmler listelendi.</div>
-        </div>
-
+        <h2>📺 Film Kuşağı</h2>
+        <p>Gelişmiş sinema kataloğumuz güncelleniyor.</p>
         {whos_amung_us_code}
     </div>
-
     {footer_html}
-
-<script>
-    const tumFilmler = [
-        {{ id: 'aYbUTg-bfUU', baslik: 'Yeni Film 2026 - Türkçe Dublaj Aksiyon Dolu Yabancı Film Full HD' }},
-        {{ id: 'vcMqEy6udI8', baslik: 'Sürükleyici Gerilim & Macera Filmleri - Türkçe Dublaj Tek Parça' }},
-        {{ id: 'U_uL_kFVdMU', baslik: 'Yüksek Tempolu Yabancı Sinema Kuşağı - Türkçe Dublaj İzle' }},
-        {{ id: 'F-VEUnkkrPQ', baslik: 'YENİ FİLM En İyi Aksiyon Filmi Tek Parça HD - Türkçe Dublaj' }},
-        {{ id: 'F5DEmClsMNA', baslik: 'Hayatta Kalmak İçin 80 Dakikan Var - Aksiyon Filmi Türkçe Dublaj' }},
-        {{ id: 'U06i7AO53mM', baslik: 'Bilinmeyen Bir Adada Uyanır - Macera ve Hayatta Kalma Filmi' }},
-        {{ id: '30j_VWvOWX8', baslik: 'İNFAZCI | En Tehlikeli Paralı Asker - Aksiyon Filmi Türkçe Dublaj' }},
-        {{ id: 'ZF6sfeS8H8M', baslik: 'Efsane Macera Sineması - Türkçe Dublaj Full İzle' }}
-    ];
-
-    const SAYFA_BASINA = 4;
-    let mevcutIndex = 0;
-
-    function sonrakiPartiYukle() {{
-        const container = document.getElementById('canli-sonuc-listesi');
-        const yukleBtn = document.getElementById('yukle-btn');
-        const sonYazi = document.getElementById('son-yazi');
-
-        const dilim = tumFilmler.slice(mevcutIndex, mevcutIndex + SAYFA_BASINA);
-
-        dilim.forEach(film => {{
-            const card = document.createElement('article');
-            card.className = 'film-kart-ozel';
-            card.onclick = () => startMovie(film.id, film.baslik, card);
-            card.innerHTML = `
-                <img src="https://img.youtube.com/vi/${{film.id}}/hqdefault.jpg" class="film-resim" alt="${{film.baslik}}">
-                <h3 class="film-metin">${{film.baslik}}</h3>
-                <div class="oynat-simge">▶</div>
-            `;
-            container.appendChild(card);
-        }});
-
-        mevcutIndex += SAYFA_BASINA;
-
-        if (mevcutIndex >= tumFilmler.length) {{
-            yukleBtn.style.display = 'none';
-            sonYazi.style.display = 'block';
-        }}
-    }}
-
-    function startMovie(id, title, el) {{
-        const frame = document.getElementById('film-iframe');
-        const container = document.getElementById('video-oynatici-alan');
-        const btn = document.getElementById('film-kapat-btn');
-        const baslik = document.getElementById('film-adi-aktif');
-        
-        frame.src = `https://www.youtube.com/embed/${{id}}?autoplay=1&rel=0`;
-        container.style.display = 'block';
-        btn.style.display = 'block';
-        baslik.innerText = title;
-        
-        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
-        el.classList.add('aktif');
-        
-        window.scrollTo({{ top: 0, behavior: 'smooth' }});
-    }}
-
-    function filmDurdur() {{
-        const frame = document.getElementById('film-iframe');
-        frame.src = '';
-        document.getElementById('video-oynatici-alan').style.display = 'none';
-        document.getElementById('film-kapat-btn').style.display = 'none';
-        document.getElementById('film-adi-aktif').innerText = 'Aşağıdan bir film seçin...';
-        document.querySelectorAll('.film-kart-ozel').forEach(k => k.classList.remove('aktif'));
-    }}
-
-    document.addEventListener('DOMContentLoaded', sonrakiPartiYukle);
-</script>
-
 </body>
 </html>'''
-
     with open("film-izle/index.html", "w", encoding="utf-8") as f:
         f.write(film_html)
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
-    
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
@@ -1001,54 +393,19 @@ def fetch_and_generate():
 
     footer_html = get_footer_html()
     header_html = get_header_html("nearadin.net - SON DAKİKA")
-    
     admatic_code = '''
    <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
+       <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
    </div>
     '''
 
-    # Canlı Maç Sonuçları sayfasını dinamik olarak oluştur
-    generate_live_scores_page(
-        header_html=get_header_html("nearadin.net - Canlı Maç Sonuçları"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
-
-    # Film İzle sayfasını dinamik olarak oluştur
-    generate_film_page(
-        header_html=get_header_html("nearadin.net - Film İzle"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
-
-    # Hava Durumu sayfasını dinamik olarak oluştur
-    generate_weather_page(
-        header_html=get_header_html("nearadin.net - Hava Durumu"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
-
-    # Arama sayfasını dinamik olarak oluştur
-    generate_search_page(
-        header_html=get_header_html("nearadin.net - Arama"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
-
-    generate_turksat_frequency_page(
-        header_html=get_header_html("nearadin.net - Arama"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
+    # Sayfaları oluştur
+    generate_live_scores_page(get_header_html("nearadin.net - Canlı Maç Sonuçları"), footer_html, whos_amung_us_code, admatic_code)
+    generate_film_page(get_header_html("nearadin.net - Film İzle"), footer_html, whos_amung_us_code, admatic_code)
+    generate_weather_page(get_header_html("nearadin.net - Hava Durumu"), footer_html, whos_amung_us_code, admatic_code)
+    generate_search_page(get_header_html("nearadin.net - Arama"), footer_html, whos_amung_us_code, admatic_code)
+    generate_turksat_frequency_page(get_header_html("nearadin.net - Frekans Listesi"), footer_html, whos_amung_us_code, admatic_code)
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -1062,13 +419,10 @@ def fetch_and_generate():
         now = datetime.datetime.now(datetime.timezone.utc)
         
         last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
-        last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
-
         parsed_items = []
 
         for item in raw_items:
             pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
-            
             pub_datetime = None
             if pub_date_raw:
                 try:
@@ -1143,8 +497,7 @@ def fetch_and_generate():
                 }
             daily_news_grouped[date_folder]["news_items"].append(news_data)
 
-        news_cards_html = ""
-
+        # Haber Sayfalarını Oluşturma
         for news in news_list:
             other_news_html = ""
             other_count = 0
@@ -1159,7 +512,6 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # Haber Detay Sayfası
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -1169,43 +521,15 @@ def fetch_and_generate():
     <meta name="description" content="{news['desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{news['title']}" />
     <meta name="twitter:description" content="{news['desc'][:150]}..." />
     <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
-
-    <script type="application/ld+json">
-    {{
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "{news['title']}",
-      "description": "{news['desc'][:150]}...",
-      "datePublished": "{news['iso_date']}",
-      "dateModified": "{news['iso_date']}",
-      "mainEntityOfPage": "{news['full_url']}",
-      "author": {{
-        "@type": "Organization",
-        "name": "{news['source']}"
-      }},
-      "publisher": {{
-        "@type": "Organization",
-        "name": "nearadin.net",
-        "logo": {{
-          "@type": "ImageObject",
-          "url": "https://nearadin.net/1786394487303.png"
-        }}
-      }}
-    }}
-    </script>
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -1220,24 +544,14 @@ def fetch_and_generate():
         .btn {{ display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }}
         .btn-primary {{ background: #1877f2; color: white; }}
         .btn-secondary {{ background: #e4e6eb; color: #050505; }}
-        .ad-container {{ margin: 0 0 12px 0; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
         .related-news {{ background: #f7f8fa; border-radius: 8px; padding: 15px; border: 1px solid #e4e6eb; margin-top: 20px; }}
         .related-title {{ font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }}
         .related-list {{ list-style: none; }}
     </style>
 </head>
-
 <body>
-
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-    
     {admatic_code}
     {header_html}
-
     <div class="container">
         <article class="article-card">
             <div class="meta-info">
@@ -1260,150 +574,46 @@ def fetch_and_generate():
                 </ul>
             </div>
         </article>
-
         {whos_amung_us_code}
     </div>
-
     {footer_html}
 </body>
 </html>'''
 
-            with open(f"haber/{news['date_folder']}/{news['page_name']}", "w", encoding="utf-8") as f:
+            file_path = f"haber/{news['date_folder']}/{news['page_name']}"
+            with open(file_path, "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
-            news_cards_html += f'''
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    {news['time']} - {news['source']}
-                </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="{news['internal_link']}" style="color: #050505; text-decoration: none;">{news['title']}</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">{news['desc'][:160]}...</p>
-                <a href="{news['internal_link']}" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
+        # Anasayfa (index.html) oluşturma
+        cards_html = ""
+        for news in news_list:
+            cards_html += f'''
+            <article style="background: white; border-radius: 10px; padding: 16px; margin-bottom: 15px; border: 1px solid #e4e6eb;">
+                <span style="color: #d93025; font-size: 12px; font-weight: bold;">{news['time']} - {news['source']}</span>
+                <h2 style="font-size: 17px; margin: 6px 0;"><a href="{news['internal_link']}" style="color: #050505; text-decoration: none;">{news['title']}</a></h2>
+                <p style="font-size: 14px; color: #4b4f56; line-height: 1.5;">{news['desc'][:120]}...</p>
             </article>'''
 
-        # Günlük Arşiv Sayfalarını Oluştur
-        for folder, group in daily_news_grouped.items():
-            daily_items_html = ""
-            for item in group["news_items"]:
-                daily_items_html += f'''
-                <li style="background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 10px; border: 1px solid #e4e6eb;">
-                    <span style="font-size: 11px; color: #65676b; display: block; margin-bottom: 4px;">{item['time']} - {item['source']}</span>
-                    <a href="{item['internal_link']}" style="color: #0056b3; font-weight: 600; font-size: 15px; text-decoration: none; display: block;">{item['title']}</a>
-                </li>'''
-
-            daily_index_html = f'''<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{group['date_str']} Tarihli Son Dakika Haberleri - nearadin.net</title>
-    <meta name="description" content="{group['date_str']} tarihine ait tüm son dakika haberleri ve gelişmeleri." />
-    <link rel="canonical" href="https://nearadin.net/haber/{folder}/" />
-    <style>
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
-        h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
-        .news-list {{ list-style: none; padding: 0; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
-    </style>
-</head>
-<body>
-    {admatic_code}
-    {header_html}
-    <div class="container">
-        <div class="card">
-            <h1>📅 {group['date_str']} Tarihli Haberler</h1>
-            <ul class="news-list">
-                {daily_items_html}
-            </ul>
-        </div>
-        {whos_amung_us_code}
-    </div>
-    {footer_html}
-</body>
-</html>'''
-
-            with open(f"haber/{folder}/index.html", "w", encoding="utf-8") as f:
-                f.write(daily_index_html)
-
-        # Genel Arşiv Sayfası
-        archive_links_html = ""
-        for folder, group in sorted(daily_news_grouped.items(), reverse=True):
-            archive_links_html += f'''
-            <li style="margin-bottom: 10px;">
-                <a href="/haber/{folder}/" style="color: #0056b3; text-decoration: none; font-weight: bold; font-size: 15px;">
-                    📅 {group['date_str']} Haberleri ({len(group['news_items'])} Haber)
-                </a>
-            </li>'''
-
-        archive_page_html = f'''<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Günlük Haber Arşivi - nearadin.net</title>
-    <meta name="description" content="nearadin.net geçmiş tarihli güncel haber ve son dakika arşiv koleksiyonu." />
-    <link rel="canonical" href="https://nearadin.net/arsiv/" />
-    <style>
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }}
-        h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
-        ul {{ list-style: none; padding: 0; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
-    </style>
-</head>
-<body>
-    {admatic_code}
-    {header_html}
-    <div class="container">
-        <div class="card">
-            <h1>📅 Günlük Haber Arşivi</h1>
-            <ul>
-                {archive_links_html}
-            </ul>
-        </div>
-        {whos_amung_us_code}
-    </div>
-    {footer_html}
-</body>
-</html>'''
-
-        with open("arsiv/index.html", "w", encoding="utf-8") as f:
-            f.write(archive_page_html)
-
-        # Anasayfa (index.html)
         index_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nearadin.net - Son Dakika Haberleri ve Anlık Gelişmeler</title>
-    <meta name="description" content="Türkiye ve dünyadan en güncel son dakika haberleri, canlı maç sonuçları, döviz, hava durumu ve anlık gelişmeler." />
+    <title>nearadin.net - Son Dakika Haberler</title>
+    <meta name="description" content="Türkiye ve dünyadan anlık son dakika haberleri, güncel gelişmeler." />
     <link rel="canonical" href="https://nearadin.net/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }}
-        .last-update {{ font-size: 12px; color: #65676b; margin-bottom: 15px; text-align: right; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; }}
     </style>
 </head>
 <body>
     {admatic_code}
     {header_html}
     <div class="container">
-        <div class="last-update">Son Güncelleme: {last_update}</div>
-        {news_cards_html}
+        <div style="margin-bottom: 15px; font-size: 12px; color: #65676b;">Son Güncelleme: {last_update}</div>
+        {cards_html}
         {whos_amung_us_code}
     </div>
     {footer_html}
@@ -1413,36 +623,14 @@ def fetch_and_generate():
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(index_html)
 
-        # Sitemap.xml Oluşturma
-        sitemap_urls = [
-            "https://nearadin.net/",
-            "https://nearadin.net/canli-mac-sonuclari/",
-            "https://nearadin.net/turksat-frekans-listesi/",
-            "https://nearadin.net/hava-durumu/",
-            "https://nearadin.net/film-izle/",
-            "https://nearadin.net/arsiv/",
-            "https://nearadin.net/search.html"
-        ]
-
-        for news in news_list:
-            sitemap_urls.append(news['full_url'])
-
-        sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        for url in sitemap_urls:
-            sitemap_xml += f'  <url>\n    <loc>{url}</loc>\n    <lastmod>{last_update_iso}</lastmod>\n    <changefreq>hourly</changefreq>\n    <priority>0.8</priority>\n  </url>\n'
-        sitemap_xml += '</urlset>'
-
-        with open("sitemap.xml", "w", encoding="utf-8") as f:
-            f.write(sitemap_xml)
-
-        print(f"✅ Bütün sayfalar ve sitemap.xml başarıyla oluşturuldu ({len(news_list)} haber).")
-
-        # En son çıkan haberi X üzerinde paylaş
+        # En son haberi X üzerinde otomatik paylaş
         if news_list:
             post_to_x(news_list[0])
 
+        print("✅ Haber akışı, tüm sayfalar ve yayınlama süreci tamamlandı.")
+
     except Exception as e:
-        print(f"Hata oluştu: {e}")
+        print(f"Haber çekme ve yayınlama sürecinde hata oluştu: {e}")
 
 if __name__ == "__main__":
     fetch_and_generate()
