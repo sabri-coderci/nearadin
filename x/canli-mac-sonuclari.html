@@ -133,131 +133,41 @@
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
-    </footer>
+    </footer>const API_KEY = '11a81661be924c9683cae7507b89b39c';
+const TARGET_URL = 'https://api.football-data.org/v4/matches';
 
-    <script>
-        const API_KEY = '11a81661be924c9683cae7507b89b39c';
-        const API_URL = 'https://api.football-data.org/v4/matches';
+// CORS engelini aşmak için proxy servisi
+const API_URL = 'https://corsproxy.io/?' + encodeURIComponent(TARGET_URL);
 
-        // Hamburger Menü
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('hamburgerBtn');
-            const nav = document.getElementById('dropdownNav');
-            if (btn && nav) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-                });
-                document.addEventListener('click', function(e) {
-                    if (!nav.contains(e.target) && e.target !== btn) {
-                        nav.style.display = 'none';
-                    }
-                });
+async function maclariGetir() {
+    const listeAlani = document.getElementById('mac-listesi');
+
+    try {
+        const response = await fetch(API_URL, {
+            headers: { 
+                'X-Auth-Token': API_KEY 
             }
-
-            maclariGetir();
-            setInterval(maclariGetir, 60000); // 60 saniyede bir güncelle
         });
 
-        async function maclariGetir() {
-            const listeAlani = document.getElementById('mac-listesi');
+        if (!response.ok) throw new Error('API yanıtı alınamadı');
 
-            try {
-                const response = await fetch(API_URL, {
-                    headers: { 'X-Auth-Token': API_KEY }
-                });
-
-                if (!response.ok) throw new Error('API yanıt vermedi');
-
-                const data = await response.json();
-                renderMaclar(data.matches);
-            } catch (error) {
-                console.warn('API isteği sırasında hata oluştu, simülasyon verisi gösteriliyor:', error);
-                verileriSimuleEt();
-            }
-        }
-
-        function renderMaclar(matches) {
-            const listeAlani = document.getElementById('mac-listesi');
-            if (!matches || matches.length === 0) {
-                listeAlani.innerHTML = '<div class="yukleniyor">Bugün oynanacak maç bulunamadı.</div>';
-                return;
-            }
-
-            const ligler = {};
-            matches.forEach(m => {
-                const ligAdi = m.competition.name;
-                if (!ligler[ligAdi]) ligler[ligAdi] = [];
-                ligler[ligAdi].push(m);
+        const data = await response.json();
+        renderMaclar(data.matches);
+    } catch (error) {
+        console.warn('Proxy hatası, alternatif proxy deneniyor:', error);
+        // Yedek proxy (corsproxy yanıt vermezse allorigins çalışır)
+        try {
+            const backupUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(TARGET_URL);
+            const response = await fetch(backupUrl, {
+                headers: { 'X-Auth-Token': API_KEY }
             });
-
-            let html = '';
-            for (const lig in ligler) {
-                html += `<div class="lig-baslik"><span>🏆 ${lig}</span></div>`;
-
-                ligler[lig].forEach(m => {
-                    const status = m.status;
-                    let tipClass = 'tip-bugun';
-                    let durumHTML = '';
-                    let skorHTML = '';
-
-                    const saat = new Date(m.utcDate).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-
-                    if (status === 'IN_PLAY' || status === 'PAUSED') {
-                        tipClass = 'tip-canli';
-                        durumHTML = `<span class="durum-rozeti durum-canli">● CANLI</span>`;
-                        skorHTML = `${m.score.fullTime.home ?? 0} - ${m.score.fullTime.away ?? 0}`;
-                    } else if (status === 'FINISHED') {
-                        tipClass = 'tip-bitti';
-                        durumHTML = `<span class="durum-rozeti durum-bitti">MS</span>`;
-                        skorHTML = `${m.score.fullTime.home} - ${m.score.fullTime.away}`;
-                    } else {
-                        tipClass = 'tip-bugun';
-                        durumHTML = `<span class="durum-rozeti durum-gelec">SAAT ${saat}</span>`;
-                        skorHTML = `<span class="skor-saat">${saat}</span>`;
-                    }
-
-                    html += `
-                        <div class="mac-kart ${tipClass}">
-                            <div class="mac-ust-bilgi">
-                                ${durumHTML}
-                                <span class="kanal-bilgisi">📺 TV / Resmi Yayın</span>
-                            </div>
-                            <div class="mac-skor-alani">
-                                <div class="takim-bilgi">${m.homeTeam.name}</div>
-                                <div class="skor-bilgi">${skorHTML}</div>
-                                <div class="takim-bilgi sag">${m.awayTeam.name}</div>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-
-            listeAlani.innerHTML = html;
+            const data = await response.json();
+            renderMaclar(data.matches);
+        } catch (e) {
+            verileriSimuleEt();
         }
+    }
+}
 
-        function verileriSimuleEt() {
-            const demoMatches = [
-                { competition: { name: 'Trendyol Süper Lig' }, status: 'IN_PLAY', homeTeam: { name: 'Galatasaray' }, awayTeam: { name: 'Fenerbahçe' }, score: { fullTime: { home: 2, away: 1 } }, utcDate: new Date() },
-                { competition: { name: 'Trendyol Süper Lig' }, status: 'TIMED', homeTeam: { name: 'Beşiktaş' }, awayTeam: { name: 'Trabzonspor' }, score: { fullTime: { home: null, away: null } }, utcDate: new Date(Date.now() + 3600000) },
-                { competition: { name: 'UEFA Şampiyonlar Ligi' }, status: 'FINISHED', homeTeam: { name: 'Real Madrid' }, awayTeam: { name: 'Manchester City' }, score: { fullTime: { home: 3, away: 1 } }, utcDate: new Date() }
-            ];
-            renderMaclar(demoMatches);
-        }
-
-        function filtrele(tip, btn) {
-            document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('aktif'));
-            btn.classList.add('aktif');
-
-            const kartlar = document.querySelectorAll('.mac-kart');
-            kartlar.forEach(kart => {
-                if (tip === 'hepsi') kart.style.display = 'block';
-                else if (tip === 'canli' && kart.classList.contains('tip-canli')) kart.style.display = 'block';
-                else if (tip === 'bugun' && kart.classList.contains('tip-bugun')) kart.style.display = 'block';
-                else if (tip === 'bitti' && kart.classList.contains('tip-bitti')) kart.style.display = 'block';
-                else kart.style.display = 'none';
-            });
-        }
-    </script>
 </body>
 </html>
