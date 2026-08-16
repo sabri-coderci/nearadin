@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arama Sonuçları - nearadin.net</title>
+    <!-- Varsayılan Başlık (Arama yapılmadığında görünür) -->
+    <title>Arama - nearadin.net</title>
     <meta name="description" content="nearadin.net son dakika haberleri ve içerik arama sayfası." />
     <link rel="canonical" href="https://nearadin.net/search.html" />
     
@@ -40,7 +41,7 @@
         .gsc-thumbnail-inside, .gsc-url-top { padding: 0 !important; }
         .gsc-result .gs-title { height: auto !important; }
         .gcse-searchresults-only { min-height: 150px; }
-        .gsc-adBlock { display: none !important; } /* Google varsayılan reklam alanını gizler */
+        .gsc-adBlock { display: none !important; }
     </style>
 </head>
 <body>
@@ -78,7 +79,6 @@
                 <button type="submit" class="search-button">Ara</button>
             </form>
 
-            <!-- Sınırsız Google Arama Sonuçlarının Basıldığı Alan -->
             <div class="gcse-searchresults-only"></div>
         </div>
 
@@ -133,11 +133,13 @@
                 });
             }
 
-            // URL'deki "q" parametresini girdi kutusuna doldurur
+            // URL'deki kelimeyi doğrudan sekme başlığına (<title>) basma
             const urlParams = new URLSearchParams(window.location.search);
             const query = urlParams.get('q');
-            if (query) {
-                document.getElementById('search-input').value = query;
+            if (query && query.trim() !== '') {
+                const cleanQuery = query.trim();
+                document.title = cleanQuery; // Sekme başlığında SADECE arama kelimesi yer alır
+                document.getElementById('search-input').value = cleanQuery;
             }
         });
     </script>
