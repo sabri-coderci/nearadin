@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nearadin.net - Son Dakika Haberleri ve Anlık Gelişmeler</title>
-    <meta name="description" content="Türkiye ve dünyadan en güncel son dakika haberleri, canlı maç sonuçları, döviz, hava durumu ve anlık gelişmeler." />
-    <link rel="canonical" href="https://nearadin.net/" />
+    <title>nearadin.net - Son Dakika Haberleri ve Canlı Akış</title>
+    <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, güncel gelişmeler ve canlı haber akışı." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }
-        .last-update { font-size: 12px; color: #65676b; margin-bottom: 15px; text-align: right; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+
+        .status-bar { background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }
+        
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }
+        .news-card:active { transform: scale(0.99); }
+        
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-title a:hover { color: #1877f2; }
+
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
         .ad-container:empty { display: none !important; }
     </style>
 </head>
 <body>
-    
-   <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
-       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
-   </div>
-    
+
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
     
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
@@ -60,565 +77,781 @@
         });
     </script>
     
+
     <div class="container">
-        <div class="last-update">Son Güncelleme: 16.08.2026 10:10</div>
-        
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    10:05 - Milliyet
+        <div class="status-bar">
+            <span>Kaynak: <strong>Google Canlı Akış</strong></span>
+            <span>Son Güncelleme: <strong>16.08.2026 10:20</strong></span>
+        </div>
+
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Yeni Asır</span>
+                    <span class="time">10:14</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-cemaati-lideri-alihan-kuris-tutukl.html" style="color: #050505; text-decoration: none;">Son dakika: Süleymancılar Cemaati lideri Alihan Kuriş tutuklandı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-alihan-kuris-tutuklandi.html">Son dakika: Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika: Süleymancılar Cemaati lideri Alihan Kuriş tutuklandı  Milliyet...</p>
-                <a href="/haber/2026/08/16/son-dakika-suleymancilar-cemaati-lideri-alihan-kuris-tutukl.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:58 - Hürriyet
+                <p class="news-summary">Son dakika: Alihan Kuriş tutuklandı  Yeni Asır</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-alihan-kuris-tutuklandi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/abd-sele-teslim-6-kisi-yasamini-yitirdi.html" style="color: #050505; text-decoration: none;">ABD sele teslim: 6 kişi yaşamını yitirdi</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">ABD sele teslim: 6 kişi yaşamını yitirdi  Hürriyet...</p>
-                <a href="/haber/2026/08/16/abd-sele-teslim-6-kisi-yasamini-yitirdi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:56 - Hürriyet
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">10:13</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/depremden-sag-cikti-sevk-edilirken-kayboldu-acili-anne-18.html" style="color: #050505; text-decoration: none;">Depremden sağ çıktı, sevk edilirken kayboldu: Acılı anne 18 mezar açtırarak oğlunun cenazesine ulaştı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/alihan-kuris-tutuklandi.html">Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Depremden sağ çıktı, sevk edilirken kayboldu: Acılı anne 18 mezar açtırarak oğlunun cenazesine ulaştı  Hürriyet...</p>
-                <a href="/haber/2026/08/16/depremden-sag-cikti-sevk-edilirken-kayboldu-acili-anne-18.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:54 - Habertürk
+                <p class="news-summary">Alihan Kuriş tutuklandı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/alihan-kuris-tutuklandi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-haberleri-hakkaride-uzman-cavus-itfaiye-aracini.html" style="color: #050505; text-decoration: none;">Son dakika haberleri: Hakkari’de uzman çavuş itfaiye aracının kayması sonucu hayatını kaybetti | Son dakika haberleri</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika haberleri: Hakkari’de uzman çavuş itfaiye aracının kayması sonucu hayatını kaybetti | Son dakika haberleri  Habertürk...</p>
-                <a href="/haber/2026/08/16/son-dakika-haberleri-hakkaride-uzman-cavus-itfaiye-aracini.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:54 - TRT Haber
+            
+   <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Sabah</span>
+                    <span class="time">10:11</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/itfaiye-aracinin-sepetiyle-duvar-arasinda-sikisan-uzman-cavu.html" style="color: #050505; text-decoration: none;">İtfaiye aracının sepetiyle duvar arasında sıkışan uzman çavuş yaşamını yitirdi</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-32-tutu.html">SON DAKİKA | Alihan Kuriş suç örgütü soruşturmasında 32 tutuklama! Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">İtfaiye aracının sepetiyle duvar arasında sıkışan uzman çavuş yaşamını yitirdi  TRT Haber...</p>
-                <a href="/haber/2026/08/16/itfaiye-aracinin-sepetiyle-duvar-arasinda-sikisan-uzman-cavu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:50 - sondakika.com
+                <p class="news-summary">SON DAKİKA | Alihan Kuriş suç örgütü soruşturmasında 32 tutuklama! Alihan Kuriş tutuklandı  Sabah</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-32-tutu.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/adananin-sicak-iklimi-kaktusleri-besliyor.html" style="color: #050505; text-decoration: none;">Adana'nın Sıcak İklimi Kaktüsleri Besliyor</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Adana'nın Sıcak İklimi Kaktüsleri Besliyor  sondakika.com...</p>
-                <a href="/haber/2026/08/16/adananin-sicak-iklimi-kaktusleri-besliyor.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:47 - halktv.com.tr
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">10:09</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-lideri-alihan-kuris-tutuklandi.html" style="color: #050505; text-decoration: none;">Son dakika | Süleymancılar lideri Alihan Kuriş tutuklandı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/gsb-cimnastik-okullari-gelecegin-sampiyonlarini-yetistiriyor.html">GSB Cimnastik Okulları Geleceğin Şampiyonlarını Yetiştiriyor</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika | Süleymancılar lideri Alihan Kuriş tutuklandı  halktv.com.tr...</p>
-                <a href="/haber/2026/08/16/son-dakika-suleymancilar-lideri-alihan-kuris-tutuklandi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:43 - Sabah
+                <p class="news-summary">GSB Cimnastik Okulları Geleceğin Şampiyonlarını Yetiştiriyor  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/gsb-cimnastik-okullari-gelecegin-sampiyonlarini-yetistiriyor.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/emekli-zammi-son-dakika-2-farkli-oran-masada-2027-emekli-m.html" style="color: #050505; text-decoration: none;">EMEKLİ ZAMMI SON DAKİKA! 2 farklı oran masada: 2027 emekli maaşı zammı ne kadar olacak?</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">EMEKLİ ZAMMI SON DAKİKA! 2 farklı oran masada: 2027 emekli maaşı zammı ne kadar olacak?  Sabah...</p>
-                <a href="/haber/2026/08/16/emekli-zammi-son-dakika-2-farkli-oran-masada-2027-emekli-m.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:41 - TRT Haber
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">10:09</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/marmaristeki-orman-yangininda-ikinci-gun-havadan-ve-karada.html" style="color: #050505; text-decoration: none;">Marmaris'teki orman yangınında ikinci gün: Havadan ve karadan müdahale sürüyor</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/tuana-kambur-turkiye-judo-sampiyonu.html">Tuana Kambur Türkiye Judo Şampiyonu</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Marmaris'teki orman yangınında ikinci gün: Havadan ve karadan müdahale sürüyor  TRT Haber...</p>
-                <a href="/haber/2026/08/16/marmaristeki-orman-yangininda-ikinci-gun-havadan-ve-karada.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:38 - sondakika.com
+                <p class="news-summary">Tuana Kambur Türkiye Judo Şampiyonu  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/tuana-kambur-turkiye-judo-sampiyonu.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/yunus-gorsel-soleni.html" style="color: #050505; text-decoration: none;">Yunus Görsel Şöleni</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Yunus Görsel Şöleni  sondakika.com...</p>
-                <a href="/haber/2026/08/16/yunus-gorsel-soleni.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:35 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">10:09</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/kimden-putine-daha-mukemmel-gelecek-umudu.html" style="color: #050505; text-decoration: none;">Kim'den Putin'e: Daha mükemmel gelecek umudu</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/suleymancilarin-lideri-alihan-kuris-tutuklandi.html">Süleymancıların lideri Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Kim'den Putin'e: Daha mükemmel gelecek umudu  sondakika.com...</p>
-                <a href="/haber/2026/08/16/kimden-putine-daha-mukemmel-gelecek-umudu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:34 - sondakika.com
+                <p class="news-summary">Süleymancıların lideri Alihan Kuriş tutuklandı  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/suleymancilarin-lideri-alihan-kuris-tutuklandi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/beyoglunda-italyan-profesor-evinde-olu-bulundu.html" style="color: #050505; text-decoration: none;">Beyoğlu'nda İtalyan Profesör Evinde Ölü Bulundu</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Beyoğlu'nda İtalyan Profesör Evinde Ölü Bulundu  sondakika.com...</p>
-                <a href="/haber/2026/08/16/beyoglunda-italyan-profesor-evinde-olu-bulundu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:31 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">10:07</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/aydinli-yuzuculerden-buyuk-basari.html" style="color: #050505; text-decoration: none;">Aydınlı Yüzücülerden Büyük Başarı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/marmariste-orman-yangini-ikinci-gununde-alevlere-mudahale.html">Marmaris’te orman yangını ikinci gününde! Alevlere müdahale devam ediyor</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Aydınlı Yüzücülerden Büyük Başarı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/aydinli-yuzuculerden-buyuk-basari.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:30 - sondakika.com
+                <p class="news-summary">Marmaris’te orman yangını ikinci gününde! Alevlere müdahale devam ediyor  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/marmariste-orman-yangini-ikinci-gununde-alevlere-mudahale.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/denizlili-is-adami-mavi-yuzgecli-orkinosu-kurtardi.html" style="color: #050505; text-decoration: none;">Denizli'li İş Adamı Mavi Yüzgeçli Orkinosu Kurtardı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Denizli'li İş Adamı Mavi Yüzgeçli Orkinosu Kurtardı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/denizlili-is-adami-mavi-yuzgecli-orkinosu-kurtardi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:30 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">10:06</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/fethiye-ve-kasta-deniz-milli-parki-kuruldu.html" style="color: #050505; text-decoration: none;">Fethiye ve Kaş'ta Deniz Milli Parkı Kuruldu</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/wildberriesin-bir-tesisi-daha-alevler-icinde-kaldi.html">Wildberries'in bir tesisi daha alevler içinde kaldı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Fethiye ve Kaş'ta Deniz Milli Parkı Kuruldu  sondakika.com...</p>
-                <a href="/haber/2026/08/16/fethiye-ve-kasta-deniz-milli-parki-kuruldu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:30 - NTV Haber
+                <p class="news-summary">Wildberries'in bir tesisi daha alevler içinde kaldı  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/wildberriesin-bir-tesisi-daha-alevler-icinde-kaldi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html" style="color: #050505; text-decoration: none;">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 16 Ağustos 2026</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 16 Ağustos 2026  NTV Haber...</p>
-                <a href="/haber/2026/08/16/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:29 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">10:05</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/yenipazarda-okul-hazirliklari-devam-ediyor.html" style="color: #050505; text-decoration: none;">Yenipazar'da Okul Hazırlıkları Devam Ediyor</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-cemaati-lideri-alihan-kuris-tutukl.html">Son dakika: Süleymancılar Cemaati lideri Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Yenipazar'da Okul Hazırlıkları Devam Ediyor  sondakika.com...</p>
-                <a href="/haber/2026/08/16/yenipazarda-okul-hazirliklari-devam-ediyor.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:29 - sondakika.com
+                <p class="news-summary">Son dakika: Süleymancılar Cemaati lideri Alihan Kuriş tutuklandı  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-cemaati-lideri-alihan-kuris-tutukl.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/konya-bugday-pazarinda-guvercinlerin-tadi.html" style="color: #050505; text-decoration: none;">Konya Buğday Pazarı'nda Güvercinlerin Tadı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Konya Buğday Pazarı'nda Güvercinlerin Tadı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/konya-bugday-pazarinda-guvercinlerin-tadi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:28 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">10:04</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/gorenler-gozlerine-inanamadi-dans-etti-yetmedi-etegini-siy.html" style="color: #050505; text-decoration: none;">Görenler gözlerine inanamadı! Dans etti, yetmedi eteğini sıyırıp...</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/belcikada-tarihi-orman-yangini.html">Belçika'da Tarihi Orman Yangını</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Görenler gözlerine inanamadı! Dans etti, yetmedi eteğini sıyırıp...  sondakika.com...</p>
-                <a href="/haber/2026/08/16/gorenler-gozlerine-inanamadi-dans-etti-yetmedi-etegini-siy.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:28 - CNN Türk
+                <p class="news-summary">Belçika'da Tarihi Orman Yangını  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/belcikada-tarihi-orman-yangini.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/deprem-son-dakika-16-agustos-bugun-deprem-mi-oldu-nerede.html" style="color: #050505; text-decoration: none;">DEPREM SON DAKİKA 16 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 16 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">DEPREM SON DAKİKA 16 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 16 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi  CNN Türk...</p>
-                <a href="/haber/2026/08/16/deprem-son-dakika-16-agustos-bugun-deprem-mi-oldu-nerede.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:28 - Hürriyet
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">10:02</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/trabzonspor-darwin-nunezde-mutlu-sona-yakin.html" style="color: #050505; text-decoration: none;">Trabzonspor Darwin Nunez'de mutlu sona yakın!</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/izmir-ogrencileri-depreme-dayanikli-tasarimla-dunya-1incisi.html">İzmir Öğrencileri Depreme Dayanıklı Tasarımla Dünya 1'incisi Oldu</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Trabzonspor Darwin Nunez'de mutlu sona yakın!  Hürriyet...</p>
-                <a href="/haber/2026/08/16/trabzonspor-darwin-nunezde-mutlu-sona-yakin.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:27 - sondakika.com
+                <p class="news-summary">İzmir Öğrencileri Depreme Dayanıklı Tasarımla Dünya 1'incisi Oldu  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/izmir-ogrencileri-depreme-dayanikli-tasarimla-dunya-1incisi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/sma-ilaci-uzerine-calismalar-devam-ediyor.html" style="color: #050505; text-decoration: none;">SMA İlacı Üzerine Çalışmalar Devam Ediyor</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">SMA İlacı Üzerine Çalışmalar Devam Ediyor  sondakika.com...</p>
-                <a href="/haber/2026/08/16/sma-ilaci-uzerine-calismalar-devam-ediyor.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:26 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">NTV Haber</span>
+                    <span class="time">10:00</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/goztepe-super-ligde-samsunspor-ile-aciliyor.html" style="color: #050505; text-decoration: none;">Göztepe, Süper Lig'de Samsunspor ile Açılıyor</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 16 Ağustos 2026</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Göztepe, Süper Lig'de Samsunspor ile Açılıyor  sondakika.com...</p>
-                <a href="/haber/2026/08/16/goztepe-super-ligde-samsunspor-ile-aciliyor.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:22 - Habertürk
+                <p class="news-summary">Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 16 Ağustos 2026  NTV Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-muglada-orman-yangini-ikinci-gununde-son-dak.html" style="color: #050505; text-decoration: none;">Son dakika: Muğla'da orman yangını ikinci gününde! - Son Dakika İnternet Haberleri</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika: Muğla'da orman yangını ikinci gününde! - Son Dakika İnternet Haberleri  Habertürk...</p>
-                <a href="/haber/2026/08/16/son-dakika-muglada-orman-yangini-ikinci-gununde-son-dak.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:21 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:57</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/tarihi-kilisede-son-ayin-yapildi.html" style="color: #050505; text-decoration: none;">Tarihi Kilisede Son Ayin Yapıldı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/trabzonlu-balikcilar-yeni-sezona-hazirlaniyor.html">Trabzonlu Balıkçılar Yeni Sezona Hazırlanıyor</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Tarihi Kilisede Son Ayin Yapıldı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/tarihi-kilisede-son-ayin-yapildi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:20 - sondakika.com
+                <p class="news-summary">Trabzonlu Balıkçılar Yeni Sezona Hazırlanıyor  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/trabzonlu-balikcilar-yeni-sezona-hazirlaniyor.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/zilan-yaylasinda-bal-hasadi-basladi.html" style="color: #050505; text-decoration: none;">Zilan Yaylası'nda Bal Hasadı Başladı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Zilan Yaylası'nda Bal Hasadı Başladı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/zilan-yaylasinda-bal-hasadi-basladi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:20 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Habertürk</span>
+                    <span class="time">09:54</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/saglik-bakani-turkiye-saglikta-ornek-ulke-oldu.html" style="color: #050505; text-decoration: none;">Sağlık Bakanı: Türkiye sağlıkta örnek ülke oldu</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-haberleri-hakkaride-uzman-cavus-itfaiye-aracini.html">Son dakika haberleri: Hakkari’de uzman çavuş itfaiye aracının kayması sonucu hayatını kaybetti | Son dakika haberleri</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Sağlık Bakanı: Türkiye sağlıkta örnek ülke oldu  sondakika.com...</p>
-                <a href="/haber/2026/08/16/saglik-bakani-turkiye-saglikta-ornek-ulke-oldu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:20 - sondakika.com
+                <p class="news-summary">Son dakika haberleri: Hakkari’de uzman çavuş itfaiye aracının kayması sonucu hayatını kaybetti | Son dakika haberleri  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-haberleri-hakkaride-uzman-cavus-itfaiye-aracini.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/denizlide-elektrikli-bisiklet-kazasi-1-olu.html" style="color: #050505; text-decoration: none;">Denizli'de elektrikli bisiklet kazası: 1 ölü</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Denizli'de elektrikli bisiklet kazası: 1 ölü  sondakika.com...</p>
-                <a href="/haber/2026/08/16/denizlide-elektrikli-bisiklet-kazasi-1-olu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:18 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">09:54</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/kuduste-siddetli-yagis-ve-su-baskinlari.html" style="color: #050505; text-decoration: none;">Kudüs'te Şiddetli Yağış ve Su Baskınları</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/itfaiye-aracinin-sepetiyle-duvar-arasinda-sikisan-uzman-cavu.html">İtfaiye aracının sepetiyle duvar arasında sıkışan uzman çavuş yaşamını yitirdi</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Kudüs'te Şiddetli Yağış ve Su Baskınları  sondakika.com...</p>
-                <a href="/haber/2026/08/16/kuduste-siddetli-yagis-ve-su-baskinlari.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:18 - sondakika.com
+                <p class="news-summary">İtfaiye aracının sepetiyle duvar arasında sıkışan uzman çavuş yaşamını yitirdi  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/itfaiye-aracinin-sepetiyle-duvar-arasinda-sikisan-uzman-cavu.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/eskisehirde-alkollu-surucuye-ceza.html" style="color: #050505; text-decoration: none;">Eskişehir'de Alkollü Sürücüye Ceza</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Eskişehir'de Alkollü Sürücüye Ceza  sondakika.com...</p>
-                <a href="/haber/2026/08/16/eskisehirde-alkollu-surucuye-ceza.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:17 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">09:48</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/yolda-calismalar-trafikte-dikkat.html" style="color: #050505; text-decoration: none;">Yolda Çalışmalar, Trafikte Dikkat!</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/vanuatuda-61-buyuklugunde-deprem.html">Vanuatu'da 6.1 büyüklüğünde deprem</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Yolda Çalışmalar, Trafikte Dikkat!  sondakika.com...</p>
-                <a href="/haber/2026/08/16/yolda-calismalar-trafikte-dikkat.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:17 - Bugün Kocaeli Gazetesi
+                <p class="news-summary">Vanuatu'da 6.1 büyüklüğünde deprem  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/vanuatuda-61-buyuklugunde-deprem.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-safiport-kocaelispor-icin-ne-karar-aldi.html" style="color: #050505; text-decoration: none;">SON DAKİKA! SAFİPORT KOCAELİSPOR İÇİN NE KARAR ALDI?</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">SON DAKİKA! SAFİPORT KOCAELİSPOR İÇİN NE KARAR ALDI?  Bugün Kocaeli Gazetesi...</p>
-                <a href="/haber/2026/08/16/son-dakika-safiport-kocaelispor-icin-ne-karar-aldi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:16 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Halk TV</span>
+                    <span class="time">09:47</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/ovacikta-saganak-yagis-rahatlatiyor.html" style="color: #050505; text-decoration: none;">Ovacık'ta Sağanak Yağış Rahatlatıyor</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-lideri-alihan-kuris-tutuklandi.html">Son dakika | Süleymancılar lideri Alihan Kuriş tutuklandı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Ovacık'ta Sağanak Yağış Rahatlatıyor  sondakika.com...</p>
-                <a href="/haber/2026/08/16/ovacikta-saganak-yagis-rahatlatiyor.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:16 - sondakika.com
+                <p class="news-summary">Son dakika | Süleymancılar lideri Alihan Kuriş tutuklandı  Halk TV</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-suleymancilar-lideri-alihan-kuris-tutuklandi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/libyada-elektrik-kesintisi.html" style="color: #050505; text-decoration: none;">Libya'da Elektrik Kesintisi</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Libya'da Elektrik Kesintisi  sondakika.com...</p>
-                <a href="/haber/2026/08/16/libyada-elektrik-kesintisi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:16 - Hürriyet
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:47</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/suleymancilarin-lideri-ailece-tapu-zengini-cikti.html" style="color: #050505; text-decoration: none;">Süleymancıların lideri ailece ‘tapu’ zengini çıktı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/kozmetik-urunlerdeki-kanser-riski-uyarisi.html">Kozmetik Ürünlerdeki Kanser Riski Uyarısı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Süleymancıların lideri ailece ‘tapu’ zengini çıktı  Hürriyet...</p>
-                <a href="/haber/2026/08/16/suleymancilarin-lideri-ailece-tapu-zengini-cikti.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:15 - sondakika.com
+                <p class="news-summary">Kozmetik Ürünlerdeki Kanser Riski Uyarısı  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/kozmetik-urunlerdeki-kanser-riski-uyarisi.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/odemiste-ruhsatsiz-silah-ele-gecirildi.html" style="color: #050505; text-decoration: none;">Ödemiş'te Ruhsatsız Silah Ele Geçirildi</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Ödemiş'te Ruhsatsız Silah Ele Geçirildi  sondakika.com...</p>
-                <a href="/haber/2026/08/16/odemiste-ruhsatsiz-silah-ele-gecirildi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:14 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Sabah</span>
+                    <span class="time">09:43</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/tpaoya-yeni-petrol-arama-ruhsatlari.html" style="color: #050505; text-decoration: none;">TPAO'ya yeni petrol arama ruhsatları</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/emekli-zammi-son-dakika-2-farkli-oran-masada-2027-emekli-m.html">EMEKLİ ZAMMI SON DAKİKA! 2 farklı oran masada: 2027 emekli maaşı zammı ne kadar olacak?</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">TPAO'ya yeni petrol arama ruhsatları  sondakika.com...</p>
-                <a href="/haber/2026/08/16/tpaoya-yeni-petrol-arama-ruhsatlari.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:12 - Sabah
+                <p class="news-summary">EMEKLİ ZAMMI SON DAKİKA! 2 farklı oran masada: 2027 emekli maaşı zammı ne kadar olacak?  Sabah</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/emekli-zammi-son-dakika-2-farkli-oran-masada-2027-emekli-m.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/istanbulda-bazi-yollar-trafige-kapatildi-video-videosunu.html" style="color: #050505; text-decoration: none;">İstanbul'da bazı yollar trafiğe kapatıldı | Video videosunu izle | Son Dakika Haberleri</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">İstanbul'da bazı yollar trafiğe kapatıldı | Video videosunu izle | Son Dakika Haberleri  Sabah...</p>
-                <a href="/haber/2026/08/16/istanbulda-bazi-yollar-trafige-kapatildi-video-videosunu.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    09:07 - TRT Haber
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">09:41</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/atama-ve-gorevden-alma-kararlari-resmi-gazetede.html" style="color: #050505; text-decoration: none;">Atama ve görevden alma kararları Resmi Gazete'de</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/marmaristeki-orman-yangininda-ikinci-gun-havadan-ve-karada.html">Marmaris'teki orman yangınında ikinci gün: Havadan ve karadan müdahale sürüyor</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Atama ve görevden alma kararları Resmi Gazete'de  TRT Haber...</p>
-                <a href="/haber/2026/08/16/atama-ve-gorevden-alma-kararlari-resmi-gazetede.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:59 - Cumhuriyet
+                <p class="news-summary">Marmaris'teki orman yangınında ikinci gün: Havadan ve karadan müdahale sürüyor  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/marmaristeki-orman-yangininda-ikinci-gun-havadan-ve-karada.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-depremler-deprem-mi-oldu-16-agustos-2026-nerede.html" style="color: #050505; text-decoration: none;">Son dakika depremler! Deprem mi oldu? 16 Ağustos 2026 nerede, ne zaman deprem oldu?</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika depremler! Deprem mi oldu? 16 Ağustos 2026 nerede, ne zaman deprem oldu?  Cumhuriyet...</p>
-                <a href="/haber/2026/08/16/son-dakika-depremler-deprem-mi-oldu-16-agustos-2026-nerede.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:57 - Milliyet
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:31</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-son-depremler-afadkandilli-listesi-16-agustos-a.html" style="color: #050505; text-decoration: none;">SON DAKİKA SON DEPREMLER AFAD/KANDİLLİ LİSTESİ 16 AĞUSTOS: Az önce deprem mi oldu, nerede, kaç şiddetinde, merkez üssü neresi?</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/aydinli-yuzuculerden-buyuk-basari.html">Aydınlı Yüzücülerden Büyük Başarı</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">SON DAKİKA SON DEPREMLER AFAD/KANDİLLİ LİSTESİ 16 AĞUSTOS: Az önce deprem mi oldu, nerede, kaç şiddetinde, merkez üssü neresi?  Milliyet...</p>
-                <a href="/haber/2026/08/16/son-dakika-son-depremler-afadkandilli-listesi-16-agustos-a.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:55 - Hürriyet
+                <p class="news-summary">Aydınlı Yüzücülerden Büyük Başarı  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/aydinli-yuzuculerden-buyuk-basari.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/macta-cocugun-formasinin-cikartilmasina-sorusturma.html" style="color: #050505; text-decoration: none;">Maçta çocuğun formasının çıkartılmasına soruşturma</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Maçta çocuğun formasının çıkartılmasına soruşturma  Hürriyet...</p>
-                <a href="/haber/2026/08/16/macta-cocugun-formasinin-cikartilmasina-sorusturma.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:52 - Habertürk
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:30</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-haberi-kayseride-58-yasindaki-adam-rezidansta.html" style="color: #050505; text-decoration: none;">Son dakika haberi: Kayseri’de 58 yaşındaki adam, rezidansta kaldığı odada ölü bulundu | Son dakika haberleri</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/fethiye-ve-kasta-deniz-milli-parki-kuruldu.html">Fethiye ve Kaş'ta Deniz Milli Parkı Kuruldu</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Son dakika haberi: Kayseri’de 58 yaşındaki adam, rezidansta kaldığı odada ölü bulundu | Son dakika haberleri  Habertürk...</p>
-                <a href="/haber/2026/08/16/son-dakika-haberi-kayseride-58-yasindaki-adam-rezidansta.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:46 - sondakika.com
+                <p class="news-summary">Fethiye ve Kaş'ta Deniz Milli Parkı Kuruldu  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/fethiye-ve-kasta-deniz-milli-parki-kuruldu.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/denizli-idman-yurdunda-uye-krizi.html" style="color: #050505; text-decoration: none;">Denizli İdman Yurdu'nda Üye Krizi!</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Denizli İdman Yurdu'nda Üye Krizi!  sondakika.com...</p>
-                <a href="/haber/2026/08/16/denizli-idman-yurdunda-uye-krizi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:38 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:28</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/selahattin-demirtastan-cezaevinden-kritik-mesaj.html" style="color: #050505; text-decoration: none;">Selahattin Demirtaş'tan cezaevinden kritik mesaj</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/gorenler-gozlerine-inanamadi-dans-etti-yetmedi-etegini-siy.html">Görenler gözlerine inanamadı! Dans etti, yetmedi eteğini sıyırıp...</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Selahattin Demirtaş'tan cezaevinden kritik mesaj  sondakika.com...</p>
-                <a href="/haber/2026/08/16/selahattin-demirtastan-cezaevinden-kritik-mesaj.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:29 - TRT Haber
+                <p class="news-summary">Görenler gözlerine inanamadı! Dans etti, yetmedi eteğini sıyırıp...  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/gorenler-gozlerine-inanamadi-dans-etti-yetmedi-etegini-siy.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/kamyonla-carpisan-otomobil-savrulup-takla-atti.html" style="color: #050505; text-decoration: none;">Kamyonla çarpışan otomobil savrulup takla attı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Kamyonla çarpışan otomobil savrulup takla attı  TRT Haber...</p>
-                <a href="/haber/2026/08/16/kamyonla-carpisan-otomobil-savrulup-takla-atti.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:20 - sondakika.com
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">09:28</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/on-otopsi-raporu-cikti-iste-eren-kasikcinin-olum-nedeni.html" style="color: #050505; text-decoration: none;">Ön otopsi raporu çıktı! İşte Eren Kaşıkçı'nın ölüm nedeni</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/deprem-son-dakika-16-agustos-bugun-deprem-mi-oldu-nerede.html">DEPREM SON DAKİKA 16 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 16 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Ön otopsi raporu çıktı! İşte Eren Kaşıkçı'nın ölüm nedeni  sondakika.com...</p>
-                <a href="/haber/2026/08/16/on-otopsi-raporu-cikti-iste-eren-kasikcinin-olum-nedeni.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    08:04 - sondakika.com
+                <p class="news-summary">DEPREM SON DAKİKA 16 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 16 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/deprem-son-dakika-16-agustos-bugun-deprem-mi-oldu-nerede.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/beykozda-yollar-kapandi.html" style="color: #050505; text-decoration: none;">Beykoz'da Yollar Kapandı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Beykoz'da Yollar Kapandı  sondakika.com...</p>
-                <a href="/haber/2026/08/16/beykozda-yollar-kapandi.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    07:59 - TRT Haber
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">09:28</span>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/stadyumda-kucuk-cocuga-forma-mudahalesi-sorusturma-baslatil.html" style="color: #050505; text-decoration: none;">Stadyumda küçük çocuğa forma müdahalesi: Soruşturma başlatıldı</a>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/trabzonspor-darwin-nunezde-mutlu-sona-yakin.html">Trabzonspor Darwin Nunez'de mutlu sona yakın!</a>
                 </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">Stadyumda küçük çocuğa forma müdahalesi: Soruşturma başlatıldı  TRT Haber...</p>
-                <a href="/haber/2026/08/16/stadyumda-kucuk-cocuga-forma-mudahalesi-sorusturma-baslatil.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
-            </article>
-            <article style="background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                <div style="font-size: 12px; color: #65676b; margin-bottom: 5px;">
-                    <span style="background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-right: 5px;">SON DAKİKA</span>
-                    07:51 - Sabah
+                <p class="news-summary">Trabzonspor Darwin Nunez'de mutlu sona yakın!  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/trabzonspor-darwin-nunezde-mutlu-sona-yakin.html" class="read-btn">Detayı Oku →</a>
                 </div>
-                <h2 style="font-size: 16px; margin-bottom: 8px; line-height: 1.3;">
-                    <a href="/haber/2026/08/16/son-dakika-gaziantep-adliyesinde-skandal-olay-rusvet-kar.html" style="color: #050505; text-decoration: none;">SON DAKİKA | Gaziantep Adliyesi’nde skandal olay! Rüşvet karşılığı tahliye: SABAH, Whatsapp yazışmalarına ulaştı</a>
-                </h2>
-                <p style="font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 10px;">SON DAKİKA | Gaziantep Adliyesi’nde skandal olay! Rüşvet karşılığı tahliye: SABAH, Whatsapp yazışmalarına ulaştı  Sabah...</p>
-                <a href="/haber/2026/08/16/son-dakika-gaziantep-adliyesinde-skandal-olay-rusvet-kar.html" style="color: #1877f2; text-decoration: none; font-size: 13px; font-weight: 600;">Devamını Oku →</a>
             </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/goztepe-super-ligde-samsunspor-ile-aciliyor.html">Göztepe, Süper Lig'de Samsunspor ile Açılıyor</a>
+                </h2>
+                <p class="news-summary">Göztepe, Süper Lig'de Samsunspor ile Açılıyor  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/goztepe-super-ligde-samsunspor-ile-aciliyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Habertürk</span>
+                    <span class="time">09:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-muglada-orman-yangini-ikinci-gununde-son-dak.html">Son dakika: Muğla'da orman yangını ikinci gününde! - Son Dakika İnternet Haberleri</a>
+                </h2>
+                <p class="news-summary">Son dakika: Muğla'da orman yangını ikinci gününde! - Son Dakika İnternet Haberleri  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-muglada-orman-yangini-ikinci-gununde-son-dak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/hakkaride-kedi-kurtarma-calismasi-faciayla-sonuclandi-uzma.html">Hakkari’de kedi kurtarma çalışması faciayla sonuçlandı: Uzman çavuş hayatını kaybetti</a>
+                </h2>
+                <p class="news-summary">Hakkari’de kedi kurtarma çalışması faciayla sonuçlandı: Uzman çavuş hayatını kaybetti  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/hakkaride-kedi-kurtarma-calismasi-faciayla-sonuclandi-uzma.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/zilan-yaylasinda-bal-hasadi-basladi.html">Zilan Yaylası'nda Bal Hasadı Başladı</a>
+                </h2>
+                <p class="news-summary">Zilan Yaylası'nda Bal Hasadı Başladı  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/zilan-yaylasinda-bal-hasadi-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/saglik-bakani-turkiye-saglikta-ornek-ulke-oldu.html">Sağlık Bakanı: Türkiye sağlıkta örnek ülke oldu</a>
+                </h2>
+                <p class="news-summary">Sağlık Bakanı: Türkiye sağlıkta örnek ülke oldu  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/saglik-bakani-turkiye-saglikta-ornek-ulke-oldu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/denizlide-elektrikli-bisiklet-kazasi-1-olu.html">Denizli'de elektrikli bisiklet kazası: 1 ölü</a>
+                </h2>
+                <p class="news-summary">Denizli'de elektrikli bisiklet kazası: 1 ölü  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/denizlide-elektrikli-bisiklet-kazasi-1-olu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/kuduste-siddetli-yagis-ve-su-baskinlari.html">Kudüs'te Şiddetli Yağış ve Su Baskınları</a>
+                </h2>
+                <p class="news-summary">Kudüs'te Şiddetli Yağış ve Su Baskınları  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/kuduste-siddetli-yagis-ve-su-baskinlari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/eskisehirde-alkollu-surucuye-ceza.html">Eskişehir'de Alkollü Sürücüye Ceza</a>
+                </h2>
+                <p class="news-summary">Eskişehir'de Alkollü Sürücüye Ceza  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/eskisehirde-alkollu-surucuye-ceza.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/yolda-calismalar-trafikte-dikkat.html">Yolda Çalışmalar, Trafikte Dikkat!</a>
+                </h2>
+                <p class="news-summary">Yolda Çalışmalar, Trafikte Dikkat!  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/yolda-calismalar-trafikte-dikkat.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Bugün Kocaeli Gazetesi</span>
+                    <span class="time">09:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-safiport-kocaelispor-icin-ne-karar-aldi.html">SON DAKİKA! SAFİPORT KOCAELİSPOR İÇİN NE KARAR ALDI?</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA! SAFİPORT KOCAELİSPOR İÇİN NE KARAR ALDI?  Bugün Kocaeli Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-safiport-kocaelispor-icin-ne-karar-aldi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/libyada-elektrik-kesintisi.html">Libya'da Elektrik Kesintisi</a>
+                </h2>
+                <p class="news-summary">Libya'da Elektrik Kesintisi  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/libyada-elektrik-kesintisi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">09:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/suleymancilarin-lideri-ailece-tapu-zengini-cikti.html">Süleymancıların lideri ailece ‘tapu’ zengini çıktı</a>
+                </h2>
+                <p class="news-summary">Süleymancıların lideri ailece ‘tapu’ zengini çıktı  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/suleymancilarin-lideri-ailece-tapu-zengini-cikti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/odemiste-ruhsatsiz-silah-ele-gecirildi.html">Ödemiş'te Ruhsatsız Silah Ele Geçirildi</a>
+                </h2>
+                <p class="news-summary">Ödemiş'te Ruhsatsız Silah Ele Geçirildi  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/odemiste-ruhsatsiz-silah-ele-gecirildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/tpaoya-yeni-petrol-arama-ruhsatlari.html">TPAO'ya yeni petrol arama ruhsatları</a>
+                </h2>
+                <p class="news-summary">TPAO'ya yeni petrol arama ruhsatları  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/tpaoya-yeni-petrol-arama-ruhsatlari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">09:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/atama-ve-gorevden-alma-kararlari-resmi-gazetede.html">Atama ve görevden alma kararları Resmi Gazete'de</a>
+                </h2>
+                <p class="news-summary">Atama ve görevden alma kararları Resmi Gazete'de  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/atama-ve-gorevden-alma-kararlari-resmi-gazetede.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">08:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-depremler-deprem-mi-oldu-16-agustos-2026-nerede.html">Son dakika depremler! Deprem mi oldu? 16 Ağustos 2026 nerede, ne zaman deprem oldu?</a>
+                </h2>
+                <p class="news-summary">Son dakika depremler! Deprem mi oldu? 16 Ağustos 2026 nerede, ne zaman deprem oldu?  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-depremler-deprem-mi-oldu-16-agustos-2026-nerede.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">08:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-son-depremler-afadkandilli-listesi-16-agustos-a.html">SON DAKİKA SON DEPREMLER AFAD/KANDİLLİ LİSTESİ 16 AĞUSTOS: Az önce deprem mi oldu, nerede, kaç şiddetinde, merkez üssü neresi?</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA SON DEPREMLER AFAD/KANDİLLİ LİSTESİ 16 AĞUSTOS: Az önce deprem mi oldu, nerede, kaç şiddetinde, merkez üssü neresi?  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-son-depremler-afadkandilli-listesi-16-agustos-a.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">08:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/savasta-tansiyon-yeniden-yukseldi-ukraynanin-baskenti-bali.html">Savaşta tansiyon yeniden yükseldi! Ukrayna'nın başkenti balistik füzelerin hedefi oldu</a>
+                </h2>
+                <p class="news-summary">Savaşta tansiyon yeniden yükseldi! Ukrayna'nın başkenti balistik füzelerin hedefi oldu  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/savasta-tansiyon-yeniden-yukseldi-ukraynanin-baskenti-bali.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Habertürk</span>
+                    <span class="time">08:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/son-dakika-haberi-kayseride-58-yasindaki-adam-rezidansta.html">Son dakika haberi: Kayseri’de 58 yaşındaki adam, rezidansta kaldığı odada ölü bulundu | Son dakika haberleri</a>
+                </h2>
+                <p class="news-summary">Son dakika haberi: Kayseri’de 58 yaşındaki adam, rezidansta kaldığı odada ölü bulundu | Son dakika haberleri  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/son-dakika-haberi-kayseride-58-yasindaki-adam-rezidansta.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">08:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/denizli-idman-yurdunda-uye-krizi.html">Denizli İdman Yurdu'nda Üye Krizi!</a>
+                </h2>
+                <p class="news-summary">Denizli İdman Yurdu'nda Üye Krizi!  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/denizli-idman-yurdunda-uye-krizi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">08:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/selahattin-demirtastan-cezaevinden-kritik-mesaj.html">Selahattin Demirtaş'tan cezaevinden kritik mesaj</a>
+                </h2>
+                <p class="news-summary">Selahattin Demirtaş'tan cezaevinden kritik mesaj  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/selahattin-demirtastan-cezaevinden-kritik-mesaj.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">08:36</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/akcakocada-iha-ihbari-ve-duzeltme.html">Akçakoca'da İHA İhbarı ve Düzeltme</a>
+                </h2>
+                <p class="news-summary">Akçakoca'da İHA İhbarı ve Düzeltme  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/akcakocada-iha-ihbari-ve-duzeltme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">08:29</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/kamyonla-carpisan-otomobil-savrulup-takla-atti.html">Kamyonla çarpışan otomobil savrulup takla attı</a>
+                </h2>
+                <p class="news-summary">Kamyonla çarpışan otomobil savrulup takla attı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/kamyonla-carpisan-otomobil-savrulup-takla-atti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">08:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/alihan-kurisin-kurban-parasi-oyunu-akilalmaz-vurgunun-sifr.html">Alihan Kuriş'in kurban parası oyunu! Akılalmaz vurgunun şifreleri çözüldü</a>
+                </h2>
+                <p class="news-summary">Alihan Kuriş'in kurban parası oyunu! Akılalmaz vurgunun şifreleri çözüldü  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/alihan-kurisin-kurban-parasi-oyunu-akilalmaz-vurgunun-sifr.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">SON DAKİKA</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">07:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/haber/2026/08/16/stadyumda-kucuk-cocuga-forma-mudahalesi-sorusturma-baslatil.html">Stadyumda küçük çocuğa forma müdahalesi: Soruşturma başlatıldı</a>
+                </h2>
+                <p class="news-summary">Stadyumda küçük çocuğa forma müdahalesi: Soruşturma başlatıldı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/haber/2026/08/16/stadyumda-kucuk-cocuga-forma-mudahalesi-sorusturma-baslatil.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+
         
     <div style="text-align: center; margin: 20px 0;">
         <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
     </div>
     
     </div>
+
     
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
@@ -649,5 +882,6 @@
         </div>
     </footer>
     
+
 </body>
 </html>
