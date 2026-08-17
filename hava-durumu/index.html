@@ -88,7 +88,7 @@
     <div class="container">
         <div class="card">
             <h1>☀️ 7 Günlük Hava Durumu</h1>
-            <p>İlini seçerek önümüzdeki 5 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
+            <p>İlini seçerek önümüzdeki 7 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
             
             <!-- İl Seçim Menüsü -->
             <div class="city-select-box">
@@ -238,7 +238,7 @@
                     const minTemps = data.daily.temperature_2m_min;
                     const weatherCodes = data.daily.weathercode;
 
-                    for (let i = 0; i < 5; i++) {
+                    for (let i = 0; i < 7; i++) {
                         const dateObj = new Date(times[i]);
                         const options = { weekday: 'long', day: 'numeric', month: 'long' };
                         const formattedDate = dateObj.toLocaleDateString('tr-TR', options);
