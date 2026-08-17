@@ -195,8 +195,8 @@ def generate_live_scores_page(header_html, footer_html, whos_amung_us_code, adma
 </body>
 </html>'''
 
-    with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
-        f.write(scores_html)
+    #with open("canli-mac-sonuclari/index.html", "w", encoding="utf-8") as f:
+       # f.write(scores_html)
         
     print("✅ Canlı maç sonuçları sayfası güncellendi (Yükseklik: 1200px, ProScores Anchor eklendi).")
 
@@ -413,8 +413,8 @@ def generate_turksat_frequency_page(header_html, footer_html, whos_amung_us_code
 </body>
 </html>'''
 
-    with open("turksat-frekans-listesi/index.html", "w", encoding="utf-8") as f:
-        f.write(turksat_html)
+    #with open("turksat-frekans-listesi/index.html", "w", encoding="utf-8") as f:
+        #f.write(turksat_html)
         
     print("✅ Türksat Frekans Listesi (Tüm kanallar tablosuyla) başarıyla güncellendi.")
 
@@ -561,8 +561,8 @@ def generate_search_page(header_html, footer_html, whos_amung_us_code, admatic_c
 </body>
 </html>'''
 
-    with open("search.html", "w", encoding="utf-8") as f:
-        f.write(search_html)
+    #with open("search.html", "w", encoding="utf-8") as f:
+       # f.write(search_html)
 
 
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
@@ -987,8 +987,8 @@ def generate_film_page(header_html, footer_html, whos_amung_us_code, admatic_cod
 </body>
 </html>'''
 
-    with open("film-izle/index.html", "w", encoding="utf-8") as f:
-        f.write(film_html)
+   # with open("film-izle/index.html", "w", encoding="utf-8") as f:
+       # f.write(film_html)
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
