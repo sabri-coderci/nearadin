@@ -101,7 +101,7 @@
                 badgeEl.innerText = `Son Güncelleme: ${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR')}`;
 
                 if(data && data.result) {
-                    data.result.slice(0, 20).forEach(eq => {
+                    data.result.slice(0, 50).forEach(eq => {
                         const li = document.createElement('li');
                         li.className = 'earthquake-item';
                         li.innerHTML = `
