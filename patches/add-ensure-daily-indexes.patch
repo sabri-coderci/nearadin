@@ -1,0 +1,107 @@
+*** Begin Patch
+*** Update File: fetch_news.py
+@@
+ def get_footer_html():
+     [...]
++
++def ensure_daily_indexes_from_files(header_html, footer_html, whos_amung_us_code, admatic_code):
++    """
++    Tarayıcı (filesystem) tabanlı günlük indexler oluşturur.
++    Haber klasöründeki her `haber/YYYY/MM/DD/` dizini için eğer `index.html`
++    yoksa basit bir günlük liste sayfası oluşturur. Bu, arsiv/index.html
++    içindeki tarihlere tıklandığında 404/eksik sayfa oluşmasını engeller.
++    """
++    import os
++    import re
++    import datetime
++
++    base = "haber"
++    if not os.path.exists(base):
++        return
++
++    for root_dir, dirs, files in os.walk(base):
++        rel = os.path.relpath(root_dir, base)
++        if rel == ".":
++            continue
++        rel = rel.replace("\\", "/")
++        parts = rel.split("/")
++        if len(parts) < 3:
++            continue
++        year, month, day = parts[0], parts[1], parts[2]
++
++        # Haber HTML dosyaları (index.html hariç)
++        articles = [f for f in files if f.endswith(".html") and f.lower() != "index.html"]
++        if not articles:
++            continue
++
++        index_path = os.path.join(root_dir, "index.html")
++        # Eğer varolan index'i korumak istersen bu continue satırını tut;
++        # her çalıştırmada yeniden oluşturmak istersen bu satırı kaldır.
++        if os.path.exists(index_path):
++            continue
++
++        # Haberleri dosya zamanına göre tersine sırala (yeni ilk)
++        articles.sort(key=lambda a: os.path.getmtime(os.path.join(root_dir, a)), reverse=True)
++
++        day_cards_html = ""
++        for a in articles:
++            path = os.path.join(root_dir, a)
++            try:
++                with open(path, "r", encoding="utf-8") as fh:
++                    content = fh.read(4096)
++                m = re.search(r"<title>(.*?)</title>", content, re.IGNORECASE | re.DOTALL)
++                title = m.group(1).split(" - nearadin.net")[0].strip() if m else a
++            except Exception:
++                title = a
++            try:
++                mtime = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%H:%M")
++            except Exception:
++                mtime = ""
++            internal_link = f"/{base}/{year}/{month}/{day}/{a}"
++            day_cards_html += f'''\
++                <article class="news-card">\n\
++                    <div class="card-header">\n\
++                        <span class="badge">SON DAKİKA</span>\n\
++                        <span class="source">nearadin.net</span>\n\
++                        <span class="time">{mtime}</span>\n\
++                    </div>\n\
++                    <h2 class="news-title">\n\
++                        <a href="{internal_link}">{title}</a>\n\
++                    </h2>\n\
++                </article>\n'''
++
++        daily_index_html = f'''<!DOCTYPE html>
++<html lang="tr">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width,initial-scale=1" />
++  <title>{day}.{month}.{year} Tarihli Son Dakika Haberleri - nearadin.net</title>
++  <meta name="description" content="{day}.{month}.{year} tarihli haberler." />
++</head>
++<body>
++{header_html}
++<div class="container">
++    <div class="status-bar">📅 {day}.{month}.{year} Tarihli Haber Listesi</div>
++    <main>{day_cards_html}</main>
++    {whos_amung_us_code}
++</div>
++{footer_html}
++</body>
++</html>'''
++        try:
++            with open(index_path, "w", encoding="utf-8") as f:
++                f.write(daily_index_html)
++            print(f"Oluşturuldu/yenilendi: {index_path}")
++        except Exception as e:
++            print(f"index yazılamadı: {index_path} -> {e}")
+@@
+ def fetch_and_generate():
+-    [...]
++    [...]
++    # -- Ensure daily index pages exist for all dates detected on disk
++    try:
++        ensure_daily_indexes_from_files(header_html, footer_html, whos_amung_us_code, admatic_code)
++    except Exception as e:
++        print(f"ensure_daily_indexes_from_files hata: {e}")
++
+*** End Patch
