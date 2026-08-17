@@ -671,7 +671,7 @@ def fetch_and_generate():
                 })
 
         parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
-        parsed_items = parsed_items[:50]
+        parsed_items = parsed_items[:1000]
 
         news_list = []
         daily_news_grouped = {}
