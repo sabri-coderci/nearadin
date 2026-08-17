@@ -22,10 +22,10 @@ def slugify(text):
 
 def post_to_x(latest_news):
     """En son çıkan haberi X üzerinde paylaşır."""
-    api_key = os.environ.get("4hH1FDH7A8grwf8uGnGlAOZdH")
-    api_secret = os.environ.get("EsKG2B4Y3tXNvTVIn1cjAs9VDOC2cwu1SavukL5jyJaKe5cogY")
-    access_token = os.environ.get("2002802028289146880-OvQhLbT7vn0s0tyPj1veb4xK61MegL")
-    access_secret = os.environ.get("KjHaafLSsVgCZywDhHsYK7mGlJfwyNx7j9V79HxbMZXRu")
+    api_key = os.environ.get("X_API_KEY", "4hH1FDH7A8grwf8uGnGlAOZdH")
+    api_secret = os.environ.get("X_API_SECRET", "EsKG2B4Y3tXNvTVIn1cjAs9VDOC2cwu1SavukL5jyJaKe5cogY")
+    access_token = os.environ.get("X_ACCESS_TOKEN", "2002802028289146880-OvQhLbT7vn0s0tyPj1veb4xK61MegL")
+    access_secret = os.environ.get("X_ACCESS_SECRET", "KjHaafLSsVgCZywDhHsYK7mGlJfwyNx7j9V79HxbMZXRu")
 
     if not all([api_key, api_secret, access_token, access_secret]):
         print("X API anahtarları bulunamadı. Tweet atma adımı atlanıyor.")
