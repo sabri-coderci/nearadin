@@ -436,7 +436,7 @@ def fetch_and_generate():
                 except Exception:
                     pub_datetime = now
 
-            if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 43200:
+            if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 86400:
                 parsed_items.append({
                     'item': item,
                     'pub_datetime': pub_datetime,
