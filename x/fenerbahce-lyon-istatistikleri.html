@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenerbahçe vs Olympique Lyon - Canlı İstatistikler</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --card-border: #2c2c2c;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --accent-blue: #8ab4f8;
+            --fb-color: #fcd116;
+            --lyon-color: #da291c;
+            --bar-bg: #3c4043;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            padding: 20px 10px;
+        }
+
+        .match-container {
+            width: 100%;
+            max-width: 680px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Lig & Maç Bilgisi Header */
+        .match-header {
+            padding: 16px 20px 10px;
+            border-bottom: 1px solid var(--card-border);
+            text-align: center;
+        }
+
+        .league-title {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .match-status {
+            display: inline-block;
+            background-color: rgba(234, 67, 53, 0.2);
+            color: #ea4335;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* Skorboard */
+        .scoreboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px 20px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .team-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .fb-logo {
+            background: #00205b;
+            color: var(--fb-color);
+            border: 2px solid var(--fb-color);
+        }
+
+        .lyon-logo {
+            background: #002395;
+            color: #ffffff;
+            border: 2px solid var(--lyon-color);
+        }
+
+        .team-name {
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .score-display {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 0 15px;
+        }
+
+        /* Navigasyon Sekmeleri */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 0;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-blue);
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Sekme İçerikleri */
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* İstatistik Satırları */
+        .stat-row {
+            margin-bottom: 18px;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .bar-container {
+            height: 8px;
+            background-color: var(--bar-bg);
+            border-radius: 4px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .bar-home {
+            background-color: var(--fb-color);
+            height: 100%;
+            width: 0%;
+            transition: width 0.8s ease-in-out;
+        }
+
+        .bar-away {
+            background-color: var(--lyon-color);
+            height: 100%;
+            width: 0%;
+            transition: width 0.8s ease-in-out;
+        }
+
+        /* Özet / Olaylar Listesi */
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        .timeline-time {
+            width: 40px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .timeline-event {
+            flex: 1;
+            background: #252629;
+            padding: 10px 14px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .event-icon {
+            font-size: 16px;
+        }
+
+        /* Kadrolar Kısım */
+        .lineup-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .lineup-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .player-list {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .player-list li {
+            margin-bottom: 8px;
+        }
+
+        .player-number {
+            color: var(--text-primary);
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        /* Alt Buton / Güncelleme */
+        .controls {
+            padding: 15px 20px;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .update-btn {
+            background: #2c2d30;
+            color: var(--accent-blue);
+            border: 1px solid var(--card-border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .update-btn:hover {
+            background: #3c3d40;
+        }
+    </style>
+</head>
+<body>
+
+<div class="match-container">
+    <!-- Header -->
+    <div class="match-header">
+        <div class="league-title">UEFA Şampiyonlar Ligi • Play-Off Turu</div>
+        <div class="match-status" id="match-status">CANLI • 78'</div>
+    </div>
+
+    <!-- Skorboard -->
+    <div class="scoreboard">
+        <div class="team">
+            <div class="team-logo fb-logo">FB</div>
+            <div class="team-name">Fenerbahçe</div>
+        </div>
+        <div class="score-display">
+            <span id="home-score">2</span> - <span id="away-score">1</span>
+        </div>
+        <div class="team">
+            <div class="team-logo lyon-logo">OL</div>
+            <div class="team-name">Lyon</div>
+        </div>
+    </div>
+
+    <!-- Sekme Menüsü -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('stats')">İstatistikler</button>
+        <button class="tab-btn" onclick="switchTab('summary')">Özet</button>
+        <button class="tab-btn" onclick="switchTab('lineups')">Kadrolar</button>
+        <button class="tab-btn" onclick="switchTab('h2h')">H2H</button>
+    </div>
+
+    <!-- Sekme 1: İstatistikler -->
+    <div id="tab-stats" class="tab-content active">
+        <!-- Topla Oynama -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span id="possession-home-val">54%</span>
+                <span class="stat-title">Topla Oynama</span>
+                <span id="possession-away-val">46%</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-home" id="possession-home-bar"></div>
+                <div class="bar-away" id="possession-away-bar"></div>
+            </div>
+        </div>
+
+        <!-- Toplam Şut -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span id="shots-home-val">14</span>
+                <span class="stat-title">Toplam Şut</span>
+                <span id="shots-away-val">9</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-home" id="shots-home-bar"></div>
+                <div class="bar-away" id="shots-away-bar"></div>
+            </div>
+        </div>
+
+        <!-- İsabetli Şut -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span id="ontarget-home-val">6</span>
+                <span class="stat-title">İsabetli Şut</span>
+                <span id="ontarget-away-val">3</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-home" id="ontarget-home-bar"></div>
+                <div class="bar-away" id="ontarget-away-bar"></div>
+            </div>
+        </div>
+
+        <!-- Pas İsabeti -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span id="pass-home-val">86%</span>
+                <span class="stat-title">Pas İsabeti</span>
+                <span id="pass-away-val">81%</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-home" id="pass-home-bar"></div>
+                <div class="bar-away" id="pass-away-bar"></div>
+            </div>
+        </div>
+
+        <!-- Korner -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span id="corners-home-val">7</span>
+                <span class="stat-title">Köşe Vuruşu</span>
+                <span id="corners-away-val">4</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-home" id="corners-home-bar"></div>
+                <div class="bar-away" id="corners-away-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekme 2: Özet -->
+    <div id="tab-summary" class="tab-content">
+        <div class="timeline-item">
+            <span class="timeline-time">68'</span>
+            <div class="timeline-event">
+                <span class="event-icon">⚽</span>
+                <span><b>A. Talisca</b> (Fenerbahçe) — Gol!</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">52'</span>
+            <div class="timeline-event">
+                <span class="event-icon">🟨</span>
+                <span><b>M. Greenwood</b> (Fenerbahçe) — Sarı Kart</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">34'</span>
+            <div class="timeline-event">
+                <span class="event-icon">⚽</span>
+                <span><b>G. Orban</b> (Lyon) — Gol!</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">18'</span>
+            <div class="timeline-event">
+                <span class="event-icon">⚽</span>
+                <span><b>Y. En-Nesyri</b> (Fenerbahçe) — Gol!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekme 3: Kadrolar -->
+    <div id="tab-lineups" class="tab-content">
+        <div class="lineup-container">
+            <div>
+                <div class="lineup-title">Fenerbahçe (4-2-3-1)</div>
+                <ul class="player-list">
+                    <li><span class="player-number">31</span> Ederson (KL)</li>
+                    <li><span class="player-number">2</span> N. Semedo</li>
+                    <li><span class="player-number">4</span> C. Söyüncü</li>
+                    <li><span class="player-number">37</span> M. Skriniar</li>
+                    <li><span class="player-number">24</span> J. Oosterwolde</li>
+                    <li><span class="player-number">7</span> N. Kanté</li>
+                    <li><span class="player-number">8</span> M. Guendouzi</li>
+                    <li><span class="player-number">10</span> A. Talisca</li>
+                    <li><span class="player-number">20</span> M. Greenwood</li>
+                    <li><span class="player-number">17</span> İ. C. Kahveci</li>
+                    <li><span class="player-number">19</span> Y. En-Nesyri</li>
+                </ul>
+            </div>
+            <div>
+                <div class="lineup-title">Lyon (4-3-3)</div>
+                <ul class="player-list">
+                    <li><span class="player-number">1</span> L. Perri (KL)</li>
+                    <li><span class="player-number">22</span> C. Mata</li>
+                    <li><span class="player-number">55</span> D. Caleta-Car</li>
+                    <li><span class="player-number">19</span> M. Niakhate</li>
+                    <li><span class="player-number">3</span> N. Tagliafico</li>
+                    <li><span class="player-number">6</span> M. Caqueret</li>
+                    <li><span class="player-number">8</span> C. Tolisso</li>
+                    <li><span class="player-number">31</span> N. Matic</li>
+                    <li><span class="player-number">18</span> R. Cherki</li>
+                    <li><span class="player-number">11</span> M. Fofana</li>
+                    <li><span class="player-number">9</span> G. Orban</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekme 4: H2H -->
+    <div id="tab-h2h" class="tab-content">
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">Geçmiş Karşılaşmalar (Son Maçlar):</p>
+        <div class="timeline-item">
+            <span class="timeline-time">2025</span>
+            <div class="timeline-event">
+                <span>UEFA Avrupa Ligi: <b>Fenerbahçe 0 - 0 Lyon</b></span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-time">2004</span>
+            <div class="timeline-event">
+                <span>UEFA Şampiyonlar Ligi: <b>Lyon 4 - 2 Fenerbahçe</b></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canlı Veri Butonu -->
+    <div class="controls">
+        <button class="update-btn" onclick="simulateLiveUpdate()">🔄 Canlı Verileri Güncelle</button>
+    </div>
+</div>
+
+<script>
+    // Dinamik İstatistik Verileri
+    let statsData = {
+        possession: { home: 54, away: 46 },
+        shots: { home: 14, away: 9 },
+        onTarget: { home: 6, away: 3 },
+        passAccuracy: { home: 86, away: 81 },
+        corners: { home: 7, away: 4 }
+    };
+
+    // İstatistik Barlarını ve Değerlerini Güncelleyen Fonksiyon
+    function renderStats() {
+        // Topla Oynama
+        document.getElementById('possession-home-val').innerText = statsData.possession.home + '%';
+        document.getElementById('possession-away-val').innerText = statsData.possession.away + '%';
+        document.getElementById('possession-home-bar').style.width = statsData.possession.home + '%';
+        document.getElementById('possession-away-bar').style.width = statsData.possession.away + '%';
+
+        // Toplam Şut
+        let totalShots = statsData.shots.home + statsData.shots.away;
+        let homeShotsPct = (statsData.shots.home / totalShots) * 100;
+        document.getElementById('shots-home-val').innerText = statsData.shots.home;
+        document.getElementById('shots-away-val').innerText = statsData.shots.away;
+        document.getElementById('shots-home-bar').style.width = homeShotsPct + '%';
+        document.getElementById('shots-away-bar').style.width = (100 - homeShotsPct) + '%';
+
+        // İsabetli Şut
+        let totalOnTarget = statsData.onTarget.home + statsData.onTarget.away;
+        let homeTargetPct = totalOnTarget > 0 ? (statsData.onTarget.home / totalOnTarget) * 100 : 50;
+        document.getElementById('ontarget-home-val').innerText = statsData.onTarget.home;
+        document.getElementById('ontarget-away-val').innerText = statsData.onTarget.away;
+        document.getElementById('ontarget-home-bar').style.width = homeTargetPct + '%';
+        document.getElementById('ontarget-away-bar').style.width = (100 - homeTargetPct) + '%';
+
+        // Pas İsabeti
+        document.getElementById('pass-home-val').innerText = statsData.passAccuracy.home + '%';
+        document.getElementById('pass-away-val').innerText = statsData.passAccuracy.away + '%';
+        document.getElementById('pass-home-bar').style.width = statsData.passAccuracy.home + '%';
+        document.getElementById('pass-away-bar').style.width = statsData.passAccuracy.away + '%';
+
+        // Korner
+        let totalCorners = statsData.corners.home + statsData.corners.away;
+        let homeCornersPct = totalCorners > 0 ? (statsData.corners.home / totalCorners) * 100 : 50;
+        document.getElementById('corners-home-val').innerText = statsData.corners.home;
+        document.getElementById('corners-away-val').innerText = statsData.corners.away;
+        document.getElementById('corners-home-bar').style.width = homeCornersPct + '%';
+        document.getElementById('corners-away-bar').style.width = (100 - homeCornersPct) + '%';
+    }
+
+    // Sekmeler Arası Geçiş Logic
+    function switchTab(tabName) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        event.currentTarget.classList.add('active');
+        document.getElementById('tab-' + tabName).classList.add('active');
+
+        if(tabName === 'stats') {
+            setTimeout(renderStats, 50);
+        }
+    }
+
+    // Canlı Simülasyon Fonksiyonu (Rastgele İstatistik Artışı)
+    function simulateLiveUpdate() {
+        statsData.shots.home += Math.floor(Math.random() * 2);
+        statsData.shots.away += Math.floor(Math.random() * 2);
+        statsData.onTarget.home += Math.floor(Math.random() * 2);
+        statsData.corners.home += Math.floor(Math.random() * 2);
+        
+        let newPossession = Math.min(65, Math.max(40, statsData.possession.home + (Math.random() > 0.5 ? 1 : -1)));
+        statsData.possession.home = newPossession;
+        statsData.possession.away = 100 - newPossession;
+
+        renderStats();
+    }
+
+    // Sayfa İlk Açıldığında Barları Yükle
+    window.onload = function() {
+        renderStats();
+    };
+</script>
+
+</body>
+</html>
