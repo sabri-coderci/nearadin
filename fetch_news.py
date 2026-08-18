@@ -126,6 +126,63 @@ def get_footer_html():
         </div>
     </footer>
     '''
+
+
+import os
+import html
+from datetime import datetime, timedelta
+
+# Google News Standartları Parametreleri
+PUBLISHER_NAME = "Nearadin"
+LANGUAGE = "tr"
+NOW = datetime.now()
+TWO_DAYS_AGO = NOW - timedelta(hours=48)  # Google News sadece son 48 saati kabul eder
+
+news_urls_xml = ""
+count = 0
+
+if os.path.exists("haber"):
+    for root_dir, dirs, files in os.walk("haber"):
+        for file_name in files:
+            if file_name.endswith(".html") and count < 1000:  # Google News limiti: Maksimum 1000 URL
+                file_path = os.path.join(root_dir, file_name)
+                
+                # Dosya değiştirilme tarihi
+                mtime = os.path.getmtime(file_path)
+                file_date = datetime.fromtimestamp(mtime)
+
+                # Yalnızca son 48 saat içinde eklenen/güncellenen haberleri filtrele
+                if file_date >= TWO_DAYS_AGO:
+                    rel_path = os.path.relpath(file_path, "haber").replace("\\", "/")
+                    page_url = f"https://nearadin.net/haber/{rel_path}"
+                    
+                    # Başlık oluşturma ve XML özel karakterlerini temizleme (&, <, > vb.)
+                    clean_title = file_name.replace("-", " ").replace(".html", "").title()
+                    safe_title = html.escape(clean_title)
+                    pub_date_iso = file_date.strftime("%Y-%m-%dT%H:%M:%S+00:00")
+
+                    news_urls_xml += f'''  <url>
+    <loc>{page_url}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>{PUBLISHER_NAME}</news:name>
+        <news:language>{LANGUAGE}</news:language>
+      </news:publication>
+      <news:publication_date>{pub_date_iso}</news:publication_date>
+      <news:title>{safe_title}</news:title>
+    </news:news>
+  </url>\n'''
+                    count += 1
+
+# Google News XML Haritasını Kaydetme
+news_sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{news_urls_xml}</urlset>'''
+
+with open("news_sitemap.xml", "w", encoding="utf-8") as f:
+    f.write(news_sitemap_xml)
+
     
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
