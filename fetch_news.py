@@ -128,59 +128,6 @@ def get_footer_html():
     </footer>
     '''
 
-
-# Google News Standartları Parametreleri
-PUBLISHER_NAME = "Nearadin"
-LANGUAGE = "tr"
-NOW = datetime.now()
-TWO_DAYS_AGO = NOW - timedelta(hours=48)  # Google News sadece son 48 saati kabul eder
-
-news_urls_xml = ""
-count = 0
-
-if os.path.exists("haber"):
-    for root_dir, dirs, files in os.walk("haber"):
-        for file_name in files:
-            if file_name.endswith(".html") and count < 1000:  # Google News limiti: Maksimum 1000 URL
-                file_path = os.path.join(root_dir, file_name)
-                
-                # Dosya değiştirilme tarihi
-                mtime = os.path.getmtime(file_path)
-                file_date = datetime.fromtimestamp(mtime)
-
-                # Yalnızca son 48 saat içinde eklenen/güncellenen haberleri filtrele
-                if file_date >= TWO_DAYS_AGO:
-                    rel_path = os.path.relpath(file_path, "haber").replace("\\", "/")
-                    page_url = f"https://nearadin.net/haber/{rel_path}"
-                    
-                    # Başlık oluşturma ve XML özel karakterlerini temizleme (&, <, > vb.)
-                    clean_title = file_name.replace("-", " ").replace(".html", "").title()
-                    safe_title = html.escape(clean_title)
-                    pub_date_iso = file_date.strftime("%Y-%m-%dT%H:%M:%S+00:00")
-
-                    news_urls_xml += f'''  <url>
-    <loc>{page_url}</loc>
-    <news:news>
-      <news:publication>
-        <news:name>{PUBLISHER_NAME}</news:name>
-        <news:language>{LANGUAGE}</news:language>
-      </news:publication>
-      <news:publication_date>{pub_date_iso}</news:publication_date>
-      <news:title>{safe_title}</news:title>
-    </news:news>
-  </url>\n'''
-                    count += 1
-
-# Google News XML Haritasını Kaydetme
-news_sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-{news_urls_xml}</urlset>'''
-
-with open("news_sitemap.xml", "w", encoding="utf-8") as f:
-    f.write(news_sitemap_xml)
-
-    
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
@@ -420,7 +367,6 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     with open("hava-durumu/index.html", "w", encoding="utf-8") as f:
         f.write(weather_html)
 
-
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
     
@@ -449,7 +395,6 @@ def fetch_and_generate():
    </div>
     '''
 
-
     # Hava Durumu sayfasını dinamik olarak oluştur
     generate_weather_page(
         header_html=get_header_html("nearadin.net - Hava Durumu"),
@@ -457,8 +402,6 @@ def fetch_and_generate():
         whos_amung_us_code=whos_amung_us_code,
         admatic_code=admatic_code
     )
-
-
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -959,6 +902,49 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
+        # Google News Sitemap Oluşturma
+        publisher_name = "Nearadin"
+        language = "tr"
+        two_days_ago = datetime.now() - timedelta(hours=48)
+        news_urls_xml = ""
+        news_count = 0
+
+        if os.path.exists("haber"):
+            for root_dir, dirs, files in os.walk("haber"):
+                for file_name in files:
+                    if file_name.endswith(".html") and news_count < 1000:
+                        file_path = os.path.join(root_dir, file_name)
+                        mtime = os.path.getmtime(file_path)
+                        file_date = datetime.fromtimestamp(mtime)
+
+                        if file_date >= two_days_ago:
+                            rel_path = os.path.relpath(file_path, "haber").replace("\\", "/")
+                            page_url = f"https://nearadin.net/haber/{rel_path}"
+                            clean_title = file_name.replace("-", " ").replace(".html", "").title()
+                            safe_title = html.escape(clean_title)
+                            pub_date_iso = file_date.strftime("%Y-%m-%dT%H:%M:%S+00:00")
+
+                            news_urls_xml += f'''  <url>
+    <loc>{page_url}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>{publisher_name}</news:name>
+        <news:language>{language}</news:language>
+      </news:publication>
+      <news:publication_date>{pub_date_iso}</news:publication_date>
+      <news:title>{safe_title}</news:title>
+    </news:news>
+  </url>\n'''
+                            news_count += 1
+
+        news_sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{news_urls_xml}</urlset>'''
+
+        with open("news_sitemap.xml", "w", encoding="utf-8") as f:
+            f.write(news_sitemap_xml)
+
         print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html) ve tüm servis sayfaları güncellendi.")
 
         if news_list:
@@ -969,5 +955,3 @@ def fetch_and_generate():
 
 if __name__ == "__main__":
     fetch_and_generate()
-
-   
