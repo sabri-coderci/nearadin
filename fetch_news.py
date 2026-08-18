@@ -2,6 +2,7 @@ import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
 import datetime
+from datetime import datetime, timedelta
 import re
 import os
 import html
@@ -127,10 +128,6 @@ def get_footer_html():
     </footer>
     '''
 
-
-import os
-import html
-from datetime import datetime, timedelta
 
 # Google News Standartları Parametreleri
 PUBLISHER_NAME = "Nearadin"
