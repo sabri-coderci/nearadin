@@ -31,21 +31,27 @@
         .sports-card-wrapper {
             width: 100%;
             max-width: 650px;
+            min-height: 450px; /* Iframe çökmesini önler */
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .scoreaxis-widget {
             border: none !important;
             background-color: var(--card-bg) !important;
             color: var(--text-primary) !important;
+            min-height: 400px; /* Yüklenene kadar boşluk bırakır */
+            width: 100%;
         }
 
         .widget-main-link {
-            padding: 8px 16px !important;
+            padding: 10px 16px !important;
             font-size: 11px !important;
             color: #bdc1c6 !important;
             background-color: #191a1c;
@@ -57,22 +63,18 @@
             color: var(--accent-blue) !important;
             text-decoration: none;
         }
-
-        .widget-main-link a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
 <div class="sports-card-wrapper">
     <!-- Scoreaxis Koyu Tema Entegreli Widget -->
-    <div id="widget-89mgmsz2te2a" class="scoreaxis-widget" style="width: 100%; height: auto; font-size: 14px; background-color: #202124; color: #e8eaed; overflow: auto;">
+    <div id="widget-89mgmsz2te2a" class="scoreaxis-widget" style="background-color: #202124; color: #e8eaed;">
         <script src="https://widgets.scoreaxis.com/api/football/live-match/6a7086ea2a8b93e5240d2094?widgetId=89mgmsz2te2a&lang=tr&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&noFollowLinks=0&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23202124&textColor=%23e8eaed&linkColor=%238ab4f8&borderColor=%233c4043&tabColor=%2328292c" async></script>
-        
-        <div class="widget-main-link">
-            Canlı Veri: <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener">Scoreaxis</a>
-        </div>
+    </div>
+
+    <div class="widget-main-link">
+        Canlı Veri: <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener">Scoreaxis</a>
     </div>
 </div>
 
