@@ -139,8 +139,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Günlük Hava Durumu Tahmini - nearadin.net</title>
-    <meta name="description" content="Türkiye'nin 81 ili için güncel 5 günlük detaylı hava durumu tahminleri." />
+    <title>7 Günlük Hava Durumu Tahmini - nearadin.net</title>
+    <meta name="description" content="Türkiye'nin 81 ili için güncel 7 günlük detaylı hava durumu tahminleri." />
     <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -181,8 +181,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
     <div class="container">
         <div class="card">
-            <h1>☀️ 10 Günlük Hava Durumu</h1>
-            <p>İlini seçerek önümüzdeki 10 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
+            <h1>☀️ 7 Günlük Hava Durumu</h1>
+            <p>İlini seçerek önümüzdeki 7 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
             
             <!-- İl Seçim Menüsü -->
             <div class="city-select-box">
