@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+
+        .status-bar { background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }
+        
+        .news-card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }
+        
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        
+        .news-title { font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; color: #050505; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 20px; }
+
+        /* Form Elemanları CSS Tasarımı */
+        .form-group { margin-bottom: 16px; }
+        .form-label { display: block; font-size: 13px; font-weight: 600; color: #4b4f56; margin-bottom: 6px; }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e4e6eb;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #1c1e21;
+            background-color: #f8f9fa;
+            outline: none;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: #1877f2;
+            background-color: #ffffff;
+        }
+
+        .form-textarea { resize: vertical; min-height: 120px; }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover { background-color: #166fe5; }
+        .submit-btn:active { transform: scale(0.99); }
+
+        .direct-contact {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e4e6eb;
+            font-size: 13px;
+            color: #65676b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .read-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Durum / Başlık Çubuğu -->
+        <div class="status-bar">
+            <span class="source">İletişim Formu</span>
+            <span class="badge">AKTİF</span>
+        </div>
+
+        <!-- İletişim Kartı -->
+        <div class="news-card">
+            
+            <div class="card-header">
+                <span class="source">Destek & İş Birliği</span>
+                <span class="time">7/24</span>
+            </div>
+
+            <h1 class="news-title">Bize Ulaşın</h1>
+            <p class="news-summary">
+                Görüş, öneri, haber ihbarı veya iş birliği talepleriniz için aşağıdaki formu doldurabilirsiniz. Mesajınız doğrudan ilgili ekibimize iletilecektir.
+            </p>
+
+            <!-- İletişim Formu (nearadin2026@gmail.com Adresine Yönlendirilmiştir) -->
+            <form action="https://formsubmit.co/nearadin2026@gmail.com" method="POST">
+                
+                <!-- Spam Engelleme ve Konu Başlığı Ayarı -->
+                <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label class="form-label" for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="Ad Soyad" class="form-input" placeholder="Örn: Ahmet Yılmaz" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" name="E-posta" class="form-input" placeholder="ornek@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="subject">Konu</label>
+                    <input type="text" id="subject" name="Konu" class="form-input" placeholder="Mesajınızın konusu" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Mesajınız</label>
+                    <textarea id="message" name="Mesaj" class="form-textarea" placeholder="Lütfen mesajınızı buraya detaylıca yazın..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Mesajı Gönder</button>
+            </form>
+
+            <div class="direct-contact">
+                <span>Doğrudan E-posta:</span>
+                <a href="mailto:nearadin2026@gmail.com" class="read-btn">nearadin2026@gmail.com</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
