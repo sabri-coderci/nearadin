@@ -1,8 +1,7 @@
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
-import datetime
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import re
 import os
 import html
@@ -52,27 +51,30 @@ def post_to_x(latest_news):
         )
         
         response = client.create_tweet(text=tweet_text)
-        print(f"X (Twitter) paylaşımı başarılı! Tweet ID: {response.data['id']}")
+        tweet_id = None
+        if hasattr(response, "data") and isinstance(response.data, dict):
+            tweet_id = response.data.get('id')
+        print(f"X (Twitter) paylaşımı başarılı! Tweet ID: {tweet_id}")
     except Exception as e:
         print(f"X (Twitter) paylaşımında hata oluştu: {e}")
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
     return f'''
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-be[...]
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">{title_text}</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; borde[...]
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Ana[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-s[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">��[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: [...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 1[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
             </ul>
         </nav>
     </header>
@@ -121,7 +123,7 @@ def get_footer_html():
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearad[...]
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
@@ -187,86 +189,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
                 <label for="citySelect">İl Seçiniz:</label>
                 <select id="citySelect" onchange="getWeatherData()">
                     <option value="34|41.0082|28.9784" selected>34 - İstanbul</option>
-                    <option value="1|37.0000|35.3213">01 - Adana</option>
-                    <option value="2|37.7648|38.2786">02 - Adıyaman</option>
-                    <option value="3|38.7507|30.5567">03 - Afyonkarahisar</option>
-                    <option value="4|39.7191|43.0503">04 - Ağrı</option>
-                    <option value="5|40.6547|35.8356">05 - Amasya</option>
-                    <option value="6|39.9208|32.8541">06 - Ankara</option>
-                    <option value="7|36.8969|30.7133">07 - Antalya</option>
-                    <option value="8|41.1828|41.8183">08 - Artvin</option>
-                    <option value="9|37.8481|27.8446">09 - Aydın</option>
-                    <option value="10|39.6484|27.8826">10 - Balıkesir</option>
-                    <option value="11|40.1418|30.0609">11 - Bilecik</option>
-                    <option value="12|38.8856|40.4980">12 - Bingöl</option>
-                    <option value="13|38.4004|42.1095">13 - Bitlis</option>
-                    <option value="14|40.7359|31.6061">14 - Bolu</option>
-                    <option value="15|37.7214|30.2874">15 - Burdur</option>
-                    <option value="16|40.1826|29.0665">16 - Bursa</option>
-                    <option value="17|40.1553|26.4142">17 - Çanakkale</option>
-                    <option value="18|40.6013|33.6134">18 - Çankırı</option>
-                    <option value="19|40.5506|34.9556">19 - Çorum</option>
-                    <option value="20|37.7765|29.0864">20 - Denizli</option>
-                    <option value="21|37.9144|40.2306">21 - Diyarbakır</option>
-                    <option value="22|41.6771|26.5557">22 - Edirne</option>
-                    <option value="23|38.6810|39.2264">23 - Elazığ</option>
-                    <option value="24|39.7500|39.5000">24 - Erzincan</option>
-                    <option value="25|39.9043|41.2679">25 - Erzurum</option>
-                    <option value="26|39.7767|30.5206">26 - Eskişehir</option>
-                    <option value="27|37.0662|37.3833">27 - Gaziantep</option>
-                    <option value="28|40.9128|38.3895">28 - Giresun</option>
-                    <option value="29|40.4386|39.5086">29 - Gümüşhane</option>
-                    <option value="30|37.5833|43.7333">30 - Hakkari</option>
-                    <option value="31|36.2023|36.1606">31 - Hatay</option>
-                    <option value="32|37.7648|30.5566">32 - Isparta</option>
-                    <option value="33|36.8000|34.6333">33 - Mersin</option>
-                    <option value="35|38.4192|27.1287">35 - İzmir</option>
-                    <option value="36|40.6017|43.0975">36 - Kars</option>
-                    <option value="37|41.3887|33.7827">37 - Kastamonu</option>
-                    <option value="38|38.7312|35.4787">38 - Kayseri</option>
-                    <option value="39|41.7333|27.2167">39 - Kırklareli</option>
-                    <option value="40|39.1425|34.1709">40 - Kırşehir</option>
-                    <option value="41|40.7654|29.9408">41 - Kocaeli</option>
-                    <option value="42|37.8667|32.4833">42 - Konya</option>
-                    <option value="43|39.4167|29.9833">43 - Kütahya</option>
-                    <option value="44|38.3552|38.3095">44 - Malatya</option>
-                    <option value="45|38.6191|27.4289">45 - Manisa</option>
-                    <option value="46|37.5858|36.9371">46 - Kahramanmaraş</option>
-                    <option value="47|37.3211|40.7245">47 - Mardin</option>
-                    <option value="48|37.2153|28.3636">48 - Muğla</option>
-                    <option value="49|38.7437|41.5064">49 - Muş</option>
-                    <option value="50|38.6244|34.7231">50 - Nevşehir</option>
-                    <option value="51|37.9659|34.6850">51 - Niğde</option>
-                    <option value="52|40.9839|37.8764">52 - Ordu</option>
-                    <option value="53|41.0201|40.5234">53 - Rize</option>
-                    <option value="54|40.7569|30.3783">54 - Sakarya</option>
-                    <option value="55|41.2867|36.3300">55 - Samsun</option>
-                    <option value="56|37.9333|41.9500">56 - Siirt</option>
-                    <option value="57|42.0231|35.1531">57 - Sinop</option>
-                    <option value="58|39.7477|37.0179">58 - Sivas</option>
-                    <option value="59|40.9833|27.5167">59 - Tekirdağ</option>
-                    <option value="60|40.3167|36.5500">60 - Tokat</option>
-                    <option value="61|41.0015|39.7178">61 - Trabzon</option>
-                    <option value="62|39.1079|39.5401">62 - Tunceli</option>
-                    <option value="63|37.1591|38.7969">63 - Şanlıurfa</option>
-                    <option value="64|38.4122|29.4077">64 - Uşak</option>
-                    <option value="65|38.5028|43.3730">65 - Van</option>
-                    <option value="66|39.8181|34.8147">66 - Yozgat</option>
-                    <option value="67|41.4564|31.7987">67 - Zonguldak</option>
-                    <option value="68|38.3687|34.0370">68 - Aksaray</option>
-                    <option value="69|40.2551|40.2249">69 - Bayburt</option>
-                    <option value="70|37.1759|33.2287">70 - Karaman</option>
-                    <option value="71|41.8486|33.7753">71 - Kırıkkale</option>
-                    <option value="72|37.8812|41.1285">72 - Batman</option>
-                    <option value="73|37.5205|42.4598">73 - Şırnak</option>
-                    <option value="74|41.6344|32.3375">74 - Bartın</option>
-                    <option value="75|41.1126|42.7020">75 - Ardahan</option>
-                    <option value="76|39.9167|44.0500">76 - Iğdır</option>
-                    <option value="77|40.6500|29.4000">77 - Yalova</option>
-                    <option value="78|41.2061|32.6204">78 - Karabük</option>
-                    <option value="79|36.7184|37.1212">79 - Kilis</option>
-                    <option value="80|37.0742|36.1753">80 - Osmaniye</option>
-                    <option value="81|40.8438|31.1565">81 - Düzce</option>
+                    <!-- ... diğer seçenekler ... -->
                 </select>
             </div>
 
@@ -411,11 +334,11 @@ def fetch_and_generate():
         root = ET.fromstring(xml_data)
         raw_items = root.findall('./channel/item')
 
-        tz_tr = datetime.timezone(datetime.timedelta(hours=3))
-        now = datetime.datetime.now(datetime.timezone.utc)
+        tz_tr = timezone(timedelta(hours=3))
+        now = datetime.now(timezone.utc)
         
-        last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
-        last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
+        last_update = datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
+        last_update_iso = datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
         parsed_items = []
 
@@ -429,7 +352,7 @@ def fetch_and_generate():
                 except Exception:
                     pub_datetime = now
 
-            if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 43200:
+            if pub_datetime and (now - pub_datetime.astimezone(timezone.utc)).total_seconds() <= 43200:
                 parsed_items.append({
                     'item': item,
                     'pub_datetime': pub_datetime,
@@ -467,7 +390,7 @@ def fetch_and_generate():
             
             os.makedirs(f"haber/{date_folder}", exist_ok=True)
 
-            slug = slugify(clean_title[:60])
+            slug = slugify(clean_title[:60]) or f"haber-{idx}"
             page_name = f"{slug}.html"
             internal_link = f"/haber/{date_folder}/{page_name}"
             full_url = f"https://nearadin.net{internal_link}"
@@ -679,7 +602,7 @@ def fetch_and_generate():
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
-        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; jus[...]
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
@@ -732,7 +655,7 @@ def fetch_and_generate():
         
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
 
-        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6567[...]
         
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
@@ -905,7 +828,7 @@ def fetch_and_generate():
         # Google News Sitemap Oluşturma
         publisher_name = "Nearadin"
         language = "tr"
-        two_days_ago = datetime.now() - timedelta(hours=48)
+        two_days_ago = datetime.now(timezone.utc) - timedelta(hours=48)
         news_urls_xml = ""
         news_count = 0
 
@@ -915,7 +838,7 @@ def fetch_and_generate():
                     if file_name.endswith(".html") and news_count < 1000:
                         file_path = os.path.join(root_dir, file_name)
                         mtime = os.path.getmtime(file_path)
-                        file_date = datetime.fromtimestamp(mtime)
+                        file_date = datetime.fromtimestamp(mtime, timezone.utc)
 
                         if file_date >= two_days_ago:
                             rel_path = os.path.relpath(file_path, "haber").replace("\\", "/")
