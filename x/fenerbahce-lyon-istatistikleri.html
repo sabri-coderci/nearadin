@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fenerbahçe - Lyon | Google Arama Spor Kartı</title>
+    <title>Fenerbahçe - Lyon | Canlı Google Spor Kartı</title>
     <style>
         :root {
-            /* Google Search Dark Theme Renk Kodları */
             --google-bg: #171717;
             --google-card: #202124;
-            --google-card-hover: #303134;
             --google-border: #3c4043;
             --google-text-primary: #e8eaed;
             --google-text-secondary: #bdc1c6;
             --google-accent-blue: #8ab4f8;
+            --google-live-red: #ea4335;
             --google-win-green: #1e8e3e;
             --google-draw-gray: #5f6368;
-            --google-loss-red: #d93025;
-            
             --fb-yellow: #fcd116;
             --lyon-red: #da291c;
         }
@@ -37,7 +34,6 @@
             padding: 20px 8px;
         }
 
-        /* Main Google Sports Widget Container */
         .google-sports-card {
             width: 100%;
             max-width: 650px;
@@ -45,10 +41,30 @@
             border: 1px solid var(--google-border);
             border-radius: 16px;
             overflow: hidden;
+            position: relative;
             box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
-        /* Top League Header */
+        /* Live Event Toast Banner */
+        .live-toast {
+            display: none;
+            background: #2b1f1d;
+            border-bottom: 1px solid var(--google-live-red);
+            color: #fce8e6;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            align-items: center;
+            justify-content: space-between;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Top Header */
         .card-header {
             padding: 16px 20px 12px;
             display: flex;
@@ -65,21 +81,30 @@
             color: var(--google-text-secondary);
         }
 
-        .league-icon {
-            width: 18px;
-            height: 18px;
-            background: var(--google-border);
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .match-badge {
+        .live-badge {
             font-size: 12px;
-            color: var(--google-accent-blue);
-            background: rgba(138, 180, 248, 0.1);
+            color: var(--google-live-red);
+            background: rgba(234, 67, 53, 0.15);
             padding: 2px 8px;
             border-radius: 12px;
-            font-weight: 500;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--google-live-red);
+            border-radius: 50%;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
         }
 
         /* Score / Time Hero Section */
@@ -125,27 +150,25 @@
         .team-title {
             font-size: 14px;
             font-weight: 500;
-            color: var(--google-text-primary);
         }
 
-        .match-clock {
+        .score-board {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .match-minute {
+            font-size: 13px;
+            color: var(--google-live-red);
+            font-weight: 600;
             text-align: center;
-        }
-
-        .time-display {
-            font-size: 32px;
-            font-weight: 400;
-            letter-spacing: -0.5px;
-            color: var(--google-text-primary);
-        }
-
-        .date-display {
-            font-size: 12px;
-            color: var(--google-text-secondary);
             margin-top: 4px;
         }
 
-        /* Google Style Tab Navigation */
+        /* Tabs */
         .google-tabs {
             display: flex;
             border-bottom: 1px solid var(--google-border);
@@ -153,8 +176,6 @@
             scrollbar-width: none;
             padding: 0 12px;
         }
-
-        .google-tabs::-webkit-scrollbar { display: none; }
 
         .tab-item {
             background: none;
@@ -166,11 +187,6 @@
             cursor: pointer;
             white-space: nowrap;
             position: relative;
-            transition: color 0.15s ease;
-        }
-
-        .tab-item:hover {
-            color: var(--google-text-primary);
         }
 
         .tab-item.active {
@@ -188,7 +204,6 @@
             border-radius: 3px 3px 0 0;
         }
 
-        /* Tab Content Panel */
         .tab-panel {
             display: none;
             padding: 20px;
@@ -198,136 +213,88 @@
             display: block;
         }
 
-        /* Section Title (Google Style) */
-        .google-section-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--google-text-primary);
-            margin-bottom: 12px;
+        /* Stats Bars */
+        .stat-row {
+            margin-bottom: 16px;
         }
 
-        /* Kazanma Olasılığı (Win Probability) Card */
-        .probability-card {
-            background: #28292c;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 20px;
+        .stat-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 6px;
         }
 
+        .stat-title {
+            color: var(--google-text-secondary);
+        }
+
+        .stat-bar-bg {
+            height: 6px;
+            background: var(--google-border);
+            border-radius: 3px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .stat-bar-home {
+            background: var(--fb-yellow);
+            transition: width 0.5s ease-in-out;
+        }
+
+        .stat-bar-away {
+            background: var(--lyon-red);
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Timeline Events */
+        .event-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--google-border);
+            font-size: 13px;
+        }
+
+        .event-minute {
+            color: var(--google-text-secondary);
+            font-weight: bold;
+            width: 30px;
+        }
+
+        /* Win Probability Bar */
         .prob-bar {
             height: 8px;
             border-radius: 4px;
             display: flex;
             overflow: hidden;
-            background: var(--google-border);
             margin: 10px 0;
         }
 
-        .prob-bar-fb { background-color: var(--fb-yellow); width: 44%; }
-        .prob-bar-draw { background-color: var(--google-draw-gray); width: 28%; }
-        .prob-bar-lyon { background-color: var(--lyon-red); width: 28%; }
-
-        .prob-values {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: var(--google-text-secondary);
-        }
-
-        .prob-values strong {
-            color: var(--google-text-primary);
-        }
-
-        /* Form State Pills */
-        .form-card {
-            background: #28292c;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 0;
-        }
-
-        .form-team-label {
-            font-size: 13px;
-            color: var(--google-text-primary);
-        }
-
-        .form-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .dot {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .dot-w { background-color: var(--google-win-green); }
-        .dot-d { background-color: var(--google-draw-gray); }
-        .dot-l { background-color: var(--google-loss-red); }
-
-        /* Detail List */
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--google-border);
-            font-size: 13px;
-        }
-
-        .detail-row:last-child {
-            border-bottom: none;
-        }
-
-        .detail-label { color: var(--google-text-secondary); }
-        .detail-val { color: var(--google-text-primary); font-weight: 500; }
-
-        /* Lineup Grid */
-        .lineup-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .player-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 0;
-            font-size: 13px;
-            color: var(--google-text-primary);
-        }
-
-        .player-num {
-            color: var(--google-text-secondary);
-            font-size: 12px;
-            width: 18px;
-        }
+        .prob-home { background: var(--fb-yellow); transition: width 0.5s; }
+        .prob-draw { background: var(--google-draw-gray); transition: width 0.5s; }
+        .prob-away { background: var(--lyon-red); transition: width 0.5s; }
     </style>
 </head>
 <body>
 
 <div class="google-sports-card">
-    <!-- Top Header -->
+    <!-- Live Alert Banner -->
+    <div id="live-toast" class="live-toast">
+        <span id="toast-text">⚽ GOL! Fenerbahçe öne geçti!</span>
+        <span style="font-size: 11px; opacity: 0.8;">Şimdi</span>
+    </div>
+
+    <!-- Header -->
     <div class="card-header">
         <div class="league-info">
-            <span class="league-icon"></span>
             <span>UEFA Avrupa Ligi • Lig Aşaması</span>
         </div>
-        <span class="match-badge">BUGÜN</span>
+        <div class="live-badge">
+            <span class="pulse-dot"></span>
+            <span>CANLI</span>
+        </div>
     </div>
 
     <!-- Match Hero -->
@@ -336,153 +303,219 @@
             <div class="team-badge fb-badge">FB</div>
             <div class="team-title">Fenerbahçe</div>
         </div>
-        <div class="match-clock">
-            <div class="time-display">22:00</div>
-            <div class="date-display">Kadıköy, İstanbul</div>
+
+        <div style="text-align: center;">
+            <div class="score-board">
+                <span id="score-home">0</span>
+                <span>-</span>
+                <span id="score-away">0</span>
+            </div>
+            <div class="match-minute"><span id="match-min">1</span>'</div>
         </div>
+
         <div class="team-box">
             <div class="team-badge lyon-badge">OL</div>
             <div class="team-title">Lyon</div>
         </div>
     </div>
 
-    <!-- Google Nav Tabs -->
+    <!-- Tabs -->
     <div class="google-tabs">
-        <button class="tab-item active" onclick="openTab(event, 'overview')">Genel bakış</button>
-        <button class="tab-item" onclick="openTab(event, 'lineups')">Kadrolar</button>
-        <button class="tab-item" onclick="openTab(event, 'h2h')">H2H</button>
-        <button class="tab-item" onclick="openTab(event, 'details')">Maç ayrıntıları</button>
+        <button class="tab-item active" onclick="openTab(event, 'stats')">Canlı İstatistikler</button>
+        <button class="tab-item" onclick="openTab(event, 'events')">Özet / Akış</button>
+        <button class="tab-item" onclick="openTab(event, 'probability')">Kazanma Olasılığı</button>
     </div>
 
-    <!-- Tab 1: Genel Bakış -->
-    <div id="overview" class="tab-panel active">
-        <!-- Kazanma Olasılığı -->
-        <div class="google-section-title">Kazanma olasılığı</div>
-        <div class="probability-card">
-            <div class="prob-values">
-                <span><strong>%44</strong> Fenerbahçe</span>
-                <span><strong>%28</strong> Beraberlik</span>
-                <span><strong>%28</strong> Lyon</span>
+    <!-- Tab 1: Live Stats -->
+    <div id="stats" class="tab-panel active">
+        <div class="stat-row">
+            <div class="stat-labels">
+                <span id="val-pos-home">50%</span>
+                <span class="stat-title">Topla Oynama</span>
+                <span id="val-pos-away">50%</span>
             </div>
-            <div class="prob-bar">
-                <div class="prob-bar-fb"></div>
-                <div class="prob-bar-draw"></div>
-                <div class="prob-bar-lyon"></div>
+            <div class="stat-bar-bg">
+                <div id="bar-pos-home" class="stat-bar-home" style="width: 50%;"></div>
+                <div id="bar-pos-away" class="stat-bar-away" style="width: 50%;"></div>
             </div>
         </div>
 
-        <!-- Son Form Durumu -->
-        <div class="google-section-title">Son form durumu</div>
-        <div class="form-card">
-            <div class="form-row">
-                <span class="form-team-label">Fenerbahçe</span>
-                <div class="form-dots">
-                    <span class="dot dot-w">G</span>
-                    <span class="dot dot-w">G</span>
-                    <span class="dot dot-d">B</span>
-                    <span class="dot dot-w">G</span>
-                    <span class="dot dot-l">M</span>
-                </div>
+        <div class="stat-row">
+            <div class="stat-labels">
+                <span id="val-shots-home">0</span>
+                <span class="stat-title">Toplam Şut</span>
+                <span id="val-shots-away">0</span>
             </div>
-            <div style="height: 1px; background: var(--google-border); margin: 8px 0;"></div>
-            <div class="form-row">
-                <span class="form-team-label">Lyon</span>
-                <div class="form-dots">
-                    <span class="dot dot-w">G</span>
-                    <span class="dot dot-d">B</span>
-                    <span class="dot dot-l">M</span>
-                    <span class="dot dot-w">G</span>
-                    <span class="dot dot-w">G</span>
-                </div>
+            <div class="stat-bar-bg">
+                <div id="bar-shots-home" class="stat-bar-home" style="width: 50%;"></div>
+                <div id="bar-shots-away" class="stat-bar-away" style="width: 50%;"></div>
+            </div>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-labels">
+                <span id="val-target-home">0</span>
+                <span class="stat-title">İsabetli Şut</span>
+                <span id="val-target-away">0</span>
+            </div>
+            <div class="stat-bar-bg">
+                <div id="bar-target-home" class="stat-bar-home" style="width: 50%;"></div>
+                <div id="bar-target-away" class="stat-bar-away" style="width: 50%;"></div>
             </div>
         </div>
     </div>
 
-    <!-- Tab 2: Kadrolar -->
-    <div id="lineups" class="tab-panel">
-        <div class="lineup-grid">
-            <div>
-                <div class="google-section-title" style="color: var(--fb-yellow);">Fenerbahçe (4-2-3-1)</div>
-                <div class="player-item"><span class="player-num">40</span> Livaković (KL)</div>
-                <div class="player-item"><span class="player-num">21</span> Osayi-Samuel</div>
-                <div class="player-item"><span class="player-num">6</span> Djiku</div>
-                <div class="player-item"><span class="player-num">4</span> Çağlar</div>
-                <div class="player-item"><span class="player-num">24</span> Oosterwolde</div>
-                <div class="player-item"><span class="player-num">34</span> Amrabat</div>
-                <div class="player-item"><span class="player-num">8</span> Mert Hakan</div>
-                <div class="player-item"><span class="player-num">10</span> Tadić</div>
-                <div class="player-item"><span class="player-num">53</span> Szymański</div>
-                <div class="player-item"><span class="player-num">97</span> Saint-Maximin</div>
-                <div class="player-item"><span class="player-num">19</span> En-Nesyri</div>
-            </div>
-            <div>
-                <div class="google-section-title" style="color: var(--lyon-red);">Lyon (4-3-3)</div>
-                <div class="player-item"><span class="player-num">1</span> Perri (KL)</div>
-                <div class="player-item"><span class="player-num">22</span> Mata</div>
-                <div class="player-item"><span class="player-num">55</span> Caleta-Car</div>
-                <div class="player-item"><span class="player-num">19</span> Niakhate</div>
-                <div class="player-item"><span class="player-num">3</span> Tagliafico</div>
-                <div class="player-item"><span class="player-num">6</span> Caqueret</div>
-                <div class="player-item"><span class="player-num">31</span> Matic</div>
-                <div class="player-item"><span class="player-num">8</span> Tolisso</div>
-                <div class="player-item"><span class="player-num">18</span> Cherki</div>
-                <div class="player-item"><span class="player-num">11</span> Fofana</div>
-                <div class="player-item"><span class="player-num">69</span> Mikautadze</div>
+    <!-- Tab 2: Live Events Stream -->
+    <div id="events" class="tab-panel">
+        <div id="events-list">
+            <div class="event-item">
+                <span class="event-minute">1'</span>
+                <span>Karşılaşma başladı!</span>
             </div>
         </div>
     </div>
 
-    <!-- Tab 3: H2H -->
-    <div id="h2h" class="tab-panel">
-        <div class="google-section-title">Geçmiş karşılaşmalar</div>
-        <div class="detail-row">
-            <span class="detail-label">UEFA Avrupa Ligi (2025)</span>
-            <span class="detail-val">Fenerbahçe 0 - 0 Lyon</span>
+    <!-- Tab 3: Dynamic Probability -->
+    <div id="probability" class="tab-panel">
+        <div class="stat-labels" style="margin-bottom: 8px;">
+            <span><strong id="prob-fb-val">%44</strong> Fenerbahçe</span>
+            <span><strong id="prob-draw-val">%28</strong> Beraberlik</span>
+            <span><strong id="prob-lyon-val">%28</strong> Lyon</span>
         </div>
-        <div class="detail-row">
-            <span class="detail-label">Hazırlık Maçı (2016)</span>
-            <span class="detail-val">Fenerbahçe 2 - 1 Lyon</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">UEFA Şampiyonlar Ligi (2004)</span>
-            <span class="detail-val">Lyon 4 - 2 Fenerbahçe</span>
-        </div>
-    </div>
-
-    <!-- Tab 4: Maç Ayrıntıları -->
-    <div id="details" class="tab-panel">
-        <div class="detail-row">
-            <span class="detail-label">Stadyum</span>
-            <span class="detail-val">Ülker Stadyumu (İstanbul)</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Yayın kanalı</span>
-            <span class="detail-val">TRT 1 / Tabii</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Hakem</span>
-            <span class="detail-val">Sandro Schärer (İsviçre)</span>
+        <div class="prob-bar">
+            <div id="prob-bar-fb" class="prob-home" style="width: 44%;"></div>
+            <div id="prob-bar-draw" class="prob-draw" style="width: 28%;"></div>
+            <div id="prob-bar-lyon" class="prob-away" style="width: 28%;"></div>
         </div>
     </div>
 </div>
 
 <script>
+    // Canlı Maç Veri Durumu
+    let matchState = {
+        minute: 1,
+        score: { home: 0, away: 0 },
+        stats: {
+            possessionHome: 52,
+            shotsHome: 0,
+            shotsAway: 0,
+            targetHome: 0,
+            targetAway: 0
+        },
+        prob: { home: 44, draw: 28, away: 28 }
+    };
+
+    // Tab Değiştirme
     function openTab(evt, tabId) {
-        let i, tabcontent, tablinks;
-        
-        tabcontent = document.getElementsByClassName("tab-panel");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
-        }
-        
-        tablinks = document.getElementsByClassName("tab-item");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
-        
-        document.getElementById(tabId).classList.add("active");
-        evt.currentTarget.classList.add("active");
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        evt.currentTarget.classList.add('active');
     }
+
+    // Bildirim Gösterme (Toast Banner)
+    function showToast(text) {
+        const toast = document.getElementById('live-toast');
+        document.getElementById('toast-text').innerText = text;
+        toast.style.display = 'flex';
+        setTimeout(() => { toast.style.display = 'none'; }, 5000);
+    }
+
+    // Olay Ekleme
+    function addEvent(min, text) {
+        const list = document.getElementById('events-list');
+        const item = document.createElement('div');
+        item.className = 'event-item';
+        item.innerHTML = `<span class="event-minute">${min}'</span><span>${text}</span>`;
+        list.insertBefore(item, list.firstChild);
+    }
+
+    // Arayüzü Güncelleme Engine
+    function updateUI() {
+        // Dakika ve Skor
+        document.getElementById('match-min').innerText = matchState.minute;
+        document.getElementById('score-home').innerText = matchState.score.home;
+        document.getElementById('score-away').innerText = matchState.score.away;
+
+        // Topla Oynama
+        let posH = matchState.stats.possessionHome;
+        document.getElementById('val-pos-home').innerText = posH + '%';
+        document.getElementById('val-pos-away').innerText = (100 - posH) + '%';
+        document.getElementById('bar-pos-home').style.width = posH + '%';
+        document.getElementById('bar-pos-away').style.width = (100 - posH) + '%';
+
+        // Şutlar
+        let sH = matchState.stats.shotsHome;
+        let sA = matchState.stats.shotsAway;
+        let totalS = (sH + sA) || 1;
+        document.getElementById('val-shots-home').innerText = sH;
+        document.getElementById('val-shots-away').innerText = sA;
+        document.getElementById('bar-shots-home').style.width = ((sH / totalS) * 100) + '%';
+        document.getElementById('bar-shots-away').style.width = ((sA / totalS) * 100) + '%';
+
+        // İsabetli Şutlar
+        let tH = matchState.stats.targetHome;
+        let tA = matchState.stats.targetAway;
+        let totalT = (tH + tA) || 1;
+        document.getElementById('val-target-home').innerText = tH;
+        document.getElementById('val-target-away').innerText = tA;
+        document.getElementById('bar-target-home').style.width = ((tH / totalT) * 100) + '%';
+        document.getElementById('bar-target-away').style.width = ((tA / totalT) * 100) + '%';
+
+        // Kazanma Olasılığı
+        document.getElementById('prob-fb-val').innerText = '%' + matchState.prob.home;
+        document.getElementById('prob-draw-val').innerText = '%' + matchState.prob.draw;
+        document.getElementById('prob-lyon-val').innerText = '%' + matchState.prob.away;
+        document.getElementById('prob-bar-fb').style.width = matchState.prob.home + '%';
+        document.getElementById('prob-bar-draw').style.width = matchState.prob.draw + '%';
+        document.getElementById('prob-bar-lyon').style.width = matchState.prob.away + '%';
+    }
+
+    // CANLI DİNAMİK SİMÜLASYON MOTORU (Her 3 saniyede bir maçı canlı ilerletir)
+    setInterval(() => {
+        if (matchState.minute >= 90) return;
+
+        matchState.minute += 1;
+
+        // Rastgele Canlı İstatistik Değişimleri
+        if (Math.random() > 0.4) {
+            matchState.stats.possessionHome = Math.min(70, Math.max(35, matchState.stats.possessionHome + (Math.random() > 0.5 ? 1 : -1)));
+        }
+
+        // Şut Gelişmeleri
+        if (Math.random() > 0.7) {
+            matchState.stats.shotsHome += 1;
+            if (Math.random() > 0.5) matchState.stats.targetHome += 1;
+        } else if (Math.random() > 0.8) {
+            matchState.stats.shotsAway += 1;
+            if (Math.random() > 0.5) matchState.stats.targetAway += 1;
+        }
+
+        // Canlı Gol İhtimali
+        if (matchState.minute === 18) {
+            matchState.score.home += 1;
+            matchState.prob = { home: 68, draw: 20, away: 12 };
+            showToast("⚽ GOL! Fenerbahçe (Y. En-Nesyri) öne geçti!");
+            addEvent(18, "⚽ Gol! Y. En-Nesyri (Fenerbahçe)");
+        } 
+        else if (matchState.minute === 42) {
+            matchState.score.away += 1;
+            matchState.prob = { home: 45, draw: 35, away: 20 };
+            showToast("⚽ GOL! Lyon eşitliği yakaladı!");
+            addEvent(42, "⚽ Gol! G. Orban (Lyon)");
+        }
+        else if (matchState.minute === 65) {
+            matchState.score.home += 1;
+            matchState.prob = { home: 80, draw: 14, away: 6 };
+            showToast("⚽ GOL! Fenerbahçe yeniden önde!");
+            addEvent(65, "⚽ Gol! D. Tadić (Fenerbahçe)");
+        }
+
+        updateUI();
+    }, 3000); // 3 saniyede bir canlı günceller
+
+    // İlk Yükleme
+    updateUI();
 </script>
 
 </body>
