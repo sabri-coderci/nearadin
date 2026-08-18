@@ -9,7 +9,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
         .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
-        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; jus[...]
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
         .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
         .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
@@ -32,20 +32,20 @@
     <!-- Admatic AUTO ads END -->
 
     
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-be[...]
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; borde[...]
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Ana[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-s[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">��[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: [...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 1[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
             </ul>
         </nav>
     </header>
@@ -77,6 +77,43 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Sözcü Gazetesi</span>
+                        <span class="time">18:17</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/son-dakikamaden-eyleminde-gozaltina-alinmislardi-gokay-c.html">Son dakika...Maden eyleminde gözaltına alınmışlardı: Gökay Çakır ve Başaran Aksu serbest bırakıldı</a>
+                    </h2>
+                    <p class="news-summary">Son dakika...Maden eyleminde gözaltına alınmışlardı: Gökay Çakır ve Başaran Aksu serbest bırakıldı  Sözcü Gazetesi</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/son-dakikamaden-eyleminde-gozaltina-alinmislardi-gokay-c.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">18:09</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/senegalin-yeni-teknik-direktoru-patrick-vieira.html">Senegal'ın Yeni Teknik Direktörü Patrick Vieira</a>
+                    </h2>
+                    <p class="news-summary">Senegal'ın Yeni Teknik Direktörü Patrick Vieira  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/senegalin-yeni-teknik-direktoru-patrick-vieira.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+   <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+   </div>
+    
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">CNN Türk</span>
                         <span class="time">18:09</span>
                     </div>
@@ -92,25 +129,33 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">Son Dakika</span>
-                        <span class="time">18:07</span>
+                        <span class="source">Hürriyet</span>
+                        <span class="time">18:05</span>
                     </div>
                     <h2 class="news-title">
-                        <a href="/haber/2026/08/18/gullunun-olumunde-iddianame-kabul-edildi.html">Güllü'nün Ölümünde İddianame Kabul Edildi</a>
+                        <a href="/haber/2026/08/18/son-dakika-depremler-listesi-canli-ve-anlik-18-agustos-gunce.html">SON DAKİKA DEPREMLER LİSTESİ CANLI VE ANLIK 18 AĞUSTOS GÜNCEL | Deprem mi oldu? Biraz önce nerede, kaç şiddetinde deprem oldu, yakınımdaki depremler hangileri? İşte AFAD ve Kandilli son depremler listesi ekranı!</a>
                     </h2>
-                    <p class="news-summary">Güllü'nün Ölümünde İddianame Kabul Edildi  Son Dakika</p>
+                    <p class="news-summary">SON DAKİKA DEPREMLER LİSTESİ CANLI VE ANLIK 18 AĞUSTOS GÜNCEL | Deprem mi oldu? Biraz önce nerede, kaç şiddetinde deprem oldu, yakınımdaki depremler hangileri? İşte AFAD ve Kandilli son depremler listesi ekranı!  Hürriyet</p>
                     <div class="card-footer">
-                        <a href="/haber/2026/08/18/gullunun-olumunde-iddianame-kabul-edildi.html" class="read-btn">Detayı Oku →</a>
+                        <a href="/haber/2026/08/18/son-dakika-depremler-listesi-canli-ve-anlik-18-agustos-gunce.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
-   <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
-       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
-   </div>
-    
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">18:04</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/samsunspor-forvet-ariyor.html">Samsunspor Forvet Arıyor</a>
+                    </h2>
+                    <p class="news-summary">Samsunspor Forvet Arıyor  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/samsunspor-forvet-ariyor.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -153,6 +198,36 @@
                     <p class="news-summary">Juventus, Vicario'yu Kiraladı  Son Dakika</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/juventus-vicarioyu-kiraladi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">CNN Türk</span>
+                        <span class="time">17:54</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/son-dakika-omer-celikten-israile-tepki-paylasimi.html">SON DAKİKA! Ömer Çelik'ten İsrail'e tepki paylaşımı</a>
+                    </h2>
+                    <p class="news-summary">SON DAKİKA! Ömer Çelik'ten İsrail'e tepki paylaşımı  CNN Türk</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/son-dakika-omer-celikten-israile-tepki-paylasimi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">17:54</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/bakan-bolat-ihracat-8-kat-artti.html">Bakan Bolat: İhracat 8 kat arttı</a>
+                    </h2>
+                    <p class="news-summary">Bakan Bolat: İhracat 8 kat arttı  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/bakan-bolat-ihracat-8-kat-artti.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -204,21 +279,6 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">Habertürk</span>
-                        <span class="time">17:39</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/son-dakika-ultraslan-tribun-lideri-sirinin-uyusturucu-test.html">Son dakika: UltrAslan tribün lideri Şirin’in uyuşturucu testi pozitif çıktı - Son Dakika İnternet Haberleri</a>
-                    </h2>
-                    <p class="news-summary">Son dakika: UltrAslan tribün lideri Şirin’in uyuşturucu testi pozitif çıktı - Son Dakika İnternet Haberleri  Habertürk</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/son-dakika-ultraslan-tribun-lideri-sirinin-uyusturucu-test.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
                         <span class="source">Milliyet</span>
                         <span class="time">17:39</span>
                     </div>
@@ -264,6 +324,21 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">17:33</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/turk-kadin-basketbol-takimi-ceyrek-finale-yukseldi.html">Türk Kadın Basketbol Takımı Çeyrek Finale Yükseldi</a>
+                    </h2>
+                    <p class="news-summary">Türk Kadın Basketbol Takımı Çeyrek Finale Yükseldi  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/turk-kadin-basketbol-takimi-ceyrek-finale-yukseldi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">Sabah</span>
                         <span class="time">17:33</span>
                     </div>
@@ -273,6 +348,21 @@
                     <p class="news-summary">SON DAKİKA | UltrAslan lideri Muzaffer Şirin’in uyuşturucu test sonucu belli oldu! İddiaları reddetmişti  Sabah</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/son-dakika-ultraslan-lideri-muzaffer-sirinin-uyusturucu-t.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">17:33</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/juventus-vicarioyu-kiraladi.html">Juventus, Vicario'yu Kiraladı</a>
+                    </h2>
+                    <p class="news-summary">Juventus, Vicario'yu Kiraladı  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/juventus-vicarioyu-kiraladi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -339,15 +429,15 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">Milliyet</span>
-                        <span class="time">17:27</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">17:28</span>
                     </div>
                     <h2 class="news-title">
-                        <a href="/haber/2026/08/18/son-dakikaisrailin-suriyedeki-saldirisina-turkiyeden-t.html">Son dakika...İsrail'in Suriye'deki saldırısına Türkiye'den tepki</a>
+                        <a href="/haber/2026/08/18/israilin-hava-saldirisina-turkiyeden-kinama.html">İsrail'in Hava Saldırısına Türkiye'den Kınama</a>
                     </h2>
-                    <p class="news-summary">Son dakika...İsrail'in Suriye'deki saldırısına Türkiye'den tepki  Milliyet</p>
+                    <p class="news-summary">İsrail'in Hava Saldırısına Türkiye'den Kınama  Son Dakika</p>
                     <div class="card-footer">
-                        <a href="/haber/2026/08/18/son-dakikaisrailin-suriyedeki-saldirisina-turkiyeden-t.html" class="read-btn">Detayı Oku →</a>
+                        <a href="/haber/2026/08/18/israilin-hava-saldirisina-turkiyeden-kinama.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -595,21 +685,6 @@
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
                         <span class="source">Son Dakika</span>
-                        <span class="time">16:51</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/formasi-cikartilan-minik-fenerbahce-taraftari-kadikoyde-ve.html">Forması çıkartılan minik Fenerbahçe taraftarı Kadıköy'de! Verdiği poza beğeni yağıyor</a>
-                    </h2>
-                    <p class="news-summary">Forması çıkartılan minik Fenerbahçe taraftarı Kadıköy'de! Verdiği poza beğeni yağıyor  Son Dakika</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/formasi-cikartilan-minik-fenerbahce-taraftari-kadikoyde-ve.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">Son Dakika</span>
                         <span class="time">16:45</span>
                     </div>
                     <h2 class="news-title">
@@ -759,13 +834,13 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">trthaber.com</span>
+                        <span class="source">TRT Haber</span>
                         <span class="time">16:13</span>
                     </div>
                     <h2 class="news-title">
                         <a href="/haber/2026/08/18/suc-cetelerine-nefes-aldirmayacagiz-son-dakika-haberleri.html">"Suç çetelerine nefes aldırmayacağız" - Son Dakika Haberleri</a>
                     </h2>
-                    <p class="news-summary">"Suç çetelerine nefes aldırmayacağız" - Son Dakika Haberleri  trthaber.com</p>
+                    <p class="news-summary">"Suç çetelerine nefes aldırmayacağız" - Son Dakika Haberleri  TRT Haber</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/suc-cetelerine-nefes-aldirmayacagiz-son-dakika-haberleri.html" class="read-btn">Detayı Oku →</a>
                     </div>
@@ -789,13 +864,13 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">trthaber.com</span>
+                        <span class="source">TRT Haber</span>
                         <span class="time">16:03</span>
                     </div>
                     <h2 class="news-title">
                         <a href="/haber/2026/08/18/arif-ahmet-denizolgunun-mezari-acilacak.html">Arif Ahmet Denizolgun’un mezarı açılacak</a>
                     </h2>
-                    <p class="news-summary">Arif Ahmet Denizolgun’un mezarı açılacak  trthaber.com</p>
+                    <p class="news-summary">Arif Ahmet Denizolgun’un mezarı açılacak  TRT Haber</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/arif-ahmet-denizolgunun-mezari-acilacak.html" class="read-btn">Detayı Oku →</a>
                     </div>
@@ -864,36 +939,6 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">Hürriyet</span>
-                        <span class="time">15:57</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/trumptan-tansiyonu-yukseltecek-paylasim-yeni-abd-topragi.html">Trump'tan tansiyonu yükseltecek paylaşım: Yeni ABD toprağı</a>
-                    </h2>
-                    <p class="news-summary">Trump'tan tansiyonu yükseltecek paylaşım: Yeni ABD toprağı  Hürriyet</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/trumptan-tansiyonu-yukseltecek-paylasim-yeni-abd-topragi.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">Son Dakika</span>
-                        <span class="time">15:42</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/mustafa-bozbey-chpden-istifa-etti.html">Mustafa Bozbey CHP'den istifa etti</a>
-                    </h2>
-                    <p class="news-summary">Mustafa Bozbey CHP'den istifa etti  Son Dakika</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/mustafa-bozbey-chpden-istifa-etti.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
                         <span class="source">CNN Türk</span>
                         <span class="time">15:37</span>
                     </div>
@@ -909,13 +954,13 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">trthaber.com</span>
+                        <span class="source">TRT Haber</span>
                         <span class="time">15:35</span>
                     </div>
                     <h2 class="news-title">
                         <a href="/haber/2026/08/18/bursa-buyuksehir-belediye-baskani-bozbey-chpden-istifa-etti.html">Bursa Büyükşehir Belediye Başkanı Bozbey CHP'den istifa etti</a>
                     </h2>
-                    <p class="news-summary">Bursa Büyükşehir Belediye Başkanı Bozbey CHP'den istifa etti  trthaber.com</p>
+                    <p class="news-summary">Bursa Büyükşehir Belediye Başkanı Bozbey CHP'den istifa etti  TRT Haber</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/bursa-buyuksehir-belediye-baskani-bozbey-chpden-istifa-etti.html" class="read-btn">Detayı Oku →</a>
                     </div>
@@ -963,21 +1008,6 @@
                     <p class="news-summary">İsrail ve Yunanistan'dan Türkiye'ye karşı F-35 hesabı! Çatışma senaryosu masada: 'İlk gören ilk vuran'  Milliyet</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/israil-ve-yunanistandan-turkiyeye-karsi-f-35-hesabi-catis.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">CNN Türk</span>
-                        <span class="time">15:16</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/son-dakika-omer-celikten-israile-tepki-paylasimi.html">SON DAKİKA! Ömer Çelik'ten İsrail'e tepki paylaşımı</a>
-                    </h2>
-                    <p class="news-summary">SON DAKİKA! Ömer Çelik'ten İsrail'e tepki paylaşımı  CNN Türk</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/son-dakika-omer-celikten-israile-tepki-paylasimi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -1045,29 +1075,14 @@
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
                         <span class="source">Son Dakika</span>
-                        <span class="time">15:02</span>
+                        <span class="time">15:07</span>
                     </div>
                     <h2 class="news-title">
-                        <a href="/haber/2026/08/18/fenerbahcede-ayriliklar-pes-pese-bir-isim-daha-veda-ediyor.html">Fenerbahçe'de ayrılıklar peş peşe! Bir isim daha veda ediyor</a>
+                        <a href="/haber/2026/08/18/siddetli-el-nino-beklentisi.html">Şiddetli El Nino Beklentisi</a>
                     </h2>
-                    <p class="news-summary">Fenerbahçe'de ayrılıklar peş peşe! Bir isim daha veda ediyor  Son Dakika</p>
+                    <p class="news-summary">Şiddetli El Nino Beklentisi  Son Dakika</p>
                     <div class="card-footer">
-                        <a href="/haber/2026/08/18/fenerbahcede-ayriliklar-pes-pese-bir-isim-daha-veda-ediyor.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">Hürriyet</span>
-                        <span class="time">14:36</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/son-dakika-deprem-mi-oldu-18-agustos-guncel-afadkandilli-s.html">Son dakika deprem mi oldu? 18 Ağustos güncel AFAD/KANDİLLİ son depremler listesi... Biraz önce nerede, kaç şiddetinde deprem oldu, yakınımdaki depremler hangileri?</a>
-                    </h2>
-                    <p class="news-summary">Son dakika deprem mi oldu? 18 Ağustos güncel AFAD/KANDİLLİ son depremler listesi... Biraz önce nerede, kaç şiddetinde deprem oldu, yakınımdaki depremler hangileri?  Hürriyet</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/son-dakika-deprem-mi-oldu-18-agustos-guncel-afadkandilli-s.html" class="read-btn">Detayı Oku →</a>
+                        <a href="/haber/2026/08/18/siddetli-el-nino-beklentisi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -1119,21 +1134,6 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">trthaber.com</span>
-                        <span class="time">13:46</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/azerbaycan-rusyanin-baku-buyukelcisini-bakanliga-cagirdi.html">Azerbaycan Rusya'nın Bakü Büyükelçisini Bakanlığa çağırdı</a>
-                    </h2>
-                    <p class="news-summary">Azerbaycan Rusya'nın Bakü Büyükelçisini Bakanlığa çağırdı  trthaber.com</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/azerbaycan-rusyanin-baku-buyukelcisini-bakanliga-cagirdi.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
                         <span class="source">Sabah</span>
                         <span class="time">13:39</span>
                     </div>
@@ -1179,13 +1179,13 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
-                        <span class="source">trthaber.com</span>
+                        <span class="source">TRT Haber</span>
                         <span class="time">13:26</span>
                     </div>
                     <h2 class="news-title">
                         <a href="/haber/2026/08/18/sivasta-yolcu-minibusu-devrildi-4-olu-10-yarali.html">Sivas'ta yolcu minibüsü devrildi: 4 ölü, 10 yaralı</a>
                     </h2>
-                    <p class="news-summary">Sivas'ta yolcu minibüsü devrildi: 4 ölü, 10 yaralı  trthaber.com</p>
+                    <p class="news-summary">Sivas'ta yolcu minibüsü devrildi: 4 ölü, 10 yaralı  TRT Haber</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/sivasta-yolcu-minibusu-devrildi-4-olu-10-yarali.html" class="read-btn">Detayı Oku →</a>
                     </div>
@@ -1278,21 +1278,6 @@
                     <p class="news-summary">Son Dakika | Selin kaptığı 16 yaşındaki Muhammed'den acı haber 5. günde geldi! Dayısı hala bulunamadı  Halk TV</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/18/son-dakika-selin-kaptigi-16-yasindaki-muhammedden-aci-hab.html" class="read-btn">Detayı Oku →</a>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
-                        <span class="source">Sözcü Gazetesi</span>
-                        <span class="time">12:30</span>
-                    </div>
-                    <h2 class="news-title">
-                        <a href="/haber/2026/08/18/son-dakika-ibb-davasinda-savci-ara-mutalaa-acikladi.html">SON DAKİKA | İBB davasında savcı ara mütalaa açıkladı</a>
-                    </h2>
-                    <p class="news-summary">SON DAKİKA | İBB davasında savcı ara mütalaa açıkladı  Sözcü Gazetesi</p>
-                    <div class="card-footer">
-                        <a href="/haber/2026/08/18/son-dakika-ibb-davasinda-savci-ara-mutalaa-acikladi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -1536,6 +1521,21 @@
                     </div>
                 </article>
                 
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">CNN Türk</span>
+                        <span class="time">07:12</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/18/son-dakika-osym-duyurdu-yks-yerlestirme-sonuclari-acikland.html">SON DAKİKA! ÖSYM duyurdu: YKS yerleştirme sonuçları açıklandı: YKS tercih sonuçlarına nereden bakılır?</a>
+                    </h2>
+                    <p class="news-summary">SON DAKİKA! ÖSYM duyurdu: YKS yerleştirme sonuçları açıklandı: YKS tercih sonuçlarına nereden bakılır?  CNN Türk</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/18/son-dakika-osym-duyurdu-yks-yerlestirme-sonuclari-acikland.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
         </main>
         
     <div style="text-align: center; margin: 20px 0;">
@@ -1567,7 +1567,7 @@
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearad[...]
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
