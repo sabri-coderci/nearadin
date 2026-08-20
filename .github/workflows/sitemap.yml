@@ -1,0 +1,29 @@
+name: Generate Split Sitemap
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Her gece yarısı otomatik çalışır
+  workflow_dispatch: # Manuel tetikleme imkanı verir
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository'i Çek
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Bölme Betiğini Çalıştır
+        run: python split_sitemap.py
+
+      - name: Değişiklikleri GitHub'a Kaydet
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add sitemap-*.xml sitemap_index.xml
+          git commit -m "Auto-split sitemaps into 500-URL chunks" || exit 0
+          git push
