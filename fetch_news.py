@@ -128,9 +128,6 @@ def get_footer_html():
     </footer>
     '''
 
-
-
-
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
@@ -399,8 +396,6 @@ def fetch_and_generate():
    </div>
     '''
 
-    
-
     # Hava Durumu sayfasını dinamik olarak oluştur
     generate_weather_page(
         header_html=get_header_html("nearadin.net - Hava Durumu"),
@@ -408,8 +403,6 @@ def fetch_and_generate():
         whos_amung_us_code=whos_amung_us_code,
         admatic_code=admatic_code
     )
-
-    
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -910,7 +903,31 @@ def fetch_and_generate():
         with open("sitemap.xml", "w", encoding="utf-8") as f:
             f.write(sitemap_content)
 
-        print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html) ve tüm servis sayfaları güncellendi.")
+        # --- GOOGLE NEWS SITEMAP (news-sitemap.xml) ---
+        news_sitemap_items = ""
+        for news in news_list:
+            safe_title = html.escape(news['title'])
+            news_sitemap_items += f'''  <url>
+    <loc>{news['full_url']}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>{news['iso_date']}</news:publication_date>
+      <news:title>{safe_title}</news:title>
+    </news:news>
+  </url>\n'''
+
+        news_sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{news_sitemap_items}</urlset>'''
+
+        with open("news-sitemap.xml", "w", encoding="utf-8") as f:
+            f.write(news_sitemap_content)
+
+        print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html), sitemap.xml ve news-sitemap.xml güncellendi.")
 
         if news_list:
             post_to_x(news_list[0])
@@ -920,5 +937,3 @@ def fetch_and_generate():
 
 if __name__ == "__main__":
     fetch_and_generate()
-
-   
