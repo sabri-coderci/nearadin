@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitlis Adilcevaz Namaz Vakitleri | Diyanet Ezan Saatleri & İmsakiye</title>
+    <meta name="description" content="Diyanet İşleri Başkanlığı uyumlu Bitlis Adilcevaz namaz vakitleri, imsak, güneş, öğle, ikindi, akşam ve yatsı ezan saatleri. Güncel imsakiye ve kıble açısı.">
+    <meta name="keywords" content="Adilcevaz namaz vakitleri, Bitlis ezan saatleri, Diyanet imsakiye, Bitlis Adilcevaz imsak vakti, akşam ezanı kaçta">
+    <style>
+        /* CSS RESET & TEMEL DEĞİŞKENLER */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --diyanet-green-dark: #072a22;
+            --diyanet-green: #0a3d31;
+            --diyanet-green-mid: #155e4c;
+            --diyanet-green-light: #1f856c;
+            --gold: #c5a059;
+            --gold-light: #f4e8c1;
+            --gold-bright: #e6c175;
+            --bg-body: #f4f7f6;
+            --bg-card: #ffffff;
+            --text-main: #2b303a;
+            --text-muted: #6c757d;
+            --border: #e2e8f0;
+            --active-bg: #e8f5f1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--diyanet-green-dark) 0%, var(--diyanet-green) 100%);
+            color: #ffffff;
+            padding: 22px 28px;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(10, 61, 49, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header-brand h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .header-brand p {
+            font-size: 13px;
+            color: var(--gold-light);
+            margin-top: 3px;
+        }
+
+        .badge {
+            background: rgba(197, 160, 89, 0.18);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* KONUM & TARİH ÇUBUĞU */
+        .filter-bar {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .location-select-group {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--diyanet-green);
+        }
+
+        .date-display {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .date-display strong {
+            color: var(--text-main);
+        }
+
+        /* GERİ SAYIM HERO BANNER */
+        .countdown-hero {
+            background: linear-gradient(135deg, var(--diyanet-green-mid) 0%, var(--diyanet-green-dark) 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 22px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 18px rgba(10, 61, 49, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .timer-badge {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            padding: 10px 24px;
+            text-align: center;
+        }
+
+        .timer-digits {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-bright);
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+        }
+
+        .timer-text {
+            font-size: 11px;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* GÜNLÜK VAKİT KARTLARI (GRID) */
+        .vakit-cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .vakit-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 10px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--diyanet-green-mid);
+            transition: all 0.2s ease;
+        }
+
+        .vakit-card.active {
+            background-color: var(--active-bg);
+            border: 1px solid var(--diyanet-green-light);
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .vakit-card .title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .vakit-card.active .title {
+            color: var(--diyanet-green-dark);
+        }
+
+        .vakit-card .time {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--diyanet-green-dark);
+        }
+
+        .vakit-card.active .time {
+            color: #b8860b;
+        }
+
+        /* TABLO ALANI */
+        .section-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--diyanet-green-dark);
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .table-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow-x: auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            min-width: 600px;
+        }
+
+        thead {
+            background-color: var(--diyanet-green);
+            color: #ffffff;
+        }
+
+        th {
+            padding: 12px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 11px 10px;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-main);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr.highlight-today {
+            background-color: #e8f5e1 !important;
+            font-weight: 700;
+        }
+
+        tbody tr.highlight-today td {
+            color: var(--diyanet-green-dark);
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        /* BİLGİ KUTULARI (KIBLE & DİNİ GÜNLER) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .info-box h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--diyanet-green);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--gold-light);
+            padding-bottom: 6px;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            font-size: 13px;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+
+        .info-box li strong {
+            color: var(--text-main);
+        }
+
+        /* SEO METİN ALANI */
+        .seo-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .seo-box h2 {
+            font-size: 17px;
+            color: var(--diyanet-green-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .seo-box p {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 15px;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-wrapper">
+                <div class="header-brand">
+                    <h1>T.C. DİYANET İŞLERİ BAŞKANLIĞI</h1>
+                    <p>Namaz Vakitleri ve Ezan Saatleri Bilgi Portalı</p>
+                </div>
+                <div class="header-badge">
+                    <span class="badge">DİYANET UYUMLU VERİ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- KONUM VE TARİH ÇUBUĞU -->
+        <div class="filter-bar">
+            <div class="location-select-group">
+                📍 <strong>Türkiye</strong> &gt; <strong>Bitlis</strong> &gt; <span>Adilcevaz</span>
+            </div>
+            <div class="date-display">
+                <strong>20 Ağustos 2026 Perşembe</strong> | 7 Rebiülevvel 1448
+            </div>
+        </div>
+
+        <!-- GERİ SAYIM SAYACI -->
+        <div class="countdown-hero">
+            <div class="hero-info">
+                <div class="hero-subtitle">Sıradaki Vakit</div>
+                <div class="hero-title" id="next-vakit-name">AKŞAM NAMAZI</div>
+            </div>
+            <div class="hero-timer">
+                <div class="timer-badge">
+                    <div class="timer-digits" id="countdown-clock">01:35:22</div>
+                    <div class="timer-text">Kalan Süre</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GÜNLÜK VAKİT KARTLARI -->
+        <div class="vakit-cards-wrapper">
+            <div class="vakit-card">
+                <div class="title">İmsak</div>
+                <div class="time">03:42</div>
+            </div>
+            <div class="vakit-card">
+                <div class="title">Güneş</div>
+                <div class="time">05:14</div>
+            </div>
+            <div class="vakit-card">
+                <div class="title">Öğle</div>
+                <div class="time">12:24</div>
+            </div>
+            <div class="vakit-card">
+                <div class="title">İkindi</div>
+                <div class="time">16:12</div>
+            </div>
+            <div class="vakit-card active">
+                <div class="title">Akşam</div>
+                <div class="time">19:22</div>
+            </div>
+            <div class="vakit-card">
+                <div class="title">Yatsı</div>
+                <div class="time">20:48</div>
+            </div>
+        </div>
+
+        <!-- HAFTALIK İMSAKİYE TABLOSU -->
+        <div class="section-header">Bitlis Adilcevaz Haftalık Namaz Vakitleri Tablosu</div>
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>Hicri Tarih</th>
+                        <th>İmsak</th>
+                        <th>Güneş</th>
+                        <th>Öğle</th>
+                        <th>İkindi</th>
+                        <th>Akşam</th>
+                        <th>Yatsı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>18 Ağu Salı</td>
+                        <td>5 Rebiülevvel 1448</td>
+                        <td>03:39</td>
+                        <td>05:12</td>
+                        <td>12:25</td>
+                        <td>16:13</td>
+                        <td>19:25</td>
+                        <td>20:51</td>
+                    </tr>
+                    <tr>
+                        <td>19 Ağu Çarşamba</td>
+                        <td>6 Rebiülevvel 1448</td>
+                        <td>03:41</td>
+                        <td>05:13</td>
+                        <td>12:25</td>
+                        <td>16:12</td>
+                        <td>19:24</td>
+                        <td>20:50</td>
+                    </tr>
+                    <tr class="highlight-today">
+                        <td>20 Ağu Perşembe (Bugün)</td>
+                        <td>7 Rebiülevvel 1448</td>
+                        <td>03:42</td>
+                        <td>05:14</td>
+                        <td>12:24</td>
+                        <td>16:12</td>
+                        <td>19:22</td>
+                        <td>20:48</td>
+                    </tr>
+                    <tr>
+                        <td>21 Ağu Cuma</td>
+                        <td>8 Rebiülevvel 1448</td>
+                        <td>03:44</td>
+                        <td>05:15</td>
+                        <td>12:24</td>
+                        <td>16:11</td>
+                        <td>19:21</td>
+                        <td>20:46</td>
+                    </tr>
+                    <tr>
+                        <td>22 Ağu Cumartesi</td>
+                        <td>9 Rebiülevvel 1448</td>
+                        <td>03:45</td>
+                        <td>05:16</td>
+                        <td>12:24</td>
+                        <td>16:10</td>
+                        <td>19:19</td>
+                        <td>20:44</td>
+                    </tr>
+                    <tr>
+                        <td>23 Ağu Pazar</td>
+                        <td>10 Rebiülevvel 1448</td>
+                        <td>03:47</td>
+                        <td>05:17</td>
+                        <td>12:24</td>
+                        <td>16:09</td>
+                        <td>19:18</td>
+                        <td>20:43</td>
+                    </tr>
+                    <tr>
+                        <td>24 Ağu Pazartesi</td>
+                        <td>11 Rebiülevvel 1448</td>
+                        <td>03:48</td>
+                        <td>05:18</td>
+                        <td>12:23</td>
+                        <td>16:08</td>
+                        <td>19:16</td>
+                        <td>20:41</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- KIBLE VE DİNİ BİLGİ KARTLARI -->
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>🧭 Kıble Açı & Konum Bilgileri</h3>
+                <ul>
+                    <li><strong>Kıble Açısı:</strong> 188° (Güney-Güneybatı)</li>
+                    <li><strong>Kıble Saati:</strong> 11:42</li>
+                    <li><strong>Coğrafi Konum:</strong> 38.80° Enlem, 42.73° Boylam</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>🕌 Dini Günler & Cuma Vakti</h3>
+                <ul>
+                    <li><strong>Cuma Namazı Saati:</strong> 12:24</li>
+                    <li><strong>Bir Sonraki Dini Gün:</strong> Mevlid Kandili</li>
+                    <li><strong>Hesaplama Standartı:</strong> T.C. Diyanet İşleri Başkanlığı</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEO UYUMLU METİN ALANI -->
+        <div class="seo-box">
+            <h2>Bitlis Adilcevaz Namaz Vakitleri ve Ezan Saatleri Takibi</h2>
+            <p>
+                <strong>Bitlis Adilcevaz namaz vakitleri</strong>, Diyanet İşleri Başkanlığı'nın astronomik ölçümlerine tam uyumlu olarak güncel biçimde sunulmaktadır. Adilcevaz ilçesinde yaşayan vatandaşlarımız ve ziyaretçilerimiz için günlük ibadet vakitlerinin eksiksiz takibi büyük önem taşır. Sitemiz üzerinden <strong>Adilcevaz imsak vakti</strong>, sabah namazı ezan saati, öğle ezanı, ikindi ezanı, <strong>akşam ezanı vakti</strong> ve yatsı namazı vakitlerini anlık olarak öğrenebilirsiniz.
+            </p>
+            <p>
+                Her gün güncellenen <strong>Adilcevaz imsakiye</strong> cetveli sayesinde Cuma namazı saati, Ramazan ayı sahur ve iftar vakitleri ile bayram namazı vakitlerine kolaylıkla ulaşabilirsiniz. Ayrıca sayfada yer alan kıble açısı ve kıble saati parametreleri yardımıyla doğrulukla kıble yönünüzü tayin edebilirsiniz.
+            </p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            Veriler T.C. Diyanet İşleri Başkanlığı Namaz Vakitleri sisteminden temin edilmektedir. © 2026 Namaz Vakitleri Bilgi Portalı.
+        </div>
+    </div>
+
+    <!-- DİNAMİK GERİ SAYIM JAVASCRIPT KODU -->
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+            target.setHours(19, 22, 0, 0); // Örnek Akşam Vakti Target
+            
+            let diff = target - now;
+            if (diff < 0) diff = 0;
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            const pad = (n) => n.toString().padStart(2, '0');
+            const clockElem = document.getElementById('countdown-clock');
+            if (clockElem) {
+                clockElem.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
