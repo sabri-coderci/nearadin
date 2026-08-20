@@ -1,24 +1,29 @@
 import xml.etree.ElementTree as ET
 
 def split_sitemap(input_file="sitemap.xml", domain="https://nearadin.net", limit=500):
-    # XML namespace tanımları
-    ns = {'ns': 'http://www.sitemap.org/schemas/sitemap/0.9'}
-    ET.register_namespace('', ns['ns'])
-
-    # Depodaki sitemap.xml dosyasını oku
+    # XML dosyasını ayrıştır
     tree = ET.parse(input_file)
     root = tree.getroot()
-    urls = root.findall('ns:url', ns)
 
-    # URL'leri 500'erli parçalara ayır
+    # Namespace fark etmeksizin tüm <url> etiketlerini yakala
+    urls = [elem for elem in root.iter() if elem.tag.endswith('url')]
+
+    if not urls:
+        print("Sitemap içinde hiçbir <url> etiketi bulunamadı!")
+        return
+
+    # URL'leri 500'erli parçalara böl
     chunks = [urls[i:i + limit] for i in range(0, len(urls), limit)]
     created_files = []
+
+    ns_uri = "http://www.sitemap.org/schemas/sitemap/0.9"
+    ET.register_namespace('', ns_uri)
 
     for index, chunk in enumerate(chunks, start=1):
         filename = f"sitemap-{index}.xml"
         created_files.append(filename)
 
-        urlset = ET.Element("urlset", xmlns=ns['ns'])
+        urlset = ET.Element(f"{{{ns_uri}}}urlset")
         for url in chunk:
             urlset.append(url)
 
@@ -26,11 +31,11 @@ def split_sitemap(input_file="sitemap.xml", domain="https://nearadin.net", limit
         ET.indent(out_tree, space="  ")
         out_tree.write(filename, encoding="utf-8", xml_declaration=True)
 
-    # Sitemap Index dosyasını oluştur
-    sitemapindex = ET.Element("sitemapindex", xmlns=ns['ns'])
+    # Index dosyasını oluştur
+    sitemapindex = ET.Element(f"{{{ns_uri}}}sitemapindex")
     for file in created_files:
-        sitemap_elem = ET.SubElement(sitemapindex, "sitemap")
-        loc = ET.SubElement(sitemap_elem, "loc")
+        sitemap_elem = ET.SubElement(sitemapindex, f"{{{ns_uri}}}sitemap")
+        loc = ET.SubElement(sitemap_elem, f"{{{ns_uri}}}loc")
         loc.text = f"{domain}/{file}"
 
     index_tree = ET.ElementTree(sitemapindex)
