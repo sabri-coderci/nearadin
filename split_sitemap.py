@@ -1,10 +1,11 @@
 import xml.etree.ElementTree as ET
 
-def split_sitemap(input_file="sitemap_big.xml", domain="https://siteadi.com", limit=500):
+def split_sitemap(input_file="sitemap.xml", domain="https://nearadin.net", limit=500):
     # XML namespace tanımları
     ns = {'ns': 'http://www.sitemap.org/schemas/sitemap/0.9'}
     ET.register_namespace('', ns['ns'])
 
+    # Depodaki sitemap.xml dosyasını oku
     tree = ET.parse(input_file)
     root = tree.getroot()
     urls = root.findall('ns:url', ns)
@@ -37,4 +38,4 @@ def split_sitemap(input_file="sitemap_big.xml", domain="https://siteadi.com", li
     index_tree.write("sitemap_index.xml", encoding="utf-8", xml_declaration=True)
 
 if __name__ == "__main__":
-    split_sitemap()
+    split_sitemap(input_file="sitemap.xml", domain="https://nearadin.net")
