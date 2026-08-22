@@ -135,67 +135,6 @@ def get_footer_html():
     </footer>
     '''
 
-def check_backlink_exists(site_url, target_link="https://nearadin.net"):
-    try:
-        headers = {"User-Agent": "Mozilla/5.0 (NearadinBot/1.0)"}
-        response = requests.get(site_url, headers=headers, timeout=10)
-
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, "html.parser")
-            # Sayfadaki tüm linkleri taranır
-            for a_tag in soup.find_all("a", href=True):
-                if target_link in a_tag["href"]:
-                    return True
-        return False
-    except Exception:
-        return False
-
-
-# 2. backlink.html sayfasını oluşturan fonksiyon
-def verify_and_generate_backlinks(header_html, footer_html):
-    # Kayıtlı siteleri oku
-    verified_sites = []
-    if os.path.exists(VERIFIED_SITES_FILE):
-        with open(VERIFIED_SITES_FILE, "r", encoding="utf-8") as f:
-            verified_sites = json.load(f)
-
-    # Dinamik liste HTML'i
-    if verified_sites:
-        sites_list_html = "<ul>"
-        for site in verified_sites:
-            sites_list_html += f'<li><a href="{site["url"]}" target="_blank" rel="nofollow">{site["title"]}</a></li>'
-        sites_list_html += "</ul>"
-    else:
-        sites_list_html = (
-            "<p>Henüz doğrulanmış bir backlink ortaklığı bulunmuyor.</p>"
-        )
-
-    # Form ve ana içerik
-    content = f"""
-    <div class="backlink-container">
-        <h2>🤝 Otomatik Backlink Ağı</h2>
-        <p>Sitenize aşağıdaki kodu ekleyin, ardından formu doldurarak doğrulama yapın:</p>
-        
-        <textarea readonly style="width:100%; height:60px;"><a href="https://nearadin.net" target="_blank">nearadin.net - Son Dakika Haberler</a></textarea>
-
-        <h3>Sitenizi Ekleyin</h3>
-        <form action="/api/verify-backlink" method="POST">
-            <input type="text" name="site_title" placeholder="Site Adı" required><br><br>
-            <input type="url" name="site_url" placeholder="https://siteniz.com" required><br><br>
-            <button type="submit">Sitemi Doğrula ve Ekle</button>
-        </form>
-
-        <hr>
-        <h3>Destekleyen Siteler</h3>
-        {sites_list_html}
-    </div>
-    """
-
-    full_page = header_html + content + footer_html
-
-    with open("backlink.html", "w", encoding="utf-8") as f:
-        f.write(full_page)
-
 
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
