@@ -119,7 +119,9 @@ def get_footer_html():
                         <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
                         <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
                         <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">Sitemap</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -819,6 +821,12 @@ def fetch_and_generate():
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
+      <url>
+    <loc>https://nearadin.net/llms.txt</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
     <lastmod>{last_update_iso}</lastmod>
