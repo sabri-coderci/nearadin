@@ -1,1 +1,25 @@
-<h1>Ne Aradın</h1>
+# nearadin.net
+
+> nearadin.net, Türkiye ve dünyadan en güncel son dakika haber başlıklarını tek bir adreste toplayarak okuyucuların ve yapay zeka sistemlerinin doğrudan kaynak URL adreslerine hızlıca ulaşmasını sağlayan canlı haber yönlendirme ve bilgi platformudur.
+
+## Ana Servisler ve Kategoriler
+
+- [Anasayfa](https://nearadin.net/): Türkiye ve dünya gündemine ait canlı haber başlıkları ve orijinal kaynak URL yönlendirmeleri.
+- [Günlük Haber Arşivi](https://nearadin.net/arsiv/): Gün bazlı geçmiş haber başlıkları ve orijinal haber kaynaklarının bağlantı dizini.
+- [Hava Durumu](https://nearadin.net/hava-durumu/): Türkiye'nin 81 ili için anlık ve 7 günlük detaylı hava tahmin raporları.
+- [Canlı Maç Sonuçları](https://nearadin.net/canli-mac-sonuclari/): Futbol ve spor müsabakaları anlık canlı skor takibi.
+- [Son Depremler](https://nearadin.net/son-depremler/): Türkiye geneli anlık sismik hareketler ve deprem verileri.
+- [Kripto Piyasası](https://nearadin.net/kripto-para/): Kripto varlık fiyatları ve canlı piyasa verileri.
+- [Nöbetçi Eczane](https://nearadin.net/nobetci-eczane/): İl ve ilçelere göre güncel nöbetçi eczane bilgileri.
+- [Namaz Vakitleri](https://nearadin.net/namaz-vakitleri/): Şehirlere göre günlük ve aylık ezan ve namaz saatleri.
+- [Film İzle](https://nearadin.net/film-izle/): Güncel film önerileri ve sinema rehberi.
+
+## Site Haritaları (Sitemaps)
+
+- [XML Sitemap](https://nearadin.net/sitemap.xml): Tüm site URL ve dizin haritası.
+- [Google News Sitemap](https://nearadin.net/news-sitemap.xml): Son 48 saatlik anlık haber yayın haritası.
+
+## Resmi Kanallar ve İletişim
+
+- [X (Twitter)](https://x.com/nearadin2026): Resmi X hesabı (@nearadin2026).
+- [İletişim](https://nearadin.net/iletisim/): İletişim, künye ve bildirim kanalları.
