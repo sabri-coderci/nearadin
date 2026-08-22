@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/23/bodrum-fk-skor-eksik-oyun-iyi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T00:57:21+03:00</news:publication_date>
+      <news:title>Bodrum FK: Skor Eksik, Oyun İyi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/23/yaz-transferi-mourinhoyu-kurtardi-real-madrid-katalonyada.html</loc>
     <news:news>
       <news:publication>
@@ -365,17 +376,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/yunan-basinindan-skandal-provokasyon-israille-olasi-savast.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T23:20:32+03:00</news:publication_date>
-      <news:title>Yunan basınından skandal provokasyon: İsrail&#x27;le olası savaşta KKTC&#x27;deki Türk askeri hedef alınabilir</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/turkiye-akdeniz-oyunlarinda-1-gun-ustun-basari-gosterdi.html</loc>
     <news:news>
       <news:publication>
@@ -629,17 +629,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/fenerbahce-konyaspor-macina-damga-vuran-detay.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T21:57:57+03:00</news:publication_date>
-      <news:title>Fenerbahçe-Konyaspor maçına damga vuran detay</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/filistinde-genel-secimler-zamaninda-yapilacak.html</loc>
     <news:news>
       <news:publication>
@@ -673,25 +662,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/a-milli-kadin-basketbol-takimi-cekyaya-yenildi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-suriyede-askeri-otobuse-saldiri-cok-sayida-yar.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-22T21:49:21+03:00</news:publication_date>
-      <news:title>A Milli Kadın Basketbol Takımı, Çekya&#x27;ya Yenildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/fenerbahce-konyaspora-karsi-asensio-ile-sahada.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T21:47:12+03:00</news:publication_date>
-      <news:title>Fenerbahçe, Konyaspor&#x27;a karşı Asensio ile sahada</news:title>
+      <news:publication_date>2026-08-22T21:48:00+03:00</news:publication_date>
+      <news:title>Son dakika: Suriye&#x27;de askeri otobüse saldırı! Çok sayıda yaralı var</news:title>
     </news:news>
   </url>
   <url>
@@ -835,6 +813,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T17:51:27+03:00</news:publication_date>
       <news:title>Son dakika haberi: Fenerbahçe&#x27;den Anderson Talisca açıklaması!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/deprem-son-dakika-22-agustos-bugun-deprem-mi-oldu-nerede.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T17:50:00+03:00</news:publication_date>
+      <news:title>DEPREM SON DAKİKA 22 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 22 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</news:title>
     </news:news>
   </url>
   <url>
@@ -1165,6 +1154,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T11:26:00+03:00</news:publication_date>
       <news:title>SON DAKİKA: Türk gemisine saldırı! Ölü ve yaralılar var...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-haberi-antalya-havalimaninda-sevgilisini-oldure.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T11:14:06+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Antalya Havalimanı&#x27;nda sevgilisini öldüren emekli polis adliyede | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
