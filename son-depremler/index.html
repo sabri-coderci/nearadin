@@ -83,47 +83,50 @@
         </div>
     </div>
 
-    <script>
-        async function fetchEarthquakes() {
-            try {
-                const response = await fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live');
-                const data = await response.json();
-                
-                const listEl = document.getElementById('earthquakeList');
-                const loadingEl = document.getElementById('loading');
-                const badgeEl = document.getElementById('updateBadge');
+   <script>
+    async function fetchEarthquakes() {
+        try {
+            const response = await fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live');
+            const data = await response.json();
+            
+            const listEl = document.getElementById('earthquakeList');
+            const loadingEl = document.getElementById('loading');
+            const badgeEl = document.getElementById('updateBadge');
 
-                listEl.innerHTML = '';
-                loadingEl.style.display = 'none';
+            listEl.innerHTML = '';
+            loadingEl.style.display = 'none';
 
-                // Güncelleme saatini yazdır
-                const now = new Date();
-                badgeEl.innerText = `Son Güncelleme: ${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR')}`;
+            // Güncelleme saatini yazdır
+            const now = new Date();
+            badgeEl.innerText = `Son Güncelleme: ${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR')}`;
 
-                if(data && data.result) {
-                    data.result.slice(0, 50).forEach(eq => {
-                        const li = document.createElement('li');
-                        li.className = 'earthquake-item';
-                        li.innerHTML = `
-                            <div class="eq-info">
-                                <span class="eq-title">${eq.title}</span>
-                                <span class="eq-time">🕒 ${eq.date}</span>
-                                <span class="eq-depth">Derinlik: ${eq.depth} km</span>
-                            </div>
-                            <div class="eq-mag">${eq.mag}</div>
-                        `;
-                        listEl.appendChild(li);
-                    });
-                } else {
-                    loadingEl.style.display = 'block';
-                    loadingEl.innerText = 'Deprem verileri şu an alınamadı.';
-                }
-            } catch (error) {
-                document.getElementById('loading').innerText = 'Bağlantı hatası oluştu.';
+            if(data && data.result) {
+                data.result.slice(0, 50).forEach(eq => {
+                    // API değişkeni için yedekli tarih kontrolü
+                    const earthquakeTime = eq.date_time || eq.date || eq.created_at || (eq.date && eq.time ? `${eq.date} ${eq.time}` : 'Tarih Yok');
+
+                    const li = document.createElement('li');
+                    li.className = 'earthquake-item';
+                    li.innerHTML = `
+                        <div class="eq-info">
+                            <span class="eq-title">${eq.title}</span>
+                            <span class="eq-time">🕒 ${earthquakeTime}</span>
+                            <span class="eq-depth">Derinlik: ${eq.depth} km</span>
+                        </div>
+                        <div class="eq-mag">${eq.mag}</div>
+                    `;
+                    listEl.appendChild(li);
+                });
+            } else {
+                loadingEl.style.display = 'block';
+                loadingEl.innerText = 'Deprem verileri şu an alınamadı.';
             }
+        } catch (error) {
+            document.getElementById('loading').innerText = 'Bağlantı hatası oluştu.';
         }
-        fetchEarthquakes();
-    </script>
+    }
+    fetchEarthquakes();
+</script>
 
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
