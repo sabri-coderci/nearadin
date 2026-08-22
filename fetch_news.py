@@ -203,11 +203,7 @@ def verify_and_generate_backlinks(header_html, footer_html):
     {footer_html}
 </body>
 </html>'''
-
-    # Backlink sayfasını oluştur (YENİ EKLENEN SATIR)
-    verify_and_generate_backlinks(header_html, footer_html)
-
-    
+  
     with open("backlink/index.html", "w", encoding="utf-8") as f:
         f.write(backlink_page_html)
 
@@ -487,6 +483,11 @@ def fetch_and_generate():
         whos_amung_us_code=whos_amung_us_code,
         admatic_code=admatic_code
     )
+
+    
+    # Backlink sayfasını oluştur (YENİ EKLENEN SATIR)
+    verify_and_generate_backlinks(
+        header_html, footer_html)
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
