@@ -413,9 +413,6 @@ def fetch_and_generate():
     )
 
     
-    # Backlink sayfasını oluştur (YENİ EKLENEN SATIR)
-    verify_and_generate_backlinks(
-        header_html, footer_html)
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
