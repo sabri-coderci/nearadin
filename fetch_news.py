@@ -204,6 +204,10 @@ def verify_and_generate_backlinks(header_html, footer_html):
 </body>
 </html>'''
 
+    # Backlink sayfasını oluştur (YENİ EKLENEN SATIR)
+    verify_and_generate_backlinks(header_html, footer_html)
+
+    
     with open("backlink/index.html", "w", encoding="utf-8") as f:
         f.write(backlink_page_html)
 
