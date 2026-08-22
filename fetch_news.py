@@ -133,6 +133,81 @@ def get_footer_html():
     </footer>
     '''
 
+import urllib.request
+import os
+
+# Sisteme başvuran/eklenen sitelerin listesi
+BACKLINK_SITES = [
+    {"name": "Teknoloji Blogu", "url": "https://ornek-site1.com"},
+    {"name": "Haber Portalı", "url": "https://ornek-site2.com"}
+]
+
+def verify_and_generate_backlinks(header_html, footer_html):
+    """Karşı sitede nearadin.net linki var mı kontrol eder, varsa backlink.html sayfasına ekler."""
+    os.makedirs("backlink", exist_ok=True)
+    verified_links_html = ""
+    
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+
+    for site in BACKLINK_SITES:
+        try:
+            # Karşı sitenin kodunu çek
+            req = urllib.request.Request(site["url"], headers=headers)
+            with urllib.request.urlopen(req, timeout=8) as response:
+                page_html = response.read().decode('utf-8', errors='ignore')
+                
+                # Sitede nearadin.net adresi geçiyor mu kontrol et
+                if "nearadin.net" in page_html:
+                    verified_links_html += f'''
+                    <li style="background: white; padding: 12px 16px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center;">
+                        <a href="{site['url']}" target="_blank" rel="nofollow sponsored" style="font-weight: bold; color: #0056b3; text-decoration: none;">🔗 {site['name']}</a>
+                        <span style="color: #28a745; font-size: 12px; font-weight: bold;">✅ Doğrulandı</span>
+                    </li>'''
+        except Exception as e:
+            print(f"{site['url']} kontrol edilirken hata oluştu: {e}")
+
+    if not verified_links_html:
+        verified_links_html = "<p style='color: #65676b;'>Henüz doğrulanmış bir backlink ortaklığı bulunmuyor.</p>"
+
+    # backlink/index.html sayfa yapısı
+    backlink_page_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backlink Ortakları - nearadin.net</title>
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
+        .card {{ background: white; padding: 20px; border-radius: 8px; border: 1px solid #e4e6eb; margin-bottom: 20px; }}
+        h1 {{ font-size: 20px; color: #0056b3; margin-bottom: 10px; }}
+        code {{ background: #f0f2f5; padding: 8px; display: block; border-radius: 4px; font-size: 12px; margin: 10px 0; word-break: break-all; }}
+        ul {{ list-style: none; padding: 0; }}
+    </style>
+</head>
+<body>
+    {header_html}
+    <div class="container">
+        <div class="card">
+            <h1>🤝 Otomatik Backlink Ağı</h1>
+            <p style="font-size: 14px; color: #65676b;">Sitenize aşağıdaki kodu ekleyin, sistemimiz otomatik doğruladıktan sonra siteniz bu listede yer alsın:</p>
+            <code>&lt;a href="https://nearadin.net" target="_blank"&gt;nearadin.net - Son Dakika Haberler&lt;/a&gt;</code>
+        </div>
+
+        <h2 style="font-size: 16px; margin-bottom: 12px;">Destekleyen Siteler</h2>
+        <ul>
+            {verified_links_html}
+        </ul>
+    </div>
+    {footer_html}
+</body>
+</html>'''
+
+    with open("backlink/index.html", "w", encoding="utf-8") as f:
+        f.write(backlink_page_html)
+
+
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
