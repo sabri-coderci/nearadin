@@ -135,15 +135,6 @@ def get_footer_html():
     </footer>
     '''
 
-import json
-import os
-from bs4 import BeautifulSoup
-from flask import Flask, jsonify, request  # Sitenizde Flask/FastAPI kullanıyorsanız
-
-VERIFIED_SITES_FILE = "verified_sites.json"
-
-
-# 1. Karşı siteyi tarayan yardımcı fonksiyon
 def check_backlink_exists(site_url, target_link="https://nearadin.net"):
     try:
         headers = {"User-Agent": "Mozilla/5.0 (NearadinBot/1.0)"}
