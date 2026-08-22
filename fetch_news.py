@@ -827,6 +827,7 @@ def fetch_and_generate():
     <priority>0.8</priority>
   </url>\n'''
 
+                # XML Sitemap & Arşiv Yapısı
         archive_dates_dict = {}
 
         if os.path.exists("haber"):
@@ -835,6 +836,11 @@ def fetch_and_generate():
                     if file_name.endswith(".html"):
                         rel_path = os.path.relpath(os.path.join(root_dir, file_name), "haber")
                         clean_rel_path = rel_path.replace("\\", "/")
+                        
+                        # 1. Günlük index.html sayfalarını haber URL'i olarak ekleme
+                        if file_name == "index.html":
+                            continue
+                            
                         page_url = f"https://nearadin.net/haber/{clean_rel_path}"
                         
                         sitemap_items += f'''  <url>
@@ -847,21 +853,26 @@ def fetch_and_generate():
                         path_parts = clean_rel_path.split('/')
                         if len(path_parts) >= 3:
                             year, month, day = path_parts[0], path_parts[1], path_parts[2]
+                            
+                            # 2. Doğru sıralama için key: YYYY/MM/DD, value: (GG.AA.YYYY, Link)
+                            sort_key = f"{year}/{month}/{day}"
                             d_str = f"{day}.{month}.{year}"
                             folder_link = f"/haber/{year}/{month}/{day}/"
-                            archive_dates_dict[d_str] = folder_link
+                            
+                            archive_dates_dict[sort_key] = (d_str, folder_link)
 
-        # Ana Arşiv Sayfası (arsiv/index.html)
+        # Ana Arşiv Sayfası (arsiv/index.html) - YYYY/MM/DD formatına göre doğru sıralama
         archive_list_html = ""
-        for date_item in sorted(list(archive_dates_dict.keys()), reverse=True):
-            folder_link = archive_dates_dict[date_item]
+        for sort_key in sorted(archive_dates_dict.keys(), reverse=True):
+            d_str, folder_link = archive_dates_dict[sort_key]
             archive_list_html += f'''
             <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
                 <a href="{folder_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
-                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {date_item} Tarihli Tüm Haberler</span>
+                    <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {d_str} Tarihli Tüm Haberler</span>
                     <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
                 </a>
             </li>'''
+
 
         archive_page_html = f'''<!DOCTYPE html>
 <html lang="tr">
