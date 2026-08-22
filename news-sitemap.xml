@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/23/ilhan-palut-4-2-kaybettik-ama-sinyaller-iyi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T00:42:08+03:00</news:publication_date>
+      <news:title>İlhan Palut: &#x27;4-2 kaybettik ama sinyaller iyi!&#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/23/trumpa-mahkemeden-kotu-haber.html</loc>
     <news:news>
       <news:publication>
@@ -585,17 +596,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/japonyada-lezzet-koprusu-turk-mutfagi-atolyesi-duzenlendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T21:52:00+03:00</news:publication_date>
-      <news:title>Japonya’da lezzet köprüsü: Türk Mutfağı Atölyesi düzenlendi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/inter-monzayi-4-1-yenip-sezona-galibiyetle-basladi.html</loc>
     <news:news>
       <news:publication>
@@ -805,6 +805,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/22/deprem-son-dakika-22-agustos-bugun-deprem-mi-oldu-nerede.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T17:50:00+03:00</news:publication_date>
+      <news:title>DEPREM SON DAKİKA 22 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 22 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/22/son-dakika-istanbul-metrosunda-intihar-girisimi.html</loc>
     <news:news>
       <news:publication>
@@ -860,6 +871,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/22/giresunda-helikopter-dustu-iddiasi-valilik-ve-piraziz-be.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T17:12:18+03:00</news:publication_date>
+      <news:title>&#x27;Giresun&#x27;da helikopter düştü&#x27; iddiası! Valilik ve Piraziz Belediye Başkanı&#x27;ndan peş peşe açıklamalar</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/22/son-dakika-giresunda-helikopter-dustu-iddiasi-valilik-v.html</loc>
     <news:news>
       <news:publication>
@@ -890,6 +912,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T16:06:44+03:00</news:publication_date>
       <news:title>Son Dakika Deprem 22 Ağustos 2026 Listesi : Bugün en son nerede deprem oldu? AFAD ve Kandilli Son Depremler Listesi ve Anlık Veriler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-alparslan-kuytul-suc-orgutu-sorusturmasinda-yeni.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T16:02:51+03:00</news:publication_date>
+      <news:title>SON DAKİKA! Alparslan Kuytul suç örgütü soruşturmasında yeni gelişme! İrtibat ağında FETÖ bağlantıları</news:title>
     </news:news>
   </url>
   <url>
@@ -1011,17 +1044,6 @@
       </news:publication>
       <news:publication_date>2026-08-22T14:18:00+03:00</news:publication_date>
       <news:title>Alihan Kuriş suç örgütü soruşturmasında 12 şüpheli daha yakalandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/giresunda-helikopter-dustu-iddiasi-gaziantep-valisinden.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T14:14:00+03:00</news:publication_date>
-      <news:title>&#x27;Giresun&#x27;da helikopter düştü&#x27; iddiası! Gaziantep Valisi&#x27;nden açıklama</news:title>
     </news:news>
   </url>
   <url>
