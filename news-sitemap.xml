@@ -19,7 +19,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T00:45:00+03:00</news:publication_date>
+      <news:publication_date>2026-08-23T00:45:21+03:00</news:publication_date>
       <news:title>Yaz transferi Mourinho&#x27;yu kurtardı: Real Madrid Katalonya&#x27;dan son dakika galibiyetiyle döndü</news:title>
     </news:news>
   </url>
@@ -32,17 +32,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T00:44:41+03:00</news:publication_date>
       <news:title>İsmail Kartal&#x27;dan transfer ve ayrılık açıklaması! Yeni takviyenin bölgesini duyurdu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/arda-guler-asist-yapti-mourinho-ilk-macina-cikti-kazanan-9.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T00:36:56+03:00</news:publication_date>
-      <news:title>Arda Güler asist yaptı, Mourinho ilk maçına çıktı! Kazanan 90+1&#x27;de belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -142,6 +131,17 @@
       </news:publication>
       <news:publication_date>2026-08-23T00:03:07+03:00</news:publication_date>
       <news:title>Greenwood&#x27;dan Konyaspor&#x27;a karşı resital</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T00:00:00+03:00</news:publication_date>
+      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 23 Ağustos 2026</news:title>
     </news:news>
   </url>
   <url>
@@ -673,6 +673,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/22/fenerbahce-konyaspora-karsi-asensio-ile-sahada.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T21:47:12+03:00</news:publication_date>
+      <news:title>Fenerbahçe, Konyaspor&#x27;a karşı Asensio ile sahada</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/22/inter-monzayi-4-1-yendi.html</loc>
     <news:news>
       <news:publication>
@@ -725,17 +736,6 @@
       </news:publication>
       <news:publication_date>2026-08-22T20:19:00+03:00</news:publication_date>
       <news:title>TEKNOFEST Mavi Vatan’da 3. gün coşkusu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/kuytulculara-yonelik-sorusturmada-carpici-detay-cimere-6.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T18:58:47+03:00</news:publication_date>
-      <news:title>Kuytulcular&#x27;a yönelik soruşturmada çarpıcı detay! CİMER&#x27;e 6 bin ihbar yapılmış</news:title>
     </news:news>
   </url>
   <url>
@@ -912,6 +912,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T16:06:44+03:00</news:publication_date>
       <news:title>Son Dakika Deprem 22 Ağustos 2026 Listesi : Bugün en son nerede deprem oldu? AFAD ve Kandilli Son Depremler Listesi ve Anlık Veriler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-alparslan-kuytul-suc-orgutu-sorusturmasinda-yeni.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T16:02:51+03:00</news:publication_date>
+      <news:title>SON DAKİKA! Alparslan Kuytul suç örgütü soruşturmasında yeni gelişme! İrtibat ağında FETÖ bağlantıları</news:title>
     </news:news>
   </url>
   <url>
