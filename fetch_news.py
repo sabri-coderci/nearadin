@@ -649,10 +649,38 @@ def fetch_and_generate():
             if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI ---
+        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI (BİRİKMİŞ VERİ YAPISI) ---
+        import json
+
         for folder_path, group_data in daily_news_grouped.items():
+            json_path = f"haber/{folder_path}/news.json"
+            accumulated_news = []
+
+            # 1. O güne ait önceden birikmiş haberler varsa JSON'dan oku
+            if os.path.exists(json_path):
+                try:
+                    with open(json_path, "r", encoding="utf-8") as jf:
+                        accumulated_news = json.load(jf)
+                except Exception:
+                    accumulated_news = []
+
+            # 2. RSS'ten yeni gelen haberleri mükerrer olmayacak şekilde listeye ekle
+            existing_urls = {item['full_url'] for item in accumulated_news}
+            for new_item in group_data["news_items"]:
+                if new_item['full_url'] not in existing_urls:
+                    accumulated_news.append(new_item)
+                    existing_urls.add(new_item['full_url'])
+
+            # 3. Haberleri saat sırasına göre diz (en yeni en üstte)
+            accumulated_news.sort(key=lambda x: x['time'], reverse=True)
+
+            # 4. Güncellenmiş birikmiş haber listesini JSON olarak sakla
+            with open(json_path, "w", encoding="utf-8") as jf:
+                json.dump(accumulated_news, jf, ensure_ascii=False, indent=2)
+
+            # 5. İndeks HTML sayfasını o gün biriken TÜM haberlerle oluştur
             day_cards_html = ""
-            for idx, d_news in enumerate(group_data["news_items"]):
+            for idx, d_news in enumerate(accumulated_news):
                 day_cards_html += f'''
                 <article class="news-card">
                     <div class="card-header">
@@ -699,16 +727,10 @@ def fetch_and_generate():
     </style>
 </head>
 <body>
-
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {header_html}
     <div class="container">
         <div class="status-bar">
-            <span>📅 {group_data['date_str']} Tarihli Haber Listesi</span>
+            <span>📅 {group_data['date_str']} Tarihli Haber Listesi ({len(accumulated_news)} Haber)</span>
             <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
         </div>
         <main>
@@ -721,6 +743,7 @@ def fetch_and_generate():
 </html>'''
             with open(f"haber/{folder_path}/index.html", "w", encoding="utf-8") as f:
                 f.write(daily_index_html)
+
 
         # Anasayfa (index.html)
         full_html = f'''<!DOCTYPE html>
