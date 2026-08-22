@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/23/hukumluler-ormancilikta-egitime-basladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T01:21:21+03:00</news:publication_date>
+      <news:title>Hükümlüler Ormancılıkta Eğitime Başladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/umut-eskikoy-zor-maci-kazandik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T01:08:31+03:00</news:publication_date>
+      <news:title>Umut Eskiköy: Zor Maçı Kazandık</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/korkmaz-bundan-sonra-maglup-olmayacagiz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T01:06:32+03:00</news:publication_date>
+      <news:title>Korkmaz: &#x27;Bundan sonra mağlup olmayacağız&#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/23/bodrum-fk-skor-eksik-oyun-iyi.html</loc>
     <news:news>
       <news:publication>
@@ -46,14 +79,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/trumpa-mahkemeden-kotu-haber.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-23-ag.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T00:24:38+03:00</news:publication_date>
-      <news:title>Trump&#x27;a mahkemeden kötü haber</news:title>
+      <news:publication_date>2026-08-23T00:22:00+03:00</news:publication_date>
+      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? 23 Ağustos 2026 AFAD ve Kandilli son depremler</news:title>
     </news:news>
   </url>
   <url>
@@ -101,17 +134,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-haberi-trabzonspordan-fabinho-bombasi-anlasmay.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T00:07:08+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Trabzonspor&#x27;dan Fabinho bombası! Anlaşmaya varıldı... - Galeri - Trend Spor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/bayern-munih-almanya-super-kupasini-kazandi.html</loc>
     <news:news>
       <news:publication>
@@ -131,17 +153,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T00:03:07+03:00</news:publication_date>
       <news:title>Greenwood&#x27;dan Konyaspor&#x27;a karşı resital</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T00:00:00+03:00</news:publication_date>
-      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 23 Ağustos 2026</news:title>
     </news:news>
   </url>
   <url>
@@ -208,6 +219,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T23:52:34+03:00</news:publication_date>
       <news:title>Almanya Süper Kupası&#x27;nın sahibi Bayern Münih</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-spor-haberi-kerem-akturkoglu-korkuttu-fenerbah.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T23:52:00+03:00</news:publication_date>
+      <news:title>Son Dakika Spor Haberi | Kerem Aktürkoğlu korkuttu, Fenerbahçeden açıklama geldi</news:title>
     </news:news>
   </url>
   <url>
@@ -376,6 +398,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/22/yunan-basinindan-skandal-provokasyon-israille-olasi-savast.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T23:20:32+03:00</news:publication_date>
+      <news:title>Yunan basınından skandal provokasyon: İsrail&#x27;le olası savaşta KKTC&#x27;deki Türk askeri hedef alınabilir</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/22/turkiye-akdeniz-oyunlarinda-1-gun-ustun-basari-gosterdi.html</loc>
     <news:news>
       <news:publication>
@@ -395,6 +428,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T23:13:00+03:00</news:publication_date>
       <news:title>Son Dakika | Fenerbahçe&#x27;de Kerem Aktürkoğlu sedyeyle çıkarılıp hastaneye götürüldü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/israilden-son-dakika-turkiye-duyurusu-kabul-etmeyecegiz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T23:04:00+03:00</news:publication_date>
+      <news:title>İsrail&#x27;den son dakika Türkiye duyurusu: Kabul etmeyeceğiz!</news:title>
     </news:news>
   </url>
   <url>
@@ -508,17 +552,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/rizespor-0-2-samsunspor-mac-sonrasi-degerlendirmeler.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T22:29:11+03:00</news:publication_date>
-      <news:title>Rizespor 0-2 Samsunspor: Maç Sonrası Değerlendirmeler</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/alanyaspor-besiktas-macina-hazir.html</loc>
     <news:news>
       <news:publication>
@@ -582,17 +615,6 @@
       </news:publication>
       <news:publication_date>2026-08-22T22:10:23+03:00</news:publication_date>
       <news:title>Lyon&#x27;dan Fenerbahçe maçı öncesi flaş karar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/israilden-son-dakika-turkiye-duyurusu-kabul-etmeyecegiz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T22:10:00+03:00</news:publication_date>
-      <news:title>İsrail&#x27;den son dakika Türkiye duyurusu: Kabul etmeyeceğiz!</news:title>
     </news:news>
   </url>
   <url>
@@ -662,28 +684,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-suriyede-askeri-otobuse-saldiri-cok-sayida-yar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T21:48:00+03:00</news:publication_date>
-      <news:title>Son dakika: Suriye&#x27;de askeri otobüse saldırı! Çok sayıda yaralı var</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/fenerbahce-konyaspora-karsi-asensio-ile-sahada.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T21:47:12+03:00</news:publication_date>
-      <news:title>Fenerbahçe, Konyaspor&#x27;a karşı Asensio ile sahada</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/inter-monzayi-4-1-yendi.html</loc>
     <news:news>
       <news:publication>
@@ -695,14 +695,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/tofas-ilk-hazirlik-macini-kazandi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-haberi-trabzonspordan-fabinho-bombasi-anlasmay.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-22T21:40:13+03:00</news:publication_date>
-      <news:title>TOFAŞ, İlk Hazırlık Maçını Kazandı</news:title>
+      <news:publication_date>2026-08-22T21:18:25+03:00</news:publication_date>
+      <news:title>Son dakika haberi: Trabzonspor&#x27;dan Fabinho bombası! Anlaşmaya varıldı... - Galeri - Trend Spor</news:title>
     </news:news>
   </url>
   <url>
@@ -849,28 +849,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/emekli-promosyonunda-son-dakika-bankalarda-rekabet-kizisti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T17:39:16+03:00</news:publication_date>
-      <news:title>EMEKLİ PROMOSYONUNDA SON DAKİKA: Bankalarda rekabet kızıştı: En yüksek promosyon veren banka belli oldu: İşte Ağustos emekli promosyon limitleri...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-kuytulcular-sorusturmasinda-56-supheli-adliyeye.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T17:38:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Kuytulcular soruşturmasında 56 şüpheli adliyeye sevk edildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/son-dakika-m2-yenikapi-haciosman-metrosu-sanayi-istasyonu.html</loc>
     <news:news>
       <news:publication>
@@ -915,17 +893,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-alparslan-kuytul-suc-orgutu-sorusturmasinda-yeni.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T16:02:51+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Alparslan Kuytul suç örgütü soruşturmasında yeni gelişme! İrtibat ağında FETÖ bağlantıları</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/son-dakika-giresunda-helikopter-dustu-iddiasi.html</loc>
     <news:news>
       <news:publication>
@@ -959,17 +926,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-yeni-parti-gaziantep-milletvekili-melih-meric-is.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T15:22:13+03:00</news:publication_date>
-      <news:title>Son dakika: Yeni Parti Gaziantep Milletvekili Melih Meriç İstanbul&#x27;a getirildi | Son dakika haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/giresunda-hava-araci-dustu-ihbari-ekipleri-harekete-gecir.html</loc>
     <news:news>
       <news:publication>
@@ -978,17 +934,6 @@
       </news:publication>
       <news:publication_date>2026-08-22T14:58:00+03:00</news:publication_date>
       <news:title>Giresun&#x27;da &quot;hava aracı düştü&quot; ihbarı ekipleri harekete geçirdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/suleymancilara-ikinci-dalga-operasyon-12-kisi-gozaltina-ali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T14:42:00+03:00</news:publication_date>
-      <news:title>Süleymancılara ikinci dalga operasyon: 12 kişi gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -1102,17 +1047,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-bicaklanan-yeni-partili-vekil-istanbula-nakled.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T13:20:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Bıçaklanan YENİ Partili vekil İstanbul&#x27;a nakledildi! Son durumu açıklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/22/ev-kadinlarina-emeklilik-yolu-aciliyor-teklif-tbmmye-sunul.html</loc>
     <news:news>
       <news:publication>
@@ -1176,6 +1110,17 @@
       </news:publication>
       <news:publication_date>2026-08-22T11:14:06+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Antalya Havalimanı&#x27;nda sevgilisini öldüren emekli polis adliyede | Son dakika haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-depremler-istanbulda-deprem-mi-oldu-22-agustos.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-22T09:10:00+03:00</news:publication_date>
+      <news:title>Son dakika depremler! İstanbul&#x27;da deprem mi oldu? 22 Ağustos 2026 nerede, ne zaman deprem oldu?</news:title>
     </news:news>
   </url>
   <url>
