@@ -7,3 +7,4 @@ Sitemap: https://nearadin.net/sitemap.xml
 
 
 Sitemap: https://nearadin.net/sitemap.xml
+Sitemap: https://nearadin.net/news-sitemap.xml
