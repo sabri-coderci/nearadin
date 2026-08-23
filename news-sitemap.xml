@@ -2,6 +2,391 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-diyarbakirda-plaza-yangini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:46:00+03:00</news:publication_date>
+      <news:title>Son dakika: Diyarbakır&#x27;da plaza yangını!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/alanyaspor-besiktasi-1-0-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:44:11+03:00</news:publication_date>
+      <news:title>Alanyaspor, Beşiktaş&#x27;ı 1-0 Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-besiktas-alanyaspor-deplasmaninda-maglup-bu-se.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:32:44+03:00</news:publication_date>
+      <news:title>Son dakika: Beşiktaş, Alanyaspor deplasmanında mağlup! Bu sezon ilk puan kaybı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/fenerbahceyi-deviren-genclerbirliginden-bir-sansasyonel-ga.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:32:23+03:00</news:publication_date>
+      <news:title>Fenerbahçe&#x27;yi deviren Gençlerbirliği&#x27;nden bir sansasyonel galibiyet daha</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/besiktas-alanyada-kayip.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:23:55+03:00</news:publication_date>
+      <news:title>Beşiktaş, Alanya&#x27;da kayıp</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/trabzonspor-basaksehiri-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T23:20:21+03:00</news:publication_date>
+      <news:title>Trabzonspor, Başakşehir&#x27;i Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/boluspor-mardin-1969-spora-3-0-yenildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:58:31+03:00</news:publication_date>
+      <news:title>Boluspor, Mardin 1969 Spor&#x27;a 3-0 Yenildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/nwaiwu-3-puan-aldigimiz-icin-mutluyuz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:56:33+03:00</news:publication_date>
+      <news:title>Nwaiwu: 3 Puan Aldığımız İçin Mutluyuz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/getafe-enes-unal-ile-galibiyeti-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:51:22+03:00</news:publication_date>
+      <news:title>Getafe, Enes Ünal ile Galibiyeti Aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/inandan-izmir-gazeteciler-cemiyetine-sert-tepki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:50:21+03:00</news:publication_date>
+      <news:title>İnan&#x27;dan İzmir Gazeteciler Cemiyeti&#x27;ne Sert Tepki</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/muciden-basaksehir-galibiyeti-ve-uefa-heyecani.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:49:33+03:00</news:publication_date>
+      <news:title>Muçi&#x27;den Başakşehir Galibiyeti ve UEFA Heyecanı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/voleybol-milliler-slovenyayi-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:49:21+03:00</news:publication_date>
+      <news:title>Voleybol Milliler Slovenya&#x27;yı Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/finansal-sikintilar-onlari-da-vurdu-para-bulamazlarsa-lige.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:48:58+03:00</news:publication_date>
+      <news:title>Finansal sıkıntılar onları da vurdu! Para bulamazlarsa lige katılamayacaklar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/eyupsporda-pulat-maglubiyeti-degerlendirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:46:21+03:00</news:publication_date>
+      <news:title>Eyüpspor&#x27;da Pulat, mağlubiyeti değerlendirdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/sonunda-ikna-edildiler-galatasaray-yeni-golcusune-kavusuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:44:00+03:00</news:publication_date>
+      <news:title>Sonunda ikna edildiler! Galatasaray yeni golcüsüne kavuşuyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/boluspor-mardin-1969a-3-0-yenildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:42:22+03:00</news:publication_date>
+      <news:title>Boluspor, Mardin 1969&#x27;a 3-0 Yenildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/kocaelispor-hirvat-stoper-maglicayi-transfer-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:41:21+03:00</news:publication_date>
+      <news:title>Kocaelispor, Hırvat Stoper Maglica&#x27;yı Transfer Etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/goztepe-ve-genclerbirligi-ilk-yarisi-0-0-sona-erdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:39:23+03:00</news:publication_date>
+      <news:title>Göztepe ve Gençlerbirliği İlk Yarısı 0-0 Sona Erdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/koprunun-ayagina-carpan-jetskideki-1-kisi-oldu-1-kisi-yaral.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:39:00+03:00</news:publication_date>
+      <news:title>Köprünün ayağına çarpan jetskideki 1 kişi öldü, 1 kişi yaralandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/alanyaspor-besiktas-macinda-ilk-yarinin-sonucu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:37:21+03:00</news:publication_date>
+      <news:title>Alanyaspor - Beşiktaş Maçında İlk Yarının Sonucu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/alanyaspor-ve-besiktas-berabere.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:35:42+03:00</news:publication_date>
+      <news:title>Alanyaspor ve Beşiktaş Berabere</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/dogan-kavga-etmek-istemiyoruz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:35:33+03:00</news:publication_date>
+      <news:title>Doğan: Kavga Etmek İstemiyoruz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/trabzonspordan-moralli-galibiyet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:29:21+03:00</news:publication_date>
+      <news:title>Trabzonspor&#x27;dan Moralli Galibiyet</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/eyupsporda-yeni-hedef-alanyaspor-maci.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:26:21+03:00</news:publication_date>
+      <news:title>Eyüpspor&#x27;da Yeni Hedef Alanyaspor Maçı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/kapadokya-rallisi-odul-toreni-gerceklesti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:25:21+03:00</news:publication_date>
+      <news:title>Kapadokya Rallisi Ödül Töreni Gerçekleşti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/teknofest-mavi-vatani-343-bin-kisi-ziyaret-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:22:00+03:00</news:publication_date>
+      <news:title>TEKNOFEST Mavi Vatan&#x27;ı 343 bin kişi ziyaret etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/dogan-kaya-bronz-madalya-kazandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:21:41+03:00</news:publication_date>
+      <news:title>Doğan Kaya Bronz Madalya Kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/radoi-galibiyet-ve-gol-yememek-beni-mutlu-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:21:12+03:00</news:publication_date>
+      <news:title>Radoi: Galibiyet ve gol yememek beni mutlu etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/besiktastan-mac-oynanirken-flas-paylasim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:11:43+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;tan maç oynanırken flaş paylaşım</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/ankara-mamakta-agaclik-alanda-yangin-ekipler-mudahale-ediy.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:09:00+03:00</news:publication_date>
+      <news:title>Ankara Mamak&#x27;ta ağaçlık alanda yangın! Ekipler müdahale ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/boluspor-mardin-1969a-3-0-yenildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:05:23+03:00</news:publication_date>
+      <news:title>Boluspor, Mardin 1969&#x27;a 3-0 Yenildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/daha-imzasi-bile-kurumamisti-galatasaraydan-lemina-icin-ra.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:03:42+03:00</news:publication_date>
+      <news:title>Daha imzası bile kurumamıştı! Galatasaray&#x27;dan Lemina için radikal karar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/alanyaspor-besiktas-maci-golsuz-devam-ediyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:02:51+03:00</news:publication_date>
+      <news:title>Alanyaspor - Beşiktaş Maçı Golsüz Devam Ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/turkiye-taranto-2026da-20-madalya-kazandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T22:02:33+03:00</news:publication_date>
+      <news:title>Türkiye Taranto 2026&#x27;da 20 Madalya Kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/nuri-sahin-hak-ettigimiz-bir-maglubiyet-aldik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:58:21+03:00</news:publication_date>
+      <news:title>Nuri Şahin: Hak ettiğimiz bir mağlubiyet aldık</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/23/trabzonspor-tffye-seslendi.html</loc>
     <news:news>
       <news:publication>
@@ -10,6 +395,17 @@
       </news:publication>
       <news:publication_date>2026-08-23T21:55:00+03:00</news:publication_date>
       <news:title>Trabzonspor, TFF&#x27;ye seslendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/nuri-sahin-hak-ettigimiz-bir-maglubiyet-aldik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:53:41+03:00</news:publication_date>
+      <news:title>Nuri Şahin: &#x27;&#x27;Hak ettiğimiz bir mağlubiyet aldık&#x27;&#x27;</news:title>
     </news:news>
   </url>
   <url>
@@ -24,14 +420,58 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/akyazida-genclik-ve-spor-festivali-coskusu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/milliler-slovenyayi-yendi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T21:52:33+03:00</news:publication_date>
-      <news:title>Akyazı&#x27;da Gençlik ve Spor Festivali Coşkusu</news:title>
+      <news:publication_date>2026-08-23T21:52:32+03:00</news:publication_date>
+      <news:title>Milliler Slovenya&#x27;yı Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/besiktasta-3-degisiklikle-alanyaspora-konuk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:52:23+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;ta 3 Değişiklikle Alanyaspor&#x27;a Konuk</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-l-ankara-mamakta-agaclik-alanda-yangin-cikti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:49:00+03:00</news:publication_date>
+      <news:title>Son dakika l Ankara Mamak&#x27;ta ağaçlık alanda yangın çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/bandirmaspor-1-1-beraberlikle-ayakta-kaldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:43:21+03:00</news:publication_date>
+      <news:title>Bandırmaspor 1-1 Beraberlikle Ayakta Kaldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/a-milli-kadin-basketbol-takimi-cekyayi-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:41:21+03:00</news:publication_date>
+      <news:title>A Milli Kadın Basketbol Takımı, Çekya&#x27;yı Yendi</news:title>
     </news:news>
   </url>
   <url>
@@ -43,6 +483,17 @@
       </news:publication>
       <news:publication_date>2026-08-23T21:39:02+03:00</news:publication_date>
       <news:title>Fenerbahçe&#x27;nin Oosterwolde&#x27;den kazanacağı rakam belli oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/kerem-akturkoglu-taburcu-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:38:21+03:00</news:publication_date>
+      <news:title>Kerem Aktürkoğlu Taburcu Oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -63,7 +514,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T21:29:01+03:00</news:publication_date>
+      <news:publication_date>2026-08-23T21:29:00+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Ankara’da ağaçlık alanda yangın çıktı</news:title>
     </news:news>
   </url>
@@ -79,14 +530,47 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/bu-yilki-2-zaferi-hollanda-gpsinde-kazanan-lando-norris.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/a-milli-kadin-voleybol-takimi-slovenyayi-yendi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T21:25:47+03:00</news:publication_date>
-      <news:title>Bu yılki 2. zaferi... Hollanda GP&#x27;sinde kazanan Lando Norris</news:title>
+      <news:publication_date>2026-08-23T21:26:22+03:00</news:publication_date>
+      <news:title>A Milli Kadın Voleybol Takımı Slovenya&#x27;yı Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/norris-hollanda-gpyi-kazandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:25:21+03:00</news:publication_date>
+      <news:title>Norris, Hollanda GP&#x27;yi Kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/salahin-golleriyle-trabzonspor-ilk-galibiyetini-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:23:22+03:00</news:publication_date>
+      <news:title>Salah&#x27;ın Golleriyle Trabzonspor İlk Galibiyetini Aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/23/eyupspor-gaziantep-fkya-1-0-yenildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:23:12+03:00</news:publication_date>
+      <news:title>Eyüpspor, Gaziantep FK&#x27;ya 1-0 Yenildi</news:title>
     </news:news>
   </url>
   <url>
@@ -101,6 +585,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/23/kerem-akturkoglunun-saglik-durumu-iyi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-23T21:19:12+03:00</news:publication_date>
+      <news:title>Kerem Aktürkoğlu&#x27;nun Sağlık Durumu İyi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/23/son-dakika-filenin-sultanlari-avrupa-sampiyonasinda-2de.html</loc>
     <news:news>
       <news:publication>
@@ -112,14 +607,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-filenin-sultanlari-avrupa-sampiyonasinda-2de.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/kocaelide-ormanlik-alanda-yangin-kontrol-altina-alindi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T21:14:19+03:00</news:publication_date>
-      <news:title>Son dakika: Filenin Sultanları, Avrupa Şampiyonası’nda 2’de 2 yaptı! Slovenya’yı devirdik - Galeri - Trend Spor</news:title>
+      <news:publication_date>2026-08-23T21:14:26+03:00</news:publication_date>
+      <news:title>Kocaeli&#x27;de ormanlık alanda yangın! Kontrol altına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -131,17 +626,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T21:11:11+03:00</news:publication_date>
       <news:title>Mardin 1969, Boluspor&#x27;u 3-0 Yendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/eyupspor-1-0-gaziantep-fk.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T21:10:31+03:00</news:publication_date>
-      <news:title>Eyüpspor 1-0 Gaziantep FK</news:title>
     </news:news>
   </url>
   <url>
@@ -200,50 +684,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-trabzonspor-basaksehire-takilmadi-muhammed-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T21:05:37+03:00</news:publication_date>
-      <news:title>Son dakika | Trabzonspor, Başakşehir’e takılmadı! Muhammed Salah skoru belirledi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/mamakta-agaclik-alanda-yangin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T21:04:11+03:00</news:publication_date>
-      <news:title>Mamak&#x27;ta Ağaçlık Alanda Yangın</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/hakkaride-arac-baraja-dustu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:59:21+03:00</news:publication_date>
-      <news:title>Hakkari&#x27;de Araç Baraja Düştü</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/gebzede-orman-yangini-kontrol-altina-alindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:57:21+03:00</news:publication_date>
-      <news:title>Gebze&#x27;de Orman Yangını Kontrol Altına Alındı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/salah-varsa-sorun-yok-trabzonspor-misirli-yildiziyla-kazan.html</loc>
     <news:news>
       <news:publication>
@@ -288,17 +728,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-alanyaspor-besiktas-maci-sifresiz-izle-alanya-b.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:42:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA: Alanyaspor Beşiktaş maçı ŞİFRESİZ İZLE, Alanya BJK link</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/insansiz-deniz-araci-yarismasi-odulleri-sahiplerini-buldu.html</loc>
     <news:news>
       <news:publication>
@@ -321,25 +750,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/taylandda-51-saldiri-3-yarali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:35:31+03:00</news:publication_date>
-      <news:title>Tayland&#x27;da 51 Saldırı: 3 Yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/alanyaspor-besiktas-mucadelesinde-ilk-11ler-belli-oldu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/canli-anlatim-goller-ust-uste-kaciyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-23T20:35:06+03:00</news:publication_date>
-      <news:title>Alanyaspor-Beşiktaş mücadelesinde ilk 11&#x27;ler belli oldu</news:title>
+      <news:title>Canlı anlatım: Goller üst üste kaçıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -349,7 +767,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T20:33:30+03:00</news:publication_date>
+      <news:publication_date>2026-08-23T20:33:00+03:00</news:publication_date>
       <news:title>Son Dakika | Acun Ilıcalı gemileri yaktı: Kriz sonrası Aziz Yıldırım için yeni açıklama</news:title>
     </news:news>
   </url>
@@ -365,17 +783,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/turkiye-akdeniz-oyunlarinda-5-madalya-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:29:21+03:00</news:publication_date>
-      <news:title>Türkiye Akdeniz Oyunları&#x27;nda 5 Madalya Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/salahsiz-liverpool-ilk-macinda-puani-909da-kurtardi.html</loc>
     <news:news>
       <news:publication>
@@ -384,72 +791,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T20:29:08+03:00</news:publication_date>
       <news:title>Salah&#x27;sız Liverpool ilk maçında puanı 90+9&#x27;da kurtardı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/bandirmaspor-ve-keciorengucu-berabere-kaldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:25:42+03:00</news:publication_date>
-      <news:title>Bandırmaspor ve Keçiörengücü Berabere Kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/iran-amerika-yenildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:25:32+03:00</news:publication_date>
-      <news:title>İran: Amerika Yenildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/isil-zafer-akdeniz-oyunlarinda-altin-madalya-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:18:34+03:00</news:publication_date>
-      <news:title>Işıl Zafer Akdeniz Oyunları&#x27;nda Altın Madalya Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/murat-firattan-bronz-madalya.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:18:33+03:00</news:publication_date>
-      <news:title>Murat Fırat&#x27;tan Bronz Madalya</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/teknofestte-genc-muhendisler-odullerini-aldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:17:22+03:00</news:publication_date>
-      <news:title>TEKNOFEST&#x27;te Genç Mühendisler Ödüllerini Aldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/eyupspor-gaziantep-fk-ilk-yari-0-0.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:10:35+03:00</news:publication_date>
-      <news:title>Eyüpspor - Gaziantep FK İlk Yarı 0-0</news:title>
     </news:news>
   </url>
   <url>
@@ -464,223 +805,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/gebzede-orman-yangini-havadan-ve-karadan-mucadele-devam-ed.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/dun-geceye-damga-vuran-anlar-arkadasinin-hareketsiz-yattigi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T20:07:31+03:00</news:publication_date>
-      <news:title>Gebze&#x27;de Orman Yangını: Havadan ve Karadan Mücadele Devam Ediyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/trabzonspor-ve-basaksehir-esitligi-sagladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:07:21+03:00</news:publication_date>
-      <news:title>Trabzonspor ve Başakşehir Eşitliği Sağladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/eyupspor-gaziantep-fk-ilk-yari-0-0-beraberlik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T20:00:22+03:00</news:publication_date>
-      <news:title>Eyüpspor-Gaziantep FK İlk Yarı 0-0 Beraberlik</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/tcmb-repo-ihalesine-geri-donuyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:56:21+03:00</news:publication_date>
-      <news:title>TCMB repo ihalesine geri dönüyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/kahramanmaras-kadin-goalball-takimi-avrupa-ikincisi-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:48:25+03:00</news:publication_date>
-      <news:title>Kahramanmaraş Kadın Goalball Takımı, Avrupa ikincisi oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/almanya-letonyayi-3-1-yendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:48:21+03:00</news:publication_date>
-      <news:title>Almanya Letonya&#x27;yı 3-1 Yendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/bandirmaspor-ve-kectas-1-1-berabere-kaldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:46:12+03:00</news:publication_date>
-      <news:title>Bandırmaspor ve Keçtaş 1-1 Berabere Kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/tek-hedefleri-super-lig-idi-3-macta-tek-gol-dahi-atamadilar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:43:41+03:00</news:publication_date>
-      <news:title>Tek hedefleri Süper Lig idi! 3 maçta tek gol dahi atamadılar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/transfer-bitti-iste-acun-ilicalinin-yeni-yildizi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:38:47+03:00</news:publication_date>
-      <news:title>Transfer bitti! İşte Acun Ilıcalı&#x27;nın yeni yıldızı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/66-kurtdereli-yagli-gureslerinde-baspehlivan-mustafa-tas.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:32:22+03:00</news:publication_date>
-      <news:title>66. Kurtdereli Yağlı Güreşleri&#x27;nde Başpehlivan Mustafa Taş</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/bandirmaspor-ve-keciorengucu-1-1-berabere-kaldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:21:32+03:00</news:publication_date>
-      <news:title>Bandırmaspor ve Keçiörengücü 1-1 Berabere Kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/cevdet-yilmaz-mavi-vatan-guvenligi-stratejik-onemde.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:20:07+03:00</news:publication_date>
-      <news:title>Cevdet Yılmaz: Mavi Vatan güvenliği stratejik önemde</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/trabzonda-inanilmaz-anlar-salah-ilk-golunu-atti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:17:25+03:00</news:publication_date>
-      <news:title>Trabzon&#x27;da inanılmaz anlar! Salah ilk golünü attı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/trabzonspor-basaksehiri-agirladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:17:21+03:00</news:publication_date>
-      <news:title>Trabzonspor, Başakşehir&#x27;i Ağırladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/hayraboluda-motokros-sampiyonasi-sona-erdi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T19:14:33+03:00</news:publication_date>
-      <news:title>Hayrabolu&#x27;da Motokros Şampiyonası Sona Erdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/b1-futbol-milli-takimi-avrupada-dorduncu-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:52:21+03:00</news:publication_date>
-      <news:title>B1 Futbol Milli Takımı Avrupa&#x27;da Dördüncü Oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/tmo-117-milyon-ton-urun-alimi-yapti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:41:32+03:00</news:publication_date>
-      <news:title>TMO 11,7 milyon ton ürün alımı yaptı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/kocaelide-ormanlik-alanda-yangin-havadan-ve-karadan-mudaha.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:39:55+03:00</news:publication_date>
-      <news:title>Kocaeli&#x27;de ormanlık alanda yangın! Havadan ve karadan müdahale</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/onlara-karsi-hem-gol-atmak-hem-de-puan-almak-imkansiz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:26:55+03:00</news:publication_date>
-      <news:title>Onlara karşı hem gol atmak, hem de puan almak imkansız</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/brighton-aston-villayi-4-0-maglup-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:17:12+03:00</news:publication_date>
-      <news:title>Brighton, Aston Villa&#x27;yı 4-0 Mağlup Etti</news:title>
+      <news:publication_date>2026-08-23T18:18:49+03:00</news:publication_date>
+      <news:title>Dün geceye damga vuran anlar! Arkadaşının hareketsiz yattığını görünce dua etti</news:title>
     </news:news>
   </url>
   <url>
@@ -692,50 +824,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T18:13:00+03:00</news:publication_date>
       <news:title>Üniversite kayıt süreci yarın başlıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/manchester-cityden-son-anlarda-muhtesem-geri-donus.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:02:45+03:00</news:publication_date>
-      <news:title>Manchester City&#x27;den son anlarda muhteşem geri dönüş</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-depremler-listesi-23-agustos-2026-canli-ve-anlik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T18:01:00+03:00</news:publication_date>
-      <news:title>Son Dakika Depremler Listesi 23 Ağustos 2026 Canlı ve Anlık (Güncel veriler): Bugün en son nerede deprem oldu? Az Önce Deprem Mi Oldu? AFAD ve Kandilli Son Depremler Listesi ve Anlık Veriler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/brighton-son-avrupa-ligi-sampiyonu-aston-villayi-ilk-31-da.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T17:51:12+03:00</news:publication_date>
-      <news:title>Brighton, son Avrupa Ligi şampiyonu Aston Villa&#x27;yı ilk 31 dakikada paramparça etti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/ucak-kalkiyor-fabinhonun-trabzona-gelis-tarihi-belli-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T17:42:52+03:00</news:publication_date>
-      <news:title>Uçak kalkıyor! Fabinho&#x27;nun Trabzon&#x27;a geliş tarihi belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -794,47 +882,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/galatasaraydan-torreira-icin-veneziaya-olumsuz-yanit.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-trabzonspor-basaksehire-takilmadi-muhammed-s.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T17:01:59+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;dan Torreira için Venezia&#x27;ya olumsuz yanıt</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/ak-partiden-son-dakika-mavi-vatan-mesaji.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T16:57:00+03:00</news:publication_date>
-      <news:title>AK Parti&#x27;den son dakika Mavi Vatan mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/gida-denetimlerinde-16-milyar-liralik-ceza-kesildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T16:41:00+03:00</news:publication_date>
-      <news:title>Gıda denetimlerinde 1,6 milyar liralık ceza kesildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/vanda-feci-kaza-2-olu-9-yarali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T16:30:00+03:00</news:publication_date>
-      <news:title>Van&#x27;da feci kaza: 2 ölü, 9 yaralı</news:title>
+      <news:publication_date>2026-08-23T17:11:15+03:00</news:publication_date>
+      <news:title>Son dakika | Trabzonspor, Başakşehir’e takılmadı! Muhammed Salah skoru belirledi</news:title>
     </news:news>
   </url>
   <url>
@@ -915,17 +970,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/orman-yanginiyla-ilgili-12-supheli-tutuklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T12:35:00+03:00</news:publication_date>
-      <news:title>Orman yangınıyla ilgili 12 şüpheli tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/kerem-akturkoglundan-ilk-haber-geldi.html</loc>
     <news:news>
       <news:publication>
@@ -948,25 +992,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/suriye-disisleri-bakani-seybani-su-anda-israile-guvenmiyor.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-depremler-listesi-23-agustos-2026-canli-ve-anlik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T10:59:00+03:00</news:publication_date>
-      <news:title>Suriye Dışişleri Bakanı Şeybani: Şu anda İsrail&#x27;e güvenmiyoruz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-suriye-hava-ussu-saldirisinin-ardindan-israil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T10:53:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Suriye: Hava üssü saldırısının ardından İsrail’le temaslar kesildi</news:title>
+      <news:publication_date>2026-08-23T11:12:47+03:00</news:publication_date>
+      <news:title>Son Dakika Depremler Listesi 23 Ağustos 2026 Canlı ve Anlık (Güncel veriler): Bugün en son nerede deprem oldu? Az Önce Deprem Mi Oldu? AFAD ve Kandilli Son Depremler Listesi ve Anlık Veriler</news:title>
     </news:news>
   </url>
   <url>
@@ -978,17 +1011,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T10:37:39+03:00</news:publication_date>
       <news:title>Dünya devi Osimhen’de ısrarcı! Nijeryalı yıldıza mesaj gönderdiler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/bugun-altin-fiyatlari-canli-ve-anlik-23-agustos-2026-son-dak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T10:30:30+03:00</news:publication_date>
-      <news:title>Bugün Altın Fiyatları Canlı ve Anlık 23 Ağustos 2026 Son Dakika | Gram altın ve çeyrek altın ne kadar oldu? Altın fiyatları bugün ne kadar, yükseliyor mu? İşte altın fiyatları son durum tablosu...</news:title>
     </news:news>
   </url>
   <url>
@@ -1069,17 +1091,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-suc-cetelerinin-casusluk-agi-desifre-oldu-gizl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T06:52:40+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Suç çetelerinin casusluk ağı deşifre oldu! Gizli tanık Şelale, köstebekleri tek tek ifşa etti: Sadece emniyet ve adliye değil...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/23/son-dakika-diyarbakir-turkiyenin-petrol-ussu-oluyor-kay.html</loc>
     <news:news>
       <news:publication>
@@ -1099,28 +1110,6 @@
       </news:publication>
       <news:publication_date>2026-08-23T00:00:00+03:00</news:publication_date>
       <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 23 Ağustos 2026</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/son-dakika-fenerbahcede-kerem-akturkoglu-sedyeyle-cikaril.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T23:13:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Fenerbahçe&#x27;de Kerem Aktürkoğlu sedyeyle çıkarılıp hastaneye götürüldü</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/22/israilden-son-dakika-turkiye-duyurusu-kabul-etmeyecegiz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-22T23:04:00+03:00</news:publication_date>
-      <news:title>İsrail&#x27;den son dakika Türkiye duyurusu: Kabul etmeyeceğiz!</news:title>
     </news:news>
   </url>
 </urlset>
