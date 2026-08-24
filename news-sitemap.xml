@@ -2,14 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/abd-suriyeyi-teror-sponsorlari-listesinden-cikardi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/ogretmenlerin-mesleki-calisma-programinin-ilk-haftasi-cevrim.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T21:18:29+03:00</news:publication_date>
-      <news:title>ABD Suriye&#x27;yi terör sponsorları listesinden çıkardı</news:title>
+      <news:publication_date>2026-08-24T21:39:00+03:00</news:publication_date>
+      <news:title>Öğretmenlerin mesleki çalışma programının ilk haftası çevrim içi yapılacak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/cumhurbaskanligi-kupasi-heyecani.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:37:22+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanlığı Kupası Heyecanı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/galatasaray-goztepe-macina-hazirlaniyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:34:31+03:00</news:publication_date>
+      <news:title>Galatasaray, Göztepe Maçına Hazırlanıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/kocaelispor-amed-sf-maci-hazirliklari-tamamlandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:26:52+03:00</news:publication_date>
+      <news:title>Kocaelispor-Amed SF Maçı Hazırlıkları Tamamlandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-iyi-parti-milletvekili-selcuk-turkoglu-gazileri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:26:46+03:00</news:publication_date>
+      <news:title>Son dakika… İYİ Parti Milletvekili Selçuk Türkoğlu gazileri ziyaretinde darp edildi: Hastaneye kaldırıldı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/elazigspor-yeni-sezon-hazirliklarina-devam-ediyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:26:31+03:00</news:publication_date>
+      <news:title>Elazığspor Yeni Sezon Hazırlıklarına Devam Ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/millilerden-3te-3-basari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:25:21+03:00</news:publication_date>
+      <news:title>Millilerden 3&#x27;te 3 Başarı</news:title>
     </news:news>
   </url>
   <url>
@@ -32,6 +98,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T21:09:39+03:00</news:publication_date>
       <news:title>SON DAKİKA | Trabzonspor, Fabinho&#x27;nun maliyetini açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/milli-takim-macaristani-3-0-gecti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:09:31+03:00</news:publication_date>
+      <news:title>Milli Takım Macaristan&#x27;ı 3-0 Geçti</news:title>
     </news:news>
   </url>
   <url>
@@ -79,6 +156,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/kazanin-icine-dusen-genc-yanarak-can-verdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T21:00:22+03:00</news:publication_date>
+      <news:title>Kazanın içine düşen genç yanarak can verdi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/edersondan-parmak-isirtan-performans.html</loc>
     <news:news>
       <news:publication>
@@ -87,6 +175,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T20:58:45+03:00</news:publication_date>
       <news:title>Ederson&#x27;dan parmak ısırtan performans</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/camasta-2-kiz-kardesin-cansiz-bedeni-bulundu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:58:32+03:00</news:publication_date>
+      <news:title>Çamaş&#x27;ta 2 Kız Kardeşin Cansız Bedeni Bulundu</news:title>
     </news:news>
   </url>
   <url>
@@ -255,17 +354,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/sirnakta-127-adrese-kacakcilik-operasyonu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:28:21+03:00</news:publication_date>
-      <news:title>Şırnak&#x27;ta 127 Adrese Kaçakçılık Operasyonu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/abdden-irana-yaptirim-paketi.html</loc>
     <news:news>
       <news:publication>
@@ -310,17 +398,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/abdden-irana-yeni-yaptirimlar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:23:31+03:00</news:publication_date>
-      <news:title>ABD&#x27;den İran&#x27;a Yeni Yaptırımlar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/teknik-direktorunden-aciklama-can-uzunun-gelecegi-belli-ol.html</loc>
     <news:news>
       <news:publication>
@@ -354,17 +431,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-takip-kurulunun-ilk-toplantisi-tamamlandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:19:52+03:00</news:publication_date>
-      <news:title>Terörsüz Türkiye Takip Kurulu&#x27;nun ilk toplantısı tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/ahmet-duman-akdeniz-oyunlarinda-altin-madalya-kazandi.html</loc>
     <news:news>
       <news:publication>
@@ -384,17 +450,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T20:15:22+03:00</news:publication_date>
       <news:title>Gençlerbirliği&#x27;nde 24 yıl sonra bir ilk</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/2026-kpss-sinavi-icin-geri-sayim-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:14:22+03:00</news:publication_date>
-      <news:title>2026 KPSS Sınavı için Geri Sayım Başladı</news:title>
     </news:news>
   </url>
   <url>
@@ -530,28 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/tarik-biberovic-fenerbahceye-veda-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T18:55:32+03:00</news:publication_date>
-      <news:title>Tarık Biberovic Fenerbahçe&#x27;ye Veda Etti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/polonya-letonyayi-3-1-maglup-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T18:53:32+03:00</news:publication_date>
-      <news:title>Polonya, Letonya&#x27;yı 3-1 Mağlup Etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/elektrik-akimina-kapilan-cocuk-hayatini-kaybetti.html</loc>
     <news:news>
       <news:publication>
@@ -640,17 +673,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/ortalik-alev-alev-besiktastan-mhk-icin-cok-sert-aciklama.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T17:31:47+03:00</news:publication_date>
-      <news:title>Ortalık alev alev! Beşiktaş&#x27;tan MHK için çok sert açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/son-dakika-gazilere-polis-mudahalesi-iyi-partili-vekil-ha.html</loc>
     <news:news>
       <news:publication>
@@ -714,6 +736,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:33:47+03:00</news:publication_date>
       <news:title>Kafa travması geçiren Kerem Aktürkoğlu&#x27;ndan ilk açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:33:00+03:00</news:publication_date>
+      <news:title>Son dakika: Aziz İhsan Aktaş davasında karar!</news:title>
     </news:news>
   </url>
   <url>
@@ -783,17 +816,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-haberi-terorsuz-turkiye-surecinde-kritik-gun.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T16:20:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ... Terörsüz Türkiye sürecinde kritik gün: Takip Kurulu ilk toplantısına başladı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/son-dakika-terorsuz-turkiye-kurulu-toplandi.html</loc>
     <news:news>
       <news:publication>
@@ -838,25 +860,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-msb-onunde-basin-aciklamasi-yapmak-isteyen-gazi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-takip-kurulunun-ilk-toplantisi-basladi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T15:26:26+03:00</news:publication_date>
-      <news:title>Son Dakika | MSB önünde basın açıklaması yapmak isteyen gazilere polis engeli</news:title>
+      <news:publication_date>2026-08-24T16:13:00+03:00</news:publication_date>
+      <news:title>Terörsüz Türkiye Takip Kurulu&#x27;nun ilk toplantısı başladı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/ekkdan-2027-2029-ovp-mesaji.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-mebden-81-ile-genelge.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T14:27:41+03:00</news:publication_date>
-      <news:title>EKK&#x27;dan 2027-2029 OVP mesajı</news:title>
+      <news:publication_date>2026-08-24T16:12:00+03:00</news:publication_date>
+      <news:title>Son dakika: MEB&#x27;den 81 ile genelge!</news:title>
     </news:news>
   </url>
   <url>
@@ -967,39 +989,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T11:53:00+03:00</news:publication_date>
       <news:title>Son Dakika... Balçova Belediye Başkanı Onur Yiğit görevine iade edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/gorevden-uzaklastirilan-balcova-belediye-baskani-onur-yigit.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T11:52:00+03:00</news:publication_date>
-      <news:title>Görevden uzaklaştırılan Balçova Belediye Başkanı Onur Yiğit görevine iade edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-balcova-belediye-baskani-onur-yigit-goreve-iade.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T11:51:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Balçova Belediye Başkanı Onur Yiğit göreve iade edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-chpli-balcova-belediye-baskani-onur-yigit-gor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T11:49:00+03:00</news:publication_date>
-      <news:title>Son dakika... CHP&#x27;li Balçova Belediye Başkanı Onur Yiğit göreve iade edildi! İçişleri Bakanlığı açıkladı</news:title>
     </news:news>
   </url>
   <url>
@@ -1121,28 +1110,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T03:42:00+03:00</news:publication_date>
       <news:title>Son dakika: Diyarbakır&#x27;da plaza yangını!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T00:00:00+03:00</news:publication_date>
-      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 24 Ağustos 2026</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-ankarada-orman-yangini-yerlesim-yerlerine-yak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T21:53:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Ankara&#x27;da orman yangını: Yerleşim yerlerine yakın noktada yükselen alevler gökyüzünü kapladı</news:title>
     </news:news>
   </url>
 </urlset>
