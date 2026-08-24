@@ -379,6 +379,196 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     with open("hava-durumu/index.html", "w", encoding="utf-8") as f:
         f.write(weather_html)
 
+def generate_gta6_page(header_html, footer_html, whos_amung_us_code, admatic_code):
+    """gta-6/index.html Sayfasını Otomatik Oluşturur (SEO & Admatic Uyumlu)"""
+    os.makedirs("gta-6", exist_ok=True)
+
+    gta6_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA 6 Ne Zaman Çıkacak? Çıkış Tarihi, Sistem Gereksinimleri ve Fragman - nearadin.net</title>
+    <meta name="description" content="GTA 6 ne zaman çıkacak, fiyatı ne kadar olacak, sistem gereksinimleri neler? Vice City'de geçecek GTA VI fragmanı, haritası, Lucia ve Jason hakkında tüm detaylar." />
+    <link rel="canonical" href="https://nearadin.net/gta-6/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GTA 6 Rehberi: Çıkış Tarihi, Sistem Gereksinimleri ve Tüm Detaylar" />
+    <meta name="twitter:description" content="GTA VI Vice City haritası, karakterler, sistem gereksinimleri ve son dakika gelişmeleri." />
+    <meta name="twitter:site" content="@nearadin2026" />
+    <meta name="twitter:image" content="https://nearadin.net/1786394487303.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="GTA 6 Ne Zaman Çıkacak? Son Dakika GTA VI Haberleri" />
+    <meta property="og:description" content="Rockstar Games'in dev yapımı GTA 6 çıkış tarihi, PS5, Xbox ve PC sistem gereksinimleri hakkında en güncel bilgiler." />
+    <meta property="og:url" content="https://nearadin.net/gta-6/" />
+    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
+
+    <!-- Google Structured Data (FAQ Schema) -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {{
+          "@type": "Question",
+          "name": "GTA 6 ne zaman çıkacak?",
+          "acceptedAnswer": {{
+            "@type": "Answer",
+            "text": "Rockstar Games tarafından açıklanan resmi bilgilere göre GTA 6, PlayStation 5 ve Xbox Series X/S konsolları için duyurulan çıkış takviminde yer almaktadır."
+          }}
+        }},
+        {{
+          "@type": "Question",
+          "name": "GTA 6 nerede geçiyor?",
+          "acceptedAnswer": {{
+            "@type": "Answer",
+            "text": "GTA VI, Leonida eyaletinde yer alan ve serinin efsanevi şehri olan modern Vice City'de geçmektedir."
+          }}
+        }},
+        {{
+          "@type": "Question",
+          "name": "GTA 6 PC'ye ne zaman gelecek?",
+          "acceptedAnswer": {{
+            "@type": "Answer",
+            "text": "Rockstar Games geleneksel olarak oyunlarını önce konsollara, yaklaşık 1-1.5 yıl sonra ise PC (Bilgisayar) platformuna çıkarmaktadır."
+          }}
+        }}
+      ]
+    }}
+    </script>
+
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
+        
+        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 15px; }}
+        
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 3px 8px; border-radius: 4px; font-size: 11px; display: inline-block; margin-bottom: 10px; }}
+        h1 {{ font-size: 22px; margin-bottom: 12px; color: #050505; line-height: 1.3; }}
+        h2 {{ font-size: 17px; margin: 18px 0 10px 0; color: #0056b3; border-bottom: 2px solid #e4e6eb; padding-bottom: 5px; }}
+        p {{ font-size: 14px; color: #333; margin-bottom: 12px; line-height: 1.6; }}
+        
+        .highlight-box {{ background: #f7f8fa; border-left: 4px solid #1877f2; padding: 12px 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 13px; color: #4b4f56; }}
+        
+        .spec-table {{ width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }}
+        .spec-table th, .spec-table td {{ border: 1px solid #e4e6eb; padding: 10px; text-align: left; }}
+        .spec-table th {{ background-color: #f0f2f5; color: #050505; font-weight: 600; }}
+        
+        .faq-item {{ margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #e4e6eb; }}
+        .faq-q {{ font-weight: bold; font-size: 14px; color: #050505; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }}
+        .faq-a {{ font-size: 13px; color: #65676b; }}
+
+        .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; text-align: center; }}
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
+    </style>
+</head>
+<body>
+    
+    <!-- Admatic AUTO ads START -->
+    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <!-- Admatic AUTO ads END -->
+
+    {admatic_code}
+    {header_html}
+
+    <div class="container">
+        <article class="card">
+            <span class="badge">🔥 ÖZEL REHBER & SON DAKİKA</span>
+            <h1>GTA 6 Ne Zaman Çıkacak? Çıkış Tarihi, Sistem Gereksinimleri ve Haritası</h1>
+            
+            <p>Oyun dünyasının en çok beklenen yapımı olan <strong>GTA 6 (Grand Theft Auto VI)</strong>, Rockstar Games tarafından resmi olarak duyurulduğundan beri gündemden düşmüyor. Efsanevi <strong>Vice City</strong> şehrine geri döndüğümüz GTA VI, yenilikçi grafik motoru, genişletilmiş açık dünyası ve derin hikaye dinamikleriyle oyun dünyasında yeni bir çağ başlatmaya hazırlanıyor.</p>
+
+            <div class="highlight-box">
+                📌 <strong>Özet Bilgi:</strong> GTA 6; Leonida eyaletinde geçecek, seride ilk kez kadın ana karakter olan <strong>Lucia</strong> ve ortağı <strong>Jason</strong>'ın hikayesini anlatacak.
+            </div>
+
+            <h2>📅 GTA 6 Çıkış Tarihi ve Platformlar</h2>
+            <p><strong>GTA 6 ne zaman çıkacak?</strong> sorusu milyonlarca oyuncunun ana gündem maddesi. Rockstar Games, GTA VI'nın öncelikli olarak <strong>PlayStation 5 (PS5)</strong> ve <strong>Xbox Series X/S</strong> nesil konsolları için çıkacağını doğruladı.</p>
+            <p><strong>GTA 6 PC'ye ne zaman gelecek?</strong> Rockstar Games stüdyolarının geçmişteki yayın politikalarına paralel olarak (GTA 5 ve Red Dead Redemption 2 örneklerinde olduğu gibi), PC sürümünün konsol çıkışından yaklaşık 12 ila 18 ay sonra bilgisayar oyuncularıyla buluşması beklenmektedir.</p>
+
+            {admatic_code}
+
+            <h2>🌴 Harita ve Şehir: Vice City ve Leonida Eyaleti</h2>
+            <p>GTA VI, ne neon ışıklarıyla süslü ikonik <strong>Vice City</strong> şehriyle sınırlı kalacak ne de küçük bir harita sunacak. Oyun, Miami ve Florida atmosferinden esinlenerek oluşturulan devasa <strong>Leonida Eyaleti</strong> içerisinde geçiyor. Bataklıklardan gökdelenlere, ormanlık alanlardan sahil şeritlerine kadar uzanan canlı ve yaşayan bir ekosistem oyuncuları bekliyor.</p>
+
+            <h2>💻 GTA 6 Sistem Gereksinimleri (Tahmini / Beklenen)</h2>
+            <p>RAGE 9 grafik motoru ile geliştirilen GTA 6'nın PC platformunda oldukça güçlü Donanım bileşenleri talep etmesi öngörülüyor. Beklenen minimum ve önerilen sistem gereksinimleri şu şekildedir:</p>
+
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Donanım</th>
+                        <th>Minimum (Tahmini)</th>
+                        <th>Önerilen (Tahmini)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>İşletim Sistemi</strong></td>
+                        <td>Windows 11 (64-bit)</td>
+                        <td>Windows 11 (64-bit)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>İşlemci (CPU)</strong></td>
+                        <td>Intel Core i7-8700K / AMD Ryzen 5 3600X</td>
+                        <td>Intel Core i7-13700K / AMD Ryzen 7 7800X3D</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bellek (RAM)</strong></td>
+                        <td>16 GB RAM</td>
+                        <td>32 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ekran Kartı (GPU)</strong></td>
+                        <td>NVIDIA RTX 2070 / AMD Radeon RX 6600 XT</td>
+                        <td>NVIDIA RTX 4070 Ti / AMD Radeon RX 7900 XT</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Depolama</strong></td>
+                        <td>150 GB SSD Alanı</td>
+                        <td>150 GB NVMe SSD</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>❓ Sıkça Sorulan Sorular (SSS)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-q">❓ GTA 6 Türkçe dil desteği olacak mı?</div>
+                <div class="faq-a">Rockstar Games oyunlarında resmi Türkçe alt yazı desteği sunmamaktadır. Ancak topluluk ve resmi hamleler doğrultusunda bu durumun değişmesi temenni edilmektedir.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">❓ GTA 6 fiyatı ne kadar olacak?</div>
+                <div class="faq-a">Yeni nesil AAA oyun standartları göz önüne alındığında GTA VI'nın yurt dışında 70$ - 80$ bandında, Türkiye'de ise güncel döviz kuruna bağlı olarak konsol mağazalarında fiyatlandırılması beklenmektedir.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">❓ GTA 6 Online ne zaman açılacak?</div>
+                <div class="faq-a">GTA VI Online modunun, ana oyunun çıkışından birkaç hafta sonra erişime açılması planlanmaktadır.</div>
+            </div>
+
+            <a href="/" class="btn-home">← Anasayfaya Dön</a>
+        </article>
+
+        {whos_amung_us_code}
+    </div>
+
+    {footer_html}
+
+</body>
+</html>'''
+
+    with open("gta-6/index.html", "w", encoding="utf-8") as f:
+        f.write(gta6_html)
+
+
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
@@ -415,6 +605,15 @@ def fetch_and_generate():
         whos_amung_us_code=whos_amung_us_code,
         admatic_code=admatic_code
     )
+
+        # GTA 6 sayfasını dinamik olarak oluştur
+    generate_gta6_page(
+        header_html=get_header_html("nearadin.net - GTA 6 Özel"),
+        footer_html=footer_html,
+        whos_amung_us_code=whos_amung_us_code,
+        admatic_code=admatic_code
+    )
+
 
     
 
