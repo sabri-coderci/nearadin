@@ -13,6 +13,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/kocaelispor-1-0-amed-ilk-yari-sonuc.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:42:21+03:00</news:publication_date>
+      <news:title>Kocaelispor 1-0 Amed: İlk Yarı Sonuç</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/mit-baskani-ibrahim-kalinin-objektifinden-istanbul-bir-seh.html</loc>
     <news:news>
       <news:publication>
@@ -24,6 +35,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/santarelli-oyunculardan-daha-fazlasini-istemistim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:39:22+03:00</news:publication_date>
+      <news:title>Santarelli: &#x27;Oyunculardan daha fazlasını istemiştim&#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/dezenformasyonla-mucadele-merkezi-dis-kaynakli-ve-maksatli.html</loc>
     <news:news>
       <news:publication>
@@ -32,6 +54,28 @@
       </news:publication>
       <news:publication_date>2026-08-24T22:33:34+03:00</news:publication_date>
       <news:title>Dezenformasyonla Mücadele Merkezi: Dış kaynaklı ve maksatlı bir psikolojik harekât stratejisinin devreye sokulmaya çalışıldığı tespit edilmiştir</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/batrakov-galatasaray-ile-ilk-antrenmanina-cikti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:29:11+03:00</news:publication_date>
+      <news:title>Batrakov Galatasaray ile İlk Antrenmanına Çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/deniz-uyanik-takim-arkadaslarim-destek-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:28:32+03:00</news:publication_date>
+      <news:title>Deniz Uyanık: Takım Arkadaşlarım Destek Oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -57,14 +101,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/kavalanin-aihm-karari-bekleniyor.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/cansu-ozbay-zorluklarin-farkindayiz.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T22:23:21+03:00</news:publication_date>
-      <news:title>Kavala&#x27;nın AİHM Kararı Bekleniyor</news:title>
+      <news:publication_date>2026-08-24T22:22:31+03:00</news:publication_date>
+      <news:title>Cansu Özbay: Zorlukların Farkındayız</news:title>
     </news:news>
   </url>
   <url>
@@ -79,14 +123,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/ogretmen-seminerleri-son-dakika-ogretmen-seminerleri-ne-zam.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/a-milli-kadin-voleybol-takimi-macaristani-3-0-yendi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T22:15:42+03:00</news:publication_date>
-      <news:title>ÖĞRETMEN SEMİNERLERİ SON DAKİKA! Öğretmen seminerleri ne zaman, yüz yüze mi online mı olacak?</news:title>
+      <news:publication_date>2026-08-24T22:17:23+03:00</news:publication_date>
+      <news:title>A Milli Kadın Voleybol Takımı Macaristan’ı 3-0 Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/santarelli-performansimizdan-memnun-degilim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:16:24+03:00</news:publication_date>
+      <news:title>Santarelli: Performansımızdan Memnun Değilim</news:title>
     </news:news>
   </url>
   <url>
@@ -530,28 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/abdden-irana-yaptirim-paketi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:27:32+03:00</news:publication_date>
-      <news:title>ABD&#x27;den İran&#x27;a yaptırım paketi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/yeni-komisyonlar-kuruluyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:27:31+03:00</news:publication_date>
-      <news:title>Yeni Komisyonlar Kuruluyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/abd-suriyeyi-terore-destek-veren-ulkeler-listesinden-cik.html</loc>
     <news:news>
       <news:publication>
@@ -618,14 +651,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/oosterwolde-romaya-gecti.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-aciklandi-ak.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T20:02:22+03:00</news:publication_date>
-      <news:title>Oosterwolde Roma&#x27;ya Geçti</news:title>
+      <news:publication_date>2026-08-24T20:00:19+03:00</news:publication_date>
+      <news:title>Son dakika... Aziz İhsan Aktaş davasında karar açıklandı! Aktaş&#x27;a &#x27;örgüt&#x27; suçundan beraat</news:title>
     </news:news>
   </url>
   <url>
@@ -659,17 +692,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T18:59:05+03:00</news:publication_date>
       <news:title>Galatasaray, Trabzonspor&#x27;un gündemindeki golcüye talip oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/trump-kanadaya-yonelik-tarife-yukseltme-karari.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T18:19:00+03:00</news:publication_date>
-      <news:title>Trump, Kanada&#x27;ya yönelik tarife yükseltme kararı</news:title>
     </news:news>
   </url>
   <url>
@@ -750,17 +772,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/aziz-ihsan-aktas-davasinda-riza-akpolata-18-suctan-beraat.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T16:40:00+03:00</news:publication_date>
-      <news:title>Aziz İhsan Aktaş davasında, Rıza Akpolat&#x27;a 18 suçtan beraat</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/aziz-ihsan-aktas-suc-orgutu-davasinda-karar.html</loc>
     <news:news>
       <news:publication>
@@ -791,6 +802,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:33:19+03:00</news:publication_date>
       <news:title>SON DAKİKA| Başkan Erdoğan Brezilya Devlet Başkanı ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-belediye-baska.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:33:00+03:00</news:publication_date>
+      <news:title>Son dakika: Aziz İhsan Aktaş davasında karar! Belediye başkanlarının cezası belli oldu</news:title>
     </news:news>
   </url>
   <url>
