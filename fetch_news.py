@@ -78,8 +78,6 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gta-6/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🎮 GTA 6 Rehberi</a></li>
-
                  <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
                 
@@ -127,8 +125,6 @@ def get_footer_html():
                         <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
                         <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
                         <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/gta-6/" style="color: #617085; text-decoration: none;">🎮 GTA 6 Rehberi</a></li>
-
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
                         <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
                        
@@ -383,208 +379,6 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     with open("hava-durumu/index.html", "w", encoding="utf-8") as f:
         f.write(weather_html)
 
-def generate_gta6_page(header_html, footer_html, whos_amung_us_code, admatic_code):
-    """Google News RSS akışından GTA 6 haberlerini çekerek gta-6/index.html sayfasını dinamik oluşturur."""
-    os.makedirs("gta-6", exist_ok=True)
-
-    # 1. Google News'ten GTA 6 Haberlerini Canlı Çekme
-    gta_rss_url = "https://news.google.com/rss/search?q=gta+6&hl=tr&gl=TR&ceid=TR:tr"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
-
-    gta_news_items = []
-    tz_tr = datetime.timezone(datetime.timedelta(hours=3))
-    last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
-    last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
-
-    try:
-        req = urllib.request.Request(gta_rss_url, headers=headers)
-        response = urllib.request.urlopen(req, timeout=10)
-        xml_data = response.read()
-        root = ET.fromstring(xml_data)
-        raw_items = root.findall('./channel/item')[:10]  # En güncel 10 haber
-
-        for item in raw_items:
-            title = item.find('title').text if item.find('title') is not None else ''
-            link = item.find('link').text if item.find('link') is not None else '#'
-            raw_desc = item.find('description').text if item.find('description') is not None else ''
-            pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ''
-
-            clean_title = html.unescape(re.sub('<[^<]+?>', '', title))
-            clean_desc = html.unescape(re.sub('<[^<]+?>', '', raw_desc))
-
-            source_name = "GTA VI Akışı"
-            if " - " in clean_title:
-                parts = clean_title.rsplit(" - ", 1)
-                clean_title = parts[0]
-                source_name = parts[1]
-
-            gta_news_items.append({
-                "title": clean_title,
-                "desc": clean_desc,
-                "link": link,
-                "source": source_name,
-                "pub_date": pub_date
-            })
-    except Exception as e:
-        print(f"⚠️ GTA 6 RSS verisi çekilirken hata: {e}")
-
-    # 2. Dinamik Haber Kartlarını Oluşturma
-    dynamic_cards_html = ""
-    for idx, news in enumerate(gta_news_items):
-        dynamic_cards_html += f'''
-        <article class="news-card">
-            <div class="card-header">
-                <span class="badge">SON DAKİKA GTA VI</span>
-                <span class="source">{news['source']}</span>
-            </div>
-            <h3 class="news-title">
-                <a href="{news['link']}" target="_blank" rel="nofollow noopener">{news['title']}</a>
-            </h3>
-            <p class="news-summary">{news['desc'][:160]}...</p>
-            <div class="card-footer">
-                <a href="{news['link']}" target="_blank" rel="nofollow noopener" class="read-btn">Kaynağa Git ↗</a>
-            </div>
-        </article>
-        '''
-        if idx == 2:
-            dynamic_cards_html += admatic_code
-
-    # 3. Dinamik HTML Şablonunu Birleştirme
-    gta6_html = f'''<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA 6 Son Dakika Haberleri, Çıkış Tarihi ve Sistem Gereksinimleri - nearadin.net</title>
-    <meta name="description" content="En güncel GTA 6 haberleri, çıkış tarihi, Vice City haritası, sistem gereksinimleri ve fragman detayları. Canlı Google Arama güncellemeleri." />
-    <link rel="canonical" href="https://nearadin.net/gta-6/" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GTA 6 Canlı Akış & Son Dakika Haberleri" />
-    <meta name="twitter:description" content="Rockstar Games GTA VI son gelişmeler, sistem gereksinimleri ve çıkış tarihi." />
-    <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/1786394487303.png" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="GTA 6 Son Dakika Haberleri ve Rehber" />
-    <meta property="og:description" content="GTA VI hakkında Google Arama sonuçlarına dayalı en güncel canlı akış ve bilgiler." />
-    <meta property="og:url" content="https://nearadin.net/gta-6/" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
-
-    <script type="application/ld+json">
-    {{
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "GTA 6 Canlı Akış ve Rehber",
-      "dateModified": "{last_update_iso}",
-      "description": "GTA VI hakkında son dakika gelişmeleri ve rehber içeriği."
-    }}
-    </script>
-
-    <style>
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
-        .container {{ max-width: 680px; margin: 10px auto; padding: 0 12px; min-height: 70vh; }}
-        
-        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; }}
-        
-        .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 15px; }}
-        
-        .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
-        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
-        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
-        .source {{ font-weight: 600; color: #4b4f56; }}
-        
-        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
-        .news-title a {{ color: #050505; text-decoration: none; }}
-        .news-title a:hover {{ color: #1877f2; }}
-        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }}
-        .card-footer {{ display: flex; justify-content: flex-end; }}
-        .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
-
-        h1 {{ font-size: 22px; margin-bottom: 12px; color: #050505; line-height: 1.3; }}
-        h2 {{ font-size: 17px; margin: 18px 0 10px 0; color: #0056b3; border-bottom: 2px solid #e4e6eb; padding-bottom: 5px; }}
-        p {{ font-size: 14px; color: #333; margin-bottom: 12px; line-height: 1.6; }}
-        
-        .spec-table {{ width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }}
-        .spec-table th, .spec-table td {{ border: 1px solid #e4e6eb; padding: 10px; text-align: left; }}
-        .spec-table th {{ background-color: #f0f2f5; color: #050505; font-weight: 600; }}
-
-        .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; text-align: center; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
-    </style>
-</head>
-<body>
-    
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
-    {admatic_code}
-    {header_html}
-
-    <div class="container">
-        <div class="status-bar">
-            <span>Kaynak: <strong>Google Arama Canlı Akışı</strong></span>
-            <span>Son Güncelleme: <strong>{last_update}</strong></span>
-        </div>
-
-        <section class="card">
-            <h1>🎮 GTA 6 (Grand Theft Auto VI) Canlı Haber Merkezi</h1>
-            <p>Rockstar Games'in heyecanla beklenen yeni oyunu <strong>GTA 6</strong> hakkındaki son dakika gelişmeleri, sızıntılar, fragman analizleri ve resmi açıklamalar Google Arama sonuçlarından anlık olarak derlenmektedir.</p>
-        </section>
-
-        <h2>🔥 Google Arama Sonuçlarına Göre Son GTA 6 Haberleri</h2>
-        {dynamic_cards_html if dynamic_cards_html else '<p class="card">Şu anda güncel GTA 6 haberi bulunamadı.</p>'}
-
-        <article class="card">
-            <h2>💻 GTA 6 Sistem Gereksinimleri (Tahmini)</h2>
-            <table class="spec-table">
-                <thead>
-                    <tr>
-                        <th>Bileşen</th>
-                        <th>Minimum</th>
-                        <th>Önerilen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>İşlemci</strong></td>
-                        <td>Intel Core i7-8700K / Ryzen 5 3600X</td>
-                        <td>Intel Core i7-13700K / Ryzen 7 7800X3D</td>
-                    </tr>
-                    <tr>
-                        <td><strong>RAM</strong></td>
-                        <td>16 GB RAM</td>
-                        <td>32 GB RAM</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ekran Kartı</strong></td>
-                        <td>NVIDIA RTX 2070 / RX 6600 XT</td>
-                        <td>NVIDIA RTX 4070 Ti / RX 7900 XT</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
-        </article>
-
-        {whos_amung_us_code}
-    </div>
-
-    {footer_html}
-
-</body>
-</html>'''
-
-    with open("gta-6/index.html", "w", encoding="utf-8") as f:
-        f.write(gta6_html)
-
-
-
 
 def fetch_and_generate():
     rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
@@ -621,15 +415,6 @@ def fetch_and_generate():
         whos_amung_us_code=whos_amung_us_code,
         admatic_code=admatic_code
     )
-
-        # GTA 6 sayfasını dinamik olarak oluştur
-    generate_gta6_page(
-        header_html=get_header_html("nearadin.net - GTA 6 Özel"),
-        footer_html=footer_html,
-        whos_amung_us_code=whos_amung_us_code,
-        admatic_code=admatic_code
-    )
-
 
     
 
@@ -1050,13 +835,6 @@ def fetch_and_generate():
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
-    <url>
-    <loc>https://nearadin.net/gta-6/</loc>
-    <lastmod>{last_update_iso}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 
   <url>
     <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
@@ -1213,3 +991,4 @@ def fetch_and_generate():
 
 if __name__ == "__main__":
     fetch_and_generate()
+
