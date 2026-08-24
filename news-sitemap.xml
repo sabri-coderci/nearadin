@@ -13,6 +13,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-hedefine-ulasmak-icin-tarihi-adimlarimizi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T22:20:00+03:00</news:publication_date>
+      <news:title>&quot;Terörsüz Türkiye&quot; hedefine ulaşmak için tarihi adımlarımızı kararlılıkla atıyoruz&quot; - Son Dakika Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/turkiyeyi-terk-eden-huseyin-gocek-bakin-nerede-ortaya-cikti.html</loc>
     <news:news>
       <news:publication>
@@ -464,17 +475,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-icin-ilk-toplanti-yapildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:44:31+03:00</news:publication_date>
-      <news:title>Terörsüz Türkiye için ilk toplantı yapıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/yasin-yesil-bronz-madalya-kazandi.html</loc>
     <news:news>
       <news:publication>
@@ -662,17 +662,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/bahcelinin-ahmetler-goreve-dedigi-ahmet-ozerden-ilk-aci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T19:18:00+03:00</news:publication_date>
-      <news:title>Bahçeli&#x27;nin &#x27;Ahmet&#x27;ler göreve&#x27; dediği Ahmet Özer&#x27;den ilk açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/24/galatasaray-trabzonsporun-gundemindeki-golcuye-talip-oldu.html</loc>
     <news:news>
       <news:publication>
@@ -791,6 +780,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:33:47+03:00</news:publication_date>
       <news:title>Kafa travması geçiren Kerem Aktürkoğlu&#x27;ndan ilk açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-belediye-baska.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:33:00+03:00</news:publication_date>
+      <news:title>Son dakika: Aziz İhsan Aktaş davasında karar! Belediye başkanlarının cezası belli oldu</news:title>
     </news:news>
   </url>
   <url>
