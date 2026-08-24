@@ -11,7 +11,7 @@ from email.utils import parsedate_to_datetime
 def slugify(text):
     text = text.lower()
     replacements = {
-        'ı': 'i', 'ğ': 'g', 'ü': 'u', 'ş': 's', 'ö': 'o', 'ç': 'c',
+        'ı': 'i', 'ğ': 'g', 'ü': 'u', 'ş': 's', 'ö': 'o', 'ç': 'c', '/'' :' ',
         'İ': 'i', 'Ğ': 'g', 'Ü': 'u', 'Ş': 's', 'Ö': 'o', 'Ç': 'c'
     }
     for search, replace in replacements.items():
