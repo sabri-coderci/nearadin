@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.x'
 
-                - name: Excel Dosyasını Oluştur
+      - name: Excel Dosyasını Oluştur
         run: python secim-anketi/make_excel.py
 
       - name: Seçim Anketi HTML Üret
