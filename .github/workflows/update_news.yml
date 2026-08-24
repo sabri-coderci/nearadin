@@ -31,9 +31,6 @@ jobs:
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
         run: python fetch_news.py
 
-      # 2. Seçim Anketi Sayfasını Üret
-      - name: Seçim Anketi HTML Üret
-        run: python secim-anketi/generate_secim.py
 
       # 3. Tüm Değişiklikleri Tek Seferde Commit Et ve Push Et
       - name: Değişiklikleri Commit ve Push Et
