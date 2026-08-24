@@ -28,7 +28,7 @@ def post_to_x(latest_news):
     access_secret = os.environ.get("X_ACCESS_SECRET")
 
     if not all([api_key, api_secret, access_token, access_secret]):
-        print("X API anahtarları bulunamadı. Tweet atma adımı atlanıyor.")
+        print("❌ X API anahtarları bulunamadı. GitHub Secrets kontrol edin.")
         return
 
     try:
@@ -40,20 +40,25 @@ def post_to_x(latest_news):
         )
 
         title = latest_news['title']
-        desc_preview = latest_news['desc'][:100] + "..." if len(latest_news['desc']) > 100 else latest_news['desc']
+        url = latest_news['full_url']
+        
+        # X linkleri t.co ile 23 karaktere düşürür.
+        # Şablon + Etiketler ~70 karakter. Toplam 280 sınırını aşmamak için başlık kısıtlanır:
+        if len(title) > 170:
+            title = title[:167] + "..."
 
         tweet_text = (
-            f"🚨 SON DAKİKA HABERİ\n\n"
+            f"🚨 SON DAKİKA\n\n"
             f"📌 {title}\n\n"
-            f"📝 {desc_preview}\n\n"
-            f"🔗 Detaylar için tıklayın:\n{latest_news['full_url']}\n\n"
-            f"#sondakika #haber #gundem"
+            f"🔗 Detaylar:\n{url}\n\n"
+            f"#sondakika #haber"
         )
         
         response = client.create_tweet(text=tweet_text)
-        print(f"X (Twitter) paylaşımı başarılı! Tweet ID: {response.data['id']}")
+        print(f"✅ X paylaşımı başarılı! Tweet ID: {response.data['id']}")
     except Exception as e:
-        print(f"X (Twitter) paylaşımında hata oluştu: {e}")
+        print(f"❌ X (Twitter) paylaşımında hata oluştu: {e}")
+        raise e  # GitHub Actions'ın hatayı görüp adımı başarısız işaretlemesi için hatayı fırlatın
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
