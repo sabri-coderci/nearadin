@@ -1050,6 +1050,13 @@ def fetch_and_generate():
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
+    <url>
+    <loc>https://nearadin.net/gta-6/</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 
   <url>
     <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
