@@ -2,143 +2,88 @@ import os
 import sys
 import datetime
 
-# Üst dizindeki (ana projedeki) modüllere erişim
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def generate_secim_anketi_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    txt_path = os.path.join(current_dir, "anket_verileri.txt")
     output_html_path = os.path.join(current_dir, "index.html")
-
-    poll_results = []
-    total_votes = 0
-
-    if os.path.exists(txt_path):
-        try:
-            with open(txt_path, "r", encoding="utf-8") as f:
-                lines = f.readlines()
-                for line in lines:
-                    line = line.strip()
-                    if line and not line.startswith("#"):
-                        parts = line.split("|")
-                        if len(parts) == 5:
-                            code, name, percent, votes, color = parts
-                            votes_int = int(votes)
-                            total_votes += votes_int
-                            poll_results.append({
-                                "code": code.strip(),
-                                "name": name.strip(),
-                                "percent": float(percent.strip()),
-                                "votes": votes_int,
-                                "color": color.strip()
-                            })
-        except Exception as e:
-            print(f"⚠️ Anket TXT dosyası okunurken hata oluştu: {e}")
 
     tz_tr = datetime.timezone(datetime.timedelta(hours=3))
     last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
-    last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
-
-    poll_bars_html = ""
-    for party in poll_results:
-        poll_bars_html += f'''
-        <div style="margin-bottom: 15px;">
-            <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: bold; margin-bottom: 4px;">
-                <span>{party['name']} ({party['code']})</span>
-                <span style="color: {party['color']};">%{party['percent']}</span>
-            </div>
-            <div style="background: #e4e6eb; height: 18px; border-radius: 9px; overflow: hidden; position: relative;">
-                <div style="background: {party['color']}; width: {party['percent']}%; height: 100%; border-radius: 9px; transition: width 0.5s ease;"></div>
-            </div>
-            <div style="font-size: 11px; color: #65676b; text-align: right; margin-top: 2px;">Oy Sayısı: {party['votes']:,}</div>
-        </div>
-        '''
 
     poll_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Son Seçim Anketi Sonuçları - Oy Oranları ve Anket Verileri - nearadin.net</title>
-    <meta name="description" content="En son yapılan genel seçim anketi sonuçları, partilerin oy oranları, oy dağılımı ve kararsızların oranı. Güncel seçim anketi verileri canlı akış." />
+    <title>Canlı Seçim Anketi - Oy Kullan ve Sonuçları Gör - nearadin.net</title>
+    <meta name="description" content="Canlı seçim anketi! Oyunu kullan, partilerin anlık oy oranlarını ve seçim sonuçlarını canlı takip et." />
     <link rel="canonical" href="https://nearadin.net/secim-anketi/" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Son Seçim Anketi Sonuçları & Oy Dağılımı" />
-    <meta name="twitter:description" content="Türkiye geneli en son seçim anketi oy oranları ve parti bazlı canlı anket verileri." />
-    <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/1786394487303.png" />
-
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Güncel Seçim Anketi Sonuçları ve Oy Oranları" />
-    <meta property="og:description" content="Partilerin son oy oranları, seçim anketi analizleri ve detaylı istatistikler." />
-    <meta property="og:url" content="https://nearadin.net/secim-anketi/" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
-
-    <script type="application/ld+json">
-    {{
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Türkiye Genel Seçim Anketi Sonuçları",
-      "description": "Güncel seçim anketi oy oranları veriseti.",
-      "dateModified": "{last_update_iso}",
-      "publisher": {{
-        "@type": "Organization",
-        "name": "nearadin.net"
-      }}
-    }}
-    </script>
 
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
+        
         .card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 15px; }}
         .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 3px 8px; border-radius: 4px; font-size: 11px; display: inline-block; margin-bottom: 10px; }}
+        
         h1 {{ font-size: 22px; margin-bottom: 12px; color: #050505; line-height: 1.3; }}
         h2 {{ font-size: 17px; margin: 18px 0 10px 0; color: #0056b3; border-bottom: 2px solid #e4e6eb; padding-bottom: 5px; }}
         p {{ font-size: 14px; color: #333; margin-bottom: 12px; line-height: 1.6; }}
+        
         .total-box {{ background: #f7f8fa; border-left: 4px solid #1877f2; padding: 12px 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 13px; color: #4b4f56; }}
+        
+        .party-item {{ margin-bottom: 15px; padding: 10px; border: 1px solid #e4e6eb; border-radius: 8px; background: #fff; }}
+        .party-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-weight: bold; font-size: 14px; }}
+        .progress-bg {{ background: #e4e6eb; height: 18px; border-radius: 9px; overflow: hidden; position: relative; }}
+        .progress-bar {{ height: 100%; border-radius: 9px; transition: width 0.5s ease; width: 0%; }}
+        .party-footer {{ display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; color: #65676b; }}
+        
+        .vote-btn {{ background: #1877f2; color: white; border: none; padding: 6px 14px; border-radius: 6px; font-weight: bold; font-size: 12px; cursor: pointer; transition: 0.2s; }}
+        .vote-btn:hover {{ background: #166fe5; }}
+        .vote-btn:disabled {{ background: #bcc0c4; cursor: not-allowed; }}
+        
         .btn-home {{ display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 15px; text-align: center; }}
-        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
-        .ad-container:empty {{ display: none !important; }}
+        #voted-alert {{ display: none; background: #e7f3ff; color: #1877f2; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 13px; font-weight: bold; text-align: center; }}
     </style>
+
+    <!-- Firebase SDK Entegrasyonu -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 </head>
 <body>
     
-    <!-- Admatic AUTO ads START -->
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
-
     {admatic_code}
     {header_html}
 
     <div class="container">
         <div class="status-bar">
-            <span>Veri Kaynağı: <strong>Yerel Anket Veritabanı</strong></span>
+            <span>Veri Kaynağı: <strong>Canlı Kullanıcı Oylaması</strong></span>
             <span>Güncelleme: <strong>{last_update}</strong></span>
         </div>
 
         <article class="card">
-            <span class="badge">🔴 CANLI ANKET SONUÇLARI</span>
-            <h1>Son Seçim Anketi Sonuçları ve Partilerin Oy Oranları</h1>
+            <span class="badge">🔴 INTERAKTİF CANLI ANKET</span>
+            <h1>Seçim Anketi: Oyunu Kullan, Anlık Sonuçları Gör</h1>
             
-            <p>Türkiye genelinde gerçekleştirilen son <strong>seçim anketi</strong> verilerine göre siyasi partilerin güncel oy oranları ve seçmen tercihleri belirlendi. Kamuoyu araştırmalarından elde edilen verilere göre oy dağılımı grafikteki gibi şekillenmiştir.</p>
+            <p>Aşağıdaki listeden desteklediğiniz siyasi partiye oy vererek canlı anket sonuçlarına anında katkıda bulunabilirsiniz.</p>
+
+            <div id="voted-alert">✅ Oyunuz başarıyla kaydedildi! Teşekkür ederiz.</div>
 
             <div class="total-box">
-                📊 <strong>Toplam Örneklem:</strong> Bu anket çalışmasında toplam <strong>{total_votes:,}</strong> seçmenin oy tercihi değerlendirilmiştir.
+                📊 <strong>Toplam Kullanılan Oy:</strong> <span id="total-votes-count">Yükleniyor...</span>
             </div>
 
-            <h2>🗳️ Parti Bazlı Oy Dağılım Grafiği</h2>
+            <h2>🗳️ Parti Bazlı Canlı Oy Dağılımı</h2>
             
-            {poll_bars_html if poll_bars_html else '<p>Anket verileri yüklenemedi.</p>'}
+            <div id="poll-container">
+                <!-- Partiler JS ile canlı yüklenecek -->
+                <p style="text-align:center; padding: 20px;">Anket verileri yükleniyor...</p>
+            </div>
 
             {admatic_code}
-
-            <h2>📈 Seçim Anketi Analizi ve Değerlendirme</h2>
-            <p>Son yapılan <strong>seçim anketi sonuçları</strong> incelendiğinde, kararsız seçmenlerin oranı ve oy geçişleri seçimin kaderini belirleyecek en kritik unsur olarak öne çıkmaktadır.</p>
 
             <a href="/" class="btn-home">← Anasayfaya Dön</a>
         </article>
@@ -148,12 +93,94 @@ def generate_secim_anketi_page(header_html, footer_html, whos_amung_us_code, adm
 
     {footer_html}
 
+    <script>
+        // Firebase Yapılandırması (Ücretsiz Firebase Realtime DB)
+        const firebaseConfig = {{
+            databaseURL: "https://nearadin-poll-default-rtdb.firebaseio.com/"
+        }};
+        
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database().ref("secim_anketi");
+
+        const parties = [
+            {{ id: "chp", name: "Cumhuriyet Halk Partisi (CHP)", color: "#e30613" }},
+            {{ id: "akp", name: "AK Parti (AKP)", color: "#ff9900" }},
+            {{ id: "dem", name: "DEM Parti", color: "#800080" }},
+            {{ id: "mhp", name: "Milliyetçi Hareket Partisi (MHP)", color: "#b10000" }},
+            {{ id: "yrp", name: "Yeniden Refah Partisi (YRP)", color: "#006400" }},
+            {{ id: "iyi", name: "İYİ Parti", color: "#00a2e8" }},
+            {{ id: "zafer", name: "Zafer Partisi", color: "#cc0000" }},
+            {{ id: "diger", name: "Diğer Partiler", color: "#7f7f7f" }}
+        ];
+
+        let hasVoted = localStorage.getItem("nearadin_voted");
+
+        if (hasVoted) {{
+            document.getElementById("voted-alert").style.display = "block";
+        }}
+
+        // Veritabanından Canlı Dinleme ve Grafik Güncelleme
+        db.on("value", (snapshot) => {{
+            const data = snapshot.val() || {{}};
+            let totalVotes = 0;
+
+            parties.forEach(p => {{
+                totalVotes += (data[p.id] || 0);
+            }});
+
+            document.getElementById("total-votes-count").innerText = totalVotes.toLocaleString("tr-TR");
+
+            let html = "";
+            parties.forEach(p => {{
+                const votes = data[p.id] || 0;
+                const percent = totalVotes > 0 ? ((votes / totalVotes) * 100).toFixed(1) : 0;
+
+                html += `
+                <div class="party-item">
+                    <div class="party-header">
+                        <span>${{p.name}}</span>
+                        <span style="color:${{p.color}}">%${{percent}}</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="background:${{p.color}}; width:${{percent}}%;"></div>
+                    </div>
+                    <div class="party-footer">
+                        <span>Oy Sayısı: ${{votes.toLocaleString("tr-TR")}}</span>
+                        <button class="vote-btn" onclick="castVote('${{p.id}}')" ${{hasVoted ? 'disabled' : ''}}>
+                            ${{hasVoted ? 'Oy Kullanıldı' : 'Oy Ver'}}
+                        </button>
+                    </div>
+                </div>
+                `;
+            }});
+
+            document.getElementById("poll-container").innerHTML = html;
+        }});
+
+        // Oy Kullanma Fonksiyonu
+        function castVote(partyId) {{
+            if (localStorage.getItem("nearadin_voted")) {{
+                alert("Zaten oy kullandınız!");
+                return;
+            }}
+
+            db.child(partyId).transaction((currentVotes) => {{
+                return (currentVotes || 0) + 1;
+            }}, (error, committed) => {{
+                if (committed) {{
+                    localStorage.setItem("nearadin_voted", partyId);
+                    hasVoted = true;
+                    document.getElementById("voted-alert").style.display = "block";
+                }}
+            }});
+        }}
+    </script>
 </body>
 </html>'''
 
     with open(output_html_path, "w", encoding="utf-8") as f:
         f.write(poll_html)
-    print("✅ /secim-anketi/index.html başarıyla oluşturuldu.")
+    print("✅ Interaktif /secim-anketi/index.html oluşturuldu.")
 
 if __name__ == "__main__":
     header_html = ""
@@ -161,17 +188,12 @@ if __name__ == "__main__":
     whos_amung_us_code = ""
     admatic_code = ""
 
-    # Dışarıdan içe aktarmaları sırayla dene, bulamazsa yedek varsayılan şablonu kullan
     try:
         from fetch_news import get_header_html, footer_html, whos_amung_us_code, admatic_code
         header_html = get_header_html("nearadin.net - Seçim Anketi")
     except ImportError:
-        try:
-            from main import get_header_html, footer_html, whos_amung_us_code, admatic_code
-            header_html = get_header_html("nearadin.net - Seçim Anketi")
-        except ImportError:
-            header_html = '<header style="background:#1877f2;padding:15px;color:white;text-align:center;"><h2>nearadin.net</h2></header>'
-            footer_html = '<footer style="text-align:center;padding:20px;color:#65676b;">© nearadin.net</footer>'
+        header_html = '<header style="background:#1877f2;padding:15px;color:white;text-align:center;"><h2>nearadin.net</h2></header>'
+        footer_html = '<footer style="text-align:center;padding:20px;color:#65676b;">© nearadin.net</footer>'
 
     generate_secim_anketi_page(
         header_html=header_html,
