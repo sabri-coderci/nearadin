@@ -2,7 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/filenin-sultanlari-macaristana-set-vermedi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/ederson-dan-parmak-isirtan-performans.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:58:45+03:00</news:publication_date>
+      <news:title>Ederson&#x27;dan parmak ısırtan performans</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/camas-ta-iki-kardesin-ucurumdan-dusmesi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:55:31+03:00</news:publication_date>
+      <news:title>Çamaş&#x27;ta İki Kardeşin Uçurumdan Düşmesi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/filenin-sultanlari-macaristan-a-set-vermedi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -13,7 +35,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/henuz-24-yasindaki-greenwooddan-buyuleyen-istatistik.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/henuz-24-yasindaki-greenwood-dan-buyuleyen-istatistik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -24,7 +46,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/pakistan-genelkurmay-baskani-tahranda.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/pakistan-genelkurmay-baskani-tahran-da.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -57,7 +79,18 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/eski-hallerinden-eser-yok-goztepede-kirmizi-alarm.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/iyi-partili-turkoglu-na-polis-mudahalesi-hastaneye-kaldiril.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:37:16+03:00</news:publication_date>
+      <news:title>İYİ Partili Türkoğlu&#x27;na Polis Müdahalesi: Hastaneye Kaldırıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/eski-hallerinden-eser-yok-goztepe-de-kirmizi-alarm.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -68,18 +101,29 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-tekirdag-belediye-baskani-candan-yuceer-chpden.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-tekirdag-buyuksehir-belediye-baskani-candan-yuc.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T20:32:19+03:00</news:publication_date>
-      <news:title>Son Dakika | Tekirdağ Belediye Başkanı Candan Yüceer CHP&#x27;den istifa etti</news:title>
+      <news:publication_date>2026-08-24T20:32:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Tekirdağ Büyükşehir Belediye Başkanı Candan Yüceer CHP&#x27;den istifa etti</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/sirnakta-127-adrese-kacakcilik-operasyonu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/yesilhisar-daki-yangin-can-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:29:21+03:00</news:publication_date>
+      <news:title>Yeşilhisar&#x27;daki Yangın Can Aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/sirnak-ta-127-adrese-kacakcilik-operasyonu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -112,7 +156,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/teknik-direktorunden-aciklama-can-uzunun-gelecegi-belli-ol.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/teknik-direktorunden-aciklama-can-uzun-un-gelecegi-belli-ol.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -123,7 +167,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kulliyede-bir-ilk-tarihi-toplanti-sona-erdi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kulliye-de-bir-ilk-tarihi-toplanti-sona-erdi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -134,7 +178,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-abd-irana-benzeri-gorulmemis-ekonomik-saldir.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-abd-iran-a-benzeri-gorulmemis-ekonomik-saldir.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -145,18 +189,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-takip-kurulunun-ilk-toplantisi-tamamlandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T20:19:52+03:00</news:publication_date>
-      <news:title>Terörsüz Türkiye Takip Kurulu&#x27;nun ilk toplantısı tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/ahmet-duman-akdeniz-oyunlarinda-altin-madalya-kazandi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/ahmet-duman-akdeniz-oyunlari-nda-altin-madalya-kazandi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -167,7 +200,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/genclerbirliginde-24-yil-sonra-bir-ilk.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/genclerbirligi-nde-24-yil-sonra-bir-ilk.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -211,7 +244,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-abd-duyurdu-irana-karsi-dunya-capinda-ekonomi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-abd-duyurdu-iran-a-karsi-dunya-capinda-ekonomi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -219,6 +252,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T20:10:57+03:00</news:publication_date>
       <news:title>SON DAKİKA | ABD duyurdu: İran&#x27;a karşı dünya çapında ekonomik saldırı başlatıyoruz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/nusaybin-de-kaza-surucu-yaralandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T20:07:31+03:00</news:publication_date>
+      <news:title>Nusaybin&#x27;de Kaza: Sürücü Yaralandı</news:title>
     </news:news>
   </url>
   <url>
@@ -255,6 +299,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-aciklandi-ak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T19:51:35+03:00</news:publication_date>
+      <news:title>Son dakika... Aziz İhsan Aktaş davasında karar açıklandı! Aktaş&#x27;a &#x27;örgüt&#x27; suçundan beraat</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/dugerek-mahallesi-ne-saglik-merkezi-mujdesi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T19:37:42+03:00</news:publication_date>
+      <news:title>Düğerek Mahallesi&#x27;ne Sağlık Merkezi Müjdesi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/zelenskiy-rusya-ile-karadeniz-muzakere-kanali-acilacak.html</loc>
     <news:news>
       <news:publication>
@@ -266,18 +332,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/5-yil-sonra-bir-ilk-salah-sadece-2-macta-farkini-ortaya-koy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T19:31:55+03:00</news:publication_date>
-      <news:title>5 yıl sonra bir ilk! Salah sadece 2 maçta farkını ortaya koydu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/bahcelinin-ahmetler-goreve-dedigi-ahmet-ozerden-ilk-aci.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/bahceli-nin-ahmet-ler-goreve-dedigi-ahmet-ozer-den-ilk-aci.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -288,7 +343,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/cinden-abdnin-yaptirim-tehdidine-yanit.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/cin-den-abd-nin-yaptirim-tehdidine-yanit.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -299,7 +354,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/bakan-goktas-fethi-yasari-kabul-etti.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/bakan-goktas-fethi-yasar-i-kabul-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -310,7 +365,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/galatasaray-trabzonsporun-gundemindeki-golcuye-talip-oldu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/galatasaray-trabzonspor-un-gundemindeki-golcuye-talip-oldu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -321,7 +376,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/tarik-biberovic-fenerbahceye-veda-etti.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/tarik-biberovic-fenerbahce-ye-veda-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -332,7 +387,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/polonya-letonyayi-3-1-maglup-etti.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/polonya-letonya-yi-3-1-maglup-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -343,7 +398,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/cemal-kayadan-mevlid-kandili-mesaji.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/cemal-kaya-dan-mevlid-kandili-mesaji.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -354,7 +409,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/zulal-gultepeden-uc-birincilik.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/zulal-gultepe-den-uc-birincilik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -376,7 +431,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/acik-acik-itiraf-etti-oosterwoldeyi-zorla-gondermisler.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/acik-acik-itiraf-etti-oosterwolde-yi-zorla-gondermisler.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -387,7 +442,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/trabzonspor-kadin-futbol-takimina-behinan-katildi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/trabzonspor-kadin-futbol-takimi-na-behinan-katildi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -398,18 +453,18 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/bist-100-gunu-1450149-puanla-tamamladi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-haberi-borsa-gunu-dususle-tamamladi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T18:28:21+03:00</news:publication_date>
-      <news:title>BIST 100 Günü 14.501,49 Puanla Tamamladı</news:title>
+      <news:publication_date>2026-08-24T18:19:59+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Borsa günü düşüşle tamamladı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/trump-kanadaya-yonelik-tarife-yukseltme-karari.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/trump-kanada-ya-yonelik-tarife-yukseltme-karari.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -453,7 +508,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/besiktasta-sadece-mac-kaybedilmedi-613-dakikalik-seri-de-b.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/besiktas-ta-sadece-mac-kaybedilmedi-613-dakikalik-seri-de-b.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -464,7 +519,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/kademeli-emeklilik-son-dakika-kademeli-emeklilik-meclise-g.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/kademeli-emeklilik-son-dakika-kademeli-emeklilik-meclis-e-g.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -486,7 +541,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-fenerbahcede-takim-arkadaslariyla-vedalasti-i.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-fenerbahce-de-takim-arkadaslariyla-vedalasti-i.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -497,7 +552,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/trumptan-kanadaya-karsi-yeni-hamle.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/trump-tan-kanada-ya-karsi-yeni-hamle.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -585,7 +640,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/juventusta-kenan-yildiz-depremi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/juventus-ta-kenan-yildiz-depremi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -596,7 +651,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/aziz-ihsan-aktas-davasinda-riza-akpolata-18-suctan-beraat.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/aziz-ihsan-aktas-davasinda-riza-akpolat-a-18-suctan-beraat.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -629,7 +684,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/kafa-travmasi-geciren-kerem-akturkoglundan-ilk-aciklama.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/kafa-travmasi-geciren-kerem-akturkoglu-ndan-ilk-aciklama.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -637,6 +692,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:33:47+03:00</news:publication_date>
       <news:title>Kafa travması geçiren Kerem Aktürkoğlu&#x27;ndan ilk açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/fenerbahce-euroleague-super-kupa-da-mucadele-edecek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:33:45+03:00</news:publication_date>
+      <news:title>Fenerbahçe, Euroleague Süper Kupa&#x27;da mücadele edecek</news:title>
     </news:news>
   </url>
   <url>
@@ -651,6 +717,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-cikti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:29:00+03:00</news:publication_date>
+      <news:title>Son dakika... Aziz İhsan Aktaş davasında karar çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-suc-orgutu-davasinda-karar-belli.html</loc>
     <news:news>
       <news:publication>
@@ -659,17 +736,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:29:00+03:00</news:publication_date>
       <news:title>SON DAKİKA... ‘Aziz İhsan Suç Örgütü’ davasında karar belli oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T16:28:00+03:00</news:publication_date>
-      <news:title>Son dakika... Aziz İhsan Aktaş davasında karar</news:title>
     </news:news>
   </url>
   <url>
@@ -684,18 +750,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-depremler-balikesirde-deprem-mi-oldu-24-agusto.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T16:25:38+03:00</news:publication_date>
-      <news:title>Son dakika depremler! Balıkesir&#x27;de deprem mi oldu? 24 Ağustos 2026 nerede, ne zaman deprem oldu?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-balikesirde-deprem-afad-buyuklugunu-acikladi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-balikesir-de-deprem-afad-buyuklugunu-acikladi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -706,7 +761,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-balikesir-altieylulde-31-buyuklugunde-deprem.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-balikesir-altieylul-de-31-buyuklugunde-deprem.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -714,6 +769,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:21:00+03:00</news:publication_date>
       <news:title>Son Dakika... Balıkesir Altıeylül&#x27;de 3.1 büyüklüğünde deprem</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-haberi-terorsuz-turkiye-surecinde-kritik-gun.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T16:20:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ... Terörsüz Türkiye sürecinde kritik gün: Takip Kurulu ilk toplantısına başladı</news:title>
     </news:news>
   </url>
   <url>
@@ -750,7 +816,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kulliyede-bir-ilk-tarihi-toplanti-basladi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kulliye-de-bir-ilk-tarihi-toplanti-basladi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -758,17 +824,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T16:14:00+03:00</news:publication_date>
       <news:title>Son dakika... Külliye&#x27;de bir ilk: Tarihi toplantı başladı!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/terorsuz-turkiye-takip-kurulunun-ilk-toplantisi-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T16:13:00+03:00</news:publication_date>
-      <news:title>Terörsüz Türkiye Takip Kurulu&#x27;nun ilk toplantısı başladı</news:title>
     </news:news>
   </url>
   <url>
@@ -794,18 +849,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/idris-naim-sahin-adina-tahsisli-araclarla-ilgili-sok-detay.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T14:46:15+03:00</news:publication_date>
-      <news:title>İdris Naim Şahin adına tahsisli araçlarla ilgili şok detay: Belarus&#x27;tan kadın getirmişler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/24/ekkdan-2027-2029-ovp-mesaji.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/ekk-dan-2027-2029-ovp-mesaji.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -824,6 +868,17 @@
       </news:publication>
       <news:publication_date>2026-08-24T14:24:34+03:00</news:publication_date>
       <news:title>Yapay zekadan bomba şampiyonluk tahmini</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-haberleri-alihan-kuris-sorusturmasinda-yeni-deta.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T14:16:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERLERİ: Alihan Kuriş soruşturmasında yeni detaylar ne?</news:title>
     </news:news>
   </url>
   <url>
@@ -860,7 +915,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/besiktastan-son-dakika-karari-2-baskan-daltaban-aciklama.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/besiktas-tan-son-dakika-karari-2-baskan-daltaban-aciklama.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -882,7 +937,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kocaeli-daricada-3-kardesin-cansiz-bedeni-bulun.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-kocaeli-darica-da-3-kardesin-cansiz-bedeni-bulun.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -915,7 +970,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/macaristanin-szolnok-kenti-yakinlarinda-savas-ucagi-dustu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/macaristan-in-szolnok-kenti-yakinlarinda-savas-ucagi-dustu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1014,7 +1069,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-guney-kibrista-israil-alarmi-tehlikenin-farkin.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-guney-kibris-ta-israil-alarmi-tehlikenin-farkin.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1036,7 +1091,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasinda-karar-aciklandi-s.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-aziz-ihsan-aktas-davasi-nda-karar-aciklandi-s.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1047,7 +1102,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-ankarada-yangin-valilik-duyurdu-1-kisi-gozalt.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-ankara-da-yangin-valilik-duyurdu-1-kisi-gozalt.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1091,7 +1146,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-diyarbakirda-plaza-yangini.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/24/son-dakika-diyarbakir-da-plaza-yangini.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1099,17 +1154,6 @@
       </news:publication>
       <news:publication_date>2026-08-24T03:42:00+03:00</news:publication_date>
       <news:title>Son dakika: Diyarbakır&#x27;da plaza yangını!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/23/son-dakika-haberi-ankarada-agaclik-alanda-yangin-sonduruld.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-23T21:29:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ: Ankara’da ağaçlık alanda yangın söndürüldü</news:title>
     </news:news>
   </url>
 </urlset>
