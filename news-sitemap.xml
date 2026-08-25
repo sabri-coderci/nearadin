@@ -46,17 +46,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/26/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-26T00:00:00+03:00</news:publication_date>
-      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 26 Ağustos 2026</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/sabah-devler-liginde-tarih-yazdi.html</loc>
     <news:news>
       <news:publication>
@@ -266,17 +255,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/erzurumspor-diabateyi-transfer-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:55:21+03:00</news:publication_date>
-      <news:title>Erzurumspor, Diabate&#x27;yi Transfer Etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-2-deprem-afad-duyurdu.html</loc>
     <news:news>
       <news:publication>
@@ -340,17 +318,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
       <news:title>SON DAKİKA | Adıyaman&#x27;da 4.2 büyüklüğünde korkutan deprem</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/goztepe-galatasaray-macina-hazirlaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:50:11+03:00</news:publication_date>
-      <news:title>Göztepe, Galatasaray Maçına Hazırlanıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -439,17 +406,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:33:11+03:00</news:publication_date>
       <news:title>Bir dönem sonra sona erdi: Efsanevi şarkıcı Dolly Parton hayatını kaybetti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/halkbanka-11-milyar-dolarlik-ilave-kaynak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:31:41+03:00</news:publication_date>
-      <news:title>Halkbank&#x27;a 1,1 milyar dolarlık ilave kaynak</news:title>
     </news:news>
   </url>
   <url>
@@ -563,6 +519,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-borsa-sali-gununu-dususle-tamamladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T18:45:31+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Borsa salı gününü düşüşle tamamladı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-besiktasta-talebi-yonetimi-soke-etmisti-sozle.html</loc>
     <news:news>
       <news:publication>
@@ -582,6 +549,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T18:23:00+03:00</news:publication_date>
       <news:title>SON DAKİKA | Beşiktaş&#x27;ta Jean Onana ile yollar ayrıldı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/uskudar-belediyesindeki-baskan-vekilligi-seciminde-yurutme.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T18:19:00+03:00</news:publication_date>
+      <news:title>Üsküdar Belediyesi&#x27;ndeki Başkan Vekilliği Seçiminde yürütme durduruldu</news:title>
     </news:news>
   </url>
   <url>
@@ -915,17 +893,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/aihm-osman-kavala-hakkindaki-kararini-acikladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T11:47:50+03:00</news:publication_date>
-      <news:title>AİHM, Osman Kavala hakkındaki kararını açıkladı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-antalyada-hazine-tasinmazi-operasyonu-27-kisi.html</loc>
     <news:news>
       <news:publication>
@@ -934,17 +901,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T11:44:59+03:00</news:publication_date>
       <news:title>SON DAKİKA! Antalya&#x27;da hazine taşınmazı operasyonu: 27 kişi gözaltına alındı! 80 taşınmazın değeri 10 milyar TL!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-aihm-osman-kavala-hakkindaki-kararini-aciklad.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T11:37:00+03:00</news:publication_date>
-      <news:title>Son Dakika... AİHM, Osman Kavala hakkındaki kararını açıkladı</news:title>
     </news:news>
   </url>
   <url>
