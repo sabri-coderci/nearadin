@@ -343,6 +343,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/koskoca-adam-ile-kadinin-yaptiklari-mide-bulandirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:49:00+03:00</news:publication_date>
+      <news:title>Koskoca adam ile kadının yaptıkları mide bulandırdı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-depremler.html</loc>
     <news:news>
       <news:publication>
@@ -472,17 +483,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T20:17:34+03:00</news:publication_date>
       <news:title>İran&#x27;dan ekonomik savaş çıkışı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/kuru-incirde-90-bin-tonun-uzerinde-rekolte-bekleniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T20:17:00+03:00</news:publication_date>
-      <news:title>Kuru incirde 90 bin tonun üzerinde rekolte bekleniyor</news:title>
     </news:news>
   </url>
   <url>
