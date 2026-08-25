@@ -24,6 +24,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/26/sampiyonluklardan-mahkeme-salonuna-unlu-futbolcuya-hapis-yo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-26T00:14:37+03:00</news:publication_date>
+      <news:title>Şampiyonluklardan mahkeme salonuna: Ünlü futbolcuya hapis yolu göründü</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/26/turkiye-voleybol-milli-takimi-finale-yukseldi.html</loc>
     <news:news>
       <news:publication>
@@ -43,6 +54,17 @@
       </news:publication>
       <news:publication_date>2026-08-26T00:06:12+03:00</news:publication_date>
       <news:title>Fernandes, Premier Lig Yılın Oyuncusu Seçildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/iran-abdnin-yaptirimlarina-alayci-tepki-verdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T23:58:21+03:00</news:publication_date>
+      <news:title>İran, ABD&#x27;nin Yaptırımlarına Alaycı Tepki Verdi</news:title>
     </news:news>
   </url>
   <url>
@@ -288,14 +310,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/adiyamanda-42-buyuklugunde-deprem.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-42-buyuklugunde-korkutan-deprem.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
-      <news:title>Adıyaman&#x27;da 4,2 büyüklüğünde deprem</news:title>
+      <news:title>SON DAKİKA | Adıyaman&#x27;da 4.2 büyüklüğünde korkutan deprem</news:title>
     </news:news>
   </url>
   <url>
@@ -310,14 +332,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-42-buyuklugunde-korkutan-deprem.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/goztepe-galatasaray-macina-hazirlaniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Adıyaman&#x27;da 4.2 büyüklüğünde korkutan deprem</news:title>
+      <news:publication_date>2026-08-25T21:50:11+03:00</news:publication_date>
+      <news:title>Göztepe, Galatasaray Maçına Hazırlanıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -420,17 +442,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/ankarada-300-milyon-tllik-uyusturucu-operasyonu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T20:59:05+03:00</news:publication_date>
-      <news:title>Ankara’da 300 milyon TL’lik uyuşturucu operasyonu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-madencilere-gozalti-aralarinda-basaran-aksu-d.html</loc>
     <news:news>
       <news:publication>
@@ -497,6 +508,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/cumhurbaskani-erdogandan-ahlatta-son-dakika-aciklamasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T19:20:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan&#x27;dan Ahlat&#x27;ta son dakika açıklaması</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-haberi-cumhurbaskani-erdogan-terorsuz-turkiye-g.html</loc>
     <news:news>
       <news:publication>
@@ -516,17 +538,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T19:08:00+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Recep Tayyip Erdoğan konuşuyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-borsa-sali-gununu-dususle-tamamladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T18:45:31+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Borsa salı gününü düşüşle tamamladı</news:title>
     </news:news>
   </url>
   <url>
