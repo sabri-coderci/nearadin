@@ -634,7 +634,7 @@ def fetch_and_generate():
                     }};
                     (function() {{
                         var d = document, s = d.createElement('script');
-                        s.src = 'https://nearad_n.disqus.com/embed.js';
+                        s.src = 'https://ne-aradin.disqus.com/embed.js';
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     }})();
