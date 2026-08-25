@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/26/son-dakika-suleymancilar-sorusturmasinda-2-dalga-10-kisi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-26T00:29:48+03:00</news:publication_date>
+      <news:title>Son Dakika | Süleymancılar soruşturmasında 2. dalga: 10 kişi tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/26/son-depremler-son-dakika-deprem-mi-oldu-az-once-deprem-mi.html</loc>
     <news:news>
       <news:publication>
@@ -10,6 +21,61 @@
       </news:publication>
       <news:publication_date>2026-08-26T00:27:54+03:00</news:publication_date>
       <news:title>Son depremler son dakika: Deprem mi oldu? Az önce deprem mi oldu, nerede ve kaç büyüklüğünde? AFAD ve Kandilli son dakika</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/26/turkiye-voleybol-milli-takimi-finale-yukseldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-26T00:07:11+03:00</news:publication_date>
+      <news:title>Türkiye Voleybol Milli Takımı Finale Yükseldi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/26/fernandes-premier-lig-yilin-oyuncusu-secildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-26T00:06:12+03:00</news:publication_date>
+      <news:title>Fernandes, Premier Lig Yılın Oyuncusu Seçildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/26/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-26T00:00:00+03:00</news:publication_date>
+      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 26 Ağustos 2026</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/sabah-devler-liginde-tarih-yazdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T23:43:32+03:00</news:publication_date>
+      <news:title>Sabah, Devler Ligi&#x27;nde Tarih Yazdı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-suriyede-teror-orgutu-ypg-kendini-feshetti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T23:19:57+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Suriye&#x27;de terör örgütü YPG kendini feshetti</news:title>
     </news:news>
   </url>
   <url>
@@ -123,17 +189,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/motokuryeyi-tekme-tokat-dovduler.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T22:51:01+03:00</news:publication_date>
-      <news:title>Motokuryeyi tekme tokat dövdüler</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/erzurumspor-diabateyi-transfer-etti.html</loc>
     <news:news>
       <news:publication>
@@ -178,14 +233,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/galatasaray-goztepe-macina-hazirlaniyor.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/corum-fk-besiktas-macina-hazirlaniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-25T22:14:31+03:00</news:publication_date>
-      <news:title>Galatasaray Göztepe Maçına Hazırlanıyor</news:title>
+      <news:publication_date>2026-08-25T22:12:42+03:00</news:publication_date>
+      <news:title>Çorum FK Beşiktaş Maçına Hazırlanıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-deprem-mi-oldu-az-once-deprem-adiyam.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T22:00:00+03:00</news:publication_date>
+      <news:title>Son dakika Adıyaman&#x27;da deprem mi oldu? Az önce deprem Adıyaman&#x27;da nerede oldu? Adıyaman deprem Kandilli ve AFAD son depremler listesi 25 Ağustos 2026</news:title>
     </news:news>
   </url>
   <url>
@@ -208,17 +274,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:55:21+03:00</news:publication_date>
       <news:title>Erzurumspor, Diabate&#x27;yi Transfer Etti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/trabzonspor-ferencvarosa-hazirlaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:54:21+03:00</news:publication_date>
-      <news:title>Trabzonspor Ferencvaros&#x27;a Hazırlanıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -252,6 +307,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:53:49+03:00</news:publication_date>
       <news:title>SON DAKİKA | AFAD duyurdu: Adıyaman&#x27;da korkutan deprem</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/adiyamanda-42-buyuklugunde-deprem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
+      <news:title>Adıyaman&#x27;da 4,2 büyüklüğünde deprem</news:title>
     </news:news>
   </url>
   <url>
@@ -354,17 +420,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-suriyede-teror-orgutu-ypg-kendini-feshetti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:36:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Suriye&#x27;de terör örgütü YPG kendini feshetti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-teror-orgutu-ypg-kendini-feshetti.html</loc>
     <news:news>
       <news:publication>
@@ -395,17 +450,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:31:41+03:00</news:publication_date>
       <news:title>Halkbank&#x27;a 1,1 milyar dolarlık ilave kaynak</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-mazlum-abdi-samda-ilan-etti-teror-orgutu-sdg-f.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:30:00+03:00</news:publication_date>
-      <news:title>Son dakika: Mazlum Abdi Şam&#x27;da ilan etti: Terör örgütü SDG feshedildi!</news:title>
     </news:news>
   </url>
   <url>
@@ -516,17 +560,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T19:08:00+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Recep Tayyip Erdoğan konuşuyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-borsa-sali-gununu-dususle-tamamladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T18:45:31+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Borsa salı gününü düşüşle tamamladı</news:title>
     </news:news>
   </url>
   <url>
@@ -882,6 +915,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/aihm-osman-kavala-hakkindaki-kararini-acikladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T11:47:50+03:00</news:publication_date>
+      <news:title>AİHM, Osman Kavala hakkındaki kararını açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-antalyada-hazine-tasinmazi-operasyonu-27-kisi.html</loc>
     <news:news>
       <news:publication>
@@ -890,6 +934,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T11:44:59+03:00</news:publication_date>
       <news:title>SON DAKİKA! Antalya&#x27;da hazine taşınmazı operasyonu: 27 kişi gözaltına alındı! 80 taşınmazın değeri 10 milyar TL!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-aihm-osman-kavala-hakkindaki-kararini-aciklad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T11:37:00+03:00</news:publication_date>
+      <news:title>Son Dakika... AİHM, Osman Kavala hakkındaki kararını açıkladı</news:title>
     </news:news>
   </url>
   <url>
