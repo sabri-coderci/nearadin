@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/imamoglu-cikar-amacli-suc-orgutu-davasi-ertan-yildizdan.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/26/son-depremler-son-dakika-deprem-mi-oldu-az-once-deprem-mi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-25T23:39:15+03:00</news:publication_date>
-      <news:title>&quot;İmamoğlu Çıkar Amaçlı Suç Örgütü&quot; davası! Ertan Yıldız&#x27;dan çok konuşulacak ifade</news:title>
+      <news:publication_date>2026-08-26T00:27:54+03:00</news:publication_date>
+      <news:title>Son depremler son dakika: Deprem mi oldu? Az önce deprem mi oldu, nerede ve kaç büyüklüğünde? AFAD ve Kandilli son dakika</news:title>
     </news:news>
   </url>
   <url>
@@ -189,17 +189,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-deprem-mi-oldu-az-once-deprem-adiyam.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T22:00:00+03:00</news:publication_date>
-      <news:title>Son dakika Adıyaman&#x27;da deprem mi oldu? Az önce deprem Adıyaman&#x27;da nerede oldu? Adıyaman deprem Kandilli ve AFAD son depremler listesi 25 Ağustos 2026</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-korkutan-depremler.html</loc>
     <news:news>
       <news:publication>
@@ -266,28 +255,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-42-buyuklugunde-korkutan-deprem.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Adıyaman&#x27;da 4.2 büyüklüğünde korkutan deprem</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/adiyamanda-42-buyuklugunde-deprem.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
-      <news:title>Adıyaman&#x27;da 4,2 büyüklüğünde deprem</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-deprem.html</loc>
     <news:news>
       <news:publication>
@@ -296,6 +263,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
       <news:title>Son Dakika | Adıyaman&#x27;da peş peşe deprem</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-42-buyuklugunde-korkutan-deprem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Adıyaman&#x27;da 4.2 büyüklüğünde korkutan deprem</news:title>
     </news:news>
   </url>
   <url>
@@ -574,6 +552,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/imamoglu-cikar-amacli-suc-orgutu-davasi-ertan-yildizdan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T18:07:00+03:00</news:publication_date>
+      <news:title>&quot;İmamoğlu Çıkar Amaçlı Suç Örgütü&quot; davası! Ertan Yıldız&#x27;dan çok konuşulacak ifade</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/kyk-yurt-basvurusu-yapma-ekrani-e-devlet-ve-tarihleri-son.html</loc>
     <news:news>
       <news:publication>
@@ -640,17 +629,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/kademeli-emeklilik-son-dakika-kademeli-emeklilik-meclise-g.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
-      <news:title>KADEMELİ EMEKLİLİK SON DAKİKA: Kademeli Emeklilik Meclis&#x27;e Geldi Mi, Son Durum Ne? İşte Kademeli Emeklilik Yaş ve Prim Tablosu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/deprem-son-dakika-25-agustos-bugun-deprem-mi-oldu-nerede.html</loc>
     <news:news>
       <news:publication>
@@ -659,6 +637,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
       <news:title>DEPREM SON DAKİKA 25 AĞUSTOS! Bugün deprem mi oldu, nerede, kaç şiddetinde? 25 Ağustos 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/kademeli-emeklilik-son-dakika-kademeli-emeklilik-meclise-g.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
+      <news:title>KADEMELİ EMEKLİLİK SON DAKİKA: Kademeli Emeklilik Meclis&#x27;e Geldi Mi, Son Durum Ne? İşte Kademeli Emeklilik Yaş ve Prim Tablosu</news:title>
     </news:news>
   </url>
   <url>
@@ -736,6 +725,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T16:42:24+03:00</news:publication_date>
       <news:title>Galatasaray&#x27;da son dakika! Günlerdir görüşülen forvet gelmiyor, tüm kapılar kapandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/super-lig-devi-22lik-yildizi-kapti-yarin-istanbula-geliyo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T16:31:51+03:00</news:publication_date>
+      <news:title>Süper Lig devi 22&#x27;lik yıldızı kaptı! Yarın İstanbul&#x27;a geliyor</news:title>
     </news:news>
   </url>
   <url>
