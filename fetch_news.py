@@ -621,8 +621,7 @@ def fetch_and_generate():
                 <a href="/haber/{news['date_folder']}/" class="btn btn-secondary">← {news['date_str']} Tarihli Tüm Haberlere Dön</a>
             </div>
                   <!-- Mobil Uyumlu Disqus Yorum Alanı -->
-            <div style="margin-top: 20px; width: 100%; box-sizing: border-box;">
-                <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 12px; color: #0056b3;">💬 Yorumlar</h3>
+        
                 <div id="disqus_thread" style="width: 100%;"></div>
                 <script>
                     var disqus_config = function () {{
@@ -636,7 +635,7 @@ def fetch_and_generate():
                         (d.head || d.body).appendChild(s);
                     }})();
                 </script>
-            </div>
+            
 
 
             <div class="related-news">
