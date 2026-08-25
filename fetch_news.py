@@ -623,22 +623,25 @@ def fetch_and_generate():
                         <!-- Giscus Yorum Bileşeni -->
 <div class="comments-container" style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; border: 1px solid #e4e6eb;">
     <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px; color: #0056b3;">💬 Yorumlar</h3>
-    <script src="https://giscus.app/client.js"
-            data-repo="sabri-coderci/nearadin"
-            data-repo-id="R_kgDOTs_riQ"
-            data-category="Ideas"
-            data-category-id="DIC_kwDOTs_ric4DCowD"
-            data-mapping="pathname"
-            data-strict="1"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="light"
-            data-lang="tr"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
+               <!-- Disqus Yorum Alanı -->
+            <div class="comments-container" style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; border: 1px solid #e4e6eb;">
+                <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px; color: #0056b3;">💬 Yorumlar</h3>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {{
+                        this.page.url = '{news['full_url']}';
+                        this.page.identifier = '{news['internal_link']}';
+                    }};
+                    (function() {{
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://nearadin.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    }})();
+                </script>
+                <noscript>Yorumları görüntülemek için lütfen JavaScript'i etkinleştirin.</noscript>
+            </div>
+
 </div>
 
             <div class="related-news">
