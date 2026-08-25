@@ -2,14 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/sosyal-medyada-infial-yaratmisti-kaplumbagayi-ezerek-oldurd.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/imamoglu-cikar-amacli-suc-orgutu-davasi-ertan-yildizdan.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-25T23:54:54+03:00</news:publication_date>
-      <news:title>Sosyal medyada infial yaratmıştı! Kaplumbağayı ezerek öldürdüğü görüntüler 15 yıl sonra ortaya çıktı... Gözaltına alındı</news:title>
+      <news:publication_date>2026-08-25T23:39:15+03:00</news:publication_date>
+      <news:title>&quot;İmamoğlu Çıkar Amaçlı Suç Örgütü&quot; davası! Ertan Yıldız&#x27;dan çok konuşulacak ifade</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/seyir-halindeki-kamyondan-urunleri-calip-kactila.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T23:31:37+03:00</news:publication_date>
+      <news:title>Seyir halindeki kamyondan ürünleri çalıp kaçtıla</news:title>
     </news:news>
   </url>
   <url>
@@ -79,17 +90,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-haberi-besiktas-ernest-pokuyu-resmen-acikladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T23:00:18+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Beşiktaş Ernest Poku&#x27;yu resmen açıkladı! Hollandalı yıldız İstanbul&#x27;a geliyor...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/besiktastan-son-dakika-aciklamasi-yeni-transfer-geliyor.html</loc>
     <news:news>
       <news:publication>
@@ -131,17 +131,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T22:51:31+03:00</news:publication_date>
       <news:title>Türkiye, Taranto 2026&#x27;da 6 Madalya Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/motokuryeyi-tekme-tokat-dovduler.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T22:51:01+03:00</news:publication_date>
-      <news:title>Motokuryeyi tekme tokat dövdüler</news:title>
     </news:news>
   </url>
   <url>
@@ -197,17 +186,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T22:14:31+03:00</news:publication_date>
       <news:title>Galatasaray Göztepe Maçına Hazırlanıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/ihbarla-ortaya-cikti-evden-kurislerle-ilgili-37-klasor-bel.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T22:10:16+03:00</news:publication_date>
-      <news:title>İhbarla ortaya çıktı! Evden Kurişler&#x27;le ilgili 37 klasör belge ele geçirildi</news:title>
     </news:news>
   </url>
   <url>
@@ -299,17 +277,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-deprem.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Adıyaman&#x27;da peş peşe deprem</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/adiyamanda-42-buyuklugunde-deprem.html</loc>
     <news:news>
       <news:publication>
@@ -318,6 +285,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
       <news:title>Adıyaman&#x27;da 4,2 büyüklüğünde deprem</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-deprem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:52:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Adıyaman&#x27;da peş peşe deprem</news:title>
     </news:news>
   </url>
   <url>
@@ -332,14 +310,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/adiyamanda-pes-pese-deprem-afad-duyurdu-adiyamanda-depre.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-adiyamanda-pes-pese-depremler.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-25T21:49:00+03:00</news:publication_date>
-      <news:title>Adıyaman&#x27;da peş peşe deprem! AFAD duyurdu: Adıyaman&#x27;da deprem kaç şiddetinde oldu, merkez üssü neresi?</news:title>
+      <news:title>Son dakika... Adıyaman&#x27;da peş peşe depremler</news:title>
     </news:news>
   </url>
   <url>
@@ -431,6 +409,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/bir-donem-sonra-sona-erdi-efsanevi-sarkici-dolly-parton-hay.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:33:11+03:00</news:publication_date>
+      <news:title>Bir dönem sonra sona erdi: Efsanevi şarkıcı Dolly Parton hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/halkbanka-11-milyar-dolarlik-ilave-kaynak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:31:41+03:00</news:publication_date>
+      <news:title>Halkbank&#x27;a 1,1 milyar dolarlık ilave kaynak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-mazlum-abdi-samda-ilan-etti-teror-orgutu-sdg-f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T21:30:00+03:00</news:publication_date>
+      <news:title>Son dakika: Mazlum Abdi Şam&#x27;da ilan etti: Terör örgütü SDG feshedildi!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-cumhurbaskani-erdogan-biz-buyuk-bir-devletiz.html</loc>
     <news:news>
       <news:publication>
@@ -475,14 +486,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/saglik-bakanligindan-hayat-kurtaran-mudahalelere-guncel-re.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/25/kuru-incirde-90-bin-tonun-uzerinde-rekolte-bekleniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-25T20:14:00+03:00</news:publication_date>
-      <news:title>Sağlık Bakanlığı&#x27;ndan, hayat kurtaran müdahalelere güncel rehber</news:title>
+      <news:publication_date>2026-08-25T20:17:00+03:00</news:publication_date>
+      <news:title>Kuru incirde 90 bin tonun üzerinde rekolte bekleniyor</news:title>
     </news:news>
   </url>
   <url>
@@ -552,28 +563,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/imralida-yapildigi-iddia-edilen-gorusme-hayal-mahsulu-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T18:13:00+03:00</news:publication_date>
-      <news:title>&quot;İmralı&#x27;da yapıldığı iddia edilen görüşme hayal mahsulü&quot; - Son Dakika Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/imamoglu-cikar-amacli-suc-orgutu-davasi-ertan-yildizdan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T18:07:00+03:00</news:publication_date>
-      <news:title>&quot;İmamoğlu Çıkar Amaçlı Suç Örgütü&quot; davası! Ertan Yıldız&#x27;dan çok konuşulacak ifade</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/kyk-yurt-basvurusu-yapma-ekrani-e-devlet-ve-tarihleri-son.html</loc>
     <news:news>
       <news:publication>
@@ -596,17 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-istanbulun-ilcesinde-baskan-vekili-seciminin-ye.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T18:05:00+03:00</news:publication_date>
-      <news:title>Son dakika: İstanbul&#x27;un ilçesinde Başkan vekili seçiminin yenilenmesine karar verildi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-uskudarda-chpnin-kazandigi-baskanvekilligi-s.html</loc>
     <news:news>
       <news:publication>
@@ -615,17 +593,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T18:02:00+03:00</news:publication_date>
       <news:title>Son Dakika... Üsküdar&#x27;da CHP&#x27;nin kazandığı başkanvekilliği seçimine yürütmeyi durdurma kararı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/trumptan-son-dakika-hurmuz-bogazi-aciklamasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T17:54:00+03:00</news:publication_date>
-      <news:title>Trump&#x27;tan son dakika Hürmüz Boğazı açıklaması</news:title>
     </news:news>
   </url>
   <url>
@@ -648,6 +615,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T17:50:00+03:00</news:publication_date>
       <news:title>Son Dakika | Beşiktaş Başkanı Serdal Adalı anjiyo oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-chp-mutlak-butlan-davasinda-temyiz-basvurusu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
+      <news:title>Son dakika... CHP &#x27;mutlak butlan&#x27; davasında temyiz başvurusunu geri çekti</news:title>
     </news:news>
   </url>
   <url>
@@ -681,17 +659,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
       <news:title>EMEKLİYE SEYYANEN ZAM SON DAKİKA: Emekliye Seyyanen Zam Gelecek Mi? Seyyanen Zam Kararı Ne Zaman Çıkacak?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-chp-mutlak-butlan-davasinda-temyiz-basvurusu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T17:49:00+03:00</news:publication_date>
-      <news:title>Son dakika... CHP &#x27;mutlak butlan&#x27; davasında temyiz başvurusunu geri çekti</news:title>
     </news:news>
   </url>
   <url>
@@ -739,17 +706,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/cumhurbaskani-erdogana-yonelik-provokatif-paylasim-savcilig.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T17:04:35+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan’a yönelik provokatif paylaşım savcılığı harekete geçirdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/rusya-nato-askerlerinin-ukraynada-konuslandirilmasi-ihtima.html</loc>
     <news:news>
       <news:publication>
@@ -758,17 +714,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T16:58:00+03:00</news:publication_date>
       <news:title>Rusya: NATO askerlerinin Ukrayna&#x27;da konuşlandırılması ihtimali kabul edilemez</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-bursada-bir-orman-yangini-daha-helikopterler.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T16:55:00+03:00</news:publication_date>
-      <news:title>Son dakika | Bursa&#x27;da bir orman yangını daha! Helikopterler art arda havalandı</news:title>
     </news:news>
   </url>
   <url>
@@ -802,6 +747,28 @@
       </news:publication>
       <news:publication_date>2026-08-25T16:09:19+03:00</news:publication_date>
       <news:title>Rojin Kabaiş dosyasında çarpıcı iddia! Aile avukatı: &quot;Rojin’in solunumu felç edilerek katledildi&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-haberi-besiktas-ernest-pokuyu-resmen-acikladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T15:41:53+03:00</news:publication_date>
+      <news:title>Son dakika haberi: Beşiktaş Ernest Poku&#x27;yu resmen açıkladı! Hollandalı yıldız İstanbul&#x27;a geliyor...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-haberi-meteorolojiden-hafta-sonu-icin-saganak-y.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T15:10:24+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Meteoroloji&#x27;den hafta sonu için sağanak yağmur uyarısı | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
@@ -849,17 +816,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-cumhurbaskani-erdogandan-ahlatta-terorsuz-tu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T13:51:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Cumhurbaşkanı Erdoğan&#x27;dan Ahlat&#x27;ta Terörsüz Türkiye mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-cumhurbaskani-erdogandan-terorsuz-turkiye-mes.html</loc>
     <news:news>
       <news:publication>
@@ -868,6 +824,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T13:51:00+03:00</news:publication_date>
       <news:title>Son dakika... Cumhurbaşkanı Erdoğan&#x27;dan Terörsüz Türkiye mesajı: Hedefe ulaştığımızda yeni bir dönemin kapıları açılacak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-cumhurbaskani-erdogandan-ahlatta-terorsuz-tu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T13:51:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA... Cumhurbaşkanı Erdoğan&#x27;dan Ahlat&#x27;ta Terörsüz Türkiye mesajı</news:title>
     </news:news>
   </url>
   <url>
@@ -912,17 +879,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T12:08:00+03:00</news:publication_date>
       <news:title>SON DAKİKA! AİHM nihai Osman Kavala kararını verdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/son-dakika-ozgur-ozelden-aziz-ihsan-aktas-davasi-kararlar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T11:58:00+03:00</news:publication_date>
-      <news:title>Son dakika | Özgür Özel&#x27;den Aziz İhsan Aktaş davası kararlarına ilk tepki!</news:title>
     </news:news>
   </url>
   <url>
