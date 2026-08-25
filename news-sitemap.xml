@@ -13,17 +13,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/seyir-halindeki-kamyondan-urunleri-calip-kactila.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T23:31:37+03:00</news:publication_date>
-      <news:title>Seyir halindeki kamyondan ürünleri çalıp kaçtıla</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/besiktas-ernest-pokuyu-transfer-ediyor.html</loc>
     <news:news>
       <news:publication>
@@ -131,6 +120,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T22:51:31+03:00</news:publication_date>
       <news:title>Türkiye, Taranto 2026&#x27;da 6 Madalya Kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/motokuryeyi-tekme-tokat-dovduler.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T22:51:01+03:00</news:publication_date>
+      <news:title>Motokuryeyi tekme tokat dövdüler</news:title>
     </news:news>
   </url>
   <url>
@@ -321,17 +321,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/25/corum-fk-besiktas-macina-hazirlaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T21:47:11+03:00</news:publication_date>
-      <news:title>Çorum FK Beşiktaş Maçına Hazırlanıyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-mazlum-abdi-samda-duyurdu-teror-orgutu-pkk-b.html</loc>
     <news:news>
       <news:publication>
@@ -453,6 +442,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/25/ankarada-300-milyon-tllik-uyusturucu-operasyonu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T20:59:05+03:00</news:publication_date>
+      <news:title>Ankara’da 300 milyon TL’lik uyuşturucu operasyonu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/25/son-dakika-madencilere-gozalti-aralarinda-basaran-aksu-d.html</loc>
     <news:news>
       <news:publication>
@@ -527,6 +527,17 @@
       </news:publication>
       <news:publication_date>2026-08-25T19:09:00+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Cumhurbaşkanı Erdoğan: Terörsüz Türkiye güven tazeledi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/25/cumhurbaskani-recep-tayyip-erdogan-konusuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-25T19:08:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Recep Tayyip Erdoğan konuşuyor</news:title>
     </news:news>
   </url>
   <url>
@@ -725,17 +736,6 @@
       </news:publication>
       <news:publication_date>2026-08-25T16:42:24+03:00</news:publication_date>
       <news:title>Galatasaray&#x27;da son dakika! Günlerdir görüşülen forvet gelmiyor, tüm kapılar kapandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/25/super-lig-devi-22lik-yildizi-kapti-yarin-istanbula-geliyo.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T16:31:51+03:00</news:publication_date>
-      <news:title>Süper Lig devi 22&#x27;lik yıldızı kaptı! Yarın İstanbul&#x27;a geliyor</news:title>
     </news:news>
   </url>
   <url>
