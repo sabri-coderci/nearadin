@@ -620,13 +620,10 @@ def fetch_and_generate():
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
                 <a href="/haber/{news['date_folder']}/" class="btn btn-secondary">← {news['date_str']} Tarihli Tüm Haberlere Dön</a>
             </div>
-                        <!-- Giscus Yorum Bileşeni -->
-<div class="comments-container" style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; border: 1px solid #e4e6eb;">
-    <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px; color: #0056b3;">💬 Yorumlar</h3>
-               <!-- Disqus Yorum Alanı -->
-            <div class="comments-container" style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; border: 1px solid #e4e6eb;">
-                <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px; color: #0056b3;">💬 Yorumlar</h3>
-                <div id="disqus_thread"></div>
+                  <!-- Mobil Uyumlu Disqus Yorum Alanı -->
+            <div style="margin-top: 20px; width: 100%; box-sizing: border-box;">
+                <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 12px; color: #0056b3;">💬 Yorumlar</h3>
+                <div id="disqus_thread" style="width: 100%;"></div>
                 <script>
                     var disqus_config = function () {{
                         this.page.url = '{news['full_url']}';
@@ -639,10 +636,8 @@ def fetch_and_generate():
                         (d.head || d.body).appendChild(s);
                     }})();
                 </script>
-                <noscript>Yorumları görüntülemek için lütfen JavaScripti etkinleştirin.</noscript>
             </div>
 
-</div>
 
             <div class="related-news">
                 <div class="related-title">🔥 Diğer Son Dakika Gelişmeleri</div>
