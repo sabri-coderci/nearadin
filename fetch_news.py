@@ -546,6 +546,7 @@ def fetch_and_generate():
             <a href="/kategori/spor/" class="cat-chip">⚽ Spor</a>
             <a href="/kategori/kultur-sanat/" class="cat-chip">🎭 Kültür-Sanat</a>
             <a href="/kategori/ekonomi/" class="cat-chip">📈 Ekonomi</a>
+            <a href="/kategori/saglik/" class="cat-chip">🌡️Sağlık</a>
         </div>
 
         <div class="status-bar">
