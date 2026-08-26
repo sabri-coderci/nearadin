@@ -41,6 +41,12 @@ CATEGORIES = {
         "slug": "ekonomi",
         "query": "ekonomi",
         "keywords": ["ekonomi", "dolar", "euro", "borsa", "faiz", "enflasyon", "merkez bankası", "altın", "mevduat", "zam", "maaş", "emekli", "asgari ücret", "piyasa", "hisse", "vergi"]
+    },
+    "saglik": {
+        "name": "Sağlık Haberleri",
+        "slug": "saglik",
+        "query": "saglik",
+        "keywords": ["sağlık haberleri"]
     }
 }
 
