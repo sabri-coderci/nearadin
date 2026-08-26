@@ -6,35 +6,41 @@ import re
 import os
 import html
 import json
+import time
 import tweepy
 from email.utils import parsedate_to_datetime
 
-# Kategori Yapılandırması
+# Kategori Yapılandırması ve Otomatik Kelime Eşleme Mantığı
 CATEGORIES = {
     "gundem": {
         "name": "Gündem Haberleri",
         "slug": "gundem",
-        "query": "son+dakika"
+        "query": "son+dakika",
+        "keywords": ["sondakika", "gündem", "bakan", "cumhurbaşkanı", "açıklama", "polisi", "asayiş"]
     },
     "teknoloji": {
         "name": "Teknoloji Haberleri",
         "slug": "teknoloji",
-        "query": "teknoloji+haberleri"
+        "query": "teknoloji",
+        "keywords": ["teknoloji", "yapay zeka", "ai", "google", "apple", "samsung", "iphone", "android", "yazılım", "siber", "uzay", "nasa", "chip", "mikroçip", "togg", "sosyal medya", "instagram", "whatsapp"]
     },
     "spor": {
         "name": "Spor Haberleri",
         "slug": "spor",
-        "query": "spor+haberleri"
+        "query": "spor",
+        "keywords": ["spor", "futbol", "basketbol", "voleybol", "maç", "transfer", "lig", "fenerbahçe", "galatasaray", "beşiktaş", "trabzonspor", "uefa", "fifa", "gol", "şampiyon", "skor", "hakem", "derbi"]
     },
     "kultur": {
         "name": "Kültür Haberleri",
         "slug": "kultur-sanat",
-        "query": "kultur+sanat+haberleri"
+        "query": "kultur+sanat",
+        "keywords": ["kültür", "sanat", "sinema", "film", "tiyatro", "konser", "müzik", "sergi", "kitap", "yazar", "festival", "oyuncu", "dizi", "vizyon"]
     },
     "ekonomi": {
         "name": "Ekonomi Haberleri",
         "slug": "ekonomi",
-        "query": "ekonomi+haberleri"
+        "query": "ekonomi",
+        "keywords": ["ekonomi", "dolar", "euro", "borsa", "faiz", "enflasyon", "merkez bankası", "altın", "mevduat", "zam", "maaş", "emekli", "asgari ücret", "piyasa", "hisse", "vergi"]
     }
 }
 
@@ -49,6 +55,17 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
+
+def detect_category(title, desc):
+    """Haber başlığı ve özetine göre kategori tespiti yapar."""
+    text = f"{title} {desc}".lower()
+    for cat_key, cat_info in CATEGORIES.items():
+        if cat_key == "gundem":
+            continue
+        for kw in cat_info["keywords"]:
+            if kw in text:
+                return cat_info["name"], cat_info["slug"]
+    return CATEGORIES["gundem"]["name"], CATEGORIES["gundem"]["slug"]
 
 def post_to_x(latest_news):
     """En son çıkan haberi X üzerinde paylaşır."""
@@ -86,10 +103,8 @@ def post_to_x(latest_news):
         print(f"✅ X paylaşımı başarılı! Tweet ID: {response.data['id']}")
     except Exception as e:
         print(f"❌ X (Twitter) paylaşımında hata oluştu: {e}")
-        raise e
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
-    """Hamburger Menülü ve Kategori Bağlantılı Header Yapısı"""
     category_menu_items = ""
     for cat_key, cat in CATEGORIES.items():
         category_menu_items += f'<li style="border-bottom: 1px solid #f0f2f5;"><a href="/kategori/{cat["slug"]}/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏷️ {cat["name"]}</a></li>'
@@ -194,44 +209,62 @@ def fetch_and_generate():
     all_parsed_items = []
     seen_urls = set()
 
-    # Kategori RSS'lerinden veri topla
+    # 1. Öncelik: Ana Son Dakika Akışını Çek (Anasayfa Garanti)
+    main_rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
+    try:
+        req = urllib.request.Request(main_rss_url, headers=headers)
+        response = urllib.request.urlopen(req, timeout=12)
+        xml_data = response.read()
+        root = ET.fromstring(xml_data)
+        
+        for item in root.findall('./channel/item'):
+            link = item.find('link').text if item.find('link') is not None else ''
+            if link and link not in seen_urls:
+                seen_urls.add(link)
+                pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
+                try:
+                    pub_datetime = parsedate_to_datetime(pub_date_raw)
+                except Exception:
+                    pub_datetime = now
+                
+                all_parsed_items.append({
+                    'item': item,
+                    'pub_datetime': pub_datetime,
+                    'forced_cat': None
+                })
+    except Exception as e:
+        print(f"Ana RSS çekme hatası: {e}")
+
+    # 2. Öncelik: Özel Kategori RSS'lerini Çek
     for cat_key, cat in CATEGORIES.items():
+        if cat_key == "gundem": continue
         rss_url = f"https://news.google.com/rss/search?q={cat['query']}&hl=tr&gl=TR&ceid=TR:tr"
         try:
+            time.sleep(0.5)
             req = urllib.request.Request(rss_url, headers=headers)
-            response = urllib.request.urlopen(req, timeout=10)
+            response = urllib.request.urlopen(req, timeout=8)
             xml_data = response.read()
-
             root = ET.fromstring(xml_data)
-            raw_items = root.findall('./channel/item')
 
-            for item in raw_items:
+            for item in root.findall('./channel/item'):
                 link = item.find('link').text if item.find('link') is not None else ''
-                if link in seen_urls:
-                    continue
-                seen_urls.add(link)
-
-                pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
-                pub_datetime = None
-                if pub_date_raw:
+                if link and link not in seen_urls:
+                    seen_urls.add(link)
+                    pub_date_raw = item.find('pubDate').text if item.find('pubDate') is not None else ''
                     try:
                         pub_datetime = parsedate_to_datetime(pub_date_raw)
                     except Exception:
                         pub_datetime = now
 
-                if pub_datetime and (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 86400:
                     all_parsed_items.append({
                         'item': item,
                         'pub_datetime': pub_datetime,
-                        'category_key': cat_key,
-                        'category_name': cat['name'],
-                        'category_slug': cat['slug']
+                        'forced_cat': (cat['name'], cat['slug'])
                     })
         except Exception as e:
-            print(f"Kategori RSS çekme hatası ({cat_key}): {e}")
+            print(f"Kategori RSS hatası ({cat_key}): {e}")
 
     all_parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
-    all_parsed_items = all_parsed_items[:500]
 
     news_list = []
     daily_news_grouped = {}
@@ -253,6 +286,12 @@ def fetch_and_generate():
             parts = clean_title.rsplit(" - ", 1)
             clean_title = parts[0]
             source_name = parts[1]
+
+        # Kategori Tespiti
+        if entry['forced_cat']:
+            cat_name, cat_slug = entry['forced_cat']
+        else:
+            cat_name, cat_slug = detect_category(clean_title, clean_desc)
 
         dt_tr = pub_datetime.astimezone(tz_tr)
         time_str = dt_tr.strftime("%H:%M")
@@ -279,22 +318,20 @@ def fetch_and_generate():
             "internal_link": internal_link,
             "full_url": full_url,
             "iso_date": dt_tr.strftime("%Y-%m-%dT%H:%M:%S+03:00"),
-            "cat_name": entry['category_name'],
-            "cat_slug": entry['category_slug']
+            "cat_name": cat_name,
+            "cat_slug": cat_slug
         }
 
         news_list.append(news_data)
 
-        # Günlük gruplama
         if date_folder not in daily_news_grouped:
             daily_news_grouped[date_folder] = {"date_str": date_str, "news_items": []}
         daily_news_grouped[date_folder]["news_items"].append(news_data)
 
-        # Kategori gruplama
-        if entry['category_slug'] in category_news_grouped:
-            category_news_grouped[entry['category_slug']].append(news_data)
+        if cat_slug in category_news_grouped:
+            category_news_grouped[cat_slug].append(news_data)
 
-    # Haber Detay Sayfalarını Üret
+    # Detay Sayfalarını Üret
     for news in news_list:
         other_news_html = ""
         other_count = 0
@@ -317,19 +354,6 @@ def fetch_and_generate():
     <title>{news['title']} - nearadin.net</title>
     <meta name="description" content="{news['desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{news['title']}" />
-    <meta name="twitter:description" content="{news['desc'][:150]}..." />
-    <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
-
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{news['title']}" />
-    <meta property="og:description" content="{news['desc'][:150]}..." />
-    <meta property="og:url" content="{news['full_url']}" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
-
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
@@ -337,7 +361,6 @@ def fetch_and_generate():
         .article-card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .meta-info {{ display: flex; gap: 10px; font-size: 13px; color: #65676b; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }}
         .cat-badge {{ background: #e7f3ff; color: #1877f2; font-weight: bold; padding: 3px 8px; border-radius: 4px; font-size: 12px; text-decoration: none; }}
-        .cat-badge:hover {{ background: #1877f2; color: #fff; }}
         h1 {{ font-size: 22px; margin-bottom: 15px; color: #050505; line-height: 1.3; }}
         p {{ font-size: 15px; color: #333; margin-bottom: 20px; line-height: 1.6; }}
         .actions {{ display: flex; flex-direction: column; gap: 10px; margin-top: 25px; margin-bottom: 25px; }}
@@ -349,7 +372,6 @@ def fetch_and_generate():
         .related-list {{ list-style: none; }}
     </style>
 </head>
-
 <body>
     {admatic_code}
     {header_html}
@@ -366,7 +388,7 @@ def fetch_and_generate():
             
             <div class="actions">
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
-                <a href="/kategori/{news['cat_slug']}/" class="btn btn-secondary">← {news['cat_name']} Kategorisindeki Haberler</a>
+                <a href="/kategori/{news['cat_slug']}/" class="btn btn-secondary">← {news['cat_name']} Kategorisine Dön</a>
             </div>
 
             <div class="related-news">
@@ -418,7 +440,7 @@ def fetch_and_generate():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{cat['name']} - nearadin.net</title>
-    <meta name="description" content="En son {cat['name'].lower()}, güncel gelişmeler ve detaylı haberler." />
+    <meta name="description" content="En son {cat['name'].lower()} ve güncel gelişmeler." />
     <link rel="canonical" href="https://nearadin.net/kategori/{cat_slug}/" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
@@ -459,7 +481,7 @@ def fetch_and_generate():
 
     # Anasayfa (index.html) Hazırlığı
     news_cards_html = ""
-    for news in news_list:
+    for idx, news in enumerate(news_list):
         news_cards_html += f'''
         <article class="news-card">
             <div class="card-header">
@@ -476,7 +498,7 @@ def fetch_and_generate():
             </div>
         </article>
         '''
-        if news["idx"] == 1:
+        if idx == 1:
             news_cards_html += admatic_code
 
     full_html = f'''<!DOCTYPE html>
@@ -535,7 +557,7 @@ def fetch_and_generate():
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(full_html)
 
-    # XML Sitemap Güncellemesi (Kategorileri Dahil Ederek)
+    # Sitemap Güncellemesi
     sitemap_items = f'''  <url><loc>https://nearadin.net/</loc><lastmod>{last_update_iso}</lastmod><priority>1.0</priority></url>\n'''
     for cat in CATEGORIES.values():
         sitemap_items += f'''  <url><loc>https://nearadin.net/kategori/{cat['slug']}/</loc><lastmod>{last_update_iso}</lastmod><priority>0.8</priority></url>\n'''
@@ -548,7 +570,7 @@ def fetch_and_generate():
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
 
-    print("✅ Kategori bazlı yapı başarıyla güncellendi ve static dosyalar üretildi.")
+    print("✅ Anasayfa haber akışı ve kategori eşleşmeleri düzeltildi.")
 
     if news_list:
         post_to_x(news_list[0])
