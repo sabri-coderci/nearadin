@@ -28,7 +28,7 @@ jobs:
       - name: Haberleri Çek ve Sayfaları Üret
         run: |
           python fetch_news.py  # Python dosyanızın adı main.py değilse burayı güncelleyin
-
+          python kitaplar.py
       - name: Değişiklikleri Commit ve Push Et
         run: |
           git config --global user.name 'github-actions[bot]'
