@@ -22,17 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 tweepy
 
-      # 1. Ana Haber Sayfalarını Üret
-      - name: Ana Haberleri Çek ve HTML Üret
-        env:
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
-        run: python fetch_news.py
 
 
-      # 3. Tüm Değişiklikleri Tek Seferde Commit Et ve Push Et
+
+      # 1. Tüm Değişiklikleri Tek Seferde Commit Et ve Push Et
       - name: Değişiklikleri Commit ve Push Et
         run: |
           git config --global user.name 'github-actions[bot]'
