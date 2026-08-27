@@ -21,45 +21,6 @@ def slugify(text):
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
 
-def post_to_x(latest_news):
-    """En son çıkan haberi X üzerinde paylaşır."""
-    api_key = os.environ.get("X_API_KEY")
-    api_secret = os.environ.get("X_API_SECRET")
-    access_token = os.environ.get("X_ACCESS_TOKEN")
-    access_secret = os.environ.get("X_ACCESS_SECRET")
-
-    if not all([api_key, api_secret, access_token, access_secret]):
-        print("❌ X API anahtarları bulunamadı. GitHub Secrets kontrol edin.")
-        return
-
-    try:
-        client = tweepy.Client(
-            consumer_key=api_key,
-            consumer_secret=api_secret,
-            access_token=access_token,
-            access_token_secret=access_secret
-        )
-
-        title = latest_news['title']
-        url = latest_news['full_url']
-        
-        # X linkleri t.co ile 23 karaktere düşürür.
-        # Şablon + Etiketler ~70 karakter. Toplam 280 sınırını aşmamak için başlık kısıtlanır:
-        if len(title) > 170:
-            title = title[:167] + "..."
-
-        tweet_text = (
-            f"🚨 SON DAKİKA\n\n"
-            f"📌 {title}\n\n"
-            f"🔗 Detaylar:\n{url}\n\n"
-            f"#sondakika #haber"
-        )
-        
-        response = client.create_tweet(text=tweet_text)
-        print(f"✅ X paylaşımı başarılı! Tweet ID: {response.data['id']}")
-    except Exception as e:
-        print(f"❌ X (Twitter) paylaşımında hata oluştu: {e}")
-       # raise e  # GitHub Actions'ın hatayı görüp adımı başarısız işaretlemesi için hatayı fırlatın
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
