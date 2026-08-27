@@ -26,13 +26,8 @@ jobs:
           pip install requests beautifulsoup4 tweepy
 
       - name: Haberleri Çek ve Sayfaları Üret
-        env:
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
         run: |
-          python main.py  # Python dosyanızın adı main.py değilse burayı güncelleyin
+          python fetch_news.py  # Python dosyanızın adı main.py değilse burayı güncelleyin
 
       - name: Değişiklikleri Commit ve Push Et
         run: |
