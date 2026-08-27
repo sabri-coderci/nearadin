@@ -1,1 +1,75 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ne Aradın — Web Sayfam</title>
+  <meta name="description" content="Kişisel ve çok amaçlı web sayfası şablonu — kolayca genişletilebilir." />
 
+  <!-- PWA -->
+  <link rel="manifest" href="/web-sayfam/manifest.json">
+  <meta name="theme-color" content="#0b62ff">
+  <link rel="icon" href="/web-sayfam/assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="/web-sayfam/css/styles.css">
+</head>
+<body>
+  <div id="app" class="site">
+    <header is="main-header" class="site-header"></header>
+
+    <main class="site-main">
+      <section class="hero" id="hero">
+        <div class="container">
+          <h1>Ne Aradın?</h1>
+          <p>Bu şablon, bir web sayfasında ihtiyaç duyabileceğiniz yapıları barındırır: gezinme, galeri, form, blog, modal ve bileşen sistemi.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">İletişim</a>
+            <button id="open-demo-modal" class="btn outline">Önizleme</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features container" aria-labelledby="features-title">
+        <h2 id="features-title">Özellikler</h2>
+        <ul class="grid grid-3">
+          <li><strong>Responsive</strong><br>Mobil öncelikli, erişilebilir.</li>
+          <li><strong>PWA hazır</strong><br>Manifest ve Service Worker örneği dahil.</li>
+          <li><strong>Basit bileşenler</strong><br>Header, footer, modal, galeri, form.</li>
+        </ul>
+      </section>
+
+      <section class="gallery container" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Galeri (lazy-load)</h2>
+        <div class="grid grid-3" id="gallery"></div>
+      </section>
+
+      <section class="blog container" aria-labelledby="blog-title">
+        <h2 id="blog-title">Son Yazılar</h2>
+        <div id="posts" class="cards"></div>
+      </section>
+
+      <section id="contact" class="container contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">İletişim</h2>
+        <form id="contact-form" class="stack" novalidate>
+          <label>İsim<input name="name" required minlength="2"></label>
+          <label>E-posta<input type="email" name="email" required></label>
+          <label>Mesaj<textarea name="message" rows="5" required></textarea></label>
+          <div class="form-row">
+            <button type="submit" class="btn">Gönder</button>
+            <button type="button" id="clear-form" class="btn outline">Temizle</button>
+          </div>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer is="main-footer" class="site-footer"></footer>
+
+    <!-- Reusable modal mount point -->
+    <div id="modal-root"></div>
+
+    <script type="module" src="/web-sayfam/js/app.js"></script>
+  </div>
+</body>
+</html>
