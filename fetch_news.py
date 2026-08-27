@@ -420,7 +420,7 @@ def fetch_and_generate():
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
-        response = urllib.request.urlopen(req, timeout=15)
+        response = urllib.request.urlopen(req, timeout=60)
         xml_data = response.read()
 
         root = ET.fromstring(xml_data)
