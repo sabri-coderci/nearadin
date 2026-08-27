@@ -2,8 +2,11 @@ name: Tüm Sayfaları Güncelle ve Yayınla
 
 on:
   schedule:
-    - cron: '0 */1 * * *'  # Her saat başı çalışır
+    - cron: '0 * * * *'  # Her saat başı otomatik çalışır
   workflow_dispatch:      # Elle tetiklemeye izin verir
+
+permissions:
+  contents: write         # Depoya yeni HTML/JSON dosyalarını basmak için şarttır
 
 jobs:
   build-and-deploy:
@@ -22,14 +25,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 tweepy
 
+      - name: Haberleri Çek ve Sayfaları Üret
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          python main.py  # Python dosyanızın adı main.py değilse burayı güncelleyin
 
-
-
-      # 1. Tüm Değişiklikleri Tek Seferde Commit Et ve Push Et
       - name: Değişiklikleri Commit ve Push Et
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          git commit -m "Otomatik Güncelleme: Haberler ve Seçim Anketi Yenilendi" || exit 0
+          git diff --staged --quiet || git commit -m "Otomatik Güncelleme: Haberler Yenilendi"
           git push
