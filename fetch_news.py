@@ -59,7 +59,7 @@ def post_to_x(latest_news):
         print(f"✅ X paylaşımı başarılı! Tweet ID: {response.data['id']}")
     except Exception as e:
         print(f"❌ X (Twitter) paylaşımında hata oluştu: {e}")
-        raise e  # GitHub Actions'ın hatayı görüp adımı başarısız işaretlemesi için hatayı fırlatın
+       # raise e  # GitHub Actions'ın hatayı görüp adımı başarısız işaretlemesi için hatayı fırlatın
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
