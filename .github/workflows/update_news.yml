@@ -18,12 +18,17 @@ jobs:
       - name: Python Ortamını Kur
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
+      - name: Kütüphaneleri Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
 
       - name: Haberleri Çek ve Sayfaları Üret
         run: |
-          python fetch_news.py  # Python dosyanızın adı main.py değilse burayı güncelleyin
+          python fetch_news.py
+        continue-on-error: true
                  
       - name: Değişiklikleri Commit ve Push Et
         run: |
@@ -32,3 +37,4 @@ jobs:
           git add .
           git diff --staged --quiet || git commit -m "Otomatik Güncelleme: Haberler Yenilendi"
           git push
+        continue-on-error: true
