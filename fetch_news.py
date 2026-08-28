@@ -5,7 +5,6 @@ import datetime
 import re
 import os
 import html
-import tweepy
 from email.utils import parsedate_to_datetime
 
 def slugify(text):
@@ -964,9 +963,6 @@ def fetch_and_generate():
 
         print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html), sitemap.xml ve news-sitemap.xml güncellendi.")
 
-
-        if news_list:
-            post_to_x(news_list[0])
             
     except Exception as e:
         print(f"Hata oluştu: {e}")
