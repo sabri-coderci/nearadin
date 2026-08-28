@@ -398,17 +398,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/mahsur-kalan-iki-keci-kurtarildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T23:21:21+03:00</news:publication_date>
-      <news:title>Mahsur Kalan İki Keçi Kurtarıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/mersinde-uyusturucu-operasyonu-3-tutuklama.html</loc>
     <news:news>
       <news:publication>
@@ -637,6 +626,17 @@
       </news:publication>
       <news:publication_date>2026-08-28T22:19:24+03:00</news:publication_date>
       <news:title>Malinovskyi&#x27;den Taraftara Destek Çağrısı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/28/bodrum-fk-aboubakari-transfer-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-28T22:17:41+03:00</news:publication_date>
+      <news:title>Bodrum FK, Aboubakar&#x27;ı transfer etti</news:title>
     </news:news>
   </url>
   <url>
