@@ -7,6 +7,16 @@ import os
 import html
 from email.utils import parsedate_to_datetime
 
+import json
+import time
+try:
+    import tweepy
+except Exception:
+    tweepy = None
+
+POSTED_JSON = "posted.json"
+
+
 def slugify(text):
     text = text.lower()
     replacements = {
@@ -24,22 +34,22 @@ def slugify(text):
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
     return f'''
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-be[...]
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">{title_text}</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; borde[...]
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
-                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Ana[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-s[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">��[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: [...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 1[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
+                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size:[...]
                 
                 
             </ul>
@@ -63,6 +73,7 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
         }});
     </script>
     '''
+
 
 def get_footer_html():
     """Tüm Sayfalarda Ortak Kullanılan Standart Footer Bileşeni"""
@@ -92,14 +103,115 @@ def get_footer_html():
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearad[...]
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
     '''
 
+# -----------------------------
+# X (Twitter) paylaşım yardımcıları
+# -----------------------------
+def load_posted():
+    if os.path.exists(POSTED_JSON):
+        try:
+            with open(POSTED_JSON, "r", encoding="utf-8") as pf:
+                return json.load(pf)
+        except Exception:
+            return {}
+    return {}
 
+def save_posted(posted):
+    try:
+        with open(POSTED_JSON, "w", encoding="utf-8") as pf:
+            json.dump(posted, pf, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print("posted.json kaydedilemedi:", e)
+
+def init_twitter_client():
+    """Tweepy ile OAuth1 kullanarak client oluşturur. Çevresel değişkenleri bekler."""
+    if tweepy is None:
+        print("tweepy yüklü değil. `pip install tweepy` ile yükleyin.")
+        return None
+    API_KEY = os.getenv("X_API_KEY")
+    API_SECRET = os.getenv("X_API_SECRET_KEY")
+    ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+    ACCESS_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+    if not all([API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET]):
+        # Gerekli değişkenler yoksa paylaşım yapılmaz
+        print("X API anahtarları eksik; paylaşım yapılmayacak.")
+        return None
+    try:
+        # Tweepy'nin versiyon farklılıklarına karşı fallback
+        auth = None
+        try:
+            auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
+        except Exception:
+            try:
+                auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+                auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
+            except Exception:
+                auth = None
+        if auth is None:
+            print("Tweepy auth oluşturulamadı.")
+            return None
+        api = tweepy.API(auth, wait_on_rate_limit=True)
+        try:
+            api.verify_credentials()
+        except Exception:
+            pass
+        return api
+    except Exception as e:
+        print("Twitter client oluşturulamadı:", e)
+        return None
+
+def post_to_x_for_news(news_item, client, posted):
+    """
+    news_item: haber dict (title, full_url, date_str, time, ...)
+    client: tweepy.API nesnesi veya None
+    posted: dict referansı (url -> meta)
+    """
+    if client is None:
+        return None
+
+    url = news_item.get("full_url")
+    if not url:
+        return None
+    if url in posted:
+        # Zaten paylaşılmış
+        return posted[url]
+
+    title = news_item.get("title", "").strip()
+    max_len = 280
+    # Link için alan tahmini
+    link_len_estimate = 24
+    allowed_title_len = max_len - 1 - link_len_estimate  # boşluk + link
+    if len(title) > allowed_title_len:
+        title = title[:allowed_title_len-3].rstrip() + "..."
+
+    tweet_text = f"{title} {url}"
+
+    try:
+        resp = client.update_status(status=tweet_text)
+        tweet_id = None
+        if resp is not None:
+            tweet_id = getattr(resp, "id_str", None) or getattr(resp, "id", None)
+        posted[url] = {
+            "tweet_id": tweet_id,
+            "posted_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+        }
+        save_posted(posted)
+        # küçük uyku, rate limit azaltmak için
+        time.sleep(1)
+        return tweet_id
+    except Exception as e:
+        print(f"X paylaşımı hatası ({url}):", e)
+        return None
+
+# -----------------------------
+# Hava durumu sayfa üreticisi
+# -----------------------------
 def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_code):
     """hava-durumu/index.html Sayfasını Otomatik Oluşturur"""
     os.makedirs("hava-durumu", exist_ok=True)
@@ -376,7 +488,9 @@ def fetch_and_generate():
         admatic_code=admatic_code
     )
 
-    
+    # Tek seferlik yükleme (paylaşım için)
+    posted = load_posted()
+    twitter_client = init_twitter_client()
 
     try:
         req = urllib.request.Request(rss_url, headers=headers)
@@ -620,6 +734,14 @@ def fetch_and_generate():
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
+            # Detay sayfası yazıldıktan sonra X'e paylaş (tekrar paylaşımı önlemek için posted kullanılıyor)
+            try:
+                tweet_id = post_to_x_for_news(news, twitter_client, posted)
+                if tweet_id:
+                    print(f"Haber paylaşıldı: {news['full_url']} -> tweet_id {tweet_id}")
+            except Exception as e:
+                print("Paylaşım sırasında hata:", e)
+
             news_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
@@ -641,8 +763,6 @@ def fetch_and_generate():
                 news_cards_html += admatic_code
 
         # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI (BİRİKMİŞ VERİ YAPISI) ---
-        import json
-
         for folder_path, group_data in daily_news_grouped.items():
             json_path = f"haber/{folder_path}/news.json"
             accumulated_news = []
@@ -702,7 +822,7 @@ def fetch_and_generate():
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
-        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; jus[...]
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
@@ -750,7 +870,7 @@ def fetch_and_generate():
         
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
 
-        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6567[...]
         
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
@@ -970,4 +1090,3 @@ def fetch_and_generate():
 
 if __name__ == "__main__":
     fetch_and_generate()
-
