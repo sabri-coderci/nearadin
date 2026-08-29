@@ -9,7 +9,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
         .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
-        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; jus[...]
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
         .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
         .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
@@ -26,22 +26,22 @@
 </head>
 <body>
     
-    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-be[...]
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; borde[...]
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Ana[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-s[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">��[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: [...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 1[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14p[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
-                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;[...]
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size:[...]
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
                 
                 
             </ul>
@@ -67,11 +67,26 @@
     
     <div class="container">
         <div class="status-bar">
-            <span>📅 29.08.2026 Tarihli Haber Listesi (398 Haber)</span>
+            <span>📅 29.08.2026 Tarihli Haber Listesi (407 Haber)</span>
             <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
         </div>
         <main>
             
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Hürriyet</span>
+                        <span class="time">15:04</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/11-ilde-siber-suclarla-mucadele-13-kisi-tutuklandi.html">11 ilde siber suçlarla mücadele: 13 kişi tutuklandı</a>
+                    </h2>
+                    <p class="news-summary">11 ilde siber suçlarla mücadele: 13 kişi tutuklandı  Hürriyet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/11-ilde-siber-suclarla-mucadele-13-kisi-tutuklandi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -87,6 +102,13 @@
                     </div>
                 </article>
                 
+   <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+   </div>
+    
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -102,13 +124,6 @@
                     </div>
                 </article>
                 
-   <div class="ad-container">
-      <!-- Admatic AUTO ads START -->
-       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-       <!-- Admatic AUTO ads END -->
-   </div>
-    
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
@@ -172,6 +187,21 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:49</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/galatasaray-sampiyonlar-liginde-sporting-lizbon-ile-basliy.html">Galatasaray, Şampiyonlar Ligi'nde Sporting Lizbon ile Başlıyor</a>
+                    </h2>
+                    <p class="news-summary">Galatasaray, Şampiyonlar Ligi'nde Sporting Lizbon ile Başlıyor  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/galatasaray-sampiyonlar-liginde-sporting-lizbon-ile-basliy.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">Cumhuriyet</span>
                         <span class="time">14:46</span>
                     </div>
@@ -181,6 +211,36 @@
                     <p class="news-summary">Son dakika... Galatasaray ve Fenerbahçe'nin UEFA Şampiyonlar Ligi fikstürü belli oldu  Cumhuriyet</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/29/son-dakika-galatasaray-ve-fenerbahcenin-uefa-sampiyonlar.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:46</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/rusyada-akaryakit-ihracatina-yeni-uzatma.html">Rusya'da Akaryakıt İhracatına Yeni Uzatma</a>
+                    </h2>
+                    <p class="news-summary">Rusya'da Akaryakıt İhracatına Yeni Uzatma  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/rusyada-akaryakit-ihracatina-yeni-uzatma.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:46</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/galatasaray-ve-fenerbahcenin-avrupa-fiksturu-belli-oldu.html">Galatasaray ve Fenerbahçe’nin Avrupa Fikstürü Belli Oldu</a>
+                    </h2>
+                    <p class="news-summary">Galatasaray ve Fenerbahçe’nin Avrupa Fikstürü Belli Oldu  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/galatasaray-ve-fenerbahcenin-avrupa-fiksturu-belli-oldu.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -247,6 +307,21 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:35</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/spot-elektrik-fiyatlari-belirlendi.html">Spot Elektrik Fiyatları Belirlendi</a>
+                    </h2>
+                    <p class="news-summary">Spot Elektrik Fiyatları Belirlendi  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/spot-elektrik-fiyatlari-belirlendi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">Haber 7</span>
                         <span class="time">14:33</span>
                     </div>
@@ -262,6 +337,21 @@
                 <article class="news-card">
                     <div class="card-header">
                         <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:33</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/dogal-gaz-fiyatlari-artis-gosterdi.html">Doğal Gaz Fiyatları Artış Gösterdi</a>
+                    </h2>
+                    <p class="news-summary">Doğal Gaz Fiyatları Artış Gösterdi  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/dogal-gaz-fiyatlari-artis-gosterdi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
                         <span class="source">TRT Haber</span>
                         <span class="time">14:30</span>
                     </div>
@@ -271,6 +361,36 @@
                     <p class="news-summary">Göç İdaresi Başkanlığı 40 il göç uzman yardımcısı alacak  TRT Haber</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/29/goc-idaresi-baskanligi-40-il-goc-uzman-yardimcisi-alacak.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:30</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/solana-arz-planini-degistirdi.html">Solana arz planını değiştirdi</a>
+                    </h2>
+                    <p class="news-summary">Solana arz planını değiştirdi  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/solana-arz-planini-degistirdi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">14:29</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/elif-sude-akgul-bronz-madalya-kazandi.html">Elif Sude Akgül Bronz Madalya Kazandı</a>
+                    </h2>
+                    <p class="news-summary">Elif Sude Akgül Bronz Madalya Kazandı  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/elif-sude-akgul-bronz-madalya-kazandi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -766,6 +886,21 @@
                     <p class="news-summary">Son dakika... Zeytinburnu'daki İETT otobüsü kazasında öndeki aracın şoförüne gözaltı  Milliyet</p>
                     <div class="card-footer">
                         <a href="/haber/2026/08/29/son-dakika-zeytinburnudaki-iett-otobusu-kazasinda-ondeki.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">SON DAKİKA</span>
+                        <span class="source">Son Dakika</span>
+                        <span class="time">13:19</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/08/29/corendon-alanyaspor-mac-hazirliklarini-tamamladi.html">Corendon Alanyaspor Maç Hazırlıklarını Tamamladı</a>
+                    </h2>
+                    <p class="news-summary">Corendon Alanyaspor Maç Hazırlıklarını Tamamladı  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/08/29/corendon-alanyaspor-mac-hazirliklarini-tamamladi.html" class="read-btn">Detayı Oku →</a>
                     </div>
                 </article>
                 
@@ -6082,7 +6217,7 @@
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearad[...]
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
