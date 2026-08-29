@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/ugurcan-cakirdan-sakatligi-hakkinda-aciklama.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:18:34+03:00</news:publication_date>
+      <news:title>Uğurcan Çakır&#x27;dan sakatlığı hakkında açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cem-yilmazin-saglik-durumu-nasil-hastaligi-nedir-cem-yilm.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:18:00+03:00</news:publication_date>
+      <news:title>Cem Yılmaz&#x27;ın sağlık durumu nasıl, hastalığı nedir? Cem Yılmaz kimdir, kaç yaşında? Hastaneye kaldırıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-melih-gokcek-hakkinda-sorusturma-baslatildi-yur.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:13:11+03:00</news:publication_date>
+      <news:title>SON DAKİKA: Melih Gökçek hakkında soruşturma başlatıldı! Yurt dışı para transferi iddiaları araştırılıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/kayserispor-ilk-maglubiyetini-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:06:31+03:00</news:publication_date>
+      <news:title>Kayserispor İlk Mağlubiyetini Aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:05:24+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Ünlü komedyen Cem Yılmaz hastaneye kaldırıldı! Bakan Memişoğlu: Tedavisi yoğun bakımda devam ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/batman-petrolspor-sivassporu-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:01:21+03:00</news:publication_date>
+      <news:title>Batman Petrolspor, Sivasspor&#x27;u Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/iheanacho-firtinasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:59:31+03:00</news:publication_date>
+      <news:title>Iheanacho Fırtınası</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/4-sutta-2-gol-rizespordan-gaziantepte-kritik-galibiyet.html</loc>
     <news:news>
       <news:publication>
@@ -13,6 +90,61 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/mardin-1969-spor-ve-van-spor-fk-berabere-kaldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:54:21+03:00</news:publication_date>
+      <news:title>Mardin 1969 Spor ve Van Spor FK Berabere Kaldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/galatasaraydan-goztepeye-3-2-zafer.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:51:41+03:00</news:publication_date>
+      <news:title>Galatasaray&#x27;dan Göztepe&#x27;ye 3-2 zafer</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/rafael-leao-galatasaray-taraftarini-selamladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:51:32+03:00</news:publication_date>
+      <news:title>Rafael Leao, Galatasaray Taraftarını Selamladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/galatasaray-goztepeyi-3-2-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:50:23+03:00</news:publication_date>
+      <news:title>Galatasaray Göztepe&#x27;yi 3-2 Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/rizespor-gaziantep-fkyi-2-1-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:50:21+03:00</news:publication_date>
+      <news:title>Rizespor, Gaziantep FK&#x27;yi 2-1 Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/galatasaray-goztepeyi-3-2-yenerek-3-puan-aldi.html</loc>
     <news:news>
       <news:publication>
@@ -21,6 +153,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:46:42+03:00</news:publication_date>
       <news:title>Galatasaray, Göztepe&#x27;yi 3-2 Yenerek 3 Puan Aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/sanchezten-galatasaraya-ilk-gol.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:46:41+03:00</news:publication_date>
+      <news:title>Sanchez&#x27;ten Galatasaray&#x27;a İlk Gol</news:title>
     </news:news>
   </url>
   <url>
@@ -134,6 +277,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/rizespor-gaziantep-fk-deplasmaninda-kazandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:26:43+03:00</news:publication_date>
+      <news:title>Rizespor, Gaziantep FK deplasmanında kazandı!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/ali-koc-dev-bir-bonservisle-satmisti-galatasaray-anlasmaya.html</loc>
     <news:news>
       <news:publication>
@@ -142,17 +296,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:26:10+03:00</news:publication_date>
       <news:title>Ali Koç dev bir bonservisle satmıştı! Galatasaray anlaşmaya vardı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/elazigspor-malatya-yesilyurtspor-ile-berabere-kaldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:23:41+03:00</news:publication_date>
-      <news:title>Elazığspor, Malatya Yeşilyurtspor ile berabere kaldı</news:title>
     </news:news>
   </url>
   <url>
@@ -189,17 +332,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/hentbol-super-ligde-ilk-hafta-mac-sonuclari.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:10:21+03:00</news:publication_date>
-      <news:title>Hentbol Süper Lig&#x27;de İlk Hafta Maç Sonuçları</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-resen-sorusturma-baslatil.html</loc>
     <news:news>
       <news:publication>
@@ -208,6 +340,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:10:00+03:00</news:publication_date>
       <news:title>Son dakika : Melih Gökçek hakkında resen soruşturma başlatıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-disisleri-bakanligindan-israile-sert-tepki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:10:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Dışişleri Bakanlığı&#x27;ndan İsrail&#x27;e sert tepki</news:title>
     </news:news>
   </url>
   <url>
@@ -277,17 +420,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/cem-yilmazin-saglik-durumu-nasil-hastaligi-nedir-cem-yilm.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:05:00+03:00</news:publication_date>
-      <news:title>Cem Yılmaz&#x27;ın sağlık durumu nasıl, hastalığı nedir? Cem Yılmaz kimdir, kaç yaşında? Hastaneye kaldırıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/melih-gokcek-hakkinda-yurt-disi-para-transferi-iddialarina-s.html</loc>
     <news:news>
       <news:publication>
@@ -310,14 +442,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/turkiye-masatenisinde-altin-madalya-kazandi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/dursun-ozbek-gozunu-karartti-leaonun-ardindan-yeni-bir-cil.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T22:54:22+03:00</news:publication_date>
-      <news:title>Türkiye Masatenisinde Altın Madalya Kazandı</news:title>
+      <news:publication_date>2026-08-29T22:53:08+03:00</news:publication_date>
+      <news:title>Dursun Özbek gözünü kararttı! Leao&#x27;nun ardından yeni bir çilek transferi</news:title>
     </news:news>
   </url>
   <url>
@@ -343,47 +475,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/corum-fk-besiktas-macina-hazirlaniyor.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakikadisislerinden-israile-sert-tepki.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T22:45:33+03:00</news:publication_date>
-      <news:title>Çorum FK Beşiktaş Maçına Hazırlanıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/caykur-rizespor-ilk-yariyi-onde-tamamladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:35:21+03:00</news:publication_date>
-      <news:title>Çaykur Rizespor İlk Yarıyı Önde Tamamladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/trabzonsporun-konferans-ligi-fiksturu-aciklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:29:21+03:00</news:publication_date>
-      <news:title>Trabzonspor&#x27;un Konferans Ligi Fikstürü Açıklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/disisleri-bakanligi-uluslararasi-toplum-netanyahu-hukumetin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:29:00+03:00</news:publication_date>
-      <news:title>Dışişleri Bakanlığı: Uluslararası toplum Netanyahu hükümetinin yalanlarına inanmıyor</news:title>
+      <news:publication_date>2026-08-29T22:33:00+03:00</news:publication_date>
+      <news:title>Son dakika...Dışişleri&#x27;nden İsrail&#x27;e sert tepki</news:title>
     </news:news>
   </url>
   <url>
@@ -420,17 +519,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/besiktasin-avrupa-ligi-fiksturu-aciklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:20:21+03:00</news:publication_date>
-      <news:title>Beşiktaş&#x27;ın Avrupa Ligi Fikstürü Açıklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/transfere-400-milyon-euro-harcamak-bile-yetmedi-yine-hezime.html</loc>
     <news:news>
       <news:publication>
@@ -439,6 +527,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T22:17:17+03:00</news:publication_date>
       <news:title>Transfere 400 milyon Euro harcamak bile yetmedi! Yine hezimeti yaşadılar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/yeni-takimini-duyanlar-cok-saskin-alvaro-moratadan-2-lig.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T22:16:45+03:00</news:publication_date>
+      <news:title>Yeni takımını duyanlar çok şaşkın! Alvaro Morata&#x27;dan 2. Lig itirafı</news:title>
     </news:news>
   </url>
   <url>
@@ -453,47 +552,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/ulugazi-yagli-gureslerinde-sampiyon-orhan-okulu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/konyaspor-kocaelispora-yenildi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T22:09:11+03:00</news:publication_date>
-      <news:title>Ulugazi Yağlı Güreşleri&#x27;nde Şampiyon Orhan Okulu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/besiktas-marsilya-ile-aciliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:08:21+03:00</news:publication_date>
-      <news:title>Beşiktaş, Marsilya ile Açılıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/galatasaraya-milandan-bir-yildiz-daha.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:06:59+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;a Milan&#x27;dan bir yıldız daha</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/20-yas-alti-voleybol-milli-takimi-zaferle-tamamladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:04:11+03:00</news:publication_date>
-      <news:title>20 Yaş Altı Voleybol Milli Takımı Zaferle Tamamladı</news:title>
+      <news:publication_date>2026-08-29T22:07:21+03:00</news:publication_date>
+      <news:title>Konyaspor, Kocaelispor&#x27;a Yenildi</news:title>
     </news:news>
   </url>
   <url>
@@ -505,39 +571,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T22:01:44+03:00</news:publication_date>
       <news:title>Son dakika | Trabzonspor&#x27;un Konferans Ligi fikstürü belli oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-trabzonsporun-konferans-ligi-fiksturu-belli-ol.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:53:37+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Trabzonspor&#x27;un Konferans Ligi fikstürü belli oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/galatasaray-goztepeyi-agirladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:50:11+03:00</news:publication_date>
-      <news:title>Galatasaray Göztepe&#x27;yi Ağırladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-besiktasin-uefa-avrupa-ligi-fiksturu-belli-old.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:49:54+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Beşiktaş&#x27;ın UEFA Avrupa Ligi fikstürü belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -607,17 +640,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:14:27+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Ünlü komedyen Cem Yılmaz hastaneye kaldırıldı! Bakan Memişoğlu: Tedavisi yoğun bakımda devam ediyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
     <news:news>
       <news:publication>
@@ -637,17 +659,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T21:02:04+03:00</news:publication_date>
       <news:title>SON DAKİKA HAVA DURUMU TAHMİNLERİ İL İL | Yarın (30 Ağustos) hava nasıl olacak? Pazar günü yağmur var mı? Meteoroloji&#x27;den 5 ile kuvvetli yağış uyarısı!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T20:58:00+03:00</news:publication_date>
-      <news:title>Ünlü Komedyen Cem Yılmaz hastaneye kaldırıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -714,6 +725,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T19:47:56+03:00</news:publication_date>
       <news:title>Sarıyer’de parkta otururken çalılıkların arasında erkek cesedi buldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/beykozda-otomobil-yayalarin-arasina-daldi-5-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T19:40:00+03:00</news:publication_date>
+      <news:title>Beykoz’da otomobil yayaların arasına daldı: 5 yaralı</news:title>
     </news:news>
   </url>
   <url>
@@ -937,6 +959,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/muglada-basladi-antalyaya-sicradi-orman-yanginina-mudahal.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T15:01:54+03:00</news:publication_date>
+      <news:title>Muğla&#x27;da başladı Antalya&#x27;ya sıçradı! Orman yangınına müdahale ediliyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
     <news:news>
       <news:publication>
@@ -1003,17 +1036,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-rafael-leao-transferini-acik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T13:42:29+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Galatasaray, Rafael Leao transferini açıkladı!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/muglaspor-boluspor-macindaki-reklam-panolarini-gorenler-inan.html</loc>
     <news:news>
       <news:publication>
@@ -1036,17 +1058,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/kasif-kozinoglu-dosyasi-faili-mechul-dairesine-gonderildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T13:12:38+03:00</news:publication_date>
-      <news:title>Kaşif Kozinoğlu dosyası &quot;Faili Meçhul&quot; dairesine gönderildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gulistan-doku-cinayetinde-donemin-tunceli-il-jan.html</loc>
     <news:news>
       <news:publication>
@@ -1055,17 +1066,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T12:24:25+03:00</news:publication_date>
       <news:title>SON DAKİKA… Gülistan Doku cinayetinde dönemin Tunceli İl Jandarma Komutan Vekili ile eşi gözaltında: Handan Sonel ile 13 dakikalık gizemli görüşme!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/yapay-zeka-yerin-derinliklerindeki-bilinmeyen-alti-gizemli-y.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T12:23:00+03:00</news:publication_date>
-      <news:title>Yapay zeka yerin derinliklerindeki bilinmeyen altı gizemli yapıyı ortaya çıkardı</news:title>
     </news:news>
   </url>
   <url>
@@ -1080,14 +1080,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-depremler-listesi-29-agustos-2026-guncel-verile.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-depremler-listesi-29-agustos-2026-canli-ve-anli.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-29T11:05:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA DEPREMLER LİSTESİ 29 AĞUSTOS 2026 - GÜNCEL VERİLER | Az önce deprem mi oldu, bugün nerede deprem oldu? İşte AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
+      <news:title>SON DAKİKA DEPREMLER LİSTESİ 29 AĞUSTOS 2026 - CANLI VE ANLIK | Balıkesir&#x27;de az önce deprem mi oldu, bugün nerede deprem oldu? İşte AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
     </news:news>
   </url>
   <url>
