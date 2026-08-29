@@ -2,14 +2,168 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/yunanistandan-turkiye-hamlesi-sikayete-hazirlaniyorlar.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/ozan-kabakin-golu-hoffenheima-yetmedi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T18:00:19+03:00</news:publication_date>
-      <news:title>Yunanistan&#x27;dan Türkiye hamlesi: Şikayete hazırlanıyorlar</news:title>
+      <news:publication_date>2026-08-29T18:53:08+03:00</news:publication_date>
+      <news:title>Ozan Kabak&#x27;ın golü Hoffenheim&#x27;a yetmedi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-istanbulda-otomobil-yayalarin-arasina-daldi-y.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:49:00+03:00</news:publication_date>
+      <news:title>Son dakika | İstanbul’da otomobil yayaların arasına daldı! Yaralılar var</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/besiktas-giresunsporu-farkla-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:44:22+03:00</news:publication_date>
+      <news:title>Beşiktaş, Giresunspor&#x27;u Farkla Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/korfez-basketten-fenerbahceye-82-70lik-dostluk-dersi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:43:20+03:00</news:publication_date>
+      <news:title>Körfez Basket&#x27;ten Fenerbahçe&#x27;ye 82-70&#x27;lik Dostluk Dersi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/samsunda-capofest-ruzgari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:40:00+03:00</news:publication_date>
+      <news:title>Samsun’da CapoFEST rüzgarı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/uskudardaki-villasinda-olu-bulunan-yazar-murat-koparanin-o.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:39:57+03:00</news:publication_date>
+      <news:title>Üsküdar&#x27;daki villasında ölü bulunan yazar Murat Koparan&#x27;ın ölüm sebebi ortaya çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/bakan-ersoydan-30-agustos-zafer-bayrami-mesaji.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:37:31+03:00</news:publication_date>
+      <news:title>Bakan Ersoy&#x27;dan 30 Ağustos Zafer Bayramı Mesajı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/korfez-basket-fenerbahceyi-82-70-yendi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:35:31+03:00</news:publication_date>
+      <news:title>Körfez Basket, Fenerbahçe&#x27;yi 82-70 Yendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/besiktasin-rakibi-bayer-leverkuseni-uclediler.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:35:12+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;ın rakibi Bayer Leverkusen&#x27;i üçlediler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/barcelonanin-yildizi-son-dakika-tekliflerini-bekliyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:33:01+03:00</news:publication_date>
+      <news:title>Barcelona&#x27;nın yıldızı son dakika tekliflerini bekliyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-alanyada-korkunc-yangin-binayi-alevler-sardi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:26:07+03:00</news:publication_date>
+      <news:title>Son Dakika! Alanya&#x27;da korkunç yangın: Binayı alevler sardı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/leaodan-flas-itiraf-galatasaray-icin-onlari-reddettim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:24:28+03:00</news:publication_date>
+      <news:title>Leao&#x27;dan flaş itiraf: Galatasaray için onları reddettim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/basaksehirden-lemina-icin-aciklama.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:12:28+03:00</news:publication_date>
+      <news:title>Başakşehir&#x27;den Lemina için açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/ozgur-ozel-kayseriden-turkiyeye-sesleniyoruz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T18:08:21+03:00</news:publication_date>
+      <news:title>Özgür Özel: Kayseri&#x27;den Türkiye&#x27;ye Sesleniyoruz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/alo-adalet-135-1-eylulde-pilot-uygulama-basliyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:55:31+03:00</news:publication_date>
+      <news:title>Alo Adalet 135: 1 Eylül&#x27;de pilot uygulama başlıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -46,14 +200,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/fidan-hoca-tutuklandi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/ukraynanin-ankara-buyukelcisi-disisleri-bakanligina-cagri.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T17:33:21+03:00</news:publication_date>
-      <news:title>&#x27;Fidan Hoca&#x27; tutuklandı</news:title>
+      <news:publication_date>2026-08-29T17:35:00+03:00</news:publication_date>
+      <news:title>Ukrayna&#x27;nın Ankara Büyükelçisi, Dışişleri Bakanlığı&#x27;na çağrıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/fidan-atalay-tutuklandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:32:19+03:00</news:publication_date>
+      <news:title>Fidan Atalay tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/cinde-buyuk-veri-fuari-basladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:31:11+03:00</news:publication_date>
+      <news:title>Çin&#x27;de Büyük Veri Fuarı Başladı</news:title>
     </news:news>
   </url>
   <url>
@@ -167,14 +343,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-mugla-seydikemerde-orman-yangini-alevler-kas.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-zeytinburnunda-2-kisinin-oldugu-iett-otobusu-ka.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T17:07:22+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Muğla Seydikemer&#x27;de orman yangını! Alevler Kaş&#x27;a ulaştı: Ekipler havadan ve karadan müdahale ediyor</news:title>
+      <news:publication_date>2026-08-29T17:06:05+03:00</news:publication_date>
+      <news:title>SON DAKİKA! Zeytinburnu&#x27;nda 2 kişinin öldüğü İETT otobüsü kazasına neden olduğu belirtilen sürücü tutuklandı</news:title>
     </news:news>
   </url>
   <url>
@@ -197,17 +373,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T17:05:21+03:00</news:publication_date>
       <news:title>Son dakika... Zeytinburnu&#x27;daki İETT otobüsü kazasında öndeki aracın şoförü tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/2-kisinin-oldugu-iett-otobusu-kazasina-neden-olan-arac-suruc.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T17:04:19+03:00</news:publication_date>
-      <news:title>2 kişinin öldüğü İETT otobüsü kazasına neden olan araç sürücüsü tutuklandı</news:title>
     </news:news>
   </url>
   <url>
@@ -244,14 +409,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-zeytinburnunda-2-kisinin-oldugu-iett-otobusu-ka.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-altin-fiyatlari-altin-bugun-ne-kadara-aliniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T16:57:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Zeytinburnu&#x27;nda 2 kişinin öldüğü İETT otobüsü kazasına neden olduğu belirtilen sürücü tutuklandı</news:title>
+      <news:publication_date>2026-08-29T16:57:27+03:00</news:publication_date>
+      <news:title>SON DAKİKA ALTIN FİYATLARI 🔔 Altın bugün ne kadara alınıyor, ne kadara satılıyor? 29 Ağustos 2026 Listeli altın fiyatları</news:title>
     </news:news>
   </url>
   <url>
@@ -266,17 +431,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-zeytinburnunda-iett-otobusunu-kazaya-suruklemi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:51:54+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Zeytinburnu&#x27;nda İETT otobüsünü kazaya sürüklemişti: O sürücü hakkında karar! 2 ölü, 16 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-ukraynanin-ankara-buyukelcisi-disislerine-c.html</loc>
     <news:news>
       <news:publication>
@@ -285,28 +439,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T16:42:00+03:00</news:publication_date>
       <news:title>Son dakika... Ukrayna&#x27;nın Ankara Büyükelçisi, Dışişleri&#x27;ne çağrıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/talisca-samsunspor-macinda-yok.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:40:31+03:00</news:publication_date>
-      <news:title>Talisca Samsunspor Maçında Yok</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/nepaldeki-selde-hayatini-kaybedenlerin-sayisi-669a-cikti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:38:16+03:00</news:publication_date>
-      <news:title>Nepal&#x27;deki selde hayatını kaybedenlerin sayısı 669&#x27;a çıktı</news:title>
     </news:news>
   </url>
   <url>
@@ -329,28 +461,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T16:36:50+03:00</news:publication_date>
       <news:title>Fenerbahçe&#x27;de Talisca şoku! Samsunspor maçında yok</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/adliyelerde-alo-adalet-135-donemi-1-eylulde-basliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:35:49+03:00</news:publication_date>
-      <news:title>Adliyelerde &#x27;Alo Adalet 135&#x27; dönemi 1 Eylül&#x27;de başlıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-nepaldeki-sel-felaketinde-tuyler-urperten-gorun.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:35:14+03:00</news:publication_date>
-      <news:title>SON DAKİKA… Nepal’deki sel felaketinde tüyler ürperten görüntü! Cesetleri koyacak yer kalmadı: Salgın hastalık riski artıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -387,14 +497,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/turkiye-boks-sampiyonasi-rizede-sona-erdi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-ukraynanin-ankara-buyukelcisi-disisleri-bakan.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T16:25:22+03:00</news:publication_date>
-      <news:title>Türkiye Boks Şampiyonası Rize&#x27;de Sona Erdi</news:title>
+      <news:publication_date>2026-08-29T16:26:03+03:00</news:publication_date>
+      <news:title>SON DAKİKA... Ukrayna&#x27;nın Ankara Büyükelçisi Dışişleri Bakanlığına çağrıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -409,58 +519,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/spor-toto-trabzonu-yendi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T16:18:21+03:00</news:publication_date>
-      <news:title>Spor Toto, Trabzon&#x27;u Yendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/kayserili-sporcular-turkiye-sampiyonu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:14:31+03:00</news:publication_date>
-      <news:title>Kayserili Sporcular Türkiye Şampiyonu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/milletvekili-bozgeyik-samdan-mesaj-verdi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:05:00+03:00</news:publication_date>
-      <news:title>Milletvekili Bozgeyik, Şam’dan mesaj verdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/kripto-para-piyasasinda-bu-hafta-ne-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:03:30+03:00</news:publication_date>
-      <news:title>Kripto para piyasasında bu hafta ne oldu?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/aydinda-yuzme-yarislari-coskusu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T16:01:42+03:00</news:publication_date>
-      <news:title>Aydın&#x27;da Yüzme Yarışları Coşkusu</news:title>
+      <news:publication_date>2026-08-29T16:19:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Galatasaray Leao transferini duyurdu! İşte İstanbul&#x27;a geleceği saat...</news:title>
     </news:news>
   </url>
   <url>
@@ -483,17 +549,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T15:56:00+03:00</news:publication_date>
       <news:title>Son dakika haberi... Nijer&#x27;de darbe girişimi! Başkanlık sarayı çevresinde çatışmalar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/erzurumspor-fk-super-ligde-ilk-puanini-aldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T15:54:21+03:00</news:publication_date>
-      <news:title>Erzurumspor FK Süper Lig&#x27;de İlk Puanını Aldı</news:title>
     </news:news>
   </url>
   <url>
@@ -574,6 +629,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-istanbul-zeytinburnundaki-iett-kazasinda-2-ki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T15:31:02+03:00</news:publication_date>
+      <news:title>SON DAKİKA... İstanbul Zeytinburnu&#x27;ndaki İETT kazasında 2 kişi hayatını kaybetmişti! O anlar araç içi kamerasına böyle yansıdı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-23-yilda-534-yatirim-icin-tesvik-belgesi-duzenledik.html</loc>
     <news:news>
       <news:publication>
@@ -582,17 +648,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T15:26:00+03:00</news:publication_date>
       <news:title>&quot;Son 23 yılda 534 yatırım için teşvik belgesi düzenledik&quot; - Son Dakika Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-alanyada-korkunc-yangin-binayi-alevler-sardi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T15:17:00+03:00</news:publication_date>
-      <news:title>Son Dakika! Alanya&#x27;da korkunç yangın: Binayı alevler sardı</news:title>
     </news:news>
   </url>
   <url>
@@ -629,6 +684,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-ozgur-ozelin-kayserideki-esnaf-ziyareti-mitin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T15:06:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Özgür Özel&#x27;in Kayseri&#x27;deki esnaf ziyareti mitinge dönüştü</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-tffden-fenerbahce-besiktas-derbisi-icin-beklen.html</loc>
     <news:news>
       <news:publication>
@@ -659,6 +725,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T14:56:26+03:00</news:publication_date>
       <news:title>Fenerbahçe - Beşiktaş derbisinin tarihi belli oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T14:52:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Galatasaray Leao transferini duyurdu! İşte İstanbul&#x27;a geleceği saat...</news:title>
     </news:news>
   </url>
   <url>
@@ -695,17 +772,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/besiktas-transfer-haberleri-son-dakika-galatasaray-istiyord.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T13:50:19+03:00</news:publication_date>
-      <news:title>BEŞİKTAŞ TRANSFER HABERLERİ SON DAKİKA: Galatasaray istiyordu, Beşiktaş görüşüyor: 20 milyon euro teklif edildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/yol-verme-tartismasinda-motokurye-otomobil-surucusunu-kaput.html</loc>
     <news:news>
       <news:publication>
@@ -714,17 +780,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T13:48:17+03:00</news:publication_date>
       <news:title>Yol verme tartışmasında motokurye, otomobil sürücüsünü kaputa yatırıp defalarca yumrukladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/ve-galatasaraydan-beklenen-rafael-leao-aciklamasi-geldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T13:44:48+03:00</news:publication_date>
-      <news:title>Ve Galatasaray&#x27;dan beklenen Rafael Leao açıklaması geldi</news:title>
     </news:news>
   </url>
   <url>
@@ -783,6 +838,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-zeytinburnunda-iett-otobusunu-kazaya-suruklemi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T13:17:56+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Zeytinburnu&#x27;nda İETT otobüsünü kazaya sürüklemişti: O sürücü hakkında karar! 2 ölü, 16 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/kasif-kozinoglu-dosyasi-faili-mechul-dairesine-gonderildi.html</loc>
     <news:news>
       <news:publication>
@@ -802,17 +868,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T12:57:57+03:00</news:publication_date>
       <news:title>Tesettüre giren efsane voleybolcu Aysun Özbek yıllar sonra ortaya çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberler-korkutan-bilanco-aciklandi-ulkedeki-sa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T12:39:26+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERLER: Korkutan bilanço açıklandı! Ülkedeki salgında can kaybı 2 bini aştı</news:title>
     </news:news>
   </url>
   <url>
@@ -849,17 +904,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/yapay-zeka-fabrikalari-kobi-ve-girisimcilere-seviye-atlata.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T11:18:00+03:00</news:publication_date>
-      <news:title>&quot;Yapay zeka fabrikaları&quot; KOBİ ve girişimcilere seviye atlatacak</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-guzellik-merkezinde-skandal-bakirkoyde.html</loc>
     <news:news>
       <news:publication>
@@ -868,6 +912,28 @@
       </news:publication>
       <news:publication_date>2026-08-29T11:17:19+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Güzellik merkezinde skandal! Bakırköy&#x27;de yaşandı! Tam 14 bin video | Son dakika haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-depremler-listesi-29-agustos-2026-guncel-verile.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T11:05:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA DEPREMLER LİSTESİ 29 AĞUSTOS 2026 - GÜNCEL VERİLER | Az önce deprem mi oldu, bugün nerede deprem oldu? İşte AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-rafael-leao-imzayi-atmaya-geliyor-goztepe-maci.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T10:55:08+03:00</news:publication_date>
+      <news:title>Son Dakika | Rafael Leao imzayı atmaya geliyor: Göztepe maçında sürpriz yapacak</news:title>
     </news:news>
   </url>
   <url>
@@ -937,17 +1003,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gulistanin-son-goruldugu-yerdeki-arac-komutan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T09:48:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Gülistan&#x27;ın son görüldüğü yerdeki araç komutan eşinin çıktı! 10 kişi gözaltında</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gulistan-doku-sorusturmasinda-5-dalga-operasyon.html</loc>
     <news:news>
       <news:publication>
@@ -956,6 +1011,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T09:48:00+03:00</news:publication_date>
       <news:title>SON DAKİKA… Gülistan Doku soruşturmasında 5. dalga operasyon! Adalet Bakanı Gürlek açıkladı: 10 şüpheli gözaltında</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gulistanin-son-goruldugu-yerdeki-arac-komutan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T09:48:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Gülistan&#x27;ın son görüldüğü yerdeki araç komutan eşinin çıktı! 10 kişi gözaltında</news:title>
     </news:news>
   </url>
   <url>
@@ -981,17 +1047,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-nepaldeki-selde-hayatini-kaybedenlerin-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T08:30:40+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ! Nepal&#x27;deki selde hayatını kaybedenlerin sayısı 616&#x27;ya çıktı - Sel faciası | Dış Haberler</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-soner-yilmaz-evinin-salonunda-vurulmustu-cesme.html</loc>
     <news:news>
       <news:publication>
@@ -1000,28 +1055,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T08:19:00+03:00</news:publication_date>
       <news:title>SON DAKİKA | Soner Yılmaz evinin salonunda vurulmuştu! Çeşme’deki otel saldırısından Bebek’teki kurşunlamaya uzanan yol</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-nijerde-cumhurbaskanligi-sarayi-cevresinde-sila.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T08:18:24+03:00</news:publication_date>
-      <news:title>Son dakika: Nijer&#x27;de Cumhurbaşkanlığı Sarayı çevresinde silah sesleri | Dış Haberler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/cok-kuvvetli-ve-siddetli-yagis-geliyor-meteoroloji-saat-ver.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T08:09:00+03:00</news:publication_date>
-      <news:title>Çok kuvvetli ve şiddetli yağış geliyor! Meteoroloji saat verdi: 26 ilde sarı ve turuncu alarm! Sel, su baskını ve rüzgar uyarısı...</news:title>
     </news:news>
   </url>
   <url>
@@ -1102,17 +1135,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/son-dakika-gelismesi-gaziler-evlerine-donuyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T23:00:00+03:00</news:publication_date>
-      <news:title>Son dakika gelişmesi: Gaziler evlerine dönüyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/filenin-sultanlari-avrupa-sampiyonasinda-son-16da.html</loc>
     <news:news>
       <news:publication>
@@ -1124,36 +1146,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/son-dakika-zeytinburnunda-iki-tramvay-carpisti-yaralilar.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/28/son-dakika-fenerbahceden-cengiz-under-karari-ayrilik-resm.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-28T21:09:56+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Zeytinburnu&#x27;nda iki tramvay çarpıştı! Yaralılar var</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/son-dakika-fenerbahce-kojo-peprah-oppong-transferini-resmen.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:09:55+03:00</news:publication_date>
-      <news:title>SON DAKİKA: Fenerbahçe Kojo Peprah Oppong transferini resmen açıkladı! - Fenerbahçe</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/son-dakika-kojo-peprah-oppong-fenerbahcede.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:04:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Kojo Peprah Oppong, Fenerbahçe&#x27;de</news:title>
+      <news:publication_date>2026-08-28T20:51:52+03:00</news:publication_date>
+      <news:title>SON DAKİKA: Fenerbahçe&#x27;den Cengiz Ünder kararı! Ayrılık resmen açıklandı: İşte yeni takımı - Fenerbahçe</news:title>
     </news:news>
   </url>
 </urlset>
