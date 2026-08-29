@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/mudanyada-feci-kaza-4-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T04:44:21+03:00</news:publication_date>
+      <news:title>Mudanya&#x27;da Feci Kaza: 4 Yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/trump-venezuela-ile-tarihi-petrol-anlasmasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T03:35:22+03:00</news:publication_date>
+      <news:title>Trump: Venezuela ile Tarihi Petrol Anlaşması</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/trump-venezuela-ile-tarihi-petrol-anlasmasini-duyurdu.html</loc>
     <news:news>
       <news:publication>
@@ -120,6 +142,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T01:16:32+03:00</news:publication_date>
       <news:title>Hatay&#x27;da Mısır Hasadı Devam Ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/kahtada-kamyonet-kazasi-sehit-babasi-hayatini-kaybetti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:14:22+03:00</news:publication_date>
+      <news:title>Kahta&#x27;da kamyonet kazası: Şehit babası hayatını kaybetti</news:title>
     </news:news>
   </url>
   <url>
@@ -409,14 +442,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/yapicioglu-467-oyla-gecen-yasa-ile-siddet-donemi-sona-erece.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/28/huda-par-liderinden-terorsuz-turkiye-vurgusu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-28T23:57:22+03:00</news:publication_date>
-      <news:title>Yapıcıoğlu: 467 oyla geçen yasa ile şiddet dönemi sona erecek</news:title>
+      <news:title>HÜDA PAR liderinden &#x27;Terörsüz Türkiye&#x27; vurgusu</news:title>
     </news:news>
   </url>
   <url>
@@ -838,28 +871,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/trabzonspor-amed-macina-hazirlaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T22:06:21+03:00</news:publication_date>
-      <news:title>Trabzonspor Amed Maçına Hazırlanıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/trabzonspor-amed-macina-hazirlaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T22:05:21+03:00</news:publication_date>
-      <news:title>Trabzonspor Amed Maçına Hazırlanıyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/cengiz-under-arca-corum-fkda.html</loc>
     <news:news>
       <news:publication>
@@ -992,17 +1003,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/uslunun-cezasi-kaldirildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T20:55:11+03:00</news:publication_date>
-      <news:title>Uslu&#x27;nun Cezası Kaldırıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/salah-buraya-kazanmak-icin-geldim.html</loc>
     <news:news>
       <news:publication>
@@ -1069,17 +1069,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/denizli-basket-mustapha-amzili-transfer-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T20:10:21+03:00</news:publication_date>
-      <news:title>Denizli Basket, Mustapha Amzil&#x27;i Transfer Etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/sokakta-bulunan-100-bin-lira-calindi.html</loc>
     <news:news>
       <news:publication>
@@ -1099,6 +1088,17 @@
       </news:publication>
       <news:publication_date>2026-08-28T18:07:00+03:00</news:publication_date>
       <news:title>Kylie Jenner başlattı, Türkiye’de bambaşka bir hal aldı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/28/dile-kolay-12-yil-unlu-oyuncu-ve-esi-asklarini-boyle-kutlad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-28T16:23:41+03:00</news:publication_date>
+      <news:title>Dile kolay 12 yıl! Ünlü oyuncu ve eşi aşklarını böyle kutladı</news:title>
     </news:news>
   </url>
 </urlset>
