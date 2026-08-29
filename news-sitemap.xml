@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/galatasarayin-sampiyonlar-ligi-rakibini-parcaladilar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T07:51:09+03:00</news:publication_date>
+      <news:title>Galatasaray&#x27;ın Şampiyonlar Ligi rakibini parçaladılar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/esenyurtta-kafe-yangini-itfaiye-mudahale-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T07:27:22+03:00</news:publication_date>
+      <news:title>Esenyurt&#x27;ta Kafe Yangını: İtfaiye Müdahale Etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/ticaret-savasinin-otomotiv-endustrisine-etkileri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T07:18:22+03:00</news:publication_date>
+      <news:title>Ticaret Savaşının Otomotiv Endüstrisine Etkileri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/hindistan-binek-arac-talebi-guclu-buyuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T06:57:22+03:00</news:publication_date>
+      <news:title>Hindistan Binek Araç Talebi Güçlü Büyüyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/bogotada-30-agustos-zafer-bayrami-resepsiyonu.html</loc>
     <news:news>
       <news:publication>
@@ -120,17 +164,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T01:52:31+03:00</news:publication_date>
       <news:title>TİP&#x27;ten Alevilere Destek</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/chpden-ukrayna-savasi-degerlendirmesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T01:48:32+03:00</news:publication_date>
-      <news:title>CHP&#x27;den Ukrayna Savaşı Değerlendirmesi</news:title>
     </news:news>
   </url>
   <url>
@@ -263,17 +296,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T00:53:31+03:00</news:publication_date>
       <news:title>Erzurumspor Moral Buldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/kayseride-saganak-sele-donustu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T00:35:21+03:00</news:publication_date>
-      <news:title>Kayseri&#x27;de Sağanak Sele Dönüştü</news:title>
     </news:news>
   </url>
   <url>
@@ -695,28 +717,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/izlanda-abye-uyelik-icin-referandum-yapiyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T22:44:31+03:00</news:publication_date>
-      <news:title>İzlanda AB&#x27;ye Üyelik İçin Referandum Yapıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/terorsuz-turkiye-icin-tarihi-adimlar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T22:43:31+03:00</news:publication_date>
-      <news:title>Terörsüz Türkiye İçin Tarihi Adımlar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/imf-baskanindan-sabitcoin-uyarisi.html</loc>
     <news:news>
       <news:publication>
@@ -835,6 +835,17 @@
       </news:publication>
       <news:publication_date>2026-08-28T22:07:31+03:00</news:publication_date>
       <news:title>Korkmaz&#x27;dan Hakem Eleştirisi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/28/trabzonspor-amed-macina-hazirlaniyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-28T22:06:21+03:00</news:publication_date>
+      <news:title>Trabzonspor Amed Maçına Hazırlanıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -1000,17 +1011,6 @@
       </news:publication>
       <news:publication_date>2026-08-28T20:29:22+03:00</news:publication_date>
       <news:title>Sivasspor, Batman Petrolspor Maçı Hazırlıklarını Tamamladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/turkiye-badmintonda-2-altin-madalya-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T20:28:21+03:00</news:publication_date>
-      <news:title>Türkiye Badminton&#x27;da 2 Altın Madalya Kazandı</news:title>
     </news:news>
   </url>
   <url>
