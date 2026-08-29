@@ -5,7 +5,12 @@ import datetime
 import re
 import os
 import html
+import json
 from email.utils import parsedate_to_datetime
+
+# Gemini API Key (Ortam değişkeninden veya doğrudan buraya tanımlayabilirsiniz)
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
+
 
 def slugify(text):
     text = text.lower()
@@ -25,13 +30,10 @@ def clean_rss_description(raw_desc, title):
     if not raw_desc:
         return ""
     
-    # HTML etiketlerini temizle
     clean = re.sub(r'<[^>]+>', ' ', raw_desc)
     clean = html.unescape(clean)
-    
-    # Başlıkla aynı olan veya tekrarlayan metinleri çıkar
     clean = clean.replace(title, "").strip()
-    clean = re.sub(r'^\s*[-–—:]\s*', '', clean) # Başta kalan tire veya noktalama işaretlerini sil
+    clean = re.sub(r'^\s*[-–—:]\s*', '', clean)
     clean = re.sub(r'\s+', ' ', clean).strip()
     
     if len(clean) < 15:
@@ -40,18 +42,14 @@ def clean_rss_description(raw_desc, title):
     return clean
 
 
-def generate_seo_content(title, summary, source, date_str):
-    """
-    Haber başlığı ve özetinden SEO uyumlu, özgün ve zengin haber metni oluşturur.
-    """
+def generate_fallback_seo_content(title, summary, source, date_str):
+    """API bağlantı hatası veya anahtar yokluğunda çalışacak şablon içerik."""
     keywords = [k for k in re.split(r'\s+', title) if len(k) > 3]
     kw_str = ", ".join(keywords[:4]) if keywords else "güncel gelişmeler"
 
     paragraph_1 = f"<strong>{title}</strong> gelişmesi, kamuoyunda geniş yankı buldu. {source} kaynaklarından edinilen son bilgilere göre, olayla ilgili sıcak gelişmeler yaşanmaya devam ediyor. {summary}"
-    
-    paragraph_2 = f"Son dönemde {kw_str} konularında yaşanan hareketlilik, uzmanlar ve ilgili çevreler tarafından yakından takip ediliyor. Yapılan ilk değerlendirmelere göre, sürecin önümüzdeki günlerde nasıl bir seyir izleyeceği merak konusu."
-
-    paragraph_3 = f"<strong>{date_str}</strong> tarihi itibarıyla aktarılan detaylarda, {title} başlığının öne çıkan noktaları ve olayın olası etkileri analiz ediliyor. Konuyla ilgili resmi makamlardan gelebilecek yeni açıklamalar bekleniyor."
+    paragraph_2 = f"Son dönemde {kw_str} konularında yaşanan hareketlilik, uzmanlar ve ilgili çevreler tarafından yakından takip ediliyor."
+    paragraph_3 = f"<strong>{date_str}</strong> tarihi itibarıyla aktarılan detaylarda, {title} başlığının öne çıkan noktaları analiz ediliyor."
 
     return f"""
     <p>{paragraph_1}</p>
@@ -62,8 +60,66 @@ def generate_seo_content(title, summary, source, date_str):
     """
 
 
+def generate_seo_content(title, summary, source, date_str):
+    """
+    Google Gemini Yapay Zeka API'sini kullanarak özgün, SEO uyumlu,
+    anahtar kelime zenginliği yüksek ve akıcı haber metinleri üretir.
+    """
+    if not GEMINI_API_KEY or GEMINI_API_KEY == "YOUR_GEMINI_API_KEY_HERE":
+        return generate_fallback_seo_content(title, summary, source, date_str)
+
+    prompt = f"""
+    Sen profesyonel bir SEO uzmanı ve haber editörüsün. Aşağıdaki haber bilgilerini kullanarak arama motorlarında üst sıralara çıkacak, özgün, ilgi çekici ve Türkçe bir haber metni oluştur.
+
+    Haber Başlığı: {title}
+    Haber Özeti / Detaylar: {summary}
+    Kaynak: {source}
+    Yayın Tarihi: {date_str}
+
+    Metin Üretim Kuralları:
+    1. Yalnızca geçerli HTML etiketleri (<p>, <h3>, <strong>, <ul>, <li>) kullanarak metni oluştur.
+    2. Metin içinde markdown kopyalama blokları (```html vb.) KULLANMA. Doğrudan HTML etiketleri ile başlat.
+    3. Haber başlığındaki anahtar kelimeleri metin içerisinde doğal ve akıcı şekilde geçir.
+    4. Giriş, gelişme ve sonuç bölümlerinden oluşan en az 3 paragraf ve 1 adet ilgi çekici <h3> alt başlık ekle.
+    5. Metin özgün, tarafsız ve okuyucuya değer katan bir anlatıma sahip olsun.
+    """
+
+    url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){GEMINI_API_KEY}"
+    
+    payload = {
+        "contents": [{
+            "parts": [{"text": prompt}]
+        }],
+        "generationConfig": {
+            "temperature": 0.6,
+            "maxOutputTokens": 1000
+        }
+    }
+
+    try:
+        data = json.dumps(payload).encode('utf-8')
+        req = urllib.request.Request(
+            url, 
+            data=data, 
+            headers={'Content-Type': 'application/json'},
+            method='POST'
+        )
+        with urllib.request.urlopen(req, timeout=20) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            ai_text = result['candidates'][0]['content']['parts'][0]['text']
+            
+            # Olası kod bloğu işaretleyicilerini temizle
+            ai_text = re.sub(r'^```html\s*', '', ai_text, flags=re.MULTILINE)
+            ai_text = re.sub(r'^```\s*', '', ai_text, flags=re.MULTILINE).strip()
+            
+            return ai_text
+            
+    except Exception as e:
+        print(f"[Yapay Zeka Hatası] '{title[:30]}...' haber içeriği üretilemedi ({e}). Şablon içeriğe geçiliyor.")
+        return generate_fallback_seo_content(title, summary, source, date_str)
+
+
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
-    """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
     return f'''
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">{title_text}</a>
@@ -104,7 +160,6 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     '''
 
 def get_footer_html():
-    """Tüm Sayfalarda Ortak Kullanılan Standart Footer Bileşeni"""
     return '''
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
@@ -130,7 +185,7 @@ def get_footer_html():
                 </div>
             </div>
             <div style="text-align: center; font-size: 12px; color: #65676b;">
-                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="[https://x.com/nearadin2026](https://x.com/nearadin2026)" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
                 <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
             </div>
         </div>
@@ -148,7 +203,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7 Günlük Hava Durumu Tahmini - nearadin.net</title>
     <meta name="description" content="Türkiye'nin 81 ili için güncel 7 günlük detaylı hava durumu tahminleri." />
-    <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
+    <link rel="canonical" href="[https://nearadin.net/hava-durumu/](https://nearadin.net/hava-durumu/)" />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
@@ -172,7 +227,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 </head>
 <body>
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <script type="text/javascript" src="[https://static.cdn.admatic.com.tr/showad/showad.min.js](https://static.cdn.admatic.com.tr/showad/showad.min.js)"></script>
 
     {admatic_code}
     {header_html}
@@ -222,7 +277,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
             listEl.innerHTML = '';
 
             try {{
-                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${{lat}}&longitude=${{lon}}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`);
+                const response = await fetch(`[https://api.open-meteo.com/v1/forecast?latitude=$](https://api.open-meteo.com/v1/forecast?latitude=$){{lat}}&longitude=${{lon}}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`);
                 const data = await response.json();
                 loadingEl.style.display = 'none';
 
@@ -268,7 +323,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 
 def fetch_and_generate():
-    rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
+    rss_url = "[https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr](https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr)"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -289,7 +344,7 @@ def fetch_and_generate():
     admatic_code = '''
    <div class="ad-container">
        <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+        <script type="text/javascript" src="[https://static.cdn.admatic.com.tr/showad/showad.min.js](https://static.cdn.admatic.com.tr/showad/showad.min.js)"></script>
    </div>
     '''
 
@@ -355,7 +410,6 @@ def fetch_and_generate():
                 clean_title = parts[0]
                 source_name = parts[1]
 
-            # Başlıkla tekrarlamayan temiz özet oluştur
             clean_desc = clean_rss_description(raw_desc, clean_title)
 
             dt_tr = pub_datetime.astimezone(tz_tr)
@@ -368,9 +422,9 @@ def fetch_and_generate():
             slug = slugify(clean_title[:60])
             page_name = f"{slug}.html"
             internal_link = f"/haber/{date_folder}/{page_name}"
-            full_url = f"https://nearadin.net{internal_link}"
+            full_url = f"[https://nearadin.net](https://nearadin.net){internal_link}"
 
-            # Detay sayfası için özgün SEO metni oluştur
+            # Yapay zeka destekli özgün metin oluşturma çağrısı
             full_content_html = generate_seo_content(clean_title, clean_desc, source_name, date_str)
 
             news_data = {
@@ -414,7 +468,6 @@ def fetch_and_generate():
                     </li>'''
                     other_count += 1
 
-            # Haber Detay Sayfası HTML
             detail_html = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -428,17 +481,17 @@ def fetch_and_generate():
     <meta name="twitter:title" content="{news['title']}" />
     <meta name="twitter:description" content="{news['desc'][:150]}" />
     <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+    <meta name="twitter:image" content="[https://nearadin.net/P5xJ5K5J_400x400.jpg](https://nearadin.net/P5xJ5K5J_400x400.jpg)" />
 
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}" />
     <meta property="og:url" content="{news['full_url']}" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
+    <meta property="og:image" content="[https://nearadin.net/1786394487303.png](https://nearadin.net/1786394487303.png)" />
 
     <script type="application/ld+json">
     {{
-      "@context": "https://schema.org",
+      "@context": "[https://schema.org](https://schema.org)",
       "@type": "NewsArticle",
       "headline": "{news['title']}",
       "description": "{news['desc'][:150]}",
@@ -454,7 +507,7 @@ def fetch_and_generate():
         "name": "nearadin.net",
         "logo": {{
           "@type": "ImageObject",
-          "url": "https://nearadin.net/1786394487303.png"
+          "url": "[https://nearadin.net/1786394487303.png](https://nearadin.net/1786394487303.png)"
         }}
       }}
     }}
@@ -484,7 +537,7 @@ def fetch_and_generate():
 
 <body>
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <script type="text/javascript" src="[https://static.cdn.admatic.com.tr/showad/showad.min.js](https://static.cdn.admatic.com.tr/showad/showad.min.js)"></script>
     
     {admatic_code}
     {header_html}
@@ -515,7 +568,7 @@ def fetch_and_generate():
                 }};
                 (function() {{
                     var d = document, s = d.createElement('script');
-                    s.src = 'https://nearadin.disqus.com/embed.js';
+                    s.src = '[https://nearadin.disqus.com/embed.js](https://nearadin.disqus.com/embed.js)';
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 }})();
@@ -561,8 +614,6 @@ def fetch_and_generate():
                 news_cards_html += admatic_code
 
         # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI ---
-        import json
-
         for folder_path, group_data in daily_news_grouped.items():
             json_path = f"haber/{folder_path}/news.json"
             accumulated_news = []
@@ -650,7 +701,6 @@ def fetch_and_generate():
             with open(f"haber/{folder_path}/index.html", "w", encoding="utf-8") as f:
                 f.write(daily_index_html)
 
-
         # Anasayfa (index.html)
         full_html = f'''<!DOCTYPE html>
 <html lang="tr">
@@ -682,7 +732,7 @@ def fetch_and_generate():
 </head>
 <body>
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <script type="text/javascript" src="[https://static.cdn.admatic.com.tr/showad/showad.min.js](https://static.cdn.admatic.com.tr/showad/showad.min.js)"></script>
 
     {header_html}
 
@@ -709,30 +759,30 @@ def fetch_and_generate():
 
         # Sitemap & Arşiv İşlemleri
         sitemap_items = f'''  <url>
-    <loc>https://nearadin.net/</loc>
+    <loc>[https://nearadin.net/](https://nearadin.net/)</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/llms.txt</loc>
+    <loc>[https://nearadin.net/llms.txt](https://nearadin.net/llms.txt)</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
+    <loc>[https://nearadin.net/canli-mac-sonuclari/](https://nearadin.net/canli-mac-sonuclari/)</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/arsiv/</loc>
+    <loc>[https://nearadin.net/arsiv/](https://nearadin.net/arsiv/)</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/hava-durumu/</loc>
+    <loc>[https://nearadin.net/hava-durumu/](https://nearadin.net/hava-durumu/)</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -750,7 +800,7 @@ def fetch_and_generate():
                         if file_name == "index.html":
                             continue
                             
-                        page_url = f"https://nearadin.net/haber/{clean_rel_path}"
+                        page_url = f"[https://nearadin.net/haber/](https://nearadin.net/haber/){clean_rel_path}"
                         
                         sitemap_items += f'''  <url>
     <loc>{page_url}</loc>
@@ -795,7 +845,7 @@ def fetch_and_generate():
 </head>
 <body>
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+    <script type="text/javascript" src="[https://static.cdn.admatic.com.tr/showad/showad.min.js](https://static.cdn.admatic.com.tr/showad/showad.min.js)"></script>
 
     {header_html}
     <div class="container">
@@ -812,7 +862,7 @@ def fetch_and_generate():
             f.write(archive_page_html)
 
         sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="[http://www.sitemaps.org/schemas/sitemap/0.9](http://www.sitemaps.org/schemas/sitemap/0.9)">
 {sitemap_items}</urlset>'''
 
         with open("sitemap.xml", "w", encoding="utf-8") as f:
@@ -834,14 +884,14 @@ def fetch_and_generate():
   </url>\n'''
 
         news_sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<urlset xmlns="[http://www.sitemaps.org/schemas/sitemap/0.9](http://www.sitemaps.org/schemas/sitemap/0.9)"
+        xmlns:news="[http://www.google.com/schemas/sitemap-news/0.9](http://www.google.com/schemas/sitemap-news/0.9)">
 {news_sitemap_items}</urlset>'''
 
         with open("news-sitemap.xml", "w", encoding="utf-8") as f:
             f.write(news_sitemap_content)
 
-        print("İşlem başarıyla tamamlandı. Haber özetleri ve SEO haber metinleri güncellendi.")
+        print("İşlem başarıyla tamamlandı. Yapay zeka ile üretilen SEO haber içerikleri oluşturuldu.")
 
     except Exception as e:
         print(f"Hata oluştu: {e}")
