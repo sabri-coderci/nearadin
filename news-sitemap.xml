@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/trumptan-venezuela-ile-petrol-anlasmasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T02:26:11+03:00</news:publication_date>
+      <news:title>Trump&#x27;tan Venezuela ile Petrol Anlaşması</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/suvarinin-izinden-104-yil-anma-surusu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T02:05:21+03:00</news:publication_date>
+      <news:title>Süvarinin İzinden 104. Yıl Anma Sürüşü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/tipten-alevilere-destek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:52:31+03:00</news:publication_date>
+      <news:title>TİP&#x27;ten Alevilere Destek</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/chpden-ukrayna-savasi-degerlendirmesi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:48:32+03:00</news:publication_date>
+      <news:title>CHP&#x27;den Ukrayna Savaşı Değerlendirmesi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/erzurumspordan-kiymetli-1-puan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:47:22+03:00</news:publication_date>
+      <news:title>Erzurumspor&#x27;dan Kıymetli 1 Puan</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/zeytinburnunda-tramvay-kazasi-hattin-acilmasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:42:24+03:00</news:publication_date>
+      <news:title>Zeytinburnu&#x27;nda Tramvay Kazası: Hattın Açılması</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/suleymancilar-operasyonunda-35-tutuklama.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T01:42:23+03:00</news:publication_date>
+      <news:title>Süleymancılar operasyonunda 35 tutuklama</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/alkollu-ve-ehliyetsiz-surucuye-255-bin-lira-ceza.html</loc>
     <news:news>
       <news:publication>
@@ -120,17 +197,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T00:53:31+03:00</news:publication_date>
       <news:title>Erzurumspor Moral Buldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/adanada-sucla-mucadele-denetimi-35-supheli-yakalandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T00:49:21+03:00</news:publication_date>
-      <news:title>Adana&#x27;da Suçla Mücadele Denetimi: 35 Şüpheli Yakalandı</news:title>
     </news:news>
   </url>
   <url>
@@ -794,17 +860,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/hamaneyden-ulusal-motivasyon-vurgusu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:55:31+03:00</news:publication_date>
-      <news:title>Hamaney&#x27;den Ulusal Motivasyon Vurgusu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/a-milli-kadin-voleybol-takimi-polonyaya-3-2-yenildi.html</loc>
     <news:news>
       <news:publication>
@@ -926,39 +981,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/pendikspor-ve-bandirmaspor-berabere.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:15:21+03:00</news:publication_date>
-      <news:title>Pendikspor ve Bandırmaspor Berabere</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/abd-ve-japonyadan-koordineli-yen-mudahalesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:14:21+03:00</news:publication_date>
-      <news:title>ABD ve Japonya&#x27;dan Koordineli Yen Müdahalesi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/fenerbahce-ayriligi-resmen-acikladi-cengiz-under-corum-fk.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T21:11:10+03:00</news:publication_date>
-      <news:title>Fenerbahçe ayrılığı resmen açıkladı: Cengiz Ünder, Çorum FK&#x27;ya transfer oldu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/down-sendromlu-bireylere-mesleki-egitim.html</loc>
     <news:news>
       <news:publication>
@@ -1069,17 +1091,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/28/avrupa-borsalari-yukseliste-teknoloji-hisseleri-ve-fed-mesa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T19:59:22+03:00</news:publication_date>
-      <news:title>Avrupa Borsaları Yükselişte: Teknoloji Hisseleri ve Fed Mesajları Etkili Oldu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/28/karsiyaka-xavier-mundfordu-kadrosuna-katti.html</loc>
     <news:news>
       <news:publication>
@@ -1088,17 +1099,6 @@
       </news:publication>
       <news:publication_date>2026-08-28T19:58:24+03:00</news:publication_date>
       <news:title>Karşıyaka, Xavier Mundford&#x27;u Kadrosuna Kattı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/28/kylie-jenner-baslatti-turkiyede-bambaska-bir-hal-aldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-28T18:07:00+03:00</news:publication_date>
-      <news:title>Kylie Jenner başlattı, Türkiye’de bambaşka bir hal aldı!</news:title>
     </news:news>
   </url>
 </urlset>
