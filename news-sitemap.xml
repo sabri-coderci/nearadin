@@ -2,6 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cinden-notlar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:48:08+03:00</news:publication_date>
+      <news:title>Çin’den notlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/yargitaydan-calisanlarin-tazminat-hakki-karari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:41:21+03:00</news:publication_date>
+      <news:title>Yargıtay&#x27;dan Çalışanların Tazminat Hakkı Kararı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/istanbulda-zafer-bayrami-trafik-duzenlemesi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:36:21+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da Zafer Bayramı Trafik Düzenlemesi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/istanbullular-dikkat-bugun-bazi-yollar-trafige-kapatildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:33:26+03:00</news:publication_date>
+      <news:title>İstanbullular dikkat! Bugün bazı yollar trafiğe kapatıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/bagimsizlik-atesinin-yandigi-gun-30-agustos-buyuk-zaferi-10.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:30:20+03:00</news:publication_date>
+      <news:title>Bağımsızlık ateşinin yandığı gün: 30 Ağustos büyük zaferi 104 yaşında</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/istanbulda-bazi-yollar-trafige-kapatildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:28:00+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da bazı yollar trafiğe kapatıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/istanbulda-zafer-bayrami-kutlamasi-icin-trafik-kapatildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:23:22+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da Zafer Bayramı Kutlaması İçin Trafik Kapatıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cem-yilmazin-saglik-durumu-nasil-hastaligi-nedir-cem-yilm.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:22:00+03:00</news:publication_date>
+      <news:title>Cem Yılmaz&#x27;ın sağlık durumu nasıl, hastalığı nedir? Cem Yılmaz kimdir, kaç yaşında? Hastaneye kaldırıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-galatasaray-yusuf-akciceki-bitirmek-uzere.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:16:00+03:00</news:publication_date>
+      <news:title>Son dakika: Galatasaray, Yusuf Akçiçek’i bitirmek üzere!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/pisada-eylul-heyecani.html</loc>
     <news:news>
       <news:publication>
@@ -10,6 +109,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
       <news:title>PISA’da eylül heyecanı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/sir-perdesini-cezaevi-notlari-aralayacak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
+      <news:title>Sır perdesini cezaevi notları aralayacak</news:title>
     </news:news>
   </url>
   <url>
@@ -24,58 +134,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/bahceliden-30-agustos-mesaji-dumlupinar-sevrin-yaniti.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/yagma-ve-hirsizlik-kavgasi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Bahçeli’den 30 Ağustos mesajı: Dumlupınar Sevr’in yanıtı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/enginyurtun-danismani-gozaltina-alindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Enginyurt’un danışmanı gözaltına alındı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/guzellik-merkezinde-igrenc-komplo-ikisi-de-cezaevinde.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Güzellik merkezinde iğrenç komplo! İkisi de cezaevinde</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/turk-rehber-elena-nepalde-kayboldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Türk rehber Elena Nepal’de kayboldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/atina-ankarayi-abye-sikyet-edecek.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Atina Ankara’yı AB’ye şikâyet edecek</news:title>
+      <news:title>Yağma ve hırsızlık kavgası!</news:title>
     </news:news>
   </url>
   <url>
@@ -90,14 +156,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/yagma-ve-hirsizlik-kavgasi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/israilli-albaydan-soguk-itiraf-konvoy-katliamindan-pisman-d.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Yağma ve hırsızlık kavgası!</news:title>
+      <news:title>İsrailli albaydan soğuk itiraf! Konvoy katliamından pişman değilmiş</news:title>
     </news:news>
   </url>
   <url>
@@ -123,14 +189,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/sir-perdesini-cezaevi-notlari-aralayacak.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/kuris-suc-orgutune-35-tutuklama-daha.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Sır perdesini cezaevi notları aralayacak</news:title>
+      <news:title>Kurış suç örgütü’ne 35 tutuklama daha</news:title>
     </news:news>
   </url>
   <url>
@@ -156,14 +222,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/10-bin-genc-tdv-yurtlarinda-bulusacak.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/korsanlarin-kacirdigi-gemiyi-turk-deniz-kuvvetleri-kurtardi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>10 bin genç TDV yurtlarında buluşacak</news:title>
+      <news:title>Korsanların kaçırdığı gemiyi Türk Deniz Kuvvetleri kurtardı</news:title>
     </news:news>
   </url>
   <url>
@@ -178,6 +244,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/10-bin-genc-tdv-yurtlarinda-bulusacak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
+      <news:title>10 bin genç TDV yurtlarında buluşacak</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/adliyelerde-alo-adalet-135-donemi.html</loc>
     <news:news>
       <news:publication>
@@ -186,6 +263,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
       <news:title>Adliyelerde ‘Alo Adalet 135’ dönemi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/havada-karada-denizde-zafer-coskusu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
+      <news:title>Havada karada denizde zafer coşkusu</news:title>
     </news:news>
   </url>
   <url>
@@ -200,14 +288,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/havada-karada-denizde-zafer-coskusu.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/dogamizin-genleri-caliniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T07:00:00+03:00</news:publication_date>
-      <news:title>Havada karada denizde zafer coşkusu</news:title>
+      <news:title>Doğamızın genleri çalınıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -255,6 +343,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/sicilya-adasindaki-orman-yanginlari-yerlesim-yerlerini-tehd.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T03:18:00+03:00</news:publication_date>
+      <news:title>Sicilya Adası&#x27;ndaki orman yangınları yerleşim yerlerini tehdit ediyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/mardin-1969-spor-ve-vanspor-fk-berabere-kaldi.html</loc>
     <news:news>
       <news:publication>
@@ -299,17 +398,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-galatasaray-yusuf-akciceki-bitirmek-uzere.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T01:46:32+03:00</news:publication_date>
-      <news:title>Son dakika: Galatasaray, Yusuf Akçiçek’i bitirmek üzere!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/cem-yilmaz-neden-hastaneye-kaldirildi-hastaligi-ne-cem-yil.html</loc>
     <news:news>
       <news:publication>
@@ -321,17 +409,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/okan-buruk-ligin-lideriyiz-hedefimiz-sezon-sonuna-kadar-de.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T01:39:32+03:00</news:publication_date>
-      <news:title>Okan Buruk: Ligin Lideriyiz, Hedefimiz Sezon Sonuna Kadar Devam Etmek</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/sener-usumezsoy-sahnede-kaslarini-sergileyerek-mesaj-verdi.html</loc>
     <news:news>
       <news:publication>
@@ -340,17 +417,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T01:25:12+03:00</news:publication_date>
       <news:title>Şener Üşümezsoy, sahnede kaslarını sergileyerek mesaj verdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/murat-agirel-melih-gokcek-hakkinda-sorusturma-baslatilmasin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T01:05:33+03:00</news:publication_date>
-      <news:title>Murat Ağırel, Melih Gökçek hakkında soruşturma başlatılmasına neden olan iddialarını anlattı</news:title>
     </news:news>
   </url>
   <url>
@@ -384,28 +450,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T00:47:15+03:00</news:publication_date>
       <news:title>Osimhen&#x27;in pozisyonu penaltı mı? Trio ekibi son noktayı koydu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/cem-yilmazin-saglik-durumu-nasil-hastaligi-nedir-cem-yilm.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:40:00+03:00</news:publication_date>
-      <news:title>Cem Yılmaz&#x27;ın sağlık durumu nasıl, hastalığı nedir? Cem Yılmaz kimdir, kaç yaşında? Hastaneye kaldırıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/okan-buruktan-transfer-mujdesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:35:06+03:00</news:publication_date>
-      <news:title>Okan Buruk&#x27;tan transfer müjdesi</news:title>
     </news:news>
   </url>
   <url>
@@ -585,28 +629,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-yarisi-bir-avrupa-kulubu-barcelonanin-futbolcus.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:23:20+03:00</news:publication_date>
-      <news:title>Son dakika yarışı: Bir Avrupa kulübü Barcelona&#x27;nın futbolcusunu kapmak için bastırıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/transfere-400-milyon-euro-harcamak-bile-yetmedi-yine-hezime.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:17:17+03:00</news:publication_date>
-      <news:title>Transfere 400 milyon Euro harcamak bile yetmedi! Yine hezimeti yaşadılar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/besiktas-ve-trabzonsporun-avrupadaki-fiksturu-belli-oldu.html</loc>
     <news:news>
       <news:publication>
@@ -717,17 +739,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-deniz-gulu-ikna-etti-portoya-yap.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T20:35:43+03:00</news:publication_date>
-      <news:title>Son dakika: Galatasaray, Deniz Gül’ü ikna etti! Porto’ya yapılan teklif… - Galeri - Trend Spor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-fenerbahce-sofyan-amrabat-ile-yollarini-ayirdi.html</loc>
     <news:news>
       <news:publication>
@@ -761,6 +772,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/ozet-bournemouth-son-dakika-goluyle-evertona-yikildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T19:28:39+03:00</news:publication_date>
+      <news:title>ÖZET | Bournemouth, son dakika golüyle Everton&#x27;a yıkıldı!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/batmanda-korkunc-olay-annesini-oldurup-cop-konteynerine-at.html</loc>
     <news:news>
       <news:publication>
@@ -780,17 +802,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T18:17:28+03:00</news:publication_date>
       <news:title>Son dakika: Galatasaray geri dönerek kazandı! Göztepe gol yağmurunda mağlup</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/aziz-yildirimdan-fenerbahcelilere-sampiyonlar-ligi-hediyesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T18:15:42+03:00</news:publication_date>
-      <news:title>Aziz Yıldırım’dan Fenerbahçelilere Şampiyonlar Ligi hediyesi! Bu transfer çok konuşulur</news:title>
     </news:news>
   </url>
   <url>
@@ -1047,17 +1058,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/galatasaray-rafael-leao-transferini-kapa-bildirdi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T13:46:09+03:00</news:publication_date>
-      <news:title>Galatasaray, Rafael Leao transferini KAP’a bildirdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/galatasaray-leao-transferini-kapa-bildirdi-son-dakika-s.html</loc>
     <news:news>
       <news:publication>
@@ -1110,17 +1110,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T12:12:00+03:00</news:publication_date>
       <news:title>&quot;Bu vatan üzerinde son söz Türk milletinindir&quot; - Son Dakika Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-guzellik-merkezinde-skandal-bakirkoyde.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T11:17:19+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ: Güzellik merkezinde skandal! Bakırköy&#x27;de yaşandı! Tam 14 bin video | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
