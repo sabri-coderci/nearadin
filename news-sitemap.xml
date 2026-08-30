@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-kktc-cumhurbaskani-erhurman-ile-gorus.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:00:32+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan, KKTC Cumhurbaşkanı Erhürman ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-samsunspor-fenerbahce-maci-sifresiz-izle-samsun.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T20:57:53+03:00</news:publication_date>
+      <news:title>SON DAKİKA: Samsunspor Fenerbahçe maçı ŞİFRESİZ İZLE, Samsun FB link</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/kolundan-cekip-durdurdu-aziz-yildirima-samsunda-surpriz-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T20:51:18+03:00</news:publication_date>
+      <news:title>Kolundan çekip durdurdu! Aziz Yıldırım&#x27;a Samsun&#x27;da sürpriz karşılama</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/real-madridden-4-0lik-galibiyet.html</loc>
     <news:news>
       <news:publication>
@@ -233,17 +266,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/corum-fk-besiktas-macina-hazir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:58:33+03:00</news:publication_date>
-      <news:title>Çorum FK, Beşiktaş Maçına Hazır</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/kadin-bilardoda-basari-guzin-2-gulsen-3.html</loc>
     <news:news>
       <news:publication>
@@ -266,6 +288,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/batmanda-spor-salonunda-yangin-faciasi-2-olu-10-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T19:46:04+03:00</news:publication_date>
+      <news:title>Batman&#x27;da spor salonunda yangın faciası! 2 ölü, 10 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-biskeke-gidecek-son-dakika-haberler.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T19:45:41+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan Bişkek’e gidecek | Son dakika haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girnede-gemi-faciasi-cumhurbaskani-erdogan.html</loc>
     <news:news>
       <news:publication>
@@ -274,17 +318,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T19:44:38+03:00</news:publication_date>
       <news:title>Son dakika... Girne&#x27;de gemi faciası! Cumhurbaşkanı Erdoğan: Devletimiz tüm imkanlarını seferber etti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/fazil-say-hamburgda-unutulmaz-bir-gece-yasatti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:44:21+03:00</news:publication_date>
-      <news:title>Fazıl Say, Hamburg&#x27;da Unutulmaz Bir Gece Yaşattı</news:title>
     </news:news>
   </url>
   <url>
@@ -354,28 +387,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/canli-son-dakika-kktc-aciklarinda-yolcu-gemisi-batti-can.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:18:00+03:00</news:publication_date>
-      <news:title>CANLI Son dakika... KKTC açıklarında yolcu gemisi battı: Can kayıpları var</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/batmanda-spor-salonunda-yangin-faciasi-2-olu-10-yarali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:15:58+03:00</news:publication_date>
-      <news:title>Batman&#x27;da spor salonunda yangın faciası! 2 ölü, 10 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/fidan-ve-dar-istanbulda-bulustu.html</loc>
     <news:news>
       <news:publication>
@@ -442,17 +453,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/zafer-kosusu-ile-birliktelik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:04:31+03:00</news:publication_date>
-      <news:title>Zafer Koşusu ile Birliktelik</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/14-bin-mahrem-goruntu-ceken-guzellik-merkezi-hakkinda-son-da.html</loc>
     <news:news>
       <news:publication>
@@ -472,6 +472,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:57:00+03:00</news:publication_date>
       <news:title>Son Dakika... Girne açıklarında batan yolcu gemisine ilişkin 8 kişi gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/girne-yolcu-gemisi-olu-yarali-sayisi-girne-batan-gemide-ole.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:55:00+03:00</news:publication_date>
+      <news:title>GİRNE YOLCU GEMİSİ ÖLÜ YARALI SAYISI! Girne batan gemide ölenlerin kimlik bilgileri: Kaç kişi öldü?</news:title>
     </news:news>
   </url>
   <url>
@@ -607,25 +618,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/girne-gemi-kazasi-son-dakika-yolcu-gemisi-batti-girne-gem.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:49:09+03:00</news:publication_date>
-      <news:title>GİRNE GEMİ KAZASI SON DAKİKA | Yolcu gemisi battı! Girne gemi kazasında ölü ve yaralı var mı, gemide kaç kişi vardı?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-batmanda-spor-salonunda-yangin-panigi-30-kisi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-batmanda-spor-salonunda-yangin-panigi-olu-ve.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T17:48:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Batman&#x27;da spor salonunda yangın paniği: 30 kişi mahsur kaldı</news:title>
+      <news:title>Son Dakika | Batman&#x27;da spor salonunda yangın paniği: Ölü ve yaralılar var</news:title>
     </news:news>
   </url>
   <url>
@@ -794,14 +794,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girneden-mersine-gelen-yolcu-gemisi-batti-2.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/girneden-mersine-gelen-yolcu-gemisi-batti-hayatini-kaybe.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T13:54:25+03:00</news:publication_date>
-      <news:title>Son Dakika. - Girne&#x27;den Mersin&#x27;e gelen yolcu gemisi battı: 279 kişi mahsur</news:title>
+      <news:title>Girne&#x27;den Mersin&#x27;e gelen yolcu gemisi battı: &#x27;Hayatını kaybedenler var&#x27;</news:title>
     </news:news>
   </url>
   <url>
@@ -879,17 +879,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T13:38:11+03:00</news:publication_date>
       <news:title>KKTC&#x27;nin Girne açıklarında 267 kişiyi taşıyan yolcu gemisi battı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-mersine-giden-267-kisilik-gemi-girne-aciklarin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T13:36:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Mersin&#x27;e giden 267 kişilik gemi Girne açıklarında battı! Can kayıpları var</news:title>
     </news:news>
   </url>
   <url>
@@ -1058,17 +1047,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-omer-celikten-katil-netanyahu-ve-soykirim-sebe.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T09:56:17+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Ömer Çelik&#x27;ten Katil Netanyahu ve soykırım şebekesine sert tepki: Cumhurbaşkanımızın sesi insanlığın vicdanında yankılanmaya devam edecek</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-komedyen-cem-yilmaz-hastaneye-kaldirildi-sag.html</loc>
     <news:news>
       <news:publication>
@@ -1080,6 +1058,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-depremler-deprem-mi-oldu-30-agustos-2026-nerede.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T08:57:00+03:00</news:publication_date>
+      <news:title>Son dakika depremler! Deprem mi oldu? 30 Ağustos 2026 nerede, ne zaman deprem oldu?</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/cem-yilmaz-yogun-bakimda-doktorundan-saglik-durumuna-iliski.html</loc>
     <news:news>
       <news:publication>
@@ -1088,6 +1077,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T08:15:54+03:00</news:publication_date>
       <news:title>Cem Yılmaz yoğun bakımda! Doktorundan sağlık durumuna ilişkin açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-melih-gokcek-hakkinda-sorusturma-gokcek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:11:00+03:00</news:publication_date>
+      <news:title>Son dakika haberi: Melih Gökçek hakkında soruşturma! Gökçek&#x27;ten ilk açıklama geldi</news:title>
     </news:news>
   </url>
   <url>
