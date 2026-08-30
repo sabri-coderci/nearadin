@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/mardin-1969-spor-ve-vanspor-fk-berabere-kaldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T02:56:31+03:00</news:publication_date>
+      <news:title>Mardin 1969 Spor ve Vanspor FK Berabere Kaldı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
     <news:news>
       <news:publication>
@@ -120,17 +131,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T01:00:19+03:00</news:publication_date>
       <news:title>Tek başına bir takım: Victor Osimhen</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/erzincan-sivas-kara-yolunda-heyelan-engeli.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:57:00+03:00</news:publication_date>
-      <news:title>Erzincan-Sivas kara yolunda heyelan engeli</news:title>
     </news:news>
   </url>
   <url>
@@ -255,28 +255,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/cem-yilmaz-rahatsizlandigi-canakkalede-hastaneye-kaldirildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:31:14+03:00</news:publication_date>
-      <news:title>Cem Yılmaz rahatsızlandığı Çanakkale&#x27;de hastaneye kaldırıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/radoi-oyunu-domine-ettik-ama-sonuc-alamadik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:29:21+03:00</news:publication_date>
-      <news:title>Radoi: &#x27;Oyunu domine ettik ama sonuç alamadık&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/rizespor-gaziantepi-deplasmanda-yendi.html</loc>
     <news:news>
       <news:publication>
@@ -387,6 +365,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/turkiyeden-nijerdeki-siddet-olaylarina-iliskin-itidal-ca.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:46:00+03:00</news:publication_date>
+      <news:title>Türkiye&#x27;den Nijer&#x27;deki şiddet olaylarına ilişkin &#x27;itidal&#x27; çağrısı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/gaziantep-fk-rizespora-2-1-kaybetti.html</loc>
     <news:news>
       <news:publication>
@@ -431,17 +420,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-melih-gokcek-hakkinda-sorusturma-gokcek.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:11:00+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Melih Gökçek hakkında soruşturma! Gökçek&#x27;ten ilk açıklama geldi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-resen-sorusturma-baslatil.html</loc>
     <news:news>
       <news:publication>
@@ -483,17 +461,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:09:00+03:00</news:publication_date>
       <news:title>Son dakika! Melih Gökçek hakkında soruşturma başlatıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/kayserispor-teknik-direktorunden-mac-sonrasi-aciklama.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:05:32+03:00</news:publication_date>
-      <news:title>Kayserispor Teknik Direktörü&#x27;nden Maç Sonrası Açıklama</news:title>
     </news:news>
   </url>
   <url>
@@ -596,17 +563,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/fenerbahceden-ayrilan-amrabattan-sasirtan-transfer-iste-y.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T22:03:55+03:00</news:publication_date>
-      <news:title>Fenerbahçe&#x27;den ayrılan Amrabat&#x27;tan şaşırtan transfer! İşte yeni takımı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-trabzonsporun-konferans-ligi-fiksturu-belli-ol.html</loc>
     <news:news>
       <news:publication>
@@ -629,17 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/galatasarayda-son-dakika-soku-yildiz-isim-maca-baslayamadi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:45:43+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;da son dakika şoku: Yıldız isim maça başlayamadı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-trabzonsporun-uefa-konferans-ligi-fiksturu-aci.html</loc>
     <news:news>
       <news:publication>
@@ -648,6 +593,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T21:42:22+03:00</news:publication_date>
       <news:title>SON DAKİKA | Trabzonspor’un UEFA Konferans Ligi fikstürü açıklandı! İşte ilk maç - Galeri - Trend Spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/cem-yilmaz-rahatsizlandigi-canakkalede-hastaneye-kaldirildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T21:37:00+03:00</news:publication_date>
+      <news:title>Cem Yılmaz rahatsızlandığı Çanakkale&#x27;de hastaneye kaldırıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -739,6 +695,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/fenerbahce-acikladi-sofyan-amrabatin-sozlesmesi-feshedildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T20:04:00+03:00</news:publication_date>
+      <news:title>Fenerbahçe açıkladı! Sofyan Amrabat&#x27;ın sözleşmesi feshedildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/sariyerde-parkta-otururken-caliliklarin-arasinda-erkek-cese.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T19:47:56+03:00</news:publication_date>
+      <news:title>Sarıyer’de parkta otururken çalılıkların arasında erkek cesedi buldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/beykozda-otomobil-yayalarin-arasina-daldi-5-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T19:40:00+03:00</news:publication_date>
+      <news:title>Beykoz’da otomobil yayaların arasına daldı: 5 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/ozet-bournemouth-son-dakika-goluyle-evertona-yikildi.html</loc>
     <news:news>
       <news:publication>
@@ -816,17 +805,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gozaltina-alinmisti-fidan-hoca-olarak-bilin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T17:36:00+03:00</news:publication_date>
-      <news:title>Son dakika... Gözaltına alınmıştı: &#x27;Fidan Hoca&#x27; olarak bilinen Fidan Atalay hakkında yeni gelişme</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/fidan-atalay-tutuklandi.html</loc>
     <news:news>
       <news:publication>
@@ -857,6 +835,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T17:28:00+03:00</news:publication_date>
       <news:title>Son dakika… Fidan Hoca olarak bilinen Fidan Atalay tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-fidan-hoca-olarak-bilinen-fidan-atalay-tutukland.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:21:39+03:00</news:publication_date>
+      <news:title>Son dakika: Fidan Hoca olarak bilinen Fidan Atalay tutuklandı</news:title>
     </news:news>
   </url>
   <url>
@@ -945,6 +934,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T15:32:00+03:00</news:publication_date>
       <news:title>Son dakika... Fenerbahçe - Beşiktaş derbisinin tarihi belli oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-istanbul-zeytinburnundaki-iett-kazasinda-2-ki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T15:31:02+03:00</news:publication_date>
+      <news:title>SON DAKİKA... İstanbul Zeytinburnu&#x27;ndaki İETT kazasında 2 kişi hayatını kaybetmişti! O anlar araç içi kamerasına böyle yansıdı</news:title>
     </news:news>
   </url>
   <url>
