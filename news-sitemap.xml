@@ -2,13 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/trabzonsporda-amedspor-maci-oncesi-sakatlik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T17:55:08+03:00</news:publication_date>
+      <news:title>Trabzonspor&#x27;da Amedspor maçı öncesi sakatlık</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-batmanda-spor-salonunda-yangin-panigi-30-kisi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T17:48:49+03:00</news:publication_date>
+      <news:publication_date>2026-08-30T17:48:00+03:00</news:publication_date>
       <news:title>Son Dakika | Batman&#x27;da spor salonunda yangın paniği: 30 kişi mahsur kaldı</news:title>
     </news:news>
   </url>
@@ -35,25 +46,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-cumhurbaskani-erdogan-kktc-ile-isbirligi-icind.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/galatasaray-basaksehir-macina-hazirlaniyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T17:36:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan: &quot;KKTC ile işbirliği içindeyiz&quot;</news:title>
+      <news:publication_date>2026-08-30T17:38:20+03:00</news:publication_date>
+      <news:title>Galatasaray Başakşehir Maçına Hazırlanıyor</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-msu-diploma-alma-toreni-baskan-erdogandan-one.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-msu-harp-okullari-mezuniyet-toreni-baskan-erdo.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T17:35:44+03:00</news:publication_date>
-      <news:title>SON DAKİKA | MSÜ diploma alma töreni! Başkan Erdoğan&#x27;dan önemli açıklamalar</news:title>
+      <news:title>SON DAKİKA | MSÜ Harp Okulları Mezuniyet Töreni! Başkan Erdoğan&#x27;dan önemli açıklamalar</news:title>
     </news:news>
   </url>
   <url>
@@ -450,6 +461,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T15:51:00+03:00</news:publication_date>
       <news:title>Cem Yılmaz&#x27;dan kalp krizi sonrası ilk mesaj</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/fidan-libya-genelkurmay-baskan-vekilini-kabul-etti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T15:50:32+03:00</news:publication_date>
+      <news:title>Fidan, Libya Genelkurmay Başkan Vekili&#x27;ni Kabul Etti</news:title>
     </news:news>
   </url>
   <url>
@@ -860,17 +882,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-bakan-ciftci-provokasyon-pesinde-kosan-4-sahis.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:50:48+03:00</news:publication_date>
-      <news:title>Son dakika: Bakan Çiftçi: Provokasyon peşinde koşan 4 şahıs gözaltında - Yeni Haberler</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri.html</loc>
     <news:news>
       <news:publication>
@@ -879,17 +890,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:49:00+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Erdoğan&#x27;dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/acun-ilicalidan-yillar-sonra-gelen-itiraf-25-yasima-kadar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:36:50+03:00</news:publication_date>
-      <news:title>Acun Ilıcalı’dan yıllar sonra gelen itiraf: 25 yaşıma kadar hayatım korku filmi gibiydi</news:title>
     </news:news>
   </url>
   <url>
@@ -904,14 +904,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/ikiz-rahipler-ve-ikiz-kilise-gorevlilerinin-yonettigi-dugunl.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/12-dev-adamin-hedefi-izlanda-deplasmaninda-8de-8.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T12:10:21+03:00</news:publication_date>
-      <news:title>İkiz rahipler ve ikiz kilise görevlilerinin yönettiği düğünle ikizler evlendi</news:title>
+      <news:publication_date>2026-08-30T11:48:00+03:00</news:publication_date>
+      <news:title>12 Dev Adam&#x27;ın hedefi İzlanda deplasmanında 8&#x27;de 8</news:title>
     </news:news>
   </url>
   <url>
@@ -1003,17 +1003,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/mahrem-goruntu-skandalinda-yeni-gelisme-supheli-sayisi-3e.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T09:57:22+03:00</news:publication_date>
-      <news:title>Mahrem görüntü skandalında yeni gelişme! Şüpheli sayısı 3’e çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-omer-celikten-katil-netanyahu-ve-soykirim-sebe.html</loc>
     <news:news>
       <news:publication>
@@ -1033,6 +1022,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T09:17:19+03:00</news:publication_date>
       <news:title>Son dakika : Komedyen Cem Yılmaz hastaneye kaldırıldı... Sağlık Bakanı Memişoğlu&#x27;ndan açıklama: Koroner yoğun bakımda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/30-agustos-deprem-az-once-deprem-mi-oldu-afad-son-depremle.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T08:20:17+03:00</news:publication_date>
+      <news:title>30 Ağustos deprem: Az önce deprem mi oldu? AFAD son depremler</news:title>
     </news:news>
   </url>
   <url>
@@ -1132,17 +1132,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T18:17:28+03:00</news:publication_date>
       <news:title>Son dakika: Galatasaray geri dönerek kazandı! Göztepe gol yağmurunda mağlup</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-depremler-listesi-29-agustos-2026-canli-ve-anli.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T18:01:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA DEPREMLER LİSTESİ 29 AĞUSTOS 2026 - CANLI VE ANLIK | Balıkesir&#x27;de az önce deprem mi oldu, bugün nerede deprem oldu? İşte AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
     </news:news>
   </url>
 </urlset>
