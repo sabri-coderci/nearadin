@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/leaodan-transfer-itirafi-haziran-ayindan-beri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:12:15+03:00</news:publication_date>
+      <news:title>Leao&#x27;dan transfer itirafı: Haziran ayından beri...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/ferdi-90-dakika-oynadi-chelsea-brighton-macinda-tam-7-gol.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:04:02+03:00</news:publication_date>
+      <news:title>Ferdi 90 dakika oynadı! Chelsea-Brighton maçında tam 7 gol</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/koskte-30-agustos-zafer-bayrami-gurur-ve-coskuyla-kutlandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:03:00+03:00</news:publication_date>
+      <news:title>Köşk’te 30 Ağustos Zafer Bayramı gurur ve coşkuyla kutlandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/trabzonsporda-amedspor-maci-oncesi-sakatlik.html</loc>
     <news:news>
       <news:publication>
@@ -10,6 +43,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T17:55:08+03:00</news:publication_date>
       <news:title>Trabzonspor&#x27;da Amedspor maçı öncesi sakatlık</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/batmanda-spor-salonunda-yangin-30-kisi-iceride-mahsur-kald.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T17:53:25+03:00</news:publication_date>
+      <news:title>Batman’da spor salonunda yangın! 30 kişi içeride mahsur kaldı</news:title>
     </news:news>
   </url>
   <url>
@@ -35,14 +79,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-spor-salonunda-yangin-cikti-mahsur-kalanlar-var.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-devletimiz-tum-imkanlarini-seferber-e.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T17:43:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Spor salonunda yangın çıktı, mahsur kalanlar var</news:title>
+      <news:publication_date>2026-08-30T17:39:20+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan: Devletimiz tüm imkanlarını seferber etti</news:title>
     </news:news>
   </url>
   <url>
@@ -57,14 +101,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-msu-harp-okullari-mezuniyet-toreni-baskan-erdo.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-baskan-erdogandan-girnedeki-gemi-faciasi-acik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T17:35:44+03:00</news:publication_date>
-      <news:title>SON DAKİKA | MSÜ Harp Okulları Mezuniyet Töreni! Başkan Erdoğan&#x27;dan önemli açıklamalar</news:title>
+      <news:title>SON DAKİKA | Başkan Erdoğan&#x27;dan Girne&#x27;deki gemi faciası açıklaması: Tüm imkanlar seferber edildi</news:title>
     </news:news>
   </url>
   <url>
@@ -277,6 +321,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/yolcu-gemisi-alabora-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T16:45:22+03:00</news:publication_date>
+      <news:title>Yolcu Gemisi Alabora Oldu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/iki-ayagi-olmadan-20-kilometre-yuzdu.html</loc>
     <news:news>
       <news:publication>
@@ -332,6 +387,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-fenerbahceden-scott-mctominay-bombasi-cihan-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T16:37:00+03:00</news:publication_date>
+      <news:title>🚨SON DAKİKA! Fenerbahçe&#x27;den Scott McTominay bombası! Cihan Kamer uçağı kaldırdı, çok gizli operasyon...</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/zafer-bayrami-kupasini-cankat-ozdes-kazandi.html</loc>
     <news:news>
       <news:publication>
@@ -373,17 +439,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T16:21:11+03:00</news:publication_date>
       <news:title>Marc Marquez Aragon GP&#x27;yi Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/cem-yilmaz-hasta-yataginda-paylasti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T16:10:22+03:00</news:publication_date>
-      <news:title>Cem Yılmaz Hasta Yatağında Paylaştı</news:title>
     </news:news>
   </url>
   <url>
@@ -519,17 +574,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/malinovskyinin-saglik-durumu-aciklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T15:36:30+03:00</news:publication_date>
-      <news:title>Malinovskyi&#x27;nin Sağlık Durumu Açıklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/tbmmde-30-agustos-zaferi-konseri.html</loc>
     <news:news>
       <news:publication>
@@ -615,17 +659,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T14:50:54+03:00</news:publication_date>
       <news:title>Şanlıurfa’da akrabalar arasında taşlı sopalı kavga: 24 yaşındaki genç hayatını kaybetti, 3 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/ak-parti-sozcusu-celik-yolcularin-kurtarilmasi-icin-tum-imk.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T14:50:22+03:00</news:publication_date>
-      <news:title>AK Parti Sözcüsü Çelik: Yolcuların kurtarılması için tüm imkanlar seferber edildi</news:title>
     </news:news>
   </url>
   <url>
@@ -882,17 +915,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:49:00+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan&#x27;dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/turkiyenin-buyume-rakamlari-yarin-aciklanacak.html</loc>
     <news:news>
       <news:publication>
@@ -978,17 +1000,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T10:31:00+03:00</news:publication_date>
       <news:title>ALTIN FİYATLARI CANLI 30 AĞUSTOS 2026 SON DAKİKA || Altında düşecek mi, yükselecek mi? Bugün 1 gram altın, çeyrek altın alış - satış fiyatı ne kadar? İşte Kapalıçarşı altın fiyatları son durum!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-omer-celikten-netanyahuya-tepki-soykirim-org.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T10:09:26+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Ömer Çelik&#x27;ten Netanyahu&#x27;ya tepki: &quot;Soykırım örgütü &#x27;yalan makinesi&#x27; olarak hareket ediyor</news:title>
     </news:news>
   </url>
   <url>
@@ -1080,17 +1091,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-sorusturma-baslatildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:04:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Melih Gökçek hakkında soruşturma başlatıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakikadisislerinden-israile-sert-tepki.html</loc>
     <news:news>
       <news:publication>
@@ -1121,17 +1121,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T21:14:27+03:00</news:publication_date>
       <news:title>SON DAKİKA | Ünlü komedyen Cem Yılmaz hastaneye kaldırıldı! Bakan Memişoğlu: Tedavisi yoğun bakımda devam ediyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-geri-donerek-kazandi-goztepe-gol-ya.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T18:17:28+03:00</news:publication_date>
-      <news:title>Son dakika: Galatasaray geri dönerek kazandı! Göztepe gol yağmurunda mağlup</news:title>
     </news:news>
   </url>
 </urlset>
