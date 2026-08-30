@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/usakta-milli-mucadele-zafer-ve-genclik-gunleri-coskusu-s.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T05:23:00+03:00</news:publication_date>
+      <news:title>Uşak’ta ‘Milli Mücadele, Zafer ve Gençlik Günleri’ coşkusu sürüyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/baskan-subasioglu-denizlide-ulasimda-kaos-var.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T05:11:00+03:00</news:publication_date>
+      <news:title>Başkan Subaşıoğlu: &#x27;Denizli’de ulaşımda kaos var &#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/trabzonda-drift-yapan-iki-surucuye-281-bin-lira-ceza.html</loc>
     <news:news>
       <news:publication>
@@ -255,17 +277,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/radoi-maca-agir-basladik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:37:12+03:00</news:publication_date>
-      <news:title>Radoi: Maça Ağır Başladık</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/okan-buruktan-transfer-mujdesi.html</loc>
     <news:news>
       <news:publication>
@@ -310,28 +321,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/rizespor-galibiyetiyle-moral-buldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:24:31+03:00</news:publication_date>
-      <news:title>Rizespor Galibiyetiyle Moral Buldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/galatasaray-goztepeyi-3-2-yendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:21:31+03:00</news:publication_date>
-      <news:title>Galatasaray, Göztepe&#x27;yi 3-2 yendi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/ugurcan-cakirdan-sakatligi-hakkinda-aciklama.html</loc>
     <news:news>
       <news:publication>
@@ -365,14 +354,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/iheanacho-firtinasi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T23:59:31+03:00</news:publication_date>
-      <news:title>Iheanacho Fırtınası</news:title>
+      <news:publication_date>2026-08-30T00:00:01+03:00</news:publication_date>
+      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 30 Ağustos 2026</news:title>
     </news:news>
   </url>
   <url>
@@ -395,17 +384,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:46:00+03:00</news:publication_date>
       <news:title>Türkiye&#x27;den Nijer&#x27;deki şiddet olaylarına ilişkin &#x27;itidal&#x27; çağrısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/gaziantep-fk-rizespora-2-1-kaybetti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:42:31+03:00</news:publication_date>
-      <news:title>Gaziantep FK, Rizespor&#x27;a 2-1 Kaybetti</news:title>
     </news:news>
   </url>
   <url>
@@ -461,6 +439,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:10:00+03:00</news:publication_date>
       <news:title>Son Dakika | Dışişleri Bakanlığı&#x27;ndan İsrail&#x27;e sert tepki</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-sorusturma-baslatildi-yur.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T23:09:31+03:00</news:publication_date>
+      <news:title>SON DAKİKA: Melih Gökçek hakkında soruşturma başlatıldı! Yurt dışı para transferi iddiaları araştırılıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -706,17 +695,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/ozet-bournemouth-son-dakika-goluyle-evertona-yikildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T19:28:39+03:00</news:publication_date>
-      <news:title>ÖZET | Bournemouth, son dakika golüyle Everton&#x27;a yıkıldı!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-istanbulda-otomobil-yayalarin-arasina-daldi-y.html</loc>
     <news:news>
       <news:publication>
@@ -959,6 +937,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T14:52:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Galatasaray Leao transferini duyurdu! İşte İstanbul&#x27;a geleceği saat...</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-ve-fenerbahcenin-uefa-sampiyonlar.html</loc>
     <news:news>
       <news:publication>
@@ -1000,6 +989,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T13:52:00+03:00</news:publication_date>
       <news:title>Muğla&#x27;da başlayan orman yangını Antalya&#x27;ya sıçradı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/yol-verme-tartismasinda-motokurye-otomobil-surucusunu-kaput.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T13:48:17+03:00</news:publication_date>
+      <news:title>Yol verme tartışmasında motokurye, otomobil sürücüsünü kaputa yatırıp defalarca yumrukladı</news:title>
     </news:news>
   </url>
   <url>
@@ -1069,17 +1069,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/yari-fiyatina-togg-satilacak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T11:17:11+03:00</news:publication_date>
-      <news:title>Yarı fiyatına togg satılacak</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/18-yillik-dede-baltaci-cinayetinde-yeni-gelisme-4-supheli-t.html</loc>
     <news:news>
       <news:publication>
@@ -1088,6 +1077,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T10:53:00+03:00</news:publication_date>
       <news:title>18 yıllık Dede Baltacı cinayetinde yeni gelişme: 4 şüpheli tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-yazar-murat-koparan-uskudardaki-villasinda-bas.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T10:35:10+03:00</news:publication_date>
+      <news:title>Son dakika: Yazar Murat Koparan, Üsküdar&#x27;daki villasında başından vurulmuş halde ölü bulundu | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
