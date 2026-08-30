@@ -68,17 +68,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/kktcde-3-gunluk-yas-ilan-edildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:44:00+03:00</news:publication_date>
-      <news:title>KKTC&#x27;de 3 günlük yas ilan edildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/besiktas-al-musrati-ile-sozlesmeyi-feshetti.html</loc>
     <news:news>
       <news:publication>
@@ -162,7 +151,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T21:22:05+03:00</news:publication_date>
+      <news:publication_date>2026-08-30T21:22:00+03:00</news:publication_date>
       <news:title>Son Dakika | KKTC&#x27;de 3 günlük yas ilan edildi</news:title>
     </news:news>
   </url>
@@ -197,6 +186,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T21:20:21+03:00</news:publication_date>
       <news:title>Kadın Voleybol Takımı, 2026 Akdeniz Oyunları&#x27;nda Şampiyon!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-gemi-haberleri-yolcu-gemisi-batti-icinde-267-ki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:20:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA GEMİ HABERLERİ: Yolcu gemisi battı! İçinde 267 kişi vardı</news:title>
     </news:news>
   </url>
   <url>
@@ -263,6 +263,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T21:09:21+03:00</news:publication_date>
       <news:title>Iğdır FK, Erokspor&#x27;u 1-0 Mağlup Etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/kktc-girnede-kayip-yakinlarinin-umutlu-bekleyisi-devam-ediy.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:09:00+03:00</news:publication_date>
+      <news:title>KKTC Girne&#x27;de kayıp yakınlarının umutlu bekleyişi devam ediyor</news:title>
     </news:news>
   </url>
   <url>
@@ -431,6 +442,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-besiktas-amir-hadziahmetovicin-sozlesmesinin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T20:21:34+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Beşiktaş, Amir Hadziahmetovic&#x27;in sözleşmesinin feshetti</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/turkiyenin-madalya-gunu.html</loc>
     <news:news>
       <news:publication>
@@ -552,17 +574,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/kadin-bilardoda-basari-guzin-2-gulsen-3.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:58:21+03:00</news:publication_date>
-      <news:title>Kadın Bilardoda Başarı: Güzin 2., Gülşen 3.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/batmanda-spor-salonunda-yangin-faciasi-2-olu-10-yarali.html</loc>
     <news:news>
       <news:publication>
@@ -607,14 +618,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/beykoz-belediyespor-goztepeyi-yendi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-yarin-biskeke-gidecek.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T19:18:24+03:00</news:publication_date>
-      <news:title>Beykoz Belediyespor, Göztepe&#x27;yi Yendi</news:title>
+      <news:publication_date>2026-08-30T19:04:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan yarın Bişkek&#x27;e gidecek</news:title>
     </news:news>
   </url>
   <url>
@@ -1014,6 +1025,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/altin-fiyatlari-canli-30-agustos-2026-son-dakika-altinda.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T10:31:00+03:00</news:publication_date>
+      <news:title>ALTIN FİYATLARI CANLI 30 AĞUSTOS 2026 SON DAKİKA || Altında düşecek mi, yükselecek mi? Bugün 1 gram altın, çeyrek altın alış - satış fiyatı ne kadar? İşte Kapalıçarşı altın fiyatları son durum!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-omer-celikten-netanyahuya-tepki-soykirim-org.html</loc>
     <news:news>
       <news:publication>
@@ -1044,17 +1066,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T09:17:19+03:00</news:publication_date>
       <news:title>Son dakika : Komedyen Cem Yılmaz hastaneye kaldırıldı... Sağlık Bakanı Memişoğlu&#x27;ndan açıklama: Koroner yoğun bakımda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-depremler-deprem-mi-oldu-30-agustos-2026-nerede.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T08:57:00+03:00</news:publication_date>
-      <news:title>Son dakika depremler! Deprem mi oldu? 30 Ağustos 2026 nerede, ne zaman deprem oldu?</news:title>
     </news:news>
   </url>
   <url>
