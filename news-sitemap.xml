@@ -2,14 +2,113 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/08/31/fenerbahce-derbiye-moralli-gidiyor.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/31/yuksel-yildirimdan-fenerbahce-mac-aciklamasi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-31T00:45:16+03:00</news:publication_date>
-      <news:title>Fenerbahçe, derbiye moralli gidiyor!</news:title>
+      <news:publication_date>2026-08-31T01:39:21+03:00</news:publication_date>
+      <news:title>Yüksel Yıldırım&#x27;dan Fenerbahçe Maç Açıklaması</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/son-dakika-deniz-gul-galatasarayda-iddiasi-iste-bonserv.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T01:24:50+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Deniz Gül, Galatasaray’da iddiası! İşte bonservis detayları - Galeri - Trend Spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/son-dakika-31-agustos-2026-hava-durumu-raporu-aciklandi-bug.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T01:10:54+03:00</news:publication_date>
+      <news:title>Son Dakika 31 Ağustos 2026 Hava Durumu Raporu Açıklandı! Bugün hava nasıl olacak? Meteoroloji’den Sarı Kodlu Yağış ve Sıcaklık Uyarısı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/fink-fenerbahce-dogru-dakikalarda-golleri-buldular.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T01:08:33+03:00</news:publication_date>
+      <news:title>Fink: Fenerbahçe Doğru Dakikalarda Golleri Buldular</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/manisa-fk-bodrum-fk-macindan-golsuz-beraberlik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T01:08:31+03:00</news:publication_date>
+      <news:title>Manisa FK-Bodrum FK Maçından Golsüz Beraberlik</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/yuksel-yildirim-fenerbahceyi-kutladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:54:22+03:00</news:publication_date>
+      <news:title>Yüksel Yıldırım, Fenerbahçe&#x27;yi Kutladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/nuri-sahin-gereksiz-2-puana-uzulduk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:53:31+03:00</news:publication_date>
+      <news:title>Nuri Şahin: Gereksiz 2 Puana Üzüldük</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/fenerbahce-samsunsporu-2-0-gecti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:52:31+03:00</news:publication_date>
+      <news:title>Fenerbahçe, Samsunspor&#x27;u 2-0 Geçti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/samsunsporun-fuat-capa-aciklamalari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:50:21+03:00</news:publication_date>
+      <news:title>Samsunspor&#x27;un Fuat Çapa Açıklamaları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/fink-fenerbahce-performansimiz-yetersizdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:41:21+03:00</news:publication_date>
+      <news:title>Fink: Fenerbahçe performansımız yetersizdi</news:title>
     </news:news>
   </url>
   <url>
@@ -24,6 +123,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/31/basaksehirin-hayal-kirikligi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:39:21+03:00</news:publication_date>
+      <news:title>Başakşehir&#x27;in Hayal Kırıklığı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/31/son-dakika-haberi-cumhurbaskani-erdogan-girnedeki-kaza-de.html</loc>
     <news:news>
       <news:publication>
@@ -32,6 +142,28 @@
       </news:publication>
       <news:publication_date>2026-08-31T00:39:02+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Cumhurbaşkanı Erdoğan: Girne&#x27;deki kaza derinden üzdü - Son Dakika Haberleri Bugün | Video</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/emre-belozoglu-yabanci-kuralini-elestirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:38:31+03:00</news:publication_date>
+      <news:title>Emre Belözoğlu Yabancı Kuralını Eleştirdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/son-dakika-cumhurbaskani-erdogan-kktc-ile-isbirligi-icind.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:38:24+03:00</news:publication_date>
+      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan: &quot;KKTC ile işbirliği içindeyiz&quot;</news:title>
     </news:news>
   </url>
   <url>
@@ -46,6 +178,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/31/inter-3-puani-hakan-calhanogluyla-kapti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:32:08+03:00</news:publication_date>
+      <news:title>Inter 3 puanı Hakan Çalhanoğlu&#x27;yla kaptı!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/31/fenerbahceden-samsunspora-2-0-zafer.html</loc>
     <news:news>
       <news:publication>
@@ -54,6 +197,17 @@
       </news:publication>
       <news:publication_date>2026-08-31T00:31:21+03:00</news:publication_date>
       <news:title>Fenerbahçe&#x27;den Samsunspor&#x27;a 2-0 zafer</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/elazigda-trafik-kazasi-5-yarali-son-dakika-haberleri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:30:59+03:00</news:publication_date>
+      <news:title>Elazığ&#x27;da trafik kazası: 5 yaralı | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
@@ -79,17 +233,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/31/inter-hakan-calhanoglunun-goluyle-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-31T00:12:00+03:00</news:publication_date>
-      <news:title>Inter, Hakan Çalhanoğlu&#x27;nun golüyle kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/31/turkiye-atletizmde-altin-madalya-kazandi.html</loc>
     <news:news>
       <news:publication>
@@ -98,6 +241,17 @@
       </news:publication>
       <news:publication_date>2026-08-31T00:08:22+03:00</news:publication_date>
       <news:title>Türkiye Atletizmde Altın Madalya Kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/31/son-dakika-isparta-anadolu-mahallesinde-feci-kaza.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-31T00:07:00+03:00</news:publication_date>
+      <news:title>Son Dakika: Isparta Anadolu Mahallesi’nde Feci Kaza!</news:title>
     </news:news>
   </url>
   <url>
@@ -222,6 +376,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/feribot-faciasinda-can-kaybi-sayisi-yukseldi-18-kayip-var.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T23:25:01+03:00</news:publication_date>
+      <news:title>Feribot faciasında can kaybı sayısı yükseldi, 18 kayıp var</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/fenerbahce-besiktas-derbisi-oncesi-vitesi-5e-takti.html</loc>
     <news:news>
       <news:publication>
@@ -288,6 +453,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/tam-taraftarlarla-baris-sagladi-derken-ederson-icin-olay-yar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T22:53:04+03:00</news:publication_date>
+      <news:title>Tam taraftarlarla barış sağladı derken Ederson için olay yaratacak bir iddia</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/fenerbahce-ilk-yariyi-onde-tamamladi.html</loc>
     <news:news>
       <news:publication>
@@ -332,17 +508,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/yunanistan-ve-sirbistan-ceyrek-finale-yukseldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T22:25:21+03:00</news:publication_date>
-      <news:title>Yunanistan ve Sırbistan Çeyrek Finale Yükseldi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/pereira-yenilgiyi-hak-etmedik.html</loc>
     <news:news>
       <news:publication>
@@ -351,17 +516,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T22:17:21+03:00</news:publication_date>
       <news:title>Pereira: Yenilgiyi Hak Etmedik</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/eyupspordan-alanyaspora-onemli-galibiyet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T22:16:34+03:00</news:publication_date>
-      <news:title>Eyüpspor&#x27;dan Alanyaspor&#x27;a Önemli Galibiyet</news:title>
     </news:news>
   </url>
   <url>
@@ -376,28 +530,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/kadin-futbol-super-ligi-2026-2027-sezonu-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T22:14:22+03:00</news:publication_date>
-      <news:title>Kadın Futbol Süper Ligi 2026-2027 Sezonu Başladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/eyupspordan-alanyaspora-karsi-onemli-galibiyet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T22:10:31+03:00</news:publication_date>
-      <news:title>Eyüpspor&#x27;dan Alanyaspor&#x27;a Karşı Önemli Galibiyet</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girnede-gemi-faciasi-cumhurbaskani-erdogan.html</loc>
     <news:news>
       <news:publication>
@@ -409,61 +541,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/eyupspor-alanyasporu-2-1-yendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:59:22+03:00</news:publication_date>
-      <news:title>Eyüpspor, Alanyaspor&#x27;u 2-1 Yendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/salahin-adi-olumsuzlestiriliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:57:16+03:00</news:publication_date>
-      <news:title>Salah&#x27;ın adı ölümsüzleştiriliyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/esenler-erokspor-1-0-kaybetti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:55:33+03:00</news:publication_date>
-      <news:title>Esenler Erokspor 1-0 Kaybetti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/fenerbahce-samsunspor-maci-bugun.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:55:12+03:00</news:publication_date>
-      <news:title>Fenerbahçe - Samsunspor Maçı Bugün</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/igdir-fk-esenler-eroksporu-1-0-maglup-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:53:32+03:00</news:publication_date>
-      <news:title>Iğdır FK, Esenler Erokspor&#x27;u 1-0 Mağlup Etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/batmanda-spor-salonunda-yangin-faciasi-2-olu-10-yarali.html</loc>
     <news:news>
       <news:publication>
@@ -472,28 +549,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T21:46:59+03:00</news:publication_date>
       <news:title>Batman&#x27;da spor salonunda yangın faciası! 2 ölü, 10 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/fenerbahce-ile-aniliyordu-brightondan-ferdi-kadioglu-icin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:45:59+03:00</news:publication_date>
-      <news:title>Fenerbahçe ile anılıyordu! Brighton&#x27;dan Ferdi Kadıoğlu için açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/voleybol-takimimiz-altin-madalya-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:44:11+03:00</news:publication_date>
-      <news:title>Voleybol Takımımız Altın Madalya Kazandı</news:title>
     </news:news>
   </url>
   <url>
@@ -519,17 +574,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/feribot-faciasinda-can-kaybi-sayisi-yukseldi-18-kayip-var.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:30:35+03:00</news:publication_date>
-      <news:title>Feribot faciasında can kaybı sayısı yükseldi, 18 kayıp var</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-kktcde-3-gunluk-yas-ilan-edildi.html</loc>
     <news:news>
       <news:publication>
@@ -538,28 +582,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T21:22:00+03:00</news:publication_date>
       <news:title>Son Dakika | KKTC&#x27;de 3 günlük yas ilan edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/besiktasta-bir-ayrilik-daha-al-musrati.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:21:52+03:00</news:publication_date>
-      <news:title>Beşiktaş&#x27;ta bir ayrılık daha: Al Musrati</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/yeni-parti-ilce-baskanindan-unutulmayacak-gaf-iyi-parti-ikt.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T21:00:01+03:00</news:publication_date>
-      <news:title>YENİ Parti ilçe başkanından unutulmayacak gaf: İYİ Parti iktidara hazır</news:title>
     </news:news>
   </url>
   <url>
@@ -593,17 +615,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T20:21:42+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Erdoğan&#x27;dan açıklamalar - Son Dakika Flaş Haberler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-besiktas-amir-hadziahmetovicin-sozlesmesinin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T20:21:34+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Beşiktaş, Amir Hadziahmetovic&#x27;in sözleşmesinin feshetti</news:title>
     </news:news>
   </url>
   <url>
@@ -717,17 +728,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/girne-aciklarinda-267-kisiyi-tasiyan-feribot-batti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:40:59+03:00</news:publication_date>
-      <news:title>Girne açıklarında 267 kişiyi taşıyan feribot battı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-fenerbahce-samsunda-zorlanmadi-derbi-oncesi.html</loc>
     <news:news>
       <news:publication>
@@ -739,47 +739,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/acun-ilicalidan-fenerbahceye-transfer-calimi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-baskan-erdogandan-girnedeki-gemi-faciasi-acik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T18:29:34+03:00</news:publication_date>
-      <news:title>Acun Ilıcalı&#x27;dan Fenerbahçe&#x27;ye transfer çalımı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-batmanda-spor-salonunda-yangin-panigi-olu-ve.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:48:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Batman&#x27;da spor salonunda yangın paniği: Ölü ve yaralılar var</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-cumhurbaskani-erdogan-kktc-ile-isbirligi-icind.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:36:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan: &quot;KKTC ile işbirliği içindeyiz&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-cumhurbaskani-erdogandan-aciklamalar-son-daki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:35:43+03:00</news:publication_date>
-      <news:title>Son dakika: Cumhurbaşkanı Erdoğan&#x27;dan açıklamalar | Son dakika haberleri</news:title>
+      <news:publication_date>2026-08-30T17:35:44+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Başkan Erdoğan&#x27;dan Girne&#x27;deki gemi faciası açıklaması: Tüm imkanlar seferber edildi</news:title>
     </news:news>
   </url>
   <url>
@@ -824,17 +791,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T15:51:00+03:00</news:publication_date>
       <news:title>Cem Yılmaz fotoğraf paylaşıp anlattı! Kalp krizi böyle gelmiş</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T15:35:00+03:00</news:publication_date>
-      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 6 kişi yaşamını yitirdi</news:title>
     </news:news>
   </url>
   <url>
@@ -959,6 +915,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/girne-aciklarinda-267-kisiyi-tasiyan-feribot-batti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T13:34:00+03:00</news:publication_date>
+      <news:title>Girne açıklarında 267 kişiyi taşıyan feribot battı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-kktc-aciklarinda-yolcu-gemisi-batti.html</loc>
     <news:news>
       <news:publication>
@@ -978,6 +945,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T13:29:02+03:00</news:publication_date>
       <news:title>Son dakika | Girne açıklarında yolcu gemisi battı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T13:29:00+03:00</news:publication_date>
+      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 8 kişi yaşamını yitirdi</news:title>
     </news:news>
   </url>
   <url>
@@ -1088,6 +1066,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T09:17:19+03:00</news:publication_date>
       <news:title>Son dakika : Komedyen Cem Yılmaz hastaneye kaldırıldı... Sağlık Bakanı Memişoğlu&#x27;ndan açıklama: Koroner yoğun bakımda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/30-agustos-deprem-az-once-deprem-mi-oldu-afad-son-depremle.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T08:20:17+03:00</news:publication_date>
+      <news:title>30 Ağustos deprem: Az önce deprem mi oldu? AFAD son depremler</news:title>
     </news:news>
   </url>
 </urlset>
