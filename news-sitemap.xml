@@ -24,6 +24,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/igdir-fk-eroksporu-1-0-gecti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:24:21+03:00</news:publication_date>
+      <news:title>Iğdır FK, Erokspor&#x27;u 1-0 Geçti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/esenler-erokspor-1-0-igdir-fkya-yenildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:24:11+03:00</news:publication_date>
+      <news:title>Esenler Erokspor 1-0 Iğdır FK&#x27;ya Yenildi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-kktcde-3-gunluk-yas-ilan-edildi.html</loc>
     <news:news>
       <news:publication>
@@ -167,6 +189,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/yeni-parti-ilce-baskanindan-unutulmayacak-gaf-iyi-parti-ikt.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:00:01+03:00</news:publication_date>
+      <news:title>YENİ Parti ilçe başkanından unutulmayacak gaf: İYİ Parti iktidara hazır</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/besiktasta-hadziahmetovic-sozlesmesi-feshedildi.html</loc>
     <news:news>
       <news:publication>
@@ -244,17 +277,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/karaborsa-bilet-satisi-supheli-tutuklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T20:34:31+03:00</news:publication_date>
-      <news:title>Karaborsa Bilet Satışı: Şüpheli Tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/fenerbahcenin-ilk-11inde-surpriz.html</loc>
     <news:news>
       <news:publication>
@@ -274,17 +296,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T20:32:31+03:00</news:publication_date>
       <news:title>Zafer Kupası Yat Yarışları Tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/turkiye-enerji-bagimsizligina-ilerliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T20:28:31+03:00</news:publication_date>
-      <news:title>Türkiye Enerji Bağımsızlığına İlerliyor</news:title>
     </news:news>
   </url>
   <url>
@@ -552,17 +563,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/7-yasindaki-zayn-sofuoglu-sampiyon-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:09:22+03:00</news:publication_date>
-      <news:title>7 Yaşındaki Zayn Sofuoğlu Şampiyon Oldu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/goztepede-bu-takima-ne-oldu-dedirten-performans.html</loc>
     <news:news>
       <news:publication>
@@ -571,17 +571,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T19:08:30+03:00</news:publication_date>
       <news:title>Göztepe&#x27;de &#x27;&#x27;Bu takıma ne oldu?&#x27;&#x27; dedirten performans</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/zafer-kosusu-ile-birliktelik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T19:04:31+03:00</news:publication_date>
-      <news:title>Zafer Koşusu ile Birliktelik</news:title>
     </news:news>
   </url>
   <url>
@@ -637,17 +626,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:44:00+03:00</news:publication_date>
       <news:title>Girne açıklarında batan gemiye ilişkin 8 kişi gözaltına alındı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:36:00+03:00</news:publication_date>
-      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 8 kişi yaşamını yitirdi</news:title>
     </news:news>
   </url>
   <url>
@@ -912,6 +890,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T13:29:02+03:00</news:publication_date>
       <news:title>Son dakika | Girne açıklarında yolcu gemisi battı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T13:29:00+03:00</news:publication_date>
+      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 8 kişi yaşamını yitirdi</news:title>
     </news:news>
   </url>
   <url>
