@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girne-aciklarinda-batan-yolcu-gemisine-iliskin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:57:00+03:00</news:publication_date>
+      <news:title>Son Dakika... Girne açıklarında batan yolcu gemisine ilişkin 8 kişi gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girnede-alabora-olan-geminin-kaptani-gozaltina.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:55:10+03:00</news:publication_date>
+      <news:title>Son Dakika | Girne&#x27;de alabora olan geminin kaptanı gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/girne-yolcu-gemisi-olu-yarali-sayisi-girne-batan-gemide-ole.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:55:00+03:00</news:publication_date>
+      <news:title>GİRNE YOLCU GEMİSİ ÖLÜ YARALI SAYISI! Girne batan gemide ölenlerin kimlik bilgileri: Kaç kişi öldü?</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/smac-fest-2026-turnuvasi-marmariste-gerceklesti.html</loc>
     <news:news>
       <news:publication>
@@ -24,17 +57,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:36:00+03:00</news:publication_date>
-      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 8 kişi yaşamını yitirdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/acun-ilicalidan-fenerbahceye-transfer-calimi.html</loc>
     <news:news>
       <news:publication>
@@ -43,6 +65,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:29:34+03:00</news:publication_date>
       <news:title>Acun Ilıcalı&#x27;dan Fenerbahçe&#x27;ye transfer çalımı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cevdet-yilmazdan-kktc-deniz-kazasi-mesaji.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T18:23:21+03:00</news:publication_date>
+      <news:title>Cevdet Yılmaz&#x27;dan KKTC Deniz Kazası Mesajı</news:title>
     </news:news>
   </url>
   <url>
@@ -87,17 +120,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:14:11+03:00</news:publication_date>
       <news:title>Gazimihal Takımı Temiz Gelecek Kupası&#x27;nın Şampiyonu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/girne-yolcu-gemisi-olu-yarali-sayisi-girne-batan-gemide-ole.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:13:00+03:00</news:publication_date>
-      <news:title>GİRNE YOLCU GEMİSİ ÖLÜ YARALI SAYISI! Girne batan gemide ölenlerin kimlik bilgileri: Kaç kişi öldü?</news:title>
     </news:news>
   </url>
   <url>
@@ -197,17 +219,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T17:48:00+03:00</news:publication_date>
       <news:title>Son Dakika! Spor salonunda yangın: Yaklaşık 30 kişi mahsur kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/istanbulda-korkutan-kaza-damper-aracin-uzerine-devrildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:45:51+03:00</news:publication_date>
-      <news:title>İstanbul&#x27;da korkutan kaza: Damper aracın üzerine devrildi</news:title>
     </news:news>
   </url>
   <url>
@@ -376,17 +387,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-kayiplara-ulasmaya-yonelik-calismalar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:03:00+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan: Kayıplara ulaşmaya yönelik çalışmalar aralıksız sürüyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/trabzonspor-amedspor-macina-gitti.html</loc>
     <news:news>
       <news:publication>
@@ -428,17 +428,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T16:46:21+03:00</news:publication_date>
       <news:title>Tour Of Samsun 2026 Yarışı Tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/yolcu-gemisi-alabora-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T16:45:22+03:00</news:publication_date>
-      <news:title>Yolcu Gemisi Alabora Oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -497,17 +486,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/zafer-bayrami-kupasini-cankat-ozdes-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T16:35:21+03:00</news:publication_date>
-      <news:title>Zafer Bayramı Kupası&#x27;nı Cankat Özdeş Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/bakan-guler-tarihi-mirasin-emanetcileriyiz.html</loc>
     <news:news>
       <news:publication>
@@ -538,17 +516,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T16:21:11+03:00</news:publication_date>
       <news:title>Marc Marquez Aragon GP&#x27;yi Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/elazigspor-hazirlik-maclarinda-yenilmedi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T16:06:00+03:00</news:publication_date>
-      <news:title>Elazığspor, hazırlık maçlarında yenilmedi</news:title>
     </news:news>
   </url>
   <url>
@@ -593,6 +560,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T15:37:00+03:00</news:publication_date>
       <news:title>Son dakika! Girne açıklarında yolcu gemisi faciasında 7 kişi hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-267-kisi-tasiyan-yolcu-gemisi-batti-kktc-basbak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T15:35:00+03:00</news:publication_date>
+      <news:title>Son dakika: 267 kişi taşıyan yolcu gemisi battı! KKTC Başbakanı: 6 kişi yaşamını yitirdi</news:title>
     </news:news>
   </url>
   <url>
@@ -706,14 +684,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-girneden-mersine-gelen-yolcu-gemisi-batti-2.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/girneden-mersine-gelen-yolcu-gemisi-batti-hayatini-kaybe.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-08-30T13:54:25+03:00</news:publication_date>
-      <news:title>Son Dakika. - Girne&#x27;den Mersin&#x27;e gelen yolcu gemisi battı: 279 kişi mahsur</news:title>
+      <news:title>Girne&#x27;den Mersin&#x27;e gelen yolcu gemisi battı: &#x27;Hayatını kaybedenler var&#x27;</news:title>
     </news:news>
   </url>
   <url>
@@ -912,6 +890,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:52:00+03:00</news:publication_date>
       <news:title>HÜRJET&#x27;te tarihi gün: Gök Vatan&#x27;la buluştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:49:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan&#x27;dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</news:title>
     </news:news>
   </url>
   <url>
