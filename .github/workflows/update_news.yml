@@ -2,7 +2,7 @@ name: Tüm Sayfaları Güncelle ve Yayınla
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Her saat başı otomatik çalışır
+    - cron: '0 * * * *'  # Her saat başı otomatik çalışır
   workflow_dispatch:      # Elle tetiklemeye izin verir
 
 permissions:
