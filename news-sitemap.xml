@@ -2,6 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-mekke-anlasmasinda-ilk-toplanti-yarin-istanbul.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T13:03:41+03:00</news:publication_date>
+      <news:title>SON DAKİKA| Mekke Anlaşması’nda ilk toplantı yarın İstanbul’da</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-mekke-ittifakinin-ilk-toplantisi-yarin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T13:01:31+03:00</news:publication_date>
+      <news:title>Son dakika | Mekke İttifakı&#x27;nın ilk toplantısı yarın!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/yarali-leylek-tedavi-edildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:53:21+03:00</news:publication_date>
+      <news:title>Yaralı Leylek Tedavi Edildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/goztepede-kotu-baslangic-ve-hakem-tepkisi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:52:21+03:00</news:publication_date>
+      <news:title>Göztepe&#x27;de Kötü Başlangıç ve Hakem Tepkisi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-bakan-ciftci-provokasyon-pesinde-kosan-4-sahis.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:50:48+03:00</news:publication_date>
+      <news:title>Son dakika: Bakan Çiftçi: Provokasyon peşinde koşan 4 şahıs gözaltında - Yeni Haberler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cinde-heyelan-sonrasi-iletisim-onariliyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:49:21+03:00</news:publication_date>
+      <news:title>Çin&#x27;de Heyelan Sonrası İletişim Onarılıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:49:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan&#x27;dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/ankara-kuluplerinden-30-agustos-zafer-bayrami-mesajlari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:48:21+03:00</news:publication_date>
+      <news:title>Ankara Kulüplerinden 30 Ağustos Zafer Bayramı Mesajları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/izmirde-belediyeler-gunes-enerjisi-kullaniminin-kolaylastir.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:47:37+03:00</news:publication_date>
+      <news:title>İzmir&#x27;de belediyeler güneş enerjisi kullanımının kolaylaştırma çalışmalarını sürdürüyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/bilecikte-yuzme-egitimi-basladi.html</loc>
     <news:news>
       <news:publication>
@@ -24,6 +123,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/izlandadan-abye-hayir-yaniti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:37:32+03:00</news:publication_date>
+      <news:title>İzlanda&#x27;dan AB&#x27;ye &#x27;Hayır&#x27; Yanıtı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/39-canakkale-bogazi-yuzme-yarisi-yapildi.html</loc>
     <news:news>
       <news:publication>
@@ -32,28 +142,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:37:21+03:00</news:publication_date>
       <news:title>39. Çanakkale Boğazı Yüzme Yarışı Yapıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/kocaelide-tcg-dogan-hucumbotu-ziyarete-acildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:34:21+03:00</news:publication_date>
-      <news:title>Kocaeli&#x27;de TCG Doğan Hücumbotu Ziyarete Açıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/30-agustos-zafer-bayrami-biskekte-torenle-kutlandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:32:32+03:00</news:publication_date>
-      <news:title>30 Ağustos Zafer Bayramı Bişkek&#x27;te Törenle Kutlandı</news:title>
     </news:news>
   </url>
   <url>
@@ -101,6 +189,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-haberi-cumhurbaskani-erdogan-devlet-erkani-ile.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T12:23:07+03:00</news:publication_date>
+      <news:title>Son dakika haberi: Cumhurbaşkanı Erdoğan, devlet erkanı ile Anıtkabir&#x27;de - Güncel Haberler</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/62-kaplumbaga-denizle-bulustu.html</loc>
     <news:news>
       <news:publication>
@@ -120,17 +219,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:22:23+03:00</news:publication_date>
       <news:title>Sağlık Bakanı&#x27;ndan 30 Ağustos Zafer Bayramı mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/deniz-kuvvetlerinden-kortej-gecisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:21:22+03:00</news:publication_date>
-      <news:title>Deniz Kuvvetleri&#x27;nden Kortej Geçişi</news:title>
     </news:news>
   </url>
   <url>
@@ -164,17 +252,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:15:31+03:00</news:publication_date>
       <news:title>Kelebek Balığı Manavgat&#x27;ta Görüntülendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/sivricede-zafer-bayrami-coskusu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T12:15:21+03:00</news:publication_date>
-      <news:title>Sivrice&#x27;de Zafer Bayramı Coşkusu</news:title>
     </news:news>
   </url>
   <url>
@@ -230,17 +307,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T12:01:22+03:00</news:publication_date>
       <news:title>Zafer Bayramı Mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/nepalde-sel-felaketi-734-olu-2500-kayip.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T11:57:22+03:00</news:publication_date>
-      <news:title>Nepal&#x27;de Sel Felaketi: 734 Ölü, 2500 Kayıp</news:title>
     </news:news>
   </url>
   <url>
@@ -321,6 +387,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/buharkentte-30-agustos-zafer-bayrami-coskuyla-kutlandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T11:36:00+03:00</news:publication_date>
+      <news:title>Buharkent&#x27;te 30 Ağustos Zafer Bayramı Coşkuyla Kutlandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/galatasaray-goztepeyi-3-2-yendi.html</loc>
     <news:news>
       <news:publication>
@@ -332,14 +409,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/danistay-baskanindan-30-agustos-mesaji.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/ikiz-kardeslerden-itfaiyeci-olma-hayali.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T11:32:13+03:00</news:publication_date>
-      <news:title>Danıştay Başkanı&#x27;ndan 30 Ağustos Mesajı</news:title>
+      <news:publication_date>2026-08-30T11:31:31+03:00</news:publication_date>
+      <news:title>İkiz Kardeşlerden İtfaiyeci Olma Hayali</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/rusya-ukraynanin-enerji-tesislerine-saldiri-hazirliklarina.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T11:30:41+03:00</news:publication_date>
+      <news:title>Rusya: Ukrayna&#x27;nın enerji tesislerine saldırı hazırlıklarına başladık</news:title>
     </news:news>
   </url>
   <url>
@@ -420,17 +508,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/si-cinping-kirgizistanda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T11:15:22+03:00</news:publication_date>
-      <news:title>Şi Cinping Kırgızistan&#x27;da</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/istanbulda-aycicegi-hasadi-beklentisi.html</loc>
     <news:news>
       <news:publication>
@@ -505,6 +582,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T11:12:51+03:00</news:publication_date>
       <news:title>HubX Türkiye&#x27;nin 8. Turcorn&#x27;u Oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/a-milli-basketbol-takimi-izlanda-ile-karsilasiyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T11:12:25+03:00</news:publication_date>
+      <news:title>A Milli Basketbol Takımı İzlanda ile Karşılaşıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -585,17 +673,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/samsunda-zafer-bayrami-yagmur-altinda-kutlandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T11:00:00+03:00</news:publication_date>
-      <news:title>Samsun&#x27;da Zafer Bayramı yağmur altında kutlandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-baskan-erdogan-30-agustosta-anitkabiri-ziyare.html</loc>
     <news:news>
       <news:publication>
@@ -629,17 +706,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/fuceyre-baenin-stratejik-limani.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T10:52:31+03:00</news:publication_date>
-      <news:title>Füceyre: BAE&#x27;nin Stratejik Limanı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-emekli-promosyonunda-rakam-yukseldi-90-bin-tl.html</loc>
     <news:news>
       <news:publication>
@@ -648,17 +714,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T10:47:37+03:00</news:publication_date>
       <news:title>SON DAKİKA | Emekli promosyonunda rakam yükseldi: 90 bin TL&#x27;ye kadar ödeme fırsatı! - Galeri - Trend Ekonomi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/tortumda-600-guresci-er-meydaninda-ter-doktu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T10:44:00+03:00</news:publication_date>
-      <news:title>Tortum’da 600 güreşçi er meydanında ter döktü</news:title>
     </news:news>
   </url>
   <url>
@@ -673,17 +728,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/turkiyenin-elektrik-uretimi-ve-tuketimi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T10:40:21+03:00</news:publication_date>
-      <news:title>Türkiye&#x27;nin Elektrik Üretimi ve Tüketimi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakikaizlanda-ab-uyeligi-icin-hayir-dedi.html</loc>
     <news:news>
       <news:publication>
@@ -695,6 +739,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/populer-ozellik-basa-bela-oldu-milyonlarca-arac-geri-cagril.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T10:37:21+03:00</news:publication_date>
+      <news:title>Popüler özellik başa bela oldu! Milyonlarca araç geri çağrılıyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/guzellik-merkezindeki-gizli-kamera-sorusturmasinda-1-supheli.html</loc>
     <news:news>
       <news:publication>
@@ -703,17 +758,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T10:35:00+03:00</news:publication_date>
       <news:title>Güzellik merkezindeki gizli kamera soruşturmasında 1 şüpheli daha yakalandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/altin-fiyatlari-canli-30-agustos-2026-son-dakika-altinda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T10:31:00+03:00</news:publication_date>
-      <news:title>ALTIN FİYATLARI CANLI 30 AĞUSTOS 2026 SON DAKİKA || Altında düşecek mi, yükselecek mi? Bugün 1 gram altın, çeyrek altın alış - satış fiyatı ne kadar? İşte Kapalıçarşı altın fiyatları son durum!</news:title>
     </news:news>
   </url>
   <url>
@@ -816,17 +860,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/nepaldeki-selde-hayatini-kaybedenlerin-sayisi-734e-yukseld.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T09:35:00+03:00</news:publication_date>
-      <news:title>Nepal&#x27;deki selde hayatını kaybedenlerin sayısı 734&#x27;e yükseldi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/son-dakika-erdogandan-30-agustos-zafer-bayrami-mesaji.html</loc>
     <news:news>
       <news:publication>
@@ -871,14 +904,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/sener-usumezsoy-sahnede-kaslarini-sergileyerek-mesaj-verdi.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/30/soloturk-pilotlari-istanbulda-vatandaslarla-bulustu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-30T01:25:12+03:00</news:publication_date>
-      <news:title>Şener Üşümezsoy, sahnede kaslarını sergileyerek mesaj verdi</news:title>
+      <news:publication_date>2026-08-30T08:11:00+03:00</news:publication_date>
+      <news:title>SOLOTÜRK pilotları İstanbul&#x27;da vatandaşlarla buluştu</news:title>
     </news:news>
   </url>
   <url>
@@ -970,6 +1003,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakikadisislerinden-israile-sert-tepki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T22:33:00+03:00</news:publication_date>
+      <news:title>Son dakika...Dışişleri&#x27;nden İsrail&#x27;e sert tepki</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/disisleri-bakanligi-uluslararasi-toplum-netanyahu-hukumetin.html</loc>
     <news:news>
       <news:publication>
@@ -1014,17 +1058,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/fenerbahcede-bir-ayrilik-daha-bir-zamanlar-ismail-kartali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T20:36:21+03:00</news:publication_date>
-      <news:title>Fenerbahçe’de bir ayrılık daha! Bir zamanlar İsmail Kartal’ın gözdesiydi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-geri-donerek-kazandi-goztepe-gol-ya.html</loc>
     <news:news>
       <news:publication>
@@ -1044,6 +1077,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T18:01:00+03:00</news:publication_date>
       <news:title>SON DAKİKA DEPREMLER LİSTESİ 29 AĞUSTOS 2026 - CANLI VE ANLIK | Balıkesir&#x27;de az önce deprem mi oldu, bugün nerede deprem oldu? İşte AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-kaza-haberleri-zeytinburnudaki-iett-otobusu-kaz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:47:03+03:00</news:publication_date>
+      <news:title>SON DAKİKA KAZA HABERLERİ: Zeytinburnu&#x27;daki İETT otobüsü kazasında öndeki aracın şoförüne gözaltı</news:title>
     </news:news>
   </url>
   <url>
@@ -1091,14 +1135,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-leao-transferini-kapa-bildirdi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-08-29T14:52:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ: Galatasaray Leao transferini duyurdu! İşte İstanbul&#x27;a geleceği saat...</news:title>
+      <news:publication_date>2026-08-29T14:12:00+03:00</news:publication_date>
+      <news:title>Son dakika... Galatasaray, Leao transferini KAP&#x27;a bildirdi</news:title>
     </news:news>
   </url>
 </urlset>
