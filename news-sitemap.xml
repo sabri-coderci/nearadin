@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/trabzonda-drift-yapan-iki-surucuye-281-bin-lira-ceza.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T04:54:00+03:00</news:publication_date>
+      <news:title>Trabzon&#x27;da drift yapan iki sürücüye 281 bin lira ceza</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/yangin-sondurme-ekibinin-araci-kaza-yapti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T04:49:00+03:00</news:publication_date>
+      <news:title>Yangın söndürme ekibinin aracı kaza yaptı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/mardin-1969-spor-ve-vanspor-fk-berabere-kaldi.html</loc>
     <news:news>
       <news:publication>
@@ -90,6 +112,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/sener-usumezsoy-sahnede-kaslarini-sergileyerek-mesaj-verdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T01:25:12+03:00</news:publication_date>
+      <news:title>Şener Üşümezsoy, sahnede kaslarını sergileyerek mesaj verdi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/kayserispor-baskanindan-sampiyonluk-vurgusu.html</loc>
     <news:news>
       <news:publication>
@@ -131,6 +164,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T01:00:19+03:00</news:publication_date>
       <news:title>Tek başına bir takım: Victor Osimhen</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/goztepe-uzgun-puan-alamadik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T00:58:11+03:00</news:publication_date>
+      <news:title>Göztepe Üzgün: Puan Alamadık</news:title>
     </news:news>
   </url>
   <url>
@@ -299,17 +343,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-melih-gokcek-hakkinda-sorusturma-baslatildi-yur.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T00:13:11+03:00</news:publication_date>
-      <news:title>SON DAKİKA: Melih Gökçek hakkında soruşturma başlatıldı! Yurt dışı para transferi iddiaları araştırılıyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/galatasaray-3-goztepe-2-mac-sonucu.html</loc>
     <news:news>
       <news:publication>
@@ -351,17 +384,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:58:15+03:00</news:publication_date>
       <news:title>Son Dakika: Cem Yılmaz&#x27;ın son sağlık durumu nasıl? Kardeşi Can Yılmaz&#x27;dan yeni açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/gaziantep-fk-rizespora-2-1-maglup.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:46:22+03:00</news:publication_date>
-      <news:title>Gaziantep FK, Rizespor&#x27;a 2-1 Mağlup</news:title>
     </news:news>
   </url>
   <url>
@@ -439,17 +461,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T23:10:00+03:00</news:publication_date>
       <news:title>Son Dakika | Dışişleri Bakanlığı&#x27;ndan İsrail&#x27;e sert tepki</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-yurt-disi-para-transferi-i.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:09:31+03:00</news:publication_date>
-      <news:title>SON DAKİKA: Melih Gökçek hakkında yurt dışı para transferi iddialarına soruşturma</news:title>
     </news:news>
   </url>
   <url>
@@ -585,17 +596,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-trabzonsporun-uefa-konferans-ligi-fiksturu-aci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:42:22+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Trabzonspor’un UEFA Konferans Ligi fikstürü açıklandı! İşte ilk maç - Galeri - Trend Spor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/cem-yilmaz-rahatsizlandigi-canakkalede-hastaneye-kaldirildi.html</loc>
     <news:news>
       <news:publication>
@@ -615,17 +615,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T21:37:00+03:00</news:publication_date>
       <news:title>Son dakika : Komedyen Cem Yılmaz hastaneye kaldırıldı... Sağlık Bakanı Memişoğlu&#x27;ndan açıklama: Koroner yoğun bakımda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasarayda-ugurcan-cakir-soku-goztepe-maci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:32:00+03:00</news:publication_date>
-      <news:title>Son dakika! Galatasaray&#x27;da Uğurcan Çakır şoku | Göztepe maçına çıkmadı</news:title>
     </news:news>
   </url>
   <url>
@@ -692,17 +681,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T20:15:26+03:00</news:publication_date>
       <news:title>SON DAKİKA | Fenerbahçe, Sofyan Amrabat ile yollarını ayırdı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/fenerbahce-acikladi-sofyan-amrabatin-sozlesmesi-feshedildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T20:04:00+03:00</news:publication_date>
-      <news:title>Fenerbahçe açıkladı! Sofyan Amrabat&#x27;ın sözleşmesi feshedildi</news:title>
     </news:news>
   </url>
   <url>
@@ -805,6 +783,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-gozaltina-alinmisti-fidan-hoca-olarak-bilin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T17:36:00+03:00</news:publication_date>
+      <news:title>Son dakika... Gözaltına alınmıştı: &#x27;Fidan Hoca&#x27; olarak bilinen Fidan Atalay hakkında yeni gelişme</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/fidan-atalay-tutuklandi.html</loc>
     <news:news>
       <news:publication>
@@ -838,17 +827,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-fidan-hoca-olarak-bilinen-fidan-atalay-tutukland.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T17:21:39+03:00</news:publication_date>
-      <news:title>Son dakika: Fidan Hoca olarak bilinen Fidan Atalay tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/yazar-ali-haydar-haksal-son-yolculuguna-ugurlandi.html</loc>
     <news:news>
       <news:publication>
@@ -868,6 +846,28 @@
       </news:publication>
       <news:publication_date>2026-08-29T16:57:27+03:00</news:publication_date>
       <news:title>SON DAKİKA ALTIN FİYATLARI 🔔 Altın bugün ne kadara alınıyor, ne kadara satılıyor? 29 Ağustos 2026 Listeli altın fiyatları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-ukraynanin-ankara-buyukelcisi-disislerine-c.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T16:42:00+03:00</news:publication_date>
+      <news:title>Son dakika... Ukrayna&#x27;nın Ankara Büyükelçisi, Dışişleri&#x27;ne çağrıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-ukraynanin-ankara-buyukelcisi-disisleri-bakanl.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T16:35:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Ukrayna&#x27;nın Ankara Büyükelçisi Dışişleri Bakanlığı&#x27;na çağrıldı!</news:title>
     </news:news>
   </url>
   <url>
@@ -959,17 +959,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-galatasaray-leao-transferini-duyurdu-ist.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T14:52:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ: Galatasaray Leao transferini duyurdu! İşte İstanbul&#x27;a geleceği saat...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-galatasaray-ve-fenerbahcenin-uefa-sampiyonlar.html</loc>
     <news:news>
       <news:publication>
@@ -989,6 +978,17 @@
       </news:publication>
       <news:publication_date>2026-08-29T14:12:00+03:00</news:publication_date>
       <news:title>Son dakika... Galatasaray, Leao transferini KAP&#x27;a bildirdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakikafenerbahce-ve-galatasarayin-sampiyonlar-ligi-fik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T14:10:30+03:00</news:publication_date>
+      <news:title>SON DAKİKA|Fenerbahçe ve Galatasaray&#x27;ın Şampiyonlar Ligi fikstürü belli oldu! - Futbol</news:title>
     </news:news>
   </url>
   <url>
@@ -1055,6 +1055,28 @@
       </news:publication>
       <news:publication_date>2026-08-29T12:12:00+03:00</news:publication_date>
       <news:title>&quot;Bu vatan üzerinde son söz Türk milletinindir&quot; - Son Dakika Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-guzellik-merkezinde-skandal-bakirkoyde.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T11:17:19+03:00</news:publication_date>
+      <news:title>SON DAKİKA HABERİ: Güzellik merkezinde skandal! Bakırköy&#x27;de yaşandı! Tam 14 bin video | Son dakika haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/29/yari-fiyatina-togg-satilacak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T11:17:11+03:00</news:publication_date>
+      <news:title>Yarı fiyatına togg satılacak</news:title>
     </news:news>
   </url>
   <url>
@@ -1132,17 +1154,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T09:25:00+03:00</news:publication_date>
       <news:title>SON DAKİKA… Nepal’deki sel felaketinde tüyler ürperten görüntü! Cesetleri koyacak yer kalmadı: Salgın hastalık riski artıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/galatasaray-transfer-bombasini-patlatti-rafael-leao-istanbu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T08:05:44+03:00</news:publication_date>
-      <news:title>Galatasaray transfer bombasını patlattı! Rafael Leao İstanbul&#x27;a geliyor</news:title>
     </news:news>
   </url>
   <url>
