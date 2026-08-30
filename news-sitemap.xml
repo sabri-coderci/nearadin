@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/08/30/arca-corum-fk-besiktas-macina-hazir.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:06:21+03:00</news:publication_date>
+      <news:title>Arca Çorum FK, Beşiktaş Maçına Hazır</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/super-ligde-inanilmaz-mac-25-saniyede-gol-yedikleri-mucad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T21:03:32+03:00</news:publication_date>
+      <news:title>Süper Lig&#x27;de inanılmaz maç! 25. saniyede gol yedikleri mücadeleyi 90+4&#x27;te kazandılar</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/30/cumhurbaskani-erdogan-kktc-cumhurbaskani-erhurman-ile-gorus.html</loc>
     <news:news>
       <news:publication>
@@ -21,6 +43,17 @@
       </news:publication>
       <news:publication_date>2026-08-30T20:57:53+03:00</news:publication_date>
       <news:title>SON DAKİKA: Samsunspor Fenerbahçe maçı ŞİFRESİZ İZLE, Samsun FB link</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/08/30/eyupspor-alanyasporu-son-nefeste-devirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-30T20:56:14+03:00</news:publication_date>
+      <news:title>Eyüpspor, Alanyaspor&#x27;u son nefeste devirdi!</news:title>
     </news:news>
   </url>
   <url>
@@ -552,17 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/30/yozgat-gsk-sezona-galibiyetle-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:20:11+03:00</news:publication_date>
-      <news:title>Yozgat GSK Sezona Galibiyetle Başladı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/30/chelsea-brightoni-4-3-ile-gecti.html</loc>
     <news:news>
       <news:publication>
@@ -571,17 +593,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:15:13+03:00</news:publication_date>
       <news:title>Chelsea, Brighton&#x27;ı 4-3 ile Geçti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/gazimihal-takimi-temiz-gelecek-kupasinin-sampiyonu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T18:14:11+03:00</news:publication_date>
-      <news:title>Gazimihal Takımı Temiz Gelecek Kupası&#x27;nın Şampiyonu</news:title>
     </news:news>
   </url>
   <url>
@@ -604,17 +615,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T18:04:02+03:00</news:publication_date>
       <news:title>Ferdi 90 dakika oynadı! Chelsea-Brighton maçında tam 7 gol</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/trabzonsporda-amedspor-maci-oncesi-sakatlik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T17:55:08+03:00</news:publication_date>
-      <news:title>Trabzonspor&#x27;da Amedspor maçı öncesi sakatlık</news:title>
     </news:news>
   </url>
   <url>
@@ -780,17 +780,6 @@
       </news:publication>
       <news:publication_date>2026-08-30T14:46:00+03:00</news:publication_date>
       <news:title>Kira sözleşmelerinde yeni dönem: e-Devlet zorunlu hale geliyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/30/son-dakika-yilmazdan-kktcde-alabora-olan-gemi-ile-ilgili.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-30T14:36:16+03:00</news:publication_date>
-      <news:title>Son dakika: Yılmaz&#x27;dan KKTC&#x27;de alabora olan gemi ile ilgili açıklama - Son Dakika Flaş Haberler</news:title>
     </news:news>
   </url>
   <url>
@@ -1080,17 +1069,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-haberi-melih-gokcek-hakkinda-sorusturma-gokcek.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T23:11:00+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Melih Gökçek hakkında soruşturma! Gökçek&#x27;ten ilk açıklama geldi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/08/29/son-dakika-melih-gokcek-hakkinda-resen-sorusturma-baslatil.html</loc>
     <news:news>
       <news:publication>
@@ -1102,6 +1080,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/08/29/son-dakikadisislerinden-israile-sert-tepki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-29T22:33:00+03:00</news:publication_date>
+      <news:title>Son dakika...Dışişleri&#x27;nden İsrail&#x27;e sert tepki</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/08/29/disisleri-bakanligi-uluslararasi-toplum-netanyahu-hukumetin.html</loc>
     <news:news>
       <news:publication>
@@ -1110,17 +1099,6 @@
       </news:publication>
       <news:publication_date>2026-08-29T22:29:00+03:00</news:publication_date>
       <news:title>Dışişleri Bakanlığı: Uluslararası toplum Netanyahu hükümetinin yalanlarına inanmıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/08/29/son-dakika-unlu-komedyen-cem-yilmaz-hastaneye-kaldirildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-29T21:14:27+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Ünlü komedyen Cem Yılmaz hastaneye kaldırıldı! Bakan Memişoğlu: Tedavisi yoğun bakımda devam ediyor</news:title>
     </news:news>
   </url>
 </urlset>
