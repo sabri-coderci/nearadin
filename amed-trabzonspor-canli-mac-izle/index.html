@@ -116,37 +116,25 @@
       <!-- Admatic AUTO ads END -->
     </div>
 
-    <!-- Responsive video area: use <video> for SEO (hosted MP4). If you use an embed/iframe replace <video> with iframe in same wrapper. -->
+    <!-- X (Twitter) Live Stream Embed -->
     <div class="video-container" aria-label="Amed SK - Trabzonspor canlı video">
-      <video
-        controls
-        playsinline
-        preload="metadata"
-        poster="https://nearadin.com/path/to/video-poster.jpg"
-        width="1280" height="720"
-        aria-label="Amed SK - Trabzonspor Canlı Yayın"
-        crossorigin="anonymous"
-        loading="lazy"
-      >
-        <!-- Replace the src with your MP4/CMAF/HLS source(s). Prefer multiple sources for compatibility. -->
-        <source src="https://nearadin.com/path/to/video.mp4" type="video/mp4" />
-        <!-- If you have HLS, keep an iframe player (e.g., hls.js or video.js) or use <video> with proper MIME. -->
-        Your browser does not support the video element. You can <a href="https://nearadin.com/path/to/video.mp4">download the video</a>.
-        <!-- Optional captions -->
-        <track kind="captions" src="/captions/amed-trabzonspor-tr.vtt" srclang="tr" label="Türkçe" default>
-      </video>
+      <iframe 
+        src="https://platform.twitter.com/embed/index.html" 
+        title="Amed SK - Trabzonspor X Canlı Yayın" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        loading="lazy" 
+        allowfullscreen>
+      </iframe>
     </div>
 
-    <!-- Eğer video embed (iframe) kullanıyorsanız örnek:
-    <div class="video-container">
-      <iframe src="https://player.example.com/embed/VIDEO_ID" title="Amed SK - Trabzonspor canlı" frameborder="0" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe>
-    </div>
-    -->
+    <!-- Twitter/X Live Embed Script -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <!-- Tweet embed (mevcut blockquote korunuyor). -->
     <div class="tweet">
       <blockquote class="twitter-tweet" data-media-max-width="560">
-        <p lang="tr" dir="ltr">🔥 EMEĞE SAYGI BEĞENİ ATINIZ!<br><br>CANLI | Amed SK - Trabzonspor <a href="https://x.com/hashtag/AMDvTS?src=ha">#AMDvTS</a></p>&mdash; Örnek Hesap (@ornek) <a href="https://twitter.com/ornek/status/1234567890">1 Eyl 2026</a>
+        <p lang="tr" dir="ltr">🔥 EMEĞE SAYGI BEĞENİ ATINIZ!<br><br>CANLI | Amed SK - Trabzonspor <a href="https://x.com/hashtag/AMDvTS?src=ha">#AMDvTS</a></p>&mdash; Örnek Hesap (@ornek) <a href="https://x.com/ornek/status/123456789">Canlı Yayın</a>
       </blockquote>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
