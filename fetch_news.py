@@ -675,7 +675,7 @@ def fetch_and_generate():
                 day_cards_html += f'''
                 <article class="news-card">
                     <div class="card-header">
-                        <span class="badge">SON DAKİKA</span>
+                        <span class="badge">NE ARADIN?</span>
                         <span class="source">{d_news['source']}</span>
                         <span class="time">{d_news['time']}</span>
                     </div>
