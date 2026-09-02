@@ -624,7 +624,7 @@ def fetch_and_generate():
             <article class="news-card">
                 <div class="card-header">
                     <!--<span class="badge">Ne Aradın?</span>-->
-                    <span class="source">{news['source']}</span>
+                    <span class="badge">{news['source']}</span>
                     <span class="time">{news['time']}</span>
                 </div>
                 <h2 class="news-title">
