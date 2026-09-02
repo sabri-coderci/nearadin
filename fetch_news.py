@@ -623,8 +623,8 @@ def fetch_and_generate():
             news_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Son Dakika</span>
-                    <span class="badge">{news['source']}</span>
+                    <span title="{news['source']}" class="badge">Son Dakika</span>
+                    <span title="{news['source']}" class="badge">{news['source']}</span>
                     <span class="time">{news['time']}</span>
                 </div>
                 <h2 class="news-title">
