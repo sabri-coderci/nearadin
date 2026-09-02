@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türkiye Canlı Maç Sonuçları - Trendyol Süper Lig ve TFF 1. Lig Skor Takibi</title>
-    <meta name="description" content="Sadece Türkiye ligleri! Trendyol Süper Lig, TFF 1. Lig ve Türkiye Kupası canlı maç sonuçları, anlık skorlar ve bugünkü maç programı nearadin.net'te." />
-    <meta name="keywords" content="türkiye canlı maç sonuçları, süper lig canlı skor, tff 1 lig maç sonuçları, türkiye kupası canlı skor, güncel maç sonuçları" />
+    <title>Türkiye Canlı Maç Sonuçları - Trendyol Süper Lig ve TFF 1. Lig Anlık Skor - nearadin.net</title>
+    <meta name="description" content="Trendyol Süper Lig, TFF 1. Lig ve Türkiye Kupası canlı maç sonuçları, anlık skor takibi ve güncel Türkiye ligleri maç programı nearadin.net'te!" />
+    <meta name="keywords" content="türkiye canlı maç sonuçları, süper lig canlı skor, tff 1 lig canlı skor, türkiye kupası maç sonuçları, anlık canlı skor" />
     <link rel="canonical" href="https://nearadin.net/canli-mac-sonuclari/" />
     
-    <!-- Open Graph Metatagları -->
-    <meta property="og:title" content="Türkiye Canlı Maç Sonuçları ve Anlık Skor Takibi" />
-    <meta property="og:description" content="Süper Lig, TFF 1. Lig ve Ziraat Türkiye Kupası güncel maç sonuçları ve canlı skorlar." />
+    <!-- Open Graph SEO Metatagları -->
+    <meta property="og:title" content="Türkiye Canlı Maç Sonuçları - Süper Lig & TFF 1. Lig Anlık Skor" />
+    <meta property="og:description" content="Trendyol Süper Lig, TFF 1. Lig ve Türkiye liglerinin anlık canlı skorları ve maç sonuçları." />
     <meta property="og:url" content="https://nearadin.net/canli-mac-sonuclari/" />
     <meta property="og:type" content="website" />
 
-    <!-- Schema.org Structured Data (Google İndekslemesi İçin Yapısal Veri) -->
+    <!-- Schema.org Yapısal Veri (Google SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SportsEvent",
-      "name": "Türkiye Canlı Maç Sonuçları ve Fikstürü",
-      "description": "Trendyol Süper Lig ve TFF 1. Lig canlı skor ve maç sonuçları takibi.",
+      "name": "Türkiye Canlı Maç Sonuçları",
+      "description": "Süper Lig, TFF 1. Lig ve Türkiye Kupası anlık canlı skor servisi.",
       "organizer": {
         "@type": "Organization",
         "name": "nearadin.net",
@@ -35,54 +35,23 @@
         .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 75vh; }
         
         .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        h1 { font-size: 20px; margin-bottom: 8px; color: #0056b3; font-weight: 700; }
-        h2 { font-size: 16px; margin: 18px 0 10px 0; color: #0056b3; font-weight: 700; }
+        h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; font-weight: 700; }
+        h2 { font-size: 16px; margin: 15px 0 8px 0; color: #0056b3; font-weight: 600; }
         p { color: #65676b; font-size: 14px; margin-bottom: 15px; }
 
-        /* Yerli HTML Tablo Tasarımı (Google SEO Uyumlu) */
-        .league-title { 
-            background: #e7f3ff; 
-            color: #0c63e4; 
-            font-weight: 700; 
-            font-size: 14px; 
-            padding: 10px 14px; 
-            border-radius: 6px 6px 0 0; 
-            border: 1px solid #cff4fc;
-            border-bottom: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .match-table {
-            width: 100%;
-            border-collapse: collapse;
+        /* Otomatik Widget Alanı (Esnek Yükseklik & Şeffaf Arka Plan) */
+        .hb-widget-content { 
+            width: 100%; 
+            min-height: 350px; 
+            border-radius: 8px; 
+            overflow: hidden; 
             background: #ffffff;
-            border: 1px solid #e4e6eb;
-            border-radius: 0 0 6px 6px;
-            overflow: hidden;
-            margin-bottom: 20px;
         }
 
-        .match-table td {
-            padding: 12px 10px;
-            border-bottom: 1px solid #f0f2f5;
-            font-size: 13px;
-            text-align: center;
-        }
-
-        .match-table tr:last-child td { border-bottom: none; }
-        .match-table tr:hover { background-color: #f8f9fa; }
-
-        .time-col { width: 15%; color: #65676b; font-weight: 600; font-size: 12px; }
-        .team-home { width: 35%; text-align: right !important; font-weight: 600; color: #1c1e21; }
-        .score-col { width: 15%; font-weight: 700; color: #d93025; background: #fdf2f2; border-radius: 4px; padding: 4px 8px; display: inline-block; margin: 6px 0; }
-        .team-away { width: 35%; text-align: left !important; font-weight: 600; color: #1c1e21; }
-        .status-tag { font-size: 11px; color: #198754; font-weight: 700; background: #e8f5e9; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 2px; }
-
-        .seo-text-block { font-size: 13px; color: #4b4f56; line-height: 1.6; border-top: 1px solid #e4e6eb; padding-top: 15px; margin-top: 15px; }
         .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
         .ad-container:empty { display: none !important; }
+
+        .seo-text-block { font-size: 13px; color: #4b4f56; line-height: 1.5; border-top: 1px solid #e4e6eb; padding-top: 15px; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -136,48 +105,18 @@
     <div class="container">
         <div class="card">
             <h1>🇹🇷 Türkiye Canlı Maç Sonuçları ve Anlık Skorlar</h1>
-            <p>Trendyol Süper Lig, TFF 1. Lig ve Türkiye liglerindeki güncel karşılaşmalar, canlı skorlar ve maç sonuçları.</p>
+            <p>Trendyol Süper Lig, TFF 1. Lig ve Türkiye Kupası karşılaşmalarının canlı skorları, anlık maç sonuçları ve güncel lig fikstürü.</p>
             
-            <!-- Türkiye Ligleri Native HTML Skor Tablosu -->
-            <div class="league-title">
-                <span>🇹🇷</span> Türkiye - TFF 1. Lig
+            <!-- Canlı Otomatik Güncellenen Widget Alanı -->
+            <div class="hb-widget-content" id="auto-turkey-widget">
+                <script type="text/javascript" src="https://widgets.proscores.app/njs/tr/prolivewidget.js" async></script>
+                <a href="https://www.macsonuclari1.net/" data-w="" title="iddaa sonuçları" style="display:block; text-align:center; padding:10px; font-size:10px; color:#ccc; text-decoration:none;">macsonuclari1.net</a>
             </div>
-            <table class="match-table" aria-label="TFF 1. Lig Canlı Maç Sonuçları">
-                <tbody>
-                    <tr>
-                        <td class="time-col">
-                            17:00<br>
-                            <span class="status-tag">İY 1-0</span>
-                        </td>
-                        <td class="team-home">Bld. Vanspor</td>
-                        <td style="width:15%;"><span class="score-col">1 - 0</span></td>
-                        <td class="team-away">Batman Petrolspor</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">
-                            20:00<br>
-                            <span style="font-size:11px; color:#65676b;">Yakında</span>
-                        </td>
-                        <td class="team-home">Fatih Karagümrük</td>
-                        <td style="width:15%;"><span style="font-size:12px; color:#888;">- : -</span></td>
-                        <td class="team-away">Kayserispor</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">
-                            20:00<br>
-                            <span style="font-size:11px; color:#65676b;">Yakında</span>
-                        </td>
-                        <td class="team-home">Sivasspor</td>
-                        <td style="width:15%;"><span style="font-size:12px; color:#888;">- : -</span></td>
-                        <td class="team-away">Mardin BB</td>
-                    </tr>
-                </tbody>
-            </table>
 
-            <!-- SEO İçerik Bloğu -->
+            <!-- SEO Metin Alanı -->
             <article class="seo-text-block">
                 <h2>Trendyol Süper Lig ve TFF 1. Lig Anlık Skor Takibi</h2>
-                <p>Türkiye futbol liglerindeki tüm gelişmeleri ve anlık skor değişimlerini nearadin.net üzerinden canlı olarak takip edebilirsiniz. Süper Lig maç sonuçları, TFF 1. Lig karşılaşmaları, canlı puan durumu ve haftalık maç takvimi arama motorlarıyla tam uyumlu, hızlı ve güncel tablo yapısıyla sunulmaktadır.</p>
+                <p>Türkiye futbol liglerindeki tüm gelişmeleri canlı olarak takip edebilirsiniz. Süper Lig maç sonuçları, TFF 1. Lig karşılaşmaları, canlı puan durumu ve haftalık maç takvimi nearadin.net üzerinde anlık güncellemelerle sunulmaktadır.</p>
             </article>
         </div>
 
@@ -185,6 +124,37 @@
             <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
         </div>
     </div>
+
+    <!-- Sadece Türkiye Liglerini Otomatik Filtreleyen JS Filtresi -->
+    <script>
+        (function() {
+            function filterForeignLeagues() {
+                const widget = document.getElementById('auto-turkey-widget');
+                if (!widget) return;
+
+                // Widget içindeki ülke ve lig satırlarını tara
+                const rows = widget.querySelectorAll('tr, div, section');
+                rows.forEach(function(row) {
+                    const txt = row.innerText || row.textContent || '';
+                    
+                    // Türkiye dışındaki ülkeleri tespit et ve sadece o bloğu gizle
+                    if (txt.includes('İsveç') || txt.includes('Finlandiya') || txt.includes('Romanya') || 
+                        txt.includes('Sweden') || txt.includes('Finland') || txt.includes('Romania') || 
+                        txt.includes('Norveç') || txt.includes('Danimarka')) {
+                        
+                        // Yalnızca ilgili lig/ülke kapsayıcısını gizle, ana widget alanını gizleme!
+                        const targetBlock = row.closest('table, .hb-league-block, .country-block, div[class*="group"]') || row;
+                        if (targetBlock && targetBlock !== widget) {
+                            targetBlock.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            // Widget yüklendikçe canlı skor verilerini tarayıp filtrele
+            setInterval(filterForeignLeagues, 500);
+        })();
+    </script>
 
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
