@@ -1,6 +1,11 @@
-# admatic.com.tr ads.txt lines | Date: 2026-08-04
+# admatic.com.tr ads.txt lines | Date: 2026-09-02
 OWNERDOMAIN=www.nearadin.net
 admatic.com.tr, adm-pub-342021502, DIRECT
+152media.info, 152M1170, RESELLER
+appnexus.com, 11924, RESELLER, f5ab79cb980f11d1
+Pubmatic.com, 161026, RESELLER, 5d62403b186f2ace
+amxrtb.com, 105199329, RESELLER
+triplelift.com, 11016, RESELLER, 6c33edb13117fd86
 google.com, pub-8929667634210480, RESELLER, f08c47fec0942fa0
 aps.amazon.com, 667442df-3909-4d19-a428-18ccf92e5f6e, RESELLER
 pubmatic.com, 157150,RESELLER, 5d62403b186f2ace
