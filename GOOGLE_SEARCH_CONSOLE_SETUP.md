@@ -6,7 +6,7 @@
 ```
 1. https://search.google.com/search-console/ adresine git
 2. "Mülkiyet Ekle" butonuna tıkla
-3. nearadin.net yazı
+3. nearadin.net yaz
 4. "URL öneki" seçeneğini seç
 5. Doğrula
 ```
@@ -64,7 +64,7 @@ Search Console → Ayarlar → İşaretler
 
 ---
 
-## 🎯 Keyword Tracking
+## 🏃 Keyword Tracking
 
 Su başlıklar Google arama sonuçlarında çıkması için optimize edilmiştir:
 - **son dakika haberleri** ← Anasayfa Title
@@ -75,7 +75,7 @@ Su başlıklar Google arama sonuçlarında çıkması için optimize edilmiştir
 
 **Durumu Kontrol Et:**
 1. Search Console → Performans
-2. Sorguları filtrele
+2. Sorgularını filtrele
 3. "son dakika" arayarak CTR kontrol et
 
 ---
@@ -114,7 +114,7 @@ Search Console → Mobil Kullanılabilirlik
 
 - [ ] Domain'i Google Search Console'a ekledim
 - [ ] DNS veya HTML dosyası doğruladım
-- [ ] Tüm sitemaps'i gönerdim
+- [ ] Tüm sitemaps'i gönderdim
 - [ ] Anasayfa URL'sini indexlemeye istedim
 - [ ] robots.txt kontrol ettim
 - [ ] Meta descriptions tümünde var
@@ -140,7 +140,7 @@ Haberler daha hızlı index olsun diye:
 
 ## 📞 Sorun Giderme
 
-### "404 Hatasında Bulunamadı"
+### "404 Hatası: Bulunamadı"
 - robots.txt kontrol et
 - URL'nin gerçekten var mı kontrol et
 - DNS yayılmasını bekle (24 saat)
