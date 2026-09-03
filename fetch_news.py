@@ -341,7 +341,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 
 def fetch_and_generate():
-    rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
+    rss_url = "https://news.google.com/rss/search?q=sondakika&hl=tr&gl=TR&ceid=TR:tr"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
