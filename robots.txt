@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
-Allow: /llms.txt
-
-# LLM Directory
-Sitemap: https://nearadin.net/sitemap.xml
-
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 Sitemap: https://nearadin.net/sitemap.xml
 Sitemap: https://nearadin.net/news-sitemap.xml
+Sitemap: https://nearadin.net/sitemap-index.xml
