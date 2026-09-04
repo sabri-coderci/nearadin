@@ -2,25 +2,432 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/09/04/artvinde-tarihi-camide-yangin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:56:00+03:00</news:publication_date>
+      <news:title>Artvin&#x27;de tarihi camide yangın</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-spor-haberi-okan-buruk-bu-hakem-performansini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:55:00+03:00</news:publication_date>
+      <news:title>Son Dakika Spor Haberi | Okan Buruk: Bu hakem performansını da konuşmak gerekiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/mardin-1969-bodrumspor-macinda-3-puan-hedefliyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:51:11+03:00</news:publication_date>
+      <news:title>Mardin 1969, Bodrumspor maçında 3 puan hedefliyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/metin-ozturk-basaksehir-maci-sonrasi-galatasaray-adina-acik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:48:12+03:00</news:publication_date>
+      <news:title>Metin Öztürk, Başakşehir maçı sonrası Galatasaray adına açıklamalarda bulundu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/appleda-ternus-donemi-basladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:46:51+03:00</news:publication_date>
+      <news:title>Apple&#x27;da Ternus dönemi başladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/galatasaray-basaksehir-deplasmaninda-son-dakika-goluyle-3-2.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:39:14+03:00</news:publication_date>
+      <news:title>Galatasaray, Başakşehir deplasmanında son dakika golüyle 3-2 kazandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-spor-haberi-transfer-caglar-soyuncu-corum-fk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:28:50+03:00</news:publication_date>
+      <news:title>Son Dakika Spor Haberi | TRANSFER | Çağlar Söyüncü, Çorum FKde</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/citi-fedin-faiz-indirimi-beklentisini-haziran-2027ye-erte.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:28:40+03:00</news:publication_date>
+      <news:title>Citi, Fed&#x27;in faiz indirimi beklentisini Haziran 2027&#x27;ye erteledi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/umut-bozokun-hareketi-maca-damga-vurdu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:23:21+03:00</news:publication_date>
+      <news:title>Umut Bozok&#x27;un hareketi maça damga vurdu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/corum-fk-caglar-soyuncu-ile-2-yillik-sozlesme-imzaladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:20:22+03:00</news:publication_date>
+      <news:title>Çorum FK, Çağlar Söyüncü ile 2 Yıllık Sözleşme İmzaladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/rizespor-utrechtten-can-bozdogan-ile-2-yillik-sozlesme-imz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:19:15+03:00</news:publication_date>
+      <news:title>Rizespor, Utrecht&#x27;ten Can Bozdoğan ile 2 yıllık sözleşme imzaladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/birkac-sene-icinde-kucuk-moduler-reaktorleri-yapabilecegimi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:19:00+03:00</news:publication_date>
+      <news:title>&quot;Birkaç sene içinde küçük modüler reaktörleri yapabileceğimize inanıyorum&quot; - Son Dakika Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-yeni-gel.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:17:06+03:00</news:publication_date>
+      <news:title>SON DAKİKA: Alihan Kuriş suç örgütü soruşturmasında yeni gelişme: O isme yakalama kararı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/abd-baskani-trump-rusyanin-nato-topraklarina-saldirmayacag.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:16:00+03:00</news:publication_date>
+      <news:title>ABD Başkanı Trump, Rusya&#x27;nın NATO topraklarına saldırmayacağını söyledi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-1-ligde-transfer-sov-var-iste-atilan-ve-resme.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:15:36+03:00</news:publication_date>
+      <news:title>Son dakika: 1. Lig&#x27;de transfer şov var! İşte atılan ve resmen açıklanan bütün imzalar - Galeri - Trend Spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/trump-yonetimi-savas-sonrasi-orta-dogu-stratejisi-hazirliyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:10:24+03:00</news:publication_date>
+      <news:title>Trump yönetimi savaş sonrası Orta Doğu stratejisi hazırlıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/fenerbahce-derbi-hazirliklarini-surduruyor-baskan-yildirim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:08:12+03:00</news:publication_date>
+      <news:title>Fenerbahçe derbi hazırlıklarını sürdürüyor; Başkan Yıldırım takımla buluştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/uskudar-belediyesi-baskan-yardimcisi-ozdemir-adli-kontrolle.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:01:33+03:00</news:publication_date>
+      <news:title>Üsküdar Belediyesi Başkan Yardımcısı Özdemir adli kontrolle serbest bırakıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-alihan-kuris-sorusturmasinda-yeni-gelisme-irfa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:01:17+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Alihan Kuriş soruşturmasında yeni gelişme: İrfan Yılmaz için arama kararı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/alihan-kuris-sorusturmasinda-irfan-yilmaza-yakalama-karari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T22:01:00+03:00</news:publication_date>
+      <news:title>Alihan Kuriş soruşturmasında İrfan Yılmaz&#x27;a yakalama kararı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/kayserispor-esenler-erokspor-deplasmaninin-hazirliklarina-a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:59:23+03:00</news:publication_date>
+      <news:title>Kayserispor, Esenler Erokspor deplasmanının hazırlıklarına Atilla Gerin yönetiminde başladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/osimhen-sakatlandi-iste-5-gollu-nefes-kesen-macin-galibi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:55:04+03:00</news:publication_date>
+      <news:title>Osimhen sakatlandı! İşte 5 gollü nefes kesen maçın galibi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/caykur-rizespor-cagliarinin-santraforu-borrelliyi-bir-sez.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:53:31+03:00</news:publication_date>
+      <news:title>Çaykur Rizespor, Cagliari&#x27;nin santraforu Borrelli&#x27;yi bir sezon kiraladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/fenerbahce-caglar-soyuncunun-sozlesmesini-karsilikli-anlas.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:50:31+03:00</news:publication_date>
+      <news:title>Fenerbahçe, Çağlar Söyüncü&#x27;nün sözleşmesini karşılıklı anlaşarak feshetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/alihan-kuris-suc-orgutu-sorusturmasinda-irfan-yilmaz-hakkind.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:49:00+03:00</news:publication_date>
+      <news:title>Alihan Kuriş suç örgütü soruşturmasında İrfan Yılmaz hakkında yakalama kararı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/alihan-kuris-suc-orgutu-sorusturmasinda-irfan-yilmaz-hakkind.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:49:00+03:00</news:publication_date>
+      <news:title>Alihan Kuriş suç örgütü soruşturmasında İrfan Yılmaz hakkında arama kararı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/corum-fk-serdar-gurler-ile-sozlesmesini-karsilikli-anlasara.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:46:42+03:00</news:publication_date>
+      <news:title>Çorum FK, Serdar Gürler ile sözleşmesini karşılıklı anlaşarak feshetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/fenerbahce-caglar-soyuncu-ile-karsilikli-anlasarak-yollari.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:46:33+03:00</news:publication_date>
+      <news:title>Fenerbahçe, Çağlar Söyüncü ile karşılıklı anlaşarak yolları ayırdı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/goztepe-anjorini-kiralik-kadrosuna-katti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:37:23+03:00</news:publication_date>
+      <news:title>Göztepe, Anjorin&#x27;i Kiralık Kadrosuna Kattı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-oya-lale-arslan-tutuklandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:32:42+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Oya Lale Arslan tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-iran-urdundeki-abd-ussunu-vurduk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:30:20+03:00</news:publication_date>
+      <news:title>Son dakika... İran: Ürdün&#x27;deki ABD üssünü vurduk</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/berhan-simsekten-siddet-goren-ozlem-sanver-ilk-kez-konustu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:30:10+03:00</news:publication_date>
+      <news:title>Berhan Şimşek&#x27;ten şiddet gören Özlem Şanver ilk kez konuştu: Ayrılıp kurtulmak istedim, inandım</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-cumhurbaskani-erdogan-bae-devlet-baskani-ile-g.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:27:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Cumhurbaşkanı Erdoğan, BAE Devlet Başkanı ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/guendouzi-cezasi-son-dakika-matteo-guendouzi-kac-mac-ceza-a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:26:28+03:00</news:publication_date>
+      <news:title>GUENDOUZİ CEZASI SON DAKİKA: Matteo Guendouzi kaç maç ceza aldı? Guendouzi Roma maçında oynayamayacak mı?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-baskan-erdogan-bae-devlet-baskani-al-nahyan-il.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:21:20+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Başkan Erdoğan, BAE Devlet Başkanı Al Nahyan ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/sakatlanan-osimhenden-ilk-aciklama-geldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:09:44+03:00</news:publication_date>
+      <news:title>Sakatlanan Osimhen&#x27;den ilk açıklama geldi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/almanyada-yeni-sabotaj-girisimi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T21:08:30+03:00</news:publication_date>
+      <news:title>Almanya&#x27;da yeni sabotaj girişimi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/kktc-son-dakika-duyurdu-bakanlik-yetkilileri-gorevden-alind.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T20:50:00+03:00</news:publication_date>
+      <news:title>KKTC son dakika duyurdu: Bakanlık yetkilileri görevden alındı!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-fenerbahcede-guendouzi-ve-greenwood-depremi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:50:28+03:00</news:publication_date>
+      <news:publication_date>2026-09-04T20:50:00+03:00</news:publication_date>
       <news:title>🚨 SON DAKİKA | FENERBAHÇE&#x27;DE GUENDOUZI VE GREENWOOD DEPREMİ!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/kirmizi-bultenle-aranan-supheli-alanyada-yakalandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:49:51+03:00</news:publication_date>
-      <news:title>Kırmızı bültenle aranan şüpheli Alanya’da yakalandı</news:title>
     </news:news>
   </url>
   <url>
@@ -30,19 +437,8 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:47:53+03:00</news:publication_date>
+      <news:publication_date>2026-09-04T20:47:00+03:00</news:publication_date>
       <news:title>Son Dakika | Galatasaray&#x27;da Victor Osimhen depremi: Sakatlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/osimhenden-muthis-gol-sevincin-ardindan-sakatlik-soku.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:45:12+03:00</news:publication_date>
-      <news:title>Osimhen&#x27;den müthiş gol! Sevincin ardından sakatlık şoku</news:title>
     </news:news>
   </url>
   <url>
@@ -57,47 +453,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/montella-super-ligde-basaksehir-galatasaray-derbisini-trib.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-spor-haberi-fenerbahce-besiktas-derbisi-onces.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:36:31+03:00</news:publication_date>
-      <news:title>Montella, Süper Lig&#x27;de Başakşehir-Galatasaray derbisini tribünden canlı izledi</news:title>
+      <news:publication_date>2026-09-04T20:36:00+03:00</news:publication_date>
+      <news:title>Son Dakika Spor Haberi | Fenerbahçe – Beşiktaş derbisi öncesi son gelişmeler Cem Yılmaz değerlendirdi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-galatasaraya-osimhenden-kotu-haber-maca-deva.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/sakatlanarak-maca-devam-edemeyen-osimhenden-ilk-aciklama.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T20:32:55+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Galatasaray&#x27;a Osimhen&#x27;den kötü haber! Maça devam edemedi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/kayserisporlu-tabidze-gurcistan-milli-takimina-davet-edild.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:28:12+03:00</news:publication_date>
-      <news:title>Kayserisporlu Tabidze, Gürcistan Milli Takımı&#x27;na Davet Edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-arif-ahmet-denizolgunun-doktoru-tutuklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:25:59+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Arif Ahmet Denizolgun’un doktoru tutuklandı</news:title>
+      <news:title>Sakatlanarak maça devam edemeyen Osimhen&#x27;den ilk açıklama</news:title>
     </news:news>
   </url>
   <url>
@@ -107,19 +481,19 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:25:12+03:00</news:publication_date>
+      <news:publication_date>2026-09-04T20:25:00+03:00</news:publication_date>
       <news:title>Son dakika...Eski Bakan Denizolgun&#x27;un doktoru tutuklandı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-arif-ahmet-denizolgun-dosyasinda-kritik-gelisme.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-arif-ahmet-denizolgunun-doktoru-tutuklandi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:24:48+03:00</news:publication_date>
-      <news:title>SON DAKİKA… Arif Ahmet Denizolgun dosyasında kritik gelişme! Yalan tanıktan gözaltına alınmıştı: Doktor Nurettin Demirkol tutuklandı</news:title>
+      <news:publication_date>2026-09-04T20:25:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Arif Ahmet Denizolgun’un doktoru tutuklandı</news:title>
     </news:news>
   </url>
   <url>
@@ -156,135 +530,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/uefadan-fenerbahceye-kotu-haber-guendouzi-ve-greenwooda.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/olayli-macin-faturasi-agir-oldu-uefadan-fenerbahceli-futbo.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T20:14:32+03:00</news:publication_date>
-      <news:title>UEFA&#x27;dan Fenerbahçe&#x27;ye kötü haber: Guendouzi ve Greenwood&#x27;a ceza!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/bakan-yumakli-bal-uretiminde-dunyada-ikinci-siradayiz-biri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:12:22+03:00</news:publication_date>
-      <news:title>Bakan Yumaklı: Bal üretiminde dünyada ikinci sıradayız, birinciliği hedefliyoruz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-fenerbahcede-guendouzi-ve-greenwood-depremi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:12:00+03:00</news:publication_date>
-      <news:title>🚨 SON DAKİKA | FENERBAHÇE&#x27;DE GUENDOUZI VE GREENWOOD DEPREMİ!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/kilicdaroglu-cumhuriyete-sahip-cikmak-tarihsel-gorevimizdi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T20:00:36+03:00</news:publication_date>
-      <news:title>Kılıçdaroğlu: Cumhuriyet&#x27;e sahip çıkmak tarihsel görevimizdir | Son dakika haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/macta-ilk-gol-geldi-tempo-inanilmaz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:59:07+03:00</news:publication_date>
-      <news:title>Maçta ilk gol geldi! Tempo inanılmaz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/genclerbirligi-italyadan-pedro-mendesi-2-yilligina-kadros.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:54:12+03:00</news:publication_date>
-      <news:title>Gençlerbirliği, İtalya&#x27;dan Pedro Mendes&#x27;i 2 yıllığına kadrosuna kattı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/fenerbahcede-caglar-soyuncu-donemi-sona-erdi-iste-yeni-tak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:52:35+03:00</news:publication_date>
-      <news:title>Fenerbahçe&#x27;de Çağlar Söyüncü dönemi sona erdi! İşte yeni takımı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/balikesirspor-transferin-son-gunlerinde-uc-furkani-kadrosun.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:44:00+03:00</news:publication_date>
-      <news:title>Balıkesirspor transferin son günlerinde üç Furkan&#x27;ı kadrosuna kattı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/genclerbirligi-portekizli-santrfor-pedro-mendesi-2-yilligi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:40:11+03:00</news:publication_date>
-      <news:title>Gençlerbirliği, Portekizli santrfor Pedro Mendes&#x27;i 2 yıllığına kadrosuna kattı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/genc-golcu-habesoglu-trabzonda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:28:22+03:00</news:publication_date>
-      <news:title>Genç Golcü Habeşoğlu Trabzon&#x27;da</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/gozaltina-alinmisti-gazeteci-oya-lale-arslanin-savcilik-if.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:26:31+03:00</news:publication_date>
-      <news:title>Gözaltına alınmıştı: Gazeteci Oya Lale Arslan’ın savcılık ifadesi ortaya çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-1-ligde-transfer-sov-var-iste-atilan-ve-resme.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:22:13+03:00</news:publication_date>
-      <news:title>Son dakika: 1. Lig&#x27;de transfer şov var! İşte atılan ve resmen açıklanan bütün imzalar - Galeri - Trend Spor</news:title>
+      <news:publication_date>2026-09-04T20:15:25+03:00</news:publication_date>
+      <news:title>Olaylı maçın faturası ağır oldu! UEFA’dan Fenerbahçeli futbolculara ceza</news:title>
     </news:news>
   </url>
   <url>
@@ -299,28 +552,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/besiktas-elan-ricardoyu-sezon-sonuna-kadar-macaristana-ki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:10:21+03:00</news:publication_date>
-      <news:title>Beşiktaş, Elan Ricardo&#x27;yu sezon sonuna kadar Macaristan&#x27;a kiraladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/genc-kadin-5-kattan-dusup-olmustu-esine-istenen-ceza-bel.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:09:44+03:00</news:publication_date>
-      <news:title>Genç kadın 5. kattan düşüp ölmüştü... Eşine istenen ceza belli oldu!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-borsa-haftayi-yukselisle-tamamladi.html</loc>
     <news:news>
       <news:publication>
@@ -332,28 +563,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-ifade-veren-melih-gokcekten-aciklama-ben-5.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:03:08+03:00</news:publication_date>
-      <news:title>Son dakika... İfade veren Melih Gökçek’ten açıklama: ‘‘Ben 500 sefer sıçradım, beni yakalayamadılar!’</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/melih-gokcekin-ardindan-oglu-ve-gelini-de-ifadeye-cagrildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T19:01:00+03:00</news:publication_date>
-      <news:title>Melih Gökçek&#x27;in ardından oğlu ve gelini de ifadeye çağrıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcekin-oglu-ahmet-gokcek-ile-gelini-h.html</loc>
     <news:news>
       <news:publication>
@@ -362,17 +571,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T18:54:00+03:00</news:publication_date>
       <news:title>Son dakika... Melih Gökçek&#x27;in oğlu Ahmet Gökçek ile gelini Hülya Gökçek ifadeye çağrıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/ve-caglar-soyuncu-fenerbahceden-ayrildi-yeni-adresi-super.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T18:53:28+03:00</news:publication_date>
-      <news:title>Ve Çağlar Söyüncü Fenerbahçe&#x27;den ayrıldı! Yeni adresi Süper Lig ekibi</news:title>
     </news:news>
   </url>
   <url>
@@ -398,58 +596,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-agzinda-sakizla-adliyeye-geldi-if.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T18:36:35+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Melih Gökçek ağzında sakızla adliyeye geldi, ifadesi sona erdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-ifade-veren-melih-gokcek-basina-aciklamalarda-b.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T18:35:18+03:00</news:publication_date>
-      <news:title>Son Dakika | İfade veren Melih Gökçek basına açıklamalarda bulundu: Ben ilk kez soruşturma geçirmiyorum</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-ifade-verdi-ilk-aciklama.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-ifade-verdi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T18:27:00+03:00</news:publication_date>
-      <news:title>Son dakika: Melih Gökçek ifade verdi! İlk açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-besiktas-umit-akdag-ile-sozlesme-imzaladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T18:26:28+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Beşiktaş Ümit Akdağ ile sözleşme imzaladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/silivrideki-gemi-kazasina-iliskin-kaptanlarin-ifadelerine-u.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T18:25:00+03:00</news:publication_date>
-      <news:title>Silivri&#x27;deki gemi kazasına ilişkin kaptanların ifadelerine ulaşıldı</news:title>
+      <news:title>Son dakika: Melih Gökçek ifade verdi!</news:title>
     </news:news>
   </url>
   <url>
@@ -497,14 +651,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-basaran-aksuya-tahliye-karari.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-basaran-aksu-ve-gokay-cakira-tahliye-karari.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T17:54:00+03:00</news:publication_date>
-      <news:title>Son dakika... Başaran Aksu&#x27;ya tahliye kararı</news:title>
+      <news:title>Son dakika... Başaran Aksu ve Gökay Çakır&#x27;a tahliye kararı</news:title>
     </news:news>
   </url>
   <url>
@@ -519,17 +673,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/cumhurbaskani-erdogan-ak-partili-vekilin-kizinin-cenazesine.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T17:26:51+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan, AK Partili vekilin kızının cenazesine katıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/yasa-disi-panel-sistemi-sorusturmasi-31-avukat-hakkinda-g.html</loc>
     <news:news>
       <news:publication>
@@ -538,17 +681,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T17:16:56+03:00</news:publication_date>
       <news:title>&#x27;Yasa dışı panel sistemi&#x27; soruşturması! 31 avukat hakkında gözaltı kararı!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-deniz-goktasin-hakim-karsisina-cikacagi-tarih.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T17:04:00+03:00</news:publication_date>
-      <news:title>Son dakika... Deniz Göktaş&#x27;ın hakim karşısına çıkacağı tarih belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -574,28 +706,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/rusyadan-ukrayna-guvenlik-servisi-binasina-iha-saldirisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T16:51:01+03:00</news:publication_date>
-      <news:title>Rusya&#x27;dan Ukrayna Güvenlik Servisi binasına İHA saldırısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-4-yeni-nesil-suc-orgutune-operasyon-32-kisi-y.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T16:51:00+03:00</news:publication_date>
-      <news:title>Son Dakika... 4 yeni nesil suç örgütüne operasyon: 32 kişi yakalandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-4-yeni-nesil-suc-orgutu-daha-cokertildi.html</loc>
     <news:news>
       <news:publication>
@@ -604,17 +714,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T16:46:00+03:00</news:publication_date>
       <news:title>SON DAKİKA! 4 yeni nesil suç örgütü daha çökertildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/yeni-nesil-suc-orgutlerine-operasyon-42-gozalti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T16:44:00+03:00</news:publication_date>
-      <news:title>Yeni nesil suç örgütlerine operasyon: 42 gözaltı</news:title>
     </news:news>
   </url>
   <url>
@@ -640,6 +739,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-ifade-veren-melih-gokcekten-aciklama-ben-5.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T15:57:00+03:00</news:publication_date>
+      <news:title>Son dakika... İfade veren Melih Gökçek’ten açıklama: ‘‘Ben 500 sefer sıçradım, beni yakalayamadılar!’</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-savciliga-ifade-veren-melih-gokcekten-cikista-i.html</loc>
     <news:news>
       <news:publication>
@@ -648,6 +758,28 @@
       </news:publication>
       <news:publication_date>2026-09-04T15:55:00+03:00</news:publication_date>
       <news:title>Son dakika: Savcılığa ifade veren Melih Gökçek&#x27;ten çıkışta ilk açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-agzinda-sakizla-adliyeye-geldi-if.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T15:51:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Melih Gökçek ağzında sakızla adliyeye geldi, ifadesi sona erdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-ifade-veren-melih-gokcek-basina-aciklamalarda-b.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T15:50:00+03:00</news:publication_date>
+      <news:title>Son Dakika | İfade veren Melih Gökçek basına açıklamalarda bulundu: Ben ilk kez soruşturma geçirmiyorum</news:title>
     </news:news>
   </url>
   <url>
@@ -662,17 +794,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-haberler-muharrem-inceden-chp-ve-yeni-partiye.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:45:35+03:00</news:publication_date>
-      <news:title>Son dakika haberler: Muharrem İnce&#x27;den CHP ve YENİ Parti&#x27;ye çağrı | Son dakika haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-donemini-de-kapsiyor-ankara-buyu.html</loc>
     <news:news>
       <news:publication>
@@ -681,28 +802,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T15:45:00+03:00</news:publication_date>
       <news:title>Son dakika... Melih Gökçek dönemini de kapsıyor: Ankara Büyükşehir Belediyesi&#x27;nden ihale alan 36 şirket hakkında soruşturma!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-piyasalarin-kilitlendigi-veri-beklentinin-iki-k.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:42:00+03:00</news:publication_date>
-      <news:title>Son dakika | Piyasaların kilitlendiği veri beklentinin iki katı geldi, altın çakıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/bursada-tuyleri-diken-diken-eden-anlar-fonda-yine-o-muzik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:39:36+03:00</news:publication_date>
-      <news:title>Bursa&#x27;da tüyleri diken diken eden anlar! Fonda yine o müzik var</news:title>
     </news:news>
   </url>
   <url>
@@ -717,36 +816,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-cumhurbaskani-erdogandan-aciklamalar-son-daki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:38:07+03:00</news:publication_date>
-      <news:title>Son dakika: Cumhurbaşkanı Erdoğan&#x27;dan açıklamalar | Son dakika haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-cumhurbaskani-erdogan-gecmisi-inkar-eden-istikb.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-cumhurbaskani-erdogan-darbelerde-kitaplar-hedef.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T15:37:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan: Geçmişi inkar eden istikbal inşa edemez</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-abd-tarim-disi-istihdam-verisi-ters-kose-yapti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:35:46+03:00</news:publication_date>
-      <news:title>Son dakika: ABD tarım dışı istihdam verisi ters köşe yaptı: 162 binlik artış</news:title>
+      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan: Darbelerde kitaplar hedefti</news:title>
     </news:news>
   </url>
   <url>
@@ -772,17 +849,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-balikesirde-bir-orman-yangini-daha-ruzgar-ale.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T14:59:00+03:00</news:publication_date>
-      <news:title>Son dakika | Balıkesir&#x27;de bir orman yangını daha! Rüzgar alevleri yaydı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-haberleri-marmaradaki-gemi-kazasinda-tutuklanan.html</loc>
     <news:news>
       <news:publication>
@@ -805,28 +871,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/premier-ligden-salah-son-dakika-transferini-bitirmek-icin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T14:45:53+03:00</news:publication_date>
-      <news:title>Premier Lig&#x27;den: Salah, son dakika transferini bitirmek için devreye giriyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-marmarada-batan-geminin-yeri-belirlendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T14:18:00+03:00</news:publication_date>
-      <news:title>Son Dakika: Marmara&#x27;da batan geminin yeri belirlendi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-ozgur-ozelden-uskudar-cikisi-millet-gozal.html</loc>
     <news:news>
       <news:publication>
@@ -838,14 +882,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-haberi-berhan-simsek-chp-mykdan-istifa-etti.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-berhan-simsek-chp-mykdan-istifa-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T14:12:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA HABERİ: Berhan Şimşek CHP MYK&#x27;dan istifa etti</news:title>
+      <news:title>Son dakika... Berhan Şimşek CHP MYK&#x27;dan istifa etti</news:title>
     </news:news>
   </url>
   <url>
@@ -890,6 +934,17 @@
       </news:publication>
       <news:publication_date>2026-09-04T13:13:18+03:00</news:publication_date>
       <news:title>Son dakika: Deniz Göktaş&#x27;a hazırlanan iddianame kabul edildi | Son dakika haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/ve-caglar-soyuncu-fenerbahceden-ayrildi-yeni-adresi-super.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T13:05:04+03:00</news:publication_date>
+      <news:title>Ve Çağlar Söyüncü Fenerbahçe&#x27;den ayrıldı! Yeni adresi Süper Lig ekibi</news:title>
     </news:news>
   </url>
   <url>
@@ -959,17 +1014,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-oya-lale-arslan-gozaltina-alindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T11:46:49+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Oya Lale Arslan gözaltına alındı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-gazeteci-oya-lale-arslan-gozaltina-alindi.html</loc>
     <news:news>
       <news:publication>
@@ -978,6 +1022,17 @@
       </news:publication>
       <news:publication_date>2026-09-04T11:46:00+03:00</news:publication_date>
       <news:title>Son Dakika | Gazeteci Oya Lale Arslan gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-oya-lale-arslan-hakkinda-tutuklama-talebi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T11:44:00+03:00</news:publication_date>
+      <news:title>Son dakika... Oya Lale Arslan hakkında tutuklama talebi</news:title>
     </news:news>
   </url>
   <url>
@@ -1014,6 +1069,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-eski-bakanin-doktoruna-tutuklama-talebi-yalanc.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T11:08:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA! Eski bakanın doktoruna tutuklama talebi: &quot;Yalancı tanıklık&quot;tan gözaltına alınmıştı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/04/son-dakika-bakan-gurlek-duyurdu-istanbulda-panel-sistemi.html</loc>
     <news:news>
       <news:publication>
@@ -1022,17 +1088,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T11:07:25+03:00</news:publication_date>
       <news:title>SON DAKİKA! Bakan Gürlek duyurdu: İstanbul&#x27;da &#x27;panel sistemi&#x27; operasyonu! 31 avukat hakkında gözaltı kararı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-girnedeki-faciada-olu-sayisi-12ye-yukseldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T09:30:00+03:00</news:publication_date>
-      <news:title>Son dakika... Girne&#x27;deki faciada ölü sayısı 12&#x27;ye yükseldi</news:title>
     </news:news>
   </url>
   <url>
@@ -1069,17 +1124,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-suleymancilarin-bes-sirketine-daha-el-konuldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T08:49:00+03:00</news:publication_date>
-      <news:title>Son Dakika | Süleymancıların beş şirketine daha el konuldu!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/alihan-kuris-suc-orgutu-sorusturmasinda-5-sirkete-el-koyma-k.html</loc>
     <news:news>
       <news:publication>
@@ -1099,6 +1143,17 @@
       </news:publication>
       <news:publication_date>2026-09-04T08:45:23+03:00</news:publication_date>
       <news:title>SON DAKİKA | Meteoroloji uyardı: Hafta sonu plan yapanlar dikkat! Hava bir anda değişebilir…</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T00:00:00+03:00</news:publication_date>
+      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 04 Eylül 2026</news:title>
     </news:news>
   </url>
   <url>
