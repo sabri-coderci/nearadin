@@ -2,14 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/silivrideki-gemi-kazasinda-bilirkisi-on-raporu-ortaya-cikti.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/istanbulda-isid-operasyonu-polise-ates-acti-1-kisi-yarala.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T23:33:26+03:00</news:publication_date>
-      <news:title>Silivri&#x27;deki gemi kazasında bilirkişi ön raporu ortaya çıktı | Dikkat çeken tespitler yer aldı: Gözcü olsaydı batmayabilirdi... Geminin 2 kaptanı tutuklandı - Son Dakika Haberleri</news:title>
+      <news:publication_date>2026-09-04T00:01:00+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da IŞİD operasyonu: Polise ateş açtı, 1 kişi yaralandı! Şüpheli etkisiz hale getirildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/tolga-sardan-buyutec-idris-naim-sahin-ve-tahsisli-plaka.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T00:00:00+03:00</news:publication_date>
+      <news:title>Tolga Şardan | Büyüteç | İdris Naim Şahin ve “tahsisli plaka” mevzusu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/silivrideki-gemi-kazasi-2-kaptan-tutuklandi-4-kisiye-adli.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T23:18:00+03:00</news:publication_date>
+      <news:title>Silivri’deki gemi kazası: 2 kaptan tutuklandı, 4 kişiye adli kontrol</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/besiktasin-avrupa-ligi-kadrosu-aciklandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T23:11:49+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;ın Avrupa Ligi kadrosu açıklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/uskudarda-secime-gunler-kala-chpli-4-meclis-uyesi-akpy.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T23:09:00+03:00</news:publication_date>
+      <news:title>Üsküdar&#x27;da seçime günler kala... CHP&#x27;li 4 meclis üyesi AKP&#x27;ye &#x27;transfer&#x27; oldu!</news:title>
     </news:news>
   </url>
   <url>
@@ -24,14 +68,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/uskudar-belediye-meclisinde-chpli-4-uye-akpye-gecti.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/4-cocuk-annesi-olan-esini-oldurup-intihar-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T22:47:00+03:00</news:publication_date>
-      <news:title>Üsküdar Belediye Meclisi’nde CHP’li 4 üye AKP&#x27;ye geçti</news:title>
+      <news:publication_date>2026-09-03T22:39:23+03:00</news:publication_date>
+      <news:title>4 çocuk annesi olan eşini öldürüp intihar etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/savcilik-duyurdu-ibb-davasina-goruntu-sorusturmasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T22:34:00+03:00</news:publication_date>
+      <news:title>Savcılık duyurdu: İBB Davası&#x27;na &#x27;görüntü&#x27; soruşturması!</news:title>
     </news:news>
   </url>
   <url>
@@ -68,14 +123,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/muhammed-salah-meydan-okudu.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/petrol-calmaya-calisan-37-kisi-zehirlenerek-oldu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T21:15:27+03:00</news:publication_date>
-      <news:title>Muhammed Salah meydan okudu</news:title>
+      <news:publication_date>2026-09-03T21:11:28+03:00</news:publication_date>
+      <news:title>Petrol çalmaya çalışan 37 kişi zehirlenerek öldü</news:title>
     </news:news>
   </url>
   <url>
@@ -101,25 +156,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/ibb-davasinda-2-kisiye-tahliye-karari.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/yuregirde-baskanvekili-secimi-iki-kez-chpnin-adayi-kaza.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T20:41:00+03:00</news:publication_date>
-      <news:title>İBB davasında 2 kişiye tahliye kararı</news:title>
+      <news:publication_date>2026-09-03T20:25:00+03:00</news:publication_date>
+      <news:title>Yüreğir&#x27;de başkanvekili seçimi... İki kez CHP&#x27;nin adayı kazandı: Belediye &#x27;yargı yoluyla&#x27; AKP&#x27;ye geçti</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/fenerbahceden-marco-asensio-iddialarina-yanit.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/trumptan-ispanyadaki-gocmen-protestolarina-olay-yorum-mah.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T20:15:00+03:00</news:publication_date>
-      <news:title>Fenerbahçe&#x27;den Marco Asensio iddialarına yanıt</news:title>
+      <news:publication_date>2026-09-03T19:58:05+03:00</news:publication_date>
+      <news:title>Trump&#x27;tan İspanya&#x27;daki göçmen protestolarına olay yorum: Mahvolacaklar</news:title>
     </news:news>
   </url>
   <url>
@@ -134,6 +189,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/03/karadenizde-tansiyon-yukseldi-rusya-2-gemiyi-vurdu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T19:40:00+03:00</news:publication_date>
+      <news:title>Karadeniz’de tansiyon yükseldi: Rusya 2 gemiyi vurdu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/03/trabzonsporda-dragus-ile-yollar-ayrildi.html</loc>
     <news:news>
       <news:publication>
@@ -142,6 +208,17 @@
       </news:publication>
       <news:publication_date>2026-09-03T19:14:00+03:00</news:publication_date>
       <news:title>Trabzonspor’da Draguş ile yollar ayrıldı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/mohamed-salahtan-trabzonspor-ve-transfer-itirafi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T18:45:04+03:00</news:publication_date>
+      <news:title>Mohamed Salah&#x27;tan Trabzonspor ve transfer itirafı!</news:title>
     </news:news>
   </url>
   <url>
@@ -167,14 +244,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/arif-ahmet-denizolgunun-supheli-olumu-doktoru-gozaltina-al.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/eski-bakan-denizolgunun-supheli-olumu-doktoru-gozaltina-al.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-03T18:05:55+03:00</news:publication_date>
-      <news:title>Arif Ahmet Denizolgun&#x27;un şüpheli ölümü. Doktoru gözaltına alındı</news:title>
+      <news:title>Eski bakan Denizolgun&#x27;un şüpheli ölümü. Doktoru gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/fenerbahcede-beklenen-marco-asensio-karari-verildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T17:33:16+03:00</news:publication_date>
+      <news:title>Fenerbahçe&#x27;de beklenen Marco Asensio kararı verildi</news:title>
     </news:news>
   </url>
   <url>
@@ -189,14 +277,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/beklenen-veri-aciklandi-altin-fiyatlari-ucusa-gecti.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/altina-guvercin-fed-destegi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T16:22:08+03:00</news:publication_date>
-      <news:title>Beklenen veri açıklandı: Altın fiyatları uçuşa geçti!</news:title>
+      <news:publication_date>2026-09-03T16:21:27+03:00</news:publication_date>
+      <news:title>Altına güvercin Fed desteği</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/turkiyede-boykot-listesinde-yer-aliyordu-unlu-pizzacinin-f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T16:17:00+03:00</news:publication_date>
+      <news:title>Türkiye&#x27;de boykot listesinde yer alıyordu: Ünlü pizzacının fişi çekildi</news:title>
     </news:news>
   </url>
   <url>
@@ -233,6 +332,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/03/murat-yetkine-scooter-carpti-ayak-kemiklerim-kirildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T15:50:00+03:00</news:publication_date>
+      <news:title>Murat Yetkin&#x27;e scooter çarptı: &quot;Ayak kemiklerim kırıldı&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/03/son-dakika-gulistan-doku-sorusturmasi-eski-tunceli-il-jand.html</loc>
     <news:news>
       <news:publication>
@@ -252,6 +362,17 @@
       </news:publication>
       <news:publication_date>2026-09-03T15:39:00+03:00</news:publication_date>
       <news:title>Derbinin hakemi Halil Umut Meler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/besiktastan-orta-saha-transferinde-surpriz-brezilya-basini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T15:18:58+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;tan orta saha transferinde sürpriz! Brezilya basını o ismi açıkladı</news:title>
     </news:news>
   </url>
   <url>
@@ -321,6 +442,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/03/uyusturucu-kullanan-memur-memurluktan-cikarilir-mi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T12:00:00+03:00</news:publication_date>
+      <news:title>Uyuşturucu kullanan memur memurluktan çıkarılır mı?</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/03/daha-bitmedi-aylar-surecek-el-nino-uyarisi-geldi-cok-guc.html</loc>
     <news:news>
       <news:publication>
@@ -332,36 +464,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/ahmet-davutoglu-hakkinda-sorusturma-baslatildi.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/ahmet-davutoglu-hakkinda-cumhurbaskanina-hakaret-sorustur.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T11:16:05+03:00</news:publication_date>
-      <news:title>Ahmet Davutoğlu hakkında soruşturma başlatıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/ozgur-ozelden-kilicdaroglu-ile-tokalasmasi-hakkinda-aciklam.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T11:06:00+03:00</news:publication_date>
-      <news:title>Özgür Özel&#x27;den Kılıçdaroğlu ile tokalaşması hakkında açıklama</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/dursun-ozbek-ve-okan-burukun-cok-istedigi-camavingada-arti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T11:05:18+03:00</news:publication_date>
-      <news:title>Dursun Özbek ve Okan Buruk&#x27;un çok istediği Camavinga&#x27;da artık her şey netleşti</news:title>
+      <news:publication_date>2026-09-03T11:08:00+03:00</news:publication_date>
+      <news:title>Ahmet Davutoğlu hakkında &quot;Cumhurbaşkanı&#x27;na hakaret&quot; soruşturması başlatıldı, ifadeye çağrıldı!</news:title>
     </news:news>
   </url>
   <url>
@@ -387,6 +497,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/03/lider-galatasaray-basaksehire-konuk-oluyor-leao-ve-deniz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T10:31:47+03:00</news:publication_date>
+      <news:title>Lider Galatasaray, Başakşehir&#x27;e konuk oluyor: Leao ve Deniz Gül heyecanı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/03/ibb-davasinda-75-gun-imamoglu-savunmasinda-tek-bir-deli.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-03T10:18:00+03:00</news:publication_date>
+      <news:title>İBB davasında 75. gün | ⁠İmamoğlu savunmasında &quot;Tek bir delil şurada ekrana yansısın, 87 milyon huzurunda özür dileyeceğim&quot; dedi, mahkeme ara kararında 2 kişiyi tahliye etti</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/03/2-aylik-enflasyon-farki-ne-kadar-oldu-2027-memur-ve-emekli.html</loc>
     <news:news>
       <news:publication>
@@ -409,47 +541,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/galatasaraydan-ayrilan-victor-nelssonun-transferi-resmiyet.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/franculinoda-13-milyon-euroluk-bonus-detayi-cok-kolay-eld.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T09:55:12+03:00</news:publication_date>
-      <news:title>Galatasaray’dan ayrılan Victor Nelsson’un transferi resmiyet kazandı - Eski kulübüyle 2030 yazına kadar anlaştı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/galatasaray-super-ligde-basaksehire-konuk-oluyor-iste-ma.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T09:54:38+03:00</news:publication_date>
-      <news:title>Galatasaray, Süper Lig&#x27;de Başakşehir&#x27;e konuk oluyor! İşte maç öncesi notlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/galatasaraydan-cok-konusulacak-hamle-transfer-donemi-biter.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T09:46:45+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;dan çok konuşulacak hamle! Transfer dönemi biterken...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/erhan-celikin-esi-ozlem-gultekinin-olum-nedeni-belli-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T09:41:55+03:00</news:publication_date>
-      <news:title>Erhan Çelik&#x27;in eşi Özlem Gültekin’in ölüm nedeni belli oldu</news:title>
+      <news:publication_date>2026-09-03T09:54:30+03:00</news:publication_date>
+      <news:title>Franculino&#x27;da 13 milyon euroluk bonus detayı! &quot;Çok kolay elde edilecek&quot; diyerek duyurdular</news:title>
     </news:news>
   </url>
   <url>
@@ -486,47 +585,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/fenerbahce-resmen-duyurdu-uefa-guendouzi-ve-greenwood-icin.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/uefa-fenerbahce-ve-iki-futbolcusuna-disiplin-sureci-baslatt.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T09:04:37+03:00</news:publication_date>
-      <news:title>Fenerbahçe resmen duyurdu: UEFA, Guendouzi ve Greenwood için süreci başlattı</news:title>
+      <news:publication_date>2026-09-03T09:08:19+03:00</news:publication_date>
+      <news:title>UEFA, Fenerbahçe ve iki futbolcusuna disiplin süreci başlattı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/trabzonspor-franculino-transferiyle-kulup-rekorunu-kirdi.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/ozelden-kilicdaroglu-ile-el-sikismasina-iliskin-aciklama-b.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T09:00:12+03:00</news:publication_date>
-      <news:title>Trabzonspor, Franculino transferiyle kulüp rekorunu kırdı - Bonservis bedeli 30 milyon euroya çıkabilir</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/al-musratinin-yeni-adresini-goren-donup-bir-daha-bakiyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T08:47:55+03:00</news:publication_date>
-      <news:title>Al-Musrati&#x27;nin yeni adresini gören dönüp bir daha bakıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/son-dakika-ibbye-ve-uskudar-belediyesine-yeni-dalga-ope.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T08:42:00+03:00</news:publication_date>
-      <news:title>Son Dakika... İBB&#x27;ye ve Üsküdar Belediyesi&#x27;ne yeni dalga operasyon: 13 kişiye gözaltı kararı!</news:title>
+      <news:publication_date>2026-09-03T09:01:00+03:00</news:publication_date>
+      <news:title>Özel&#x27;den Kılıçdaroğlu ile el sıkışmasına ilişkin açıklama: Butlana meşruiyet verdiğimi iddia etmekle İsmet Paşa&#x27;ya asker kaçağı demek aynı şey!</news:title>
     </news:news>
   </url>
   <url>
@@ -541,80 +618,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/03/trump-saldirilarin-nedenini-acikladi-israile-ve-orta-dogu.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/03/ibbye-yeni-operasyon-cok-sayida-yonetici-hakkinda-gozalti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-03T08:18:00+03:00</news:publication_date>
-      <news:title>Trump saldırıların nedenini açıkladı! &#x27;İsrail&#x27;e ve Orta Doğu&#x27;ya yardım etmek için&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/zeynep-bastik-ve-serkay-tutuncu-evlendi-mutluluga-evet-de.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T08:11:00+03:00</news:publication_date>
-      <news:title>Zeynep Bastık ve Serkay Tütüncü evlendi! Mutluluğa &#x27;evet&#x27; dediler!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/ak-partili-tayyardan-dikkat-ceken-mesaj-ufukta-kusursuz-fi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T07:46:46+03:00</news:publication_date>
-      <news:title>AK Partili Tayyar&#x27;dan dikkat çeken mesaj: Ufukta kusursuz fırtına havası var</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/bes-il-icin-saganak-yagis-uyarisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T07:39:51+03:00</news:publication_date>
-      <news:title>Beş il için sağanak yağış uyarısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/360-derecelik-vizyonla-dunyada-agirligimizi-koyacagiz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T07:03:29+03:00</news:publication_date>
-      <news:title>360 derecelik vizyonla dünyada ağırlığımızı koyacağız</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/deniz-gul-ve-modern-santrfor-devrimi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T07:00:00+03:00</news:publication_date>
-      <news:title>Deniz Gül ve modern santrfor devrimi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/chpli-belediye-baskanlarindan-kilicdarogluna-sessiz-boykot.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T06:57:00+03:00</news:publication_date>
-      <news:title>CHP’li belediye başkanlarından Kılıçdaroğlu&#x27;na sessiz boykot</news:title>
+      <news:publication_date>2026-09-03T08:24:35+03:00</news:publication_date>
+      <news:title>İBB&#x27;ye yeni operasyon. Çok sayıda yönetici hakkında gözaltı kararı var</news:title>
     </news:news>
   </url>
 </urlset>
