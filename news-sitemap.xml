@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/09/04/cumhurbaskani-erdogan-ak-partili-vekilin-kizinin-cenazesine.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T17:21:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan, AK Partili vekilin kızının cenazesine katıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-akin-gurlek-duyurdu-31-avukat-hakkinda-gozalt.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T17:15:34+03:00</news:publication_date>
+      <news:title>Son dakika... Akın Gürlek duyurdu: 31 avukat hakkında gözaltı kararı, 39 avukatlık bürosunda arama!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/iran-israil-saldirirsa-daha-kolay-vururuz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T16:59:25+03:00</news:publication_date>
+      <news:title>İran: İsrail saldırırsa daha kolay vururuz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-rusyadan-ukrayna-guvenlik-servisi-binasina-ih.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T16:51:01+03:00</news:publication_date>
+      <news:title>Son dakika... Rusya&#x27;dan Ukrayna Güvenlik Servisi binasına İHA saldırısı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/04/bakan-gurlek-duyurdu-yeni-nesil-suc-orgutlerine-gecit-verm.html</loc>
     <news:news>
       <news:publication>
@@ -13,6 +57,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/04/sultanbeylide-deas-operasyonu-1-terorist-olduruldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T16:45:44+03:00</news:publication_date>
+      <news:title>Sultanbeyli’de DEAŞ operasyonu, 1 terörist öldürüldü</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/04/yeni-nesil-suc-orgutlerine-2-ilde-operasyon-42-gozalti.html</loc>
     <news:news>
       <news:publication>
@@ -21,6 +76,17 @@
       </news:publication>
       <news:publication_date>2026-09-04T16:44:00+03:00</news:publication_date>
       <news:title>Yeni nesil suç örgütlerine 2 ilde operasyon: 42 gözaltı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/yeni-nesil-suc-orgutlerine-operasyon-42-gozalti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T16:44:00+03:00</news:publication_date>
+      <news:title>Yeni nesil suç örgütlerine operasyon: 42 gözaltı</news:title>
     </news:news>
   </url>
   <url>
@@ -46,17 +112,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/dgs-tercih-sonucu-2026-dgs-tercih-sonuclari-ne-zaman-acikla.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T16:21:00+03:00</news:publication_date>
-      <news:title>DGS TERCİH SONUCU 2026: DGS tercih sonuçları ne zaman açıklanacak? 2026 DGS tercih sonuç tarihi belli oldu mu?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/eski-abb-baskani-melih-gokcek-ifade-vermek-icin-adliyede.html</loc>
     <news:news>
       <news:publication>
@@ -68,25 +123,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/eski-ankara-buyuksehir-belediye-baskani-ibrahim-melih-gokcek.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-ifade-vermek-icin-adliyede.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-04T16:00:54+03:00</news:publication_date>
-      <news:title>Eski Ankara Büyükşehir Belediye Başkanı İbrahim Melih Gökçek ifade verecek</news:title>
+      <news:publication_date>2026-09-04T15:55:00+03:00</news:publication_date>
+      <news:title>Son dakika: Melih Gökçek ifade vermek için adliyede</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/memleket-partisi-genel-baskani-muharrem-inceden-chp-ve-yeni.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-haberler-muharrem-inceden-chp-ve-yeni-partiye.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-04T15:45:35+03:00</news:publication_date>
-      <news:title>Memleket Partisi Genel Başkanı Muharrem İnce&#x27;den CHP ve YENİ Parti&#x27;ye çağrı</news:title>
+      <news:title>Son dakika haberler: Muharrem İnce&#x27;den CHP ve YENİ Parti&#x27;ye çağrı | Son dakika haberleri</news:title>
     </news:news>
   </url>
   <url>
@@ -98,6 +153,17 @@
       </news:publication>
       <news:publication_date>2026-09-04T15:45:03+03:00</news:publication_date>
       <news:title>Kenti dolu vurdu! Fındık büylüğünde dolu zor anlar yaşattı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-melih-gokcek-donemini-de-kapsiyor-ankara-buyu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-04T15:45:00+03:00</news:publication_date>
+      <news:title>Son dakika... Melih Gökçek dönemini de kapsıyor: Ankara Büyükşehir Belediyesi&#x27;nden ihale alan 36 şirket hakkında soruşturma!</news:title>
     </news:news>
   </url>
   <url>
@@ -120,17 +186,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T15:37:00+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Recep Tayyip Erdoğan konuşuyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-cumhurbaskani-erdogan-aciklamalarda-bulunuyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:37:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA! Cumhurbaşkanı Erdoğan açıklamalarda bulunuyor</news:title>
     </news:news>
   </url>
   <url>
@@ -175,17 +230,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T15:27:15+03:00</news:publication_date>
       <news:title>Belçika &#x27;ekokırım&#x27; suçuna ağır cezaları yürürlüğe koydu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/tramvayin-onune-kosan-cocugu-son-anda-kurtardi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T15:22:45+03:00</news:publication_date>
-      <news:title>Tramvayın önüne koşan çocuğu son anda kurtardı!</news:title>
     </news:news>
   </url>
   <url>
@@ -376,17 +420,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/gazeteci-oya-lale-arslan-gozaltina-alindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T12:40:00+03:00</news:publication_date>
-      <news:title>Gazeteci Oya Lale Arslan gözaltına alındı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/yeni-parti-genel-baskani-ozgur-ozelden-sivas-kongresinin-1.html</loc>
     <news:news>
       <news:publication>
@@ -508,17 +541,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/ali-sabuktay-uzun-mesafeci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T11:28:00+03:00</news:publication_date>
-      <news:title>Ali SABUKTAY: Uzun mesafeci</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/kpss-maratonu-pazar-gunu-baslayacak.html</loc>
     <news:news>
       <news:publication>
@@ -527,17 +549,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T11:25:00+03:00</news:publication_date>
       <news:title>KPSS maratonu pazar günü başlayacak</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/son-dakika-akin-gurlek-duyurdu-31-avukat-hakkinda-gozalt.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T11:13:00+03:00</news:publication_date>
-      <news:title>Son dakika... Akın Gürlek duyurdu: 31 avukat hakkında gözaltı kararı, 39 avukatlık bürosunda arama!</news:title>
     </news:news>
   </url>
   <url>
@@ -593,17 +604,6 @@
       </news:publication>
       <news:publication_date>2026-09-04T10:42:30+03:00</news:publication_date>
       <news:title>Zeynep ve Erva cinayetlerinde kan donduran detaylar! Öldürüp, parçalara ayırmış!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/04/sultanbeylide-deas-operasyonu-1-terorist-olduruldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T10:36:27+03:00</news:publication_date>
-      <news:title>Sultanbeyli’de DEAŞ operasyonu, 1 terörist öldürüldü</news:title>
     </news:news>
   </url>
   <url>
@@ -860,17 +860,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/04/trump-iran-ekonomisi-cokuyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-04T04:41:00+03:00</news:publication_date>
-      <news:title>Trump: İran ekonomisi çöküyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/04/ibbye-yonelik-yolsuzluk-durusmasinda-goruntu-cekenlere-so.html</loc>
     <news:news>
       <news:publication>
@@ -978,28 +967,6 @@
       </news:publication>
       <news:publication_date>2026-09-03T19:42:00+03:00</news:publication_date>
       <news:title>SON DAKİKA HABERİ: Rusya, Karadeniz&#x27;de 2 gemiyi vurdu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/gulistan-doku-sorusturmasinda-eski-jandarma-komutan-yardimci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T19:14:00+03:00</news:publication_date>
-      <news:title>Gülistan Doku soruşturmasında eski jandarma komutan yardımcısı ile eşi tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/03/son-dakika-haberi-mit-baskani-kalindan-derin-temas-surp.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-03T16:55:00+03:00</news:publication_date>
-      <news:title>Son dakika haberi: MİT Başkanı Kalın&#x27;dan &#x27;derin&#x27; temas! Sürpriz Atina çıkarması...</news:title>
     </news:news>
   </url>
 </urlset>
