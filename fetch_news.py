@@ -341,7 +341,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 
 def fetch_and_generate():
-    rss_url = "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"
+    rss_url = "https://news.google.com/rss/search?q=(teknoloji OR haber OR sondakika OR spor OR magazin OR "kripto para" OR finans OR sağlık OR otomobil OR "yerel haberler" OR "kültür-sanat" OR oyun OR güncel OR "resmi ilanlar" OR yemek OR yaşam) when:1d&hl=tr&gl=TR&ceid=TR:tr
+"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
