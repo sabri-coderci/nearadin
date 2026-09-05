@@ -2,17 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-haberi-fenerbahce-besiktas-derbisinde-ortalik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T21:29:30+03:00</news:publication_date>
-      <news:title>Son dakika haberi: Fenerbahçe – Beşiktaş derbisinde ortalık karıştı! Skriniar ile Vlahovic tartıştı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/batmanda-teknofest-drone-sampiyonasinin-ikinci-etabi-basla.html</loc>
     <news:news>
       <news:publication>
@@ -24,14 +13,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/derbide-kavga-skriniar-ve-vlahovic-birbirine-girdi.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/05/inter-2-0-geri-dusup-napoliyi-3-2-yenerek-sezona-3te-3-il.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T21:16:19+03:00</news:publication_date>
-      <news:title>Derbide kavga! Skriniar ve Vlahovic birbirine girdi</news:title>
+      <news:publication_date>2026-09-05T21:24:12+03:00</news:publication_date>
+      <news:title>Inter, 2-0 geri düşüp Napoli&#x27;yi 3-2 yenerek sezona 3&#x27;te 3 ile başladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-unlu-oyuncu-serhat-mustafa-kilic-evinde-olu-bul.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T21:23:52+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Ünlü oyuncu Serhat Mustafa Kılıç evinde ölü bulundu: Kol ve bacaklarında morluklar...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/674-elmali-gureslerinde-ceyrek-finalistler-belli-oldu-son.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T21:20:23+03:00</news:publication_date>
+      <news:title>674. Elmalı Güreşleri&#x27;nde çeyrek finalistler belli oldu, son şampiyon elendi</news:title>
     </news:news>
   </url>
   <url>
@@ -134,6 +145,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/denizlispor-yonetimi-borclari-odeyecek-olusumlara-yol-verme.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T20:31:00+03:00</news:publication_date>
+      <news:title>Denizlispor yönetimi, borçları ödeyecek oluşumlara yol vermek için istifa dilekçelerini sundu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/ekenler-beton-sivasspor-antalyaspor-deplasmanina-hazir.html</loc>
     <news:news>
       <news:publication>
@@ -178,6 +200,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-serhat-mustafa-kilic-evinde-olu-bulundu-ezel.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T20:23:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Serhat Mustafa Kılıç evinde ölü bulundu! &#x27;Ezel&#x27;, &#x27;Seksenler&#x27; ve &#x27;Kuruluş Osman&#x27;ın yıldızından acı haber</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/besiktas-derbide-emirhan-topcu-ile-basladi-djalo-yedek-kald.html</loc>
     <news:news>
       <news:publication>
@@ -186,17 +219,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T20:16:32+03:00</news:publication_date>
       <news:title>Beşiktaş derbide Emirhan Topçu ile başladı, Djalo yedek kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/besiktasta-4-yeni-transfer-ilk-kez-fenerbahce-derbisinde-fo.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T20:13:22+03:00</news:publication_date>
-      <news:title>Beşiktaş&#x27;ta 4 yeni transfer ilk kez Fenerbahçe derbisinde forma giydi</news:title>
     </news:news>
   </url>
   <url>
@@ -219,6 +241,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T20:09:00+03:00</news:publication_date>
       <news:title>Akın Gürlek&#x27;ten son dakika açıklaması: Bakanlıktan dev operasyon! Binlercesi kapatıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/canli-anlatim-kiran-kirana-mucadelede-3-gol-var-tempo-inani.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T20:01:02+03:00</news:publication_date>
+      <news:title>Canlı anlatım: Kıran kırana mücadelede 3 gol var tempo inanılmaz</news:title>
     </news:news>
   </url>
   <url>
@@ -277,17 +310,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-serhat-mustafa-kilic-evinde-olu-bulundu-sorust.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T19:47:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Serhat Mustafa Kılıç evinde ölü bulundu! Soruşturma başlatıldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/osimhende-buyuk-tehlike-o-maclari-kacirabilir.html</loc>
     <news:news>
       <news:publication>
@@ -307,17 +329,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T19:44:30+03:00</news:publication_date>
       <news:title>Silivri açıklarındaki gemi kazasında 4&#x27;üncü gün | &#x27;Tuğberk İmamoğlu&#x27; gemisinin deniz altındaki görüntülerine ulaşıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-bakirkoyde-otel-yangini-12-yarali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T19:43:55+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Bakırköy&#x27;de otel yangını: 12 yaralı</news:title>
     </news:news>
   </url>
   <url>
@@ -497,17 +508,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/fenerbahce-besiktas-derbisinde-ilk-11ler-belli-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:53:06+03:00</news:publication_date>
-      <news:title>Fenerbahçe-Beşiktaş derbisinde ilk 11&#x27;ler belli oldu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-unlu-oyuncu-serhat-kilic-evinde-olu-bulundu-sor.html</loc>
     <news:news>
       <news:publication>
@@ -516,6 +516,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:50:59+03:00</news:publication_date>
       <news:title>SON DAKİKA: Ünlü oyuncu Serhat Kılıç evinde ölü bulundu, soruşturma başlatıldı! Serhat Kılıç kimdir?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/cevdet-yilmaz-ovpyi-yarin-saat-1100de-kamuoyuyla-paylasa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T18:50:32+03:00</news:publication_date>
+      <news:title>Cevdet Yılmaz: OVP&#x27;yi yarın saat 11.00&#x27;de kamuoyuyla paylaşacağız</news:title>
     </news:news>
   </url>
   <url>
@@ -558,7 +569,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T18:40:00+03:00</news:publication_date>
+      <news:publication_date>2026-09-05T18:41:59+03:00</news:publication_date>
       <news:title>Son dakika | Ünlü oyuncu Serhat Kılıç evinde ölü bulundu</news:title>
     </news:news>
   </url>
@@ -574,17 +585,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-unlu-oyuncu-serhat-mustafa-kilic-evinde-olu-bul.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:36:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Ünlü oyuncu Serhat Mustafa Kılıç evinde ölü bulundu: Kol ve bacaklarında morluklar...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/unlu-oyuncu-serhat-mustafa-kilic-evinde-olu-bulundu.html</loc>
     <news:news>
       <news:publication>
@@ -593,17 +593,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:35:02+03:00</news:publication_date>
       <news:title>Ünlü oyuncu Serhat Mustafa Kılıç evinde ölü bulundu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-oyuncu-serhat-kilic-evinde-olu-bulundu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:35:00+03:00</news:publication_date>
-      <news:title>Son Dakika: Oyuncu Serhat Kılıç evinde ölü bulundu</news:title>
     </news:news>
   </url>
   <url>
@@ -703,17 +692,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T17:44:00+03:00</news:publication_date>
       <news:title>SON DAKİKA: Tuğberk İmamoğlu&#x27;nun enkazından ilk görüntüler! 720 metre derinlikte bulunmuştu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/filenin-sultanlari-cev-avrupa-sampiyonasinda-finale-yuksel.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T17:39:00+03:00</news:publication_date>
-      <news:title>Filenin Sultanları, CEV Avrupa Şampiyonası&#x27;nda finale yükseldi</news:title>
     </news:news>
   </url>
   <url>
@@ -915,17 +893,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/doa-sistemiyle-2-ayda-200-milyonu-askin-ambalaj-toplandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T12:51:00+03:00</news:publication_date>
-      <news:title>DOA sistemiyle 2 ayda 200 milyonu aşkın ambalaj toplandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-girnedeki-faciada-olu-sayisi-13e-yukseldi.html</loc>
     <news:news>
       <news:publication>
@@ -1025,6 +992,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-uskudar-belediyesi-baskanvekili-secimi-ertelen.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T10:36:00+03:00</news:publication_date>
+      <news:title>Son dakika... Üsküdar Belediyesi Başkanvekili seçimi ertelendi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-uskudarda-baskanvekili-secimi-8-eylule-ertele.html</loc>
     <news:news>
       <news:publication>
@@ -1077,6 +1055,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T08:37:24+03:00</news:publication_date>
       <news:title>Galatasaray&#x27;da Victor Osimhen oyuna devam edemedi! Okan Buruk son durumunu açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-bakirkoyde-otel-yangini-12-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T08:03:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA... Bakırköy&#x27;de otel yangını: 12 yaralı</news:title>
     </news:news>
   </url>
   <url>
