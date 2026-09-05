@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-derbide-kavga-skriniar-ve-vlahovic-birbirine-g.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/05/derbide-kavga-skriniar-ve-vlahovic-birbirine-girdi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-05T21:14:40+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Derbide kavga! Skriniar ve Vlahovic birbirine girdi</news:title>
+      <news:title>Derbide kavga! Skriniar ve Vlahovic birbirine girdi</news:title>
     </news:news>
   </url>
   <url>
@@ -35,14 +35,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/isgalci-israil-bati-seriada-yayilmaci-politikasini-artiriy.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/05/erzurumspor-fk-teknik-direktoru-ozbalta-konyaspor-galibiyet.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T20:58:00+03:00</news:publication_date>
-      <news:title>İşgalci İsrail, Batı Şeria&#x27;da yayılmacı politikasını artırıyor</news:title>
+      <news:publication_date>2026-09-05T21:03:12+03:00</news:publication_date>
+      <news:title>Erzurumspor FK Teknik Direktörü Özbalta, Konyaspor galibiyetini değerlendirdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/fenerbahce-besiktas-derbisinde-ilk-yari-1-1-bitti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T21:02:13+03:00</news:publication_date>
+      <news:title>Fenerbahçe-Beşiktaş derbisinde ilk yarı 1-1 bitti</news:title>
     </news:news>
   </url>
   <url>
@@ -200,17 +211,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/muglaspor-nijerya-asilli-abdli-osundinayi-casa-piadan-ki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T20:01:21+03:00</news:publication_date>
-      <news:title>Muğlaspor, Nijerya asıllı ABD&#x27;li Osundina&#x27;yı Casa Pia&#x27;dan kiraladı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/derbide-iyilikte-hepimiz-ayni-takimdayiz-mesaji-verilerek.html</loc>
     <news:news>
       <news:publication>
@@ -230,17 +230,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T19:59:21+03:00</news:publication_date>
       <news:title>İmam Hatipliler Kurultayı Trabzon&#x27;da Son Buldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/tugba-ekinci-gozaltina-alindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T19:58:33+03:00</news:publication_date>
-      <news:title>Tuğba Ekinci gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -351,17 +340,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T19:31:44+03:00</news:publication_date>
       <news:title>Erzurumspor siftah yaptı! Konyaspor&#x27;un kabusu 7 maça çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/filenin-sultanlari-finale-cikti-gozler-ebrari-aradi-neden.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T19:29:54+03:00</news:publication_date>
-      <news:title>Filenin Sultanları finale çıktı, gözler Ebrar&#x27;ı aradı! Nedeni belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -558,7 +536,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T18:41:59+03:00</news:publication_date>
+      <news:publication_date>2026-09-05T18:40:00+03:00</news:publication_date>
       <news:title>Son dakika | Ünlü oyuncu Serhat Kılıç evinde ölü bulundu</news:title>
     </news:news>
   </url>
@@ -593,6 +571,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:35:02+03:00</news:publication_date>
       <news:title>Ünlü oyuncu Serhat Mustafa Kılıç evinde ölü bulundu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-oyuncu-serhat-kilic-evinde-olu-bulundu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T18:35:00+03:00</news:publication_date>
+      <news:title>Son Dakika: Oyuncu Serhat Kılıç evinde ölü bulundu</news:title>
     </news:news>
   </url>
   <url>
@@ -640,14 +629,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/afyonkarahisarda-mxgp-turkiyede-ilk-gun-yarislari-tamamlan.html</loc>
+    <loc>https://nearadin.net/haber/2026/09/05/tugba-ekinci-gozaltina-alindi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T18:24:12+03:00</news:publication_date>
-      <news:title>Afyonkarahisar&#x27;da MXGP Türkiye&#x27;de ilk gün yarışları tamamlandı</news:title>
+      <news:publication_date>2026-09-05T18:29:27+03:00</news:publication_date>
+      <news:title>Tuğba Ekinci gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -670,6 +659,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:18:00+03:00</news:publication_date>
       <news:title>Son dakika... Ünlü şarkıcı Tuğba Ekinci gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-tugba-ekincinin-de-aralarinda-oldugu-5-kisi-go.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T18:09:00+03:00</news:publication_date>
+      <news:title>Son dakika | Tuğba Ekinci’nin de aralarında olduğu 5 kişi gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -805,24 +805,13 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/besiktasta-fenerbahce-derbisine-saatler-kala-son-dakika-gel.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T15:29:32+03:00</news:publication_date>
-      <news:title>Beşiktaş&#x27;ta Fenerbahçe derbisine saatler kala son dakika gelişmesi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-manisada-orman-yangini-ucak-ve-helikopterlerl.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T15:22:15+03:00</news:publication_date>
+      <news:publication_date>2026-09-05T15:21:00+03:00</news:publication_date>
       <news:title>Son dakika | Manisa&#x27;da orman yangını! Uçak ve helikopterlerle müdahale</news:title>
     </news:news>
   </url>
@@ -868,6 +857,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T14:15:00+03:00</news:publication_date>
       <news:title>Selahattin Demirtaş duyurdu: &#x27;Selçuk Mızraklı, salı günü tahliye olacak&#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-silivri-aciklarinda-batan-tugberk-imamoglu-gemi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T14:13:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Silivri açıklarında batan Tuğberk İmamoğlu gemisinin enkazı bulundu</news:title>
     </news:news>
   </url>
   <url>
@@ -981,6 +981,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-girnedeki-faciada-can-kaybi-13e-yukseldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T10:51:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | Girne&#x27;deki faciada can kaybı 13&#x27;e yükseldi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-seri-katil-fethi-dagli-dehset-evinde-cinayeti-an.html</loc>
     <news:news>
       <news:publication>
@@ -1022,28 +1033,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T10:23:00+03:00</news:publication_date>
       <news:title>Trafik uygulamasında silahlı saldırıya uğrayan polis şehit oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-uskudar-belediyesi-baskanvekili-secimi-8-eylul.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T10:08:01+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Üsküdar Belediyesi başkanvekili seçimi 8 Eylül&#x27;e ertelendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-ankarada-uyusturucu-ve-fuhus-sorusturmasi-21.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T09:48:00+03:00</news:publication_date>
-      <news:title>Son dakika... Ankara’da uyuşturucu ve fuhuş soruşturması: 21 şüpheliye eş zamanlı operasyon</news:title>
     </news:news>
   </url>
   <url>
@@ -1132,17 +1121,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T01:16:00+03:00</news:publication_date>
       <news:title>Atama ve görevden alma kararları Resmi Gazete&#x27;de yayımlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-deprem-mi-oldu-az-once-deprem-nerede-oldu-istan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T00:00:00+03:00</news:publication_date>
-      <news:title>Son dakika deprem mi oldu? Az önce deprem nerede oldu? İstanbul, Ankara, İzmir ve il il AFAD son depremler 05 Eylül 2026</news:title>
     </news:news>
   </url>
   <url>
