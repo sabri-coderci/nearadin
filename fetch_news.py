@@ -5,6 +5,8 @@ import datetime
 import re
 import os
 import html
+import json
+import tweepy
 from email.utils import parsedate_to_datetime
 
 def slugify(text):
@@ -12,13 +14,76 @@ def slugify(text):
     replacements = {
         'ı': 'i', 'ğ': 'g', 'ü': 'u', 'ş': 's', 'ö': 'o', 'ç': 'c',
         'İ': 'i', 'Ğ': 'g', 'Ü': 'u', 'Ş': 's', 'Ö': 'o', 'Ç': 'c',
-        
     }
     for search, replace in replacements.items():
         text = text.replace(search, replace)
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
+
+
+def share_on_twitter(news_list):
+    """X (Twitter) Üzerinde Otomatik Paylaşım Yapan Fonksiyon"""
+    # API anahtarlarını ortam değişkenlerinden (GitHub Secrets) al
+    API_KEY = os.getenv("X_API_KEY")
+    API_SECRET = os.getenv("X_API_SECRET")
+    ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+    ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+
+    # Anahtarlar tanımlı değilse işlemi atla
+    if not all([API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET]):
+        print("X API anahtarları eksik veya bulunamadı, X paylaşımı atlanıyor.")
+        return
+
+    TWEETED_FILE = "tweeted_news.json"
+
+    # Daha önce atılan tweet kayıtlarını yükle
+    tweeted_urls = set()
+    if os.path.exists(TWEETED_FILE):
+        try:
+            with open(TWEETED_FILE, "r", encoding="utf-8") as f:
+                tweeted_urls = set(json.load(f))
+        except Exception as e:
+            print(f"Tweet geçmişi okunamadı: {e}")
+
+    try:
+        # X API v2 Bağlantısı
+        client = tweepy.Client(
+            consumer_key=API_KEY,
+            consumer_secret=API_SECRET,
+            access_token=ACCESS_TOKEN,
+            access_token_secret=ACCESS_TOKEN_SECRET
+        )
+
+        # En eskiden en yeniye doğru taranması için ters çevrilir
+        for news in reversed(news_list):
+            if news['full_url'] not in tweeted_urls:
+                title = news['title']
+                url = news['full_url']
+                
+                # Karakter uzunluğuna göre başlığı kısaltma (280 karakter sınırı)
+                max_title_len = 280 - len(url) - 30
+                if len(title) > max_title_len:
+                    title = title[:max_title_len - 3] + "..."
+
+                tweet_text = f"🔴 SON DAKİKA\n\n{title}\n\nDetaylar 🔗 {url}\n\n#sondakika #haber #nearadin"
+
+                # Tweet Gönder
+                client.create_tweet(text=tweet_text)
+                print(f"X üzerinde paylaşıldı: {news['title']}")
+
+                # Paylaşılan haberi kaydet
+                tweeted_urls.add(news['full_url'])
+
+                # Hız limitine (Rate limit) takılmamak için tek seferde en yeni 1 haberi paylaşır
+                break 
+
+        # Güncel geçmişi dosyaya yaz
+        with open(TWEETED_FILE, "w", encoding="utf-8") as f:
+            json.dump(list(tweeted_urls), f, ensure_ascii=False, indent=2)
+
+    except Exception as e:
+        print(f"X (Twitter) paylaşım hatası: {e}")
 
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
@@ -40,8 +105,6 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
                  <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
-                
-                
             </ul>
         </nav>
     </header>
@@ -87,7 +150,6 @@ def get_footer_html():
                         <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
                         <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
-                       
                     </ul>
                 </div>
             </div>
@@ -376,8 +438,6 @@ def fetch_and_generate():
         admatic_code=admatic_code
     )
 
-    
-
     try:
         req = urllib.request.Request(rss_url, headers=headers)
         response = urllib.request.urlopen(req, timeout=60)
@@ -580,23 +640,20 @@ def fetch_and_generate():
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
                 <a href="/haber/{news['date_folder']}/" class="btn btn-secondary">← {news['date_str']} Tarihli Tüm Haberlere Dön</a>
             </div>
-                  <!-- Mobil Uyumlu Disqus Yorum Alanı -->
-        
-                <div id="disqus_thread" style="width: 100%;"></div>
-                <script>
-                    var disqus_config = function () {{
-                        this.page.url = '{news['full_url']}';
-                        this.page.identifier = '{news['internal_link']}';
-                    }};
-                    (function() {{
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://nearadin.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    }})();
-                </script>
-            
-
+            <!-- Mobil Uyumlu Disqus Yorum Alanı -->
+            <div id="disqus_thread" style="width: 100%;"></div>
+            <script>
+                var disqus_config = function () {{
+                    this.page.url = '{news['full_url']}';
+                    this.page.identifier = '{news['internal_link']}';
+                }};
+                (function() {{
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://nearadin.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                }})();
+            </script>
 
             <div class="related-news">
                 <div class="related-title">🔥 Diğer Son Dakika Gelişmeleri</div>
@@ -604,9 +661,6 @@ def fetch_and_generate():
                     {other_news_html}
                 </ul>
             </div>
-
-
-
 
             {whos_amung_us_code}
         </article>
@@ -640,14 +694,11 @@ def fetch_and_generate():
             if news["idx"] == 1:
                 news_cards_html += admatic_code
 
-        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI (BİRİKMİŞ VERİ YAPISI) ---
-        import json
-
+        # --- HER GÜN İÇİN ÖZEL GÜNLÜK İNDEKS SAYFASI ---
         for folder_path, group_data in daily_news_grouped.items():
             json_path = f"haber/{folder_path}/news.json"
             accumulated_news = []
 
-            # 1. O güne ait önceden birikmiş haberler varsa JSON'dan oku
             if os.path.exists(json_path):
                 try:
                     with open(json_path, "r", encoding="utf-8") as jf:
@@ -655,21 +706,17 @@ def fetch_and_generate():
                 except Exception:
                     accumulated_news = []
 
-            # 2. RSS'ten yeni gelen haberleri mükerrer olmayacak şekilde listeye ekle
             existing_urls = {item['full_url'] for item in accumulated_news}
             for new_item in group_data["news_items"]:
                 if new_item['full_url'] not in existing_urls:
                     accumulated_news.append(new_item)
                     existing_urls.add(new_item['full_url'])
 
-            # 3. Haberleri saat sırasına göre diz (en yeni en üstte)
             accumulated_news.sort(key=lambda x: x['time'], reverse=True)
 
-            # 4. Güncellenmiş birikmiş haber listesini JSON olarak sakla
             with open(json_path, "w", encoding="utf-8") as jf:
                 json.dump(accumulated_news, jf, ensure_ascii=False, indent=2)
 
-            # 5. İndeks HTML sayfasını o gün biriken TÜM haberlerle oluştur
             day_cards_html = ""
             for idx, d_news in enumerate(accumulated_news):
                 day_cards_html += f'''
@@ -735,7 +782,6 @@ def fetch_and_generate():
             with open(f"haber/{folder_path}/index.html", "w", encoding="utf-8") as f:
                 f.write(daily_index_html)
 
-
         # Anasayfa (index.html)
         full_html = f'''<!DOCTYPE html>
 <html lang="tr">
@@ -747,28 +793,20 @@ def fetch_and_generate():
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
-        
         .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
-
         .status-bar {{ background: white; border-radius: 8px; padding: 10px 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #65676b; border: 1px solid #e4e6eb; margin-top: 10px; }}
-        
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
-        
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
         .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
         .time {{ color: #8d949e; margin-left: auto; }}
-        
         .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
         .news-title a {{ color: #050505; text-decoration: none; }}
         .news-title a:hover {{ color: #1877f2; }}
-
         .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
-        
         .card-footer {{ display: flex; justify-content: flex-end; }}
         .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
-
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
@@ -848,7 +886,6 @@ def fetch_and_generate():
     <priority>0.8</priority>
   </url>\n'''
 
-                # XML Sitemap & Arşiv Yapısı
         archive_dates_dict = {}
 
         if os.path.exists("haber"):
@@ -858,7 +895,6 @@ def fetch_and_generate():
                         rel_path = os.path.relpath(os.path.join(root_dir, file_name), "haber")
                         clean_rel_path = rel_path.replace("\\", "/")
                         
-                        # 1. Günlük index.html sayfalarını haber URL'i olarak ekleme
                         if file_name == "index.html":
                             continue
                             
@@ -874,15 +910,12 @@ def fetch_and_generate():
                         path_parts = clean_rel_path.split('/')
                         if len(path_parts) >= 3:
                             year, month, day = path_parts[0], path_parts[1], path_parts[2]
-                            
-                            # 2. Doğru sıralama için key: YYYY/MM/DD, value: (GG.AA.YYYY, Link)
                             sort_key = f"{year}/{month}/{day}"
                             d_str = f"{day}.{month}.{year}"
                             folder_link = f"/haber/{year}/{month}/{day}/"
                             
                             archive_dates_dict[sort_key] = (d_str, folder_link)
 
-        # Ana Arşiv Sayfası (arsiv/index.html) - YYYY/MM/DD formatına göre doğru sıralama
         archive_list_html = ""
         for sort_key in sorted(archive_dates_dict.keys(), reverse=True):
             d_str, folder_link = archive_dates_dict[sort_key]
@@ -893,7 +926,6 @@ def fetch_and_generate():
                     <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
                 </a>
             </li>'''
-
 
         archive_page_html = f'''<!DOCTYPE html>
 <html lang="tr">
@@ -962,12 +994,13 @@ def fetch_and_generate():
         with open("news-sitemap.xml", "w", encoding="utf-8") as f:
             f.write(news_sitemap_content)
 
-        print("Betik başarıyla çalıştı. Canlı Maç Sonuçları, Hava Durumu, Film-izle, Arama (search.html), sitemap.xml ve news-sitemap.xml güncellendi.")
+        # --- X (TWITTER) OTOMATİK PAYLAŞIM TETİKLEMESİ ---
+        share_on_twitter(news_list)
 
-            
+        print("Betik başarıyla çalıştı. Site sayfaları güncellendi ve X (Twitter) otomasyonu tamamlandı.")
+
     except Exception as e:
         print(f"Hata oluştu: {e}")
 
 if __name__ == "__main__":
     fetch_and_generate()
-
