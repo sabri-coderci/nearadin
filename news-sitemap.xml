@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/son-dakika-haberi-fenerbahce-besiktas-derbisinde-ortalik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T21:29:30+03:00</news:publication_date>
+      <news:title>Son dakika haberi: Fenerbahçe – Beşiktaş derbisinde ortalık karıştı! Skriniar ile Vlahovic tartıştı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/batmanda-teknofest-drone-sampiyonasinin-ikinci-etabi-basla.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T21:27:00+03:00</news:publication_date>
+      <news:title>Batman&#x27;da TEKNOFEST Drone Şampiyonası&#x27;nın ikinci etabı başladı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/derbide-kavga-skriniar-ve-vlahovic-birbirine-girdi.html</loc>
     <news:news>
       <news:publication>
@@ -142,17 +164,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T20:27:27+03:00</news:publication_date>
       <news:title>CANLI | Fenerbahçe – Beşiktaş | Dev maçta ilk düdük çaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/fenerbahce-besiktas-derbisinde-ilk-15-dakika-golsuz-gecildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T20:27:21+03:00</news:publication_date>
-      <news:title>Fenerbahçe-Beşiktaş derbisinde ilk 15 dakika golsüz geçildi</news:title>
     </news:news>
   </url>
   <url>
@@ -343,6 +354,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/09/05/filenin-sultanlari-finale-cikti-gozler-ebrari-aradi-neden.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T19:29:54+03:00</news:publication_date>
+      <news:title>Filenin Sultanları finale çıktı, gözler Ebrar&#x27;ı aradı! Nedeni belli oldu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/09/05/son-dakika-unlu-oyuncu-serhat-kilic-evinde-olu-bulundu-ser.html</loc>
     <news:news>
       <news:publication>
@@ -497,17 +519,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/cevdet-yilmaz-ovpyi-yarin-saat-1100de-kamuoyuyla-paylasa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:50:32+03:00</news:publication_date>
-      <news:title>Cevdet Yılmaz: OVP&#x27;yi yarın saat 11.00&#x27;de kamuoyuyla paylaşacağız</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/trabzonspor-yarin-sahasinda-genclerbirligini-agirlayacak.html</loc>
     <news:news>
       <news:publication>
@@ -527,6 +538,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:45:00+03:00</news:publication_date>
       <news:title>Şehit polisimiz Mehmet Ali Topatan son yolculuğuna uğurlandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/girnedeki-gemide-can-kaybi-13e-yukseldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T18:44:26+03:00</news:publication_date>
+      <news:title>Girne&#x27;deki gemide can kaybı 13&#x27;e yükseldi</news:title>
     </news:news>
   </url>
   <url>
@@ -596,17 +618,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/09/05/trabzonspor-ile-bakirkoy-arasindaki-kadin-futbol-maci-tatil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:34:12+03:00</news:publication_date>
-      <news:title>Trabzonspor ile Bakırköy arasındaki kadın futbol maçı tatil edildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/09/05/unlu-oyuncu-serhat-mustafa-kilic-evinde-olu-bulundu-kiz-ark.html</loc>
     <news:news>
       <news:publication>
@@ -615,17 +626,6 @@
       </news:publication>
       <news:publication_date>2026-09-05T18:31:23+03:00</news:publication_date>
       <news:title>Ünlü oyuncu Serhat Mustafa Kılıç evinde ölü bulundu! Kız arkadaşı hastalığını açıkladı - Magazin Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/09/05/fenerbahce-ve-besiktasin-otobusleri-chobani-stadyumuna-ula.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-05T18:31:13+03:00</news:publication_date>
-      <news:title>Fenerbahçe ve Beşiktaş&#x27;ın otobüsleri Chobani Stadyumu&#x27;na ulaştı</news:title>
     </news:news>
   </url>
   <url>
@@ -703,6 +703,17 @@
       </news:publication>
       <news:publication_date>2026-09-05T17:44:00+03:00</news:publication_date>
       <news:title>SON DAKİKA: Tuğberk İmamoğlu&#x27;nun enkazından ilk görüntüler! 720 metre derinlikte bulunmuştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/09/05/filenin-sultanlari-cev-avrupa-sampiyonasinda-finale-yuksel.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T17:39:00+03:00</news:publication_date>
+      <news:title>Filenin Sultanları, CEV Avrupa Şampiyonası&#x27;nda finale yükseldi</news:title>
     </news:news>
   </url>
   <url>
