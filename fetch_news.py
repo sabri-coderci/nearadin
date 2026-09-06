@@ -881,7 +881,8 @@ def fetch_and_generate():
     <priority>0.9</priority>
   </url>\n'''
 
-    archive_dates_dict = {}
+    # --- ARŞİV SAYFASI OLUŞTURMA (KATEGORİ BAZLI GRUPLANDIRMA) ---
+    category_archives = {cat_slug: {} for cat_slug in CATEGORIES.keys()}
 
     for cat_slug in CATEGORIES.keys():
         if os.path.exists(cat_slug):
@@ -906,22 +907,39 @@ def fetch_and_generate():
                         path_parts = clean_rel_path.split('/')
                         if len(path_parts) >= 3:
                             year, month, day = path_parts[0], path_parts[1], path_parts[2]
-                            sort_key = f"{year}/{month}/{day}/{cat_slug}"
-                            d_str = f"{day}.{month}.{year} ({CATEGORIES[cat_slug]['name']})"
+                            sort_key = f"{year}/{month}/{day}"
+                            d_str = f"{day}.{month}.{year}"
                             folder_link = f"/{cat_slug}/{year}/{month}/{day}/"
                             
-                            archive_dates_dict[sort_key] = (d_str, folder_link)
+                            category_archives[cat_slug][sort_key] = (d_str, folder_link)
 
-    archive_list_html = ""
-    for sort_key in sorted(archive_dates_dict.keys(), reverse=True):
-        d_str, folder_link = archive_dates_dict[sort_key]
-        archive_list_html += f'''
-        <li style="background: white; padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
-            <a href="{folder_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit;">
-                <span style="font-weight: 600; color: #333; font-size: 15px;">📅 {d_str} Haberleri</span>
-                <span style="font-size: 13px; color: #1877f2; font-weight: bold;">Tüm Liste →</span>
-            </a>
-        </li>'''
+    archive_blocks_html = ""
+    for cat_slug, cat_info in CATEGORIES.items():
+        dates_dict = category_archives.get(cat_slug, {})
+        if not dates_dict:
+            continue
+
+        date_items_html = ""
+        for sort_key in sorted(dates_dict.keys(), reverse=True):
+            d_str, folder_link = dates_dict[sort_key]
+            date_items_html += f'''
+            <li style="border-bottom: 1px solid #f0f2f5; padding: 10px 15px;">
+                <a href="{folder_link}" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #1c1e21; font-size: 14px;">
+                    <span>📅 {d_str} {cat_info['name']} Haberleri</span>
+                    <span style="font-size: 12px; color: #1877f2; font-weight: bold;">Arşivi İncele →</span>
+                </a>
+            </li>'''
+
+        archive_blocks_html += f'''
+        <div style="background: white; border-radius: 10px; border: 1px solid #e4e6eb; margin-bottom: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); overflow: hidden;">
+            <div style="background-color: #f7f8fa; padding: 12px 16px; border-bottom: 1px solid #e4e6eb; font-weight: bold; font-size: 16px; color: #0056b3; display: flex; justify-content: space-between; align-items: center;">
+                <span>📌 {cat_info['name']} Arşivi</span>
+                <a href="/{cat_slug}/" style="font-size: 12px; color: #1877f2; text-decoration: none;">Kategoriye Git →</a>
+            </div>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                {date_items_html}
+            </ul>
+        </div>'''
 
     archive_page_html = f'''<!DOCTYPE html>
 <html lang="tr">
@@ -929,13 +947,14 @@ def fetch_and_generate():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haber Arşivi - nearadin.net</title>
-    <meta name="description" content="nearadin.net gün bazlı geçmiş son dakika haber arşivleri." />
+    <meta name="description" content="nearadin.net kategorilere göre tarihlendirilmiş güncel haber arşivleri." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
         h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
-        ul {{ list-style: none; }}
+        .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
+        .ad-container:empty {{ display: none !important; }}
     </style>
 </head>
 <body>
@@ -945,10 +964,8 @@ def fetch_and_generate():
 
     {header_html}
     <div class="container">
-        <h1>Gün ve Kategori Bazlı Haber Arşivi</h1>
-        <ul>
-            {archive_list_html if archive_list_html else '<p>Henüz arşivlenmiş gün bulunmuyor.</p>'}
-        </ul>
+        <h1>📁 Kategorilere Göre Günlük Arşiv</h1>
+        {archive_blocks_html if archive_blocks_html else '<p style="background: white; padding: 15px; border-radius: 8px;">Henüz arşivlenmiş gün bulunmuyor.</p>'}
     </div>
     {footer_html}
 </body>
@@ -991,7 +1008,7 @@ def fetch_and_generate():
     # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
     share_on_twitter(news_list)
 
-    print("İşlem tamamlandı. Tıklanabilir kategori linkleri ve güncellenmiş hamburger menü uygulandı.")
+    print("İşlem tamamlandı. Kategoriye özel arşivler başarıyla güncellendi.")
 
 if __name__ == "__main__":
     fetch_and_generate()
