@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünya - 06.09.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Dünya kategorisinde 06.09.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Dünya - 06.09.2026 (33 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haber 7</span>
+                    <span class="time">21:40</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/karadenizde-tansiyon-yukseldi-rusya-askeri-yuk-tasiyan-gem.html">Karadeniz’de tansiyon yükseldi! Rusya askeri yük taşıyan gemiyi vurdu</a>
+                </h2>
+                <p class="news-summary">Karadeniz’de tansiyon yükseldi! Rusya askeri yük taşıyan gemiyi vurdu  Haber 7Rusya: Karadeniz’de Ukrayna ordusu için askeri yük taşıyan gemiyi vurduk  aa.com.trRusya'dan Ukrayna Güvenlik Servisi binasına İHA saldırısı  hurriyet.com.trMoskova el yükseltiyor  MilliyetUkrayna’nın Güneydoğusunda Rus Hava Saldırısı: 4 Ölü, 5 Yaralı  sana.sy</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/karadenizde-tansiyon-yukseldi-rusya-askeri-yuk-tasiyan-gem.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">20:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/netanyahudan-irana-tehdit-hayal-bile-edemeyecegi-bir-darb.html">Netanyahu’dan İran’a tehdit: Hayal bile edemeyeceği bir darbe alır</a>
+                </h2>
+                <p class="news-summary">Netanyahu’dan İran’a tehdit: Hayal bile edemeyeceği bir darbe alır  hurriyet.com.trİsrail Başbakanı Netanyahu: Önümüzdeki ana görev İran rejimini devirmek  aa.com.trBölgede yeni savaş sinyali: Netanyahu 'Sonunuz yakın' diyerek tehdit etti  Yeni ŞafakNetanyahu: İran yönetiminin sonu yakın  T24Netanyahu'dan İran'a tehdit: Sonu yakın  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/netanyahudan-irana-tehdit-hayal-bile-edemeyecegi-bir-darb.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">bloomberght.com</span>
+                    <span class="time">20:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/almanyada-eyalet-meclisi-secimini-asiri-sagci-afd-kazandi.html">Almanya'da eyalet meclisi seçimini aşırı sağcı AfD kazandı</a>
+                </h2>
+                <p class="news-summary">Almanya'da eyalet meclisi seçimini aşırı sağcı AfD kazandı  bloomberght.comSaksonya-Anhalt eyaletinde zafer AfD'nin, Merz'e büyük darbe  DW.comAlmanya'da Saksonya-Anhalt eyalet meclisi seçimini sağcı AfD kazandı  aa.com.trAlmanya'da endişe verici bir gelişme yaşanmak üzere: 'Avrupa'yı kökten değiştirebilir'  hurriyet.com.trAlmanya’da siyasi deprem: AfD oyların yüzde 44’ünü aldı  NTV Haber</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/almanyada-eyalet-meclisi-secimini-asiri-sagci-afd-kazandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">20:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/husilerden-suudi-arabistan-destekli-guclerin-toplantisina-ba.html">Husilerden Suudi Arabistan destekli güçlerin toplantısına balistik füze saldırısı</a>
+                </h2>
+                <p class="news-summary">Husilerden Suudi Arabistan destekli güçlerin toplantısına balistik füze saldırısı  HaberlerYemen resmi haber ajansı: Husiler Taiz kentini 3 balistik füzeyle hedef aldı  aa.com.trYemen ordusu, Husilerin mevzilerini bombaladı  hurriyet.com.trYemen'de üst düzey Husi lider öldürüldü | Dış Haberler  HabertürkTaiz'de çatışmalar devam ediyor! Hükümet duyurdu  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/husilerden-suudi-arabistan-destekli-guclerin-toplantisina-ba.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">19:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/mhpden-2028-mesaji-adayimiz-yine-erdogan.html">MHP'den 2028 mesajı: Adayımız yine Erdoğan</a>
+                </h2>
+                <p class="news-summary">MHP'den 2028 mesajı: Adayımız yine Erdoğan  Sözcü GazetesiMHP seçim için adayını açıkladı! Dikkat çeken 2028 mesajı  Haber 7MHP Kayseri Kongresi'nde Güven Tazelendi  Son DakikaMHP'li Özdemir: Yunanistan İsrail'in gazıyla hareket ediyor  HaberlerMHP'den adaylık çıkışı: Allah izin verirse Erdoğan'dır  Halk TV</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/mhpden-2028-mesaji-adayimiz-yine-erdogan.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">NTV Haber</span>
+                    <span class="time">19:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/trumpin-sacina-ne-oldu-yeni-goruntusu-dikkat-cekti.html">Trump’ın saçına ne oldu? Yeni görüntüsü dikkat çekti</a>
+                </h2>
+                <p class="news-summary">Trump’ın saçına ne oldu? Yeni görüntüsü dikkat çekti  NTV HaberÇiğ Yumurta Sarısına Veda Etti: Donald Trump'tan Radikal İmaj Değişikliği!  OnedioYeni imajı gündem oldu: 'Trump artık esmer'  Yeni ŞafakTrump'ın yeni saçları şaşkına çevirdi! Alışılmış sarı saçları bir anda kahverengiye döndü  HaberlerTrump'ın altın sarısı saçlarına ne oldu? Sanal medya bu görüntüleri konuşuyor: "Artık o bir esmer..."  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/trumpin-sacina-ne-oldu-yeni-goruntusu-dikkat-cekti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">18:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/rusyadan-almanyaya-tehdit-gibi-sozler-onlar-yine-savas-i.html">Rusya'dan Almanya'ya tehdit gibi sözler! 'Onlar yine savaş istiyor'</a>
+                </h2>
+                <p class="news-summary">Rusya'dan Almanya'ya tehdit gibi sözler! 'Onlar yine savaş istiyor'  MilliyetRusya yeniden 'savaş' dedi, o ülkeyi hedef aldı  Sözcü GazetesiRusya: Almanya yine savaş istiyor  DikenAlmanya havalimanı saldırısı sonrası siber ve drone savunmasını güçlendiriyor  Investing.com TürkiyeAlmanya sabotaj tehdidine karşı 'koruma kalkanı' kuruyor: 'Cyberdome' ve İHA savunması  Euronews.com</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/rusyadan-almanyaya-tehdit-gibi-sozler-onlar-yine-savas-i.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Yeniçağ Gazetesi</span>
+                    <span class="time">18:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/eski-cia-sefinden-itiraf-korfezdeki-abd-usleri-surduruleme.html">Eski CIA şefinden itiraf: Körfez’deki ABD üsleri sürdürülemez</a>
+                </h2>
+                <p class="news-summary">Eski CIA şefinden itiraf: Körfez’deki ABD üsleri sürdürülemez  Yeniçağ GazetesiABD medyası: Trump yönetimi savaş sonrası için Orta Doğu planı yapıyor  Euronews.comABD-İran savaşı nasıl sona erebilir?  BBCHürmüz’e Kilitlenen Savaş, Mekke’de Kurulan Düzen  Sabahİran'ın Orta Doğu'daki hedefleri vurma gücüyle ABD'yi zor durumda bırakmak istediği iddia edildi  aa.com.tr</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/eski-cia-sefinden-itiraf-korfezdeki-abd-usleri-surduruleme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">aa.com.tr</span>
+                    <span class="time">17:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/iran-devrim-muhafizlari-abdye-ait-bir-ucak-gemisi-ile-bir.html">İran Devrim Muhafızları: ABD'ye ait bir uçak gemisi ile bir muhrip gemiyi hedef aldık</a>
+                </h2>
+                <p class="news-summary">İran Devrim Muhafızları: ABD'ye ait bir uçak gemisi ile bir muhrip gemiyi hedef aldık  aa.com.trGoogle Haberler uygulamasında Diğer başlıklar ve bakış açıları</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/iran-devrim-muhafizlari-abdye-ait-bir-ucak-gemisi-ile-bir.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Diken</span>
+                    <span class="time">17:32</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/misirda-unlu-televizyon-sunucusuna-idam-cezasi.html">Mısır'da ünlü televizyon sunucusuna idam cezası</a>
+                </h2>
+                <p class="news-summary">Mısır'da ünlü televizyon sunucusuna idam cezası  DikenSuç makinesi çıkan ünlü sunucu hakkında idam kararı  Sözcü GazetesiMısırlı televizyon sunucusuna idam cezası  hurriyet.com.trMısır’da kadın sunucu dahil 12 kişi, uyuşturucu suçundan idama mahkum edildi  CumhuriyetÜnlü sunucu Sarah Khalifa idama çarptırıldı! Mahkeme suçunu açıkladı...  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/misirda-unlu-televizyon-sunucusuna-idam-cezasi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Gazete Oksijen</span>
+                    <span class="time">17:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/endonezyada-yanardag-patladi-8-havalimani-kapandi-binlerc.html">Endonezya'da yanardağ patladı: 8 havalimanı kapandı, binlerce yolcu mahsur kaldı</a>
+                </h2>
+                <p class="news-summary">Endonezya'da yanardağ patladı: 8 havalimanı kapandı, binlerce yolcu mahsur kaldı  Gazete OksijenYanardağ patladı, okullar ve havalimanı kapatıldı  NTV HaberEndonezya'da yanardağ patlamasının ardından Cakarta'da uçuşlar iptal edildi  TRT HaberEndonezya'daki Anak Krakatau Yanardağı'nda patlama  SabahEndonezya’da yanardağ alarmı: Havalimanı uçuşlara kapatıldı  Euronews.com</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/endonezyada-yanardag-patladi-8-havalimani-kapandi-binlerc.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">16:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/brent-petrol-ve-dogalgazda-sert-yukselis-abd-iran-gerilimi.html">Brent petrol ve doğalgazda sert yükseliş: ABD-İran gerilimi fiyatları uçurdu</a>
+                </h2>
+                <p class="news-summary">Brent petrol ve doğalgazda sert yükseliş: ABD-İran gerilimi fiyatları uçurdu  CumhuriyetABD'den İran'a deniz ablukası: 92 geminin rotası değiştirildi  Haber 7Orta Doğu denizcilik hattında alarm: Yeni rapor uyarıyor  Kurdistan24ABD-İran gerilimi emtia piyasalarını sarstı! Petrol yükseldi, altın ve tahvillerde dengeler değişti  UzmanparaABD tankerleri vurdu, İran misilleme yaptı  NTV Haber</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/brent-petrol-ve-dogalgazda-sert-yukselis-abd-iran-gerilimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">16:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/iran-devrim-muhafizlari-erbilde-abdye-ait-gozetleme-balon.html">İran Devrim Muhafızları, Erbil'de ABD'ye ait gözetleme balonunu Şahid-136 ile imha etti</a>
+                </h2>
+                <p class="news-summary">İran Devrim Muhafızları, Erbil'de ABD'ye ait gözetleme balonunu Şahid-136 ile imha etti  Son DakikaGoogle Haberler uygulamasında Diğer başlıklar ve bakış açıları</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/iran-devrim-muhafizlari-erbilde-abdye-ait-gozetleme-balon.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Yeni Şafak</span>
+                    <span class="time">16:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/abd-25-yil-sonra-cekiliyor-tum-hava-savunma-sistemleri-soku.html">ABD 25 yıl sonra çekiliyor: Tüm hava savunma sistemleri söküldü</a>
+                </h2>
+                <p class="news-summary">ABD 25 yıl sonra çekiliyor: Tüm hava savunma sistemleri söküldü  Yeni ŞafakABD 25 yıl sonra çekiliyor! Tüm hava savunma sistemlerini de götürecek  Haber 7Irak’tan ABD güçleri için çekilme açıklaması  internethaber.comNuri el-Maliki: "Haşdi Şabi" Devlete Bağlı Bir Askeri Kurumdur  تسنیمMurad Ali | Irak'ta kritik karar: Haşdi Şabi Irak ordusuna bağlanıyor  Independent Türkçe</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/abd-25-yil-sonra-cekiliyor-tum-hava-savunma-sistemleri-soku.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">14:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/saglik-bakani-silahi-eline-aldi-yaptigi-herkesi-saskina-cev.html">Sağlık Bakanı silahı eline aldı! Yaptığı herkesi şaşkına çevirdi</a>
+                </h2>
+                <p class="news-summary">Sağlık Bakanı silahı eline aldı! Yaptığı herkesi şaşkına çevirdi  Son DakikaSuriye Sağlık Bakanı’nın silah denemesi Şam Fuarı’nda gündem oldu  Daily Ummah</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/saglik-bakani-silahi-eline-aldi-yaptigi-herkesi-saskina-cev.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">13:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/abd-askerleri-moral-icin-goturuldugu-pattayada-birbirine-gi.html">ABD askerleri moral için götürüldüğü Pattaya'da birbirine girdi</a>
+                </h2>
+                <p class="news-summary">ABD askerleri moral için götürüldüğü Pattaya'da birbirine girdi  Sözcü GazetesiAmerikan ordusunun 286 gün denizde kalan harp gemisi rezil durumda geri döndü  Sözcü Gazetesi286 gün sonra limana dönen ABD savaş gemisinin paslı görüntüsü tartışma yarattı  Euronews.comO uçak gemisini şimdi de pas tutmuş  hurriyet.com.trABD’li askerler Pattaya’da birbirine girdi  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/abd-askerleri-moral-icin-goturuldugu-pattayada-birbirine-gi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">13:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/turkiye-ve-7-ulkeden-isgalci-israile-tepki.html">Türkiye ve 7 ülkeden işgalci İsrail'e tepki</a>
+                </h2>
+                <p class="news-summary">Türkiye ve 7 ülkeden işgalci İsrail'e tepki  TRT Haberİsrail'den yeni etnik temizlik adımı: Ben-Gvir duyurdu! Çalışmalar gelecek dönemde başlayacak  hurriyet.com.trİsrail’in Filistinlileri Gazze’den çıkarma planına 8 ülkeden tepki  Euronews.com'Daha fazla soykırım’ vadediyorlar!  Yeni Şafakİsrail'den 'çıkmaz' itirafı! 'Trump-Netanyahu ilişkisi çok kötü'  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/turkiye-ve-7-ulkeden-isgalci-israile-tepki.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Milliyet</span>
+                    <span class="time">13:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/adidasa-israilli-asker-tepkisi-reklam-kampanyasi-sonrasi-b.html">Adidas'a İsrailli asker tepkisi! Reklam kampanyası sonrası boykot çağrıları büyüyor</a>
+                </h2>
+                <p class="news-summary">Adidas'a İsrailli asker tepkisi! Reklam kampanyası sonrası boykot çağrıları büyüyor  MilliyetSoykırımcı İsrail ordusunun askerini reklam yüzü yapan Adidas'a tepkiler artıyor  aa.com.trAdidas'ın skandal reklamına boykot çağrısı! İspanyol oyuncu Javier Bardem'den İsrail adımına tepki!  SabahSkandal reklama büyük tepki  hurriyet.com.trJavier Bardem'den Adidas'a boykot çağrısı  A Haber</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/adidasa-israilli-asker-tepkisi-reklam-kampanyasi-sonrasi-b.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">11:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/ruslar-ilk-kez-bunu-yapti-su-57-savas-ucaklari-resmen-geli.html">﻿Ruslar ilk kez bunu yaptı: Su-57 savaş uçakları resmen geliyor - STAR</a>
+                </h2>
+                <p class="news-summary">﻿Ruslar ilk kez bunu yaptı: Su-57 savaş uçakları resmen geliyor  STAR - HaberlerRostec, Su-57E savaş uçağından fırlatılan ilk gizli insansız hava aracını tanıttı.  vietnam.vnRusya, Bizon İHA savar sistemini Mısır'a sunuyor  ssbulten.com.trRusya'dan Mısır'da gövde gösterisi: Ka-52E helikopteri yeni yetenekleriyle sahne alıyor  Gündem AtlasRusya, Su-57 savaş uçağı için 'insansız ana gemi' konfigürasyonu geliştiriyor.  vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/ruslar-ilk-kez-bunu-yapti-su-57-savas-ucaklari-resmen-geli.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">11:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/iste-dunyanin-en-guzel-kizi-secilen-ogretmen.html">İşte dünyanın en güzel kızı seçilen öğretmen</a>
+                </h2>
+                <p class="news-summary">İşte dünyanın en güzel kızı seçilen öğretmen  Sözcü GazetesiDünyanın en güzel kızı bir öğretmen! Tacı Dominik Cumhuriyeti'ne götürdü  HaberlerMiss World 2026'yı kim kazandı? İşte dünya güzeli... - Magazin Haberleri  Mynet2026 Dünya Güzeli - Vietnam Kültürünü Yaymak ve Turizmi Teşvik Etmek  vietnam.vnMiss World 2026: Final şehri ve tarihi için resmi açıklama beklentisi içinde  HaberGo</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/iste-dunyanin-en-guzel-kizi-secilen-ogretmen.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">11:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/israilden-lubnana-yeni-tehdit-kirmiziyla-isaretlediler.html">İsrail'den Lübnan'a yeni tehdit! Kırmızıyla işaretlediler</a>
+                </h2>
+                <p class="news-summary">İsrail'den Lübnan'a yeni tehdit! Kırmızıyla işaretlediler  hurriyet.com.trİsrail Lübnan'ın güneyini vurdu. Dört kişi öldü, 20 kişi yaralandı  NTV Haberİsrail'in Lübnan'a düzenlediği son hava saldırılarında 2 gazeteci yaralandı  aa.com.trLübnan'da can kaybı 4 bini geçti | Dış Haberler  Habertürkİşgalci İsrail'in Lübnan'a düzenlediği saldırılarda en az 4 kişi öldü, 20 kişi yaralandı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/israilden-lubnana-yeni-tehdit-kirmiziyla-isaretlediler.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">09:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/papua-yeni-ginede-vahsi-yasam-parkinda-timsah-bakicisini-o.html">Papua Yeni Gine'de vahşi yaşam parkında timsah, bakıcısını öldürdü</a>
+                </h2>
+                <p class="news-summary">Papua Yeni Gine'de vahşi yaşam parkında timsah, bakıcısını öldürdü  Son DakikaSaldırı anları anbean kaydedildi: Timsah dehşeti kamerada!  hurriyet.com.trVahşi yaşam parkında dehşet anları: Timsah kendisini besleyen çalışanı öldürdü  SabahVahşi yaşam parkında dehşet anları! Timsah, kendisini besleyen çalışana saldırdı  Türkgün</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/papua-yeni-ginede-vahsi-yasam-parkinda-timsah-bakicisini-o.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">09:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/bolivyada-kislada-patlama-2-olu-81-yarali.html">Bolivya'da kışlada patlama: 2 ölü, 81 yaralı</a>
+                </h2>
+                <p class="news-summary">Bolivya'da kışlada patlama: 2 ölü, 81 yaralı  HaberlerBolivya'da kışlada patlama. 2 ölü, 81 yaralı  NTV HaberBolivya'da facia! Askeri tesiste korkutan patlama... Ölü ve yaralılar var  hurriyet.com.trBolivya’da askeri üste peş peşe patlamalar: 3 kişi öldü, 84 kişi yaralandı  CumhuriyetBolivya: Askeri kışlada meydana gelen patlamada en az 10 kişi hayatını kaybetti  Şarkul Avsat Türkçe</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/bolivyada-kislada-patlama-2-olu-81-yarali.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">09:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/125-bin-kisi-apar-topar-turkiyeye-kostu-iste-nedeni.html">125 bin kişi apar topar Türkiye'ye koştu: İşte nedeni</a>
+                </h2>
+                <p class="news-summary">125 bin kişi apar topar Türkiye'ye koştu: İşte nedeni  Sözcü GazetesiÇinliler geliyor  SabahBodrum'da turizmciler döviz kurunun bastırılmasından dertli, zarar ediyoruz  Son DakikaTurizmin kalbi Yenikapı'da  PostaSektörün önemli aktörleri İTF’de aynı oturumda buluşacak  Turizm Aktüel</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/125-bin-kisi-apar-topar-turkiyeye-kostu-iste-nedeni.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">09:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/laboratuvarda-unutulan-deney-kabindan-cikti-istenmeyen-kuf.html">Laboratuvarda unutulan deney kabından çıktı: İstenmeyen küf milyonların hayatını böyle kurtardı</a>
+                </h2>
+                <p class="news-summary">Laboratuvarda unutulan deney kabından çıktı: İstenmeyen küf milyonların hayatını böyle kurtardı  Sözcü Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/laboratuvarda-unutulan-deney-kabindan-cikti-istenmeyen-kuf.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">09:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/trump-yine-ispanyayi-hedef-aldi-sinirlarini-kontrol-edeme.html">Trump yine İspanya'yı hedef aldı: 'Sınırlarını kontrol edemeyen bir ülke'</a>
+                </h2>
+                <p class="news-summary">Trump yine İspanya'yı hedef aldı: 'Sınırlarını kontrol edemeyen bir ülke'  CumhuriyetTrump'tan skandal açıklama! NATO ülkesini hedef aldı! Başbakan İsrail'i suçladı  Haber 7İspanya’da hükümete ‘Ceuta’ baskısı  Milliyetİspanya'da muhalefet, hükümetin göç politikasına karşı sokağa indi  Dikenİspanya'ya göre, İsrail ve Rusya'nın düzensiz göçmen akınını körüklediğine dair kanıtlar var  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/trump-yine-ispanyayi-hedef-aldi-sinirlarini-kontrol-edeme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Dünya Gazetesi</span>
+                    <span class="time">08:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/yatirimcilarin-rotasi-degisti-bu-hisselere-ilgi-artti.html">Yatırımcıların rotası değişti: Bu hisselere ilgi arttı</a>
+                </h2>
+                <p class="news-summary">Yatırımcıların rotası değişti: Bu hisselere ilgi arttı  Dünya GazetesiYatırımcılar kalabalık YZ işlemlerine alternatif olarak Çin hisselerine yöneliyor  Investing.com TürkiyeABD ve Çin'den yapay zeka güvenliği için kritik adım  CNBC-eDünyanın en büyük varlık fonu olarak da bilinen Norveç varlık fonu Norges Bank Investment Management , risk dağılımını gerekçe göstererek, 2,3 trilyon dolarlık yatırım portföyündeki ABD Hazine tahvillerini azaltma kararı aldı. 🔗 https://www.fortuneturkey.com/  instagram.comXi’nin büyük bahsi: Çin bir tekno-endüstriyel süper güce mi dönüşüyor?  Forbes Türkiye</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/yatirimcilarin-rotasi-degisti-bu-hisselere-ilgi-artti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haber 7</span>
+                    <span class="time">08:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/tom-barracktan-suriye-aciklamasi-derin-bir-uzuntu-duyuyoru.html">Tom Barrack'tan Suriye açıklaması: Derin bir üzüntü duyuyoruz</a>
+                </h2>
+                <p class="news-summary">Tom Barrack'tan Suriye açıklaması: Derin bir üzüntü duyuyoruz  Haber 7Barrack’tan Süveyda uyarısı: Diyalog masasına dönülmezse felaket kaçınılmaz  Kurdistan24Suriye’de Süveyda sorunu nasıl çözülecek?  aa.com.trSüveyda’da gerilim sürüyor: Rima Hazim çevresinde çatışma  İlke TVDürziler Suriye’de bağımsızlık arayışını güçlendiriyor  MarineDeal News</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/tom-barracktan-suriye-aciklamasi-derin-bir-uzuntu-duyuyoru.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">08:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/kuduste-manastir-onunde-tepki-ceken-hareket-polisler-pesin.html">Kudüs'te manastır önünde tepki çeken hareket! Polisler peşine düştü</a>
+                </h2>
+                <p class="news-summary">Kudüs'te manastır önünde tepki çeken hareket! Polisler peşine düştü  Haberler</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/kuduste-manastir-onunde-tepki-ceken-hareket-polisler-pesin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">08:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/iktidarin-gozbebegi-artik-finlandiyada-calisacak.html">İktidarın gözbebeği artık Finlandiya'da çalışacak</a>
+                </h2>
+                <p class="news-summary">İktidarın gözbebeği artık Finlandiya'da çalışacak  Sözcü Gazetesi12 ülkeye yeni büyükelçi atandı  TRT HaberAtama kararları Resmî Gazete’de  İletişim BaşkanlığıBüyükelçi atamaları Resmi Gazete'de  aa.com.trResmî Gazete'de yayımlandı: 12 ülkeye yeni büyükelçi atandı, iki büyükelçi merkeze çekildi  T24</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/iktidarin-gozbebegi-artik-finlandiyada-calisacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">07:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/avrupanin-hedefi-2027-gocmenleri-gonderme-calismasi-hizlan.html">Avrupa’nın hedefi 2027: Göçmenleri gönderme çalışması hızlandı</a>
+                </h2>
+                <p class="news-summary">Avrupa’nın hedefi 2027: Göçmenleri gönderme çalışması hızlandı  hurriyet.com.trAB'de sığınmacıları Afrika'ya gönderme planı  DW.comBeyaz ve Hristiyan adam demokrasisi… - Özay Şendir  MilliyetDanimarka, sığınmacıları geri gönderecek | Dış Haberler  Habertürk5 AB ülkesinden göçmenlerin geri gönderilmesi için 2027 hedefi  Euronews.com</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/avrupanin-hedefi-2027-gocmenleri-gonderme-calismasi-hizlan.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">06:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/witkoff-ve-kushner-putine-gitti-moskovaya-savasi-bitirec.html">Witkoff ve Kushner Putin’e gitti: Moskova’ya ‘savaşı bitirecek teklif’</a>
+                </h2>
+                <p class="news-summary">Witkoff ve Kushner Putin’e gitti: Moskova’ya ‘savaşı bitirecek teklif’  hurriyet.com.trRusya ile ABD'nin görüşmesi sonrası ilk açıklamalar: Witkoff ile Kushner, savaşı bitirmek için teklif sundu  hurriyet.com.trTrump'ın elçileri Moskova temaslarının ardından ilk kez Kiev'de  NTV HaberUkrayna-Rusya barışı için ABD'li temsilcilerin kıştan önce "atılım beklediği" iddia edildi  aa.com.trZelenskiy'den son dakika savaş mesajı: Kış aylarında da devam edecek  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/witkoff-ve-kushner-putine-gitti-moskovaya-savasi-bitirec.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Dünya</span>
+                    <span class="source">Doğruhaber</span>
+                    <span class="time">00:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/dunya/2026/09/06/guney-sudanda-askeri-usse-saldiri-onlarca-olu-var.html">Güney Sudan'da askeri üsse saldırı: Onlarca ölü var</a>
+                </h2>
+                <p class="news-summary">Güney Sudan'da askeri üsse saldırı: Onlarca ölü var  DoğruhaberAskeri üsse silahlı saldırı! Çok sayıda asker hayatını kaybetti  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/dunya/2026/09/06/guney-sudanda-askeri-usse-saldiri-onlarca-olu-var.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

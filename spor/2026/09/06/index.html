@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor - 06.09.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Spor kategorisinde 06.09.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Spor - 06.09.2026 (26 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Fanatik</span>
+                    <span class="time">21:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/kocaelispordan-ust-uste-ucuncu-galibiyet-kocaliespor-1-0-s.html">Kocaelispor'dan üst üste üçüncü galibiyet! Kocaliespor 1-0 Samsunspor (maç sonucu)</a>
+                </h2>
+                <p class="news-summary">Kocaelispor'dan üst üste üçüncü galibiyet! Kocaliespor 1-0 Samsunspor (maç sonucu)  FanatikKocaelispor, Samsunspor'u mağlup etti  aa.com.trKocaelispor 1-0 Samsunspor (Süper Lig)  hurriyet.com.trKocaelispor - Samsunspor maçı canlı yayın bilgisi: Kocaelispor - Samsunspor maçı canlı veren kanallar  GZTCANLI │ Süper Lig'de Kocaelispor, Samsunspor'u ağırlıyor  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/kocaelispordan-ust-uste-ucuncu-galibiyet-kocaliespor-1-0-s.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">21:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/filenin-sultanlari-avrupa-sampiyonu-italya-2-3-turkiye-vol.html">Filenin Sultanları Avrupa Şampiyonu! (İtalya 2-3 Türkiye voleybol maçı)</a>
+                </h2>
+                <p class="news-summary">Filenin Sultanları Avrupa Şampiyonu! (İtalya 2-3 Türkiye voleybol maçı)  hurriyet.com.trFilenin Sultanları üst üste ikinci kez şampiyon  NTV HaberSon dakika voleybol: Filenin Sultanları altın madalya kazandı! İtalya’yı devirdik, Avrupa şampiyonuyuz  Sabah🚨 Ve Filenin Sultanları, Avrupa şampiyonu! Finalde İtalya'yı devirdik, tarih yazdık... (İtalya 2-3 Türkiye, 2026 Avrupa Voleybol Şampiyonası) - Voleybol Haberleri - Spor  FanatikFilenin Sultanları’nın Finaldeki Rakibi İtalya  Türkiye Voleybol Federasyonu</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/filenin-sultanlari-avrupa-sampiyonu-italya-2-3-turkiye-vol.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">21:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/canli-anlatim-trabzonspor-genclerbirligi-super-lig-maci.html">Canlı Anlatım: Trabzonspor Gençlerbirliği (Süper Lig maçı)</a>
+                </h2>
+                <p class="news-summary">Canlı Anlatım: Trabzonspor Gençlerbirliği (Süper Lig maçı)  hurriyet.com.trTrabzonspor 5-0 Gençlerbirliği Maç Özeti | Fırtına, evinde sert esti  CNN TürkSon dakika: Trabzonspor evinde farka koştu! Gençlerbirliği karşısında 5 gollü zafer  SabahSüper Lig'de Trabzonspor yıldızlarıyla kazandı! Bordo-mavili ekipte Onuachu maç damga vurdu  MilliyetHüseyin Çimşir'den Trabzonspor taraftarına mesaj: "Bu cendereden çıkacağız"  NTVSpor</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/canli-anlatim-trabzonspor-genclerbirligi-super-lig-maci.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Sporx.com</span>
+                    <span class="time">20:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/arsenal-chelsea-derbisinde-geri-dondu.html">Arsenal, Chelsea derbisinde geri döndü</a>
+                </h2>
+                <p class="news-summary">Arsenal, Chelsea derbisinde geri döndü  Sporx.comArsenal 2-1 Chelsea (Premier Lig)  hurriyet.com.trLondra derbisinde kazanan Arsenal! Ligde üçte üç yaptı...  CumhuriyetArteta'nın kumarları ve şampiyon karakteri: Arsenal Londra derbisini nasıl tersine çevirdi?  Goal.comLondra derbisinde kazanan Arsenal İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/arsenal-chelsea-derbisinde-geri-dondu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">20:04</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/barcelonanin-acimasi-yok-rakibi-perisan-ettiler.html">Barcelona'nın acıması yok! Rakibi perişan ettiler</a>
+                </h2>
+                <p class="news-summary">Barcelona'nın acıması yok! Rakibi perişan ettiler  HaberlerBarcelona'dan Valencia deplasmanında bol gollü galibiyet!  CumhuriyetBarcelona rakiplere fırsat tanımıyor! 4 maçta tam 17 gol  NTVSporBarcelona'dan Mestalla'da şov! Galatasaray'ın rakibinden 5-0'lık zafer  A SporSezonunun gidişatını değiştirir mi? Barcelona'nın yıldızı için Valencia karşılaşması öncesi yeni bir sınav  Goal.com</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/barcelonanin-acimasi-yok-rakibi-perisan-ettiler.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">61SAAT</span>
+                    <span class="time">19:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/trabzonsporda-benjamin-bouchouari-ve-batista-mendy-gelismes.html">Trabzonspor’da Benjamin Bouchouari ve Batista Mendy gelişmesi</a>
+                </h2>
+                <p class="news-summary">Trabzonspor’da Benjamin Bouchouari ve Batista Mendy gelişmesi  61SAATKontenjana çözüm!  FotomaçFatih Tekke biletini kesti, Trabzonspor'dan ayrılıyor! Yeni takımı belli gibi  NTVSporTrabzonspor’da yabancı operasyonu! Ayrılacak isimler netleşiyor  haber61.netTrabzonspor'da Bouchouari Takıma Geri Dönüyor  HaberTS</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/trabzonsporda-benjamin-bouchouari-ve-batista-mendy-gelismes.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Haberler</span>
+                    <span class="time">19:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/manchester-uniteda-906da-buyuk-sok-son-saniyede-kaleye-f.html">Manchester United'a 90+6'da büyük şok! Son saniyede kaleye füze yolladı</a>
+                </h2>
+                <p class="news-summary">Manchester United'a 90+6'da büyük şok! Son saniyede kaleye füze yolladı  HaberlerGoogle Haberler uygulamasında Diğer başlıklar ve bakış açıları</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/manchester-uniteda-906da-buyuk-sok-son-saniyede-kaleye-f.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">18:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/kasimpasa-2-2-amedspor-super-lig-maci-ozeti.html">Kasımpaşa 2-2 Amedspor (Süper Lig maçı özeti)</a>
+                </h2>
+                <p class="news-summary">Kasımpaşa 2-2 Amedspor (Süper Lig maçı özeti)  hurriyet.com.trEmre Belözoğlu Amedspor maçında çıldırdı! "Başlı başına skandal" - Kasımpaşa  MynetEmre Belözoğlu’ndan penaltı sitemi!  FotomaçNefes kesen maçta kazanan yok! Kasımpaşa - Amed maç sonucu: 2-2  FanatikEmre Belözoğlu 'Skandal' dedi! Verilmeyen penaltı gündem oldu  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/kasimpasa-2-2-amedspor-super-lig-maci-ozeti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Fanatik</span>
+                    <span class="time">18:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/canli-corum-fk-eyupspor-super-lig-4-hafta-maci.html">🚨 CANLI | Çorum FK - Eyüpspor (Süper Lig 4. hafta maçı)</a>
+                </h2>
+                <p class="news-summary">🚨 CANLI | Çorum FK - Eyüpspor (Süper Lig 4. hafta maçı)  FanatikÇorum FK 3-0 Eyüpspor (Süper Lig maç özeti)  hurriyet.com.trÇorum FK'dan tarihi galibiyet! Eyüpspor'u sahadan sildiler  HaberlerErman Kılıç: "Çalıştığımız şeyleri sahaya yansıtamadık" İhlas Haber Ajansı  İhlas Haber AjansıArca Çorum FK, konuk ettiği Eyüpspor'u yendi  aa.com.tr</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/canli-corum-fk-eyupspor-super-lig-4-hafta-maci.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">NTV Haber</span>
+                    <span class="time">18:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/ogluyla-ilk-kez-maca-gitmisti-derbide-kalbine-yenildi.html">Oğluyla ilk kez maça gitmişti. Derbide kalbine yenildi</a>
+                </h2>
+                <p class="news-summary">Oğluyla ilk kez maça gitmişti. Derbide kalbine yenildi  NTV HaberDerbide hayatını kaybetmişti: Yürek yakan detay ortaya çıktı  Sözcü GazetesiBaşımız sağ olsun  Fenerbahce.orgFenerbahçe-Beşiktaş derbisinde kahreden ölüm! Maçı izlemeye oğluyla birlikte gelmiş  hurriyet.com.trBeşiktaş maçında hayatını kaybeden Fenerbahçeli taraftar, 16 yaşındaki oğluyla ilk kez stada gitmiş  T24</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/ogluyla-ilk-kez-maca-gitmisti-derbide-kalbine-yenildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">61SAAT</span>
+                    <span class="time">18:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/nevzat-aydindan-trabzonspor-icin-teknik-direktor-cikisi-ba.html">Nevzat Aydın’dan Trabzonspor için teknik direktör çıkışı! Bakın kimi işaret etti</a>
+                </h2>
+                <p class="news-summary">Nevzat Aydın’dan Trabzonspor için teknik direktör çıkışı! Bakın kimi işaret etti  61SAATTrabzonspor'da favori Conceicao!  hurriyet.com.tr3 hoca için girişimler sürüyor  FotomaçTekke’yi yel değirmenleri yedi  Yeni ŞafakTrabzonspor'da hoca arayışı! 2 isimden sonuç çıkmadı  A Spor</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/nevzat-aydindan-trabzonspor-icin-teknik-direktor-cikisi-ba.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">61SAAT</span>
+                    <span class="time">17:40</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/trabzonspordan-2-sezonluk-sponsorluk-anlasmasi-imzalar-ati.html">Trabzonspor’dan 2 sezonluk sponsorluk anlaşması! İmzalar atıldı</a>
+                </h2>
+                <p class="news-summary">Trabzonspor’dan 2 sezonluk sponsorluk anlaşması! İmzalar atıldı  61SAATTrabzonspor YKT Filo İle Sponsorluk Anlaşması İmzaladı  HaberTSKAP *** TRABZONSPOR SPORTİF YATIRIM VE FUTBOL İŞLETMECİLİĞİ TİCARET A.Ş. *** TSPOR *** Özel Durum Açıklaması (Genel)  Yeni ŞafakTrabzonspor, reklam sponsorluğu için anlaşma sağladı  aa.com.trAraç Sponsorumuz YKT Filo ile Sözleşme İmzaladık  Trabzonspor Kulübü Resmi Web Sitesi</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/trabzonspordan-2-sezonluk-sponsorluk-anlasmasi-imzalar-ati.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">NTVSpor</span>
+                    <span class="time">16:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/tum-ulke-kariusun-bayern-munih-macinda-yaptiklarini-konusuy.html">Tüm ülke Karius'un Bayern Münih maçında yaptıklarını konuşuyor! Manşetlerde sadece onun ismi var</a>
+                </h2>
+                <p class="news-summary">Tüm ülke Karius'un Bayern Münih maçında yaptıklarını konuşuyor! Manşetlerde sadece onun ismi var  NTVSporManuel Neuer, Schalke Bayern Münih'in tarihi gol serisini durdururken Loris Karius'u "çok iyi" olarak övdü  Goal.comMAÇ SONUCU VE ÖZETİ | Schalke 04 0-0 Bayern Münih (Almanya Bundesliga)  HabertürkEdin Dzeko ve Manuel Neuer rekor kırmaya hazırlanıyor!  AjanssporLoris Karius, Bayern Münih'in 60 maçlık serisini bozdu!  Sporx.com</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/tum-ulke-kariusun-bayern-munih-macinda-yaptiklarini-konusuy.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">NTVSpor</span>
+                    <span class="time">14:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/acun-ilicalinin-fenerbahce-macinda-kesfettigi-isim-premier.html">Acun Ilıcalı'nın Fenerbahçe maçında keşfettiği isim, Premier Lig'i sallıyor!</a>
+                </h2>
+                <p class="news-summary">Acun Ilıcalı'nın Fenerbahçe maçında keşfettiği isim, Premier Lig'i sallıyor!  NTVSporAcun Ilıcalı: 'Tek hedefimiz Premier Lig'de kalmak!'  hurriyet.com.tr3 hafta sonra: Hull City, Premier Lig'in tüm kulüplerini geride bıraktı  Goal.comHull City kaleye duvar ördü! Aston Villa'yı da durdurdu  FanatikAcun Ilıcalı'dan itiraf! "Fenerbahçe'ye karşı acı vermişti bana" - İngiltere Premier Lig  Mynet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/acun-ilicalinin-fenerbahce-macinda-kesfettigi-isim-premier.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">NTVSpor</span>
+                    <span class="time">14:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/potanin-perileri-dunya-kupasindaki-ikinci-macinda-avustral.html">Potanın Perileri, Dünya Kupası'ndaki ikinci maçında Avustralya'ya mağlup</a>
+                </h2>
+                <p class="news-summary">Potanın Perileri, Dünya Kupası'ndaki ikinci maçında Avustralya'ya mağlup  NTVSporPotanın Perileri, Avustralya'ya mağlup oldu!  hurriyet.com.trTürkiye-Avustralya CANLI İZLE | FIBA 2026 Kadınlar Dünya Şampiyonası  A SporAndrea Mazzon: İlk yarıda çok fazla top kaybı yaşadık  HabertürkPotanın Perileri, Dünya Kupası'na Belçika Mağlubiyetiyle Başladı  Onedio</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/potanin-perileri-dunya-kupasindaki-ikinci-macinda-avustral.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">NTVSpor</span>
+                    <span class="time">13:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/galatasaraydan-osimhen-aciklamasi-geldi-sakatligindaki-son.html">Galatasaray'dan Osimhen açıklaması geldi! Sakatlığındaki son durum belli oldu: Kaç hafta yok?</a>
+                </h2>
+                <p class="news-summary">Galatasaray'dan Osimhen açıklaması geldi! Sakatlığındaki son durum belli oldu: Kaç hafta yok?  NTVSpor🚨Osimhen'in sakatlık durumu belli oldu! Lizbon'da oynayacak mı? Galatasaray'dan resmi açıklama  FanatikGalatasaray'dan Osimhen ve Lemina açıklaması!  hurriyet.com.trGalatasaray'a Şampiyonlar Ligi öncesi Victor Osimhen'den kötü haber! - Galatasaray (GS) Haberleri  MynetGalatasaray'a Osimhen'den sonra bir kötü haber daha! Mario Lemina ne zaman sahalara dönecek?  NTVSpor</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/galatasaraydan-osimhen-aciklamasi-geldi-sakatligindaki-son.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">61SAAT</span>
+                    <span class="time">11:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/hull-cityde-abdulkadir-omur-karari.html">Hull City'de Abdülkadir Ömür kararı</a>
+                </h2>
+                <p class="news-summary">Hull City'de Abdülkadir Ömür kararı  61SAATAbdülkadir Ömür’e Premier Lig fırsatı  birgun.netHull City’den Abdülkadir Ömür kararı  AjanssporHull City'nin Abdülkadir Ömür Kararı  HaberTSTrabzonspor’un eski yıldızı kadroda kendine yer buldu!  haber61.net</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/hull-cityde-abdulkadir-omur-karari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">11:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/arda-turan-galibiyet-sonrasi-acikladi-memnun-olmadigim-pek.html">Arda Turan galibiyet sonrası açıkladı: 'Memnun olmadığım pek çok nokta var!'</a>
+                </h2>
+                <p class="news-summary">Arda Turan galibiyet sonrası açıkladı: 'Memnun olmadığım pek çok nokta var!'  hurriyet.com.trArda Turan'lı Shakhtar Donetsk'in lig maçları Tivibu Spor'da yayınlanacak  aa.com.trArda Turan’lı Shakhtar Donetsk’in Ukrayna Premier Ligi maçları Tivibu Spor’da  DHA | Demirören Haber AjansıArda Turan'ın kahkahalara boğan görüntüsü: Binlerce kez paylaşıldı  Nefes GazetesiShakhtar Donetsk, Karpty Lviv'i iki golle geçti  Ensonhaber</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/arda-turan-galibiyet-sonrasi-acikladi-memnun-olmadigim-pek.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Fanatik</span>
+                    <span class="time">11:04</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/super-lig-takimlari-transferde-yurt-disini-tercih-etti.html">Süper Lig takımları transferde yurt dışını tercih etti</a>
+                </h2>
+                <p class="news-summary">Süper Lig takımları transferde yurt dışını tercih etti  FanatikSüper Lig ekiplerinden tam 202 takviye  Sözcü GazetesiSüper Lig'de yeni transferlerin yaş ortalaması 25,01  aa.com.trSüper Lig kulüplerinden yaz transfer döneminde toplam 202 imza  NTVSporSüper Lig takımları 119 yabancı futbolcu aldı  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/super-lig-takimlari-transferde-yurt-disini-tercih-etti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">10:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/fenerbahcenin-rakibinden-efsane-geri-donus.html">Fenerbahçe'nin rakibinden efsane geri dönüş</a>
+                </h2>
+                <p class="news-summary">Fenerbahçe'nin rakibinden efsane geri dönüş  Sözcü GazetesiRoma'dan muhteşem geri dönüş: Galibiyet 90+3'te geldi  NTVSporFenerbahçe'nin Devler Ligi'ndeki rakibi Roma'dan çılgın istatistik: Atalanta'ya karşı rakip ceza sahasında 71 kez topla buluştular  T24Fenerbahçe maçı öncesi Roma'dan korkunç istatistik: 39 şut, 71 kez rakip ceza sahasında topla buluşma  GZTAS Roma son dakikalarda Atalanta’yı ezip geçiyor ve Serie A’daki kusursuz durumunu koruyor  Goal.com</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/fenerbahcenin-rakibinden-efsane-geri-donus.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Sabah</span>
+                    <span class="time">09:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/milli-futbolcu-merih-demiralin-evliliginde-kara-bulutlar-e.html">Milli futbolcu Merih Demiral’ın evliliğinde kara bulutlar! Eşinden tek hamlede radikal karar!</a>
+                </h2>
+                <p class="news-summary">Milli futbolcu Merih Demiral’ın evliliğinde kara bulutlar! Eşinden tek hamlede radikal karar!  SabahMilli futbolcu Merih Demiral’ın evliliğinde kara bulutlar: Eşi bir anda her şeyi sildi  Sözcü GazetesiTek hamlesi olay oldu! Merih Demiral’ın eşi soyadını kaldırdı  MilliyetMerih Demiral ve Heidi Lushtaku'nun evliliğinde kriz mi var? Dikkat çeken hamle  PostaMerih Demiralın eşinden kafa karıştıran hamle! Ayrılık iddiaları alevlendi - Son Dakika Magazin Haberleri  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/milli-futbolcu-merih-demiralin-evliliginde-kara-bulutlar-e.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">hurriyet.com.tr</span>
+                    <span class="time">09:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/fenerbahce-besiktas-derbisinin-hakem-kararini-yorumladilar.html">Fenerbahçe-Beşiktaş derbisinin hakem kararını yorumladılar: Pozisyon penaltı!</a>
+                </h2>
+                <p class="news-summary">Fenerbahçe-Beşiktaş derbisinin hakem kararını yorumladılar: Pozisyon penaltı!  hurriyet.com.trAvrupa basını Fenerbahçe-Beşiktaş derbisini konuşuyor! Skriniar ve Vlahovic gündemde  hurriyet.com.trEski hakemlerden Fenerbahçe-Beşiktaş derbisi düdüklerine net yorum: Penaltı daha doğru olurdu  CNN TürkSergen Yalçın derbi biter bitmez şampiyonluk bombasını patlattı! Fenerbahçe ve Beşiktaş'a olay çağrı  NTVSporKARTAL İSTEDİ VE KAZANDI  Korkusuz Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/fenerbahce-besiktas-derbisinin-hakem-kararini-yorumladilar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Halk TV</span>
+                    <span class="time">08:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/futbolcusundan-ismail-kartala-olay-gonderme-bu-sozler-cok.html">Futbolcusundan İsmail Kartal'a olay gönderme: Bu sözler çok konuşulur</a>
+                </h2>
+                <p class="news-summary">Futbolcusundan İsmail Kartal'a olay gönderme: Bu sözler çok konuşulur  Halk TVMilan Skriniar, ilk golünü derbide attı!  hurriyet.com.trSkriniar'dan İsmail Kartal'a ültimatom gibi sözler  OdatvFenerbahçeli yıldızdan dikkat çeken sözler: Teknik heyete mesaj mı gönderdi?  Yeni ŞafakMilan Skriniar: "Böyle devam edemeyiz"  beinsports.com.tr</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/futbolcusundan-ismail-kartala-olay-gonderme-bu-sozler-cok.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">61SAAT</span>
+                    <span class="time">08:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/ekibini-genis-tutacak.html">Ekibini geniş tutacak</a>
+                </h2>
+                <p class="news-summary">Ekibini geniş tutacak  61SAATÇeşme'nin iki temsilcisi için Süper Amatör Lig heyecanı 17 Ekim'de başlayacak  HabertürkAmatörde antrenman sahaları için kura çekimi yapıldı İhlas Haber Ajansı  İhlas Haber AjansıTFF’den şok karar  Adapostası GazetesiAntalya'da 2026-2027 Amatör Lig Sezonu Başvuruları Açıldı  Akdeniz Gerçek</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/ekibini-genis-tutacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Gazete Vatan</span>
+                    <span class="time">08:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/samsunsporda-yuksel-yildirim-burak-yilmazin-prensi-golcuy.html">Samsunspor'da Yüksel Yıldırım, Burak Yılmaz'ın prensi golcüyü transfer etti!</a>
+                </h2>
+                <p class="news-summary">Samsunspor'da Yüksel Yıldırım, Burak Yılmaz'ın prensi golcüyü transfer etti!  Gazete VatanSamsunspor'dan savunmaya 7 milyon euroluk takviye - Strahinja Erakovic 1 yıllığına kiralandı  TransfermarktBayo, resmen Samsunspor'da  HabertürkBaşkan Yıldırım açıkladı: Mohamad Bayo Samsunspor’da İhlas Haber Ajansı  İhlas Haber AjansıSon Dakika Spor Haberi | Samsunsporda yaprak dökümü! Resmen açıklandı  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/samsunsporda-yuksel-yildirim-burak-yilmazin-prensi-golcuy.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <span class="badge">Spor</span>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">07:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/06/taliscadan-fenerbahceye-derbi-sonrasi-gonderme.html">Talisca'dan Fenerbahçe'ye derbi sonrası gönderme</a>
+                </h2>
+                <p class="news-summary">Talisca'dan Fenerbahçe'ye derbi sonrası gönderme  Sözcü GazetesiTalisca'dan derbi sonrası olay paylaşım: 'Ne ekersen onu biçersin!'  hurriyet.com.trAnderson Talisca’dan Fenerbahçe-Beşiktaş derbisi sonrası olay paylaşım!  A SporDerbiden sonra Talisca'dan manidar paylaşım  OdatvFenerbahçe - Beşiktaş derbisi sonrası Talisca'dan paylaşım: 'Ne ekersen onu biçersin'  Fanatik</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/06/taliscadan-fenerbahceye-derbi-sonrasi-gonderme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
