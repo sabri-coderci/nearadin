@@ -76,24 +76,37 @@ def share_on_twitter(news_list):
 
 
 def get_header_html(title_text="nearadin.net - SON DAKİKA"):
-    """Tüm Sayfalarda Ortak Kullanılan Hamburger Menülü Header Yapısı"""
+    """Tüm Sayfalarda Ortak Kullanılan, Kategoriler Eklenmiş Hamburger Menülü Header Yapısı"""
     return f'''
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">{title_text}</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
-                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
             </ul>
         </nav>
     </header>
@@ -130,15 +143,12 @@ def get_footer_html():
                     <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
                         <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,12 +182,10 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         h1 {{ font-size: 20px; margin-bottom: 10px; color: #0056b3; }}
         p {{ color: #65676b; font-size: 14px; margin-bottom: 15px; }}
 
-        /* İl Seçim Alanı */
         .city-select-box {{ margin-bottom: 20px; }}
         .city-select-box label {{ display: block; font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #333; }}
         .city-select-box select {{ width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; background: #fff; outline: none; cursor: pointer; }}
 
-        /* Hava Durumu Liste Stilleri */
         .weather-list {{ display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }}
         .weather-item {{ background: #f9f9f9; border: 1px solid #e4e6eb; padding: 12px 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }}
         .weather-date {{ font-weight: bold; color: #333; font-size: 14px; }}
@@ -192,10 +200,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 </head>
 <body>
     
-    <!-- Admatic AUTO ads START -->
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-    <!-- Admatic AUTO ads END -->
 
     {admatic_code}
     {header_html}
@@ -317,7 +323,6 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 
 def fetch_and_generate():
-    # Google News Ana Kategorileri ve RSS Bağlantıları
     CATEGORIES = {
         "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=tr&gl=TR&ceid=TR:tr"},
         "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr"},
@@ -364,7 +369,6 @@ def fetch_and_generate():
     last_update = datetime.datetime.now(tz_tr).strftime("%d.%m.%Y %H:%M")
     last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
-    # Tüm kategorilerin RSS beslemelerini çek
     for cat_slug, cat_info in CATEGORIES.items():
         try:
             req = urllib.request.Request(cat_info["url"], headers=headers)
@@ -427,12 +431,12 @@ def fetch_and_generate():
         date_folder = dt_tr.strftime("%Y/%m/%d")
         date_str = dt_tr.strftime("%d.%m.%Y")
         
-        # İstediğiniz URL Yapısı: {kategori}/{yıl}/{ay}/{gün}/{slug}.html
         os.makedirs(f"{cat_slug}/{date_folder}", exist_ok=True)
 
         slug = slugify(clean_title[:60])
         page_name = f"{slug}.html"
         internal_link = f"/{cat_slug}/{date_folder}/{page_name}"
+        category_link = f"/{cat_slug}/{date_folder}/"
         full_url = f"https://nearadin.net{internal_link}"
 
         news_data = {
@@ -446,6 +450,7 @@ def fetch_and_generate():
             "date_folder": date_folder,
             "page_name": page_name,
             "internal_link": internal_link,
+            "category_link": category_link,
             "full_url": full_url,
             "iso_date": dt_tr.strftime("%Y-%m-%dT%H:%M:%S+03:00"),
             "category_slug": cat_slug,
@@ -535,7 +540,8 @@ def fetch_and_generate():
         .container {{ max-width: 680px; margin: 20px auto 0 auto; padding: 0 12px; }}
         .article-card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .meta-info {{ display: flex; gap: 10px; font-size: 13px; color: #65676b; margin-bottom: 12px; align-items: center; }}
-        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; display: inline-block; }}
+        .badge:hover {{ background: #ffd0cc; }}
         h1 {{ font-size: 22px; margin-bottom: 15px; color: #050505; line-height: 1.3; }}
         p {{ font-size: 15px; color: #333; margin-bottom: 20px; line-height: 1.6; }}
         .actions {{ display: flex; flex-direction: column; gap: 10px; margin-top: 25px; margin-bottom: 25px; }}
@@ -561,7 +567,8 @@ def fetch_and_generate():
     <div class="container">
         <article class="article-card">
             <div class="meta-info">
-                <span class="badge">{news['category_name']}</span>
+                <!-- TIKLANABİLİR KIRMIZI KATEGORİ ROZETİ -->
+                <a href="{news['category_link']}" class="badge">{news['category_name']}</a>
                 <span>Tarih: <strong>{news['date_str']} - {news['time']}</strong></span>
                 <span>Kaynak: <strong>{news['source']}</strong></span>
             </div>
@@ -570,7 +577,7 @@ def fetch_and_generate():
             
             <div class="actions">
                 <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn btn-primary">Kaynaktan Orijinal Haberi Oku ↗</a>
-                <a href="/{news['category_slug']}/{news['date_folder']}/" class="btn btn-secondary">← {news['category_name']} ({news['date_str']}) Haberlerine Dön</a>
+                <a href="{news['category_link']}" class="btn btn-secondary">← {news['category_name']} ({news['date_str']}) Haberlerine Dön</a>
             </div>
 
             <div id="disqus_thread" style="width: 100%;"></div>
@@ -606,10 +613,11 @@ def fetch_and_generate():
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(detail_html)
 
+        # Kart Üzerinde Tıklanabilir Rozet
         news_cards_html += f'''
         <article class="news-card">
             <div class="card-header">
-                <span title="{news['category_name']}" class="badge">{news['category_name']}</span>
+                <a href="{news['category_link']}" title="{news['category_name']} Haberleri" class="badge">{news['category_name']}</a>
                 <span title="{news['source']}" class="source">{news['source']}</span>
                 <span class="time">{news['time']}</span>
             </div>
@@ -655,7 +663,7 @@ def fetch_and_generate():
             day_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">{d_news['category_name']}</span>
+                    <a href="/{d_news['category_slug']}/{d_news['date_folder']}/" class="badge">{d_news['category_name']}</a>
                     <span class="source">{d_news['source']}</span>
                     <span class="time">{d_news['time']}</span>
                 </div>
@@ -685,7 +693,8 @@ def fetch_and_generate():
         .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }}
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
-        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }}
+        .badge:hover {{ background: #ffd0cc; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
         .time {{ color: #8d949e; margin-left: auto; }}
         .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
@@ -715,6 +724,70 @@ def fetch_and_generate():
         with open(f"{folder_path}/index.html", "w", encoding="utf-8") as f:
             f.write(daily_index_html)
 
+    # --- ANA KATEGORİ SAYFALARINI OLUŞTUR (/spor/, /teknoloji/ VB.) ---
+    for cat_slug, cat_info in CATEGORIES.items():
+        cat_news = [n for n in news_list if n['category_slug'] == cat_slug]
+        cat_cards = ""
+        for d_news in cat_news:
+            cat_cards += f'''
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/{d_news['category_slug']}/{d_news['date_folder']}/" class="badge">{d_news['category_name']}</a>
+                    <span class="source">{d_news['source']}</span>
+                    <span class="time">{d_news['time']}</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="{d_news['internal_link']}">{d_news['title']}</a>
+                </h2>
+                <p class="news-summary">{d_news['desc']}</p>
+                <div class="card-footer">
+                    <a href="{d_news['internal_link']}" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            '''
+
+        cat_page_html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{cat_info['name']} Haberleri - nearadin.net</title>
+    <meta name="description" content="En son {cat_info['name']} haberleri ve canlı gelişmeler." />
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }}
+        .container {{ max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }}
+        .status-bar {{ background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; }}
+        .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }}
+        .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }}
+        .source {{ font-weight: 600; color: #4b4f56; }}
+        .time {{ color: #8d949e; margin-left: auto; }}
+        .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
+        .news-title a {{ color: #050505; text-decoration: none; }}
+        .news-summary {{ font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }}
+        .card-footer {{ display: flex; justify-content: flex-end; }}
+        .read-btn {{ color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }}
+    </style>
+</head>
+<body>
+    {header_html}
+    <div class="container">
+        <div class="status-bar">
+            📌 {cat_info['name']} Haberleri
+        </div>
+        <main>
+            {cat_cards if cat_cards else '<p style="padding: 20px; background: white; border-radius: 8px;">Bu kategoride henüz güncel haber bulunmamaktadır.</p>'}
+        </main>
+        {whos_amung_us_code}
+    </div>
+    {footer_html}
+</body>
+</html>'''
+        os.makedirs(cat_slug, exist_ok=True)
+        with open(f"{cat_slug}/index.html", "w", encoding="utf-8") as f:
+            f.write(cat_page_html)
+
     # Anasayfa (index.html)
     full_html = f'''<!DOCTYPE html>
 <html lang="tr">
@@ -731,7 +804,8 @@ def fetch_and_generate():
         .news-card {{ background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: transform 0.1s ease; }}
         .news-card:active {{ transform: scale(0.99); }}
         .card-header {{ display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }}
-        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }}
+        .badge {{ background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }}
+        .badge:hover {{ background: #ffd0cc; }}
         .source {{ font-weight: 600; color: #4b4f56; }}
         .time {{ color: #8d949e; margin-left: auto; }}
         .news-title {{ font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }}
@@ -781,32 +855,15 @@ def fetch_and_generate():
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/llms.txt</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nearadin.net/canli-mac-sonuclari/</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nearadin.net/search.html</loc>
-    <lastmod>{last_update_iso}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nearadin.net/arsiv/</loc>
     <lastmod>{last_update_iso}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nearadin.net/film-izle/</loc>
-    <lastmod>{last_update_iso}</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -816,9 +873,16 @@ def fetch_and_generate():
     <priority>0.8</priority>
   </url>\n'''
 
+    for cat_slug in CATEGORIES.keys():
+        sitemap_items += f'''  <url>
+    <loc>https://nearadin.net/{cat_slug}/</loc>
+    <lastmod>{last_update_iso}</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.9</priority>
+  </url>\n'''
+
     archive_dates_dict = {}
 
-    # Tüm Kategori Klasörlerini Otomatik Tara
     for cat_slug in CATEGORIES.keys():
         if os.path.exists(cat_slug):
             for root_dir, dirs, files in os.walk(cat_slug):
@@ -900,7 +964,7 @@ def fetch_and_generate():
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap_content)
 
-    # --- GOOGLE NEWS SITEMAP (news-sitemap.xml) ---
+    # --- GOOGLE NEWS SITEMAP ---
     news_sitemap_items = ""
     for news in news_list:
         safe_title = html.escape(news['title'])
@@ -924,10 +988,10 @@ def fetch_and_generate():
     with open("news-sitemap.xml", "w", encoding="utf-8") as f:
         f.write(news_sitemap_content)
 
-    # --- X (TWITTER) OTOMATİK PAYLAŞIM TETİKLEMESİ ---
+    # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
     share_on_twitter(news_list)
 
-    print("Betik başarıyla çalıştı. Kategori bazlı sayfalar oluşturuldu ve X (Twitter) otomasyonu tamamlandı.")
+    print("İşlem tamamlandı. Tıklanabilir kategori linkleri ve güncellenmiş hamburger menü uygulandı.")
 
 if __name__ == "__main__":
     fetch_and_generate()
