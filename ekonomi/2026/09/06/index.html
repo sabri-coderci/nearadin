@@ -12,7 +12,8 @@
         .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
         .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
-        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .badge:hover { background: #ffd0cc; }
         .source { font-weight: 600; color: #4b4f56; }
         .time { color: #8d949e; margin-left: auto; }
         .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
@@ -30,18 +31,31 @@
         <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
-        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
             <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
-                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
             </ul>
         </nav>
     </header>
@@ -65,14 +79,14 @@
     
     <div class="container">
         <div class="status-bar">
-            <span>📅 Ekonomi - 06.09.2026 (34 Haber)</span>
+            <span>📅 Ekonomi - 06.09.2026 (36 Haber)</span>
             <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
         </div>
         <main>
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Yeniçağ Gazetesi</span>
                     <span class="time">19:51</span>
                 </div>
@@ -87,7 +101,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">LOG</span>
                     <span class="time">19:28</span>
                 </div>
@@ -107,7 +121,7 @@
     
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">19:13</span>
                 </div>
@@ -122,7 +136,22 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Yeniçağ Gazetesi</span>
+                    <span class="time">19:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/iktidarin-emekli-ve-memura-maas-zammi-plani-yenicag-tek-tek.html">İktidarın emekli ve memura maaş zammı planı: YENİÇAĞ tek tek hesapladı</a>
+                </h2>
+                <p class="news-summary">İktidarın emekli ve memura maaş zammı planı: YENİÇAĞ tek tek hesapladı  Yeniçağ GazetesiEmekliye yapılacak zam netleşiyor: Bu iki rakamdan biri olacak  Sözcü GazetesiMilyonlarca emekli ve memur merakla bekliyor! Zam netleşiyor: 4 farklı senaryo - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansSON DAKİKA | Milyonların gözü OVP’de! SABAH zamlarla ilgili 4 senaryoyu açıkladı: Memur maaşı 100 bin TL olacak  SabahGaziantep'te Ocak ayı kehaneti  Gaziantep Oluşum Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/iktidarin-emekli-ve-memura-maas-zammi-plani-yenicag-tek-tek.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Cumhuriyet</span>
                     <span class="time">18:47</span>
                 </div>
@@ -137,7 +166,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Onedio</span>
                     <span class="time">18:25</span>
                 </div>
@@ -152,7 +181,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">18:13</span>
                 </div>
@@ -167,7 +196,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">bloomberght.com</span>
                     <span class="time">17:36</span>
                 </div>
@@ -182,7 +211,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ekonomim.com</span>
                     <span class="time">16:34</span>
                 </div>
@@ -197,7 +226,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">BBN Haber</span>
                     <span class="time">16:00</span>
                 </div>
@@ -212,7 +241,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">15:54</span>
                 </div>
@@ -227,7 +256,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Uzmanpara</span>
                     <span class="time">15:42</span>
                 </div>
@@ -242,7 +271,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">CNN Türk</span>
                     <span class="time">13:56</span>
                 </div>
@@ -257,7 +286,22 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Mynet Finans</span>
+                    <span class="time">13:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/bmw-189-bin-130-aracini-geri-cagiriyor-yangin-riski-tespit.html">BMW 189 bin 130 aracını geri çağırıyor! Yangın riski tespit edildi - Finans haberlerinin doğru adresi - Mynet Finans Haber</a>
+                </h2>
+                <p class="news-summary">BMW 189 bin 130 aracını geri çağırıyor! Yangın riski tespit edildi - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansBMW geri çağırmayı yine büyüttü — 150.858 otomobil daha riskte  tarantas.newsBMW, yangın riski nedeniyle 3, 5 ve 7 Serisi sedanları geri çağırıyor  Son DakikaBMW toplamda 189.130 adet modelini geri çağırıyor  Motor1.com TürkiyeBMW sahipleri dikkat! Bu modeller yangın riski nedeniyle geri çağrılıyor  Ege Telgraf</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/bmw-189-bin-130-aracini-geri-cagiriyor-yangin-riski-tespit.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Yeni Şafak</span>
                     <span class="time">13:02</span>
                 </div>
@@ -272,7 +316,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">T24</span>
                     <span class="time">12:25</span>
                 </div>
@@ -287,7 +331,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Nefes Gazetesi</span>
                     <span class="time">11:45</span>
                 </div>
@@ -302,7 +346,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">T24</span>
                     <span class="time">10:49</span>
                 </div>
@@ -317,7 +361,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Onedio</span>
                     <span class="time">10:25</span>
                 </div>
@@ -332,7 +376,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ekonomim.com</span>
                     <span class="time">10:17</span>
                 </div>
@@ -347,7 +391,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Dünya Gazetesi</span>
                     <span class="time">09:48</span>
                 </div>
@@ -362,7 +406,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ekonomim.com</span>
                     <span class="time">09:46</span>
                 </div>
@@ -377,7 +421,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Halk TV</span>
                     <span class="time">09:45</span>
                 </div>
@@ -392,7 +436,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">09:05</span>
                 </div>
@@ -407,7 +451,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">08:46</span>
                 </div>
@@ -422,7 +466,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Memurlar.Net</span>
                     <span class="time">07:58</span>
                 </div>
@@ -437,7 +481,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">T24</span>
                     <span class="time">07:52</span>
                 </div>
@@ -452,7 +496,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Memurlar.Net</span>
                     <span class="time">07:50</span>
                 </div>
@@ -467,7 +511,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ParaMedya</span>
                     <span class="time">07:49</span>
                 </div>
@@ -482,7 +526,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">07:43</span>
                 </div>
@@ -497,7 +541,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ekonomim.com</span>
                     <span class="time">07:34</span>
                 </div>
@@ -512,7 +556,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">ekonomim.com</span>
                     <span class="time">07:06</span>
                 </div>
@@ -527,7 +571,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Milliyet</span>
                     <span class="time">07:01</span>
                 </div>
@@ -542,7 +586,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Sözcü Gazetesi</span>
                     <span class="time">05:00</span>
                 </div>
@@ -557,7 +601,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">birgun.net</span>
                     <span class="time">03:54</span>
                 </div>
@@ -572,7 +616,7 @@
             
             <article class="news-card">
                 <div class="card-header">
-                    <span class="badge">Ekonomi</span>
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
                     <span class="source">Habertürk</span>
                     <span class="time">00:14</span>
                 </div>
@@ -604,15 +648,12 @@
                     <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
                         <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
                         <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
-                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
                     </ul>
                 </div>
             </div>

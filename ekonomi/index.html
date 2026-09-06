@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekonomi Haberleri - nearadin.net</title>
+    <meta name="description" content="En son Ekonomi haberleri ve canlı gelişmeler." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            📌 Ekonomi Haberleri
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Yeniçağ Gazetesi</span>
+                    <span class="time">19:51</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/88-yillik-buyuk-fabrika-kapaniyor-unlu-kahvalti-markasi-kep.html">88 yıllık büyük fabrika kapanıyor: Ünlü kahvaltı markası kepenk indirdi</a>
+                </h2>
+                <p class="news-summary">88 yıllık büyük fabrika kapanıyor: Ünlü kahvaltı markası kepenk indirdi  Yeniçağ GazetesiGaziantep'te de tüketilen ünlü markadan şok karar  Gaziantep Oluşum GazetesiKellogg’s İngiltere’deki Tarihi Fabrikasında Üretimi Durdurdu  bolgegundemi.comKellogg's Trafford Park fabrikası üretime son verdi  Ege Alternatif88 yıldır kahvaltı sofralarını dolduruyordu: Kellogg's fabrikasında üretim bitti  CNBC-e</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/88-yillik-buyuk-fabrika-kapaniyor-unlu-kahvalti-markasi-kep.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">LOG</span>
+                    <span class="time">19:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/cinli-ultrand-iki-farkli-aracla-turkiye-pazarina-giris-yapt.html">Çinli Ultrand, iki farklı araçla Türkiye pazarına giriş yaptı - Teknoloji haberleri</a>
+                </h2>
+                <p class="news-summary">Çinli Ultrand, iki farklı araçla Türkiye pazarına giriş yaptı  Teknoloji haberleri - LOG</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/cinli-ultrand-iki-farkli-aracla-turkiye-pazarina-giris-yapt.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">19:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/yeni-gelin-dugunun-ertesi-gunu-kaynanasindan-gelen-mesajla-s.html">Yeni gelin düğünün ertesi günü kaynanasından gelen mesajla şoke oldu</a>
+                </h2>
+                <p class="news-summary">Yeni gelin düğünün ertesi günü kaynanasından gelen mesajla şoke oldu  Sözcü GazetesiGoogle Haberler uygulamasında Diğer başlıklar ve bakış açıları</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/yeni-gelin-dugunun-ertesi-gunu-kaynanasindan-gelen-mesajla-s.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Yeniçağ Gazetesi</span>
+                    <span class="time">19:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/iktidarin-emekli-ve-memura-maas-zammi-plani-yenicag-tek-tek.html">İktidarın emekli ve memura maaş zammı planı: YENİÇAĞ tek tek hesapladı</a>
+                </h2>
+                <p class="news-summary">İktidarın emekli ve memura maaş zammı planı: YENİÇAĞ tek tek hesapladı  Yeniçağ GazetesiEmekliye yapılacak zam netleşiyor: Bu iki rakamdan biri olacak  Sözcü GazetesiMilyonlarca emekli ve memur merakla bekliyor! Zam netleşiyor: 4 farklı senaryo - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansSON DAKİKA | Milyonların gözü OVP’de! SABAH zamlarla ilgili 4 senaryoyu açıkladı: Memur maaşı 100 bin TL olacak  SabahGaziantep'te Ocak ayı kehaneti  Gaziantep Oluşum Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/iktidarin-emekli-ve-memura-maas-zammi-plani-yenicag-tek-tek.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">18:47</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/chobaninin-sahibi-hamdi-ulukaya-kararini-acikladi-turkiye.html">'Chobani'nin sahibi Hamdi Ulukaya kararını açıkladı: Türkiye'ye yatırım yapacak mı?</a>
+                </h2>
+                <p class="news-summary">'Chobani'nin sahibi Hamdi Ulukaya kararını açıkladı: Türkiye'ye yatırım yapacak mı?  CumhuriyetTürkiye'nin en zengin ismi dünyaca ünlü markasını Türkiye'ye getiriyor  Sözcü GazetesiFenerbahçe'nin sponsoru Chobani'den Türkiye kararı  Nefes GazetesiÜlkenin en zengin ismi Hamdi Ulukaya dünyaca ünlü markasını Türkiye'ye getiriyor  HaberlerDünyanın en zengin Türkü Hamdi Ulukaya’dan Türkiye’ye yatırım: Chobani geliyor  ekonomim.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/chobaninin-sahibi-hamdi-ulukaya-kararini-acikladi-turkiye.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/dugun-takilarinda-yeni-donem-basliyor-kuyumcuya-gitmek-yeri.html">Düğün Takılarında Yeni Dönem Başlıyor: Kuyumcuya Gitmek Yerine Kiosklardan Altın Alınıyor</a>
+                </h2>
+                <p class="news-summary">Düğün Takılarında Yeni Dönem Başlıyor: Kuyumcuya Gitmek Yerine Kiosklardan Altın Alınıyor  OnedioAltın alışverişinde yeni dönem: Kuyumcuya gitme devri kapanıyor  HaberlerAltın alışverişi düğün salonuna taşındı: Unutma ve kaybetme derdine son Düğünde altın telaşına dijital çözüm: Tek tuşla istediğin adreste  HabertürkDüğünlerde yeni dönem: Kuyumcuya gitme devri kapandı - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansDüğünlerde altın alışverişi dijital kiosklarla kolaylaşıyor  Saray Medya</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/dugun-takilarinda-yeni-donem-basliyor-kuyumcuya-gitmek-yeri.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">18:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/kanalizasyondan-cikan-tonlarca-camuru-tarlalara-dokmeye-basl.html">Kanalizasyondan çıkan tonlarca çamuru tarlalara dökmeye başladılar</a>
+                </h2>
+                <p class="news-summary">Kanalizasyondan çıkan tonlarca çamuru tarlalara dökmeye başladılar  Sözcü GazetesiHer Ay Kanalizasyondan Çıkan Binlerce Ton Çamuru Tarlalara Dökmeye Başladılar  OnedioBrezilya'da şeker kamışı atıkları tarımda yeniden kullanılıyor  Ege AlternatifFabrikanın Çöpünü Tarlalara Döktüler: Hazineye Çevirdiler  OnedioKanalizasyon çamuru tarım arazilerine organik malzeme olarak dökülüyor  Ege Alternatif</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/kanalizasyondan-cikan-tonlarca-camuru-tarlalara-dokmeye-basl.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Bloomberght</span>
+                    <span class="time">17:36</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/dijital-teminat-cagi-evimin-temeli-bitcoin.html">Dijital teminat çağı: Evimin temeli bitcoin</a>
+                </h2>
+                <p class="news-summary">Dijital teminat çağı: Evimin temeli bitcoin  Bloomberght</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/dijital-teminat-cagi-evimin-temeli-bitcoin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">ekonomim.com</span>
+                    <span class="time">16:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/fonlara-yuzde-10-stopaj-yabancinin-ilgisini-azaltabilir.html">Fonlara yüzde 10 stopaj yabancının ilgisini azaltabilir</a>
+                </h2>
+                <p class="news-summary">Fonlara yüzde 10 stopaj yabancının ilgisini azaltabilir  ekonomim.comPara piyasası fonlarında stopaj oranı yüzde 10 oldu  BloomberghtGelir Vergisi Tevkifat Oranlarında Değişiklik (Karar Sayısı: 11734)  alomaliye.comFon yatırımcılarına yeni hesap: Stopaj oranı değişti  UzmanparaPara piyasası fonlarından elde edilen kazançlara yüzde 10 stopaj kesintisi uygulanacak  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/fonlara-yuzde-10-stopaj-yabancinin-ilgisini-azaltabilir.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">BBN Haber</span>
+                    <span class="time">16:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/konyanin-58-yillik-fabrikasi-degisiyor-yerine-dev-proje-ge.html">Konya’nın 58 yıllık fabrikası değişiyor: Yerine dev proje geliyor</a>
+                </h2>
+                <p class="news-summary">Konya’nın 58 yıllık fabrikası değişiyor: Yerine dev proje geliyor  BBN Haber</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/konyanin-58-yillik-fabrikasi-degisiyor-yerine-dev-proje-ge.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">15:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/dev-spor-giyim-markasi-borsadaki-listeden-cikariliyor.html">Dev spor giyim markası, borsadaki listeden çıkarılıyor</a>
+                </h2>
+                <p class="news-summary">Dev spor giyim markası, borsadaki listeden çıkarılıyor  Sözcü GazetesiDev spor markası yatırımcısın üzdü: Endeksten çıkarılıyor  ekonomim.comNike için finans dünyasında devrim niteliğinde bir karar alındı: Boykot işe yaradı  gzt.comNike'dan Milyonlarca yatırımcıya kara haber  Yeniçağ GazetesiNike hissesi ne zaman toparlanacak  borsatek.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/dev-spor-giyim-markasi-borsadaki-listeden-cikariliyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Uzmanpara</span>
+                    <span class="time">15:42</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/savas-sonrasi-altin-cagi-mi-basliyor-merkez-bankalarinin-ye.html">Savaş sonrası altın çağı mı başlıyor? Merkez bankalarının yeni hamlesi</a>
+                </h2>
+                <p class="news-summary">Savaş sonrası altın çağı mı başlıyor? Merkez bankalarının yeni hamlesi  UzmanparaMerkez Bankaları topluyor: Altında yeni ralli başlıyor mu?  Sözcü GazetesiMerkez Bankalarından altın hamlesi! Sarı metal yeniden yükselişe geçecek mi?  BigparaUBS: Emtialar çeşitlendirme sağlayabilir  tr.investing.comDünyanın en büyük varlık yöneticileri altın pozisyonlarını yeniden oluşturuyor  Bloomberght</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/savas-sonrasi-altin-cagi-mi-basliyor-merkez-bankalarinin-ye.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">13:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/bim-11-eylul-2026-aktuel-urunler-katalogu-yayimlandi-bu-haf.html">BİM 11 EYLÜL 2026 AKTÜEL ÜRÜNLER KATALOĞU YAYIMLANDI! Bu hafta BİM’de neler var?</a>
+                </h2>
+                <p class="news-summary">BİM 11 EYLÜL 2026 AKTÜEL ÜRÜNLER KATALOĞU YAYIMLANDI! Bu hafta BİM’de neler var?  CNN TürkBİM AKTÜEL ÜRÜNLER KATALOĞU: 9 EYLÜL’DE BİM’E HANGİ ÜRÜNLER GELECEK? (BİM 9-15 EYLÜL)  ekonomim.comBİM'e Tefal Tava Çeşitleri Geliyor! 11 Eylül 2026 BİM Aktüel Kataloğu  OnedioCUMA RAFLARDA! BİM AKTÜEL 11 EYLÜL 2026 KATALOĞU: BİM'de bu hafta hangi ürünler indirime giriyor? BİM Aktüel kataloğu tüm ürünler  MilliyetFIRSAT GÜNLERİ DEVAM EDİYOR! BİM AKTÜEL KATALOG 6-8-9-11 Eylül 2026: BİM'de raflarda neler var?  Sabah</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/bim-11-eylul-2026-aktuel-urunler-katalogu-yayimlandi-bu-haf.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Mynet Finans</span>
+                    <span class="time">13:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/bmw-189-bin-130-aracini-geri-cagiriyor-yangin-riski-tespit.html">BMW 189 bin 130 aracını geri çağırıyor! Yangın riski tespit edildi - Finans haberlerinin doğru adresi - Mynet Finans Haber</a>
+                </h2>
+                <p class="news-summary">BMW 189 bin 130 aracını geri çağırıyor! Yangın riski tespit edildi - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansBMW geri çağırmayı yine büyüttü — 150.858 otomobil daha riskte  tarantas.newsBMW, yangın riski nedeniyle 3, 5 ve 7 Serisi sedanları geri çağırıyor  Son DakikaBMW toplamda 189.130 adet modelini geri çağırıyor  Motor1.com TürkiyeBMW sahipleri dikkat! Bu modeller yangın riski nedeniyle geri çağrılıyor  Ege Telgraf</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/bmw-189-bin-130-aracini-geri-cagiriyor-yangin-riski-tespit.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Yeni Şafak</span>
+                    <span class="time">13:02</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/584-bin-tl-veren-toggu-kapiyor-sifir-faizli-dev-eylul-kamp.html">584 bin TL veren Togg'u kapıyor: Sıfır faizli dev Eylül kampanyası duyuruldu</a>
+                </h2>
+                <p class="news-summary">584 bin TL veren Togg'u kapıyor: Sıfır faizli dev Eylül kampanyası duyuruldu  Yeni ŞafakEylül 2026 Togg Fiyat Listesi: Togg T10X ve T10F Güncel Fiyatlar 2026  Onedio435 Beygirlik Togg’un Fiyatı Dikkat Çekti! İşte En Ucuz Togg ile Arasındaki Fark  Uşak Haber Gazetesi168 bin liraya sıfır Togg kampanyası başladı, aylık ödemesi 50 bin lira. İşte fiyatlar  NTV HaberTogg eylül kampanyasını duyurdu: 48 aya varan vadeyle sıfır faizli ödeme imkanı  ekonomim.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/584-bin-tl-veren-toggu-kapiyor-sifir-faizli-dev-eylul-kamp.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">T24</span>
+                    <span class="time">12:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/orta-vadeli-program-aciklandi-2026-buyume-tahmini-yuzde-3.html">Orta Vadeli Program açıklandı | 2026 büyüme tahmini yüzde 3,3’e çekildi, yıl sonu enflasyon beklentisi yüzde 28,4’e yükseldi</a>
+                </h2>
+                <p class="news-summary">Orta Vadeli Program açıklandı | 2026 büyüme tahmini yüzde 3,3’e çekildi, yıl sonu enflasyon beklentisi yüzde 28,4’e yükseldi  T24Veysel Ulusoy yazdı : İki Türkiye  CumhuriyetBüyüme, işsizlik ve OVP  Yeni ŞafakGel de inan! TÜİK'e göre bir yıl hiç para harcamazsak milyoneriz  Sözcü GazetesiAğrı'nın İlçeleri Nelerdir?  Doğubayazıt Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/orta-vadeli-program-aciklandi-2026-buyume-tahmini-yuzde-3.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Nefes Gazetesi</span>
+                    <span class="time">11:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/yesil-kapi-sart-fast-food-yasak-buraya-yerlesmek-icin-yill.html">Yeşil kapı şart, fast food yasak! Buraya yerleşmek için yıllarca bekliyorlar</a>
+                </h2>
+                <p class="news-summary">Yeşil kapı şart, fast food yasak! Buraya yerleşmek için yıllarca bekliyorlar  Nefes Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/yesil-kapi-sart-fast-food-yasak-buraya-yerlesmek-icin-yill.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">T24</span>
+                    <span class="time">10:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/otomobil-pazari-kuculdu-onlar-ayakta-kaldi-iste-en-ucuz-10.html">Otomobil pazarı küçüldü, onlar ayakta kaldı: İşte en ucuz 10 B-SUV modeli!</a>
+                </h2>
+                <p class="news-summary">Otomobil pazarı küçüldü, onlar ayakta kaldı: İşte en ucuz 10 B-SUV modeli!  T24Tüm Segmentler düşerken onlar ayakta: B-SUV sınıfında en ucuz 10 otomobil | Erkan Ersöz  Halk TV2 milyon TL’ye alınabilecek SUV modelleri: 2026’da öne çıkan 5 ikinci el araç | Otomobil Haberleri  gzt.comTürkiye’nin En Çok Satan Küçük SUV’u Belli Oldu! Yerli Model İlk 3’e Girdi  Uşak Haber GazetesiAğustos'ta En Çok Satan Küçük SUV Volkswagen Taigo Oldu, Yerli Bayon 3'üncü  HaberGo</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/otomobil-pazari-kuculdu-onlar-ayakta-kaldi-iste-en-ucuz-10.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">10:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/ucakta-internet-kullanimina-acik-riza-freni-kvkk-ceza-yag.html">Uçakta İnternet Kullanımına 'Açık Rıza' Freni: KVKK Ceza Yağdırdı!</a>
+                </h2>
+                <p class="news-summary">Uçakta İnternet Kullanımına 'Açık Rıza' Freni: KVKK Ceza Yağdırdı!  OnedioUçakta bunu yapan yolcular dikkat: 90 bin TL ceza kesildi  T24Uçakta internet kullanırken bunu isteyen yandı! 90 bin lira ceza geldi  BigparaUçakta internet için açık rıza dayatmasına 90 bin lira ceza  Doviz.comUçaktaki internet bağlantısına 90 bin lira ceza  Sözcü Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/ucakta-internet-kullanimina-acik-riza-freni-kvkk-ceza-yag.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">ekonomim.com</span>
+                    <span class="time">10:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/ekonomistlerin-faiz-beklentisi-netlesti-indirim-icin-gozler.html">Ekonomistlerin faiz beklentisi netleşti: İndirim için gözler hangi aya çevrildi?</a>
+                </h2>
+                <p class="news-summary">Ekonomistlerin faiz beklentisi netleşti: İndirim için gözler hangi aya çevrildi?  ekonomim.comDikkatler Merkez’de olacak | Zeynel Balcı Köşe Yazısı  HürriyetEkonomistler tek tek açıkladı: İndirim için gözler o tarihte!  Haber 7BBVA'dan Türkiye raporu: Faiz indirimi için tarih öne çekildi  NTV HaberTCMB’nin faizi sabit tutması bekleniyor: İlk indirim için Ekim öne çıkıyor  tr.investing.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/ekonomistlerin-faiz-beklentisi-netlesti-indirim-icin-gozler.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Dünya Gazetesi</span>
+                    <span class="time">09:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/dunyada-ucuz-para-donemi-bitti-borcu-olan-herkes-etkilenece.html">Dünyada ucuz para dönemi bitti: Borcu olan herkes etkilenecek</a>
+                </h2>
+                <p class="news-summary">Dünyada ucuz para dönemi bitti: Borcu olan herkes etkilenecek  Dünya GazetesiEmtia piyasalarında Fed beklentileri ve jeopolitik riskler etkili oldu  Anadolu AjansıTahvil getirilerindeki yükseliş hisseler için ne zaman sorun olur?  tr.investing.comBorcu olan herkes etkilenecek! Dünyada ucuz para dönemi bitti  Memurlar.NetPiyasalar diken üstünde! Petrol yükseldi, borsalar baskı altında  Bigpara</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/dunyada-ucuz-para-donemi-bitti-borcu-olan-herkes-etkilenece.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">ekonomim.com</span>
+                    <span class="time">09:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/borsaya-yeni-halka-arz-geliyor.html">Borsaya yeni halka arz geliyor!</a>
+                </h2>
+                <p class="news-summary">Borsaya yeni halka arz geliyor!  ekonomim.comNET GLOBAL HALKA ARZ TARİHİ: Net Global halka arz katılım endeksine uygun mu, kaç lot verir, hangi bankalarda var?  UzmanparaNet Global Endüstriyel Yatırımlar A.Ş. Tacirler Yatırım Liderliğinde  TacirlerSPK'dan bir halka arz onayı daha: Net Global Yatırımlar Holding (NETGL) halka arzı ne zaman, kaç lot verir, katılım endeksine uygun mu?  gzt.comNet Global halka arz oluyor, Talep toplama tarihleri 09-10-11 Eylül 2026...  Para Analiz</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/borsaya-yeni-halka-arz-geliyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Halk TV</span>
+                    <span class="time">09:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/bodrumun-unlu-isletmeleri-teker-teker-kapaniyor-sayi-42yi.html">Bodrum'un ünlü işletmeleri teker teker kapanıyor! Sayı 42'yi bulabilir</a>
+                </h2>
+                <p class="news-summary">Bodrum'un ünlü işletmeleri teker teker kapanıyor! Sayı 42'yi bulabilir  Halk TV</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/bodrumun-unlu-isletmeleri-teker-teker-kapaniyor-sayi-42yi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">09:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/tonlarca-altin-eve-donuyor-avrupa-kendi-kasasini-doldurmaya.html">Tonlarca altın eve dönüyor: Avrupa kendi kasasını doldurmaya başladı!</a>
+                </h2>
+                <p class="news-summary">Tonlarca altın eve dönüyor: Avrupa kendi kasasını doldurmaya başladı!  Sözcü GazetesiAvrupa altınını neden Amerika'dan kaçırıyor?  NTV HaberHollanda altınlarını ABD'den Londra'ya taşıyor  BloomberghtAltının ‘görev tanımı’ değişiyor  SabahGüvenli liman alarmı: Tonlarca altın Avrupa'ya geri dönüyor  Odatv</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/tonlarca-altin-eve-donuyor-avrupa-kendi-kasasini-doldurmaya.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Memurlar.Net</span>
+                    <span class="time">07:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/bankalar-krediyi-kesti-muteahhitler-devreye-girdi-konut-se.html">Bankalar krediyi kesti, müteahhitler devreye girdi: Konut sektöründe kampanya yarışı</a>
+                </h2>
+                <p class="news-summary">Bankalar krediyi kesti, müteahhitler devreye girdi: Konut sektöründe kampanya yarışı  Memurlar.NetTasarruf finansman şirketlerinde şartlar değişiyor, çok az süre kaldı  NTV HaberEvim sistemi 1 Ekim'de değişiyor: Yeni sözleşme sınırı ve finansman limitleri ne kadar? | Türkiye Ekonomisi Haberleri  gzt.comFaizsiz sıfır araç! Renault, Audi, Seat ve Skoda'dan 9 model... İşte fiyatlar  Türkiye GazetesiKocaeli’de ev ve araç alacakları ilgilendiriyor: “Evim sistemi”nde kurallar değişti  Kocaeli Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/bankalar-krediyi-kesti-muteahhitler-devreye-girdi-konut-se.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">T24</span>
+                    <span class="time">07:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/darphanenin-madeni-para-uretimi-7-ayda-dibe-vurdu-en-sert.html">Darphane’nin madeni para üretimi 7 ayda dibe vurdu; en sert düşüş 1 TL'de!</a>
+                </h2>
+                <p class="news-summary">Darphane’nin madeni para üretimi 7 ayda dibe vurdu; en sert düşüş 1 TL'de!  T24Darphane'de kuruş kalmadı  Sözcü GazetesiMadeni paralarda şaşırtan tablo! Darphane’nin rakamları ortaya çıktı - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet Finans1 TL üretimi yüzde 69 azaldı  OdatvDarphane’nin madeni para üretimi çakıldı: En sert düşüş 1 TL'de  Evrensel.net</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/darphanenin-madeni-para-uretimi-7-ayda-dibe-vurdu-en-sert.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Memurlar.Net</span>
+                    <span class="time">07:50</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/fenomen-ekonomisi-milyar-liralara-ulasti-tavsiye-mi-reklam.html">Fenomen ekonomisi milyar liralara ulaştı: Tavsiye mi, reklam mı?</a>
+                </h2>
+                <p class="news-summary">Fenomen ekonomisi milyar liralara ulaştı: Tavsiye mi, reklam mı?  Memurlar.NetSosyal medyada "tavsiye" görünümlü reklam pazarı; bir paylaşımın bedeli 1 milyon liraya kadar çıkıyor!  T24Parayı veren ‘efsane’ oluyor: Milyarlık reklam çarkı  Yeniçağ GazetesiIAB Türkiye verileri: Influencer pazarı 6,75 milyar liraya ulaştı  N24 HaberFenomenlerin reklam tarifesi 1 milyon liraya ulaşıyor  duzcetv.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/fenomen-ekonomisi-milyar-liralara-ulasti-tavsiye-mi-reklam.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">07:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/sanayiye-ugratmayan-5-otomatik-sanziman-500-bin-kilometreyi.html">Sanayiye uğratmayan 5 otomatik şanzıman: 500 bin kilometreyi deviriyor</a>
+                </h2>
+                <p class="news-summary">Sanayiye uğratmayan 5 otomatik şanzıman: 500 bin kilometreyi deviriyor  Sözcü GazetesiEvet şehir içinde büyük avantaj. Ama otomatik şanzımanların olumsuzluklarını ustaları da saklıyor  ekonomim.comSanayi yüzü görmeyen otomotiv şanzımanları belli oldu: 500 bin km'yi deviriyor  Yeniçağ GazetesiTürkiye şartlarında alınabilecek 5 otomatik şanzıman. Masraf konusunda güven veriyor.  ekonomim.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/sanayiye-ugratmayan-5-otomatik-sanziman-500-bin-kilometreyi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">ekonomim.com</span>
+                    <span class="time">07:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/akaryakit-fiyatlarinda-son-durum-guncel-benzin-motorin-ve.html">Akaryakıt fiyatlarında son durum: Güncel benzin, motorin ve LPG fiyatları</a>
+                </h2>
+                <p class="news-summary">Akaryakıt fiyatlarında son durum: Güncel benzin, motorin ve LPG fiyatları  ekonomim.comBenzin ve motorin fiyatlarına zam  BigparaAlanya'da işler hiç iyiye gitmiyor: Esnaf iflası bekliyor  Yeni AlanyaYENİ Parti Artvin İl Başkanı Kalın: Mazot zammı meyve ve sebze fiyatlarını da artıracak  Son DakikaYakıta 90’lık zam geldi!  Yeni Asya</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/akaryakit-fiyatlarinda-son-durum-guncel-benzin-motorin-ve.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">ekonomim.com</span>
+                    <span class="time">07:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/ceyrek-gram-ve-yarim-altin-fiyatlari-bugun-ne-kadar.html">Çeyrek, gram ve yarım altın fiyatları bugün ne kadar?</a>
+                </h2>
+                <p class="news-summary">Çeyrek, gram ve yarım altın fiyatları bugün ne kadar?  ekonomim.comALTIN FİYATLARI ANLIK DURUM: 6 Eylül 2026 Pazar bugün altın fiyatları ne kadar?  UzmanparaElinde altın dolar ve gümüşü olanlar cumayı bekliyor: Tüm hesaplar sil baştan  Sözcü GazetesiAltın düşmeye devam ediyor! Yatırımcılar dikkat  Haber 7Altın ve gümüşte rüzgar tersine döndü: Dev alıcılar vazgeçmedi  Dünya Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/ceyrek-gram-ve-yarim-altin-fiyatlari-bugun-ne-kadar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">07:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/borsaya-fon-ayari-hisseleri-calkaladi-zeynep-aktas.html">Borsaya fon ayarı hisseleri çalkaladı - Zeynep Aktaş</a>
+                </h2>
+                <p class="news-summary">Borsaya fon ayarı hisseleri çalkaladı - Zeynep Aktaş  MilliyetFonlarda "vahşi batı" dönemi bitiyor mu?  haberturk.comSPK’dan Fonlara Fren! Para Hangi Fonlara Kayacak? PPF’ler nasıl etkilenecek?  tr.investing.comBulls Portföy'ün TEFAS'a Açık Serbest Fonlarında SPK Uyum Süreci Tamamlandı  Son DakikaFon sektöründe köklü değişiklik: Uzman isim yeni dönemin kodlarını anlattı  platinonline.com</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/borsaya-fon-ayari-hisseleri-calkaladi-zeynep-aktas.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">05:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/44te-ilk-60ta-ikinci-dalga-guney-ozturk.html">44’te ilk 60’ta ikinci dalga - Güney Öztürk</a>
+                </h2>
+                <p class="news-summary">44’te ilk 60’ta ikinci dalga - Güney Öztürk  Sözcü Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/44te-ilk-60ta-ikinci-dalga-guney-ozturk.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">birgun.net</span>
+                    <span class="time">03:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/kocun-sirketi-ford-otosanin-yeni-yatirimlarina-dev-tesvik.html">Koç’un şirketi Ford Otosan’ın yeni yatırımlarına dev teşvik</a>
+                </h2>
+                <p class="news-summary">Koç’un şirketi Ford Otosan’ın yeni yatırımlarına dev teşvik  birgun.netFord Otosan’a Erdoğan teşviki  Evrensel.netKoç’un başına talih kuşu kondu  Yeni Akit GazetesiResmi Gazete’de yayımlandı: Eskişehir’de bir alanda özel endüstri bölgesi kararı  İstikbal GazetesiEskişehir için kritik karar Resmi Gazete’de: Ford’a 109 hektarlık Özel Endüstri Bölgesi  Gazete Vatan</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/kocun-sirketi-ford-otosanin-yeni-yatirimlarina-dev-tesvik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ekonomi/2026/09/06/" class="badge">Ekonomi</a>
+                    <span class="source">haberturk.com</span>
+                    <span class="time">00:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ekonomi/2026/09/06/emekli-promosyon-kampanyasi-guncellendi-eylul-2026-en-yukse.html">Emekli promosyon kampanyası güncellendi! Eylül 2026 en yüksek emekli promosyon veren banka hangisi?</a>
+                </h2>
+                <p class="news-summary">Emekli promosyon kampanyası güncellendi! Eylül 2026 en yüksek emekli promosyon veren banka hangisi?  haberturk.comEylül 2026 emekli promosyonları güncellendi: Peki hangi banka ne kadar ödüyor?  ekonomim.comEN YENİ EMEKLİ BANKA PROMOSYONU 2026 - EYLÜL KAMPANYALARI GÜNCELLEND! Emekli promosyonu en yüksek veren banka hangisi? İş Bankası, Ziraat, Yapı Kredi, QNB,...  BigparaEn Yüksek Emekli Promosyonu Veren Bankalar Belli Oldu  Haber ExpresEmekliler için promosyon yarışı kızıştı: En yüksek ödemeyi hangi banka veriyor?  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/ekonomi/2026/09/06/emekli-promosyon-kampanyasi-guncellendi-eylul-2026-en-yukse.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
