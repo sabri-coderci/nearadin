@@ -881,7 +881,7 @@ def fetch_and_generate():
     <priority>0.9</priority>
   </url>\n'''
 
-    # --- ARŞİV SAYFASI OLUŞTURMA (KATEGORİ BAZLI GRUPLANDIRMA) ---
+    # --- ARŞİV SAYFASI OLUŞTURMA (KATEGORİ BAZLI GRUPLANDIRMA VE ACCORDION YAPISI) ---
     category_archives = {cat_slug: {} for cat_slug in CATEGORIES.keys()}
 
     for cat_slug in CATEGORIES.keys():
@@ -931,12 +931,15 @@ def fetch_and_generate():
             </li>'''
 
         archive_blocks_html += f'''
-        <div style="background: white; border-radius: 10px; border: 1px solid #e4e6eb; margin-bottom: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); overflow: hidden;">
-            <div style="background-color: #f7f8fa; padding: 12px 16px; border-bottom: 1px solid #e4e6eb; font-weight: bold; font-size: 16px; color: #0056b3; display: flex; justify-content: space-between; align-items: center;">
-                <span>📌 {cat_info['name']} Arşivi</span>
-                <a href="/{cat_slug}/" style="font-size: 12px; color: #1877f2; text-decoration: none;">Kategoriye Git →</a>
+        <div id="{cat_slug}" class="archive-card" style="background: white; border-radius: 10px; border: 1px solid #e4e6eb; margin-bottom: 15px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="archive-header" onclick="toggleArchive('{cat_slug}')" style="background-color: #f7f8fa; padding: 14px 16px; border-bottom: 1px solid #e4e6eb; font-weight: bold; font-size: 16px; color: #0056b3; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none;">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                    📌 {cat_info['name']} Arşivi 
+                    <span class="toggle-icon" id="icon-{cat_slug}" style="font-size: 12px; color: #65676b;">▼</span>
+                </span>
+                <a href="/{cat_slug}/" onclick="event.stopPropagation();" style="font-size: 12px; color: #1877f2; text-decoration: none; font-weight: normal;">Kategoriye Git →</a>
             </div>
-            <ul style="list-style: none; margin: 0; padding: 0;">
+            <ul id="list-{cat_slug}" class="archive-list" style="list-style: none; margin: 0; padding: 0; display: none;">
                 {date_items_html}
             </ul>
         </div>'''
@@ -950,9 +953,10 @@ def fetch_and_generate():
     <meta name="description" content="nearadin.net kategorilere göre tarihlendirilmiş güncel haber arşivleri." />
     <style>
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; scroll-behavior: smooth; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }}
         h1 {{ font-size: 20px; margin-bottom: 15px; color: #0056b3; }}
+        .archive-header:hover {{ background-color: #eef2f7 !important; }}
         .ad-container {{ margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }}
         .ad-container:empty {{ display: none !important; }}
     </style>
@@ -967,6 +971,33 @@ def fetch_and_generate():
         <h1>📁 Kategorilere Göre Günlük Arşiv</h1>
         {archive_blocks_html if archive_blocks_html else '<p style="background: white; padding: 15px; border-radius: 8px;">Henüz arşivlenmiş gün bulunmuyor.</p>'}
     </div>
+
+    <script>
+        function toggleArchive(slug) {{
+            const list = document.getElementById('list-' + slug);
+            const icon = document.getElementById('icon-' + slug);
+            const card = document.getElementById(slug);
+
+            if (list.style.display === 'none' || list.style.display === '') {{
+                list.style.display = 'block';
+                icon.innerText = '▲';
+                setTimeout(() => {{
+                    card.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+                }}, 100);
+            }} else {{
+                list.style.display = 'none';
+                icon.innerText = '▼';
+            }}
+        }}
+
+        document.addEventListener('DOMContentLoaded', function() {{
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {{
+                toggleArchive(hash);
+            }}
+        }});
+    </script>
+
     {footer_html}
 </body>
 </html>'''
