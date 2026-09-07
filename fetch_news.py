@@ -828,7 +828,7 @@ def fetch_and_generate():
     <div class="container">
         <div class="status-bar">
             <span>Kaynak: <strong>Tüm Kategoriler Akışı</strong></span>
-            <span><script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script></span>
+          
             
             <span>Son Güncelleme: <strong>{last_update}</strong></span>
         </div>
