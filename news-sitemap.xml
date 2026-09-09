@@ -57,6 +57,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/dunya/2026/09/09/anthropic-arastirmacisi-istifa-etti-yapay-zeka-on-yil-icin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-09T10:40:58+03:00</news:publication_date>
+      <news:title>Anthropic araştırmacısı istifa etti: “yapay zeka on yıl içinde insanlığı yok edebilir”</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/09/kredi-karti-limitlerinde-buyuk-degisiklik-yolda-tarih-belli.html</loc>
     <news:news>
       <news:publication>
@@ -79,17 +90,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/09/galatasaray-sampiyonlar-liginde-sporting-deplasmaninda-is.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T10:26:38+03:00</news:publication_date>
-      <news:title>Galatasaray, Şampiyonlar Ligi&#x27;nde Sporting deplasmanında! İşte muhtemel 11&#x27;ler</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/09/turk-pazarini-kesfettiler-bir-cinli-daha-gaza-basti-geliyor.html</loc>
     <news:news>
       <news:publication>
@@ -98,17 +98,6 @@
       </news:publication>
       <news:publication_date>2026-09-09T10:23:00+03:00</news:publication_date>
       <news:title>Türk pazarını keşfettiler: Bir Çinli daha gaza bastı geliyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/09/turk-futbolunda-tarihi-imza-turgutlusporun-yeni-teknik-dir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T10:19:00+03:00</news:publication_date>
-      <news:title>Türk futbolunda tarihi imza! Turgutluspor&#x27;un yeni teknik direktörü 22 yaşındaki Zeynep Mestan oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -189,17 +178,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/09/beton-harcina-insan-diskisi-karistirmaya-basladilar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T09:51:13+03:00</news:publication_date>
-      <news:title>Beton harcına insan dışkısı karıştırmaya başladılar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/09/turkiyenin-dev-gida-sirketi-konkordato-ilan-etti.html</loc>
     <news:news>
       <news:publication>
@@ -208,28 +186,6 @@
       </news:publication>
       <news:publication_date>2026-09-09T09:51:00+03:00</news:publication_date>
       <news:title>Türkiye&#x27;nin dev gıda şirketi konkordato ilan etti!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/09/anthropicten-istifa-etti-soyledikleri-gundem-oldu-o-arast.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T09:48:17+03:00</news:publication_date>
-      <news:title>Anthropic’ten istifa etti, söyledikleri gündem oldu! O araştırmacıdan korkutan yapay zeka uyarısı - TREND</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/09/anthropicten-istifa-etti-soyledikleri-gundem-oldu-o-arast.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T09:48:17+03:00</news:publication_date>
-      <news:title>Anthropic’ten istifa etti, söyledikleri gündem oldu! O araştırmacıdan korkutan yapay zeka uyarısı - TREND</news:title>
     </news:news>
   </url>
   <url>
@@ -261,7 +217,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-09T09:41:38+03:00</news:publication_date>
+      <news:publication_date>2026-09-09T09:41:00+03:00</news:publication_date>
       <news:title>&#x27;Ülkeyi terk edene 36 bin dolar&#x27; kampanyası başlattılar</news:title>
     </news:news>
   </url>
@@ -277,14 +233,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/09/ibb-davasinda-2-celsenin-13-gunu-tamamlandi-durusmada-nel.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/09/turgutluspordan-tarihi-imza-22-yasindaki-zeynep-mestan-tek.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-09T09:35:24+03:00</news:publication_date>
-      <news:title>İBB davasında 2. celsenin 13. günü tamamlandı: Duruşmada neler yaşandı?</news:title>
+      <news:publication_date>2026-09-09T09:36:33+03:00</news:publication_date>
+      <news:title>Turgutluspor&#x27;dan tarihi imza. 22 yaşındaki Zeynep Mestan teknik direktör oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -296,6 +252,17 @@
       </news:publication>
       <news:publication_date>2026-09-09T09:33:00+03:00</news:publication_date>
       <news:title>Rus ekonomisi tehlikede! 86 banka zarar açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/09/applein-bildirimiyle-ortaya-cikti-uc-bakanin-telefonu-hede.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-09T09:32:00+03:00</news:publication_date>
+      <news:title>Apple&#x27;ın bildirimiyle ortaya çıktı: Üç bakanın telefonu hedef oldu, Ankara alarma geçti</news:title>
     </news:news>
   </url>
   <url>
@@ -596,6 +563,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/dunya/2026/09/09/ormanda-avlanan-bu-yaratiklar-birden-pembe-topa-donusuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-09T07:47:00+03:00</news:publication_date>
+      <news:title>Ormanda avlanan bu yaratıklar birden pembe topa dönüşüyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/09/surec-yasasinda-aralik-rotari-ocalan-uzerinden-mudahale-idd.html</loc>
     <news:news>
       <news:publication>
@@ -613,7 +591,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-09T07:23:24+03:00</news:publication_date>
+      <news:publication_date>2026-09-09T07:24:07+03:00</news:publication_date>
       <news:title>AfD&#x27;nin seçim zaferi Alman ekonomisini nasıl etkileyecek?</news:title>
     </news:news>
   </url>
@@ -725,6 +703,17 @@
       </news:publication>
       <news:publication_date>2026-09-09T07:00:00+03:00</news:publication_date>
       <news:title>Ertuğrul Özkök | Dünyayı sarsan 12 gün: İlk yapay zekâ çetesi PHASEONE10841 nereleri ele geçirdi?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/09/galatasarayin-rakibi-sportingi-yakindan-taniyalim-hizli.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-09T07:00:00+03:00</news:publication_date>
+      <news:title>Galatasaray&#x27;ın rakibi Sporting&#x27;i yakından tanıyalım: &#x27;Hızlı, esnek ve dik oynayan bir takım!&#x27;</news:title>
     </news:news>
   </url>
   <url>
@@ -970,17 +959,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/09/sampiyonlar-liginde-odul-alan-milli-futbolcu-arda-gulerin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-09T00:28:26+03:00</news:publication_date>
-      <news:title>Şampiyonlar Ligi&#x27;nde Ödül Alan Milli Futbolcu Arda Güler&#x27;in Giyim Tarzı Gündem Oldu: &#x27;Veliaht Prens Havası&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/bilim/2026/09/09/buz-topragi-tutacak-sandilar-tam-tersi-oldu-donmus-zemin-n.html</loc>
     <news:news>
       <news:publication>
@@ -1000,6 +978,17 @@
       </news:publication>
       <news:publication_date>2026-09-09T00:19:15+03:00</news:publication_date>
       <news:title>Ballon d’Or ödüllerinde adaylar belli oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/09/real-madrid-2-1-inter-mac-ozeti-sampiyonlar-ligi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-09T00:17:37+03:00</news:publication_date>
+      <news:title>Real Madrid 2-1 Inter maç özeti (Şampiyonlar Ligi)</news:title>
     </news:news>
   </url>
   <url>
@@ -1135,17 +1124,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/08/tff-aziz-yildirim-ve-kerem-akturkoglunu-pfdkya-sevk-etti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T22:53:05+03:00</news:publication_date>
-      <news:title>TFF, Aziz Yıldırım ve Kerem Aktürkoğlu&#x27;nu PFDK&#x27;ya sevk etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/08/android-telefonlarda-yeni-donem-basliyor.html</loc>
     <news:news>
       <news:publication>
@@ -1201,14 +1179,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/08/sampiyonlar-ligine-gollu-baslangic-fenerbahce-ve-galatasar.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/08/villa-belcikada-3-puanla-basladi-ozet-club-brugge-a.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-08T21:49:40+03:00</news:publication_date>
-      <news:title>Şampiyonlar Ligi&#x27;ne gollü başlangıç: Fenerbahçe ve Galatasaray&#x27;ın rakibi kazandı</news:title>
+      <news:publication_date>2026-09-08T22:06:00+03:00</news:publication_date>
+      <news:title>Villa, Belçika&#x27;da 3 puanla başladı... (ÖZET) Club Brugge - Aston Villa maç sonucu 2-3</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/08/besiktastan-pfdkya-vlahovic-tepkisi-kabul-edilemez.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T21:57:00+03:00</news:publication_date>
+      <news:title>Beşiktaş&#x27;tan PFDK&#x27;ya Vlahovic tepkisi: Kabul edilemez!</news:title>
     </news:news>
   </url>
   <url>
@@ -1220,17 +1209,6 @@
       </news:publication>
       <news:publication_date>2026-09-08T21:47:00+03:00</news:publication_date>
       <news:title>Ekrem İmamoğlu&#x27;ndan sert &#x27;Üsküdar&#x27; tepkisi: &#x27;Seçimlerin bir anlamı kalmadığında...&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/08/rafael-leaodan-galatasaraya-sadakat-sozu-her-seyimi-vere.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T21:45:02+03:00</news:publication_date>
-      <news:title>Rafael Leao&#x27;dan Galatasaray&#x27;a sadakat sözü: &quot;Her şeyimi vereceğim&quot;</news:title>
     </news:news>
   </url>
   <url>
@@ -1267,17 +1245,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/08/turkiye-israil-gerilimine-bir-de-buradan-bakin-iran-savas.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T21:22:10+03:00</news:publication_date>
-      <news:title>Türkiye - İsrail gerilimine bir de buradan bakın… İran savaşından açığa çıkan zaaf: Ankara neyi gördü</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/08/goztepede-kaleci-luka-gugeshashvili-kadro-disi-paylasimi-g.html</loc>
     <news:news>
       <news:publication>
@@ -1286,6 +1253,17 @@
       </news:publication>
       <news:publication_date>2026-09-08T21:16:46+03:00</news:publication_date>
       <news:title>Göztepe&#x27;de kaleci Luka Gugeshashvili kadro dışı! Paylaşımı gündem olmuştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/08/ozer-matlidan-btso-uyelerine-aidat-mujdesi-yeni-donem-pr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T21:14:00+03:00</news:publication_date>
+      <news:title>Özer Matlı&#x27;dan BTSO üyelerine &#x27;aidat&#x27; müjdesi! Yeni dönem projelerini anlattı</news:title>
     </news:news>
   </url>
   <url>
@@ -1473,6 +1451,17 @@
       </news:publication>
       <news:publication_date>2026-09-08T18:59:18+03:00</news:publication_date>
       <news:title>Tunç Soyer hakkında iddianame hazırlandı: Altı yıla kadar hapsi isteniyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/08/turkce-suriyede-okullardan-kaldirildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T18:51:00+03:00</news:publication_date>
+      <news:title>Türkçe Suriye&#x27;de okullardan kaldırıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -1682,17 +1671,6 @@
       </news:publication>
       <news:publication_date>2026-09-08T17:30:29+03:00</news:publication_date>
       <news:title>Putin ile Trump telefonda görüştü</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/08/icinde-12-ev-bulunan-koyu-bedavaya-satiyorlar-tek-bir-sart.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T17:29:47+03:00</news:publication_date>
-      <news:title>İçinde 12 ev bulunan köyü bedavaya satıyorlar: Tek bir şart var! - TREND</news:title>
     </news:news>
   </url>
   <url>
@@ -2070,17 +2048,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/08/100-tane-pet-siseyi-catiya-dizdi-simdi-bedava-kullaniyorlar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T15:46:00+03:00</news:publication_date>
-      <news:title>100 tane pet şişeyi çatıya dizdi şimdi bedava kullanıyorlar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/08/hakan-calhanoglunun-formula-1-tarzi-dikkat-cekti-esiyle-mo.html</loc>
     <news:news>
       <news:publication>
@@ -2147,6 +2114,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/08/volkswagen-125-yillik-imalati-noktaladi-artik-israil-ile-or.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T15:09:00+03:00</news:publication_date>
+      <news:title>Volkswagen 125 yıllık imalatı noktaladı: Artık İsrail ile ortak silah üretecek!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/08/ozgur-celik-uskudarda-insanlik-onuru-ayaklar-altina-alindi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T15:06:32+03:00</news:publication_date>
+      <news:title>Özgür Çelik: Üsküdar&#x27;da insanlık onuru ayaklar altına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/bilim/2026/09/08/bursa-saglik-camiasinin-aci-kaybi-prof-dr-faruk-memik-hay.html</loc>
     <news:news>
       <news:publication>
@@ -2158,6 +2147,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/08/avustralyada-sosyal-medya-kullanicilarina-algoritmanin-dis.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T15:00:00+03:00</news:publication_date>
+      <news:title>Avustralya&#x27;da sosyal medya kullanıcılarına &quot;algoritmanın dışında kalma&quot; seçeneği sunulacak</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/bilim/2026/09/08/55-yillik-kayitlarda-bir-ilk-once-sicaklik-yukseldi-sonra.html</loc>
     <news:news>
       <news:publication>
@@ -2166,17 +2166,6 @@
       </news:publication>
       <news:publication_date>2026-09-08T14:58:18+03:00</news:publication_date>
       <news:title>55 yıllık kayıtlarda bir ilk. Önce sıcaklık yükseldi, sonra dağ çöktü</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/08/son-anket-sonuclari-partilerin-oy-oranlari-ne-kadar-iste-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T14:57:00+03:00</news:publication_date>
-      <news:title>SON ANKET SONUÇLARI: Partilerin oy oranları ne kadar? İşte AK Parti, MHP, CHP, Yeni Parti ve diğer partilerin güncel oy oranları</news:title>
     </news:news>
   </url>
   <url>
@@ -2323,17 +2312,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/08/mercedes-benz-fiyat-listesi-eylul-2026.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T14:23:40+03:00</news:publication_date>
-      <news:title>Mercedes-Benz Fiyat Listesi - Eylül 2026</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/08/sakaryada-uyanik-halde-kanserden-kurtuldu.html</loc>
     <news:news>
       <news:publication>
@@ -2356,14 +2334,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/08/122-milyon-liralik-vurgun-sevgilisine-5-milyon-liralik-este.html</loc>
+    <loc>https://nearadin.net/gundem/2026/09/08/agrililar-gunlerce-karanlik-kalacak.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-08T14:05:58+03:00</news:publication_date>
-      <news:title>122 milyon liralık vurgun. Sevgilisine 5 milyon liralık estetik yaptırdı: &quot;Pişman değilim&quot;</news:title>
+      <news:publication_date>2026-09-08T14:00:00+03:00</news:publication_date>
+      <news:title>Ağrılılar Günlerce Karanlık Kalacak</news:title>
     </news:news>
   </url>
   <url>
@@ -2400,6 +2378,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/08/fiyati-60-tlden-20-tlye-dustu-yuzde-70i-yurt-disina-sati.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T13:56:00+03:00</news:publication_date>
+      <news:title>Fiyatı 60 TL&#x27;den 20 TL&#x27;ye düştü: Yüzde 70&#x27;i yurt dışına satılıyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/08/emekli-ve-memura-darbe-geliyor-resmen-aciklandi.html</loc>
     <news:news>
       <news:publication>
@@ -2419,6 +2408,17 @@
       </news:publication>
       <news:publication_date>2026-09-08T13:49:07+03:00</news:publication_date>
       <news:title>Bahçıvan İSO Başkanlığına aday olmayacak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/08/calistigi-sirketten-122-milyon-lira-calan-muhasebe-muduru-p.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-08T13:46:00+03:00</news:publication_date>
+      <news:title>Çalıştığı şirketten 122 milyon lira çalan muhasebe müdürü: Pişman değilim</news:title>
     </news:news>
   </url>
   <url>
@@ -2463,17 +2463,6 @@
       </news:publication>
       <news:publication_date>2026-09-08T13:18:00+03:00</news:publication_date>
       <news:title>Yapay zekâyla geliştirilen ilaç biyolojik yaşı geri çevirdi: Yaşlanmayı da yavaşlatabilir mi?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/08/ozkan-yalimin-42-milyon-liralik-araclarina-talip-cikmadi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T13:17:50+03:00</news:publication_date>
-      <news:title>Özkan Yalım&#x27;ın 42 milyon liralık araçlarına talip çıkmadı.</news:title>
     </news:news>
   </url>
   <url>
@@ -2584,17 +2573,6 @@
       </news:publication>
       <news:publication_date>2026-09-08T12:13:18+03:00</news:publication_date>
       <news:title>86 ton altını apar topar başka ülkeye taşıdılar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/08/yuzde-70i-yurt-disina-kapis-kapis-gidiyor-ama-uretici-agliy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T12:08:50+03:00</news:publication_date>
-      <news:title>Yüzde 70&#x27;i yurt dışına kapış kapış gidiyor ama üretici ağlıyor! Fiyatı 60 liradan 20 liraya düştü...</news:title>
     </news:news>
   </url>
   <url>
