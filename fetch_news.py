@@ -330,7 +330,7 @@ def fetch_and_generate():
         "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr"},
         "spor": {"name": "Spor", "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr"},
         "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr"},
-        "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"}
+        "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"},
         "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/headlines/section/topic/BITCOIN?hl=tr&gl=TR&ceid=TR:tr"}
 
     }
