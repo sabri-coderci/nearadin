@@ -324,7 +324,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 #def fetch_and_generate():
    
-    def fetch_and_generate():
+def fetch_and_generate():
     CATEGORIES = {
         "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/search?q=g%C3%BCndem&hl=tr&gl=TR&ceid=TR:tr"},
         "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/search?q=d%C3%BCnya&hl=tr&gl=TR&ceid=TR:tr"},
