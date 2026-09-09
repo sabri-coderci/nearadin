@@ -322,17 +322,31 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         f.write(weather_html)
 
 
-def fetch_and_generate():
+#def fetch_and_generate():
+   
+    def fetch_and_generate():
     CATEGORIES = {
-        "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=tr&gl=TR&ceid=TR:tr"},
-        "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr"},
-        "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr"},
-        "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr"},
-        "spor": {"name": "Spor", "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr"},
-        "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr"},
-        "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"},
+        "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/search?q=g%C3%BCndem&hl=tr&gl=TR&ceid=TR:tr"},
+        "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/search?q=d%C3%BCnya&hl=tr&gl=TR&ceid=TR:tr"},
+        "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/search?q=ekonomi&hl=tr&gl=TR&ceid=TR:tr"},
+        "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/search?q=teknoloji&hl=tr&gl=TR&ceid=TR:tr"},
+        "spor": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor&hl=tr&gl=TR&ceid=TR:tr"},
+        "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k&hl=tr&gl=TR&ceid=TR:tr"},
+        "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/search?q=bilim&hl=tr&gl=TR&ceid=TR:tr"},
         "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"}
     }
+
+    
+    #CATEGORIES = {
+       # "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=tr&gl=TR&ceid=TR:tr"},
+       # "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr"},
+       # "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr"},
+       # "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr"},
+       # "spor": {"name": "Spor", "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr"},
+       # "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr"},
+       # "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"},
+       # "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"}
+   # }
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
