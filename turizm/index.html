@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turizm Haberleri - nearadin.net</title>
+    <meta name="description" content="En son Turizm haberleri ve canlı gelişmeler." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            📌 Turizm Haberleri
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">23:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/japonya-asiri-turizme-karsi-harekete-gecti.html">Japonya Aşırı Turizme Karşı Harekete Geçti</a>
+                </h2>
+                <p class="news-summary">Japonya Aşırı Turizme Karşı Harekete Geçti  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/japonya-asiri-turizme-karsi-harekete-gecti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm News</span>
+                    <span class="time">23:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/atf-genc-ile-turizmin-kalbi-genclerle-atacak.html">ATF Genç ile turizmin kalbi gençlerle atacak</a>
+                </h2>
+                <p class="news-summary">ATF Genç ile turizmin kalbi gençlerle atacak  Turizm News</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/atf-genc-ile-turizmin-kalbi-genclerle-atacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm News</span>
+                    <span class="time">22:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/kusadasina-denizden-7-bin-818-turist-geldi.html">Kuşadası'na denizden 7 bin 818 turist geldi</a>
+                </h2>
+                <p class="news-summary">Kuşadası'na denizden 7 bin 818 turist geldi  Turizm News</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/kusadasina-denizden-7-bin-818-turist-geldi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">21:42</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turizm-sohbetleri-dagitim-kanallarindaki-donusum-yasal-duz.html">Turizm Sohbetleri: Dağıtım Kanallarındaki Dönüşüm, Yasal Düzenlemeler ve Yatırım Çıkmazı</a>
+                </h2>
+                <p class="news-summary">Turizm Sohbetleri: Dağıtım Kanallarındaki Dönüşüm, Yasal Düzenlemeler ve Yatırım Çıkmazı  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turizm-sohbetleri-dagitim-kanallarindaki-donusum-yasal-duz.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Aktüel</span>
+                    <span class="time">20:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turkiyede-muze-ve-oren-yeri-ziyaretler-659-milyona-ulasti.html">Türkiye’de müze ve ören yeri ziyaretler 65,9 milyona ulaştı</a>
+                </h2>
+                <p class="news-summary">Türkiye’de müze ve ören yeri ziyaretler 65,9 milyona ulaştı  Turizm Aktüel</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turkiyede-muze-ve-oren-yeri-ziyaretler-659-milyona-ulasti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">20:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/isvicre-turizm-pazari-icin-2026-yilinin-en-onemli-5-gelismes.html">İsviçre Turizm Pazarı İçin 2026 Yılının En Önemli 5 Gelişmesi</a>
+                </h2>
+                <p class="news-summary">İsviçre Turizm Pazarı İçin 2026 Yılının En Önemli 5 Gelişmesi  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/isvicre-turizm-pazari-icin-2026-yilinin-en-onemli-5-gelismes.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">20:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/almanya-merkezli-windrose-2027-yili-icin-4-yilin-destinasy.html">Almanya Merkezli Windrose, 2027 Yılı İçin 4 "Yılın Destinasyonu" İle Lüks Turizm Programını Genişletiyor</a>
+                </h2>
+                <p class="news-summary">Almanya Merkezli Windrose, 2027 Yılı İçin 4 "Yılın Destinasyonu" İle Lüks Turizm Programını Genişletiyor  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/almanya-merkezli-windrose-2027-yili-icin-4-yilin-destinasy.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">19:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turespaa-genel-muduru-miguel-sanz-lider-destinasyon-olara.html">Turespaña Genel Müdürü Miguel Sanz: “Lider Destinasyon Olarak Turizm Modelimizi Sürekli Mimarisine Göre Uyarlamalıyız”</a>
+                </h2>
+                <p class="news-summary">Turespaña Genel Müdürü Miguel Sanz: “Lider Destinasyon Olarak Turizm Modelimizi Sürekli Mimarisine Göre Uyarlamalıyız”  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turespaa-genel-muduru-miguel-sanz-lider-destinasyon-olara.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">19:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/bm-turizm-orgutu-sosyal-inovasyon-yarismasinin-kazananlari.html">BM Turizm Örgütü Sosyal İnovasyon Yarışması’nın Kazananları Açıklandı</a>
+                </h2>
+                <p class="news-summary">BM Turizm Örgütü Sosyal İnovasyon Yarışması’nın Kazananları Açıklandı  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/bm-turizm-orgutu-sosyal-inovasyon-yarismasinin-kazananlari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Yeni Alanya</span>
+                    <span class="time">19:12</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turizmde-finansal-baski-antalya-turkiye-ucuncusu-oldu.html">Turizmde finansal baskı: Antalya Türkiye üçüncüsü oldu</a>
+                </h2>
+                <p class="news-summary">Turizmde finansal baskı: Antalya Türkiye üçüncüsü oldu  Yeni Alanya</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turizmde-finansal-baski-antalya-turkiye-ucuncusu-oldu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">18:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/kisin-issiz-yazin-yorgun-antalyanin-gorunmeyen-ekonomisi.html">Kışın İşsiz, Yazın Yorgun: Antalya'nın Görünmeyen Ekonomisi</a>
+                </h2>
+                <p class="news-summary">Kışın İşsiz, Yazın Yorgun: Antalya'nın Görünmeyen Ekonomisi  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/kisin-issiz-yazin-yorgun-antalyanin-gorunmeyen-ekonomisi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">18:29</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/muze-haritasi-degisiyor-istanbul-2019u-yakalayamadi-anado.html">Müze Haritası Değişiyor: İstanbul 2019'u Yakalayamadı, Anadolu Sıçradı</a>
+                </h2>
+                <p class="news-summary">Müze Haritası Değişiyor: İstanbul 2019'u Yakalayamadı, Anadolu Sıçradı  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/muze-haritasi-degisiyor-istanbul-2019u-yakalayamadi-anado.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Ekonomim</span>
+                    <span class="time">18:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/ozak-gyonun-antalyada-insa-edecegi-oteli-dunyaca-unlu-mar.html">Özak GYO'nun, Antalya'da inşa edeceği oteli dünyaca ünlü marka işletecek</a>
+                </h2>
+                <p class="news-summary">Özak GYO'nun, Antalya'da inşa edeceği oteli dünyaca ünlü marka işletecek  Ekonomim</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/ozak-gyonun-antalyada-insa-edecegi-oteli-dunyaca-unlu-mar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">18:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turkiye-turizminde-illere-gore-finansal-baski-haritasi-tur.html">Türkiye Turizminde İllere Göre Finansal Baskı Haritası - Turizm Databank Analizi</a>
+                </h2>
+                <p class="news-summary">Türkiye Turizminde İllere Göre Finansal Baskı Haritası - Turizm Databank Analizi  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turkiye-turizminde-illere-gore-finansal-baski-haritasi-tur.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">hibya.com</span>
+                    <span class="time">18:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/petrokent-turizmde-kayitli-sermaye-tavani-artirimi.html">Petrokent Turizm'de, kayıtlı sermaye tavanı artırımı</a>
+                </h2>
+                <p class="news-summary">Petrokent Turizm'de, kayıtlı sermaye tavanı artırımı  hibya.com</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/petrokent-turizmde-kayitli-sermaye-tavani-artirimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">hibya.com</span>
+                    <span class="time">18:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/ekim-turizmde-pay-geri-alimi.html">Ekim Turizm’de pay geri alımı</a>
+                </h2>
+                <p class="news-summary">Ekim Turizm’de pay geri alımı  hibya.com</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/ekim-turizmde-pay-geri-alimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">GZT</span>
+                    <span class="time">18:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/kap-ekim-turizm-ticaret-ve-sanayi-as-ekim-payl.html">KAP *** EKİM TURİZM TİCARET VE SANAYİ A.Ş. *** EKIM *** Payların Geri Alınmasına İlişkin Bildirim</a>
+                </h2>
+                <p class="news-summary">KAP *** EKİM TURİZM TİCARET VE SANAYİ A.Ş. *** EKIM *** Payların Geri Alınmasına İlişkin Bildirim  GZT</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/kap-ekim-turizm-ticaret-ve-sanayi-as-ekim-payl.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Günlüğü</span>
+                    <span class="time">18:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/rusya-gurcistan-ve-azerbaycan-uzmani-igetis-group-globemee.html">Rusya, Gürcistan ve Azerbaycan Uzmanı İgetis Group, GlobeMeets 2026’da Acentalarla Buluşuyor</a>
+                </h2>
+                <p class="news-summary">Rusya, Gürcistan ve Azerbaycan Uzmanı İgetis Group, GlobeMeets 2026’da Acentalarla Buluşuyor  Turizm Günlüğü</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/rusya-gurcistan-ve-azerbaycan-uzmani-igetis-group-globemee.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Gazetesi</span>
+                    <span class="time">17:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/elite-world-rotayi-yurt-disina-cevirdi-misir-yatirimi-gunde.html">Elite World Rotayı Yurt Dışına Çevirdi: Mısır Yatırımı Gündemde</a>
+                </h2>
+                <p class="news-summary">Elite World Rotayı Yurt Dışına Çevirdi: Mısır Yatırımı Gündemde  Turizm Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/elite-world-rotayi-yurt-disina-cevirdi-misir-yatirimi-gunde.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Antalya Hürses</span>
+                    <span class="time">16:55</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/turizmde-sezon-kapaniyor-emekcinin-borcu-buyuyor.html">Turizmde sezon kapanıyor, emekçinin borcu büyüyor</a>
+                </h2>
+                <p class="news-summary">Turizmde sezon kapanıyor, emekçinin borcu büyüyor  Antalya Hürses</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/turizmde-sezon-kapaniyor-emekcinin-borcu-buyuyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm News</span>
+                    <span class="time">16:44</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/igetis-group-globemeetste-seyahat-acentalariyla-bulusacak.html">İgetis Group, GlobeMeets'te seyahat acentalarıyla buluşacak</a>
+                </h2>
+                <p class="news-summary">İgetis Group, GlobeMeets'te seyahat acentalarıyla buluşacak  Turizm News</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/igetis-group-globemeetste-seyahat-acentalariyla-bulusacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Yeşil Iğdır Gazetesi</span>
+                    <span class="time">16:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/milletvekili-canturk-alagozden-turizm-bakani-mehmet-nuri-er.html">Milletvekili Cantürk Alagöz’den Turizm Bakanı Mehmet Nuri Ersoy’a Ziyaret</a>
+                </h2>
+                <p class="news-summary">Milletvekili Cantürk Alagöz’den Turizm Bakanı Mehmet Nuri Ersoy’a Ziyaret  Yeşil Iğdır Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/milletvekili-canturk-alagozden-turizm-bakani-mehmet-nuri-er.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">elazigsurmansethaber.com</span>
+                    <span class="time">16:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/diyarbakirda-turizm-icin-guc-birligi.html">Diyarbakır’da Turizm İçin Güç Birliği</a>
+                </h2>
+                <p class="news-summary">Diyarbakır’da Turizm İçin Güç Birliği  elazigsurmansethaber.com</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/diyarbakirda-turizm-icin-guc-birligi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Uşak Egem TV</span>
+                    <span class="time">16:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/usakta-2026-yili-turizm-etkinlikleri-planlaniyor.html">Uşak'ta 2026 Yılı Turizm Etkinlikleri Planlanıyor</a>
+                </h2>
+                <p class="news-summary">Uşak'ta 2026 Yılı Turizm Etkinlikleri Planlanıyor  Uşak Egem TV</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/usakta-2026-yili-turizm-etkinlikleri-planlaniyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">61SAAT</span>
+                    <span class="time">16:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/murat-ozcilingir-tashanin-turizm-degeri-yalnizca-tas-duva.html">Murat Özçilingir: “Taşhan’ın turizm değeri yalnızca taş duvarları değil, yıllardır süregelen ticari hayat kültürüdür”</a>
+                </h2>
+                <p class="news-summary">Murat Özçilingir: “Taşhan’ın turizm değeri yalnızca taş duvarları değil, yıllardır süregelen ticari hayat kültürüdür”  61SAAT</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/murat-ozcilingir-tashanin-turizm-degeri-yalnizca-tas-duva.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Güncel</span>
+                    <span class="time">16:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/muze-ve-oren-yerlerine-giris-ucretlerine-zam-2027-tarifesi.html">Müze ve ören yerlerine giriş ücretlerine zam! 2027 tarifesi belli oldu</a>
+                </h2>
+                <p class="news-summary">Müze ve ören yerlerine giriş ücretlerine zam! 2027 tarifesi belli oldu  Turizm Güncel</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/muze-ve-oren-yerlerine-giris-ucretlerine-zam-2027-tarifesi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">15:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/kultur-spor-ve-turizm-bakanligi-surdurulebilir-cift-hanel.html">Kültür, Spor ve Turizm Bakanlığı, sürdürülebilir "çift haneli" büyüme hedefine ulaşmak için çaba sarf etmektedir.</a>
+                </h2>
+                <p class="news-summary">Kültür, Spor ve Turizm Bakanlığı, sürdürülebilir "çift haneli" büyüme hedefine ulaşmak için çaba sarf etmektedir.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/kultur-spor-ve-turizm-bakanligi-surdurulebilir-cift-hanel.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">15:42</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/hanoitourist-tayland-turizm-otoritesi-ile-is-birligi-yapara.html">Hanoitourist, Tayland Turizm Otoritesi ile iş birliği yaparak "Gülümsemeler Ülkesi" olarak bilinen Tayland'da turizmi geliştirmeyi hedefliyor.</a>
+                </h2>
+                <p class="news-summary">Hanoitourist, Tayland Turizm Otoritesi ile iş birliği yaparak "Gülümsemeler Ülkesi" olarak bilinen Tayland'da turizmi geliştirmeyi hedefliyor.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/hanoitourist-tayland-turizm-otoritesi-ile-is-birligi-yapara.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Güncel</span>
+                    <span class="time">15:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/gelecegin-turizmcileri-atf-genc-zirvesinde-bir-araya-geliyo.html">Geleceğin turizmcileri ATF Genç Zirvesi'nde bir araya geliyor</a>
+                </h2>
+                <p class="news-summary">Geleceğin turizmcileri ATF Genç Zirvesi'nde bir araya geliyor  Turizm Güncel</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/gelecegin-turizmcileri-atf-genc-zirvesinde-bir-araya-geliyo.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">15:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/can-tho-sehri-turizm-kultur-entegrasyon-ve-yayginlastirm.html">Can Tho şehri, Turizm, Kültür - Entegrasyon ve Yaygınlaştırma Sergisi'nde A ödülünü kazandı.</a>
+                </h2>
+                <p class="news-summary">Can Tho şehri, Turizm, Kültür - Entegrasyon ve Yaygınlaştırma Sergisi'nde A ödülünü kazandı.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/can-tho-sehri-turizm-kultur-entegrasyon-ve-yayginlastirm.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/turizm/2026/09/09/" class="badge">Turizm</a>
+                    <span class="source">Turizm Aktüel</span>
+                    <span class="time">15:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/turizm/2026/09/09/igetis-group-globemeetste-seyahat-acentalariyla-bir-araya.html">İgetis Group, Globemeets’te seyahat acentalarıyla bir araya gelecek</a>
+                </h2>
+                <p class="news-summary">İgetis Group, Globemeets’te seyahat acentalarıyla bir araya gelecek  Turizm Aktüel</p>
+                <div class="card-footer">
+                    <a href="/turizm/2026/09/09/igetis-group-globemeetste-seyahat-acentalariyla-bir-araya.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
