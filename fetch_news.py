@@ -338,7 +338,9 @@ def fetch_and_generate():
         "turizm": {"name": "Turizm", "url": "https://news.google.com/rss/search?q=turizm&hl=tr&gl=TR&ceid=TR:tr"},
         "burclar": {"name": "Burçlar", "url": "https://news.google.com/rss/search?q=bur%C3%A7lar&hl=tr&gl=TR&ceid=TR:tr"},
         "hisseler": {"name": "Hisseler", "url": "https://news.google.com/rss/search?q=hisse&hl=tr&gl=TR&ceid=TR:tr"},
-        "filmler": {"name": "Filmler", "url": "https://news.google.com/rss/search?q=filmler&hl=tr&gl=TR&ceid=TR:tr"}
+        "filmler": {"name": "Filmler", "url": "https://news.google.com/rss/search?q=filmler&hl=tr&gl=TR&ceid=TR:tr"},
+        "son dakika": {"name": "Son Dakika", "url": "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"},
+        "istanbul haber ": {"name": "İstanbul Haber", "url": "https://news.google.com/rss/search?q=istanbul+haber&hl=tr&gl=TR&ceid=TR:tr"}
     }
 
     
