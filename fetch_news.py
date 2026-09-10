@@ -335,7 +335,8 @@ def fetch_and_generate():
         "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/search?q=bilim&hl=tr&gl=TR&ceid=TR:tr"},
         "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"},
         "otomobil": {"name": "Otomobil", "url": "https://news.google.com/rss/search?q=otomobil+OR+araba&hl=tr&gl=TR&ceid=TR:tr"},
-        "turizm": {"name": "Turizm", "url": "https://news.google.com/rss/search?q=turizm&hl=tr&gl=TR&ceid=TR:tr"}
+        "turizm": {"name": "Turizm", "url": "https://news.google.com/rss/search?q=turizm&hl=tr&gl=TR&ceid=TR:tr"},
+        "burclar": {"name": "Burçlar", "url": "https://news.google.com/rss/search?q=burçlar&hl=tr&gl=TR&ceid=TR:tr"}
     }
 
     
