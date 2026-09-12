@@ -530,14 +530,14 @@ def fetch_and_generate():
     <meta name="twitter:title" content="{news['title']}" />
     <meta name="twitter:description" content="{news['desc'][:150]}..." />
     <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/P5xJ5K5J_400x400.jpg" />
+    <meta name="twitter:image" content="https://nearadin.net/1789249176325.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
     <meta property="og:description" content="{news['desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
-    <meta property="og:image" content="https://nearadin.net/1786394487303.png" />
+    <meta property="og:image" content="https://nearadin.net/1789249176325.png" />
 
     <script type="application/ld+json">
     {{
@@ -557,7 +557,7 @@ def fetch_and_generate():
         "name": "nearadin.net",
         "logo": {{
           "@type": "ImageObject",
-          "url": "https://nearadin.net/1786394487303.png"
+          "url": "https://nearadin.net/1789249176325.png"
         }}
       }}
     }}
@@ -777,6 +777,13 @@ def fetch_and_generate():
 
         cat_page_html = f'''<!DOCTYPE html>
 <html lang="tr">
+          <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{news['title']}" />
+    <meta name="twitter:description" content="{news['desc'][:150]}..." />
+    <meta name="twitter:site" content="@nearadin2026" />
+    <meta name="twitter:image" content="https://nearadin.net/1789249176325.png" />
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
