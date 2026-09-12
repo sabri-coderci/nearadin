@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Son Dakika Haberleri - nearadin.net</title>
+    <meta name="description" content="En son Son Dakika haberleri ve canlı gelişmeler." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç izle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            📌 Son Dakika Haberleri
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/13/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">00:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/13/son-dakika-spor-haberi-huseyin-cimsir-en-iyi-hlimizde-ga.html">Son Dakika Spor Haberi | Hüseyin Çimşir: En iyi hâlimizde Galatasaray maçına hazırlanacağız</a>
+                </h2>
+                <p class="news-summary">Son Dakika Spor Haberi | Hüseyin Çimşir: En iyi hâlimizde Galatasaray maçına hazırlanacağız  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/13/son-dakika-spor-haberi-huseyin-cimsir-en-iyi-hlimizde-ga.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/13/" class="badge">Son Dakika</a>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">00:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/13/istanbul-anadolu-sulh-hukuk-mahkemesi-satis-memurlugu.html">İSTANBUL ANADOLU SULH HUKUK MAHKEMESİ SATIŞ MEMURLUĞU</a>
+                </h2>
+                <p class="news-summary">İSTANBUL ANADOLU SULH HUKUK MAHKEMESİ SATIŞ MEMURLUĞU  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/13/istanbul-anadolu-sulh-hukuk-mahkemesi-satis-memurlugu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/2026-kpss-lisansta-adaylar-memurluk-ve-a-grubu-kadrolar-ici.html">2026 KPSS Lisans'ta Adaylar Memurluk ve A Grubu Kadrolar İçin Puan Heyecanı Yaşıyor</a>
+                </h2>
+                <p class="news-summary">2026 KPSS Lisans'ta Adaylar Memurluk ve A Grubu Kadrolar İçin Puan Heyecanı Yaşıyor  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/2026-kpss-lisansta-adaylar-memurluk-ve-a-grubu-kadrolar-ici.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:40</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/konyasporda-deniz-turuc-tff-temsilcisine-mac-sonrasi-tepki.html">Konyaspor'da Deniz Türüç, TFF temsilcisine maç sonrası tepki gösterdi</a>
+                </h2>
+                <p class="news-summary">Konyaspor'da Deniz Türüç, TFF temsilcisine maç sonrası tepki gösterdi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/konyasporda-deniz-turuc-tff-temsilcisine-mac-sonrasi-tepki.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Haber 7</span>
+                    <span class="time">23:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/kasif-kozinoglu-sorusturmasinda-son-dakika-karari.html">Kaşif Kozinoğlu soruşturmasında son dakika kararı</a>
+                </h2>
+                <p class="news-summary">Kaşif Kozinoğlu soruşturmasında son dakika kararı  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/kasif-kozinoglu-sorusturmasinda-son-dakika-karari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/alanyasporlu-pereira-goztepe-beraberliginde-galibiyete-daha.html">Alanyasporlu Pereira: Göztepe beraberliğinde galibiyete daha yakındık</a>
+                </h2>
+                <p class="news-summary">Alanyasporlu Pereira: Göztepe beraberliğinde galibiyete daha yakındık  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/alanyasporlu-pereira-goztepe-beraberliginde-galibiyete-daha.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">23:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasinda-kritik-gelisme.html">Son dakika... Kaşif Kozinoğlu soruşturmasında kritik gelişme: Gazeteci Selahattin Günday ve 2 ATT personeline tutuklama istemi!</a>
+                </h2>
+                <p class="news-summary">Son dakika... Kaşif Kozinoğlu soruşturmasında kritik gelişme: Gazeteci Selahattin Günday ve 2 ATT personeline tutuklama istemi!  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasinda-kritik-gelisme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/ahmet-davutoglunun-oglu-mehmet-davutoglu-ile-ravza-ogut-evl.html">Ahmet Davutoğlu’nun oğlu Mehmet Davutoğlu ile Ravza Öğüt evlendi</a>
+                </h2>
+                <p class="news-summary">Ahmet Davutoğlu’nun oğlu Mehmet Davutoğlu ile Ravza Öğüt evlendi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/ahmet-davutoglunun-oglu-mehmet-davutoglu-ile-ravza-ogut-evl.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/konyaspor-trabzonsporu-1-0-maglup-etti-palut-oyuncularini.html">Konyaspor, Trabzonspor'u 1-0 mağlup etti; Palut oyuncularını kutladı</a>
+                </h2>
+                <p class="news-summary">Konyaspor, Trabzonspor'u 1-0 mağlup etti; Palut oyuncularını kutladı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/konyaspor-trabzonsporu-1-0-maglup-etti-palut-oyuncularini.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">haberturk.com</span>
+                    <span class="time">23:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/kozinoglu-sorusturmasinda-3-tutuklama.html">Kozinoğlu soruşturmasında 3 tutuklama</a>
+                </h2>
+                <p class="news-summary">Kozinoğlu soruşturmasında 3 tutuklama  haberturk.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/kozinoglu-sorusturmasinda-3-tutuklama.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">23:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasinda-yeni-gelisme-3.html">SON DAKİKA | Kaşif Kozinoğlu soruşturmasında yeni gelişme: 3 şüpheli hakkında tutuklama talebi</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Kaşif Kozinoğlu soruşturmasında yeni gelişme: 3 şüpheli hakkında tutuklama talebi  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasinda-yeni-gelisme-3.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:10</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/batman-petrolspor-teknik-direktoru-sahin-bodrum-fk-yenilgis.html">Batman Petrolspor Teknik Direktörü Şahin, Bodrum FK yenilgisini değerlendirdi</a>
+                </h2>
+                <p class="news-summary">Batman Petrolspor Teknik Direktörü Şahin, Bodrum FK yenilgisini değerlendirdi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/batman-petrolspor-teknik-direktoru-sahin-bodrum-fk-yenilgis.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">23:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/maher-zain-istanbulda-canakkaleyi-seslendirdi.html">Maher Zain, İstanbul'da 'Çanakkale'yi seslendirdi</a>
+                </h2>
+                <p class="news-summary">Maher Zain, İstanbul'da 'Çanakkale'yi seslendirdi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/maher-zain-istanbulda-canakkaleyi-seslendirdi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">22:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/aydinda-kirmizi-isik-ihlali-kazayla-sonuclandi-3-yarali.html">Aydın'da kırmızı ışık ihlali kazayla sonuçlandı: 3 yaralı</a>
+                </h2>
+                <p class="news-summary">Aydın'da kırmızı ışık ihlali kazayla sonuçlandı: 3 yaralı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/aydinda-kirmizi-isik-ihlali-kazayla-sonuclandi-3-yarali.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">22:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-bakan-fidan-iranli-mevkidasi-arakci-ile-gorust.html">SON DAKİKA I Bakan Fidan, İranlı mevkidaşı Arakçi ile görüştü</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA I Bakan Fidan, İranlı mevkidaşı Arakçi ile görüştü  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-bakan-fidan-iranli-mevkidasi-arakci-ile-gorust.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">22:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-bakan-fidan-disisleri-bakani-fidan-iranli-mev.html">SON DAKİKA I Bakan Fidan, Dışişleri Bakanı Fidan, İranlı mevkidaşı Arakçi ile görüştü</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA I Bakan Fidan, Dışişleri Bakanı Fidan, İranlı mevkidaşı Arakçi ile görüştü  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-bakan-fidan-disisleri-bakani-fidan-iranli-mev.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">22:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakani-fidandan-kritik-temas-iranli-mevkidasi-il.html">Dışişleri Bakanı Fidan'dan kritik temas: İranlı mevkidaşı ile görüştü</a>
+                </h2>
+                <p class="news-summary">Dışişleri Bakanı Fidan'dan kritik temas: İranlı mevkidaşı ile görüştü  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakani-fidandan-kritik-temas-iranli-mevkidasi-il.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">22:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/istanbulda-koruma-altindaki-cocuklar-iki-tiyatro-oyunuyla-s.html">İstanbul'da koruma altındaki çocuklar iki tiyatro oyunuyla sahnede buluştu</a>
+                </h2>
+                <p class="news-summary">İstanbul'da koruma altındaki çocuklar iki tiyatro oyunuyla sahnede buluştu  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/istanbulda-koruma-altindaki-cocuklar-iki-tiyatro-oyunuyla-s.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">22:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakani-fidan-iranli-mevkidasi-arakci-ile-gorustu.html">Dışişleri Bakanı Fidan, İranlı mevkidaşı Arakçi ile görüştü</a>
+                </h2>
+                <p class="news-summary">Dışişleri Bakanı Fidan, İranlı mevkidaşı Arakçi ile görüştü  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakani-fidan-iranli-mevkidasi-arakci-ile-gorustu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">22:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-spor-haberi-alanyaspor-ile-goztepe-yenisemedi.html">Son Dakika Spor Haberi | Alanyaspor ile Göztepe yenişemedi</a>
+                </h2>
+                <p class="news-summary">Son Dakika Spor Haberi | Alanyaspor ile Göztepe yenişemedi  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-spor-haberi-alanyaspor-ile-goztepe-yenisemedi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Yeni Asır</span>
+                    <span class="time">22:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6inci-dalga-opera.html">Son dakika: Gülistan Doku soruşturmasında 6’ıncı dalga operasyon</a>
+                </h2>
+                <p class="news-summary">Son dakika: Gülistan Doku soruşturmasında 6’ıncı dalga operasyon  Yeni Asır</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6inci-dalga-opera.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">22:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-yeni-gelisme-7.html">Son dakika... Gülistan Doku soruşturmasında yeni gelişme! 7 ilde operasyon başlatıldı</a>
+                </h2>
+                <p class="news-summary">Son dakika... Gülistan Doku soruşturmasında yeni gelişme! 7 ilde operasyon başlatıldı  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-yeni-gelisme-7.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">22:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6-dalga-operasy.html">Son dakika... Gülistan Doku soruşturmasında 6. dalga operasyon: Emekli ve görevdeki emniyet mensupları dahil 11 gözaltı kararı!</a>
+                </h2>
+                <p class="news-summary">Son dakika... Gülistan Doku soruşturmasında 6. dalga operasyon: Emekli ve görevdeki emniyet mensupları dahil 11 gözaltı kararı!  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6-dalga-operasy.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">22:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6nci-dalga-7-il.html">SON DAKİKA | Gülistan Doku soruşturmasında 6’ncı dalga! 7 ilde operasyon</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Gülistan Doku soruşturmasında 6’ncı dalga! 7 ilde operasyon  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-gulistan-doku-sorusturmasinda-6nci-dalga-7-il.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">22:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/hasan-al-yazdi-bu-maglubiyet-yonetime-yazar.html">Hasan Al yazdı: Bu mağlubiyet yönetime yazar...</a>
+                </h2>
+                <p class="news-summary">Hasan Al yazdı: Bu mağlubiyet yönetime yazar...  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/hasan-al-yazdi-bu-maglubiyet-yonetime-yazar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">22:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/gulistan-doku-sorusturmasinda-yeni-gelisme-11-supheliye-ope.html">Gülistan Doku soruşturmasında yeni gelişme: 11 şüpheliye operasyon</a>
+                </h2>
+                <p class="news-summary">Gülistan Doku soruşturmasında yeni gelişme: 11 şüpheliye operasyon  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/gulistan-doku-sorusturmasinda-yeni-gelisme-11-supheliye-ope.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">22:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/gulistan-doku-sorusturmasinda-6-dalga-operasyon.html">Gülistan Doku soruşturmasında 6. dalga operasyon</a>
+                </h2>
+                <p class="news-summary">Gülistan Doku soruşturmasında 6. dalga operasyon  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/gulistan-doku-sorusturmasinda-6-dalga-operasyon.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">22:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/istanbulda-yarin-bazi-yollar-trafige-kapatilacak.html">İstanbul'da yarın bazı yollar trafiğe kapatılacak</a>
+                </h2>
+                <p class="news-summary">İstanbul'da yarın bazı yollar trafiğe kapatılacak  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/istanbulda-yarin-bazi-yollar-trafige-kapatilacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">22:10</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/stuttgart-baskonsolosu-kacara-veda-gecesinde-imzali-milli-t.html">Stuttgart Başkonsolosu Kaçar'a veda gecesinde imzalı Milli Takım forması</a>
+                </h2>
+                <p class="news-summary">Stuttgart Başkonsolosu Kaçar'a veda gecesinde imzalı Milli Takım forması  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/stuttgart-baskonsolosu-kacara-veda-gecesinde-imzali-milli-t.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">22:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-boluda-geri-donusum-tesisinde-yangin.html">Son dakika... Bolu'da geri dönüşüm tesisinde yangın!</a>
+                </h2>
+                <p class="news-summary">Son dakika... Bolu'da geri dönüşüm tesisinde yangın!  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-boluda-geri-donusum-tesisinde-yangin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">22:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/litvanyada-cuma-namazi-sirasinda-skandal-motosikletcilerde.html">Litvanya'da cuma namazı sırasında skandal: Motosikletçilerden 'domuz başı' provokasyonu</a>
+                </h2>
+                <p class="news-summary">Litvanya'da cuma namazı sırasında skandal: Motosikletçilerden 'domuz başı' provokasyonu  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/litvanyada-cuma-namazi-sirasinda-skandal-motosikletcilerde.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">22:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/antalyaspor-istanbulda-son-nefeste-kazandi.html">Antalyaspor, İstanbul'da son nefeste kazandı!</a>
+                </h2>
+                <p class="news-summary">Antalyaspor, İstanbul'da son nefeste kazandı!  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/antalyaspor-istanbulda-son-nefeste-kazandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:51</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/galatasaray-maci-oncesi-sok-trabzonspor-puansiz-konyaspor.html">Galatasaray maçı öncesi şok! Trabzonspor, puansız Konyaspor'a kaybetti</a>
+                </h2>
+                <p class="news-summary">Galatasaray maçı öncesi şok! Trabzonspor, puansız Konyaspor'a kaybetti  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/galatasaray-maci-oncesi-sok-trabzonspor-puansiz-konyaspor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/yalikavakspor-sampiyonluk-kupasini-bodrum-ilce-stadina-tasi.html">Yalıkavakspor şampiyonluk kupasını Bodrum İlçe Stadı'na taşıdı</a>
+                </h2>
+                <p class="news-summary">Yalıkavakspor şampiyonluk kupasını Bodrum İlçe Stadı'na taşıdı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/yalikavakspor-sampiyonluk-kupasini-bodrum-ilce-stadina-tasi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:47</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/imam-nikahinda-gelin-mehir-istegini-arsa-cikardi.html">İmam nikahında gelin mehir isteğini arşa çıkardı</a>
+                </h2>
+                <p class="news-summary">İmam nikahında gelin mehir isteğini arşa çıkardı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/imam-nikahinda-gelin-mehir-istegini-arsa-cikardi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:47</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/imam-nikahinda-gelin-mehir-istegini-arsa-cikardi.html">İmam nikahında gelin mehir isteğini arşa çıkardı</a>
+                </h2>
+                <p class="news-summary">İmam nikahında gelin mehir isteğini arşa çıkardı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/imam-nikahinda-gelin-mehir-istegini-arsa-cikardi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/fatih-terim-bodrum-fk-batman-petrolspor-macini-locadan-izle.html">Fatih Terim, Bodrum FK-Batman Petrolspor maçını locadan izledi</a>
+                </h2>
+                <p class="news-summary">Fatih Terim, Bodrum FK-Batman Petrolspor maçını locadan izledi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/fatih-terim-bodrum-fk-batman-petrolspor-macini-locadan-izle.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:41</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/karsiyaka-ile-altay-3-ligde-1-1-berabere-kaldi.html">Karşıyaka ile Altay 3. Lig'de 1-1 berabere kaldı</a>
+                </h2>
+                <p class="news-summary">Karşıyaka ile Altay 3. Lig'de 1-1 berabere kaldı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/karsiyaka-ile-altay-3-ligde-1-1-berabere-kaldi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">GZT</span>
+                    <span class="time">21:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-afad-duyurdu-iyon-denizinde-korkutan-deprem.html">SON DAKİKA | AFAD duyurdu: İyon Denizi’nde korkutan deprem</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | AFAD duyurdu: İyon Denizi’nde korkutan deprem  GZT</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-afad-duyurdu-iyon-denizinde-korkutan-deprem.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">NTV Haber</span>
+                    <span class="time">21:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-canakkalede-deprem-mi-oldu-az-once-deprem-canak.html">Son dakika Çanakkale'de deprem mi oldu? Az önce deprem Çanakkale'de nerede oldu? Çanakkale deprem Kandilli ve AFAD son depremler listesi 12 Eylül 2026</a>
+                </h2>
+                <p class="news-summary">Son dakika Çanakkale'de deprem mi oldu? Az önce deprem Çanakkale'de nerede oldu? Çanakkale deprem Kandilli ve AFAD son depremler listesi 12 Eylül 2026  NTV Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-canakkalede-deprem-mi-oldu-az-once-deprem-canak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">21:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/sirketlerin-satis-gorusmeleri-suruyordu-pusula-portfoy-bask.html">Şirketlerin satış görüşmeleri sürüyordu: Pusula Portföy Başkanı Muhammet Yarız’ın yurt dışına kaçtığı iddia edildi</a>
+                </h2>
+                <p class="news-summary">Şirketlerin satış görüşmeleri sürüyordu: Pusula Portföy Başkanı Muhammet Yarız’ın yurt dışına kaçtığı iddia edildi  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/sirketlerin-satis-gorusmeleri-suruyordu-pusula-portfoy-bask.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">20:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/genclerbirligi-kasimpasa-maci-oncesi-son-antrenmanini-yapti.html">Gençlerbirliği, Kasımpaşa maçı öncesi son antrenmanını yaptı</a>
+                </h2>
+                <p class="news-summary">Gençlerbirliği, Kasımpaşa maçı öncesi son antrenmanını yaptı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/genclerbirligi-kasimpasa-maci-oncesi-son-antrenmanini-yapti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">bloomberght.com</span>
+                    <span class="time">20:51</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/iran-umman-ile-anlasma-hurmuzun-acilacagi-anlamina-gelmiyo.html">İran: Umman ile anlaşma Hürmüz'ün açılacağı anlamına gelmiyor</a>
+                </h2>
+                <p class="news-summary">İran: Umman ile anlaşma Hürmüz'ün açılacağı anlamına gelmiyor  bloomberght.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/iran-umman-ile-anlasma-hurmuzun-acilacagi-anlamina-gelmiyo.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">20:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-haberi-trabzonspor-deplasmanda-maglup-konyaspo.html">Son dakika haberi: Trabzonspor, deplasmanda mağlup! Konyaspor ilk kez kazandı…</a>
+                </h2>
+                <p class="news-summary">Son dakika haberi: Trabzonspor, deplasmanda mağlup! Konyaspor ilk kez kazandı…  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-haberi-trabzonspor-deplasmanda-maglup-konyaspo.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Haber 7</span>
+                    <span class="time">20:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/turkiyeden-son-dakika-suudi-arabistan-duyurusu.html">Türkiye'den son dakika Suudi Arabistan duyurusu!</a>
+                </h2>
+                <p class="news-summary">Türkiye'den son dakika Suudi Arabistan duyurusu!  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/turkiyeden-son-dakika-suudi-arabistan-duyurusu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">20:31</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/fink-takimin-zamana-ihtiyaci-var.html">Fink: Takımın zamana ihtiyacı var</a>
+                </h2>
+                <p class="news-summary">Fink: Takımın zamana ihtiyacı var  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/fink-takimin-zamana-ihtiyaci-var.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">19:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/icisleri-bakani-ciftci-kazakistani-ziyaret-etti.html">İçişleri Bakanı Çiftçi Kazakistan'ı ziyaret etti</a>
+                </h2>
+                <p class="news-summary">İçişleri Bakanı Çiftçi Kazakistan'ı ziyaret etti  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/icisleri-bakani-ciftci-kazakistani-ziyaret-etti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">19:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/kotu-seri-surdu-aston-villa-sahasinda-nottingham-foresta-k.html">Kötü seri sürdü: Aston Villa sahasında Nottingham Forest'a kaybetti</a>
+                </h2>
+                <p class="news-summary">Kötü seri sürdü: Aston Villa sahasında Nottingham Forest'a kaybetti  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/kotu-seri-surdu-aston-villa-sahasinda-nottingham-foresta-k.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">19:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/disislerinden-suudi-arabistana-yonelik-iha-saldirilarina-k.html">Dışişleri'nden Suudi Arabistan'a yönelik İHA saldırılarına kınama</a>
+                </h2>
+                <p class="news-summary">Dışişleri'nden Suudi Arabistan'a yönelik İHA saldırılarına kınama  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/disislerinden-suudi-arabistana-yonelik-iha-saldirilarina-k.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Haber 7</span>
+                    <span class="time">19:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/arap-ulkesinden-son-dakika-iran-karari-resmen-ilan-ettiler.html">Arap ülkesinden son dakika İran kararı! Resmen ilan ettiler! 'Felakete yol açabilir'</a>
+                </h2>
+                <p class="news-summary">Arap ülkesinden son dakika İran kararı! Resmen ilan ettiler! 'Felakete yol açabilir'  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/arap-ulkesinden-son-dakika-iran-karari-resmen-ilan-ettiler.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">19:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/rizespor-10-kisi-kalmasina-ragmen-kazandi.html">Rizespor, 10 kişi kalmasına rağmen kazandı</a>
+                </h2>
+                <p class="news-summary">Rizespor, 10 kişi kalmasına rağmen kazandı  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/rizespor-10-kisi-kalmasina-ragmen-kazandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">19:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakanligindan-suudi-arabistana-yonelik-iha-saldi.html">Dışişleri Bakanlığı’ndan Suudi Arabistan’a yönelik İHA saldırılarına kınama</a>
+                </h2>
+                <p class="news-summary">Dışişleri Bakanlığı’ndan Suudi Arabistan’a yönelik İHA saldırılarına kınama  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/disisleri-bakanligindan-suudi-arabistana-yonelik-iha-saldi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">18:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-baskan-erdogandan-12-eylul-mesaji-insanimiza.html">SON DAKİKA I Başkan Erdoğan'dan 12 Eylül mesajı: İnsanımıza yaşattıklarını asla unutmayacağız</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA I Başkan Erdoğan'dan 12 Eylül mesajı: İnsanımıza yaşattıklarını asla unutmayacağız  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-i-baskan-erdogandan-12-eylul-mesaji-insanimiza.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sondakika.com</span>
+                    <span class="time">18:55</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/corum-fk-samsunsporu-5-golle-darmadagin-etti.html">Çorum FK, Samsunspor'u 5 golle darmadağın etti</a>
+                </h2>
+                <p class="news-summary">Çorum FK, Samsunspor'u 5 golle darmadağın etti  sondakika.com</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/corum-fk-samsunsporu-5-golle-darmadagin-etti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Halk TV</span>
+                    <span class="time">18:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-hakkinda-yakalama-karari-vardi-vanli-kara-hay.html">Son Dakika | Hakkında yakalama kararı vardı! 'Vanlı Kara Haydar'ın eşi Çağla Öz gözaltına alındı</a>
+                </h2>
+                <p class="news-summary">Son Dakika | Hakkında yakalama kararı vardı! 'Vanlı Kara Haydar'ın eşi Çağla Öz gözaltına alındı  Halk TV</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-hakkinda-yakalama-karari-vardi-vanli-kara-hay.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">18:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-fenomen-cagla-oz-yakal.html">SON DAKİKA | Vanlı Kara Haydar’ın eşi fenomen Çağla Öz yakalandı</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Vanlı Kara Haydar’ın eşi fenomen Çağla Öz yakalandı  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-fenomen-cagla-oz-yakal.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">18:32</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/uretim-resmen-durdu-73-yillik-turk-tekstil-fabrikasi-kapand.html">Üretim resmen durdu: 73 yıllık Türk tekstil fabrikası kapandı</a>
+                </h2>
+                <p class="news-summary">Üretim resmen durdu: 73 yıllık Türk tekstil fabrikası kapandı  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/uretim-resmen-durdu-73-yillik-turk-tekstil-fabrikasi-kapand.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">18:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydar-sorusturmasinda-yeni-gelisme.html">SON DAKİKA | Vanlı Kara Haydar soruşturmasında yeni gelişme: Eşi Çağla Öz İstanbul'da yakalandı</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Vanlı Kara Haydar soruşturmasında yeni gelişme: Eşi Çağla Öz İstanbul'da yakalandı  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydar-sorusturmasinda-yeni-gelisme.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">18:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/iran-savasi-bitiyor-mu-trumptan-dikkat-ceken-aciklama.html">İran savaşı bitiyor mu? Trump'tan dikkat çeken açıklama</a>
+                </h2>
+                <p class="news-summary">İran savaşı bitiyor mu? Trump'tan dikkat çeken açıklama  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/iran-savasi-bitiyor-mu-trumptan-dikkat-ceken-aciklama.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Yeni Asır</span>
+                    <span class="time">18:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-cagla-oz-istanbulda-ya.html">Son dakika: Vanlı Kara Haydar’ın eşi Çağla Öz İstanbul’da yakalandı</a>
+                </h2>
+                <p class="news-summary">Son dakika: Vanlı Kara Haydar’ın eşi Çağla Öz İstanbul’da yakalandı  Yeni Asır</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-cagla-oz-istanbulda-ya.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">18:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-cagla-oz-istanbulda-y.html">SON DAKİKA | Vanlı Kara Haydar’ın eşi Çağla Öz İstanbul’da yakalandı</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA | Vanlı Kara Haydar’ın eşi Çağla Öz İstanbul’da yakalandı  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-vanli-kara-haydarin-esi-cagla-oz-istanbulda-y.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">18:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/igdirdaki-arac-kazasinda-sehit-olan-askerimiz-son-yolculugu.html">Iğdır'daki araç kazasında şehit olan askerimiz son yolculuğuna uğurlandı</a>
+                </h2>
+                <p class="news-summary">Iğdır'daki araç kazasında şehit olan askerimiz son yolculuğuna uğurlandı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/igdirdaki-arac-kazasinda-sehit-olan-askerimiz-son-yolculugu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">17:44</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/kocaelispor-maci-oncesi-okan-buruktan-rafael-leao-karari.html">Kocaelispor maçı öncesi... Okan Buruk'tan Rafael Leao kararı</a>
+                </h2>
+                <p class="news-summary">Kocaelispor maçı öncesi... Okan Buruk'tan Rafael Leao kararı  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/kocaelispor-maci-oncesi-okan-buruktan-rafael-leao-karari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">17:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/akpli-yaymandan-yeni-anayasa-cikisi-muhalefete-cagri-ya.html">AKP'li Yayman'dan 'yeni anayasa' çıkışı: Muhalefete çağrı yaptı!</a>
+                </h2>
+                <p class="news-summary">AKP'li Yayman'dan 'yeni anayasa' çıkışı: Muhalefete çağrı yaptı!  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/akpli-yaymandan-yeni-anayasa-cikisi-muhalefete-cagri-ya.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">17:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/memur-emeklisine-seyyanen-zam-son-dakika-memur-emeklisi-ss.html">MEMUR EMEKLİSİNE SEYYANEN ZAM SON DAKİKA: Memur emeklisi, SSK ve Bağ-Kur emekliye ek zam gelecek mi? AYM kararıyla geriye dönük ödeme yapılacak mı?</a>
+                </h2>
+                <p class="news-summary">MEMUR EMEKLİSİNE SEYYANEN ZAM SON DAKİKA: Memur emeklisi, SSK ve Bağ-Kur emekliye ek zam gelecek mi? AYM kararıyla geriye dönük ödeme yapılacak mı?  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/memur-emeklisine-seyyanen-zam-son-dakika-memur-emeklisi-ss.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">17:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/12-eylulun-insanimiza-yasattiklarini-asla-unutmayacagiz.html">"12 Eylül'ün insanımıza yaşattıklarını asla unutmayacağız" - Son Dakika Haberleri</a>
+                </h2>
+                <p class="news-summary">"12 Eylül'ün insanımıza yaşattıklarını asla unutmayacağız" - Son Dakika Haberleri  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/12-eylulun-insanimiza-yasattiklarini-asla-unutmayacagiz.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">17:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/trump-kuzey-irlanda-ve-irlanda-en-nihayetinde-birlesecek.html">Trump: Kuzey İrlanda ve İrlanda en nihayetinde birleşecek</a>
+                </h2>
+                <p class="news-summary">Trump: Kuzey İrlanda ve İrlanda en nihayetinde birleşecek  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/trump-kuzey-irlanda-ve-irlanda-en-nihayetinde-birlesecek.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">17:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-ev-sahibi-ile-esini-oldurmustu-kiraci-dehsetind.html">SON DAKİKA… Ev sahibi ile eşini öldürmüştü! Kiracı dehşetinde yürek yakan ayrıntı: Geride 5 yetim çocuk kaldı...</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA… Ev sahibi ile eşini öldürmüştü! Kiracı dehşetinde yürek yakan ayrıntı: Geride 5 yetim çocuk kaldı...  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-ev-sahibi-ile-esini-oldurmustu-kiraci-dehsetind.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">17:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/bahcelievlerde-5-katli-binanin-istinat-duvari-coktu.html">Bahçelievler’de 5 katlı binanın istinat duvarı çöktü</a>
+                </h2>
+                <p class="news-summary">Bahçelievler’de 5 katlı binanın istinat duvarı çöktü  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/bahcelievlerde-5-katli-binanin-istinat-duvari-coktu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">16:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/memur-zammi-son-dakika-polis-ogretmen-doktor-hemsire-ne.html">MEMUR ZAMMI SON DAKİKA! Polis, öğretmen, doktor, hemşire ne kadar alacak? İşte meslek meslek yeni hesap</a>
+                </h2>
+                <p class="news-summary">MEMUR ZAMMI SON DAKİKA! Polis, öğretmen, doktor, hemşire ne kadar alacak? İşte meslek meslek yeni hesap  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/memur-zammi-son-dakika-polis-ogretmen-doktor-hemsire-ne.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/son-dakika/2026/09/12/" class="badge">Son Dakika</a>
+                    <span class="source">sabah.com.tr</span>
+                    <span class="time">16:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/son-dakika/2026/09/12/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-carpici.html">SON DAKİKA… Alihan Kuriş Suç Örgütü soruşturmasında çarpıcı tanık ifadesi dosyaya girdi: FETÖ tarafından yönetiliyordu!</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA… Alihan Kuriş Suç Örgütü soruşturmasında çarpıcı tanık ifadesi dosyaya girdi: FETÖ tarafından yönetiliyordu!  sabah.com.tr</p>
+                <div class="card-footer">
+                    <a href="/son-dakika/2026/09/12/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-carpici.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
