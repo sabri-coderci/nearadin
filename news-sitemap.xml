@@ -2,14 +2,806 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nearadin.net/izmir haber /2026/09/12/izmir-sularinda-can-pazari.html</loc>
+    <loc>https://nearadin.net/bitcoin/2026/09/12/bitcoin-icin-kuantum-alarmi-yapay-zek-saldiri-maliyetini-y.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:30:07+03:00</news:publication_date>
+      <news:title>Bitcoin için kuantum alarmı: Yapay zekâ saldırı maliyetini yüzde 86 düşürdü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-canakkalede-deprem-mi-oldu-az-once-deprem-canak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:30:00+03:00</news:publication_date>
+      <news:title>Son dakika Çanakkale&#x27;de deprem mi oldu? Az önce deprem Çanakkale&#x27;de nerede oldu? Çanakkale deprem Kandilli ve AFAD son depremler listesi 12 Eylül 2026</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/italya-serie-ada-milan-ile-lazio-puanlari-paylasti-futbol.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:26:00+03:00</news:publication_date>
+      <news:title>İtalya Serie A&#x27;da Milan ile Lazio puanları paylaştı - Futbol - Spor Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/eintracht-frankfurt-mainzi-3-1-yendi-can-uzun-2-golle-mac.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:22:44+03:00</news:publication_date>
+      <news:title>Eintracht Frankfurt, Mainz&#x27;ı 3-1 yendi; Can Uzun 2 golle maçın adamı oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/bucaspor-1928-evinde-1922-aksehir-sporu-2-1-yenerek-ilk-3-p.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:22:42+03:00</news:publication_date>
+      <news:title>Bucaspor 1928 evinde 1922 Akşehir Spor&#x27;u 2-1 yenerek ilk 3 puanını aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/bucaspor-1928-evinde-1922-aksehir-sporu-2-1-yenerek-ilk-3-p.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:22:42+03:00</news:publication_date>
+      <news:title>Bucaspor 1928 evinde 1922 Akşehir Spor&#x27;u 2-1 yenerek ilk 3 puanını aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/samsunspor-futbol-direktoru-capa-corum-fk-yenilgisini-deger.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:22:23+03:00</news:publication_date>
+      <news:title>Samsunspor Futbol Direktörü Çapa, Çorum FK yenilgisini değerlendirdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/hatayda-motosiklet-ucurumdan-yuvarlandi-surucu-hayatini-ka.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:22:12+03:00</news:publication_date>
+      <news:title>Hatay&#x27;da motosiklet uçurumdan yuvarlandı: Sürücü hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/10-tarim-iscisinin-yaralandigi-kaza-kameraya-yansidi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:21:08+03:00</news:publication_date>
+      <news:title>10 tarım işçisinin yaralandığı kaza kameraya yansıdı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbulda-13-eylul-pazar-hava-durumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:20:00+03:00</news:publication_date>
+      <news:title>İstanbul’da 13 Eylül Pazar Hava Durumu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/kutahyada-orman-yangini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:18:10+03:00</news:publication_date>
+      <news:title>Kütahya’da orman yangını</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim-konyaspor-trabzonspor-super-lig.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:16:57+03:00</news:publication_date>
+      <news:title>Canlı anlatım: Konyaspor - Trabzonspor (Süper Lig)</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/bak-kackarlari-dunya-gorecek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:13:37+03:00</news:publication_date>
+      <news:title>BAK: KAÇKARLARI DÜNYA GÖRECEK</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/bak-kackarlari-dunya-gorecek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:13:37+03:00</news:publication_date>
+      <news:title>BAK: KAÇKARLARI DÜNYA GÖRECEK</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/sanal-medya-unlusu-semih-varol-gozaltina-alindi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:13:06+03:00</news:publication_date>
+      <news:title>Sanal medya ünlüsü Semih Varol gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ankara haber /2026/09/12/ankaradan-suudi-arabistana-iha-saldirilarina-kinama.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:13:00+03:00</news:publication_date>
+      <news:title>Ankara’dan Suudi Arabistan’a İHA Saldırılarına Kınama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/bucaspor-1928-1922-aksehir-spor-2-1.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:11:31+03:00</news:publication_date>
+      <news:title>Bucaspor 1928 - 1922 Akşehir Spor: 2-1</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/mihaliccik-spor-kulubunden-baskan-unluceye-ziyaret.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:11:00+03:00</news:publication_date>
+      <news:title>Mihalıççık Spor Kulübü&#x27;nden Başkan Ünlüce&#x27;ye ziyaret</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/geri-donusum-fabrikasi-alevlere-teslim-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:08:26+03:00</news:publication_date>
+      <news:title>Geri dönüşüm fabrikası alevlere teslim oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/adana-merkezli-11-ilde-suc-orgutu-operasyonu-64-supheli-yak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:06:21+03:00</news:publication_date>
+      <news:title>Adana merkezli 11 ilde suç örgütü operasyonu: 64 şüpheli yakalandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/is-cevresi-kacisi-konusuyor-katilimevde-neler-oluyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:06:09+03:00</news:publication_date>
+      <news:title>İş çevresi &#x27;kaçışı&#x27; konuşuyor: Katılımev’de neler oluyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/izmir haber /2026/09/12/bucaspor-1928-3-puanla-tanisti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:06:00+03:00</news:publication_date>
+      <news:title>Bucaspor 1928 3 puanla tanıştı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/canli-super-ligde-alanyasporun-konugu-goztepe-alanyasp.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:04:05+03:00</news:publication_date>
+      <news:title>CANLI │ Süper Lig&#x27;de Alanyaspor&#x27;un konuğu Göztepe - Alanyaspor - Spor Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/defne-kurttan-altin-madalya-rekoru-turk-spor-tarihine-gect.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T21:04:00+03:00</news:publication_date>
+      <news:title>Defne Kurt&#x27;tan altın madalya rekoru! Türk spor tarihine geçti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/hurmuzde-100-geminin-rotasi-degistirildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:58:38+03:00</news:publication_date>
+      <news:title>Hürmüz&#x27;de 100 geminin rotası değiştirildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/can-uzundan-mainz-deplasmaninda-sov.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:57:37+03:00</news:publication_date>
+      <news:title>Can Uzun&#x27;dan Mainz deplasmanında şov!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/genclerbirligi-kasimpasa-maci-oncesi-son-antrenmanini-yapti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:56:22+03:00</news:publication_date>
+      <news:title>Gençlerbirliği, Kasımpaşa maçı öncesi son antrenmanını yaptı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/kayseri-kadin-fk-evinde-amed-sportife-3-0-yenilip-ligde-ilk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:55:22+03:00</news:publication_date>
+      <news:title>Kayseri Kadın FK evinde Amed Sportif&#x27;e 3-0 yenilip ligde ilk mağlubiyetini aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/avrupa-para-yuzme-sampiyonasinda-defne-kurt-5-altin-madaly.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:54:25+03:00</news:publication_date>
+      <news:title>Avrupa Para Yüzme Şampiyonası&#x27;nda Defne Kurt 5. altın madalyasıyla tarihe geçti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/yerel haber /2026/09/12/cami-onunde-cuma-namazi-sirasinda-domuz-basi-provokasyonu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:53:00+03:00</news:publication_date>
+      <news:title>Cami önünde cuma namazı sırasında &quot;domuz başı&quot; provokasyonu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/12/anthropic-ceosundan-yapay-zeka-icin-yavaslama-cagrisi-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:52:13+03:00</news:publication_date>
+      <news:title>Anthropic CEO&#x27;sundan yapay zeka için &quot;yavaşlama&quot; çağrısı. &quot;Kontrolü kaybedebiliriz&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/iran-umman-ile-anlasma-hurmuzun-acilacagi-anlamina-gelmiyo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:51:31+03:00</news:publication_date>
+      <news:title>İran: Umman ile anlaşma Hürmüz&#x27;ün açılacağı anlamına gelmiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/iran-umman-ile-anlasma-hurmuzun-acilacagi-anlamina-gelmiyo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:51:31+03:00</news:publication_date>
+      <news:title>İran: Umman ile anlaşma Hürmüz&#x27;ün açılacağı anlamına gelmiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/melikgazi-kayseri-basketbol-abdli-pivot-beatrice-mompremie.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:51:21+03:00</news:publication_date>
+      <news:title>Melikgazi Kayseri Basketbol, ABD&#x27;li pivot Beatrice Mompremier&#x27;i transfer etti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/yerel haber /2026/09/12/belcikada-yerel-kaynakli-bati-nil-virusu-vakalari-tespit-ed.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:50:00+03:00</news:publication_date>
+      <news:title>Belçika&#x27;da yerel kaynaklı Batı Nil virüsü vakaları tespit edildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/adanada-kamyonet-tira-carpti-iki-kisi-hayatini-kaybetti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:49:37+03:00</news:publication_date>
+      <news:title>Adana&#x27;da kamyonet tıra çarptı: İki kişi hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/akdagmadeni-gucu-spordan-bozokspor-u15e-2-transfer.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:48:45+03:00</news:publication_date>
+      <news:title>AKDAĞMADENİ GÜCÜ SPOR’DAN BOZOKSPOR U15’E 2 TRANSFER</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/12-eylulun-46-yilinda-darbenin-karanlik-mirasina-otorite.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:48:45+03:00</news:publication_date>
+      <news:title>12 Eylül’ün 46. Yılında: Darbenin Karanlık Mirasına, Otoriterliğe ve Sağlığın Piyasalaştırılmasına Karşıyız</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/canli-super-ligde-trabzonsporun-rakibi-konyaspor-trabz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:47:39+03:00</news:publication_date>
+      <news:title>CANLI │ Süper Lig&#x27;de Trabzonspor&#x27;un rakibi Konyaspor - Trabzonspor - Spor Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/konyaspor-trabzonspor-maci-canli-anlatim-firtina-deplas.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:47:00+03:00</news:publication_date>
+      <news:title>Konyaspor - Trabzonspor Maçı Canlı Anlatım | Fırtına, deplasmanda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/fiatin-ultra-ince-otomobili-guinness-dunya-rekoru-kirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:46:08+03:00</news:publication_date>
+      <news:title>Fiat&#x27;ın ultra ince otomobili Guinness Dünya Rekoru kırdı.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/van-spor-fk-1-keciorengucu-1-mac-sonucu-ozeti-ve-goll.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:46:04+03:00</news:publication_date>
+      <news:title>Van Spor FK: 1 - Keçiörengücü: 1 | MAÇ SONUCU, ÖZETİ VE GOLLERİ</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/fuat-capa-taraftarlarimizi-cok-uzduk-en-kisa-zamanda-topar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:45:35+03:00</news:publication_date>
+      <news:title>Fuat Çapa: Taraftarlarımızı çok üzdük, en kısa zamanda toparlanıp düzelmemiz gerekiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/12/bernard-arnault-ilk-10dan-cikti-teknoloji-patronlari-zirve.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:45:00+03:00</news:publication_date>
+      <news:title>Bernard Arnault ilk 10&#x27;dan çıktı, teknoloji patronları zirvede</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/thorsten-fink-takimin-biraz-zamana-ihtiyaci-var.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:41:10+03:00</news:publication_date>
+      <news:title>Thorsten Fink: Takımın biraz zamana ihtiyacı var</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/adana-demirspor-elazigspor-maci-basladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:41:06+03:00</news:publication_date>
+      <news:title>Adana Demirspor – Elazığspor Maçı Başladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/izmir haber /2026/09/12/kamyonet-tira-carpti-2-kisi-can-verdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:41:00+03:00</news:publication_date>
+      <news:title>Kamyonet tıra çarptı: 2 kişi can verdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/tira-arkadan-carpan-kamyonetteki-2-kisi-hayatini-kaybetti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:39:45+03:00</news:publication_date>
+      <news:title>TIR’a arkadan çarpan kamyonetteki 2 kişi hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/nvidia-anthropice-10-milyar-dolar-yatirima-hazirlaniyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:39:41+03:00</news:publication_date>
+      <news:title>Nvidia Anthropic&#x27;e 10 milyar dolar yatırıma hazırlanıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/12/yapay-zekada-korkutan-senaryo-kritik-isim-tarih-vererek-uya.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:38:06+03:00</news:publication_date>
+      <news:title>Yapay zekada korkutan senaryo! Kritik isim tarih vererek uyardı: &#x27;Tüm interneti ele geçirebilir&#x27; | İnternet Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/galatasaray-kocaelispor-macina-hazir.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:36:29+03:00</news:publication_date>
+      <news:title>Galatasaray, Kocaelispor maçına hazır!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/sultangazi-belediyesinden-toplu-sunnet-soleni.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:32:00+03:00</news:publication_date>
+      <news:title>Sultangazi Belediyesi’nden toplu sünnet şöleni</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/vietnamdaki-dunya-mirasi-alanlarinin-ekonomik-degerini-olcm.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:31:57+03:00</news:publication_date>
+      <news:title>Vietnam&#x27;daki Dünya Mirası alanlarının ekonomik değerini ölçmek için birleşik bir metodoloji geliştirilmesi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/fink-takimin-zamana-ihtiyaci-var.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:31:44+03:00</news:publication_date>
+      <news:title>Fink: Takımın zamana ihtiyacı var</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/corum-fk-samsunsporu-5-1-yendi-ucar-farkin-artabilecegini.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:31:41+03:00</news:publication_date>
+      <news:title>Çorum FK, Samsunspor&#x27;u 5-1 yendi; Uçar farkın artabileceğini söyledi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/bilim-dunyasinin-yakindan-izledigi-saglik-tehditleri-son-yi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:30:00+03:00</news:publication_date>
+      <news:title>Bilim dünyasının yakından izlediği sağlık tehditleri: Son yıllarda adlarını daha fazla duyduğumuz 3 hastalık</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/bilim/2026/09/12/bilim-cilt-ve-yeni-nesil-guzellik.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:30:00+03:00</news:publication_date>
+      <news:title>Bilim, Cilt ve Yeni Nesil Güzellik</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/bilim/2026/09/12/bilim-dunyasinin-yakindan-izledigi-saglik-tehditleri-son-yi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:30:00+03:00</news:publication_date>
+      <news:title>Bilim dünyasının yakından izlediği sağlık tehditleri: Son yıllarda adlarını daha fazla duyduğumuz 3 hastalık</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbulda-yarin-bazi-yollar-trafige-kapatilacak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:29:00+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da yarın bazı yollar trafiğe kapatılacak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/otomobilin-sarampole-yuvarlanmasi-sonucu-2-kisi-hayatini-kay.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:28:43+03:00</news:publication_date>
+      <news:title>Otomobilin şarampole yuvarlanması sonucu 2 kişi hayatını kaybetti</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/disislerinden-abdnin-guney-kibris-adimina-sert-tepki-bolg.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:27:36+03:00</news:publication_date>
+      <news:title>Dışişleri&#x27;nden ABD&#x27;nin Güney Kıbrıs adımına sert tepki: Bölgesel istikrara zarar veriyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/dunya-kupasinda-ilk-finalist-fransa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:26:06+03:00</news:publication_date>
+      <news:title>Dünya Kupası&#x27;nda ilk finalist Fransa</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/ozhan-pulat-cok-aci-verici-skor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:25:47+03:00</news:publication_date>
+      <news:title>Özhan Pulat: Çok acı verici skor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/dugunuyle-gundem-olmustu-vanli-kara-haydarin-esi-cagla-oz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:24:24+03:00</news:publication_date>
+      <news:title>Düğünüyle gündem olmuştu: Vanlı Kara Haydar&#x27;ın eşi Çağla Öz gözaltında</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/otomobil/2026/09/12/kirikkalede-iki-otomobil-carpisti-4-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:22:00+03:00</news:publication_date>
+      <news:title>Kırıkkale&#x27;de iki otomobil çarpıştı, 4 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/samsunspor-arca-corum-fk-macinin-ardindan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:21:01+03:00</news:publication_date>
+      <news:title>Samsunspor - Arca Çorum FK maçının ardından</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/sanal-medya-unlusu-cagla-oz-gozaltina-alindi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:21:00+03:00</news:publication_date>
+      <news:title>Sanal medya ünlüsü Çağla Öz gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/otomobil/2026/09/12/kirikkalede-d200-kara-yolunda-iki-otomobil-carpisti-4-kisi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:20:41+03:00</news:publication_date>
+      <news:title>Kırıkkale&#x27;de D200 kara yolunda iki otomobil çarpıştı, 4 kişi yaralandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/12/google-robotlar-ve-otonom-sistemler-icin-israilde-cip-ekib.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-12T20:20:00+03:00</news:publication_date>
-      <news:title>İzmir sularında can pazarı!</news:title>
+      <news:title>Google, robotlar ve otonom sistemler için İsrail&#x27;de çip ekibi kurdu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/izmir haber /2026/09/12/umuda-yolculuk-izmirde-son-buldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:20:00+03:00</news:publication_date>
+      <news:title>Umuda yolculuk İzmir&#x27;de son buldu!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/filenin-efeleri-fransaya-3-0-maglup-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:19:22+03:00</news:publication_date>
+      <news:title>Filenin Efeleri, Fransa&#x27;ya 3-0 mağlup oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/ampute-futbol-takimi-dunya-kupasi-oncesi-erciyeste-guc-dep.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:18:43+03:00</news:publication_date>
+      <news:title>Ampute Futbol Takımı, Dünya Kupası öncesi Erciyes&#x27;te güç depoluyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/ampute-futbol-takimi-dunya-kupasi-oncesi-erciyeste-guc-dep.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:18:43+03:00</news:publication_date>
+      <news:title>Ampute Futbol Takımı, Dünya Kupası öncesi Erciyes&#x27;te güç depoluyor</news:title>
     </news:news>
   </url>
   <url>
@@ -68,14 +860,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/vanspor-ile-ankara-keciorengucu-yenisemedi.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/12/genclik-ve-spor-bakani-bak-kackar-by-utmbnin-startini-verd.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T20:13:57+03:00</news:publication_date>
-      <news:title>Vanspor ile Ankara Keçiörengücü yenişemedi!</news:title>
+      <news:publication_date>2026-09-12T20:15:00+03:00</news:publication_date>
+      <news:title>Gençlik ve Spor Bakanı Bak, Kaçkar by UTMB&#x27;nin startını verdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/anthropic-ceosu-amodeiden-yapay-zeka-sirketlerine-kritik-u.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:14:00+03:00</news:publication_date>
+      <news:title>Anthropic CEO’su Amodei’den yapay zeka şirketlerine kritik uyarı</news:title>
     </news:news>
   </url>
   <url>
@@ -101,7 +904,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/bursada-tarim-iscilerini-tasiyan-minibus-traktore-carpti-1.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/12/bursada-tarim-iscilerini-tasiyan-minibus-traktore-carpti-1.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -167,6 +970,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/12/fenerbahcede-jayden-oosterwolde-surprizi-geri-donmeyi-umu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T20:06:06+03:00</news:publication_date>
+      <news:title>Fenerbahçe&#x27;de Jayden Oosterwolde sürprizi! &#x27;Geri dönmeyi umuyorum&#x27; - Futbol - Spor Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/spor/2026/09/12/galatasaraydan-ayrilan-icardi-icin-surpriz-iddia-yeni-adre.html</loc>
     <news:news>
       <news:publication>
@@ -178,50 +992,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/12/googlein-israilde-yeni-yapay-zeka-cipi-uretecegi-bildiril.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T20:01:36+03:00</news:publication_date>
-      <news:title>Google&#x27;ın, İsrail&#x27;de yeni yapay zeka çipi üreteceği bildirildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/12/googlein-israilde-yeni-yapay-zeka-cipi-uretecegi-bildiril.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T20:01:36+03:00</news:publication_date>
-      <news:title>Google&#x27;ın, İsrail&#x27;de yeni yapay zeka çipi üreteceği bildirildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim-konyaspor-trabzonspor-super-lig.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T20:01:36+03:00</news:publication_date>
-      <news:title>Canlı anlatım: Konyaspor - Trabzonspor (Süper Lig)</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/ozhan-pulat-cok-aci-verici-skor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T20:01:31+03:00</news:publication_date>
-      <news:title>Özhan Pulat: &quot;Çok acı verici skor&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/12/urla-belediyesi-spor-kulubunden-yeni-sezon-oncesi-birlik-ve.html</loc>
     <news:news>
       <news:publication>
@@ -230,17 +1000,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T20:01:00+03:00</news:publication_date>
       <news:title>Urla Belediyesi Spor Kulübü’nden yeni sezon öncesi birlik ve dayanışma gecesi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/mansur-yavas-ayrilikta-azap-birlikte-rahmet-vardir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T20:01:00+03:00</news:publication_date>
-      <news:title>Mansur Yavaş: Ayrılıkta azap, birlikte rahmet vardır</news:title>
     </news:news>
   </url>
   <url>
@@ -266,14 +1025,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/demokratik-cumhuriyet-ve-baris-icin-1001-imza-deklarasyonu.html</loc>
+    <loc>https://nearadin.net/otomobil/2026/09/12/ankarada-korkunc-kaza-otomobil-hurdaya-dondu-5-yarali.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T19:56:44+03:00</news:publication_date>
-      <news:title>“Demokratik Cumhuriyet ve Barış İçin 1001 İmza” deklarasyonu açıklandı</news:title>
+      <news:publication_date>2026-09-12T19:57:05+03:00</news:publication_date>
+      <news:title>Ankara’da korkunç kaza! Otomobil hurdaya döndü: 5 yaralı</news:title>
     </news:news>
   </url>
   <url>
@@ -307,6 +1066,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T19:53:00+03:00</news:publication_date>
       <news:title>Son dakika... Özel Üsküdar&#x27;da konuşuyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/vietnam-dunya-ticaret-orgutunun-basarisinin-en-guzel-ornek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T19:52:35+03:00</news:publication_date>
+      <news:title>Vietnam, Dünya Ticaret Örgütü&#x27;nün başarısının en güzel örneklerinden biridir.</news:title>
     </news:news>
   </url>
   <url>
@@ -365,6 +1135,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/turkiye-enerjide-vites-yukseltiyor-karadenizin-altindan-el.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T19:44:00+03:00</news:publication_date>
+      <news:title>Türkiye enerjide vites yükseltiyor! Karadeniz&#x27;in altından elektrik taşınacak</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/canli-konyaspor-1-0-trabzonspor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T19:44:00+03:00</news:publication_date>
+      <news:title>CANLI | Konyaspor 1-0 Trabzonspor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/12/sollamak-istedigi-patpata-carpan-otomobil-findikliga-uctu-4.html</loc>
     <news:news>
       <news:publication>
@@ -398,14 +1190,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/can-uzun-durdurulamiyor-sezona-firtina-gibi-basladi.html</loc>
+    <loc>https://nearadin.net/son dakika/2026/09/12/kor-sergisi-sanatseverlerle-bulustu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-12T19:41:00+03:00</news:publication_date>
-      <news:title>Can Uzun durdurulamıyor! Sezona fırtına gibi başladı</news:title>
+      <news:title>&#x27;Kor&#x27; sergisi sanatseverlerle buluştu</news:title>
     </news:news>
   </url>
   <url>
@@ -453,14 +1245,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-super-ligde-alanyasporun-konugu-goztepe-alanyasp.html</loc>
+    <loc>https://nearadin.net/son dakika/2026/09/12/hale-gitmeden-tarlada-bitiyor-aromasini-bozmamak-icin-su-bi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T19:34:55+03:00</news:publication_date>
-      <news:title>CANLI │ Süper Lig&#x27;de Alanyaspor&#x27;un konuğu Göztepe - Alanyaspor - Spor Haberleri</news:title>
+      <news:publication_date>2026-09-12T19:36:00+03:00</news:publication_date>
+      <news:title>Hale gitmeden tarlada bitiyor: Aromasını bozmamak için su bile vermiyorlar...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbullular-dikkat-yarin-3-ilcede-bazi-yollar-kapatilacak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T19:35:09+03:00</news:publication_date>
+      <news:title>İstanbullular dikkat. Yarın 3 ilçede bazı yollar kapatılacak</news:title>
     </news:news>
   </url>
   <url>
@@ -519,17 +1322,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/super-ligde-trabzonsporun-rakibi-konyaspor-trabzonspor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:30:30+03:00</news:publication_date>
-      <news:title>Süper Lig&#x27;de Trabzonspor&#x27;un rakibi Konyaspor - Trabzonspor - Spor Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/otomobil/2026/09/12/idilde-otomobil-sarampole-yuvarlandi-2-olu-3-yarali.html</loc>
     <news:news>
       <news:publication>
@@ -541,17 +1333,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/turizm/2026/09/12/istanbula-3-dev-kruvaziyer-gemisi-geldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:30:00+03:00</news:publication_date>
-      <news:title>İstanbul’a 3 dev kruvaziyer gemisi geldi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbula-3-dev-kruvaziyer-gemisi-geldi.html</loc>
     <news:news>
       <news:publication>
@@ -560,28 +1341,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T19:30:00+03:00</news:publication_date>
       <news:title>İstanbul’a 3 dev kruvaziyer gemisi geldi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/can-uzun-maca-damga-vurdu-eintracht-frankfurt-3-golle-kazan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:25:35+03:00</news:publication_date>
-      <news:title>Can Uzun maça damga vurdu! Eintracht Frankfurt 3 golle kazandı - Futbol - Spor Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/12/bakan-gurlek-acikladi-16-ilde-turizm-guvenligi-operasyonlar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:25:14+03:00</news:publication_date>
-      <news:title>Bakan Gürlek açıkladı: 16 ilde turizm güvenliği operasyonlarında 323 şüpheliye işlem, 106 tutuklama</news:title>
     </news:news>
   </url>
   <url>
@@ -604,28 +1363,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T19:25:00+03:00</news:publication_date>
       <news:title>Dışişleri&#x27;nden Suudi Arabistan&#x27;a yönelik İHA saldırılarına kınama</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/van-spor-fk-1-keciorengucu-1-mac-sonucu-ozeti-ve-goll.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:22:42+03:00</news:publication_date>
-      <news:title>Van Spor FK: 1 - Keçiörengücü: 1 | MAÇ SONUCU, ÖZETİ VE GOLLERİ</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/pusula-portfoyun-sahibi-yurt-disina-kacti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:22:00+03:00</news:publication_date>
-      <news:title>“Pusula Portföy’ün sahibi yurt dışına kaçtı”</news:title>
     </news:news>
   </url>
   <url>
@@ -794,17 +1531,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/trendyol-1-ligde-boluspor-ile-pendikspor-1-1-berabere-kald.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:08:23+03:00</news:publication_date>
-      <news:title>Trendyol 1. Lig&#x27;de Boluspor ile Pendikspor 1-1 berabere kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/bolu-saglik-mahallesinde-cikan-yangin-odunluk-ve-3-evi-kule.html</loc>
     <news:news>
       <news:publication>
@@ -816,14 +1542,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/avrupa-sampiyonasinda-filenin-efeleri-fransaya-kaybetti.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/12/karsiyaka-mersin-spora-maglup-oldu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T19:07:34+03:00</news:publication_date>
-      <news:title>Avrupa Şampiyonası&#x27;nda Filenin Efeleri, Fransa&#x27;ya kaybetti</news:title>
+      <news:publication_date>2026-09-12T19:08:00+03:00</news:publication_date>
+      <news:title>Karşıyaka, Mersin Spor&#x27;a mağlup oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/ak-partinin-25-yilina-ozel-turkiye-bulteni-yayimlandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T19:07:18+03:00</news:publication_date>
+      <news:title>AK Parti&#x27;nin 25. yılına özel &quot;Türkiye Bülteni&quot; yayımlandı</news:title>
     </news:news>
   </url>
   <url>
@@ -835,28 +1572,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T19:07:00+03:00</news:publication_date>
       <news:title>Güney Afrika&#x27;dan Çin’le bilim ve teknolojide daha yakın iş birliği mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/konyaspor-trabzonspor-maci-canli-anlatim-firtina-deplas.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:06:00+03:00</news:publication_date>
-      <news:title>Konyaspor - Trabzonspor Maçı Canlı Anlatım | Fırtına, deplasmanda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/disisleri-bakanligindan-suudi-arabistana-yonelik-iha-saldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:05:11+03:00</news:publication_date>
-      <news:title>Dışişleri Bakanlığı’ndan Suudi Arabistan’a yönelik İHA saldırılarına kınama</news:title>
     </news:news>
   </url>
   <url>
@@ -893,25 +1608,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/efteni-golunde-hem-canlilar-hem-batan-gunes-gorsel-solen-su.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T19:02:00+03:00</news:publication_date>
-      <news:title>Efteni Gölü&#x27;nde hem canlılar hem batan güneş görsel şölen sunuyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/12/tahvilleri-birakip-bitcoine-yonelmek-btcnin-yapay-zeka-ag.html</loc>
+    <loc>https://nearadin.net/bitcoin/2026/09/12/tahvilleri-birakip-bitcoine-yatirim-kripto-paranin-yapay-z.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-12T19:00:00+03:00</news:publication_date>
-      <news:title>Tahvilleri Bırakıp Bitcoin’e Yönelmek: BTC’nin Yapay Zeka Ağırlıklı Portföy Problemini Nasıl Çözebileceği</news:title>
+      <news:title>Tahvilleri Bırakıp Bitcoin’e Yatırım: Kripto Paranın Yapay Zeka Ağırlıklı Portföy İkilemini Nasıl Çözebileceği</news:title>
     </news:news>
   </url>
   <url>
@@ -926,25 +1630,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/hisseler/2026/09/12/tahvilleri-birakip-bitcoine-yonelmek-btcnin-yapay-zeka-ag.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/12/putini-koruyan-kiyamet-gunu-ucaginin-icinde-neler-var.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T19:00:00+03:00</news:publication_date>
-      <news:title>Tahvilleri Bırakıp Bitcoin’e Yönelmek: BTC’nin Yapay Zeka Ağırlıklı Portföy Problemini Nasıl Çözebileceği</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/adana-demirspor-elazigspor-maci-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:59:46+03:00</news:publication_date>
-      <news:title>Adana Demirspor – Elazığspor Maçı Başladı</news:title>
+      <news:publication_date>2026-09-12T18:59:00+03:00</news:publication_date>
+      <news:title>Putin’i koruyan &#x27;Kıyamet Günü&#x27; uçağının içinde neler var?</news:title>
     </news:news>
   </url>
   <url>
@@ -1091,6 +1784,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/12/corum-fk-deplasmanda-samsunsporu-farkli-devirdi-5-gollu-ga.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:50:24+03:00</news:publication_date>
+      <news:title>Çorum FK deplasmanda Samsunspor&#x27;u farklı devirdi! 5 gollü galibiyet</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/dunya/2026/09/12/dunya-ticaret-orgutu-genel-direktoru-gostergeler-vietnam-h.html</loc>
     <news:news>
       <news:publication>
@@ -1099,17 +1803,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T18:50:04+03:00</news:publication_date>
       <news:title>Dünya Ticaret Örgütü Genel Direktörü: Göstergeler, Vietnam Hükümeti&#x27;nin çok iyi makroekonomik yönetim kapasitesini yansıtıyor.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/filenin-efeleri-fransaya-maglup-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:49:55+03:00</news:publication_date>
-      <news:title>Filenin Efeleri, Fransa&#x27;ya mağlup oldu!</news:title>
     </news:news>
   </url>
   <url>
@@ -1135,17 +1828,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/disislerinden-husilerin-saldirisina-kinama-gerilimi-tirman.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:49:00+03:00</news:publication_date>
-      <news:title>Dışişleri&#x27;nden Husilerin saldırısına kınama: Gerilimi tırmandıracak adımlardan kaçınılmalı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbulun-3-ilcesinde-yarin-bazi-yollar-trafige-kapatilaca.html</loc>
     <news:news>
       <news:publication>
@@ -1168,14 +1850,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/hakkinda-gozalti-karari-bulunan-ve-aranan-cagla-oz-gozaltind.html</loc>
+    <loc>https://nearadin.net/gundem/2026/09/12/disisleri-bakanligi-suudi-arabistana-yapilan-saldiriyi-kin.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T18:46:00+03:00</news:publication_date>
-      <news:title>Hakkında gözaltı kararı bulunan ve aranan Çağla Öz gözaltında</news:title>
+      <news:publication_date>2026-09-12T18:46:17+03:00</news:publication_date>
+      <news:title>Dışişleri Bakanlığı: Suudi Arabistan&#x27;a yapılan saldırıyı kınıyoruz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbullular-dikkat-yarin-bu-guzergahlara-giris-yok.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:45:25+03:00</news:publication_date>
+      <news:title>İstanbullular dikkat! Yarın bu güzergahlara giriş yok</news:title>
     </news:news>
   </url>
   <url>
@@ -1242,28 +1935,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T18:38:00+03:00</news:publication_date>
       <news:title>Bilgiden eyleme: Gençler için sağlıklı yaşam alışkanlıkları oluşturmak.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bilim/2026/09/12/bilim-ve-guzelligin-bulustugu-bir-aksam-lancme-skin-scienc.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:37:06+03:00</news:publication_date>
-      <news:title>Bilim ve Güzelliğin Buluştuğu Bir Akşam: Lancôme Skin Science Club</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/emniyet-duyurdu-istanbulun-3-ilcesinde-yarin-bazi-yollar-t.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:37:00+03:00</news:publication_date>
-      <news:title>Emniyet duyurdu: İstanbul&#x27;un 3 ilçesinde yarın bazı yollar trafiğe kapatılacak</news:title>
     </news:news>
   </url>
   <url>
@@ -1377,6 +2048,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-akrep-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:31:03+03:00</news:publication_date>
+      <news:title>13 Eylül Pazar Akrep Burcu Günlük Sağlık Burç Yorumu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-balik-burcu-gunluk-saglik-burc-yorumu.html</loc>
     <news:news>
       <news:publication>
@@ -1385,17 +2067,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T18:31:03+03:00</news:publication_date>
       <news:title>13 Eylül Pazar Balık Burcu Günlük Sağlık Burç Yorumu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-yay-burcu-gunluk-saglik-burc-yorumu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:31:03+03:00</news:publication_date>
-      <news:title>13 Eylül Pazar Yay Burcu Günlük Sağlık Burç Yorumu</news:title>
     </news:news>
   </url>
   <url>
@@ -1421,36 +2092,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-basak-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-yay-burcu-gunluk-saglik-burc-yorumu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
-      <news:title>13 Eylül Pazar Başak Burcu Günlük Sağlık Burç Yorumu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-yengec-burcu-gunluk-saglik-burc-yorumu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
-      <news:title>13 Eylül Pazar Yengeç Burcu Günlük Sağlık Burç Yorumu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-boga-burcu-gunluk-saglik-burc-yorumu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
-      <news:title>13 Eylül Pazar Boğa Burcu Günlük Sağlık Burç Yorumu</news:title>
+      <news:publication_date>2026-09-12T18:31:03+03:00</news:publication_date>
+      <news:title>13 Eylül Pazar Yay Burcu Günlük Sağlık Burç Yorumu</news:title>
     </news:news>
   </url>
   <url>
@@ -1465,6 +2114,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-basak-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
+      <news:title>13 Eylül Pazar Başak Burcu Günlük Sağlık Burç Yorumu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-ikizler-burcu-gunluk-saglik-burc-yorumu.html</loc>
     <news:news>
       <news:publication>
@@ -1476,6 +2136,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-boga-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
+      <news:title>13 Eylül Pazar Boğa Burcu Günlük Sağlık Burç Yorumu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-yengec-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:31:02+03:00</news:publication_date>
+      <news:title>13 Eylül Pazar Yengeç Burcu Günlük Sağlık Burç Yorumu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/gunluk-saglik-burc-yorumuna-gore-13-eylul-pazar-gunun-nasil.html</loc>
     <news:news>
       <news:publication>
@@ -1484,17 +2166,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T18:31:01+03:00</news:publication_date>
       <news:title>Günlük Sağlık Burç Yorumuna Göre 13 Eylül Pazar Günün Nasıl Geçecek?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/13-eylul-pazar-koc-burcu-gunluk-saglik-burc-yorumu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:31:01+03:00</news:publication_date>
-      <news:title>13 Eylül Pazar Koç Burcu Günlük Sağlık Burç Yorumu</news:title>
     </news:news>
   </url>
   <url>
@@ -1597,28 +2268,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/kars-cevre-yolunda-otomobil-traktorle-carpisti-6-kisi-yaral.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:22:22+03:00</news:publication_date>
-      <news:title>Kars çevre yolunda otomobil traktörle çarpıştı, 6 kişi yaralandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/turkiye-enerjide-vites-yukseltiyor-karadenizin-altindan-el.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:21:00+03:00</news:publication_date>
-      <news:title>Türkiye enerjide vites yükseltiyor! Karadeniz&#x27;in altından elektrik taşınacak</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/gunes-eczanesinden-saglik-sektorune-ornek-yatirim.html</loc>
     <news:news>
       <news:publication>
@@ -1707,6 +2356,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/12/dunyanin-en-iyi-50-futbol-sehri-istanbul-listeyi-altust-ett.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:15:30+03:00</news:publication_date>
+      <news:title>Dünyanın en iyi 50 futbol şehri! İstanbul listeyi altüst etti... - Galeri - Trend Spor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/12/yakit-tankeri-ile-otomobil-carpisti-2-kisi-yaralandi.html</loc>
     <news:news>
       <news:publication>
@@ -1740,17 +2400,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/12/yapay-zeka-afet-mudahalesi-icin-daha-fazla-altin-zaman-ya.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T18:11:54+03:00</news:publication_date>
-      <news:title>Yapay zeka, afet müdahalesi için daha fazla &quot;altın zaman&quot; yaratıyor.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/12/deneyimden-uygulamaya-gercek-dunya-senaryolarinda-test-edil.html</loc>
     <news:news>
       <news:publication>
@@ -1762,14 +2411,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim.html</loc>
+    <loc>https://nearadin.net/otomobil/2026/09/12/karsta-traktorle-otomobil-carpisti-6-yarali.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T18:07:54+03:00</news:publication_date>
-      <news:title>Canlı anlatım</news:title>
+      <news:publication_date>2026-09-12T18:09:00+03:00</news:publication_date>
+      <news:title>Kars’ta traktörle otomobil çarpıştı: 6 yaralı</news:title>
     </news:news>
   </url>
   <url>
@@ -1807,6 +2456,17 @@
   </url>
   <url>
     <loc>https://nearadin.net/ekonomi/2026/09/12/hindistan-merkez-bankasindan-tataya-ret.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T18:06:31+03:00</news:publication_date>
+      <news:title>Hindistan Merkez Bankası&#x27;ndan Tata&#x27;ya ret</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/hindistan-merkez-bankasindan-tataya-ret.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -1916,17 +2576,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/uzmanindan-sanal-anjiyo-uyarisi-her-hasta-icin-uygun-olmaya.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:58:00+03:00</news:publication_date>
-      <news:title>Uzmanından sanal anjiyo uyarısı: Her hasta için uygun olmayabilir</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/otomobil/2026/09/12/sirnakta-otomobil-sarampole-yuvarlandi-2-kisi-oldu-3-kisi.html</loc>
     <news:news>
       <news:publication>
@@ -2001,28 +2650,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:52:00+03:00</news:publication_date>
       <news:title>Sakarya’da sağlık altyapısı güçleniyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim-eyupspor-rizespor-super-lig-maci.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:50:21+03:00</news:publication_date>
-      <news:title>Canlı Anlatım: Eyüpspor - Rizespor (Süper Lig maçı)</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/ted-openda-final-gunu-soleni.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:50:00+03:00</news:publication_date>
-      <news:title>TED Open’da final günü şöleni</news:title>
     </news:news>
   </url>
   <url>
@@ -2111,17 +2738,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:42:26+03:00</news:publication_date>
       <news:title>Şırnak&#x27;ta feci kaza! Otomobil şarampole yuvarlandı: 2 ölü, 3 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/bitlis-spor-ligde-yoluna-kayipsiz-devam-ediyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:41:00+03:00</news:publication_date>
-      <news:title>Bitlis Spor ligde yoluna kayıpsız devam ediyor</news:title>
     </news:news>
   </url>
   <url>
@@ -2224,6 +2840,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/rusyada-katliam-gibi-kaza-13-olu-8-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T17:35:00+03:00</news:publication_date>
+      <news:title>Rusya&#x27;da katliam gibi kaza! 13 ölü, 8 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/12/cumhurbaskani-erdogandan-12-eylul-mesaji.html</loc>
     <news:news>
       <news:publication>
@@ -2232,6 +2859,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:33:20+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Erdoğan&#x27;dan 12 Eylül mesajı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/memur-emeklisine-seyyanen-zam-son-dakika-memur-emeklisi-ss.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T17:33:17+03:00</news:publication_date>
+      <news:title>MEMUR EMEKLİSİNE SEYYANEN ZAM SON DAKİKA: Memur emeklisi, SSK ve Bağ-Kur emekliye ek zam gelecek mi? AYM kararıyla geriye dönük ödeme yapılacak mı?</news:title>
     </news:news>
   </url>
   <url>
@@ -2247,17 +2885,6 @@
   </url>
   <url>
     <loc>https://nearadin.net/spor/2026/09/12/italyan-basini-duyurdu-roma-oosterwolde-icin-yeniden-harek.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:30:00+03:00</news:publication_date>
-      <news:title>İtalyan basını duyurdu: Roma, Oosterwolde için yeniden harekete geçecek</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/italyan-basini-duyurdu-roma-oosterwolde-icin-yeniden-harek.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -2323,17 +2950,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/aliaga-petkim-spor-91-73-trabzonspor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:28:31+03:00</news:publication_date>
-      <news:title>Aliağa Petkim Spor 91-73 Trabzonspor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ankara haber /2026/09/12/iki-cocuk-ankaraya-helikopterle-sevk-edildi.html</loc>
     <news:news>
       <news:publication>
@@ -2345,14 +2961,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/izmir haber /2026/09/12/manisada-cocukluk-arkadasini-katletti-izmirde-yakayi-boyle.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/12/aliaga-petkim-spor-91-73-trabzonspor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T17:27:29+03:00</news:publication_date>
-      <news:title>Manisa’da çocukluk arkadaşını katletti İzmir’de yakayı böyle ele verdi</news:title>
+      <news:publication_date>2026-09-12T17:26:15+03:00</news:publication_date>
+      <news:title>Aliağa Petkim Spor 91-73 Trabzonspor</news:title>
     </news:news>
   </url>
   <url>
@@ -2433,17 +3049,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/bakan-simsek-boluda-is-dunyasi-ve-esnaf-temsilcileriyle-bu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:20:00+03:00</news:publication_date>
-      <news:title>Bakan Şimşek, Bolu’da iş dünyası ve esnaf temsilcileriyle buluştu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/12/kis-hazirligi-basladi-sehirde-tezgahlar-doldu-vatandas-cuv.html</loc>
     <news:news>
       <news:publication>
@@ -2452,6 +3057,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:20:00+03:00</news:publication_date>
       <news:title>Kış hazırlığı başladı! Şehirde tezgahlar doldu: Vatandaş çuvalla satın alıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/turizm/2026/09/12/turkiye-turizmin-super-liginde-zirveye-talip.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T17:19:53+03:00</news:publication_date>
+      <news:title>Türkiye turizmin süper liginde zirveye talip</news:title>
     </news:news>
   </url>
   <url>
@@ -2474,17 +3090,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:19:00+03:00</news:publication_date>
       <news:title>İstanbul&#x27;da 10 bin liraya kiralık sosyal konut dönemi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/benficada-bruma-ile-yollar-ayrildi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:18:03+03:00</news:publication_date>
-      <news:title>Benfica&#x27;da Bruma ile yollar ayrıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -2543,17 +3148,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/mardinde-teknofest-insansiz-kara-araci-yarismasi-tamamlandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:12:50+03:00</news:publication_date>
-      <news:title>Mardin’de TEKNOFEST İnsansız Kara Aracı Yarışması tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/12/ulusal-bilgi-sistemi-bilim-teknoloji-ve-inovasyon-icin-yen.html</loc>
     <news:news>
       <news:publication>
@@ -2576,6 +3170,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/mardinde-teknofest-insansiz-kara-araci-yarismasi-tamamlandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T17:10:42+03:00</news:publication_date>
+      <news:title>Mardin’de TEKNOFEST İnsansız Kara Aracı Yarışması tamamlandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/kirikkalede-saglik-durumu-agirlasan-6-ve-15-yasindaki-iki-h.html</loc>
     <news:news>
       <news:publication>
@@ -2595,17 +3200,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:09:01+03:00</news:publication_date>
       <news:title>Petroldeki geri çekilme Bitcoin üzerindeki baskıyı geçici olarak azalttı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/urdun-ve-suudi-arabistandan-gerilimin-sona-erdirilmesi-cagr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:08:48+03:00</news:publication_date>
-      <news:title>Ürdün ve Suudi Arabistan&#x27;dan gerilimin sona erdirilmesi çağrısı!</news:title>
     </news:news>
   </url>
   <url>
@@ -2653,17 +3247,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/mhp-aydin-il-kongresinde-cihangiroglu-yeniden-baskan-secild.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T17:03:22+03:00</news:publication_date>
-      <news:title>MHP Aydın İl Kongresi&#x27;nde Cihangiroğlu yeniden başkan seçildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/12/fenerbahcede-gaziantep-fk-hazirliklari-ismail-kartal-yoneti.html</loc>
     <news:news>
       <news:publication>
@@ -2683,6 +3266,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T17:02:37+03:00</news:publication_date>
       <news:title>“Enfeksiyonun normal seyri” deyip geçmeyin! Uzmanı sepsis için kritik belirtiyi açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/cevdet-yilmaz-osmaniyede-konustu-turkiye-siyasi-istikrarin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T17:02:09+03:00</news:publication_date>
+      <news:title>Cevdet Yılmaz Osmaniye&#x27;de konuştu: Türkiye siyasi istikrarını güçlü sürdürüyor, enflasyon birinci öncelik</news:title>
     </news:news>
   </url>
   <url>
@@ -2752,17 +3346,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/kayserispordan-farkindalik-mesaji.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:56:42+03:00</news:publication_date>
-      <news:title>Kayserispor’dan farkındalık mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/dunya/2026/09/12/murat-ongundan-dikkat-ceken-ekonomi-analizi-gida-enflasyon.html</loc>
     <news:news>
       <news:publication>
@@ -2796,29 +3379,18 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/bati-nil-virusune-karsi-tavuklu-erken-uyari-sistemi.html</loc>
+    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbulda-5-katli-binanin-istinat-duvari-coktu.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T16:54:32+03:00</news:publication_date>
-      <news:title>Batı Nil virüsüne karşı tavuklu erken uyarı sistemi</news:title>
+      <news:publication_date>2026-09-12T16:53:23+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da 5 katlı binanın istinat duvarı çöktü</news:title>
     </news:news>
   </url>
   <url>
     <loc>https://nearadin.net/spor/2026/09/12/son-dakika-spor-haberi-fenerbahcede-gaziantep-fk-mesaisi-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:52:48+03:00</news:publication_date>
-      <news:title>Son Dakika Spor Haberi | Fenerbahçede Gaziantep FK mesaisi sürüyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-spor-haberi-fenerbahcede-gaziantep-fk-mesaisi-s.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -2903,6 +3475,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T16:44:57+03:00</news:publication_date>
       <news:title>Bakan Şimşek, Bolu’da iş dünyası ve partililerle buluştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/dunya-ekonomisi-bu-kadar-soka-dayanabilir-mi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T16:44:18+03:00</news:publication_date>
+      <news:title>Dünya ekonomisi bu kadar şoka dayanabilir mi?</news:title>
     </news:news>
   </url>
   <url>
@@ -3027,17 +3610,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/bitlis-spor-karaman-fk-deplasmaninda-ilk-yariyi-2-0-onde-kap.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:35:00+03:00</news:publication_date>
-      <news:title>Bitlis Spor Karaman FK deplasmanında ilk yarıyı 2-0 önde kapattı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-alihan-kuris-suc-orgutu-sorusturmasinda-carpici.html</loc>
     <news:news>
       <news:publication>
@@ -3093,17 +3665,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/bastonlu-hali-cok-konusuldu-cem-yilmazdan-gundem-olan-goru.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:30:21+03:00</news:publication_date>
-      <news:title>Bastonlu hali çok konuşuldu! Cem Yılmaz&#x27;dan gündem olan görüntülere şaşırtan cevap</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/turizm/2026/09/12/corumun-bu-ilcesinin-turizm-potansiyeli-bulgaristanda-tani.html</loc>
     <news:news>
       <news:publication>
@@ -3123,6 +3684,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T16:30:00+03:00</news:publication_date>
       <news:title>Tera Yatırım’ın geçen hafta öne çıkan hisse işlemleri!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/erdogan-katilmadi-ozel-ve-kilicdaroglu-selamlasmadi-davuto.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T16:28:00+03:00</news:publication_date>
+      <news:title>Erdoğan katılmadı, Özel ve Kılıçdaroğlu selamlaşmadı; Davutoğlu&#x27;nun oğlunun nikâh törenine kimler katıldı?</news:title>
     </news:news>
   </url>
   <url>
@@ -3159,17 +3731,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/savastepede-otomobil-takla-atti-3-kisi-yaralandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:26:02+03:00</news:publication_date>
-      <news:title>Savaştepe’de Otomobil Takla Attı: 3 Kişi Yaralandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/asi-karsitligi-yok-olmak-uzere-olan-hastaliklari-artirabil.html</loc>
     <news:news>
       <news:publication>
@@ -3192,17 +3753,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/merve-ve-abdulkadir-muhtesem-bir-organizasyonla-dunya-evine.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:25:01+03:00</news:publication_date>
-      <news:title>MERVE VE ABDULKADİR, MUHTEŞEM BİR ORGANİZASYONLA DÜNYA EVİNE GİRDİ</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/saglik-hak-sen-elazigda-bayrak-degisimi.html</loc>
     <news:news>
       <news:publication>
@@ -3222,17 +3772,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T16:24:06+03:00</news:publication_date>
       <news:title>Türkiye Cumhuriyeti Adalet Bakanlığı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim-van-spor-fk-ankara-keciorengucu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:23:55+03:00</news:publication_date>
-      <news:title>Canlı anlatım - Van Spor FK : Ankara Keçiörengücü</news:title>
     </news:news>
   </url>
   <url>
@@ -3269,28 +3808,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/vietnam-bilardo-dunya-kupasini-kazanan-oyuncu-70-milyon-vn.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:21:20+03:00</news:publication_date>
-      <news:title>&#x27;Vietnam Bilardo Dünya Kupası&#x27;nı kazanan oyuncu 70 milyon VND ödül aldı.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/beton-mikseri-ile-otomobil-carpisti-5-yarali-surucunun-dur.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:20:00+03:00</news:publication_date>
-      <news:title>Beton Mikseri ile Otomobil Çarpıştı: 5 Yaralı, Sürücünün Durumu Ağır</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/son dakika/2026/09/12/el-nino-atlantik-kasirgalarini-durdurdu-rekor-kiran-durgunl.html</loc>
     <news:news>
       <news:publication>
@@ -3310,6 +3827,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T16:15:47+03:00</news:publication_date>
       <news:title>Apple&#x27;dan dikkat çeken yapay zeka hamlesi! Yeni Siri telefonunuzu sizin için tarıyor | Teknoloji Haberleri</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/yok-boyle-tanitim-seyyar-satici-cayciya-elektrosok-verdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T16:15:21+03:00</news:publication_date>
+      <news:title>Yok böyle ‘tanıtım’! Seyyar satıcı çaycıya elektroşok verdi - Gündem Haberleri</news:title>
     </news:news>
   </url>
   <url>
@@ -3346,28 +3874,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:10:58+03:00</news:publication_date>
-      <news:title>Canlı anlatım</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:10:57+03:00</news:publication_date>
-      <news:title>Canlı anlatım</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/istanbul haber /2026/09/12/muglanin-yerel-urunleri-foodist-istanbulda-tanitildi.html</loc>
     <news:news>
       <news:publication>
@@ -3385,7 +3891,7 @@
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T16:10:37+03:00</news:publication_date>
+      <news:publication_date>2026-09-12T16:10:27+03:00</news:publication_date>
       <news:title>“Akif Manaf Sağlık ve Barış Ödülü” Şimdi de Fransa’da</news:title>
     </news:news>
   </url>
@@ -3431,17 +3937,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T16:06:31+03:00</news:publication_date>
       <news:title>AK Parti Genel Başkan Yardımcısı Yayman&#x27;dan yeni anayasa mesajı: Darbe anayasası Türkiye&#x27;ye yakışmamaktadır</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/motorine-zam-bekleniyor-suruculer-dikkat.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T16:06:00+03:00</news:publication_date>
-      <news:title>Motorine zam bekleniyor! Sürücüler dikkat</news:title>
     </news:news>
   </url>
   <url>
@@ -3555,14 +4050,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/bulancak-belediye-baskani-sibic-yurttaslarin-taleplerini-din.html</loc>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/cinli-telefon-devi-turkiyede-uretim-yapacak-firma-belli-ol.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:58:00+03:00</news:publication_date>
-      <news:title>Bulancak Belediye Başkanı Sıbıç yurttaşların taleplerini dinledi</news:title>
+      <news:publication_date>2026-09-12T15:57:00+03:00</news:publication_date>
+      <news:title>Çinli telefon devi Türkiye&#x27;de üretim yapacak: Firma belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -3599,6 +4094,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/gundem/2026/09/12/kirklarelinde-ambulans-kazasi-3u-saglik-personeli-5-kisi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:53:22+03:00</news:publication_date>
+      <news:title>Kırklareli’nde ambulans kazası: 3’ü sağlık personeli 5 kişi yaralandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/kirklarelinde-ambulans-kazasi-3u-saglik-personeli-5-kisi.html</loc>
     <news:news>
       <news:publication>
@@ -3610,14 +4116,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/vincent-aboubakar-ritmimi-bulmaya-basladim.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/12/sogutma-calismalarinin-surdugu-ormanlik-alanda-yeniden-yangi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:51:56+03:00</news:publication_date>
-      <news:title>Vincent Aboubakar: Ritmimi bulmaya başladım!</news:title>
+      <news:publication_date>2026-09-12T15:50:00+03:00</news:publication_date>
+      <news:title>Soğutma çalışmalarının sürdüğü ormanlık alanda yeniden yangın</news:title>
     </news:news>
   </url>
   <url>
@@ -3643,35 +4149,13 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/enflasyon-ve-istihdam-beklentiyi-asti-fedden-sahin-adim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:47:00+03:00</news:publication_date>
-      <news:title>Enflasyon ve istihdam beklentiyi aştı: Fed&#x27;den &#x27;şahin&#x27; adım gelebilir</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/turkiye-basketbol-1-ligi-final-spor-ilab-basketbol-maci-c.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:45:00+03:00</news:publication_date>
-      <news:title>Türkiye Basketbol 1. Ligi Final Spor - iLab Basketbol Maçı CANLI İzle!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-fenerbahcede-kriz-cozuldu-ismail-kartal-antre.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:44:52+03:00</news:publication_date>
+      <news:publication_date>2026-09-12T15:44:00+03:00</news:publication_date>
       <news:title>Son Dakika | Fenerbahçe&#x27;de kriz çözüldü: İsmail Kartal antrenmana çıktı</news:title>
     </news:news>
   </url>
@@ -3709,17 +4193,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/duzce-cam-duzcespor-beykoz-anadolu-spor-maci-hangi-kanalda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:39:00+03:00</news:publication_date>
-      <news:title>Düzce Cam Düzcespor-Beykoz Anadolu Spor maçı hangi kanalda? Canlı izle</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/12/yargitaydan-milyonlara-emsal-karar-hafta-tatilindeki-75-s.html</loc>
     <news:news>
       <news:publication>
@@ -3728,17 +4201,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T15:37:28+03:00</news:publication_date>
       <news:title>Yargıtay&#x27;dan milyonlara emsal karar: Hafta tatilindeki 7,5 saatlik çalışmaya çift ödeme yapılmayacak</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/izmir haber /2026/09/12/izmirde-ucretsiz-otopark-hakki-yeniden-gundemde.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:36:00+03:00</news:publication_date>
-      <news:title>İzmir’de ücretsiz otopark hakkı yeniden gündemde</news:title>
     </news:news>
   </url>
   <url>
@@ -3775,6 +4237,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/12/gorevine-devam-edecegi-aciklanmisti-fenerbahceden-ismail-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:33:00+03:00</news:publication_date>
+      <news:title>Görevine devam edeceği açıklanmıştı: Fenerbahçe&#x27;den İsmail Kartal paylaşımı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son dakika/2026/09/12/gorevine-devam-edecegi-aciklanmisti-fenerbahceden-ismail-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:33:00+03:00</news:publication_date>
+      <news:title>Görevine devam edeceği açıklanmıştı: Fenerbahçe&#x27;den İsmail Kartal paylaşımı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/bitcoin/2026/09/12/bloomberg-analisti-bitcoindeki-dusus-oncu-gosterge-olabil.html</loc>
     <news:news>
       <news:publication>
@@ -3786,28 +4270,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/12/bitcoin-icin-kritik-karisim-enflasyon-ve-tahvil-hamlesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:31:48+03:00</news:publication_date>
-      <news:title>Bitcoin İçin Kritik Karışım: Enflasyon Ve Tahvil Hamlesi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/kasapoglundan-12-eylul-mesaji.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:31:20+03:00</news:publication_date>
-      <news:title>Kasapoğlu’ndan ‘12 Eylül’ mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/dunya/2026/09/12/antalyada-ambalaj-deposunda-yangin-cikti.html</loc>
     <news:news>
       <news:publication>
@@ -3816,17 +4278,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T15:31:00+03:00</news:publication_date>
       <news:title>Antalya&#x27;da ambalaj deposunda yangın çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/afsin-spordan-is-insani-enes-cicekciye-tesekkur-ziyareti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:31:00+03:00</news:publication_date>
-      <news:title>Afşin Spor’dan İş İnsanı Enes Çiçekci’ye Teşekkür Ziyareti</news:title>
     </news:news>
   </url>
   <url>
@@ -3849,6 +4300,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T15:28:00+03:00</news:publication_date>
       <news:title>Taçoy, Ekonomi ve Enerji Bakanlığını devraldı: Elimizi taşın altına koyabilecek cesareti gösterebilmek önemlidir</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/benficada-ayrilik-brumanin-yeni-takimi-belli-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:26:00+03:00</news:publication_date>
+      <news:title>Benfica&#x27;da ayrılık: Bruma&#x27;nın yeni takımı belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -3940,14 +4402,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/fenerbahcede-beklenen-kare-ismail-kartal-dondu.html</loc>
+    <loc>https://nearadin.net/son dakika/2026/09/12/pep-guardiolanin-menajerinden-trabzonspor-iddialarina-yanit.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:21:00+03:00</news:publication_date>
-      <news:title>Fenerbahçe&#x27;de beklenen kare! İsmail Kartal döndü</news:title>
+      <news:publication_date>2026-09-12T15:22:00+03:00</news:publication_date>
+      <news:title>Pep Guardiola&#x27;nın menajerinden Trabzonspor iddialarına yanıt</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/12/rusya-arktikte-denizaltinda-yeni-bir-teknoloji-mi-test-edi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:21:54+03:00</news:publication_date>
+      <news:title>Rusya, Arktik&#x27;te Denizaltında Yeni Bir Teknoloji mi Test Ediyor?</news:title>
     </news:news>
   </url>
   <url>
@@ -3984,25 +4457,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/dunya-ekonomisi-bu-kadar-soka-dayanabilir-mi.html</loc>
+    <loc>https://nearadin.net/izmir haber /2026/09/12/focada-104uncu-yil-coskusu-yelkenler-ataturk-icin-acildi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:18:29+03:00</news:publication_date>
-      <news:title>Dünya ekonomisi bu kadar şoka dayanabilir mi?</news:title>
+      <news:publication_date>2026-09-12T15:19:00+03:00</news:publication_date>
+      <news:title>Foça’da 104’üncü yıl coşkusu: Yelkenler Atatürk için açıldı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/ezgi-apartmani-kararina-adalet-bakanligi-onunde-tepki-devam.html</loc>
+    <loc>https://nearadin.net/son dakika/2026/09/12/ve-istifadan-vazgecen-ismail-kartaldan-ilk-fotograflar-geld.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:18:00+03:00</news:publication_date>
-      <news:title>Ezgi Apartmanı kararına Adalet Bakanlığı önünde tepki devam ediyor</news:title>
+      <news:publication_date>2026-09-12T15:18:02+03:00</news:publication_date>
+      <news:title>Ve istifadan vazgeçen İsmail Kartal&#x27;dan ilk fotoğraflar geldi</news:title>
     </news:news>
   </url>
   <url>
@@ -4050,29 +4523,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-ve-istifadan-vazgecen-ismail-kartaldan-ilk-fot.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:15:42+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Ve istifadan vazgeçen İsmail Kartal&#x27;dan ilk fotoğraf geldi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/12/kocaelispor-maci-oncesi-galatasarayda-4-eksik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:15:00+03:00</news:publication_date>
-      <news:title>Kocaelispor maçı öncesi Galatasaray&#x27;da 4 eksik</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/kocaelispor-maci-oncesi-galatasarayda-4-eksik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -4116,28 +4567,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/canli-anlatim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:12:27+03:00</news:publication_date>
-      <news:title>Canlı anlatım</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/12/rusya-arktikte-denizaltinda-yeni-bir-teknoloji-mi-test-edi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:12:10+03:00</news:publication_date>
-      <news:title>Rusya, Arktik&#x27;te Denizaltında Yeni Bir Teknoloji mi Test Ediyor?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/12/ekonomi-yonetiminden-12-eylul-mesaji.html</loc>
     <news:news>
       <news:publication>
@@ -4168,6 +4597,17 @@
       </news:publication>
       <news:publication_date>2026-09-12T15:09:06+03:00</news:publication_date>
       <news:title>Putin&#x27;den &quot;BM&#x27;nin merkezi rolünün korunması ve güçlendirilmesi gerektiği&quot; vurgusu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/napolide-noa-langa-af-cikti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:09:00+03:00</news:publication_date>
+      <news:title>Napoli&#x27;de Noa Lang&#x27;a af çıktı</news:title>
     </news:news>
   </url>
   <url>
@@ -4226,17 +4666,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/saglik-durumlari-agirlasan-2-cocuk-hava-ambulansiyla-ankara.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T15:06:46+03:00</news:publication_date>
-      <news:title>Sağlık durumları ağırlaşan 2 çocuk, hava ambulansıyla Ankara’ya sevk edildi - Finans haberlerinin doğru adresi - Mynet Finans Haber</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/12/dis-protez-teknisyeni-ahmet-tuncay-teknoloji-insan-gucunu-m.html</loc>
     <news:news>
       <news:publication>
@@ -4270,14 +4699,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasinda-9-kisi-adliyeye.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/12/dogalgaz-borusundaki-sizinti-nedeniyle-6-katli-apartman-tahl.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:04:56+03:00</news:publication_date>
-      <news:title>Son Dakika | Kaşif Kozinoğlu soruşturmasında 9 kişi adliyeye sevk edildi</news:title>
+      <news:publication_date>2026-09-12T15:04:00+03:00</news:publication_date>
+      <news:title>Doğalgaz borusundaki sızıntı nedeniyle 6 katlı apartman tahliye edildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/12/abd-acikta-tek-erkeklerde-zverev-shelton-finali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T15:04:00+03:00</news:publication_date>
+      <news:title>ABD Açık&#x27;ta tek erkeklerde Zverev - Shelton finali</news:title>
     </news:news>
   </url>
   <url>
@@ -4325,14 +4765,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/izmir haber /2026/09/12/izmirde-kacak-tutun-operasyonu-90-bin-makaron-ele-gecirild.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/12/turk-telekomdan-okula-donus-alisverisinde-bi-dunya-firsat.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T15:02:00+03:00</news:publication_date>
-      <news:title>İzmir&#x27;de kaçak tütün operasyonu: 90 bin makaron ele geçirildi!</news:title>
+      <news:publication_date>2026-09-12T15:01:08+03:00</news:publication_date>
+      <news:title>Türk Telekom&#x27;dan Okula Dönüş Alışverişinde Bi&#x27; Dünya Fırsat</news:title>
     </news:news>
   </url>
   <url>
@@ -4358,6 +4798,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/turizm/2026/09/12/ator-turkiyede-rus-turistlerin-toplu-zehirlendigini-yalanl.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:59:41+03:00</news:publication_date>
+      <news:title>ATOR, Türkiye’de Rus turistlerin toplu zehirlendiğini yalanladı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/12/adiyamanda-otomobil-bariyerlere-carpti-2-kisi-yaralandi.html</loc>
     <news:news>
       <news:publication>
@@ -4369,25 +4820,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/turk-telekomdan-okula-donus-alisverisinde-bi-dunya-firsat.html</loc>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/motorine-sali-gunu-tarihi-zam-geliyor.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T14:57:43+03:00</news:publication_date>
-      <news:title>Türk Telekom&#x27;dan Okula Dönüş Alışverişinde Bi&#x27; Dünya Fırsat</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/galatasaraya-transferde-jose-mourinho-engeli-camavinga-ger.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:57:00+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;a transferde Jose Mourinho engeli! Camavinga gerçeği ortaya çıktı - Galatasaray - Spor Haberleri</news:title>
+      <news:publication_date>2026-09-12T14:57:32+03:00</news:publication_date>
+      <news:title>Motorine salı günü tarihi zam geliyor</news:title>
     </news:news>
   </url>
   <url>
@@ -4402,14 +4842,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/turkiye-yaban-mersininde-uretimi-artirma-arayisinda.html</loc>
+    <loc>https://nearadin.net/saglik/2026/09/12/saglik-durumlari-agirlasan-2-cocuk-hava-ambulansiyla-ankara.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T14:56:15+03:00</news:publication_date>
-      <news:title>Türkiye yaban mersininde üretimi artırma arayışında</news:title>
+      <news:publication_date>2026-09-12T14:55:53+03:00</news:publication_date>
+      <news:title>Sağlık durumları ağırlaşan 2 çocuk, hava ambulansıyla Ankara’ya sevk edildi İhlas Haber Ajansı</news:title>
     </news:news>
   </url>
   <url>
@@ -4501,17 +4941,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/sakaryali-oyuncu-aydin-ekibine-transfer-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:48:00+03:00</news:publication_date>
-      <news:title>Sakaryalı oyuncu Aydın ekibine transfer oldu!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbulda-10-bin-liradan-baslayan-kiralik-konut-firsati.html</loc>
     <news:news>
       <news:publication>
@@ -4523,14 +4952,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/en-nesyri-suudi-arabistanda-gundem-oldu.html</loc>
+    <loc>https://nearadin.net/otomobil/2026/09/12/mini-cooper-paul-smith-edition-otomobilden-fazlasi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-12T14:46:02+03:00</news:publication_date>
-      <news:title>En-Nesyri, Suudi Arabistan’da gündem oldu</news:title>
+      <news:publication_date>2026-09-12T14:46:48+03:00</news:publication_date>
+      <news:title>MINI Cooper Paul Smith Edition: Otomobilden Fazlası</news:title>
     </news:news>
   </url>
   <url>
@@ -4611,6 +5040,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/otomobil/2026/09/12/siirtte-iki-otomobil-carpisti-4-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:40:00+03:00</news:publication_date>
+      <news:title>Siirt&#x27;te iki otomobil çarpıştı: 4 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/hisseler/2026/09/12/wall-streetde-tokenlastirilmis-hisse-yarisi-beklenmedik-z.html</loc>
     <news:news>
       <news:publication>
@@ -4619,6 +5059,28 @@
       </news:publication>
       <news:publication_date>2026-09-12T14:38:38+03:00</news:publication_date>
       <news:title>Wall Street’de Token’laştırılmış Hisse Yarışı: Beklenmedik Zorluklar Ortada</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/fransanin-borc-faturasi-yuzde-25-sicriyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:38:00+03:00</news:publication_date>
+      <news:title>Fransa&#x27;nın borç faturası yüzde 25 sıçrıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/12/galatasaray-fenerbahce-sampiyonlar-ligi-maci-ne-zaman-saat.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:38:00+03:00</news:publication_date>
+      <news:title>Galatasaray, Fenerbahçe Şampiyonlar Ligi maçı ne zaman, saat kaçta, hangi kanalda?</news:title>
     </news:news>
   </url>
   <url>
@@ -4688,6 +5150,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/12/fed-icin-kritik-faiz-tahmini-citi-25-baz-puanlik-artis-bekl.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:30:00+03:00</news:publication_date>
+      <news:title>Fed için kritik faiz tahmini: Citi 25 baz puanlık artış bekliyor</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/12/turkiye-100-bin-teknoloji-girisimi-ve-100-milyar-dolarlik-d.html</loc>
     <news:news>
       <news:publication>
@@ -4743,6 +5216,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/turizm/2026/09/12/bakan-gurlek-16-ilde-turizm-guvenligi-icin-323-supheli-hakk.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:29:00+03:00</news:publication_date>
+      <news:title>Bakan Gürlek: 16 ilde turizm güvenliği için 323 şüpheli hakkında işlem yapıldı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/dunya/2026/09/12/nepaldeki-selde-can-kaybi-1386ya-yukseldi.html</loc>
     <news:news>
       <news:publication>
@@ -4762,17 +5246,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T14:28:00+03:00</news:publication_date>
       <news:title>Aydın’da ekipleri şaşırtan kaza! Otomobil refüje uçtu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/kasif-kozinoglu-sorusturmasinda-yeni-gelisme-supheliler-adl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:28:00+03:00</news:publication_date>
-      <news:title>Kaşif Kozinoğlu soruşturmasında yeni gelişme: Şüpheliler adliyeye sevk edildi</news:title>
     </news:news>
   </url>
   <url>
@@ -4820,17 +5293,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/12/genclik-ve-spor-bakani-bak-kackar-by-utmbnin-startini-verd.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:24:22+03:00</news:publication_date>
-      <news:title>Gençlik ve Spor Bakanı Bak, Kaçkar by UTMB&#x27;nin startını verdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/otomobil/2026/09/12/bursada-uretilen-otomobil-devine-surpriz-talip-daha-yollar.html</loc>
     <news:news>
       <news:publication>
@@ -4864,17 +5326,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/elektrikli-countrymanin-menzili-artti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:22:36+03:00</news:publication_date>
-      <news:title>Elektrikli Countryman&#x27;in menzili arttı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/12/bakan-memisoglu-onculugunde-rizede-saglik-calistayi.html</loc>
     <news:news>
       <news:publication>
@@ -4894,17 +5345,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T14:20:00+03:00</news:publication_date>
       <news:title>TCG Savarona eğitim gemisi İstanbul&#x27;da</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/son-dakika-sarkici-neve-ne-oldu-nev-kimdir-hastaneden-sa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:19:25+03:00</news:publication_date>
-      <news:title>SON DAKİKA: Şarkıcı Nev&#x27;e ne oldu? Nev kimdir? Hastaneden sağlık durumuna ilişkin açıklama geldi</news:title>
     </news:news>
   </url>
   <url>
@@ -5029,6 +5469,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/12/vietnam-spor-hekimligi-derneginin-ho-chi-minh-subesinin-ku.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-12T14:13:59+03:00</news:publication_date>
+      <news:title>Vietnam Spor Hekimliği Derneği&#x27;nin Ho Chi Minh Şubesi&#x27;nin Kurulması</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/12/kasif-kozinoglu-sorusturmasinda-9-supheli-adliyeye-sevk-edil.html</loc>
     <news:news>
       <news:publication>
@@ -5048,457 +5499,6 @@
       </news:publication>
       <news:publication_date>2026-09-12T14:12:55+03:00</news:publication_date>
       <news:title>Fethiye Büyük Samanlı Koyu&#x27;nda yoğun sezon: Öğrenciler turizmi sahada öğreniyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/si-yedi-yil-aradan-sonda-hindistanda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:12:26+03:00</news:publication_date>
-      <news:title>Şi yedi yıl aradan sonda Hindistan&#x27;da</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/si-yedi-yil-aradan-sonda-hindistanda.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:12:26+03:00</news:publication_date>
-      <news:title>Şi yedi yıl aradan sonda Hindistan&#x27;da</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/otomobil-bariyerlere-carpti-2-yarali-ihlas-haber-ajansi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:12:12+03:00</news:publication_date>
-      <news:title>Otomobil bariyerlere çarptı: 2 yaralı İhlas Haber Ajansı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/en-nesyri-suudi-arabistanda-sezona-firtina-gibi-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:12:00+03:00</news:publication_date>
-      <news:title>En Nesyri, Suudi Arabistan&#x27;da sezona fırtına gibi başladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/dalis-sampiyonu-nguyen-thanh-loc-dunya-sampiyonasinda-kaza.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:11:58+03:00</news:publication_date>
-      <news:title>Dalış şampiyonu Nguyen Thanh Loc, Dünya Şampiyonası&#x27;nda kazandığı bronz madalya nedeniyle ödülünü alıyor.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/emirhan-topcudan-her-sezona-1-gol.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:11:40+03:00</news:publication_date>
-      <news:title>Emirhan Topçu&#x27;dan her sezona 1 gol</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/efeler-belediye-baskani-anil-yetiskin-cocuklarin-zihinsel-v.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:11:06+03:00</news:publication_date>
-      <news:title>Efeler Belediye Başkanı Anıl Yetişkin, çocukların zihinsel ve fiziksel gelişimini desteklemek amacıyla spor yatırımlarına yenisini ekledi. Başkan Anıl Yetişkin’in öncülüğünde hayata geçirilen Efeler Belediyesi Spor Akademisi bünyesinde çocuklara yönelik Futbo</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/baskan-guc-mesela-artik-tek-basina-ekonomi-meselesi-degil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:10:36+03:00</news:publication_date>
-      <news:title>Başkan Güç: &#x27;&#x27;Mesela artık tek başına ekonomi meselesi değil&#x27;&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/dugun-goruntuleri-sosyal-medyada-gundem-olmustu-altinlari-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:10:00+03:00</news:publication_date>
-      <news:title>Düğün görüntüleri sosyal medyada gündem olmuştu! Altınları sakladıkları yer ortaya çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/istanbul-kitapcisindan-okula-donuse-ozel-indirim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:10:00+03:00</news:publication_date>
-      <news:title>İstanbul Kitapçısı’ndan &quot;Okula Dönüş&quot;e özel indirim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/muglada-cocuklar-satrancta-il-birinciligi-icin-yaristi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:09:44+03:00</news:publication_date>
-      <news:title>Muğla’da çocuklar satrançta il birinciliği için yarıştı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/gencler-balkan-kurek-sampiyonasinda-fenerbahceli-milllerim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:08:54+03:00</news:publication_date>
-      <news:title>Gençler Balkan Kürek Şampiyonası’nda Fenerbahçeli millîlerimizden 3 madalya</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/kozanda-orman-yangini.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:08:42+03:00</news:publication_date>
-      <news:title>Kozan&#x27;da orman yangını</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/milyonlari-ilgilendiren-emsal-haftalik-tatil-karari.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:08:00+03:00</news:publication_date>
-      <news:title>Milyonları ilgilendiren emsal haftalık tatil kararı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/12/mardin-1969-spor-tarihinde-ilki-basardi-igdir-fk-maci-onces.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:07:45+03:00</news:publication_date>
-      <news:title>Mardin 1969 Spor tarihinde ilki başardı! Iğdır FK maçı öncesi ortaya çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/12/turizm-bolgelerinin-guvenligine-yonelik-operasyonlarda-106-k.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:06:00+03:00</news:publication_date>
-      <news:title>Turizm bölgelerinin güvenliğine yönelik operasyonlarda 106 kişi tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/turizm-bolgelerinin-guvenligine-yonelik-operasyonlarda-106-k.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:06:00+03:00</news:publication_date>
-      <news:title>Turizm bölgelerinin güvenliğine yönelik operasyonlarda 106 kişi tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/babacandan-ekonomi-uyarisi-faizleri-yukseltip-arkadan-para.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:05:44+03:00</news:publication_date>
-      <news:title>Babacan&#x27;dan ekonomi uyarısı: Faizleri yükseltip arkadan para basıyorlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/12/kultur-ve-turizm-bakanligi-2027-muze-giris-ucretlerini-acikl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:04:06+03:00</news:publication_date>
-      <news:title>Kültür ve Turizm Bakanlığı 2027 müze giriş ücretlerini açıkladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/eski-mit-gorevlisi-kasif-kozinoglunun-fethi-kabir-islemi-ta.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:03:00+03:00</news:publication_date>
-      <news:title>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun fethi kabir işlemi tamamlandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/izmir haber /2026/09/12/izmir-sofralarinin-vazgecilmezi-bu-lezzeti-bilen-bir-tabak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:01:58+03:00</news:publication_date>
-      <news:title>İzmir sofralarının vazgeçilmezi! Bu lezzeti bilen bir tabak daha istiyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/12/haftalik-kripto-ozeti-one-cikan-6-gelisme.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T14:00:17+03:00</news:publication_date>
-      <news:title>Haftalık kripto özeti: Öne çıkan 6 gelişme</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/vanli-kara-haydar-ile-cagla-ozun-dugun-goruntuleri-gundem.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:59:00+03:00</news:publication_date>
-      <news:title>&#x27;Vanlı Kara Haydar&#x27; ile Çağla Öz&#x27;ün düğün görüntüleri gündem olmuştu! Altınlar odunlukta bulundu - Gündem Haberleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/abd-temsilciler-meclisinde-yapay-zeka-mesaisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:58:25+03:00</news:publication_date>
-      <news:title>ABD Temsilciler Meclisi&#x27;nde yapay zeka mesaisi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/12/agustos-2026da-vietnamda-en-az-satilan-10-otomobil-toyota.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:57:42+03:00</news:publication_date>
-      <news:title>Ağustos 2026&#x27;da Vietnam&#x27;da en az satılan 10 otomobil: Toyota&#x27;nın listede 4 modeli bulunuyor.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/putinden-brics-zirvesinde-cok-kutuplu-dunya-duzeni-vurgusu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:57:15+03:00</news:publication_date>
-      <news:title>Putin’den BRICS Zirvesi’nde çok kutuplu dünya düzeni vurgusu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/bakan-bak-kackarlar-sporculara-essiz-bir-doga-deneyimi-sun.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:57:00+03:00</news:publication_date>
-      <news:title>Bakan Bak: &quot;Kaçkarlar sporculara eşsiz bir doğa deneyimi sunuyor&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/palamut-bedavadan-biraz-daha-pahali-tanesi-50-tl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:56:00+03:00</news:publication_date>
-      <news:title>Palamut bedavadan biraz daha pahalı: Tanesi 50 TL</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/12/huda-pardan-saglik-bakanligina-hasta-mahremiyeti-cagrisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:55:00+03:00</news:publication_date>
-      <news:title>HÜDA PAR’dan Sağlık Bakanlığı’na “hasta mahremiyeti” çağrısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasi-gozaltina-alinan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:54:54+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Kaşif Kozinoğlu soruşturması! Gözaltına alınan 9 şüpheli adliyeye sevk edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/son-dakika-kasif-kozinoglu-sorusturmasi-gozaltina-alinan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:54:54+03:00</news:publication_date>
-      <news:title>SON DAKİKA... Kaşif Kozinoğlu soruşturması! Gözaltına alınan 9 şüpheli adliyeye sevk edildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/12/adalet-bakani-akin-gurlek-turizm-bolgelerimizde-huzur-ve-g.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:54:17+03:00</news:publication_date>
-      <news:title>Adalet Bakanı Akın Gürlek: “Turizm bölgelerimizde huzur ve güvenliğe gölge düşürecek hiçbir eyleme müsamaha göstermiyoruz”</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son dakika/2026/09/12/ak-parti-genel-sekreteri-inandan-12-eylul-mesaji.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:53:00+03:00</news:publication_date>
-      <news:title>AK Parti Genel Sekreteri İnan&#x27;dan 12 Eylül mesajı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/okullar-acilmadan-uyari-geldi-kirtasiye-alisverisinde-bunu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:51:11+03:00</news:publication_date>
-      <news:title>Okullar açılmadan uyarı geldi! Kırtasiye alışverişinde bunu mutlaka kontrol edin</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/12/revolut-sahte-hukumet-talebine-kaninca-bitcoin-aktivitesi-v.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:50:02+03:00</news:publication_date>
-      <news:title>Revolut, sahte hükümet talebine kanınca Bitcoin aktivitesi ve pasaportlar açığa çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/komsuda-binlerce-calisanin-maasi-artacak-2027de-yuzde-10.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:50:00+03:00</news:publication_date>
-      <news:title>Komşu&#x27;da binlerce çalışanın maaşı artacak: 2027’de yüzde 10’luk kıdem zammı geliyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/kanada-1-trilyon-dolarlik-sermaye-avina-cikti-trump-gerilimi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:50:00+03:00</news:publication_date>
-      <news:title>Kanada 1 trilyon dolarlık sermaye avına çıktı Trump gerilimini fırsata çevirecek</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/12/bolu-gundem-gazetesi-sahibi-huseyin-aykan-tutuklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:47:05+03:00</news:publication_date>
-      <news:title>Bolu Gündem gazetesi sahibi Hüseyin Aykan tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul haber /2026/09/12/ibb-baskan-vekili-nuri-aslan-ureticimize-uzattigimiz-el-y.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:46:42+03:00</news:publication_date>
-      <news:title>İBB Başkan Vekili Nuri Aslan: “Üreticimize uzattığımız el, yarın İstanbul&#x27;da gıda güvenliğidir&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/12/rusyada-minibus-otomobil-ve-kamyon-carpisti-13-olu-8-yar.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:45:57+03:00</news:publication_date>
-      <news:title>Rusya&#x27;da minibüs, otomobil ve kamyon çarpıştı: 13 ölü, 8 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/12/motorine-6-lira-62-kurus-zam-bekleniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12T13:45:20+03:00</news:publication_date>
-      <news:title>Motorine 6 lira 62 kuruş zam bekleniyor</news:title>
     </news:news>
   </url>
 </urlset>
