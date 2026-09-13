@@ -348,6 +348,7 @@ def fetch_and_generate():
         "yerel-haber ": {"name": "Yerel Haber", "url": "https://news.google.com/rss/search?q=yerel+haber&hl=tr&gl=TR&ceid=TR:tr"},
         "kar-tatili": {"name": "Kar Tatili", "url": "https://news.google.com/rss/search?q=kar+tatili&hl=tr&gl=TR&ceid=TR:tr"},
         "zam": {"name": "Zam", "url": "https://news.google.com/rss/search?q=zam&hl=tr&gl=TR&ceid=TR:tr"},
+        "canli-maclar": {"name": "Canlı Maçlar", "url": "https://news.google.com/rss/search?q=canl%C4%B1+ma%C3%A7+izle&hl=tr&gl=TR&ceid=TR:tr"},
     }
 
     
