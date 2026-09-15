@@ -331,6 +331,7 @@ def fetch_and_generate():
         "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/search?q=d%C3%BCnya&hl=tr&gl=TR&ceid=TR:tr"},
         "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/search?q=ekonomi&hl=tr&gl=TR&ceid=TR:tr"},
         "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/search?q=teknoloji&hl=tr&gl=TR&ceid=TR:tr"},
+        "sanayi": {"name": "Sanayi", "url": "https://news.google.com/rss/search?q=sanayi&hl=tr&gl=TR&ceid=TR:tr"},
         "spor": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor&hl=tr&gl=TR&ceid=TR:tr"},
         "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k&hl=tr&gl=TR&ceid=TR:tr"},
         "deprem": {"name": "Deprem", "url": "https://news.google.com/rss/search?q=deprem&hl=tr&gl=TR&ceid=TR:tr"},
