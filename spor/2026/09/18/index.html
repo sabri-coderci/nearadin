@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor - 18.09.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Spor kategorisinde 18.09.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .badge:hover { background: #ffd0cc; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç izle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Spor - 18.09.2026 (30 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">01:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/vincenzo-italiano-herkes-yuksek-seviyede-oynayarak-mukemmel.html">Vincenzo Italiano: Herkes yüksek seviyede oynayarak mükemmel performanslar ortaya koydu</a>
+                </h2>
+                <p class="news-summary">Vincenzo Italiano: Herkes yüksek seviyede oynayarak mükemmel performanslar ortaya koydu  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/vincenzo-italiano-herkes-yuksek-seviyede-oynayarak-mukemmel.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">01:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/ncl-beach-volley-izmirde-basladi.html">NCL Beach Volley İzmir’de Başladı</a>
+                </h2>
+                <p class="news-summary">NCL Beach Volley İzmir’de Başladı  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/ncl-beach-volley-izmirde-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">01:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/sporun-emektarlarina-vefa-odulleri-22-eylulde.html">Sporun Emektarlarına Vefa Ödülleri 22 Eylül’de</a>
+                </h2>
+                <p class="news-summary">Sporun Emektarlarına Vefa Ödülleri 22 Eylül’de  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/sporun-emektarlarina-vefa-odulleri-22-eylulde.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">01:26</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/ernest-poku-takim-icinde-her-zaman-yuzde-100umu-vermeye-ha.html">Ernest Poku: Takım içinde her zaman yüzde 100'ümü vermeye hazırım</a>
+                </h2>
+                <p class="news-summary">Ernest Poku: Takım içinde her zaman yüzde 100'ümü vermeye hazırım  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/ernest-poku-takim-icinde-her-zaman-yuzde-100umu-vermeye-ha.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">01:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/italiano-cama-ufleyen-zanaatkr.html">İtaliano; Cama Üfleyen Zanaatkâr</a>
+                </h2>
+                <p class="news-summary">İtaliano; Cama Üfleyen Zanaatkâr  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/italiano-cama-ufleyen-zanaatkr.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">01:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/orkun-kokcu-cok-iyi-basladik.html">Orkun Kökçü: Çok iyi başladık</a>
+                </h2>
+                <p class="news-summary">Orkun Kökçü: Çok iyi başladık  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/orkun-kokcu-cok-iyi-basladik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">01:12</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/juventus-5-0-nec-nijmegen-uefa-avrupa-ligi-zeki-celik.html">Juventus 5-0 NEC Nijmegen (UEFA Avrupa Ligi) Zeki Çelik...</a>
+                </h2>
+                <p class="news-summary">Juventus 5-0 NEC Nijmegen (UEFA Avrupa Ligi) Zeki Çelik...  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/juventus-5-0-nec-nijmegen-uefa-avrupa-ligi-zeki-celik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">01:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/marsilya-galibiyetinin-ardindan-serdal-adalidan-taraftara-m.html">Marsilya galibiyetinin ardından Serdal Adalı'dan taraftara mesaj</a>
+                </h2>
+                <p class="news-summary">Marsilya galibiyetinin ardından Serdal Adalı'dan taraftara mesaj  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/marsilya-galibiyetinin-ardindan-serdal-adalidan-taraftara-m.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Sözcü Gazetesi</span>
+                    <span class="time">01:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/spor-sahasinin-altindan-2-bin-yillik-hazine-cikti.html">Spor sahasının altından 2 bin yıllık hazine çıktı</a>
+                </h2>
+                <p class="news-summary">Spor sahasının altından 2 bin yıllık hazine çıktı  Sözcü Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/spor-sahasinin-altindan-2-bin-yillik-hazine-cikti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">www.canakkalekalem.com</span>
+                    <span class="time">00:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/genclik-ve-spor-bakanligi-9-bilisim-personeli-alacak-maas-d.html">Gençlik ve Spor Bakanlığı 9 bilişim personeli alacak! Maaş detayı dikkat çekici</a>
+                </h2>
+                <p class="news-summary">Gençlik ve Spor Bakanlığı 9 bilişim personeli alacak! Maaş detayı dikkat çekici  www.canakkalekalem.com</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/genclik-ve-spor-bakanligi-9-bilisim-personeli-alacak-maas-d.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">00:50</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/kartal-avrupa-liginde-dort-dortluk.html">KARTAL AVRUPA LİGİ’NDE DÖRT DÖRTLÜK</a>
+                </h2>
+                <p class="news-summary">KARTAL AVRUPA LİGİ’NDE DÖRT DÖRTLÜK  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/kartal-avrupa-liginde-dort-dortluk.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">00:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktasta-vincenzo-italiano-oyuncularim-harika-is-cikardi.html">Beşiktaş'ta Vincenzo Italiano: Oyuncularım harika iş çıkardılar - Beşiktaş - Spor Haberleri</a>
+                </h2>
+                <p class="news-summary">Beşiktaş'ta Vincenzo Italiano: Oyuncularım harika iş çıkardılar - Beşiktaş - Spor Haberleri  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktasta-vincenzo-italiano-oyuncularim-harika-is-cikardi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">00:44</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/vaclav-cernyden-sakatlik-sorusuna-cevap.html">Vaclav Cerny'den sakatlık sorusuna cevap</a>
+                </h2>
+                <p class="news-summary">Vaclav Cerny'den sakatlık sorusuna cevap  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/vaclav-cernyden-sakatlik-sorusuna-cevap.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">00:44</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/son-dakika-spor-haberi-vincenzo-italiano-bu-guzel-sovu-go.html">Son Dakika Spor Haberi | Vincenzo Italiano: Bu güzel şovu gösterdiğimiz için çok mutluyuz</a>
+                </h2>
+                <p class="news-summary">Son Dakika Spor Haberi | Vincenzo Italiano: Bu güzel şovu gösterdiğimiz için çok mutluyuz  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/son-dakika-spor-haberi-vincenzo-italiano-bu-guzel-sovu-go.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">00:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/marsilya-macina-devam-edememisti-vaclav-cernyden-sakatlik.html">Marsilya maçına devam edememişti: Vaclav Cerny'den sakatlık açıklaması</a>
+                </h2>
+                <p class="news-summary">Marsilya maçına devam edememişti: Vaclav Cerny'den sakatlık açıklaması  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/marsilya-macina-devam-edememisti-vaclav-cernyden-sakatlik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">00:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktasta-ilhan-fakilidan-takim-arkadaslarina-vurgu-gur.html">Beşiktaş'ta İlhan Fakılı'dan takım arkadaşlarına vurgu! 'Gurur duyuyorum' - Beşiktaş - Spor Haberleri</a>
+                </h2>
+                <p class="news-summary">Beşiktaş'ta İlhan Fakılı'dan takım arkadaşlarına vurgu! 'Gurur duyuyorum' - Beşiktaş - Spor Haberleri  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktasta-ilhan-fakilidan-takim-arkadaslarina-vurgu-gur.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">00:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktasta-murillo-galibiyetten-oturu-mutlu-camiaya-armag.html">Beşiktaş'ta Murillo galibiyetten ötürü mutlu! 'Camiaya armağan olsun' - Beşiktaş - Spor Haberleri</a>
+                </h2>
+                <p class="news-summary">Beşiktaş'ta Murillo galibiyetten ötürü mutlu! 'Camiaya armağan olsun' - Beşiktaş - Spor Haberleri  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktasta-murillo-galibiyetten-oturu-mutlu-camiaya-armag.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">00:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktasta-vaclav-cernyden-sakatlik-aciklamasi-besiktas.html">Beşiktaş'ta Vaclav Cerny'den sakatlık açıklaması - Beşiktaş - Spor Haberleri</a>
+                </h2>
+                <p class="news-summary">Beşiktaş'ta Vaclav Cerny'den sakatlık açıklaması - Beşiktaş - Spor Haberleri  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktasta-vaclav-cernyden-sakatlik-aciklamasi-besiktas.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">00:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktas-sahasinda-kayipsiz-devam-ediyor.html">Beşiktaş sahasında kayıpsız devam ediyor!</a>
+                </h2>
+                <p class="news-summary">Beşiktaş sahasında kayıpsız devam ediyor!  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktas-sahasinda-kayipsiz-devam-ediyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">00:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/trabzonspor-galatasaray-maci-kolakin.html">TRABZONSPOR-GALATASARAY MAÇI KOLAK’IN</a>
+                </h2>
+                <p class="news-summary">TRABZONSPOR-GALATASARAY MAÇI KOLAK’IN  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/trabzonspor-galatasaray-maci-kolakin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">00:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/amir-murillo-besiktas-camiasina-armagan-olsun.html">Amir Murillo: Beşiktaş camiasına armağan olsun</a>
+                </h2>
+                <p class="news-summary">Amir Murillo: Beşiktaş camiasına armağan olsun  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/amir-murillo-besiktas-camiasina-armagan-olsun.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">00:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktas-marsilyaya-dolmabahcede-yine-kaybetmedi.html">Beşiktaş, Marsilya’ya Dolmabahçe’de yine kaybetmedi!</a>
+                </h2>
+                <p class="news-summary">Beşiktaş, Marsilya’ya Dolmabahçe’de yine kaybetmedi!  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktas-marsilyaya-dolmabahcede-yine-kaybetmedi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">00:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/victor-osimhen-nwaiwu-iheanacho-ve-ndidiye-milli-davet.html">Victor Osimhen, Nwaiwu, Iheanacho ve Ndidi'ye milli davet!</a>
+                </h2>
+                <p class="news-summary">Victor Osimhen, Nwaiwu, Iheanacho ve Ndidi'ye milli davet!  Sabah</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/victor-osimhen-nwaiwu-iheanacho-ve-ndidiye-milli-davet.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Hürriyet</span>
+                    <span class="time">00:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/salih-ozcan-kulaklarim-hala-duymuyor.html">Salih Özcan: 'Kulaklarım hala duymuyor!'</a>
+                </h2>
+                <p class="news-summary">Salih Özcan: 'Kulaklarım hala duymuyor!'  Hürriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/salih-ozcan-kulaklarim-hala-duymuyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">türk spor ajansı</span>
+                    <span class="time">00:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/ispanya-super-kupa-finali-rams-parkta.html">İSPANYA SÜPER KUPA FİNALİ RAMS PARKTA</a>
+                </h2>
+                <p class="news-summary">İSPANYA SÜPER KUPA FİNALİ RAMS PARKTA  türk spor ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/ispanya-super-kupa-finali-rams-parkta.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">00:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/vincenzo-italianodan-besiktasta-16-yil-sonra-ilk.html">Vincenzo Italiano'dan Beşiktaş'ta 16 yıl sonra ilk</a>
+                </h2>
+                <p class="news-summary">Vincenzo Italiano'dan Beşiktaş'ta 16 yıl sonra ilk  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/vincenzo-italianodan-besiktasta-16-yil-sonra-ilk.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">sporx.com</span>
+                    <span class="time">00:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/cakan-spor.html">Çakan spor</a>
+                </h2>
+                <p class="news-summary">Çakan spor  sporx.com</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/cakan-spor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">00:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/zeki-celik-atti-juventus-farkli-kazandi.html">Zeki Çelik attı: Juventus farklı kazandı</a>
+                </h2>
+                <p class="news-summary">Zeki Çelik attı: Juventus farklı kazandı  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/zeki-celik-atti-juventus-farkli-kazandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">00:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/uefa-avrupa-liginde-gecenin-sonuclari-hoffenheimdan-surpr.html">UEFA Avrupa Ligi'nde gecenin sonuçları! Hoffenheim'dan sürpriz skor</a>
+                </h2>
+                <p class="news-summary">UEFA Avrupa Ligi'nde gecenin sonuçları! Hoffenheim'dan sürpriz skor  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/uefa-avrupa-liginde-gecenin-sonuclari-hoffenheimdan-surpr.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/spor/2026/09/18/" class="badge">Spor</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">00:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/spor/2026/09/18/besiktas-marsilya-4-1.html">Beşiktaş - Marsilya: 4-1</a>
+                </h2>
+                <p class="news-summary">Beşiktaş - Marsilya: 4-1  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/spor/2026/09/18/besiktas-marsilya-4-1.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
