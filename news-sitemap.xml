@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/17/yabanci-gecen-hafta-429-milyon-dolarlik-hisse-ve-tahvil-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:59:20+03:00</news:publication_date>
+      <news:title>Yabancı geçen hafta 429 milyon dolarlık hisse ve tahvil aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hisseler/2026/09/17/yabanci-gecen-hafta-429-milyon-dolarlik-hisse-ve-tahvil-aldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:59:20+03:00</news:publication_date>
+      <news:title>Yabancı geçen hafta 429 milyon dolarlık hisse ve tahvil aldı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/sanayi/2026/09/17/kap-oncosem-onkolojik-sistemler-sanayi-ve-ticaret-as.html</loc>
     <news:news>
       <news:publication>
@@ -266,14 +288,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/17/bddkdan-bankalarin-hisse-geri-alimlarina-sermaye-kolayligi.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/17/bddk-devreye-girdi-bankalarin-hisse-geri-aliminda-kritik-de.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-17T15:48:00+03:00</news:publication_date>
-      <news:title>BDDK’dan bankaların hisse geri alımlarına sermaye kolaylığı</news:title>
+      <news:title>BDDK devreye girdi: Bankaların hisse geri alımında kritik değişiklik</news:title>
     </news:news>
   </url>
   <url>
@@ -288,14 +310,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/hisseler/2026/09/17/bddkdan-bankalarin-hisse-geri-alimlarina-sermaye-kolayligi.html</loc>
+    <loc>https://nearadin.net/hisseler/2026/09/17/bddk-devreye-girdi-bankalarin-hisse-geri-aliminda-kritik-de.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-17T15:48:00+03:00</news:publication_date>
-      <news:title>BDDK’dan bankaların hisse geri alımlarına sermaye kolaylığı</news:title>
+      <news:title>BDDK devreye girdi: Bankaların hisse geri alımında kritik değişiklik</news:title>
     </news:news>
   </url>
   <url>
@@ -362,6 +384,17 @@
       </news:publication>
       <news:publication_date>2026-09-17T15:46:19+03:00</news:publication_date>
       <news:title>Batman Petrolspor-Bursaspor maçının hakemi gündem oldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/17/hisse-fonu-sahiplerinde-bekleme-suresi-2-3-ayi-bulabilir.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:46:16+03:00</news:publication_date>
+      <news:title>Hisse fonu sahiplerinde bekleme süresi 2-3 ayı bulabilir</news:title>
     </news:news>
   </url>
   <url>
@@ -868,6 +901,17 @@
       </news:publication>
       <news:publication_date>2026-09-17T15:31:00+03:00</news:publication_date>
       <news:title>Muğla’da Her 100 Kişiye 30 Motosiklet, 27 Otomobil Düşüyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hisseler/2026/09/17/borsa-istanbulda-likidite-soku-60tan-fazla-hisse-taban-ol.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:30:02+03:00</news:publication_date>
+      <news:title>Borsa İstanbul’da likidite şoku: 60’tan fazla hisse taban oldu haberi</news:title>
     </news:news>
   </url>
   <url>
@@ -1421,6 +1465,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/17/son-dakika-aksarayda-siddetli-ruzgar-genc-kizi-semsiyeyle.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:09:45+03:00</news:publication_date>
+      <news:title>Son dakika: Aksaray’da şiddetli rüzgar genç kızı şemsiyeyle sürükledi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/istanbul-haber /2026/09/17/mobile-video-haber-detay.html</loc>
     <news:news>
       <news:publication>
@@ -1663,17 +1718,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/canli-maclar/2026/09/17/tv8-canli-ve-sifresiz-izleme-linki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T15:02:29+03:00</news:publication_date>
-      <news:title>TV8 canlı ve şifresiz izleme linki</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/17/saglik-bakani-memisoglu-abdde.html</loc>
     <news:news>
       <news:publication>
@@ -1773,17 +1817,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/17/turkiye-sermaye-piyasalari-birliginden-spkye-destek-acikla.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T15:00:00+03:00</news:publication_date>
-      <news:title>Türkiye Sermaye Piyasaları Birliği&#x27;nden SPK&#x27;ye destek açıklaması</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/17/duyuru-yapildi-turkiye-sermaye-piyasalari-birliginden-spk.html</loc>
     <news:news>
       <news:publication>
@@ -1792,6 +1825,17 @@
       </news:publication>
       <news:publication_date>2026-09-17T15:00:00+03:00</news:publication_date>
       <news:title>Duyuru yapıldı: Türkiye Sermaye Piyasaları Birliği&#x27;nden SPK&#x27;ye destek açıklaması</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/17/turkiye-sermaye-piyasalari-birliginden-spkye-destek-acikla.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T15:00:00+03:00</news:publication_date>
+      <news:title>Türkiye Sermaye Piyasaları Birliği&#x27;nden SPK&#x27;ye destek açıklaması</news:title>
     </news:news>
   </url>
   <url>
@@ -1935,6 +1979,28 @@
       </news:publication>
       <news:publication_date>2026-09-17T14:54:52+03:00</news:publication_date>
       <news:title>Galatasaray hakkında hukuki süreç başlatıldı! Bakanlıktan açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/17/galatasaray-hakkinda-hukuki-surec-baslatildi-bakanliktan-ac.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T14:54:52+03:00</news:publication_date>
+      <news:title>Galatasaray hakkında hukuki süreç başlatıldı! Bakanlıktan açıklama</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/17/canli-ofi-crete-hoffenheim-maci-saat-kacta-hangi-kanalda.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T14:54:24+03:00</news:publication_date>
+      <news:title>CANLI | OFI Crete-Hoffenheim maçı saat kaçta, hangi kanalda?</news:title>
     </news:news>
   </url>
   <url>
@@ -2199,17 +2265,6 @@
       </news:publication>
       <news:publication_date>2026-09-17T14:47:00+03:00</news:publication_date>
       <news:title>Yabancı yatırımcı geçen hafta hisse alırken, DİBS sattı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/17/trabzonspor-galatasaray-derbisi-batuhan-kolakin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T14:46:00+03:00</news:publication_date>
-      <news:title>Trabzonspor - Galatasaray derbisi Batuhan Kolak&#x27;ın</news:title>
     </news:news>
   </url>
   <url>
@@ -2489,17 +2544,6 @@
   </url>
   <url>
     <loc>https://nearadin.net/spor/2026/09/17/trt-spor-yildiz-izleme-linki.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T14:36:27+03:00</news:publication_date>
-      <news:title>TRT Spor Yıldız izleme linki</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/canli-maclar/2026/09/17/trt-spor-yildiz-izleme-linki.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -3170,6 +3214,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/17/15-milli-takim-kampina-3-davet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T14:12:37+03:00</news:publication_date>
+      <news:title>15 milli takım kampına 3 davet</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/17/rehn-savas-sokundan-kaynaklanan-ikinci-tur-etki-gormuyorum.html</loc>
     <news:news>
       <news:publication>
@@ -3200,6 +3255,17 @@
       </news:publication>
       <news:publication_date>2026-09-17T14:12:12+03:00</news:publication_date>
       <news:title>Sağlık sigorta fonunun dolandırıcılık ve suistimali giderek daha karmaşık hale geliyor ve cezai kovuşturmaya yol açabilir.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/17/genclik-ve-spor-bakanligindan-galatasaray-aciklamasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T14:12:00+03:00</news:publication_date>
+      <news:title>Gençlik ve Spor Bakanlığı&#x27;ndan Galatasaray açıklaması!</news:title>
     </news:news>
   </url>
   <url>
@@ -3588,28 +3654,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/17/genclik-ve-spor-bakanligindan-galatasaray-aciklamasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T13:57:25+03:00</news:publication_date>
-      <news:title>Gençlik ve Spor Bakanlığından Galatasaray açıklaması</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/17/genclik-ve-spor-bakanligindan-galatasaray-aciklamasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T13:57:25+03:00</news:publication_date>
-      <news:title>Gençlik ve Spor Bakanlığından Galatasaray açıklaması</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/turizm/2026/09/17/ispanya-yerel-halki-koruyacak-turistler-ulkeye-dagitilacak.html</loc>
     <news:news>
       <news:publication>
@@ -3662,17 +3706,6 @@
       </news:publication>
       <news:publication_date>2026-09-17T13:53:29+03:00</news:publication_date>
       <news:title>İşletmeler ve bireyler, stratejik teknoloji geliştirme görevlerini doğrudan önerebilirler.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/17/genclik-ve-spor-bakanligindan-galatasaray-aciklamasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T13:53:14+03:00</news:publication_date>
-      <news:title>Gençlik ve Spor Bakanlığı&#x27;ndan Galatasaray açıklaması!</news:title>
     </news:news>
   </url>
   <url>
@@ -4127,6 +4160,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/dunya/2026/09/17/uzay-copluge-mi-donusuyor-dunya-zirvesinden-carpici-elon-m.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T13:37:12+03:00</news:publication_date>
+      <news:title>Uzay çöplüğe mi dönüşüyor? Dünya zirvesinden çarpıcı &#x27;Elon Musk&#x27; uyarısı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/17/uzay-copluge-mi-donusuyor-dunya-zirvesinden-carpici-elon-m.html</loc>
     <news:news>
       <news:publication>
@@ -4355,6 +4399,17 @@
       </news:publication>
       <news:publication_date>2026-09-17T13:29:20+03:00</news:publication_date>
       <news:title>TÜROFED&#x27;den Çin turizm pazarı için stratejik adım</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/17/asil-gercegimiz-yatirim-ve-buyume.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-17T13:28:45+03:00</news:publication_date>
+      <news:title>Asıl Gerçeğimiz Yatırım ve Büyüme</news:title>
     </news:news>
   </url>
   <url>
@@ -4751,17 +4806,6 @@
       </news:publication>
       <news:publication_date>2026-09-17T13:14:30+03:00</news:publication_date>
       <news:title>BTSO Başkanı Burkay: “TEKNOSAB’da 2030 vizyonuyla yeni bir ekosistem inşa ediyoruz”</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/17/kilicdaroglu-borsadaki-riskleri-gorusmek-icin-chp-ekonomi-m.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T13:14:24+03:00</news:publication_date>
-      <news:title>Kılıçdaroğlu, borsadaki riskleri görüşmek için CHP Ekonomi Masası&#x27;na başkanlık etti</news:title>
     </news:news>
   </url>
   <url>
@@ -5436,17 +5480,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/17/deprem-son-dakika-17-eylul-bugun-deprem-mi-oldu-nerede-ka.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T12:41:16+03:00</news:publication_date>
-      <news:title>DEPREM SON DAKİKA 17 EYLÜL! Bugün deprem mi oldu, nerede, kaç şiddetinde? 17 Eylül 2026 AFAD ve Kandilli Rasathanesi son depremler listesi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/turizm/2026/09/17/15-ulkeden-250-turizmci-trabzona-gelecek.html</loc>
     <news:news>
       <news:publication>
@@ -5466,39 +5499,6 @@
       </news:publication>
       <news:publication_date>2026-09-17T12:40:40+03:00</news:publication_date>
       <news:title>Bugünkü borsa verileri, 17 Eylül 2026: VN-Index yaklaşık 13 puan yükseldi, piyasa pozitif.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/17/arkadas-bulusmalarini-surekli-erteliyorsaniz-dikkat.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T12:40:35+03:00</news:publication_date>
-      <news:title>Arkadaş buluşmalarını sürekli erteliyorsanız dikkat!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/17/turkiyede-chatgpt-reklam-donemi-basladi-peki-nasil-calisiy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T12:40:31+03:00</news:publication_date>
-      <news:title>Türkiye&#x27;de ChatGPT Reklam Dönemi Başladı: Peki Nasıl Çalışıyor ve Her Şirket Kullanabiliyor mu?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/17/son-dakika-katilimevim-icin-satin-alma-gorusmeleri-basladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17T12:39:14+03:00</news:publication_date>
-      <news:title>[Son Dakika] Katılımevim için satın alma görüşmeleri başladı</news:title>
     </news:news>
   </url>
 </urlset>
