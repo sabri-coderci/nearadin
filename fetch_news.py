@@ -334,6 +334,7 @@ def fetch_and_generate():
         "sanayi": {"name": "Sanayi", "url": "https://news.google.com/rss/search?q=sanayi&hl=tr&gl=TR&ceid=TR:tr"},
         "spor": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor&hl=tr&gl=TR&ceid=TR:tr"},
         "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k&hl=tr&gl=TR&ceid=TR:tr"},
+         "hava-durumu": {"name": "Hava Durumu", "url": "https://news.google.com/rss/search?q=hava+durumu&hl=tr&gl=TR&ceid=TR:tr"},
         "deprem": {"name": "Deprem", "url": "https://news.google.com/rss/search?q=deprem&hl=tr&gl=TR&ceid=TR:tr"},
         "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/search?q=bilim&hl=tr&gl=TR&ceid=TR:tr"},
         "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"},
