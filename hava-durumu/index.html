@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="tr">
+          <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Akaryakıt zamları için çağrı" />
+    <meta name="twitter:description" content="Akaryakıt zamları için çağrı  Ekonomim..." />
+    <meta name="twitter:site" content="@nearadin2026" />
+    <meta name="twitter:image" content="https://nearadin.net/1789249176325.png" />
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7 Günlük Hava Durumu Tahmini - nearadin.net</title>
-    <meta name="description" content="Türkiye'nin 81 ili için güncel 7 günlük detaylı hava durumu tahminleri." />
-    <link rel="canonical" href="https://nearadin.net/hava-durumu/" />
+    <title>Hava Durumu Haberleri - nearadin.net</title>
+    <meta name="description" content="En son Hava Durumu haberleri ve canlı gelişmeler." />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
-        .container { max-width: 680px; margin: 20px auto; padding: 0 12px; min-height: 70vh; }
-        
-        .card { background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        h1 { font-size: 20px; margin-bottom: 10px; color: #0056b3; }
-        p { color: #65676b; font-size: 14px; margin-bottom: 15px; }
-
-        .city-select-box { margin-bottom: 20px; }
-        .city-select-box label { display: block; font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #333; }
-        .city-select-box select { width: 100%; max-width: 300px; padding: 10px; border-radius: 6px; border: 1px solid #ccd0d5; font-size: 14px; background: #fff; outline: none; cursor: pointer; }
-
-        .weather-list { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-        .weather-item { background: #f9f9f9; border: 1px solid #e4e6eb; padding: 12px 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-        .weather-date { font-weight: bold; color: #333; font-size: 14px; }
-        .weather-desc { font-size: 13px; color: #65676b; }
-        .weather-temp { font-weight: bold; font-size: 15px; color: #0056b3; }
-
-        .loading { text-align: center; color: #65676b; padding: 20px; font-style: italic; }
-        .btn-home { display: inline-block; background: #1877f2; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 20px; }
-        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
-        .ad-container:empty { display: none !important; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
     </style>
 </head>
 <body>
     
-    <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-    <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-
-    
-   <div class="ad-container">
-       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-   </div>
-    
-    
     <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - Hava Durumu</a>
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
         <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
         
         <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
@@ -94,118 +82,169 @@
         });
     </script>
     
-
     <div class="container">
-        <div class="card">
-            <h1>☀️ 7 Günlük Hava Durumu</h1>
-            <p>İlini seçerek önümüzdeki 7 günlük sıcaklık ve hava tahmin raporunu hemen incele.</p>
-            
-            <div class="city-select-box">
-                <label for="citySelect">İl Seçiniz:</label>
-                <select id="citySelect" onchange="getWeatherData()">
-                    <option value="34|41.0082|28.9784" selected>34 - İstanbul</option>
-                    <option value="1|37.0000|35.3213">01 - Adana</option>
-                    <option value="6|39.9208|32.8541">06 - Ankara</option>
-                    <option value="7|36.8969|30.7133">07 - Antalya</option>
-                    <option value="16|40.1826|29.0665">16 - Bursa</option>
-                    <option value="35|38.4192|27.1287">35 - İzmir</option>
-                    <option value="61|41.0015|39.7178">61 - Trabzon</option>
-                </select>
-            </div>
-
-            <div id="loading" class="loading">Hava durumu verileri yükleniyor...</div>
-            <div id="weatherList" class="weather-list"></div>
-
-            <a href="/" class="btn-home">← Anasayfaya Dön</a>
+        <div class="status-bar">
+            📌 Hava Durumu Haberleri
         </div>
-
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">19:56</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/meteorolojiden-yeni-hava-durumu-raporu-istanbul-icin-tarih.html">Meteoroloji'den yeni hava durumu raporu! İstanbul için tarih verildi: Kuvvetli sağanak geliyor - Galeri - Trend Yaşam</a>
+                </h2>
+                <p class="news-summary">Meteoroloji'den yeni hava durumu raporu! İstanbul için tarih verildi: Kuvvetli sağanak geliyor - Galeri - Trend Yaşam  Sabah</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/meteorolojiden-yeni-hava-durumu-raporu-istanbul-icin-tarih.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">vietnam.vn</span>
+                    <span class="time">19:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/el-nino-asiri-hava-olaylari-riskini-artirir.html">El Nino, aşırı hava olayları riskini artırır.</a>
+                </h2>
+                <p class="news-summary">El Nino, aşırı hava olayları riskini artırır.  vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/el-nino-asiri-hava-olaylari-riskini-artirir.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Gerçek Fethiye</span>
+                    <span class="time">17:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/muglada-ilce-ilce-hava-durumu-iste-20-eylul-2026-hava-tahm.html">Muğla'da ilçe ilçe hava durumu: İşte 20 Eylül 2026 hava tahmini</a>
+                </h2>
+                <p class="news-summary">Muğla'da ilçe ilçe hava durumu: İşte 20 Eylül 2026 hava tahmini  Gerçek Fethiye</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/muglada-ilce-ilce-hava-durumu-iste-20-eylul-2026-hava-tahm.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">vietnam.vn</span>
+                    <span class="time">17:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/ho-chi-minh-sehrindeki-degisken-hava-kosullari-goz-onune-ali.html">Ho Chi Minh şehrindeki değişken hava koşulları göz önüne alındığında, çocuklarda hangi hastalıklar yaygındır?</a>
+                </h2>
+                <p class="news-summary">Ho Chi Minh şehrindeki değişken hava koşulları göz önüne alındığında, çocuklarda hangi hastalıklar yaygındır?  vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/ho-chi-minh-sehrindeki-degisken-hava-kosullari-goz-onune-ali.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">16:47</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/hatay-antakya-15-gunluk-hava-durumu.html">Hatay Antakya 15 Günlük Hava Durumu</a>
+                </h2>
+                <p class="news-summary">Hatay Antakya 15 Günlük Hava Durumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/hatay-antakya-15-gunluk-hava-durumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">afyonses.com</span>
+                    <span class="time">16:36</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/trabzonspor-galatasaray-maci-icin-hava-durumu-tahmini.html">Trabzonspor - Galatasaray Maçı İçin Hava Durumu Tahmini</a>
+                </h2>
+                <p class="news-summary">Trabzonspor - Galatasaray Maçı İçin Hava Durumu Tahmini  afyonses.com</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/trabzonspor-galatasaray-maci-icin-hava-durumu-tahmini.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Takvim</span>
+                    <span class="time">16:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/istanbulda-yeni-yagisli-sistem-alarmi-eylul-serinledi-goz.html">İstanbul’da yeni yağışlı sistem alarmı! Eylül serinledi, gözler kışa çevrildi: 81 ilde bugün hava nasıl?</a>
+                </h2>
+                <p class="news-summary">İstanbul’da yeni yağışlı sistem alarmı! Eylül serinledi, gözler kışa çevrildi: 81 ilde bugün hava nasıl?  Takvim</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/istanbulda-yeni-yagisli-sistem-alarmi-eylul-serinledi-goz.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Kahta Haber Postası</span>
+                    <span class="time">15:41</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/trabzonspor-galatasaray-macinin-oynanacagi-saatlerde-hava.html">Trabzonspor - Galatasaray Maçının Oynanacağı Saatlerde Hava Durumu</a>
+                </h2>
+                <p class="news-summary">Trabzonspor - Galatasaray Maçının Oynanacağı Saatlerde Hava Durumu  Kahta Haber Postası</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/trabzonspor-galatasaray-macinin-oynanacagi-saatlerde-hava.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">15:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/kocaeli-gebze-15-gunluk-hava-durumu.html">Kocaeli Gebze 15 Günlük Hava Durumu</a>
+                </h2>
+                <p class="news-summary">Kocaeli Gebze 15 Günlük Hava Durumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/kocaeli-gebze-15-gunluk-hava-durumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/hava-durumu/2026/09/19/" class="badge">Hava Durumu</a>
+                    <span class="source">Kamudanhaber</span>
+                    <span class="time">14:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/hava-durumu/2026/09/19/meteorolojiden-yarin-kuvvetli-yagis-uyarisi-20-eylul-pazar.html">Meteorolojiden yarın kuvvetli yağış uyarısı! 20 Eylül Pazar Meteoroloji Haritalı Hava Tahmini</a>
+                </h2>
+                <p class="news-summary">Meteorolojiden yarın kuvvetli yağış uyarısı! 20 Eylül Pazar Meteoroloji Haritalı Hava Tahmini  Kamudanhaber</p>
+                <div class="card-footer">
+                    <a href="/hava-durumu/2026/09/19/meteorolojiden-yarin-kuvvetli-yagis-uyarisi-20-eylul-pazar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
         
     <div style="text-align: center; margin: 20px 0;">
         <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
     </div>
     
     </div>
-
-    <script>
-        function getWeatherDescription(code) {
-            const descriptions = {
-                0: "🌞 Açık / Güneşli",
-                1: "🌤️ Çoğunlukla Açık",
-                2: "⛅ Parçalı Bulutlu",
-                3: "☁️ Çok Bulutlu",
-                45: "🌫️ Sisli",
-                48: "🌫️ Kırağılı Sis",
-                51: "🌧️ Hafif Çisenti",
-                53: "🌧️ Çisenti",
-                55: "🌧️ Yoğun Çisenti",
-                61: "🌧️ Hafif Yağmurlu",
-                63: "🌧️ Yağmurlu",
-                65: "🌧️ Şiddetli Yağmur",
-                71: "❄️ Hafif Karlı",
-                73: "❄️ Karlı",
-                75: "❄️ Yoğun Kar Yağışlı",
-                95: "⚡ Gök Gürültülü Fırtına"
-            };
-            return descriptions[code] || "🌤️ Parçalı Bulutlu";
-        }
-
-        async function getWeatherData() {
-            const selectEl = document.getElementById('citySelect');
-            const val = selectEl.value.split('|');
-            const lat = val[1];
-            const lon = val[2];
-
-            const loadingEl = document.getElementById('loading');
-            const listEl = document.getElementById('weatherList');
-            
-            loadingEl.style.display = 'block';
-            listEl.innerHTML = '';
-
-            try {
-                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`);
-                const data = await response.json();
-
-                loadingEl.style.display = 'none';
-
-                if (data && data.daily) {
-                    const times = data.daily.time;
-                    const maxTemps = data.daily.temperature_2m_max;
-                    const minTemps = data.daily.temperature_2m_min;
-                    const weatherCodes = data.daily.weathercode;
-
-                    for (let i = 0; i < 7; i++) {
-                        const dateObj = new Date(times[i]);
-                        const options = { weekday: 'long', day: 'numeric', month: 'long' };
-                        const formattedDate = dateObj.toLocaleDateString('tr-TR', options);
-                        
-                        const desc = getWeatherDescription(weatherCodes[i]);
-                        const maxT = Math.round(maxTemps[i]);
-                        const minT = Math.round(minTemps[i]);
-
-                        const item = document.createElement('div');
-                        item.className = 'weather-item';
-                        item.innerHTML = `
-                            <div>
-                                <div class="weather-date">${formattedDate}</div>
-                                <div class="weather-desc">${desc}</div>
-                            </div>
-                            <div class="weather-temp">${maxT}°C / <span style="color:#65676b; font-weight:normal;">${minT}°C</span></div>
-                        `;
-                        listEl.appendChild(item);
-                    }
-                } else {
-                    loadingEl.style.display = 'block';
-                    loadingEl.innerText = 'Hava durumu bilgisi alınamadı.';
-                }
-            } catch (error) {
-                loadingEl.style.display = 'block';
-                loadingEl.innerText = 'Bağlantı hatası oluştu.';
-            }
-        }
-
-        getWeatherData();
-    </script>
-
     
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
@@ -234,6 +273,5 @@
         </div>
     </footer>
     
-
 </body>
 </html>
