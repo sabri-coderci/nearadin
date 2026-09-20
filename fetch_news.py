@@ -109,7 +109,7 @@ def make_summary(news):
         return text
     return (f"{news['source']} kaynaklı bu haber {news['date_str']} saat {news['time']} itibarıyla "
             f"{news['category_name']} kategorisinde yayımlandı. Ayrıntılar için haberin orijinal "
-            f"kaynağını ziyaret edebilirsiniz.")
+            f"kaynağını ziyaret edebilir, Disqus hesabınızla giriş yaparak bu konu hakkında yorum bırakabilirsiniz.")
 
 
 def json_ld(data):
