@@ -2,14 +2,630 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/otomobil/2026/09/23/nevsehir-aksaray-yolunda-iki-otomobil-kavsakta-carpisti-4-k.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:28:16+03:00</news:publication_date>
+      <news:title>Nevşehir-Aksaray yolunda iki otomobil kavşakta çarpıştı, 4 kişi yaralandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/deprem/2026/09/23/deprem-enkazi-zimmet-davasi-basladi-devlet-sirri-talebine.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:28:00+03:00</news:publication_date>
+      <news:title>Deprem enkazı zimmet davası başladı: &#x27;Devlet sırrı&#x27; talebine mahkemeden ret</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/yazar-alberto-manguel-istanbulda-okurlariyla-bulustu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:27:23+03:00</news:publication_date>
+      <news:title>Yazar Alberto Manguel İstanbul’da okurlarıyla buluştu:</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/2026/09/23/istanbulda-24-eylul-hava-durumu-yagis-beklenmiyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:27:09+03:00</news:publication_date>
+      <news:title>İstanbul’da 24 Eylül Hava Durumu: Yağış Beklenmiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/2026/09/23/bursa-hava-durumu-24-eylul-2026-sicaklik-21-derece.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:27:07+03:00</news:publication_date>
+      <news:title>Bursa Hava Durumu 24 Eylül 2026: Sıcaklık 21 Derece</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/2026/09/23/afyonkarahisarda-24-eylul-hava-durumu-gunesli-hava.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:27:06+03:00</news:publication_date>
+      <news:title>Afyonkarahisar’da 24 Eylül Hava Durumu: Güneşli Hava</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/balkan-karismanin-seyir-dijital-enstalasyonu-contemporary.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:26:00+03:00</news:publication_date>
+      <news:title>Balkan Karışman’ın &#x27;Seyir&#x27; dijital enstalasyonu Contemporary Istanbul’da sergilendi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/bursada-korkutan-yangin-mahsur-kalan-19-kisi-kurtarildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:25:38+03:00</news:publication_date>
+      <news:title>Bursa&#x27;da korkutan yangın: Mahsur kalan 19 kişi kurtarıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/turizm/2026/09/23/phaselis-festivali-16-kez-kapilarini-acti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:25:38+03:00</news:publication_date>
+      <news:title>Phaselis Festivali 16. Kez Kapılarını Açtı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/turizm/2026/09/23/alltours-adults-only-otel-portfoyunu-genisletiyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:25:34+03:00</news:publication_date>
+      <news:title>Alltours Adults-Only Otel Portföyünü Genişletiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/turizm/2026/09/23/turk-hava-yollari-avrupa-havayollarina-aktarmalarda-meydan-o.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:25:33+03:00</news:publication_date>
+      <news:title>Türk Hava Yolları Avrupa Havayollarına Aktarmalarda Meydan Okuyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/havvanur-kethuda-bulgaristanda-finale-yukseldi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:24:00+03:00</news:publication_date>
+      <news:title>Havvanur Kethüda Bulgaristan&#x27;da finale yükseldi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-uyusturucu-operasyonlarinda-4-supheli-gozaltina.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:22:28+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da uyuşturucu operasyonlarında 4 şüpheli gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/erdogan-new-yorkta-turk-is-insanlari-ile-bulustu-turkiye.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:18:34+03:00</news:publication_date>
+      <news:title>Erdoğan, New York&#x27;ta Türk iş insanları ile buluştu: &quot;Türkiye şoklara direnç kazanmış bir ekonomi&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/besiktasa-bilgi-guvenligi-belgesi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:17:12+03:00</news:publication_date>
+      <news:title>Beşiktaş’a Bilgi Güvenliği Belgesi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/erdogan-ile-pasinyan-gorusmesinde-gundem-ticari-iliskiler-ve.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:16:24+03:00</news:publication_date>
+      <news:title>Erdoğan ile Paşinyan görüşmesinde gündem ticari ilişkiler ve ‘normalleşme’</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/sermaye-piyasasi-sorusturmasinda-20-supheli-icin-tutuklama-t.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:16:00+03:00</news:publication_date>
+      <news:title>Sermaye piyasası soruşturmasında 20 şüpheli için tutuklama talebi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/turkiye-soklara-direncli-bir-ekonomi-olarak-verimlilik-ve-st.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:14:04+03:00</news:publication_date>
+      <news:title>Türkiye şoklara dirençli bir ekonomi olarak verimlilik ve stratejik işbirliğine odaklanıyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/2027-yildizlar-ve-gencler-dunya-eskrim-sampiyonasi-ankarad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:13:08+03:00</news:publication_date>
+      <news:title>2027 Yıldızlar ve Gençler Dünya Eskrim Şampiyonası, Ankara&#x27;da düzenlenecek</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/otomobil/2026/09/23/kirklarelide-otomobil-ile-pikap-carpisti-4-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:12:18+03:00</news:publication_date>
+      <news:title>Kırklareli’de otomobil ile pikap çarpıştı! 4 yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/trafik-raporu-istanbullu-yilda-12-gununu-yolda-kaybediyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:11:00+03:00</news:publication_date>
+      <news:title>Trafik raporu: İstanbullu yılda 12 gününü yolda kaybediyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/alaca-sanayi-kavsaginda-yagis-nedeniyle-tarlaya-ucan-otomobi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:10:14+03:00</news:publication_date>
+      <news:title>Alaca sanayi kavşağında yağış nedeniyle tarlaya uçan otomobilde 2 kişi yaralandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/kazi-kazan-izmirde-bir-talihliye-20-milyon-tl-kazandirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:09:12+03:00</news:publication_date>
+      <news:title>‘Kazı Kazan’ İzmir’de bir talihliye 20 milyon TL kazandırdı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/pozlariyla-gundem-olan-avukatin-tutuklandigi-davada-5-yargi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:08:14+03:00</news:publication_date>
+      <news:title>Pozlarıyla gündem olan avukatın tutuklandığı davada 5 yargı mensubu açığa alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/otomobil/2026/09/23/corumda-otomobil-tarlaya-uctu-2-yarali-ihlas-haber-ajansi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:06:50+03:00</news:publication_date>
+      <news:title>Çorum’da otomobil tarlaya uçtu: 2 yaralı İhlas Haber Ajansı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/italya-yaklasik-40-yil-sonra-nukleer-enerjiye-donuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:06:48+03:00</news:publication_date>
+      <news:title>İtalya yaklaşık 40 yıl sonra nükleer enerjiye dönüyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/contemporary-istanbulun-21-edisyonunda-birbirinden-ozel-is.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:06:41+03:00</news:publication_date>
+      <news:title>Contemporary İstanbul’un 21. edisyonunda birbirinden özel işler sanatseverlerle buluşuyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/cumhurbaskani-erdogan-new-yorkta-is-insanlariyla-bulustu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:04:38+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan New York&#x27;ta iş insanlarıyla buluştu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/genclik-ve-spor-bakan-yardimcisi-yerlikaya-turkiye-avrupa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:01:27+03:00</news:publication_date>
+      <news:title>Gençlik ve Spor Bakan Yardımcısı Yerlikaya: Türkiye, Avrupa&#x27;da boksta lider</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/23/cumhurbaskani-erdogan-bm-iklim-etkinliginde-konustu-dis-h.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T23:01:09+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan, BM İklim Etkinliğinde konuştu | Dış Haberler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/canli-maclar/2026/09/23/trt-spor-yildiz-izleme-linki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:57:55+03:00</news:publication_date>
+      <news:title>TRT Spor Yıldız izleme linki</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/hisseler/2026/09/23/kap-neo-portfoy-hisse-senedi-serbest-fon-hisse-senedi-y.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T22:25:13+03:00</news:publication_date>
+      <news:publication_date>2026-09-23T22:57:49+03:00</news:publication_date>
       <news:title>KAP *** NEO PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON) *** VVP *** Portföy Dağılım Raporu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/yeni-safaktan-simseke-cok-sert-sozler-borsa-vurgununun-h.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:57:00+03:00</news:publication_date>
+      <news:title>Yeni Şafak’tan Şimşek’e çok sert sözler: ‘Borsa vurgununun hesabı sorulmazsa…’</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/datcada-serinlemek-icin-denize-giren-yasli-kadin-boguldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:51:08+03:00</news:publication_date>
+      <news:title>Datça’da serinlemek için denize giren yaşlı kadın boğuldu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/rahmi-koca-new-yorkta-onur-odulu-verildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:51:00+03:00</news:publication_date>
+      <news:title>Rahmi Koç&#x27;a New York&#x27;ta onur ödülü verildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/abdde-30-yillik-tahvil-faizi-22-yilin-zirvesinde.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:49:18+03:00</news:publication_date>
+      <news:title>ABD&#x27;de 30 yıllık tahvil faizi 22 yılın zirvesinde</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/ekmek-spor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:48:53+03:00</news:publication_date>
+      <news:title>ekmek spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/cumhurbaskani-erdogan-new-yorkta-is-adamlariyla-bir-araya.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:47:09+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan, New York&#x27;ta iş adamlarıyla bir araya geldi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/turkevinde-kritik-zirve-cumhurbaskani-erdogan-ukrayna-basb.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:46:27+03:00</news:publication_date>
+      <news:title>Türkevi&#x27;nde kritik zirve: Cumhurbaşkanı Erdoğan Ukrayna Başbakanı Zelenski ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/ispanya-basbakani-sanchez-mamdani-ile-isleyen-ekonomi-icin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:44:38+03:00</news:publication_date>
+      <news:title>İspanya Başbakanı Sanchez, Mamdani ile işleyen ekonomi için görüştüklerini duyurdu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/ispanya-basbakani-sanchez-new-york-belediye-baskani-mamdani.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:44:29+03:00</news:publication_date>
+      <news:title>İspanya Başbakanı Sanchez, New York Belediye Başkanı Mamdani ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/2026/09/23/izmirde-24-eylul-hava-durumu-gunesli-gun-bekleniyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:43:00+03:00</news:publication_date>
+      <news:title>İzmir’de 24 Eylül Hava Durumu: Güneşli Gün Bekleniyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/gundem-23-eylul-2026-carsamba.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:42:51+03:00</news:publication_date>
+      <news:title>Gündem 23 Eylül 2026 Çarşamba</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/samet-gumus-bulgaristanda-bronz-madalya-kazandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:41:00+03:00</news:publication_date>
+      <news:title>Samet Gümüş Bulgaristan&#x27;da bronz madalya kazandı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/faruk-spor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:40:43+03:00</news:publication_date>
+      <news:title>Faruk spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/baskan-erdogandan-iklim-zirvesinde-onemli-mesajlar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:40:33+03:00</news:publication_date>
+      <news:title>Başkan Erdoğan’dan İklim Zirvesi’nde önemli mesajlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/23/openai-ai-zihinsel-saglik-gorusmeleri-icin-mentalhealthbenc.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:40:14+03:00</news:publication_date>
+      <news:title>OpenAI, AI Zihinsel Sağlık Görüşmeleri için MentalHealthBench’i Tanıttı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/23/huseyin-bulunmazer-saglik-sisteminin-asil-hastaligi-insan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:40:00+03:00</news:publication_date>
+      <news:title>Hüseyin BULUNMAZER: Sağlık Sisteminin Asıl Hastalığı: İnsan mı Unutuldu, Sistem mi Bozuldu?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-cumhurbaskani-erdogandan-bm-iklim-etkinligin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:40:00+03:00</news:publication_date>
+      <news:title>Son dakika... Cumhurbaşkanı Erdoğan&#x27;dan BM İklim Etkinliği&#x27;nde COP31 vurgusu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/cumhurbaskani-erdogandan-bm-iklim-zirvesinde-onemli-acikla.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:39:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan&#x27;dan BM İklim Zirvesi&#x27;nde önemli açıklamalar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbul-havalimani-avrupada-zirvede-gunluk-1671-ucus.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:39:00+03:00</news:publication_date>
+      <news:title>İstanbul Havalimanı Avrupa&#x27;da zirvede: Günlük 1671 uçuş</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/cumhurbaskani-erdogan-konusuyor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:37:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan konuşuyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/otomobil/2026/09/23/otomobil-tarlaya-uctu-2-yarali.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:35:00+03:00</news:publication_date>
+      <news:title>Otomobil Tarlaya Uçtu: 2 Yaralı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/bodrum-bolge-liman-baskani-gozaltina-alindi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:34:23+03:00</news:publication_date>
+      <news:title>Bodrum Bölge Liman Başkanı gözaltına alındı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-bm-genel-kurulunda-ikinci-gun-gozler-new-yor.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:32:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA... BM Genel Kurulu’nda ikinci gün: Gözler New York’ta! İşte liderlerin mesajları...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/spor/2026/09/23/son-dakika-spor-haberi-futbolu-ne-zaman-birakacak-cristia.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:31:00+03:00</news:publication_date>
+      <news:title>Son Dakika Spor Haberi | Futbolu ne zaman bırakacak? Cristiano Ronaldo cevapladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/dogusan-boru-sanayinin-ana-ortagina-tmsf-kayyim-olarak-atan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:28:31+03:00</news:publication_date>
+      <news:title>Doğusan Boru Sanayi&#x27;nin ana ortağına TMSF kayyım olarak atandı haberi</news:title>
     </news:news>
   </url>
   <url>
@@ -21,6 +637,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T22:25:13+03:00</news:publication_date>
       <news:title>KAP *** NEO PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON) *** VVP *** Portföy Dağılım Raporu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/turkiye-ve-iraktan-mutabakat-carpici-sincar-ayrintisi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:24:00+03:00</news:publication_date>
+      <news:title>Türkiye ve Irak&#x27;tan mutabakat: Çarpıcı &#x27;Sincar&#x27; ayrıntısı</news:title>
     </news:news>
   </url>
   <url>
@@ -68,6 +695,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-uyusturucu-imalathanelerine-operasyon.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:18:00+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da uyuşturucu imalathanelerine operasyon</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-tffden-orkun-kokcu-aciklamasi-sakatligi-hakki.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:15:43+03:00</news:publication_date>
+      <news:title>Son Dakika | TFF&#x27;den Orkun Kökçü açıklaması: Sakatlığı hakkında açıklama yapıldı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/23/kilbasanda-bilim-dolu-iki-gun-basladi.html</loc>
     <news:news>
       <news:publication>
@@ -98,6 +747,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T22:15:00+03:00</news:publication_date>
       <news:title>AB, Suriye ile ortaklığını &quot;ileri seviyeye&quot; taşımak istiyor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/yeni-partide-kucuk-menderes-mesaisi-on-secim-ve-kongre-sur.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:15:00+03:00</news:publication_date>
+      <news:title>YENİ Parti’de Küçük Menderes mesaisi: Ön seçim ve kongre süreci masada</news:title>
     </news:news>
   </url>
   <url>
@@ -145,14 +805,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/zonguldak-haberleri-zonguldakta-derenin-tasmasi-sonucu-sa.html</loc>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/mansur-yavas-chpden-istifasinin-gerekcesini-acikladi-artik.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T22:05:12+03:00</news:publication_date>
-      <news:title>Zonguldak Haberleri - Zonguldak&#x27;ta derenin taşması sonucu sanayi sitesini su bastı - Yerel Haberler</news:title>
+      <news:publication_date>2026-09-23T22:05:34+03:00</news:publication_date>
+      <news:title>Mansur Yavaş CHP&#x27;den istifasının gerekçesini açıkladı: Artık 1 dakika duramayacağıma karar verdim</news:title>
     </news:news>
   </url>
   <url>
@@ -197,6 +857,28 @@
       </news:publication>
       <news:publication_date>2026-09-23T22:04:52+03:00</news:publication_date>
       <news:title>Kalshi, CFTC tarafından ticaret faaliyetleri nedeniyle soruşturma altında olmadığını açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/baskan-erdogandan-bm-iklim-zirvesinde-sifir-atik-mesaji.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:04:03+03:00</news:publication_date>
+      <news:title>Başkan Erdoğan&#x27;dan BM İklim Zirvesi&#x27;nde &quot;Sıfır Atık&quot; mesajı: 2035&#x27;e giden süreçte yeni hedefleri belirledik</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/3-fonun-buyuklugu-ve-yatirimci-sayisi-belli-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T22:01:00+03:00</news:publication_date>
+      <news:title>3 fonun büyüklüğü ve yatırımcı sayısı belli oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -266,6 +948,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/cumhurbaskani-erdogan-abd-ile-100-milyar-dolarlik-ticaret-h.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:58:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan: ABD ile 100 milyar dolarlık ticaret hacmi hedefimize kısa sürede ulaşacağımız</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/zonguldakta-otomobil-takla-atti-alev-aldi.html</loc>
     <news:news>
       <news:publication>
@@ -274,6 +967,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:57:00+03:00</news:publication_date>
       <news:title>Zonguldak&#x27;ta otomobil takla attı, alev aldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/cumhurbaskani-secilmezse-secim-tarihi-kim-belirleyecek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:54:38+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Seçilmezse Seçim Tarihi Kim Belirleyecek?</news:title>
     </news:news>
   </url>
   <url>
@@ -288,14 +992,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/new-yorkta-ekonomi-zirvesi-cumhurbaskani-erdogan-abd-ile.html</loc>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/abd-cin-gorusmesi-altin-doviz-ve-borsayi-nasil-etkiler-e.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T21:51:57+03:00</news:publication_date>
-      <news:title>New York&#x27;ta ekonomi zirvesi! Cumhurbaşkanı Erdoğan: ABD ile ticaret hacmi hedefimiz 100 milyar dolar!</news:title>
+      <news:publication_date>2026-09-23T21:51:41+03:00</news:publication_date>
+      <news:title>ABD-Çin görüşmesi altın, döviz ve borsayı nasıl etkiler? - Ekonomi Haberleri | Video</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/son-dakika-new-yorkta-ekonomi-zirvesi-cumhurbaskani-erdo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:51:00+03:00</news:publication_date>
+      <news:title>SON DAKİKA | New York&#x27;ta ekonomi zirvesi! Cumhurbaşkanı Erdoğan: ABD ile ticaret hedefimiz 100 milyar dolar</news:title>
     </news:news>
   </url>
   <url>
@@ -329,17 +1044,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:49:13+03:00</news:publication_date>
       <news:title>AB ve 51 ülkeden Rusya&#x27;ya ateşkes çağrısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/ankarada-satilik-konutlarda-zaman-ve-deger-kaybi-yasaniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T21:47:49+03:00</news:publication_date>
-      <news:title>Ankara&#x27;da satılık konutlarda zaman ve değer kaybı yaşanıyor</news:title>
     </news:news>
   </url>
   <url>
@@ -398,17 +1102,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/23/besiktas-baskani-serdal-adalidan-transfer-mujdesi-a-spora.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T21:45:20+03:00</news:publication_date>
-      <news:title>Beşiktaş Başkanı Serdal Adalı’dan transfer müjdesi! A Spor’a açıkladı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/turizm/2026/09/23/is-seyahatlerinde-guven-2026nin-en-yuksek-seviyesine-ulasti.html</loc>
     <news:news>
       <news:publication>
@@ -453,6 +1146,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/dunya/2026/09/23/aralarinda-bir-uyum-var.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:40:18+03:00</news:publication_date>
+      <news:title>&quot;Aralarında bir uyum var&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/turizm/2026/09/23/avrupa-otel-dagitiminda-dogrudan-rezervasyonlar-one-cikiyor.html</loc>
     <news:news>
       <news:publication>
@@ -494,6 +1198,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:35:19+03:00</news:publication_date>
       <news:title>Cumhurbaşkanı Erdoğan, New York&#x27;ta iş adamlarıyla bir araya geldi İhlas Haber Ajansı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/23/cumhurbaskani-erdogan-new-yorkta-is-dunyasiyla-bulustu-hed.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:34:00+03:00</news:publication_date>
+      <news:title>Cumhurbaşkanı Erdoğan New York&#x27;ta iş dünyasıyla buluştu: Hedef 100 milyar dolarlık ticaret hacmi</news:title>
     </news:news>
   </url>
   <url>
@@ -552,7 +1267,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/istanbul-havalimani-avrupada-zirvede-gunluk-1671-ucus.html</loc>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbul-havalimani-avrupada-zirvede-gunluk-1671-ucus.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -604,6 +1319,39 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:31:00+03:00</news:publication_date>
       <news:title>Memişoğlu&#x27;ndan ABD ile sağlık teknolojisi işbirliği mesajı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/serdal-adali-acikladi-hapoel-beer-sheva-macinin-yeri-belli.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:31:00+03:00</news:publication_date>
+      <news:title>Serdal Adalı açıkladı: Hapoel Beer-Sheva maçının yeri belli oldu!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/mesemde-cocuga-siddet-ogrencinin-burnunu-kirdi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:31:00+03:00</news:publication_date>
+      <news:title>MESEM’de çocuğa şiddet: Öğrencinin burnunu kırdı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/urunleri-aldi-odemeden-cikti-ressam-oldugu-ogrenilen-sahis.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:31:00+03:00</news:publication_date>
+      <news:title>Ürünleri aldı, ödemeden çıktı: Ressam olduğu öğrenilen şahıs yakalandı</news:title>
     </news:news>
   </url>
   <url>
@@ -717,6 +1465,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/yeni-partili-yunus-emre-yazdi-siyaseti-yurttasa-geri-vermek.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:22:30+03:00</news:publication_date>
+      <news:title>YENİ Partili Yunus Emre yazdı: Siyaseti yurttaşa geri vermek</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-besiktasta-serdal-adali-uefanin-kararini-acik.html</loc>
     <news:news>
       <news:publication>
@@ -725,6 +1484,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:22:00+03:00</news:publication_date>
       <news:title>Son Dakika | Beşiktaş&#x27;ta Serdal Adalı UEFA&#x27;nın kararını açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/istanbul-havalimani-avrupanin-en-yogun-havalimani-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:21:51+03:00</news:publication_date>
+      <news:title>İstanbul Havalimanı Avrupa&#x27;nın en yoğun havalimanı oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -747,6 +1517,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:21:00+03:00</news:publication_date>
       <news:title>ABD&#x27;den son dakika Türkiye açıklaması! Sürpriz İran itirafı! Bomba S-400 ve F-35 detayı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/2028de-secim-yapacagiz-demisti-bakan-gurlekten-yeni-aci.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:20:38+03:00</news:publication_date>
+      <news:title>“2028’de seçim yapacağız” demişti: Bakan Gürlek’ten yeni açıklama</news:title>
     </news:news>
   </url>
   <url>
@@ -882,6 +1663,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/26-farkli-suctan-50-yil-hapis-cezasi-vardi-yakalandi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T21:09:00+03:00</news:publication_date>
+      <news:title>26 farklı suçtan 50 yıl hapis cezası vardı, yakalandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/ekonomi/2026/09/23/fedden-faiz-mesaji-enflasyon-hedefi-icin-yeni-artis-gereke.html</loc>
     <news:news>
       <news:publication>
@@ -915,17 +1707,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/23/genclik-ve-spor-bakan-yardimcisi-eminoglu-suriyedeki-spor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T21:04:51+03:00</news:publication_date>
-      <news:title>Gençlik ve Spor Bakan Yardımcısı Eminoğlu: &quot;Suriye&#x27;deki spor tesisleri için işbirliği yapacağız&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/dunya/2026/09/23/dunya-borc-bataginda-turkiyede-geriledi-kureselde-artti.html</loc>
     <news:news>
       <news:publication>
@@ -956,17 +1737,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T21:04:11+03:00</news:publication_date>
       <news:title>Beyaz Saray danışmanı, Clarity Yasası yenilgisinin ardından Başkan Trump&#x27;ın kripto bağlantılarını savundu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/23/turkiyeden-derin-uzayda-bir-ilk-hibrit-roket-teknolojisi-t.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T21:02:00+03:00</news:publication_date>
-      <news:title>Türkiye&#x27;den derin uzayda bir ilk: Hibrit roket teknolojisi test edilecek</news:title>
     </news:news>
   </url>
   <url>
@@ -1025,14 +1795,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/canli-maclar/2026/09/23/trt-spor-yildiz-izleme-linki.html</loc>
+    <loc>https://nearadin.net/filmler/2026/09/23/hacks-dizisinin-emmy-odullu-yildizi-the-family-stone-2-k.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T20:57:14+03:00</news:publication_date>
-      <news:title>TRT Spor Yıldız izleme linki</news:title>
+      <news:publication_date>2026-09-23T21:00:00+03:00</news:publication_date>
+      <news:title>&quot;Hacks&quot; Dizisinin Emmy Ödüllü Yıldızı &quot;The Family Stone 2&quot; Kadrosuna Katıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -1044,17 +1814,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:57:11+03:00</news:publication_date>
       <news:title>Samet Gümüş Avrupa üçüncüsü! Şampiyon boksör bronzda kaldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/deprem/2026/09/23/degirmendere-batik-sehirde-depremin-izleri-goruntulendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T20:57:00+03:00</news:publication_date>
-      <news:title>Değirmendere Batık Şehir’de Depremin İzleri Görüntülendi</news:title>
     </news:news>
   </url>
   <url>
@@ -1102,14 +1861,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/izmir-haber/2026/09/23/bodrum-bolge-liman-baskani-gozaltina-alindi.html</loc>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/anketlerde-geride-olan-netanyahuda-skandal-karar-partiye-s.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T20:50:00+03:00</news:publication_date>
-      <news:title>Bodrum Bölge Liman Başkanı gözaltına alındı!</news:title>
+      <news:publication_date>2026-09-23T20:49:00+03:00</news:publication_date>
+      <news:title>Anketlerde geride olan Netanyahu&#x27;da skandal karar! Partiye seçim yasağı getirdiler...</news:title>
     </news:news>
   </url>
   <url>
@@ -1146,14 +1905,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/gelir-tamamlayici-aile-destegi-il-ve-ilceye-gore-degisecek.html</loc>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/yeni-parti-kongre-ve-secim-sureci-uzerine.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T20:43:28+03:00</news:publication_date>
-      <news:title>Gelir tamamlayıcı aile desteği il ve ilçeye göre değişecek: Ayrıntılar ne? - Ekonomi Haberleri | Video</news:title>
+      <news:publication_date>2026-09-23T20:45:00+03:00</news:publication_date>
+      <news:title>Yeni Parti kongre ve seçim süreci üzerine</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/gundem/2026/09/23/bodrumda-rusvet-operasyonu-bolge-liman-baskani-sucustu-yak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:44:14+03:00</news:publication_date>
+      <news:title>Bodrum&#x27;da rüşvet operasyonu: Bölge Liman Başkanı suçüstü yakalanarak gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -1176,17 +1946,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:42:46+03:00</news:publication_date>
       <news:title>Beşiktaş Başkanı Serdal Adalı&#x27;dan, Dusan Vlahovic açıklaması! Transfer sürecine dair konuştu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/bakan-kacir-cnn-turke-konustu-yapay-zeka-risklerine-karsi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T20:42:00+03:00</news:publication_date>
-      <news:title>Bakan Kacır CNN Türk&#x27;e konuştu: Yapay zeka risklerine karşı milli tedbirler alıyoruz</news:title>
     </news:news>
   </url>
   <url>
@@ -1234,17 +1993,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/cumhurbaskani-erdogan-ermenistan-basbakani-pasinyani-turkev.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T20:38:04+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan Ermenistan Başbakanı Paşinyan&#x27;ı Türkevi&#x27;nde kabul etti</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/23/sanayi-ve-teknoloji-bakani-kacir-cnn-turke-konustu-yapay.html</loc>
     <news:news>
       <news:publication>
@@ -1253,6 +2001,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:37:36+03:00</news:publication_date>
       <news:title>Sanayi ve Teknoloji Bakanı Kacır CNN Türk&#x27;e konuştu! &#x27;Yapay zeka risklerine karşı milli tedbirler alıyoruz&#x27;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/23/yapay-zekanin-gelisim-hizina-iliskin-tartismalar-teknoloji-d.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:35:16+03:00</news:publication_date>
+      <news:title>Yapay zekanın gelişim hızına ilişkin tartışmalar teknoloji dünyasında fikir ayrılığına yol açtı</news:title>
     </news:news>
   </url>
   <url>
@@ -1330,17 +2089,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:29:33+03:00</news:publication_date>
       <news:title>KAP *** EKİNCİLER DEMİR VE ÇELİK SANAYİ A.Ş. *** EKDMR *** Payların Geri Alınmasına İlişkin Bildirim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/bakan-isikhan-cin-sanhayda-2026-dunya-beceriler-zirvesi-b.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T20:28:10+03:00</news:publication_date>
-      <news:title>Bakan Işıkhan, Çin Şanhay’da “2026 Dünya Beceriler Zirvesi Bakanlar Toplantısı”na Katıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -1454,6 +2202,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/emine-erdogan-dongusel-ekonomi-gelecegimiz-icin-bir-zorunlu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:23:00+03:00</news:publication_date>
+      <news:title>Emine Erdoğan: Döngüsel ekonomi geleceğimiz için bir zorunluluktur</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/erzurumda-kavsakta-iki-otomobil-carpisti-2-yarali.html</loc>
     <news:news>
       <news:publication>
@@ -1462,17 +2221,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:23:00+03:00</news:publication_date>
       <news:title>Erzurum&#x27;da kavşakta iki otomobil çarpıştı, 2 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/emine-erdogan-dongusel-ekonomi-gelecegimiz-icin-bir-zorunlu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T20:23:00+03:00</news:publication_date>
-      <news:title>Emine Erdoğan: Döngüsel ekonomi geleceğimiz için bir zorunluluktur</news:title>
     </news:news>
   </url>
   <url>
@@ -1509,6 +2257,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/ihale-dergisi-ihale-haberleri-ihale-sonuclari-ihale-bu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:16:32+03:00</news:publication_date>
+      <news:title>İhale Dergisi | İhale Haberleri | İhale Sonuçları | İhale Bülteni</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/bursa-karacabeyde-otomobil-kamyonla-carpisti-hamile-kadin.html</loc>
     <news:news>
       <news:publication>
@@ -1520,14 +2279,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-bm-genel-kurulunda-ikinci-gun-gozler-new-yor.html</loc>
+    <loc>https://nearadin.net/dunya/2026/09/23/bm-diplomasisi-cumhurbaskani-erdogandan-pes-pese-gorusmele.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T20:14:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA... BM Genel Kurulu’nda ikinci gün: Gözler New York’ta! İşte liderlerin mesajları...</news:title>
+      <news:publication_date>2026-09-23T20:13:00+03:00</news:publication_date>
+      <news:title>BM diplomasisi! Cumhurbaşkanı Erdoğan&#x27;dan peş peşe görüşmeler</news:title>
     </news:news>
   </url>
   <url>
@@ -1575,6 +2334,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/izmir-haber/2026/09/23/izmirde-kooperatif-sorusturmasinda-iddianame-kabul-edildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:10:44+03:00</news:publication_date>
+      <news:title>İzmir&#x27;de kooperatif soruşturmasında iddianame kabul edildi! Tunç Soyer ve Şenol Aslanoğlu&#x27;nun da olduğu 19 sanığa hapis istendi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/avrupada-kucuk-otomobil-segmenti-yeniden-canlaniyor.html</loc>
     <news:news>
       <news:publication>
@@ -1605,6 +2375,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:10:00+03:00</news:publication_date>
       <news:title>Çinli Bir Firari Tayland’da Nasıl Turizm Patronuna Dönüştü?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/bakan-bayraktar-mujdeli-haberi-duyurdu-2030da-devreye-alin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:08:00+03:00</news:publication_date>
+      <news:title>Bakan Bayraktar müjdeli haberi duyurdu: 2030&#x27;da devreye alınacak!</news:title>
     </news:news>
   </url>
   <url>
@@ -1641,6 +2422,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/23/besiktas-baskani-serdal-adalidan-transfer-mujdesi-a-spora.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:01:32+03:00</news:publication_date>
+      <news:title>Beşiktaş Başkanı Serdal Adalı’dan transfer müjdesi! A Spor’a açıkladı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/spor/2026/09/23/besiktas-baskani-serdal-adali-a-spora-ozel-aciklamalarda-bu.html</loc>
     <news:news>
       <news:publication>
@@ -1649,6 +2441,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:00:59+03:00</news:publication_date>
       <news:title>Beşiktaş Başkanı Serdal Adalı A Spor&#x27;a özel açıklamalarda bulundu! İşte o sözler</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hava-durumu/2026/09/23/papanin-ziyareti-gunesli-sicak-yagmurlu-pariste-25-v.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:00:48+03:00</news:publication_date>
+      <news:title>Papa&#x27;nın ziyareti: güneşli, sıcak, yağmurlu... Paris&#x27;te 25 ve 26 Eylül için hava durumu ne olacak?</news:title>
     </news:news>
   </url>
   <url>
@@ -1671,6 +2474,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T20:00:00+03:00</news:publication_date>
       <news:title>Robert Pattinson, &quot;The Batman Part II&quot;da Büyük Bir Yön Değişimi Olacağını Doğruladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/orhan-cikirikci-istanbulda-ameliyat-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T20:00:00+03:00</news:publication_date>
+      <news:title>Orhan Çıkırıkçı İstanbul’da Ameliyat Oldu</news:title>
     </news:news>
   </url>
   <url>
@@ -1718,17 +2532,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/23/berlin-olimpiyatlara-ev-sahipliginden-neden-vazgeciyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:56:49+03:00</news:publication_date>
-      <news:title>Berlin Olimpiyatlara ev sahipliğinden neden vazgeçiyor?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-trafik-yogunlugu-yuzde-69a-ulasti-ihlas-haber-a.html</loc>
     <news:news>
       <news:publication>
@@ -1737,6 +2540,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:55:21+03:00</news:publication_date>
       <news:title>İstanbul’da trafik yoğunluğu yüzde 69’a ulaştı İhlas Haber Ajansı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/yagis-istanbul-trafigini-zorladi-aksam-yogunlugu-yuzde-69a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:55:00+03:00</news:publication_date>
+      <news:title>Yağış İstanbul trafiğini zorladı, akşam yoğunluğu yüzde 69&#x27;a ulaştı</news:title>
     </news:news>
   </url>
   <url>
@@ -1773,28 +2587,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/thyden-boeinge-150-ucaklik-dev-siparis.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:52:30+03:00</news:publication_date>
-      <news:title>THY&#x27;den Boeing&#x27;e 150 uçaklık dev sipariş</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/thynin-boeing-ile-dev-anlasmasi-kesinlesti-100-ucak-icin-k.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:52:00+03:00</news:publication_date>
-      <news:title>THY&#x27;nin Boeing ile dev anlaşması kesinleşti: 100 uçak için kesin sipariş, 50 uçak opsiyon</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/gundem/2026/09/23/bosanma-asamasindaki-esini-tufekle-vuran-sanik-mahkemede-esi.html</loc>
     <news:news>
       <news:publication>
@@ -1806,17 +2598,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/thy-ile-boeing-arasinda-150-adet-ucak-siparisi-anlasmasi-imz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:51:00+03:00</news:publication_date>
-      <news:title>THY ile Boeing arasında 150 adet uçak siparişi anlaşması imzalandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/23/ederson-gercegi-ortaya-cikti-aziz-yildirimdan-mesaj.html</loc>
     <news:news>
       <news:publication>
@@ -1825,17 +2606,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:50:00+03:00</news:publication_date>
       <news:title>Ederson gerçeği ortaya çıktı! Aziz Yıldırım&#x27;dan mesaj</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/fon-sorusturmasinda-yeni-gelisme-19-supheliye-tutuklama-tal.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:49:00+03:00</news:publication_date>
-      <news:title>Fon soruşturmasında yeni gelişme! 19 şüpheliye tutuklama talebi</news:title>
     </news:news>
   </url>
   <url>
@@ -1869,17 +2639,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:47:53+03:00</news:publication_date>
       <news:title>Zonguldak&#x27;ta sağanak Çaydamar&#x27;ı vurdu, Küçük Sanayi Sitesi&#x27;ni su bastı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/emine-erdogan-kenya-cumhurbaskaninin-esi-rachel-ruto-ile-b.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:47:00+03:00</news:publication_date>
-      <news:title>Emine Erdoğan, Kenya Cumhurbaşkanı&#x27;nın eşi Rachel Ruto ile bir araya geldi</news:title>
     </news:news>
   </url>
   <url>
@@ -1927,6 +2686,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-trafik-yogunlugu-yuzde-69a-ulasti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:43:53+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da trafik yoğunluğu yüzde 69&#x27;a ulaştı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/dunya/2026/09/23/dunyanin-etrafinda-dev-bir-copluk-olustu-agirligi-17-bin-t.html</loc>
     <news:news>
       <news:publication>
@@ -1935,6 +2705,28 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:43:00+03:00</news:publication_date>
       <news:title>Dünya’nın etrafında dev bir çöplük oluştu: Ağırlığı 17 bin tonu aştı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/fransada-akaryakit-krizi-yukselen-fiyatlar-secim-kampanyas.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:41:41+03:00</news:publication_date>
+      <news:title>Fransa’da akaryakıt krizi: Yükselen fiyatlar seçim kampanyasını belirleyebilir</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/fransada-akaryakit-krizi-fiyat-artisi-ve-secmen-ofkesi-sec.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:41:41+03:00</news:publication_date>
+      <news:title>Fransa&#x27;da akaryakıt krizi: Fiyat artışı ve seçmen öfkesi seçim kampanyasını şekillendiriyor</news:title>
     </news:news>
   </url>
   <url>
@@ -1968,6 +2760,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:39:00+03:00</news:publication_date>
       <news:title>Fon soruşturmasında son dakika kararı: Çok sayıda isme tutuklama! TERA, Doğa Sigorta...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/ntoda-secim-oncesi-son-meclis-toplantisi-gerceklesti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:38:42+03:00</news:publication_date>
+      <news:title>NTO’da Seçim Öncesi Son Meclis Toplantısı Gerçekleşti</news:title>
     </news:news>
   </url>
   <url>
@@ -2026,17 +2829,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-uyusturucu-operasyonu-8-kisi-tutuklandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:34:00+03:00</news:publication_date>
-      <news:title>İstanbul&#x27;da uyuşturucu operasyonu: 8 kişi tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/deprem/2026/09/23/kandilli-ve-afad-son-depremler-listesi-23-eylul-2026-carsa.html</loc>
     <news:news>
       <news:publication>
@@ -2059,28 +2851,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/tasfiye-edilen-fonlarda-kac-kisi-var-ekonomi-haberleri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:32:48+03:00</news:publication_date>
-      <news:title>Tasfiye edilen fonlarda kaç kişi var? - Ekonomi Haberleri | Video</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/emine-erdogan-yogun-bir-gundemi-geride-biraktik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:32:44+03:00</news:publication_date>
-      <news:title>Emine Erdoğan: &quot;Yoğun bir gündemi geride bıraktık&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/ankara-haber/2026/09/23/ankarada-uyusturucu-operasyonunda-yakalanan-3-supheli-tutuk.html</loc>
     <news:news>
       <news:publication>
@@ -2100,28 +2870,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:31:43+03:00</news:publication_date>
       <news:title>Son dakika... Mansur Yavaş&#x27;ın ardından peş peşe istifalar! Ankara&#x27;da bir belediye başkanı daha kararını verdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/calisma-ve-sosyal-guvenlik-bakani-isikhan-cinde-dunya-bece.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:31:32+03:00</news:publication_date>
-      <news:title>Çalışma ve Sosyal Güvenlik Bakanı Işıkhan, Çin’de Dünya Beceriler Konferansı’na katıldı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/sivas-valisi-simsek-uc-noktadaki-calismalari-inceledi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:30:45+03:00</news:publication_date>
-      <news:title>Sivas Valisi Şimşek, üç noktadaki çalışmaları inceledi</news:title>
     </news:news>
   </url>
   <url>
@@ -2246,6 +2994,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/thy-ile-boeing-arasinda-150-adet-ucak-siparisi-anlasmasi-imz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:27:33+03:00</news:publication_date>
+      <news:title>THY ile Boeing arasında 150 adet uçak siparişi anlaşması imzalandı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/turizm/2026/09/23/kultur-ve-turizm-bakani-ersoy-haydarpasa-gari-ile-ilgili-sok.html</loc>
     <news:news>
       <news:publication>
@@ -2268,14 +3027,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/fon-skandalinda-yeni-gelisme-17-kisiye-tutuklama-talebi.html</loc>
+    <loc>https://nearadin.net/otomobil/2026/09/23/balikesirde-yurek-yakan-kaza-hamile-anne-ve-kizi-oldu-ame.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:24:23+03:00</news:publication_date>
+      <news:title>Balıkesir&#x27;de yürek yakan kaza: Hamile anne ve kızı öldü, ameliyata alınan kadının bebeği de kurtarılamadı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/23/fon-sorusturmasinda-son-durum-19-supheli-tutuklama-talebiyl.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:24:22+03:00</news:publication_date>
+      <news:title>Fon soruşturmasında son durum! 19 şüpheli tutuklama talebiyle sevk edildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/fon-skandalinda-yeni-gelisme-20-kisiye-tutuklama-talebi.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-23T19:24:00+03:00</news:publication_date>
-      <news:title>Fon skandalında yeni gelişme: 17 kişiye tutuklama talebi</news:title>
+      <news:title>Fon skandalında yeni gelişme: 20 kişiye tutuklama talebi</news:title>
     </news:news>
   </url>
   <url>
@@ -2323,6 +3104,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-uyusturucu-operasyonu-8-gozalti-ihlas-haber-aja.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:16:28+03:00</news:publication_date>
+      <news:title>İstanbul’da uyuşturucu operasyonu: 8 gözaltı İhlas Haber Ajansı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/kastamonuda-traktor-ile-otomobil-carpisti-yaralilar-var.html</loc>
     <news:news>
       <news:publication>
@@ -2342,17 +3134,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T19:15:00+03:00</news:publication_date>
       <news:title>İstanbul&#x27;da uyuşturucu operasyonu: 8 gözaltı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-fon-skandalinda-17-kisiye-tutuklama-talebi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:14:37+03:00</news:publication_date>
-      <news:title>Son Dakika | Fon skandalında 17 kişiye tutuklama talebi</news:title>
     </news:news>
   </url>
   <url>
@@ -2389,7 +3170,29 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/bilim/2026/09/23/avrupa-birligi-uzaya-erisimde-kapasite-acigiyla-karsi-karsiy.html</loc>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/kurtlar-vadisi-senaryosuna-dahil-olan-bayram-ozbek-kozinogl.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:14:00+03:00</news:publication_date>
+      <news:title>Kurtlar Vadisi senaryosuna dahil olan Bayram Özbek, Kozinoğlu soruşturmasında tutuklandı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-fon-skandalinda-20-kisiye-tutuklama-talebi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T19:14:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Fon skandalında 20 kişiye tutuklama talebi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/23/avrupa-birligi-uzaya-erisimde-kapasite-acigiyla-karsi-karsiy.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -2510,17 +3313,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/greek-prime-minister-mitsotakis-says-defense-spending-has-no.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T19:02:43+03:00</news:publication_date>
-      <news:title>Greek Prime Minister Mitsotakis Says Defense Spending Has Not Boosted Domestic Industry</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/23/toronto-raptorstan-kawhi-leonard-karari-resmen-duyuruldu.html</loc>
     <news:news>
       <news:publication>
@@ -2573,6 +3365,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:59:17+03:00</news:publication_date>
       <news:title>Çin ve Batman arasında yatırım, turizm ve eğitimde yeni iş birliği köprüsü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/israil-merkez-secim-komitesi-birlesik-arap-listesinin-seci.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:59:12+03:00</news:publication_date>
+      <news:title>İsrail Merkez Seçim Komitesi, Birleşik Arap Listesi’nin seçimlere katılmasını yasakladı</news:title>
     </news:news>
   </url>
   <url>
@@ -2686,14 +3489,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-kasif-kozinoglu-sorusturmasinda-yeni-tutuklama.html</loc>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/israilde-filistinlileri-temsil-eden-partiye-secimlere-katil.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T18:51:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | Kaşif Kozinoğlu soruşturmasında yeni tutuklama! Bayram Özbek cezaevine gönderildi</news:title>
+      <news:publication_date>2026-09-23T18:50:00+03:00</news:publication_date>
+      <news:title>İsrail&#x27;de Filistinlileri temsil eden partiye seçimlere katılma yasağı</news:title>
     </news:news>
   </url>
   <url>
@@ -2774,28 +3577,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/okul-onunde-pompali-tufekle-gezen-2-supheli-yakalandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:42:39+03:00</news:publication_date>
-      <news:title>Okul önünde pompalı tüfekle gezen 2 şüpheli yakalandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/dogu-perincek-kasif-kozinoglu-sorusturmasinda-bilgi-sahibi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:42:39+03:00</news:publication_date>
-      <news:title>Doğu Perinçek, Kaşif Kozinoğlu soruşturmasında &#x27;bilgi sahibi&#x27; sıfatıyla ifade verdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/23/birinci-basamak-saglik-sisteminin-iyilestirilmesi-daha-yali.html</loc>
     <news:news>
       <news:publication>
@@ -2807,14 +3588,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/ito-baskani-avdagicten-kuresel-ticaret-mesaji-turkiye-yeni.html</loc>
+    <loc>https://nearadin.net/gundem/2026/09/23/kasif-kozinoglu-sorusturmasinda-dogu-perincekin-ifadesi-ali.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
       <news:publication_date>2026-09-23T18:42:00+03:00</news:publication_date>
-      <news:title>İTO Başkanı Avdagiç&#x27;ten küresel ticaret mesajı: Türkiye yeni dönemde büyük avantaja sahip</news:title>
+      <news:title>Kaşif Kozinoğlu soruşturmasında Doğu Perinçek’in ifadesi alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -2826,17 +3607,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:40:55+03:00</news:publication_date>
       <news:title>23 gözaltı! Yatırım vaadi ile 14 milyon TL dolandırdılar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/imza-torenine-baskan-erdogan-da-katildi-thy-boeingden-150.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:40:54+03:00</news:publication_date>
-      <news:title>İmza törenine Başkan Erdoğan da katıldı! THY, Boeing&#x27;den 150 adet uçak satın alacak</news:title>
     </news:news>
   </url>
   <url>
@@ -2961,17 +3731,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/23/asiad-20-vietnam-spor-heyeti-bir-bronz-madalya-daha-kazandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:33:07+03:00</news:publication_date>
-      <news:title>ASIAD 20: Vietnam Spor Heyeti Bir Bronz Madalya Daha Kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/zam/2026/09/23/ucak-bileti-fiyatlarina-rekor-zam-kapida-dev-havayolundan-y.html</loc>
     <news:news>
       <news:publication>
@@ -3013,6 +3772,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:31:55+03:00</news:publication_date>
       <news:title>KAP *** LİMAK DOĞU ANADOLU ÇİMENTO SANAYİ VE TİCARET A.Ş. *** LMKDC *** Payların Geri Alınmasına İlişkin Bildirim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/hisseler/2026/09/23/citi-burberrynin-hisse-hedefini-dusurdu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:31:15+03:00</news:publication_date>
+      <news:title>Citi, Burberry’nin hisse hedefini düşürdü</news:title>
     </news:news>
   </url>
   <url>
@@ -3071,17 +3841,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/baeden-iranli-bank-melliye-finansal-yaptirim.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:27:04+03:00</news:publication_date>
-      <news:title>BAE&#x27;den İranlı Bank Melli&#x27;ye finansal yaptırım</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/zam/2026/09/23/simidin-ardindan-caya-zam-talebi-de-reddedildi.html</loc>
     <news:news>
       <news:publication>
@@ -3137,6 +3896,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/teknoloji/2026/09/23/samsung-tv-sahipleri-dikkat-kanal-sorunu-sonrasi-tazminat-c.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:24:52+03:00</news:publication_date>
+      <news:title>Samsung TV sahipleri dikkat! Kanal sorunu sonrası tazminat çağrısı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/sanayi/2026/09/23/defense-industry-academy-explores-digital-twins-for-future-r.html</loc>
     <news:news>
       <news:publication>
@@ -3145,6 +3915,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:24:31+03:00</news:publication_date>
       <news:title>Defense Industry Academy Explores Digital Twins for Future-Ready Defense Systems</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/23/eski-motogp-galibi-2026-bagger-dunya-kupasi-sampiyonlugunu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:24:21+03:00</news:publication_date>
+      <news:title>Eski MotoGP Galibi, 2026 Bagger Dünya Kupası Şampiyonluğunu Kıl Payı Kaçırdı</news:title>
     </news:news>
   </url>
   <url>
@@ -3167,6 +3948,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:23:42+03:00</news:publication_date>
       <news:title>Toronto, Kawhi Leonard ile sözleşme uzattı! - Son Dakika Basketbol Haberleri - HT Spor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/23/abdyi-tehdit-etti-sizi-de-vururuz.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:23:00+03:00</news:publication_date>
+      <news:title>ABD&#x27;yi tehdit etti: Sizi de vururuz</news:title>
     </news:news>
   </url>
   <url>
@@ -3332,17 +4124,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:15:00+03:00</news:publication_date>
       <news:title>Ankara&#x27;da CHP&#x27;den 7 belediye başkanı istifa etti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/zeytinburnunda-minibus-ile-otomobil-carpisti-1-kiz-cocugu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:14:59+03:00</news:publication_date>
-      <news:title>Zeytinburnu&#x27;nda minibüs ile otomobil çarpıştı; 1 kız çocuğu yaralanıp hastaneye kaldırıldı</news:title>
     </news:news>
   </url>
   <url>
@@ -3599,17 +4380,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/24-eylul-persembe-yengec-burcu-gunluk-saglik-burc-yorumu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T18:01:40+03:00</news:publication_date>
-      <news:title>24 Eylül Perşembe Yengeç Burcu Günlük Sağlık Burç Yorumu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/23/24-eylul-persembe-aslan-burcu-gunluk-saglik-burc-yorumu.html</loc>
     <news:news>
       <news:publication>
@@ -3629,6 +4399,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T18:01:40+03:00</news:publication_date>
       <news:title>24 Eylül Perşembe Boğa Burcu Günlük Sağlık Burç Yorumu</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/saglik/2026/09/23/24-eylul-persembe-yengec-burcu-gunluk-saglik-burc-yorumu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T18:01:40+03:00</news:publication_date>
+      <news:title>24 Eylül Perşembe Yengeç Burcu Günlük Sağlık Burç Yorumu</news:title>
     </news:news>
   </url>
   <url>
@@ -3764,17 +4545,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/23/fenerbahce-spor-kulubu-sk.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:54:28+03:00</news:publication_date>
-      <news:title>Fenerbahçe Spor Kulübü SK</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/23/trt-spor-frekans-bilgileri-ve-yayin-akisi.html</loc>
     <news:news>
       <news:publication>
@@ -3808,6 +4578,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/pamukkalede-secim-vaadi-gercek-oldu-aktepe-kapali-pazar-ye.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:53:16+03:00</news:publication_date>
+      <news:title>Pamukkale’de seçim vaadi gerçek oldu: Aktepe Kapalı Pazar Yeri hizmete açıldı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/istanbul-haber/2026/09/23/bagcilarda-pes-dedirten-goruntu-kamyon-kasasinda-3-kisilik.html</loc>
     <news:news>
       <news:publication>
@@ -3816,6 +4597,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:52:00+03:00</news:publication_date>
       <news:title>Bağcılar’da pes dedirten görüntü: Kamyon kasasında 3 kişilik yolculuk</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/israilde-raam-partisine-secim-engeli-gozler-yuksek-mahkem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:52:00+03:00</news:publication_date>
+      <news:title>İsrail&#x27;de Raam Partisi&#x27;ne seçim engeli: Gözler Yüksek Mahkeme&#x27;de</news:title>
     </news:news>
   </url>
   <url>
@@ -3838,6 +4630,17 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:51:32+03:00</news:publication_date>
       <news:title>Huawei&#x27;den Watch GT 7 serisi ile temassız ödeme imkanı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/karmod-fransada-celik-villa-konut-projeleri-gerceklestiriyo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:51:32+03:00</news:publication_date>
+      <news:title>Karmod Fransa&#x27;da çelik villa konut projeleri gerçekleştiriyor</news:title>
     </news:news>
   </url>
   <url>
@@ -3929,17 +4732,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/zonguldak-sapcada-kontrolden-cikan-otomobil-takla-atip-alev.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:47:00+03:00</news:publication_date>
-      <news:title>Zonguldak Sapça&#x27;da kontrolden çıkan otomobil takla atıp alev aldı, 1 kişi yaralandı</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/otomobil/2026/09/23/park-halindeki-otomobil-yandi.html</loc>
     <news:news>
       <news:publication>
@@ -3981,17 +4773,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:45:55+03:00</news:publication_date>
       <news:title>Erzurum&#x27;da park halindeyken yanan otomobil kullanılamaz hale geldi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/filmler/2026/09/23/booktok-fenomeni-romantik-film-the-love-hypothesis-bugun-y.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:45:31+03:00</news:publication_date>
-      <news:title>BookTok Fenomeni Romantik Film &quot;The Love Hypothesis&quot; Bugün Yayında: Hangi Platformdan İzlenir?</news:title>
     </news:news>
   </url>
   <url>
@@ -4047,17 +4828,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:44:04+03:00</news:publication_date>
       <news:title>Eğitim uçağı düştü! İki pilotun mucize kurtuluşu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/12-bin-isik-yili-uzakliktaki-gizem-cozuldu-jeti-dogrudan-du.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:44:00+03:00</news:publication_date>
-      <news:title>12 bin ışık yılı uzaklıktaki gizem çözüldü: Jeti doğrudan Dünya&#x27;ya bakan ilk &quot;mikroblazar&quot; saptandı</news:title>
     </news:news>
   </url>
   <url>
@@ -4138,17 +4908,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/izmir-haber/2026/09/23/manisada-uyusturucu-operasyonuna-tutuklama.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:40:00+03:00</news:publication_date>
-      <news:title>Manisa&#x27;da uyuşturucu operasyonuna tutuklama</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/dunya/2026/09/23/diyarbakir-buyuksehir-belediyesi-esbaskani-bucak-diyarbaki.html</loc>
     <news:news>
       <news:publication>
@@ -4157,17 +4916,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:39:14+03:00</news:publication_date>
       <news:title>Diyarbakır Büyükşehir Belediyesi Eşbaşkanı Bucak: &quot;Diyarbakır’ın dünya mirasını korumak için eylem planı şart&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/savunma-sanayii-akademi-bu-hafta-sizler-icin-belirsiz-bir-g.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:38:14+03:00</news:publication_date>
-      <news:title>Savunma Sanayii Akademi bu hafta sizler için “Belirsiz Bir Geleceğe Doğru İlerlemek: Dijital İkizler” konusunu ele aldı.</news:title>
     </news:news>
   </url>
   <url>
@@ -4248,17 +4996,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/uzmanlardan-kritik-uyari-yaslilarda-enfeksiyon-klasik-belir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:33:00+03:00</news:publication_date>
-      <news:title>Uzmanlardan kritik uyarı: Yaşlılarda enfeksiyon klasik belirtilerle ortaya çıkmayabilir</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/sanayi/2026/09/23/tuik-acikladi-sanayi-uretici-fiyat-endeksi-agustosta-artti.html</loc>
     <news:news>
       <news:publication>
@@ -4292,17 +5029,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/dikmen-saglik-merkezi-torenle-hizmete-aciliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:31:00+03:00</news:publication_date>
-      <news:title>Dikmen Sağlık Merkezi törenle hizmete açılıyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/dunya/2026/09/23/new-york-borsasi-dususle-acildi.html</loc>
     <news:news>
       <news:publication>
@@ -4311,6 +5037,28 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:30:00+03:00</news:publication_date>
       <news:title>New York borsası düşüşle açıldı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/abdde-imalat-sanayi-pmi-eylulde-beklentileri-asti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:28:46+03:00</news:publication_date>
+      <news:title>ABD&#x27;de imalat sanayi PMI eylülde beklentileri aştı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/sanayi/2026/09/23/iso-baskani-bahcivandan-sanayi-icin-uretim-ve-finansman-uya.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:28:17+03:00</news:publication_date>
+      <news:title>İSO Başkanı Bahçıvan’dan sanayi için üretim ve finansman uyarısı</news:title>
     </news:news>
   </url>
   <url>
@@ -4336,6 +5084,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/secim-haberleri/2026/09/23/filistinde-unutulmus-bir-dava-secim.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T17:27:31+03:00</news:publication_date>
+      <news:title>Filistin’de unutulmuş bir dava: Seçim</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/gundem/2026/09/23/kusadasi-ve-bodruma-dev-gemilerle-turist-akini.html</loc>
     <news:news>
       <news:publication>
@@ -4344,17 +5103,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:27:24+03:00</news:publication_date>
       <news:title>Kuşadası ve Bodrum&#x27;a dev gemilerle turist akını</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/hisseler/2026/09/23/citi-burberrynin-hisse-hedefini-dusurdu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:27:10+03:00</news:publication_date>
-      <news:title>Citi, Burberry’nin hisse hedefini düşürdü</news:title>
     </news:news>
   </url>
   <url>
@@ -4369,17 +5117,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/pezeskiyan-bmde-konustu-diz-cokmedik-basimizi-egmeyecegiz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:26:00+03:00</news:publication_date>
-      <news:title>Pezeşkiyan BM&#x27;de konuştu: Diz çökmedik, başımızı eğmeyeceğiz</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/spor/2026/09/23/turkiye-italya-macinin-genel-bilet-satisi-basladi.html</loc>
     <news:news>
       <news:publication>
@@ -4388,798 +5125,6 @@
       </news:publication>
       <news:publication_date>2026-09-23T17:26:00+03:00</news:publication_date>
       <news:title>Türkiye-İtalya maçının genel bilet satışı başladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/23/phaselis-festivali-16-kez-kapilarini-acti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:26:00+03:00</news:publication_date>
-      <news:title>Phaselis Festivali 16. Kez Kapılarını Açtı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/23/alltours-adults-only-otel-portfoyunu-genisletiyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:25:35+03:00</news:publication_date>
-      <news:title>Alltours Adults-Only Otel Portföyünü Genişletiyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/23/vimeodan-wetransfera-italyan-bending-spoonsun-teknoloji.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:25:31+03:00</news:publication_date>
-      <news:title>Vimeo’dan WeTransfer’a: İtalyan Bending Spoons’un teknoloji imparatorluğu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/23/son-dakika-spor-haberi-emmanuel-emenikeden-fenerbahceye-zi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:25:29+03:00</news:publication_date>
-      <news:title>Son Dakika Spor Haberi | Emmanuel Emenikeden Fenerbahçeye ziyaret</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/23/nokianin-gelmis-gecmis-en-tuhaf-10-telefonu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:25:07+03:00</news:publication_date>
-      <news:title>Nokia&#x27;nın Gelmiş Geçmiş En Tuhaf 10 Telefonu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/23/galatasarayda-gorev-degisikligi-mehmet-cibara-acikladi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:25:00+03:00</news:publication_date>
-      <news:title>Galatasaray&#x27;da görev değişikliği! Mehmet Cibara açıkladı...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/23/fenerbahceye-buyuk-mujde-milli-ara-sonrasi-formaya-kavusuy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:24:46+03:00</news:publication_date>
-      <news:title>Fenerbahçe&#x27;ye büyük müjde: Milli ara sonrası formaya kavuşuyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/bagcilarda-kamyon-uzerinde-tehlikeli-yolculuk-kameraya-yans.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:23:15+03:00</news:publication_date>
-      <news:title>Bağcılar’da kamyon üzerinde tehlikeli yolculuk kameraya yansıdı İhlas Haber Ajansı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/bahar-feyzandan-erdogan-yorumu-bir-dunya-lideri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:23:00+03:00</news:publication_date>
-      <news:title>Bahar Feyzan’dan Erdoğan yorumu: “Bir dünya lideri”</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/ttbden-medula-cagrisi-hekimlere-getirilen-kontrol-ve-on.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:23:00+03:00</news:publication_date>
-      <news:title>TTB’den &#x27;MEDULA&#x27; çağrısı: &#x27;Hekimlere getirilen kontrol ve onay yükümlülüğü sonlandırılsın&#x27;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/23/samsungun-akilli-buzdolaplari-yazilim-guncellemesi-sonrasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:22:58+03:00</news:publication_date>
-      <news:title>Samsung’un Akıllı Buzdolapları Yazılım Güncellemesi Sonrası Çöktü!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/zam/2026/09/23/iphone-18-pro-daha-yeni-cikti-zam-ihtimali-kapiyi-caldi-bu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:22:52+03:00</news:publication_date>
-      <news:title>iPhone 18 Pro Daha Yeni Çıktı, Zam İhtimali Kapıyı Çaldı: Bu Kez Faturanın Adresi Samsung!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-fibabanka-tahvil-ihrac-limitini-20-milyar-tly.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:22:02+03:00</news:publication_date>
-      <news:title>[Son Dakika] Fibabanka, tahvil ihraç limitini 20 milyar TL’ye çıkarıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/baran-kobiler-iklim-donusumune-finansman-destegiyle-dahil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:22:00+03:00</news:publication_date>
-      <news:title>Baran: KOBİ’ler iklim dönüşümüne finansman desteğiyle dahil edilmeli</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/23/bitcoinde-87-bin-dolar-sonrasi-geri-cekilme-84-bin-dolarin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:22:00+03:00</news:publication_date>
-      <news:title>Bitcoin&#x27;de 87 bin dolar sonrası geri çekilme: 84 bin doların altına geriledi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/yeni-acil-saglik-hizmet-istasyonu-hizmete-girdi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:21:00+03:00</news:publication_date>
-      <news:title>Yeni Acil Sağlık hizmet İstasyonu Hizmete Girdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/ogretmenlerin-saglik-hizmetlerine-erisiminin-desteklenmesine.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:20:20+03:00</news:publication_date>
-      <news:title>ÖĞRETMENLERİN SAĞLIK HİZMETLERİNE ERİŞİMİNİN DESTEKLENMESİNE YÖNELİK İŞ BİRLİĞİ PROTOKOLÜ</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/izmir-haber/2026/09/23/ciglide-kazi-kazandan-20-milyon-tl-cikti-talihli-ikramiy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:20:00+03:00</news:publication_date>
-      <news:title>Çiğli&#x27;de &#x27;Kazı Kazan&#x27;dan 20 milyon TL çıktı: Talihli ikramiyeyi 20 bin TL sandı!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/drone-kalkani-ihrac-edilmeye-hazirlaniyor-2-ulke-talip-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:19:00+03:00</news:publication_date>
-      <news:title>Drone Kalkanı ihraç edilmeye hazırlanıyor! 2 ülke talip oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/abdde-konut-kredisi-faizleri-16-ayin-en-yuksek-seviyesine-c.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:18:42+03:00</news:publication_date>
-      <news:title>ABD&#x27;de konut kredisi faizleri 16 ayın en yüksek seviyesine çıktı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/hayal-edin-gercek-oluyor-demisti-hande-ercelden-dikkat.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:18:04+03:00</news:publication_date>
-      <news:title>&#x27;Hayal edin, gerçek oluyor&#x27; demişti: Hande Erçel’den dikkat çeken yanıt</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/2000-sonrasina-kademeli-emeklilik-son-dakika-geldi-mi-yas-p.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:18:00+03:00</news:publication_date>
-      <news:title>2000 sonrasına Kademeli emeklilik son dakika geldi mi? Yaş prim şartı için kritik teklif</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/23/mia-teknolojiden-iki-yeni-guvenlik-projesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:17:39+03:00</news:publication_date>
-      <news:title>MİA Teknoloji’den İki Yeni Güvenlik Projesi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/tusas-hurjet-ucagi-icin-guney-koreli-ortak-secti-savunma.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:17:39+03:00</news:publication_date>
-      <news:title>TUSAŞ, HÜRJET Uçağı için Güney Koreli Ortak Seçti - SAVUNMA SANAYİ</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/cumhurbaskani-yardimcisi-yilmaz-istanbul-ticaret-kongresin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:17:34+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Yardımcısı Yılmaz, İstanbul Ticaret Kongresi’nde konuştu:</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/iran-hurmuz-bogazi-acilmadan-once-ilettigimiz-7-sart-uygula.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:17:00+03:00</news:publication_date>
-      <news:title>İran: Hürmüz Boğazı açılmadan önce ilettiğimiz 7 şart uygulanmalı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/ihale-dergisi-ihale-haberleri-ihale-sonuclari-ihale-bu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:16:13+03:00</news:publication_date>
-      <news:title>İhale Dergisi | İhale Haberleri | İhale Sonuçları | İhale Bülteni</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/son-dakika-iran-cumhurbaskani-pezeskiyan-bmde-iran-yikilm.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:16:03+03:00</news:publication_date>
-      <news:title>Son dakika: İran Cumhurbaşkanı Pezeşkiyan BM&#x27;de: İran yıkılmayacak</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbulda-kayip-olarak-aranan-kisi-hirsizlik-sucundan-tu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:16:01+03:00</news:publication_date>
-      <news:title>İstanbul’da kayıp olarak aranan kişi &#x27;Hırsızlık&#x27; suçundan tutuklandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/izmir-haber/2026/09/23/marble-izmir-ve-marmomac-guclerini-birlestiriyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:15:20+03:00</news:publication_date>
-      <news:title>Marble İzmir ve Marmomac güçlerini birleştiriyor!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/zam/2026/09/23/2027-asgari-ucret-icin-hesaplar-basladi-5-zam-orani-one-cik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:15:13+03:00</news:publication_date>
-      <news:title>2027 asgari ücret için hesaplar başladı: 5 zam oranı öne çıkıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/milli-boksor-yasar-avrupa-sampiyonasinda-finale-yukseldi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:15:00+03:00</news:publication_date>
-      <news:title>Milli boksör Yaşar, Avrupa Şampiyonası&#x27;nda finale yükseldi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/trumptan-komsusuna-gocmen-isyani.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:15:00+03:00</news:publication_date>
-      <news:title>Trump&#x27;tan komşusuna göçmen isyanı!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/iran-cumhurbaskani-pezeskiyan-bmde-konustu-cocuklarimizi-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:14:51+03:00</news:publication_date>
-      <news:title>İran Cumhurbaşkanı Pezeşkiyan BM&#x27;de konuştu: Çocuklarımızı ABD öldürdü</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/ikinci-el-elektrikli-otomobil-fiyatlarinda-buyuk-dusus-sifi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:14:00+03:00</news:publication_date>
-      <news:title>İkinci el elektrikli otomobil fiyatlarında büyük düşüş: Sıfır ile fark açılıyor...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/pezeskiyan-abd-ve-israil-okullarimizi-vurdu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:14:00+03:00</news:publication_date>
-      <news:title>Pezeşkiyan: ABD ve İsrail okullarımızı vurdu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/pezeskiyan-bmde-diplomasiye-haziriz-ancak-savastan-korkmuy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:14:00+03:00</news:publication_date>
-      <news:title>Pezeşkiyan BM&#x27;de &quot;diplomasiye hazırız ancak savaştan korkmuyoruz&quot; mesajı verdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/izmir-haber/2026/09/23/soyer-cezaevinden-celiskiyi-anlatti-onlar-ozgur-biz-tut.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:14:00+03:00</news:publication_date>
-      <news:title>Soyer, cezaevinden &#x27;çelişki&#x27;yi anlattı: Onlar özgür, biz tutuklu!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/istanbul-haber/2026/09/23/istanbul-sile-su-kesintisi-23-24-eylul-iski-sile-su-kesinti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:13:58+03:00</news:publication_date>
-      <news:title>İstanbul ŞİLE su kesintisi! 23-24 Eylül İSKİ Şile su kesintisi ne zaman bitecek, sular ne zaman gelecek?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/elektronik-bilisim-ve-otomasyon-arastirma-enstitusunun-yen.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:13:52+03:00</news:publication_date>
-      <news:title>Elektronik, Bilişim ve Otomasyon Araştırma Enstitüsü&#x27;nün yeni Direktörünün atama kararının sunulması.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/son-dakika-pezeskiyan-bm-kursusunden-sesleniyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:12:00+03:00</news:publication_date>
-      <news:title>Son dakika... Pezeşkiyan BM Kürsüsünden sesleniyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/en-agir-kalp-krizlerinden-birini-gecirmisti-cem-yilmazdan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:11:21+03:00</news:publication_date>
-      <news:title>En ağır kalp krizlerinden birini geçirmişti! Cem Yılmaz&#x27;dan oto sanayi paylaşımı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/bireylerin-kimliklerinin-belirlenmesinden-tum-ekonomi-icin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:09:52+03:00</news:publication_date>
-      <news:title>Bireylerin kimliklerinin belirlenmesinden, tüm ekonomi için bir kimliklendirme altyapısının oluşturulmasına kadar.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ankara-haber/2026/09/23/ankarada-supheli-olum-calisir-vaziyetteki-otomobilde-2-can.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:07:17+03:00</news:publication_date>
-      <news:title>Ankara&#x27;da şüpheli ölüm: Çalışır vaziyetteki otomobilde 2 cansız beden bulundu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/mobile-video-haber-detay.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:07:00+03:00</news:publication_date>
-      <news:title>Mobile-Video Haber Detay</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/yaslilarda-olum-riskini-saptayacak-kritik-soru-belirlendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:06:39+03:00</news:publication_date>
-      <news:title>Yaşlılarda ölüm riskini saptayacak kritik soru belirlendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/mohamed-salahin-gundem-olan-fotografinin-ardindan-belediyed.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:06:16+03:00</news:publication_date>
-      <news:title>Mohamed Salah’ın gündem olan fotoğrafının ardından belediyeden flaş hamle</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bilim/2026/09/23/24-ulkenin-bilim-insanlari-nevsehirde-optima-toplantisi-ba.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:06:00+03:00</news:publication_date>
-      <news:title>24 ülkenin bilim insanları Nevşehir&#x27;de: OPTIMA toplantısı başladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/ulasimin-elektrifikasyonu-sadece-otomobil-yukseltmesinden-c.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:05:50+03:00</news:publication_date>
-      <news:title>Ulaşımın elektrifikasyonu: Sadece otomobil yükseltmesinden çok daha fazlası.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bilim/2026/09/23/cude-duzenlenen-gazze-icin-bilim-kafe-etkinliginde-egitim-z.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:05:43+03:00</news:publication_date>
-      <news:title>ÇÜ&#x27;de düzenlenen Gazze İçin Bilim Kafe etkinliğinde eğitim zorlukları konuşuldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/hisseler/2026/09/23/borsa-istanbul-detayli-hisse-analizleri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:05:28+03:00</news:publication_date>
-      <news:title>Borsa İstanbul - Detaylı Hisse Analizleri</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/23/cubukta-atm-onunde-sir-olum-otomobilde-2-kisinin-cansiz-be.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:04:37+03:00</news:publication_date>
-      <news:title>Çubuk&#x27;ta ATM önünde sır ölüm! Otomobilde 2 kişinin cansız bedeni bulundu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/saglik/2026/09/23/karabuk-5-ilin-saglik-zirvesine-ev-sahipligi-yapti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:04:29+03:00</news:publication_date>
-      <news:title>Karabük, 5 İlin Sağlık Zirvesine Ev Sahipliği Yaptı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/zam/2026/09/23/samsunda-simidin-ardindan-caya-zam-talebi-de-reddedildi-ihl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:04:10+03:00</news:publication_date>
-      <news:title>Samsun’da simidin ardından çaya zam talebi de reddedildi İhlas Haber Ajansı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/sanayi/2026/09/23/doguda-dev-sanayi-hamlesi-200-bin-kisiye-istihdam-hedeflen.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:04:00+03:00</news:publication_date>
-      <news:title>Doğu’da dev sanayi hamlesi: 200 bin kişiye istihdam hedefleniyor...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/beysehirde-otomobil-sarampole-devrildi-1-yarali.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:04:00+03:00</news:publication_date>
-      <news:title>Beyşehir’de otomobil şarampole devrildi: 1 yaralı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/23/nasil-bir-ekonomi-tv-bugun-yasananlari-dunden-soyledi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:03:00+03:00</news:publication_date>
-      <news:title>Nasıl Bir Ekonomi TV Bugün Yaşananları Dünden Söyledi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/23/royal-caribbean-group-sandals-resortse-ortak-oldu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:03:00+03:00</news:publication_date>
-      <news:title>Royal Caribbean Group, Sandals Resorts’e ortak oldu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bilim/2026/09/23/abdli-bilim-insanlarindan-el-nino-raporu-asiri-sicaklar-9.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:02:20+03:00</news:publication_date>
-      <news:title>ABD’li bilim insanlarından El Nino raporu: Aşırı sıcaklar 9 ayda 451 bin can alabilir</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/23/son-dakika-spor-haberi-gedson-fernandes-trabzonspora-mi-g.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:01:52+03:00</news:publication_date>
-      <news:title>Son Dakika Spor Haberi | Gedson Fernandes, Trabzonspora mı geliyor? Açıkladılar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/otomobil-tutkunlarinin-yeni-adresi-dunya-markasi-ziebart-l.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:01:49+03:00</news:publication_date>
-      <news:title>Otomobil tutkunlarının yeni adresi: Dünya markası Ziebart, Lefkoşa&#x27;da İhlas Haber Ajansı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/ibbye-yonelik-yolsuzluk-davasi-durusma-ertelendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:01:47+03:00</news:publication_date>
-      <news:title>İBB&#x27;ye yönelik &#x27;Yolsuzluk&#x27; davası: Duruşma ertelendi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bilim/2026/09/23/hung-yendeki-ogrenciler-arasinda-girisimcilik-ve-yenilikcil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:01:39+03:00</news:publication_date>
-      <news:title>Hung Yen&#x27;deki öğrenciler arasında girişimcilik ve yenilikçiliği teşvik etmek.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/23/hue-sehri-yilda-800000-ziyaretci-hedefleyen-bir-tibbi-turi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:01:39+03:00</news:publication_date>
-      <news:title>Hue şehri, yılda 800.000 ziyaretçi hedefleyen bir tıbbi turizm geliştirme planı hazırlıyor.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/dunya-avsarlar-derneginden-mahmut-arikana-ziyaret.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:49+03:00</news:publication_date>
-      <news:title>Dünya Avşarlar Derneği&#x27;nden Mahmut Arıkan&#x27;a ziyaret</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/hisseler/2026/09/23/hsbc-hisse-senetlerinde-maksimum-yukseliste-teknolojiye-yat.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:45+03:00</news:publication_date>
-      <news:title>HSBC hisse senetlerinde maksimum yükselişte, teknolojiye yatırım yapın diyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/23/vatandaslar-fark-etti-iki-kisi-otomobilde-olu-bulundu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:27+03:00</news:publication_date>
-      <news:title>Vatandaşlar fark etti: İki kişi otomobilde ölü bulundu</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/bitcoin/2026/09/23/avrupadan-kripto-guvenligine-kuantum-uyarisi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:18+03:00</news:publication_date>
-      <news:title>Avrupa&#x27;dan kripto güvenliğine kuantum uyarısı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/otomobil/2026/09/23/kontrolden-cikan-otomobil-takla-atti-1-yarali-ihlas-haber-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:15+03:00</news:publication_date>
-      <news:title>Kontrolden çıkan otomobil takla attı; 1 yaralı İhlas Haber Ajansı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/dunya/2026/09/23/kazakistanin-tarih-kaya-camileri-unesco-dunya-mirasi-list.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:00+03:00</news:publication_date>
-      <news:title>Kazakistan’ın tarihî kaya camileri, UNESCO Dünya Mirası Listesi’ne kaydedildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/turizm/2026/09/23/turizmde-2027-endisesi-gelecek-yili-cok-parlak-gormuyoruz.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T17:00:00+03:00</news:publication_date>
-      <news:title>Turizmde 2027 endişesi: Gelecek yılı çok parlak görmüyoruz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/hisseler/2026/09/23/kap-yapi-kredi-portfoy-karakoy-hisse-senedi-serbest-fon.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T16:59:13+03:00</news:publication_date>
-      <news:title>KAP *** YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON) *** KCP *** Portföy Dağılım Raporu</news:title>
     </news:news>
   </url>
 </urlset>
