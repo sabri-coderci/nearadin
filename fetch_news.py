@@ -693,6 +693,8 @@ def fetch_and_generate():
         "kar-tatili": {"name": "Kar Tatili", "url": "https://news.google.com/rss/search?q=kar+tatili&hl=tr&gl=TR&ceid=TR:tr"},
         "zam": {"name": "Zam", "url": "https://news.google.com/rss/search?q=zam&hl=tr&gl=TR&ceid=TR:tr"},
         "canli-maclar": {"name": "Canlı Maçlar", "url": "https://news.google.com/rss/search?q=canl%C4%B1+ma%C3%A7+izle&hl=tr&gl=TR&ceid=TR:tr"},
+         "secim-haberleri": {"name": "Seçim Haberleri", "url": "https://news.google.com/rss/search?q=se%C3%A7im&hl=tr&gl=TR&ceid=TR:tr"},
+        
     }
 
     
