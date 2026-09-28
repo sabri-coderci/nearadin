@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/istanbul-haber/2026/09/28/istanbulda-mac-izlenecek-mekanlar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:28:30+03:00</news:publication_date>
+      <news:title>İstanbul&#x27;da Maç İzlenecek Mekanlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/ekonomi/2026/09/28/borsa-ve-fon-oyunlarina-gecit-yok-baskan-erdogan-ekonomi-ku.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:24:10+03:00</news:publication_date>
+      <news:title>Borsa ve fon oyunlarına geçit yok: Başkan Erdoğan ekonomi kurmaylarını topluyor! Fonculara net mesaj</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/28/7-1lik-maglubiyetin-faturasi-24-saat-gecmeden-kesildi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:23:44+03:00</news:publication_date>
+      <news:title>7-1&#x27;lik mağlubiyetin faturası 24 saat geçmeden kesildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/28/kupa-voleyde-ilbank-aras-kargoyu-3-2-maglup-etti-mucadel.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:21:36+03:00</news:publication_date>
+      <news:title>Kupa Voley&#x27;de İlbank, Aras Kargo&#x27;yu 3-2 mağlup etti, mücadele 156 dakika sürdü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/28/son-dakika-milli-macta-tribunler-yikildi-montella-istifa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:17:00+03:00</news:publication_date>
+      <news:title>Son dakika | Milli maçta tribünler yıkıldı: Montella istifa</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/son-dakika/2026/09/28/uefa-uluslar-a-liginde-turkiye-italya-karsisinda-ilk-15-da.html</loc>
     <news:news>
       <news:publication>
@@ -35,6 +90,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/28/taskopru-spor-baskani-aslan-bakan-bak-ile-gorustu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T22:07:00+03:00</news:publication_date>
+      <news:title>Taşköprü Spor Başkanı Aslan, Bakan Bak ile görüştü</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/28/trump-teknoloji-devleriyle-yapay-zekada-denge-arayacak.html</loc>
     <news:news>
       <news:publication>
@@ -54,17 +120,6 @@
       </news:publication>
       <news:publication_date>2026-09-28T22:03:00+03:00</news:publication_date>
       <news:title>A Milli Futbol Takımı, İtalya maçına Bursa&#x27;da 4 değişiklikle başladı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/spor/2026/09/28/uluslar-a-liginde-a-milli-takimin-konugu-italya-futbol.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T22:02:00+03:00</news:publication_date>
-      <news:title>Uluslar A Ligi&#x27;nde A Milli Takım&#x27;ın konuğu İtalya - Futbol - Spor Haberleri</news:title>
     </news:news>
   </url>
   <url>
@@ -134,6 +189,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/son-dakika/2026/09/28/spk-dugmeye-basti-37-kisi-hakkinda-suc-duyurusu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T21:52:21+03:00</news:publication_date>
+      <news:title>SPK düğmeye bastı: 37 kişi hakkında suç duyurusu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/istanbul-haber/2026/09/28/iranli-havayolu-sirketinin-ucagina-istanbul-havalimaninda-h.html</loc>
     <news:news>
       <news:publication>
@@ -178,14 +244,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/spor/2026/09/28/turkiye-italya-macinda-ilk-duduk-caldi.html</loc>
+    <loc>https://nearadin.net/son-dakika/2026/09/28/son-dakika-komedyen-deniz-goktas-tahliye-edildi-88-gun-so.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-09-28T21:45:59+03:00</news:publication_date>
-      <news:title>Türkiye - İtalya maçında ilk düdük çaldı</news:title>
+      <news:publication_date>2026-09-28T21:47:00+03:00</news:publication_date>
+      <news:title>Son Dakika | Komedyen Deniz Göktaş tahliye edildi: 88 gün sonra cezaevinden çıkan komedyenden ilk açıklama</news:title>
     </news:news>
   </url>
   <url>
@@ -398,6 +464,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/spor/2026/09/28/canli-turkiye-0-0-italya.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T21:21:00+03:00</news:publication_date>
+      <news:title>CANLI | Türkiye 0-0 İtalya</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/spor/2026/09/28/galatasaray-super-ligde-kasimpasa-ile-karsilasacak-galat.html</loc>
     <news:news>
       <news:publication>
@@ -417,17 +494,6 @@
       </news:publication>
       <news:publication_date>2026-09-28T21:19:30+03:00</news:publication_date>
       <news:title>İçişleri Bakanı Mustafa Çiftçi&#x27;den &quot;Terörsüz Türkiye&quot; paylaşımı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/28/nilufer-belediye-baskani-ozdemir-turkiye-italya-maci-oncesi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T21:19:00+03:00</news:publication_date>
-      <news:title>Nilüfer Belediye Başkanı Özdemir, Türkiye-İtalya maçı öncesi takımları karşıladı</news:title>
     </news:news>
   </url>
   <url>
@@ -472,6 +538,17 @@
       </news:publication>
       <news:publication_date>2026-09-28T21:16:00+03:00</news:publication_date>
       <news:title>&quot;İki Dil Tek Dünya&quot; Kitabının Tanıtım ve İmza Günü</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/dunya/2026/09/28/dunya-ilac-devi-iki-ulkedeki-tesislerini-kapatiyor-yuzlerce.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T21:15:24+03:00</news:publication_date>
+      <news:title>Dünya ilaç devi iki ülkedeki tesislerini kapatıyor. Yüzlerce çalışan işsiz kalacak</news:title>
     </news:news>
   </url>
   <url>
@@ -717,17 +794,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/28/istanbula-kar-yagacak-mi-orhan-senden-dikkat-ceken-kis-ta.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:47:23+03:00</news:publication_date>
-      <news:title>İstanbul&#x27;a kar yağacak mı? Orhan Şen&#x27;den dikkat çeken kış tahmini</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/saglik/2026/09/28/filiz-besim-hasta-guvenligi-ve-saglik-calisanlari-secim-hes.html</loc>
     <news:news>
       <news:publication>
@@ -805,17 +871,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/28/elevenlabs-10-saniyelik-ses-kaydiyla-sesi-klonlayabiliyor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:43:59+03:00</news:publication_date>
-      <news:title>ElevenLabs 10 saniyelik ses kaydıyla sesi klonlayabiliyor</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/teknoloji/2026/09/28/bilim-teknoloji-ve-dijital-donusum-hedeflerine-ulasmaya-kar.html</loc>
     <news:news>
       <news:publication>
@@ -860,7 +915,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/28/canli-anlatim-turkiye-italya-uefa-uluslar-ligi-2-hafta.html</loc>
+    <loc>https://nearadin.net/spor/2026/09/28/canli-anlatim-turkiye-italya-uefa-uluslar-ligi-2-hafta.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
@@ -989,61 +1044,6 @@
       </news:publication>
       <news:publication_date>2026-09-28T20:23:42+03:00</news:publication_date>
       <news:title>Altı Üstü İstanbul neden yok? Yeni bölüm ne zaman yayınlanacak?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/teknoloji/2026/09/28/mobisad-imex-2026-istanbulda-teknoloji-dunyasini-bulusturac.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:22:25+03:00</news:publication_date>
-      <news:title>MOBİSAD-IMEX 2026 İstanbul&#x27;da Teknoloji Dünyasını Buluşturacak</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/28/yemende-taiz-ve-lahic-cephelerinde-catismalar-siddetlendi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:20:00+03:00</news:publication_date>
-      <news:title>Yemen&#x27;de Taiz ve Lahic cephelerinde çatışmalar şiddetlendi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/ekonomi/2026/09/28/cumhurbaskani-erdogan-yarin-ekonomi-kurmaylariyla-bir-araya.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:19:44+03:00</news:publication_date>
-      <news:title>Cumhurbaşkanı Erdoğan: Yarın ekonomi kurmaylarıyla bir araya geleceğim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/gundem/2026/09/28/baskan-erdogandan-fon-sorusturmasinda-kararlilik-mesaji-hu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:18:52+03:00</news:publication_date>
-      <news:title>Başkan Erdoğan&#x27;dan fon soruşturmasında kararlılık mesajı: Hukuk önünde hesap verecekler</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/09/28/istanbulda-trafik-yogunlugu-yuzde-80e-ulasti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28T20:15:59+03:00</news:publication_date>
-      <news:title>İstanbul&#x27;da trafik yoğunluğu yüzde 80&#x27;e ulaştı</news:title>
     </news:news>
   </url>
 </urlset>
