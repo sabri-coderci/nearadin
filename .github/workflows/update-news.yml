@@ -2,7 +2,7 @@ name: Haberleri Güncelle
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # her 15 dakikada bir (GitHub bazen birkaç dakika geciktirir)
+    - cron: "*/5 * * * *"   # her 15 dakikada bir (GitHub bazen birkaç dakika geciktirir)
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
 
 permissions:
