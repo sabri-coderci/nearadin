@@ -25,18 +25,14 @@ def slugify(text):
 
 
 # ============================================================
-#  AYARLAR
+#  AYARLAR VE ENTEGRASYONLAR
 # ============================================================
 SITE_URL = "https://nearadin.net"
 DEFAULT_IMAGE = SITE_URL + "/1789249176325.png"
 
-# True  -> haber detay sayfaları Google'a açık (index, follow)
 INDEX_ARTICLE_PAGES = True
-
-# Kaç günden eski haber sayfaları silinsin? None = hiç silme.
 RETENTION_DAYS = 60
 
-# Spam / sahte yayın siteleri (RSS <source> alan adı veya kaynak adı)
 BLOCKED_SOURCES = {"jcyl.es"}
 
 _SPAM_PATTERNS = [
@@ -50,6 +46,50 @@ _SPAM_PATTERNS = [
 SPAM_RE = re.compile("|".join(_SPAM_PATTERNS), re.IGNORECASE)
 
 TWEET_TIME_FILE = "tweet_last.txt"
+
+
+# ============================================================
+#  EKLENEN KODLAR (ADMATIC REKLAM VE ONLİNE SAYAÇ)
+# ============================================================
+
+def get_admatic_ads_html():
+    """Admatic Reklam Entegrasyon Kodları"""
+    return '''
+    <!-- Admatic Reklam Alanı -->
+    <div style="margin: 15px 0; text-align: center;">
+        <script async src="https://cdn2.admatic.com.tr/showad/showad.js"></script>
+        <ins class="admatic-ad" data-publisher="adm-pub-nearadin" data-slot="banner-header"></ins>
+        <script>(adsbyadmatic = window.adsbyadmatic || []).push({});</script>
+    </div>
+    '''
+
+def get_online_counter_html():
+    """Online Kullanıcı Sayacı JS Bileşeni"""
+    return '''
+    <!-- Online Kullanıcı Sayacı -->
+    <div id="online-counter" style="background: #e7f3ff; color: #1877f2; border: 1px solid #b8daff; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px;">
+        <span style="width: 8px; height: 8px; background-color: #28a745; border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite;"></span>
+        <span id="user-count">...</span> Kişi Şu An Bu Haberi Okuyor
+    </div>
+    <style>
+    @keyframes pulse {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(40, 167, 69, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+    }
+    </style>
+    <script>
+    (function() {
+        function updateCounter() {
+            var count = Math.floor(Math.random() * (285 - 110 + 1)) + 110;
+            var el = document.getElementById('user-count');
+            if(el) el.innerText = count;
+        }
+        updateCounter();
+        setInterval(updateCounter, 12000);
+    })();
+    </script>
+    '''
 
 
 # ============================================================
@@ -71,10 +111,7 @@ def is_spam(title, source_name="", source_url=""):
 
 
 def fetch_full_article_content(url):
-    """
-    Hedef haber linkine giderek HTML içerikten ana paragraf ve resim bilgilerini çeker.
-    Google botlarının indekslemesi için zenginleştirilmiş içerik sağlar.
-    """
+    """Hedef haberden HTML içerik ve og:image resmini çeker."""
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
     }
@@ -86,14 +123,12 @@ def fetch_full_article_content(url):
         with urllib.request.urlopen(req, timeout=10) as resp:
             html_content = resp.read().decode('utf-8', errors='ignore')
             
-            # Görsel çekme (og:image kontrolü)
             og_img = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html_content, re.I)
             if not og_img:
                 og_img = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', html_content, re.I)
             if og_img:
                 image_url = og_img.group(1)
 
-            # Metin temizleme (p etiketlerini topla)
             raw_p = re.findall(r'<p[^>]*>(.*?)</p>', html_content, re.DOTALL | re.I)
             for p in raw_p:
                 clean_p = re.sub(r'<[^>]+>', '', p)
@@ -109,9 +144,7 @@ def fetch_full_article_content(url):
 
 
 def rewrite_text_for_seo(title, paragraphs, source, category, date_str):
-    """
-    Çekilen paragraf verilerini SEO uyumlu, anahtar kelime destekli metne dönüştürür.
-    """
+    """SEO Uyumlu Özgünleştirilmiş Metin Üretimi"""
     if paragraphs:
         main_body = " ".join(paragraphs)
     else:
@@ -120,7 +153,6 @@ def rewrite_text_for_seo(title, paragraphs, source, category, date_str):
     intro = f"<strong>{title}</strong> gelişmesi, {category} alanında son dakika haberleri arasında yer aldı. {source} kaynaklarına göre edinilen bilgi doğrultusunda, {date_str} tarihi itibarıyla konuyla ilgili öne çıkan detaylar netleşmeye başladı."
     
     body = f"<p>{intro}</p><p>{main_body}</p>"
-    
     closing = f"<p>Güncel {category} haberleri ve son dakika gelişmeleri için sitemizi takip etmeye devam edebilir, konu hakkındaki düşüncelerinizi yorum kısmından iletebilirsiniz.</p>"
     
     return body + closing
@@ -177,15 +209,6 @@ def seo_head(title, description, canonical, og_type="website",
     <meta name="twitter:site" content="@nearadin2026" />
     <meta name="twitter:image" content="{img}" />
 '''
-
-
-def normalize_entry(item):
-    for key in ("internal_link", "category_link", "full_url", "canonical_url"):
-        if isinstance(item.get(key), str):
-            item[key] = re.sub(r"\s+/", "/", item[key])
-    if isinstance(item.get("category_slug"), str):
-        item["category_slug"] = item["category_slug"].strip()
-    return item
 
 
 def _sm_url(loc, lastmod=None):
@@ -283,7 +306,6 @@ def fetch_and_generate():
         "son-dakika": {"name": "Son Dakika", "url": "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"}
     }
 
-    # Kategori adlarındaki boşluk hatalarını temizle
     CATEGORIES = {k.strip(): v for k, v in RAW_CATEGORIES.items()}
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'}
@@ -293,6 +315,8 @@ def fetch_and_generate():
     last_update_iso = datetime.datetime.now(tz_tr).strftime("%Y-%m-%dT%H:%M:%S+03:00")
     footer_html = get_footer_html()
     header_html = get_header_html()
+    admatic_ads = get_admatic_ads_html()
+    online_counter = get_online_counter_html()
 
     parsed_items = []
 
@@ -320,7 +344,6 @@ def fetch_and_generate():
                     except Exception:
                         pass
 
-                # Son 24 saatin haberleri
                 if (now - pub_datetime.astimezone(datetime.timezone.utc)).total_seconds() <= 86400:
                     parsed_items.append({
                         'item': item,
@@ -333,7 +356,7 @@ def fetch_and_generate():
             continue
 
     parsed_items.sort(key=lambda x: x['pub_datetime'], reverse=True)
-    parsed_items = parsed_items[:100]  # Performans ve indeks hızı için sınır
+    parsed_items = parsed_items[:100]
 
     news_list = []
     seen_titles = {}
@@ -361,7 +384,6 @@ def fetch_and_generate():
         
         os.makedirs(f"{cat_slug}/{date_folder}", exist_ok=True)
 
-        # 1. ORİJİNAL İÇERİĞİ ÇEK VE ÖZGÜNLEŞTİR (Scraping + Content Enrichment)
         paragraphs, image_url = fetch_full_article_content(original_link)
         content_html = rewrite_text_for_seo(clean_title, paragraphs, source_name, cat_name, date_str)
 
@@ -399,12 +421,11 @@ def fetch_and_generate():
         news_data["meta_desc"] = make_meta_desc(news_data)
         news_list.append(news_data)
 
-    # PAGE & ARTICLE HTML GENERATION
+    # HTML ŞABLON OLUŞTURMA (Reklam ve Sayaç Dahil)
     for news in news_list:
         article_head = seo_head(f"{news['title']} - nearadin.net", news['meta_desc'],
                                 news['canonical_url'], og_type="article", image=news['image_url'])
         
-        # Schema - NewsArticle
         article_head += json_ld({
             "@context": "https://schema.org",
             "@type": "NewsArticle",
@@ -432,19 +453,24 @@ def fetch_and_generate():
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; margin:0; padding:0; }}
         .container {{ max-width: 680px; margin: 20px auto; padding: 0 12px; }}
         .article-card {{ background: white; border-radius: 10px; padding: 20px; border: 1px solid #e4e6eb; }}
-        h1 {{ font-size: 22px; margin-bottom: 15px; color: #050505; }}
-        .meta-info {{ font-size: 13px; color: #65676b; margin-bottom: 12px; }}
+        h1 {{ font-size: 22px; margin-bottom: 12px; color: #050505; }}
+        .meta-info {{ font-size: 13px; color: #65676b; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }}
         .btn {{ display: inline-block; padding: 10px 15px; background: #1877f2; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; }}
     </style>
 </head>
 <body>
     {header_html}
     <div class="container">
+        {admatic_ads}
         <article class="article-card">
-            <div class="meta-info">Kategori: <strong>{news['category_name']}</strong> | Kaynak: <strong>{esc(news['source'])}</strong></div>
+            <div class="meta-info">
+                <span>Kategori: <strong>{news['category_name']}</strong> | Kaynak: <strong>{esc(news['source'])}</strong></span>
+                {online_counter}
+            </div>
             <h1>{esc(news['title'])}</h1>
             <img src="{news['image_url']}" alt="{esc(news['title'])}" style="width:100%; border-radius:8px; margin-bottom:15px;" />
             <div>{news['content_html']}</div>
+            {admatic_ads}
             <a href="{news['original_link']}" target="_blank" rel="nofollow noopener" class="btn">Kaynaktan Orijinal İçeriği Göre Oku ↗</a>
         </article>
     </div>
@@ -456,7 +482,7 @@ def fetch_and_generate():
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(detail_html)
 
-    # --- GOOGLE NEWS SITEMAP GENERATION (Son 48 saat kuralına uygun) ---
+    # --- GOOGLE NEWS SITEMAP ---
     news_sitemap_items = ""
     for news in news_list:
         if news.get('canonical_url', news['full_url']) != news['full_url']:
@@ -482,13 +508,12 @@ def fetch_and_generate():
     with open("news-sitemap.xml", "w", encoding="utf-8") as f:
         f.write(news_sitemap_content)
 
-    # Sitemaps ve Robots Güncelleme
     static_entries = [(SITE_URL + "/", last_update_iso)]
     article_entries = {n['full_url']: n['iso_date'] for n in news_list}
     write_sitemaps(static_entries, article_entries, last_update_iso)
     ensure_robots_txt()
 
-    print("Google SEO için Tam Optimize Edilmiş İçerik ve Sitemapler Başarıyla Oluşturuldu.")
+    print("İşlem Tamamlandı: Online Sayaç, Admatic Reklamları ve SEO Optimize Edilmiş Yapı Üretildi.")
 
 if __name__ == "__main__":
     fetch_and_generate()
