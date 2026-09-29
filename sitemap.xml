@@ -2,10 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://nearadin.net/sitemap-pages.xml</loc>
-    <lastmod>2026-09-29T18:10:18+03:00</lastmod>
+    <lastmod>2026-09-29T18:43:02+03:00</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://nearadin.net/sitemap-2026-09.xml</loc>
-    <lastmod>2026-09-29T18:05:37+03:00</lastmod>
+    <lastmod>2026-09-29T18:40:01+03:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nearadin.net/sitemap-2026-09-2.xml</loc>
+    <lastmod>2026-09-29T18:28:58+03:00</lastmod>
   </sitemap>
 </sitemapindex>
