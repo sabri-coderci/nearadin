@@ -1,4 +1,4 @@
-name: Haberleri Güncelle
+name: Haberleri Güncelle 2
 
 on:
   schedule:
