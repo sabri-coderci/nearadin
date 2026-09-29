@@ -1,6 +1,6 @@
 # --- DİNAMİK HESAPLAMALAR ---
         # Kelime sayısına göre tahmini okuma süresi (dakika)
-        word_count = len(news['desc'].split())
+word_count = len(news['desc'].split())
         reading_time = max(1, round(word_count / 40))  # Özet metinler için minimum 1 dk
 
         # Sosyal Medya Paylaşım Linkleri
