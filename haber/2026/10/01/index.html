@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.10.2026 Tarihli Son Dakika Haberleri - nearadin.net</title>
+    <meta name="description" content="01.10.2026 gününe ait tüm son dakika haberleri ve gelişmeleri akışı." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 220px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb; overflow: hidden;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📺 Film İzle</a></li>
+                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 12px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">📨 İletişim</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 01.10.2026 Tarihli Haber Listesi (49 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Evrensel.net</span>
+                        <span class="time">21:38</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/manisa-somada-maden-ocaginda-gocuk-2-iscinin-cansiz-bedeni.html">Manisa Soma'da maden ocağında göçük: 2 işçinin cansız bedenine ulaşıldı, 3 işçi göçük altında</a>
+                    </h2>
+                    <p class="news-summary">Manisa Soma'da maden ocağında göçük: 2 işçinin cansız bedenine ulaşıldı, 3 işçi göçük altında  Evrensel.netManisa Soma'da maden ocağında göçük. 1 işçi hayatını kaybetti  NTV HaberManisa'daki İmbat maden ocağı göçtü: İki işçi öldü, üçü için çalışmalar sürüyor  DikenSON DAKİKA SOMA HABERLERİ: Soma’da maden ocağında göçük! Çalışmalar devam ediyor...  milliyet.com.trBakan Göktaş'tan Soma'daki maden ocağında meydana gelen göçüğe ilişkin açıklama:  Habertürk</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/manisa-somada-maden-ocaginda-gocuk-2-iscinin-cansiz-bedeni.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">21:30</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/son-dakikamerkez-bankasindan-yeni-karar-yuzde-5e-yukse.html">Son dakika...Merkez Bankası'ndan yeni karar: Yüzde 5'e yükseltildi</a>
+                    </h2>
+                    <p class="news-summary">Son dakika...Merkez Bankası'ndan yeni karar: Yüzde 5'e yükseltildi  SözcüTCMB'den zorunlu karşılık düzenlemesi  bloomberght.comMerkez Bankası’ndan KOBİ kredilerine yeni sınır  HabertürkTCMB, KOBİ kredileri için yüzde 4,5 olan büyüme sınırını yüzde 5’e yükseltti  Anadolu AjansıMerkez Bankasından son dakika kararları: Yüzde 5'e yükseltildi!  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/son-dakikamerkez-bankasindan-yeni-karar-yuzde-5e-yukse.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+   <div class="ad-container">
+      <!-- Admatic AUTO ads START -->
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+       <!-- Admatic AUTO ads END -->
+   </div>
+    
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">fotomac.com.tr</span>
+                        <span class="time">20:59</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/trabzonspor-hazirlik-macinda-drogheda-united-ile-karsilasti.html">Trabzonspor hazırlık maçında Drogheda United ile karşılaştı</a>
+                    </h2>
+                    <p class="news-summary">Trabzonspor hazırlık maçında Drogheda United ile karşılaştı  fotomac.com.trCANLI| Trabzonspor - Drogheda (Hazırlık karşılaşması)  fanatik.com.trThomas Reis: "Genç oyuncularımız için önemli bir fırsattı" İhlas Haber Ajansı  İhlas Haber AjansıTRABZONSPOR DROGHEDA MAÇI NEREDEN İZLENİR? Trabzonspor - Drogheda Maçı Ne Zaman, Saat Kaçta, Hangi Kanalda?  CNN TürkTrabzonspor, dostluk maçında Drogheda United'a kaybetti  Hürriyet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/trabzonspor-hazirlik-macinda-drogheda-united-ile-karsilasti.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTVSpor</span>
+                        <span class="time">20:23</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/belcikada-tff-heyetine-zorluk-ulkeye-giris-yapilmadi.html">Belçika'da TFF heyetine zorluk! Ülkeye giriş yapılmadı</a>
+                    </h2>
+                    <p class="news-summary">Belçika'da TFF heyetine zorluk! Ülkeye giriş yapılmadı  NTVSporVincenzo Montella'dan Belçika macı öncesi itiraf: 'Acı veren bir yazdı, yalnız bırakmadı'  HürriyetA Milli Futbol Takımı, Maurice Dufrasne Stadı'nda yürüyüş yaptı  Anadolu AjansıTFF heyetine Belçika engeli! Ülkeye girişlerine izin verilmedi...  CumhuriyetBelçika'da Trossard için 'Türkiye' açıklaması geldi! Belirsizlik ortadan kalktı  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/belcikada-tff-heyetine-zorluk-ulkeye-giris-yapilmadi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">20:14</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/baba-vangadan-altin-icin-dikkat-ceken-kehanet.html">Baba Vanga'dan altın için dikkat çeken kehanet</a>
+                    </h2>
+                    <p class="news-summary">Baba Vanga'dan altın için dikkat çeken kehanet  Sözcü2027 yılını işaret etmişti! Baba Vanga'dan altın için dikkat çeken kehanet: 'Büyük sarsıntı'  milliyet.com.trBaba Vanga'nın 2027 Altın Kehaneti Ortaya Çıktı  OnedioBaba Vanga'dan altın için dikkat çeken kehanet: Büyük sarsıntı geliyor  HaberlerBaba Vanga'nın 2027 kehanetleri ortaya çıktı: Altın piyasasında dev iddia! - TREND  Mynet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/baba-vangadan-altin-icin-dikkat-ceken-kehanet.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">bloomberght.com</span>
+                        <span class="time">19:16</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/simsek-sorunlu-portfoy-yonetim-sirketlerini-ve-fonlari-kara.html">Şimşek: Sorunlu portföy yönetim şirketlerini ve fonları karantinaya aldık</a>
+                    </h2>
+                    <p class="news-summary">Şimşek: Sorunlu portföy yönetim şirketlerini ve fonları karantinaya aldık  bloomberght.comCumhurbaşkanı Erdoğan: Çerçeve yasa çalışması Türkiye'nin hasımlarını üzmüştür  NTV HaberBakan Şimşek: Sorunlu portföy yönetim şirketlerini ve fonları karantinaya aldık  Gazete OksijenErdoğan: Fon piyasalarındaki gelişmeler ekonomiyi tehdit etmeyecek  bloomberght.com"Yatırımcılara en kısa sürede en yüksek düzeyde ödeme için adımlar atılıyor" - Son Dakika Haberleri  TRT Haber</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/simsek-sorunlu-portfoy-yonetim-sirketlerini-ve-fonlari-kara.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Cumhuriyet</span>
+                        <span class="time">18:44</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/savcinin-hesabinda-640-milyonluk-para-trafigi-hsk-gorevden.html">Savcının hesabında 640 milyonluk para trafiği: HSK, görevden uzaklaştırdı</a>
+                    </h2>
+                    <p class="news-summary">Savcının hesabında 640 milyonluk para trafiği: HSK, görevden uzaklaştırdı  CumhuriyetSavcının hesabından devasa servet çıktı! HSK görevden uzaklaştırdı  SözcüSavcı ve eşinin hesaplarında dudak uçuklatan para trafiği! Açığa alındılar - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansHSK’DAN SAVCIYA 3 AYLIK TEDBİR! Mardin’de savcının hesaplarına ilişkin mali inceleme: 640 milyon liralık para çıkışı bildirildi!  SON TVSavcının hesabından 640 milyon TL çıktı  Yeni Mesaj</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/savcinin-hesabinda-640-milyonluk-para-trafigi-hsk-gorevden.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Halk TV</span>
+                        <span class="time">18:32</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/ibb-davasinda-ikinci-celsenin-27-gunu-4-kisi-hakkinda-tahl.html">İBB davasında ikinci celsenin 27. günü: 4 kişi hakkında tahliye kararı</a>
+                    </h2>
+                    <p class="news-summary">İBB davasında ikinci celsenin 27. günü: 4 kişi hakkında tahliye kararı  Halk TVİBB'ye yönelik 'Yolsuzluk' davasında ara karar: 4 sanığa tahliye  Hürriyetİmamoğlu davasında kritik gelişme: Savcı kararını açıkladı  Haber 7İBB davası 91. gün: Mahkemeden dört sanığa tahliye: Tutuklu sayısı 53'e düştü  Odatv‘Ekrem İmamoğlu Çıkar Amaçlı Suç Örgütü’ davasında tüm tutuklu sanıkların tutukluluk halinin devamını istendi  İhlas Haber Ajansı</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/ibb-davasinda-ikinci-celsenin-27-gunu-4-kisi-hakkinda-tahl.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Cumhuriyet</span>
+                        <span class="time">18:24</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/okulda-yuk-asansoru-faciasi-kafasi-sikisan-15-yasindaki-ogr.html">Okulda yük asansörü faciası: Kafası sıkışan 15 yaşındaki öğrenci hayatını kaybetti</a>
+                    </h2>
+                    <p class="news-summary">Okulda yük asansörü faciası: Kafası sıkışan 15 yaşındaki öğrenci hayatını kaybetti  CumhuriyetMobile-Video Haber Detay  İhlas Haber AjansıYük asansörü kazasında yaralanmıştı: 15 yaşındaki öğrenci 9 günlük yaşam mücadelesini kaybetti  Evrensel.netLise yurdunun asansörü günler sonra can aldı: 15 yaşındaki öğrenci yaşamını yitirdi  Halk TVAsansör kazasında yaralanmıştı: 9 günlük yaşam mücadelesini kaybetti  Sabah</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/okulda-yuk-asansoru-faciasi-kafasi-sikisan-15-yasindaki-ogr.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Transfermarkt</span>
+                        <span class="time">18:08</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/youssef-en-nesyri-dosyasinda-yeni-gelisme-fenerbahcenin-t.html">Youssef En-Nesyri dosyasında yeni gelişme - Fenerbahçe’nin transfer yasağı kaldırıldı</a>
+                    </h2>
+                    <p class="news-summary">Youssef En-Nesyri dosyasında yeni gelişme - Fenerbahçe’nin transfer yasağı kaldırıldı  TransfermarktFenerbahçe'ye müjdeli haber geldi! FIFA transfer yasağını kaldırdı  SözcüFenerbahçe'nin transfer yasağı kaldırıldı!  HürriyetHilmi Özkök siyasete girdi... Eski Genelkurmay Başkanı'ndan 'fon' paylaşımı  OdatvFenerbahçe’de son dakika! 3 dönemlik transfer yasağı...  fotomac.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/youssef-en-nesyri-dosyasinda-yeni-gelisme-fenerbahcenin-t.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Diken</span>
+                        <span class="time">17:41</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/iki-yogurt-markasinda-jelatin-ve-nisasta-tespit-edildi.html">İki yoğurt markasında jelatin ve nişasta tespit edildi</a>
+                    </h2>
+                    <p class="news-summary">İki yoğurt markasında jelatin ve nişasta tespit edildi  DikenÜnlü pideci dana eti diye eşek eti yedirmiş: Şehir değiştirip önünde yemek için kuyruk oluyorlardı  SözcüGıdada hile yüzsüzleri  Bigparaİki yoğurt markası taklit-tağşiş listesine girdi  Gazete OksijenBakanlık İfşa Etti: "Yüzde 100 Diye" Satılıyordu, İçinde Yok Yok!  Onedio</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/iki-yogurt-markasinda-jelatin-ve-nisasta-tespit-edildi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Transfermarkt</span>
+                        <span class="time">17:33</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/portekizin-7-numarasi-neden-rafael-leoya-verildi-18-yild.html">Portekiz’in 7 numarası neden Rafael Leão’ya verildi? 18 yıldır Cristiano Ronaldo ile özdeşleşmişti</a>
+                    </h2>
+                    <p class="news-summary">Portekiz’in 7 numarası neden Rafael Leão’ya verildi? 18 yıldır Cristiano Ronaldo ile özdeşleşmişti  TransfermarktRonaldo, Portekiz kampını terk etti! Jesus ve Proença peşinden gitti  HürriyetCristiano Ronaldo’ya veda: Portekiz’in başına gelebilecek en iyi şey buydu  Goal.comKampı terk etmişti, Cristiano Ronaldo krizi alevlenerek büyüyor. "Kıskanç, aşağılayıcı ve cahiller"  NTV HaberRonaldo kamptan ayrıldı! Portekiz'in 7 numarası Galatasaraylı oyuncu oldu  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/portekizin-7-numarasi-neden-rafael-leoya-verildi-18-yild.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Transfermarkt</span>
+                        <span class="time">16:53</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/mert-hakan-yandasin-piyasa-degeri-yeniden-aktif-hale-geldi.html">Mert Hakan Yandaş’ın piyasa değeri yeniden aktif hale geldi - Milli aradan sonra sahalara dönmesi bekleniyor</a>
+                    </h2>
+                    <p class="news-summary">Mert Hakan Yandaş’ın piyasa değeri yeniden aktif hale geldi - Milli aradan sonra sahalara dönmesi bekleniyor  TransfermarktFenerbahçe'de Mert Hakan Yandaş gelişmesi: 1 yıl sonra geri dönüyor  SözcüFenerbahçe’ye Mert Hakan Yandaş müjdesi! Geri dönüyor...  İnternet HaberMert Hakan Yandaş sonunda dönüyor  Fotospor1 yıl sonra Mert Hakan Yandaş formasına kavuşuyor  Yeni Mesaj</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/mert-hakan-yandasin-piyasa-degeri-yeniden-aktif-hale-geldi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTVSpor</span>
+                        <span class="time">16:27</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/manchester-city-kume-dusuruldu-mu-soke-ettiler-premier-lig.html">Manchester City küme düşürüldü mü? Şoke ettiler, Premier Lig takımlarından tarihi ters köşe</a>
+                    </h2>
+                    <p class="news-summary">Manchester City küme düşürüldü mü? Şoke ettiler, Premier Lig takımlarından tarihi ters köşe  NTVSporGalatasaray’ın yeni bombası Manchester City’den! Yaşanan kriz sonrası...  fotomac.com.trİngiliz Bakan, Manchester City için konuştu: Premier Lig'den ihraç edilebilir!  HürriyetRoy Keane’den Manchester City’ye olay sözler: Madalyaları çöpe atardım!  fanatik.com.trKlopp fikir değiştirdi: “City’nin şampiyonlukları geri mi alınsın? Kutlama yapmam, onlar müthiş rakiplerdi”  Goal.com</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/manchester-city-kume-dusuruldu-mu-soke-ettiler-premier-lig.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Diken</span>
+                        <span class="time">15:38</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/akom-saat-verdi-istanbula-kuvvetli-yagis-uyarisi.html">AKOM saat verdi: İstanbul'a kuvvetli yağış uyarısı</a>
+                    </h2>
+                    <p class="news-summary">AKOM saat verdi: İstanbul'a kuvvetli yağış uyarısı  DikenAlarm verilmiş durumda | İstanbul da 'sarı' listede... Uyarılar peş peşe geldi: Dikkatli ve tedbirli olun  HürriyetBugün öğleden sonraya dikkat. Kuvvetli sağanak geliyor gece yarısına kadar devam edecek  NTV HaberMeteoroloji alarm verdi: 23 il için sarı kod! İstanbul dahil birçok ilde etkili olacak  CNN TürkSon dakika... AKOM ve Valilik yarın için peş peşe uyardı! İstanbul dahil 23 kentte alarm  milliyet.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/akom-saat-verdi-istanbula-kuvvetli-yagis-uyarisi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">14:50</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/annesini-oldurmekten-yargilanan-tugyanin-mahkemedeki-ilk-so.html">Annesini öldürmekten yargılanan Tuğyan'ın mahkemedeki ilk sözleri</a>
+                    </h2>
+                    <p class="news-summary">Annesini öldürmekten yargılanan Tuğyan'ın mahkemedeki ilk sözleri  SözcüGüllü'nün ölümü davasında kızı Tuğyan'a ağırlaştırılmış müebbet talebi  NTV HaberSON DAKİKA Güllü'nün kızı Tuğyan Ülkem Gülter hakim karşısında! Suçlamalarla ilgili ne dedi?  milliyet.com.trSON DAKİKA | GÜLLÜ'NÜN ÖLÜMÜNE İLİŞKİN DAVADA İLK DURUŞMA! İşte Tuğyan Ülkem Gülter için verilen karar...  CNN TürkŞarkıcı Güllü'nün davasında önemli gelişme  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/annesini-oldurmekten-yargilanan-tugyanin-mahkemedeki-ilk-so.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">fotomac.com.tr</span>
+                        <span class="time">14:35</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/fenerbahceden-ayrilali-1-yil-bile-olmadi-szymanski-icin-fl.html">Fenerbahçe’den ayrılalı 1 yıl bile olmadı! Szymanski için flaş transfer iddiası</a>
+                    </h2>
+                    <p class="news-summary">Fenerbahçe’den ayrılalı 1 yıl bile olmadı! Szymanski için flaş transfer iddiası  fotomac.com.trDaha gideli 1 yıl olmadı, Sebastian Szymanski bombası patladı! Transferde büyük sürpriz...  fanatik.com.trSebastian Szymanski sürprizi! Yeni adresini duyurdular - Fenerbahçe - Spor Haberleri  milliyet.com.tr"Transferde Szymanski sürprizi", "Galatasaray kaptana göz Dijk'ti", "Gabigol sürprizi" | Günün spor manşetleri  T24Daha gideli 1 yıl olmuştu, Szymanski bombası patladı | Sporun manşetleri  NTVSpor</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/fenerbahceden-ayrilali-1-yil-bile-olmadi-szymanski-icin-fl.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">14:32</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/erdogan-kursuye-gelince-yeni-partililer-salonu-terk-etti-me.html">Erdoğan kürsüye gelince YENİ Partililer salonu terk etti! Meclis'te soğuk rüzgarlar</a>
+                    </h2>
+                    <p class="news-summary">Erdoğan kürsüye gelince YENİ Partililer salonu terk etti! Meclis'te soğuk rüzgarlar  SözcüTBMM Başkanı Kurtulmuş: Siyasi mücadeledeki en temel hususlardan biri "siyasi nezakete uymak"  Anadolu AjansıBahçeli'den Yeni Parti'ye tepki: Gitmeleri doğru olmadı  Haber 7AK Parti Sözcüsü Çelik'ten Yeni Parti Grubu'na tepki:  HabertürkTBMM'de yeni yasama yılı resepsiyonu  NTV Haber</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/erdogan-kursuye-gelince-yeni-partililer-salonu-terk-etti-me.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">DW.com</span>
+                        <span class="time">14:14</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/fon-sorusturmasinda-fatma-betul-sayan-kaya-bilmecesi-nasil.html">Fon soruşturmasında Fatma Betül Sayan Kaya bilmecesi: Nasıl yargılanacak?</a>
+                    </h2>
+                    <p class="news-summary">Fon soruşturmasında Fatma Betül Sayan Kaya bilmecesi: Nasıl yargılanacak?  DW.comAK Parti'de Fatma Betül Sayan Kaya’nın görevine Hülya Terzioğlu getirildi  NTV HaberAKP'de Fatma Betül Sayan Kaya'nın yerine gelecek isim belli oldu  SözcüFBSK yalnız mıydı? Canlı yayında seslendi: “KENDİNİ ELE VER” - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansHülya Terzioğlu Kimdir? Kaç Yaşında ve Nereli?  Onedio</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/fon-sorusturmasinda-fatma-betul-sayan-kaya-bilmecesi-nasil.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">13:40</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/pfdkya-sevk-edilen-1-lig-kulubunun-baskanindan-bahis-acikl.html">PFDK'ya sevk edilen 1. Lig kulübünün başkanından bahis açıklaması</a>
+                    </h2>
+                    <p class="news-summary">PFDK'ya sevk edilen 1. Lig kulübünün başkanından bahis açıklaması  SözcüHakan Daltaban'dan 'bahis' açıklaması!  HürriyetTFF, savcılığın bu uyarısını neden kulak ardı etti?  SözcüPFDK kararları sonrası Ali Yüce'den açıklama  NTVSporTFF'de istifa depremi! Yönetim düşecek mi? Seçime mi gidiliyor?  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/pfdkya-sevk-edilen-1-lig-kulubunun-baskanindan-bahis-acikl.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">milliyet.com.tr</span>
+                        <span class="time">13:29</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/nilperi-sahinkaya-melis-sezen-ve-melis-isiten-uyusturucu-te.html">Nilperi Şahinkaya, Melis Sezen ve Melis İşiten uyuşturucu test sonuçlarını paylaştı</a>
+                    </h2>
+                    <p class="news-summary">Nilperi Şahinkaya, Melis Sezen ve Melis İşiten uyuşturucu test sonuçlarını paylaştı  milliyet.com.trNilperi Şahinkaya, Melis Sezen ve Melisa Şenolsun’un uyuşturucu test sonucu belli oldu  SözcüN’olcak şincik?  Korkusuz GazetesiEski futbolcu Hasan Şaş ile oyuncu Afra Saraçoğlu'nun uyuşturucu testi pozitif çıktı  NTV HaberÜnlülere uyuşturucu soruşturması! Melis İşiten'in test sonucu belli oldu  milliyet.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/nilperi-sahinkaya-melis-sezen-ve-melis-isiten-uyusturucu-te.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTVSpor</span>
+                        <span class="time">13:09</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/italianonun-hayali-onu-besiktas-formasiyla-gormekti-serdal.html">Italiano'nun hayali onu Beşiktaş formasıyla görmekti! Serdal Adalı, 3 ay sonra imzayı attırabilir</a>
+                    </h2>
+                    <p class="news-summary">Italiano'nun hayali onu Beşiktaş formasıyla görmekti! Serdal Adalı, 3 ay sonra imzayı attırabilir  NTVSporBedava, Beşiktaş'a! Transfer 2027'de gelebilir  HürriyetKartal’dan transferde çifte atak! Savunma ve orta sahaya takviye gündemde  TakvimSoruşturma kapsamında gözaltına alınmıştı: Serdal Adalı'dan MHK Başkanı önerisi!  CumhuriyetBeşiktaş Başkanı Serdal Adalı'dan transfer müjdesi! "Devre arasında kısmetse alacağız"  A Spor</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/italianonun-hayali-onu-besiktas-formasiyla-gormekti-serdal.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Halk TV</span>
+                        <span class="time">12:48</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/son-dakika-10-sosyal-medya-fenomeni-gozaltina-alindi-uyus.html">Son dakika | 10 sosyal medya fenomeni gözaltına alındı! Uyuşturucu testi yapılacak</a>
+                    </h2>
+                    <p class="news-summary">Son dakika | 10 sosyal medya fenomeni gözaltına alındı! Uyuşturucu testi yapılacak  Halk TVSosyal medyada kavga ve gerilim içerikleriyle gelir elde edenlere 10 ilde operasyon  NTV HaberSosyal Medya Operasyonu: Mehmet Aden Arslan, Semih Varol’un da Arasında Olduğu 10 Fenomen Gözaltına Alındı  OnedioTikTok, Instagram ve X'teki kavga ve müstehcenlik yayına operasyon: 10 ilde 10 gözaltı  HürriyetTablet Reis de gözaltında! Onurcan Güzel'in son hali şaşırttı - Magazin Haberleri  Mynet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/son-dakika-10-sosyal-medya-fenomeni-gozaltina-alindi-uyus.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Nefes Gazetesi</span>
+                        <span class="time">12:24</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/denizlide-dehsete-dusuren-akran-zorbaligi-kiz-ogrenciyi-ce.html">Denizli’de dehşete düşüren akran zorbalığı. Kız öğrenciyi çeşme altında ıslatıp darp ettiler</a>
+                    </h2>
+                    <p class="news-summary">Denizli’de dehşete düşüren akran zorbalığı. Kız öğrenciyi çeşme altında ıslatıp darp ettiler  Nefes GazetesiAkran vahşeti! Islatıp, sürükleyip acımasızca dövdüler  HürriyetDenizli Buldan'da iddiaya göre akran zorbalığı yapan 3 liseli kız serbest bırakıldı  Son DakikaDenizli'de ortaokul öğrencisini darp eden 3 lise öğrencisi gözaltına alındı  T24Dehşete düşüren dedikodu işkencesi! Liseli 3 kız öğrenci gözaltında  milliyet.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/denizlide-dehsete-dusuren-akran-zorbaligi-kiz-ogrenciyi-ce.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">birgun.net</span>
+                        <span class="time">11:58</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/ben-de-magdurum-diyen-akp-genel-baskan-yardimcisi-zeybekci.html">‘Ben de mağdurum’ diyen AKP Genel Başkan Yardımcısı Zeybekci’nin fonda kalan parası ortaya çıktı</a>
+                    </h2>
+                    <p class="news-summary">‘Ben de mağdurum’ diyen AKP Genel Başkan Yardımcısı Zeybekci’nin fonda kalan parası ortaya çıktı  birgun.netAKP'li Zeybekçi'nin fonlara kaptırdığı para belli oldu  SözcüAK Parti Genel Başkan Yardımcısı Nihat Zeybekçi'nin parası tasfiye edilen fonda kaldı  NTV HaberHerkes Eski Bakan Sayan'a kızıyor ama... Esas sorun Zeybekci'de: Biri çıktı diğeri kaldı  Odatvİsmail Saymaz Açıkladı: "Fonlarda Ben de Mağdurum" Diyen AKP'li Nihat Zeybekci'nin Kaptırdığı Para Belli Oldu  Onedio</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/ben-de-magdurum-diyen-akp-genel-baskan-yardimcisi-zeybekci.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">11:48</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/her-dedigi-cikan-sener-usumezsoy-uyardi-o-kentte-7-buyuklu.html">Her dediği çıkan Şener Üşümezsoy uyardı! "O kentte 7 büyüklüğünde deprem olabilir"</a>
+                    </h2>
+                    <p class="news-summary">Her dediği çıkan Şener Üşümezsoy uyardı! "O kentte 7 büyüklüğünde deprem olabilir"  SözcüÜşümezsoy'dan yeni deprem uyarısı: 7 büyüklüğünde olabilir  Haber 7Şener Üşümezsoy yeni deprem için adres verdi  HaberlerŞener Üşümezsoy deprem açıklaması ile yeniden gündem oldu! 7 büyüklüğü için orayı işaret etti  Yeni ŞafakKomşu şehirde büyük deprem olabilir!..  Afyon Haber</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/her-dedigi-cikan-sener-usumezsoy-uyardi-o-kentte-7-buyuklu.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Cumhuriyet</span>
+                        <span class="time">11:45</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/akp-icinde-fon-sorusturmasi-cikisi-mucahit-birinciden.html">AKP içinde 'fon soruşturması' çıkışı... Mücahit Birinci'den Hayati Yazıcı'ya: 'Bana ne oğlumdan demek inandırıcı olmayacak'</a>
+                    </h2>
+                    <p class="news-summary">AKP içinde 'fon soruşturması' çıkışı... Mücahit Birinci'den Hayati Yazıcı'ya: 'Bana ne oğlumdan demek inandırıcı olmayacak'  CumhuriyetAKP'nin ağır topuna 600 milyonluk zor soru  SözcüAK Partili Hayati Yazıcı'dan oğluna yönelik iddialara yanıt  Memurlar.NetHayati Yazıcı'dan 'fon' açıklaması  OdatvOğlunun hesabına tedbir iddiası! Hayati Yazıcı: Gerçeklerin ortaya çıkmasından çekinmem  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/akp-icinde-fon-sorusturmasi-cikisi-mucahit-birinciden.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Transfermarkt</span>
+                        <span class="time">11:44</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/dort-buyuklerin-kadro-degerleri-degisti-galatasaray-zirvey.html">Dört büyüklerin kadro değerleri değişti - Galatasaray zirveyi korurken Beşiktaş ikinci oldu</a>
+                    </h2>
+                    <p class="news-summary">Dört büyüklerin kadro değerleri değişti - Galatasaray zirveyi korurken Beşiktaş ikinci oldu  TransfermarktPiyasa değerleri güncellendi: Süper Lig'in en değerli 11'i belli oldu!  HürriyetSüper Lig’in en değerli 11’i belli oldu! Victor Osimhen damgasını vurdu...  SabahSüper Lig'in süper yıldızlarının yeni değerleri belli oldu! Greenwood, Salah, Vlahovic ve Osimhen'e şok  fanatik.com.trVictor Osimhen ve Mason Greenwood'da büyük düşüş! Yeni rakamlar açıklandı - Galatasaray - Spor Haberleri  milliyet.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/dort-buyuklerin-kadro-degerleri-degisti-galatasaray-zirvey.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">bloomberght.com</span>
+                        <span class="time">10:46</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/abdden-iran-heyetine-ulkeyi-terk-edin-talimati.html">ABD'den İran heyetine 'ülkeyi terk edin' talimatı</a>
+                    </h2>
+                    <p class="news-summary">ABD'den İran heyetine 'ülkeyi terk edin' talimatı  bloomberght.comABD Başkanı Trump’tan İran açıklaması: Anlaşmazsa yok olur  Hürriyetİran Cumhurbaşkanı Pezeşkiyan: ABD ülkemizi 3 kez hedef almış olsa da diyalogdan kaçınmayacağız  Anadolu AjansıTrump'tan yeni tehdit: İran ya anlaşır ya da yok olur  Haber 7Trump: İran'la savaş bittiğinde akaryakıt fiyatları düşecek  کوردستان 24</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/abdden-iran-heyetine-ulkeyi-terk-edin-talimati.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Transfermarkt</span>
+                        <span class="time">10:34</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/a-mill-takima-iki-takviye-emirhan-ilkhan-ve-yusuf-akcice.html">A Millî Takım’a iki takviye - Emirhan İlkhan ve Yusuf Akçiçek aday kadroya alındı</a>
+                    </h2>
+                    <p class="news-summary">A Millî Takım’a iki takviye - Emirhan İlkhan ve Yusuf Akçiçek aday kadroya alındı  TransfermarktTFF açıkladı! A Milli Takım kadrosuna 2 takviye birden  fotomac.com.trOrkun Kökçü, Milli Takım kadrosundan çıkarıldı  HürriyetA Milli Takım kadrosunda değişiklik!  A SporMilli Takım'da Montella'dan Emirhan İlkhan ve Yusuf Akçiçek kararı  fanatik.com.tr</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/a-mill-takima-iki-takviye-emirhan-ilkhan-ve-yusuf-akcice.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">DW.com</span>
+                        <span class="time">10:14</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/abdde-olumcul-igne-ise-yaramadi-idam-mahkmu-nefes-almaya.html">ABD'de ölümcül iğne işe yaramadı: İdam mahkûmu nefes almaya devam etti</a>
+                    </h2>
+                    <p class="news-summary">ABD'de ölümcül iğne işe yaramadı: İdam mahkûmu nefes almaya devam etti  DW.comABD'li kadın mahkum infaz sırasında iki doz zehirli iğneye rağmen ölmedi, hastaneye kaldırıldı  NTV Haber200 yıl sonra bir ilk! İğne işlemedi, idamdan kurtuldu: 'Benzeri yok'  milliyet.com.trABD'de idam mahkumuna iki doz ilaç verilmesine rağmen kalbi durmadı  TRT HaberChrista Pike kimdir, öldü mü yaşıyor mu?  Hürriyet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/abdde-olumcul-igne-ise-yaramadi-idam-mahkmu-nefes-almaya.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTVSpor</span>
+                        <span class="time">10:05</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/3-macta-okan-burukun-gozunden-dustu-derhal-kulubeye-gonder.html">3 maçta Okan Buruk'un gözünden düştü, derhal kulübeye gönderiliyor</a>
+                    </h2>
+                    <p class="news-summary">3 maçta Okan Buruk'un gözünden düştü, derhal kulübeye gönderiliyor  NTVSporOkan Buruk'tan forvete sürpriz isim! Kasımpaşa maçında Osimhen'in yerine oynayacak  SözcüAntrenman Raporu | 1 Ekim Perşembe  GALATASARAY.ORGGalatasaray'a müjde! Yıldız oyuncu geri dönüyor  fanatik.com.trSadece 3 maç oynamıştı! Deniz Gül için karar  Son Dakika</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/3-macta-okan-burukun-gozunden-dustu-derhal-kulubeye-gonder.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTV Haber</span>
+                        <span class="time">09:55</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/eski-spk-baskani-o-soruya-yanit-verdi-hisselerdeki-1000-kat.html">Eski SPK Başkanı o soruya yanıt verdi: Hisselerdeki 1000 kat artış halkın teveccühü de olabilir</a>
+                    </h2>
+                    <p class="news-summary">Eski SPK Başkanı o soruya yanıt verdi: Hisselerdeki 1000 kat artış halkın teveccühü de olabilir  NTV HaberHürriyet o soruyu eski SPK başkanına sordu… Bin kat artış nasıl fark edilmedi  BigparaŞamil Tayyar'dan Eski SPK Başkanına Tepki: "Bunu Bir Güzel Döveceksin"  OnedioEski SPK Başkanı Gönül şüpheli sıfatıyla ifade verecek  bloomberght.comFon soruşturmasında son durum... Yeni detaylar ortaya çıktı: 272 milyar ayrıntısı  Odatv</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/eski-spk-baskani-o-soruya-yanit-verdi-hisselerdeki-1000-kat.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTV Haber</span>
+                        <span class="time">09:31</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/6-sampiyonlugu-bulunan-kulup-55-tlye-satildi.html">6 şampiyonluğu bulunan kulüp, 55 TL'ye satıldı</a>
+                    </h2>
+                    <p class="news-summary">6 şampiyonluğu bulunan kulüp, 55 TL'ye satıldı  NTV Haber6 şampiyonluğu bulunan dev kulüp 1 euroya satıldı  Sözcü6 şampiyonluğu olan Fransa'nın köklü kulübü, 1 euroya satıldı!  HürriyetBir zamanlar Fransa'nın en güçlüsüydü; Bordeaux 1 euroya satıldı  fanatik.com.trBir kulüp artık hiç yok! Üç köklü kulübü iflasa sürükleyen adam  Goal.com</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/6-sampiyonlugu-bulunan-kulup-55-tlye-satildi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">CNN Türk</span>
+                        <span class="time">09:19</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/erdoganin-konusmasi-sonrasi-kulisler-hareketlendi-fon-kriz.html">Erdoğan’ın konuşması sonrası kulisler hareketlendi! Fon krizi sonrası dikkat çeken gelişme</a>
+                    </h2>
+                    <p class="news-summary">Erdoğan’ın konuşması sonrası kulisler hareketlendi! Fon krizi sonrası dikkat çeken gelişme  CNN TürkCumhurbaşkanı Erdoğan: Dimdik ayaktayız  HürriyetCumhurbaşkanı Erdoğan: AK Parti ve Cumhur İttifakı yoluna güçlenerek devam edecek  TRT HaberCumhurbaşkanı Erdoğan: Gelecek yüzyıla biz damga vuracağız  NTV HaberCumhurbaşkanı Erdoğan: "Vesayetçilerin ördüğü tek tipçi duvarlar, AK Parti’yi ihya eden kadınların mücadelesiyle yıkılmıştır" İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/erdoganin-konusmasi-sonrasi-kulisler-hareketlendi-fon-kriz.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">A Spor</span>
+                        <span class="time">09:19</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/galatasarayin-sakatlik-donusu-yildiz-futbolcuyu-nasil-kulla.html">Galatasaray'ın sakatlık dönüşü yıldız futbolcuyu nasıl kullanacağı belli oldu!</a>
+                    </h2>
+                    <p class="news-summary">Galatasaray'ın sakatlık dönüşü yıldız futbolcuyu nasıl kullanacağı belli oldu!  A SporGalatasaray'da Victor Osimhen belirsizliği sona eriyor: Barcelona maçında oynayabilecek mi?  NTVSporAsıl hedef Barcelona maçı: Galatasaray'ın Victor Osimhen planı belli oldu  GZTGalatasaray’da Victor Osimhen gelişmesi! Herkesin merak ettiği gerçeği SABAH Spor açıklıyor  SabahVictor Osimhen'in gözü Barcelona'da!  T24</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/galatasarayin-sakatlik-donusu-yildiz-futbolcuyu-nasil-kulla.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Cumhuriyet</span>
+                        <span class="time">09:18</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/nihat-kahveciden-gece-yarisi-olay-yaratacak-sergen-yalcin-p.html">Nihat Kahveci'den gece yarısı olay yaratacak Sergen Yalçın paylaşımı: 'Hiçbir şey olmaz senden'</a>
+                    </h2>
+                    <p class="news-summary">Nihat Kahveci'den gece yarısı olay yaratacak Sergen Yalçın paylaşımı: 'Hiçbir şey olmaz senden'  CumhuriyetNihat Kahveci gece yarısı Sergen Yalçın'ı hedef aldı! Paylaşımı gündem oldu  SözcüNihat Kahveci'den Sergen Yalçın'a olay sözler: "Hocalığın ile pırtsın, yorumculuk ile tırtsın" - Süper Lig  MynetGerilim yeniden alevlendi! Nihat Kahveci'den Sergen Yalçın'ı küplere bindirecek sözler  Haber 7Nihat Kahveci'den gece yarısı kıyameti kopartan Sergen Yalçın paylaşımı! Milyonlar gördü  NTVSpor</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/nihat-kahveciden-gece-yarisi-olay-yaratacak-sergen-yalcin-p.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">A Haber</span>
+                        <span class="time">09:13</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/fon-sorusturmasinda-melis-sutsurup-sandal-detayi-dubaideki.html">Fon soruşturmasında Melis Sütşurup Sandal detayı! Dubai'deki lüks hayat gündem oldu</a>
+                    </h2>
+                    <p class="news-summary">Fon soruşturmasında Melis Sütşurup Sandal detayı! Dubai'deki lüks hayat gündem oldu  A HaberMustafa Sandal: Tek gelirim müzik!  HürriyetYarın yapılacak fon toplantısında ilave tedbirler alınabilir  EkonomimFon soruşturmasında Melis Sandal'a yakalama kararı  bbc.comMustafa Sandal ve eşi Dubai'deki Türklerin diline düştü  Sözcü</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/fon-sorusturmasinda-melis-sutsurup-sandal-detayi-dubaideki.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">A Haber</span>
+                        <span class="time">08:55</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/dogal-gaz-faturasinda-yeni-tarife-il-il-tuketim-limitleri.html">Doğal gaz faturasında yeni tarife! İl il tüketim limitleri</a>
+                    </h2>
+                    <p class="news-summary">Doğal gaz faturasında yeni tarife! İl il tüketim limitleri  A HaberDoğalgaz faturalarında yeni dönem! Limiti aşan daha fazla para ödeyecek  SözcüDoğalgazda kademeli tarife dönemi: Limiti aşanların faturası ikiye katlanacak  Haber 7Doğal gaz faturalarında kademeli tarife: Tüketim sınırını aşan daha fazla ödeyecek  Evrensel.netDoğal Gaz Faturasında Yeni Sistem Bu Kış Başlıyor: Limiti Aşanın Tüm Tüketimi 26,73 TL'den Hesaplanacak  Onedio</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/dogal-gaz-faturasinda-yeni-tarife-il-il-tuketim-limitleri.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Halk TV</span>
+                        <span class="time">08:52</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/son-dakika-can-atalay-bicak-kemige-dayandi-dedi-aclik-g.html">Son dakika | Can Atalay 'bıçak kemiğe dayandı' dedi: Açlık grevine başladı</a>
+                    </h2>
+                    <p class="news-summary">Son dakika | Can Atalay 'bıçak kemiğe dayandı' dedi: Açlık grevine başladı  Halk TVCan Atalay'dan 24 saatlik açlık grevi kararı: 'Artık bıçak kemiğe dayanmıştır'  CumhuriyetCan Atalay 24 saatlik açlık grevine başladı: 'Bıçak kemiğe dayandı'  Euronews.comTİP Meclisin açılışına katılmadı: 'Her şeyi normal kabul edip o sıralara oturmak içimize sinmiyor'  Evrensel.netCan Atalay 24 saatlik açlık grevinde: "Artık bıçak kemiğe dayandı"  medyascope.tv</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/son-dakika-can-atalay-bicak-kemige-dayandi-dedi-aclik-g.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Hürriyet</span>
+                        <span class="time">08:46</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/netanyahunun-11-eylul-hevesi-havada-kaldi-israil-basini.html">Netanyahu'nun '11 Eylül' hevesi havada kaldı! İsrail basını: Savaş sebebi</a>
+                    </h2>
+                    <p class="news-summary">Netanyahu'nun '11 Eylül' hevesi havada kaldı! İsrail basını: Savaş sebebi  HürriyetFlydubai uçağını faciadan kurtaran Hindistanlı pilot, ülkesinde kahraman ilan edildi  NTV HaberTrump, FlyDubai uçağındaki olayın arkasından İran'ın çıkması halinde bu ülkeyi vuracaklarını açıkladı  Anadolu AjansıTrump: Yardımcı pilot terörist ya da dengesizdi  TRT HaberNetanyahu, Flydubai pilotunun 'radikalleştiği' bulgusu olduğunu açıkladı  bbc.com</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/netanyahunun-11-eylul-hevesi-havada-kaldi-israil-basini.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Hürriyet</span>
+                        <span class="time">08:36</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/ona-olaganustu-hayat-arkadasim-diyordu-unlu-oyuncu-gizlic.html">Ona ‘Olağanüstü hayat arkadaşım’ diyordu… Ünlü oyuncu gizlice evlendi!</a>
+                    </h2>
+                    <p class="news-summary">Ona ‘Olağanüstü hayat arkadaşım’ diyordu… Ünlü oyuncu gizlice evlendi!  HürriyetJim Carrey 64 yaşında yeniden evlendi: Yıllardır gizlediği aşkı nikâhla taçlandı  SözcüÜnlü komedyen Jim Carrey 64 yaşında üçüncü kez evlendi! Eşi yarı yaşında  HaberlerJim Carrey gizlice evlendi: 'En değerli yol arkadaşım' dediği Min Ah ile hayatını birleştirdi  CumhuriyetJim Carrey gizlice evlendi! "En değerli yol arkadaşım" dediği Min Ah ile özel bir tören yaptı  Habertürk</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/ona-olaganustu-hayat-arkadasim-diyordu-unlu-oyuncu-gizlic.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Sözcü</span>
+                        <span class="time">08:25</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/saraya-cikti-dedikodular-patladi-3-ilce-belediyesi-daha-g.html">Saray’a çıktı: Dedikodular patladı! 3 ilçe belediyesi daha geçecek iddiası</a>
+                    </h2>
+                    <p class="news-summary">Saray’a çıktı: Dedikodular patladı! 3 ilçe belediyesi daha geçecek iddiası  SözcüÖzgür Özel'den bu fotoğraf için ilk yorum  SözcüSürpriz görüşme... Erdoğan'ı ziyaret etti: Cemil Tugay'dan açıklama geldi!  Cumhuriyetİzmir Büyükşehir Belediye Başkanı Tugay'dan Cumhurbaşkanı Erdoğan ile görüşmeye ilişkin açıklama  HabertürkZafer Şahin: Cemil Tugay yüzde 99,9 AK Parti'ye geçti  Haber 7</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/saraya-cikti-dedikodular-patladi-3-ilce-belediyesi-daha-g.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Diken</span>
+                        <span class="time">08:10</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/vahap-secer-dahil-uc-belediye-baskani-gozaltina-alindi.html">Vahap Seçer dahil üç belediye başkanı gözaltına alındı</a>
+                    </h2>
+                    <p class="news-summary">Vahap Seçer dahil üç belediye başkanı gözaltına alındı  DikenCHP heyeti Mersin'de gözaltındaki belediye başkanlarıyla görüştü: Kılıçdaroğlu yarın Mersin'e gidecek  Anka HaberKılıçdaroğlu ses verdi: Muhalifsen sabahın karanlığında gözaltı  DikenMersin Büyükşehir Belediyesi hangi partiden? Mersin Belediye Başkanı Vahap Seçer kimdir, ne yaptı?  NTV HaberYENİ Parti Genel Başkanı Özel: "Mersin operasyonunun fon krizinin üstünü örteceğini umuyorlar" İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/vahap-secer-dahil-uc-belediye-baskani-gozaltina-alindi.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">milliyet.com.tr</span>
+                        <span class="time">06:42</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/tffde-ferhat-gundogdu-krizi-elleri-kollari-baglandi-futb.html">TFF'de Ferhat Gündoğdu krizi! Elleri kolları bağlandı - Futbol - Spor Haberleri</a>
+                    </h2>
+                    <p class="news-summary">TFF'de Ferhat Gündoğdu krizi! Elleri kolları bağlandı - Futbol - Spor Haberleri  milliyet.com.trGöksel Gümüşdağ, Ferhat Gündoğdu konusunda uyarmıştı: 'Türk hakemliği zor toparlanır'  Hürriyet'Türk futbolunun itibarını yerle bir etti' 'Hakemler dosyası' soruşturması hakkında sert yorum  fanatik.com.trGülengül Altınsay yazdı : Maç sonuçlarına kadar  CumhuriyetEski hakem Ali Tuna'nın ifadesi ortaya çıktı: Erman Toroğlu ve Ahmet Çakar maçlara atanacak hakemleri belirliyordu  CNN Türk</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/tffde-ferhat-gundogdu-krizi-elleri-kollari-baglandi-futb.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Hürriyet</span>
+                        <span class="time">06:28</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/tekrar-ediyorum-ilk-secimde-tff-baskanligina-adayim-ugur.html">Tekrar ediyorum: İlk seçimde TFF başkanlığına adayım | Uğur MELEKE Köşe Yazısı</a>
+                    </h2>
+                    <p class="news-summary">Tekrar ediyorum: İlk seçimde TFF başkanlığına adayım | Uğur MELEKE Köşe Yazısı  HürriyetUğur Meleke: TFF Başkanlığına adayım! Mafyatik jargonu, takım elbiseli holiganizmi bitireceğime söz veriyorum  HürriyetFutbol Federasyonu başkanlığına sürpriz talip! Vaatlerini de sıraladı  SözcüÜnlü spor yazarı, TFF başkanlığına aday oldu! Projeleri ilgi çekici  Haber 7TFF Başkanlığına sürpriz talip: Mafyatik jargonu bitireceğim  Haberler</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/tekrar-ediyorum-ilk-secimde-tff-baskanligina-adayim-ugur.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">bloomberght.com</span>
+                        <span class="time">06:24</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/spkdan-a1-capital-bulls-ve-pardus-fonlari-icin-tasfiye-sur.html">SPK’dan A1 Capital, Bulls ve Pardus fonları için tasfiye sürecine ilişkin yeni karar</a>
+                    </h2>
+                    <p class="news-summary">SPK’dan A1 Capital, Bulls ve Pardus fonları için tasfiye sürecine ilişkin yeni karar  bloomberght.comGoogle Haberler uygulamasında Diğer başlıklar ve bakış açıları</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/spkdan-a1-capital-bulls-ve-pardus-fonlari-icin-tasfiye-sur.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">NTV Haber</span>
+                        <span class="time">00:12</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/benzine-kademeli-otv-artisi-kasim-ve-aralikta-da-artacak.html">Benzine kademeli ÖTV artışı. Kasım ve Aralık'ta da artacak</a>
+                    </h2>
+                    <p class="news-summary">Benzine kademeli ÖTV artışı. Kasım ve Aralık'ta da artacak  NTV HaberAkaryakıtta eşel mobil sona erdi! Benzinde ÖTV düzenlemesi Resmi Gazete'de  Haber 7Bütçe dostuydu, fiyatı uçtu! 24 saatte ikinci zam  Son DakikaAkaryakıtta yeni dönem: Kademeli ÖTV! Benzin, motorin, LPG'de zam belli oldu - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet FinansMotorinden sonra benzine de 'kaynayan kurbağa' modeli: Taksitli zam dönemi başladı  Cumhuriyet</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/benzine-kademeli-otv-artisi-kasim-ve-aralikta-da-artacak.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="card-header">
+                        <span class="badge">NE ARADIN?</span>
+                        <span class="source">Diken</span>
+                        <span class="time">00:10</span>
+                    </div>
+                    <h2 class="news-title">
+                        <a href="/haber/2026/10/01/sitesi-kapatilan-t24-ucretsiz-erisim-icin-link-paylasti.html">Sitesi kapatılan T24 ücretsiz erişim için link paylaştı</a>
+                    </h2>
+                    <p class="news-summary">Sitesi kapatılan T24 ücretsiz erişim için link paylaştı  DikenHasan Cemal | Acı ve hüzün...  T24Son dakika... T24 haber sitesi ve sosyal medya hesapları için kapatma kararı  milliyet.com.trT24 kararındaki soru işareti: 4 gün önce talebi reddeden hakimlik, savcılığın itirazı üzerine kapatma kararı verdi  Kısa DalgaÖzgür Özel'den T24'e dayanışma ziyareti: 'Ümit ederiz ki bu kapatma kararından dönülür'  Evrensel.net</p>
+                    <div class="card-footer">
+                        <a href="/haber/2026/10/01/sitesi-kapatilan-t24-ucretsiz-erisim-icin-link-paylasti.html" class="read-btn">Detayı Oku →</a>
+                    </div>
+                </article>
+                
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/canli-mac-sonuclari/" style="color: #617085; text-decoration: none;">⚽ Canlı Maç Sonuçları</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/nobetci-eczane/" style="color: #617085; text-decoration: none;">🏥 Nöbetçi Eczane</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/son-depremler/" style="color: #617085; text-decoration: none;">🔴 Son Depremler</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/kripto-para/" style="color: #617085; text-decoration: none;">🪙 Kripto Piyasası</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/hava-durumu/" style="color: #617085; text-decoration: none;">☀️ Hava Durumu</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/film-izle/" style="color: #617085; text-decoration: none;">📺 Film İzle</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/llms.txt" style="color: #617085; text-decoration: none;">⚙️LLMs.txt</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
