@@ -2,6 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://nearadin.net/haber/2026/10/03/mhk-baskani-ferhat-gundogdu-icin-tutuklama-talebi-ifadesi-o.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-03T01:01:39+03:00</news:publication_date>
+      <news:title>MHK Başkanı Ferhat Gündoğdu için tutuklama talebi! İfadesi ortaya çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/03/lukaku-turkiye-maci-sonrasi-flas-haberi-verdi-fenerbahce.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-03T00:40:31+03:00</news:publication_date>
+      <news:title>Lukaku, Türkiye maçı sonrası flaş haberi verdi: &quot;Fenerbahçe ile görüşeceğim&quot;</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/arda-gulerden-a-milli-takima-kotu-haber.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T23:56:00+03:00</news:publication_date>
+      <news:title>Arda Güler&#x27;den A Milli Takım&#x27;a kötü haber</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/a-milli-takim-belcikaya-maglup-oldu-istifa-sesleri-yuksel.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T23:37:14+03:00</news:publication_date>
+      <news:title>A Milli Takım, Belçika&#x27;ya mağlup oldu. İstifa sesleri yükseldi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/fon-sorusturmasinda-20-supheliye-tutuklama-talebi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T22:55:23+03:00</news:publication_date>
+      <news:title>Fon soruşturmasında 20 şüpheliye tutuklama talebi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/9-milyon-baligi-gollere-biraktilar-54-yil-sonra-pisman-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T22:15:44+03:00</news:publication_date>
+      <news:title>9 milyon balığı göllere bıraktılar! 54 yıl sonra pişman oldular</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/besiktas-euroleaguede-barcelonaya-karsi-kayip.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T21:59:00+03:00</news:publication_date>
+      <news:title>Beşiktaş, EuroLeague&#x27;de Barcelona&#x27;ya karşı kayıp!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/yeni-parti-milletvekili-bulent-tezcani-10-yil-once-yaralaya.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T21:34:00+03:00</news:publication_date>
+      <news:title>Yeni Parti Milletvekili Bülent Tezcan&#x27;ı 10 yıl önce yaralayan kişi başından vurulmuş bulundu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/10/02/ioanna-kucuradi-hayatini-kaybetti.html</loc>
     <news:news>
       <news:publication>
@@ -13,25 +101,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/kredi-kartlarinda-asgari-odeme-tutari-degisti.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/tele2-haber-yayinlarini-sonlandirdi-murat-taylan-gerekcesin.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T20:37:00+03:00</news:publication_date>
-      <news:title>Kredi kartlarında asgari ödeme tutarı değişti</news:title>
+      <news:publication_date>2026-10-02T20:58:00+03:00</news:publication_date>
+      <news:title>TELE2 Haber yayınlarını sonlandırdı: Murat Taylan gerekçesini açıkladı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/tuzla-cekmekoy-ve-sile-akpye-gecen-3-isim-erdoganla-goru.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/bddkdan-cep-telefonu-kredileri-ve-kredi-karti-asgari-odemel.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T20:13:00+03:00</news:publication_date>
-      <news:title>Tuzla, Çekmeköy ve Şile: AKP’ye geçen 3 isim Erdoğan’la görüştü</news:title>
+      <news:publication_date>2026-10-02T20:52:31+03:00</news:publication_date>
+      <news:title>BDDK&#x27;dan cep telefonu kredileri ve kredi kartı asgari ödemelerine güncelleme</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/gaziantepte-aile-faciasi-anne-kendini-atti-baba-ve-5-yasi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T20:38:00+03:00</news:publication_date>
+      <news:title>Gaziantep’te aile faciası: Anne kendini attı, baba ve 5 yaşındaki oğlu peşinden gitti</news:title>
     </news:news>
   </url>
   <url>
@@ -68,25 +167,58 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/tahkim-kurulundan-okan-buruk-ve-ugochukwu-icin-karar-cikti.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/tahkim-kurulu-pfdknin-galatasaraya-verdigi-3-cezayi-da-on.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T19:02:05+03:00</news:publication_date>
-      <news:title>Tahkim Kurulu&#x27;ndan Okan Buruk ve Ugochukwu için karar çıktı</news:title>
+      <news:publication_date>2026-10-02T19:39:26+03:00</news:publication_date>
+      <news:title>Tahkim Kurulu, PFDK&#x27;nın Galatasaray&#x27;a verdiği 3 cezayı da onadı</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/ferhat-gundogdunun-ifadesi-ortaya-cikti-mactan-once-bazi-h.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/3-yasindaki-yakup-bozkurt-cinayetinde-14-yil-sonra-yeni-geli.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T18:46:44+03:00</news:publication_date>
-      <news:title>Ferhat Gündoğdu&#x27;nun ifadesi ortaya çıktı: Maçtan önce bazı hakemleri aradığını kabul etti</news:title>
+      <news:publication_date>2026-10-02T19:05:00+03:00</news:publication_date>
+      <news:title>3 yaşındaki Yakup Bozkurt cinayetinde 14 yıl sonra yeni gelişme: Katil zanlısı en yakını çıktı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/ukraynanin-dijital-can-damari-vuruldu-rusyadan-dikkat-c.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T18:35:00+03:00</news:publication_date>
+      <news:title>Ukrayna&#x27;nın ‘dijital can damarı’ vuruldu: Rusya&#x27;dan dikkat çeken saldırı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/ev-hapsi-karari-verilen-cagla-bozun-uyusturucu-testi-poziti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T17:41:00+03:00</news:publication_date>
+      <news:title>Ev hapsi kararı verilen Çağla Boz&#x27;un uyuşturucu testi pozitif çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/trump-avrupa-ile-dizel-yakit-anlasmasini-duyurdu-stoklar-p.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T17:26:00+03:00</news:publication_date>
+      <news:title>Trump, Avrupa ile dizel yakıt anlaşmasını duyurdu: Stoklar piyasa sürülecek</news:title>
     </news:news>
   </url>
   <url>
@@ -145,28 +277,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/piyasalarin-bekledigi-abd-verisi-geldi-altin-ve-gumus-yukse.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T15:30:00+03:00</news:publication_date>
-      <news:title>Piyasaların beklediği ABD verisi geldi: Altın ve gümüş yükselişe geçti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/emekli-promosyonu-2026-emekli-promosyonunda-guncel-rakamla.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T15:13:51+03:00</news:publication_date>
-      <news:title>EMEKLİ PROMOSYONU 2026 | Emekli promosyonunda güncel rakamlar! Hangi banka ne kadar veriyor?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/10/02/okan-buruktan-flas-leroy-sane-karari.html</loc>
     <news:news>
       <news:publication>
@@ -175,6 +285,17 @@
       </news:publication>
       <news:publication_date>2026-10-02T15:10:54+03:00</news:publication_date>
       <news:title>Okan Buruk&#x27;tan flaş Leroy Sane kararı!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/ozgur-ozelden-erdogana-mahrem-goruntu-tepkisi-o-sarlat.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T14:52:00+03:00</news:publication_date>
+      <news:title>Özgür Özel&#x27;den Erdoğan&#x27;a &#x27;mahrem görüntü&#x27; tepkisi: &#x27;O şarlatanı ya sen durdur ya gelip biz durduracağız!&#x27;</news:title>
     </news:news>
   </url>
   <url>
@@ -189,14 +310,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/somada-maden-ocaginda-gocuk-3-kisinin-daha-cansiz-bedenine.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/bakanlik-diyarbakirdaki-lahmacuncuyu-ifsa-etti.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T14:22:48+03:00</news:publication_date>
-      <news:title>Soma&#x27;da maden ocağında göçük: 3 kişinin daha cansız bedenine ulaşıldı! Yaralı kurtarılan işçi göçük anını anlattı: Çocuklarım aklıma geldi</news:title>
+      <news:publication_date>2026-10-02T14:28:07+03:00</news:publication_date>
+      <news:title>Bakanlık Diyarbakır’daki lahmacuncuyu ifşa etti</news:title>
     </news:news>
   </url>
   <url>
@@ -332,28 +453,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/trabzonspordan-sponsorlukta-yeni-anlasma.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T13:01:00+03:00</news:publication_date>
-      <news:title>Trabzonspor’dan sponsorlukta yeni anlaşma</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/gozaltina-alinan-sanal-medya-fenomenlerinin-aylik-gelirleri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T12:41:40+03:00</news:publication_date>
-      <news:title>Gözaltına alınan sanal medya fenomenlerinin aylık gelirleri ortaya çıktı!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/10/02/kizilcik-serbetinde-bir-devir-kapaniyor.html</loc>
     <news:news>
       <news:publication>
@@ -376,6 +475,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/10/02/mit-83-yillik-tarihi-belgeyi-yayimladi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T12:16:59+03:00</news:publication_date>
+      <news:title>MİT 83 yıllık tarihi belgeyi yayımladı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/gozaltina-alinan-10-fenomen-adliyeye-sevk-edildi-aylik-geli.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T12:10:00+03:00</news:publication_date>
+      <news:title>Gözaltına alınan 10 fenomen adliyeye sevk edildi: Aylık gelirleri ortaya çıktı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/122-metrelik-gokdelenin-tepesine-saray-insa-etti-oturamadan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T11:34:41+03:00</news:publication_date>
+      <news:title>122 metrelik gökdelenin tepesine saray inşa etti: Oturamadan devlet el koydu</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/10/02/tc-kimlik-kartlarina-yeni-ozellik.html</loc>
     <news:news>
       <news:publication>
@@ -384,17 +516,6 @@
       </news:publication>
       <news:publication_date>2026-10-02T11:27:00+03:00</news:publication_date>
       <news:title>T.C. kimlik kartlarına yeni özellik</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/unlu-pidecide-at-ve-esek-eti-skandali-tarim-bakanligi-liste.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T11:19:00+03:00</news:publication_date>
-      <news:title>Ünlü pidecide at ve eşek eti skandalı! Tarım Bakanlığı listeyi paylaştı</news:title>
     </news:news>
   </url>
   <url>
@@ -420,6 +541,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/10/02/kasada-77-milyon-euro-var-diyen-aziz-yildirimdan-flas-kar.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T10:23:01+03:00</news:publication_date>
+      <news:title>&quot;Kasada 77 milyon euro var&quot; diyen Aziz Yıldırım&#x27;dan flaş karar</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/10/02/manchester-citye-bir-darbe-daha-bir-alt-lige-dusurmek-yet.html</loc>
     <news:news>
       <news:publication>
@@ -442,39 +574,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/turkiyenin-belcika-maci-kadrosu-belli-oldu-can-uzun-dahil.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T09:58:13+03:00</news:publication_date>
-      <news:title>Türkiye’nin Belçika maçı kadrosu belli oldu - Can Uzun dahil 8 isim listede yok</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/afra-saracoglundan-uyusturucu-aciklamasi-sacimda-cikti-am.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T09:53:22+03:00</news:publication_date>
-      <news:title>Afra Saraçoğlu&#x27;ndan uyuşturucu açıklaması. &quot;Saçımda çıktı ama kullanıcı değilim&quot;</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/kadroyu-genclestirmek-isteyen-fenerbahceden-savunmaya-flas.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T09:32:22+03:00</news:publication_date>
-      <news:title>Kadroyu gençleştirmek isteyen Fenerbahçe&#x27;den savunmaya flaş transfer!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/haber/2026/10/02/joe-willock-besiktas-kararini-verdi-italianonun-en-cok-ist.html</loc>
     <news:news>
       <news:publication>
@@ -483,17 +582,6 @@
       </news:publication>
       <news:publication_date>2026-10-02T09:00:09+03:00</news:publication_date>
       <news:title>Joe Willock Beşiktaş kararını verdi! Italiano&#x27;nun en çok istediği isimdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/trabzonsporda-thomas-reis-ezber-bozdu-uzun-yillar-sonra-o.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T08:53:00+03:00</news:publication_date>
-      <news:title>Trabzonspor&#x27;da Thomas Reis ezber bozdu, uzun yıllar sonra o tablo ortaya çıktı</news:title>
     </news:news>
   </url>
   <url>
@@ -530,14 +618,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/eyupsultan-belediyesine-operasyon-belediye-baskani-mithat.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/eyupsultan-belediye-baskani-mithat-bulent-ozmen-gozaltina-al.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T08:38:00+03:00</news:publication_date>
-      <news:title>Eyüpsultan Belediyesi&#x27;ne operasyon. Belediye Başkanı Mithat Bülent Özmen gözaltında</news:title>
+      <news:publication_date>2026-10-02T08:29:39+03:00</news:publication_date>
+      <news:title>Eyüpsultan Belediye Başkanı Mithat Bülent Özmen gözaltına alındı</news:title>
     </news:news>
   </url>
   <url>
@@ -563,14 +651,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/altinda-2-haftadir-suren-kayip-dalgasi-piyasalarda-gerileme.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/altinda-dengeler-bugun-saat-1530da-degisecek.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T07:17:36+03:00</news:publication_date>
-      <news:title>Altında 2 haftadır süren kayıp dalgası: Piyasalarda gerileme derinleşiyor</news:title>
+      <news:publication_date>2026-10-02T08:10:00+03:00</news:publication_date>
+      <news:title>Altında dengeler bugün saat 15:30&#x27;da değişecek</news:title>
     </news:news>
   </url>
   <url>
@@ -596,6 +684,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/haber/2026/10/02/sahtekr-yansin-piyasa-yanmasin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T07:12:37+03:00</news:publication_date>
+      <news:title>Sahtekâr yansın piyasa yanmasın</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/haber/2026/10/02/annesini-baldirindan-tutup-pencereden-atti.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T07:06:28+03:00</news:publication_date>
+      <news:title>Annesini baldırından tutup pencereden attı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/haber/2026/10/02/dogu-akdenizde-tansiyon-artti-ankaradan-izin-sarti-atin.html</loc>
     <news:news>
       <news:publication>
@@ -607,80 +717,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/haber/2026/10/02/tffnin-bahis-oynayanlari-pfdkya-sevk-etmesinin-ilk-olumsuz.html</loc>
+    <loc>https://nearadin.net/haber/2026/10/02/trumpla-hayirli-isler.html</loc>
     <news:news>
       <news:publication>
         <news:name>nearadin.net</news:name>
         <news:language>tr</news:language>
       </news:publication>
-      <news:publication_date>2026-10-02T05:30:00+03:00</news:publication_date>
-      <news:title>TFF’nin bahis oynayanları PFDK’ya sevk etmesinin ilk olumsuz yansıması Avrupa’da yaşandı! 448 sevkin ilk darbesi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/fon-skandalinin-merkez-ussu-sogutozu-rejim-fena-sallandi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T05:00:00+03:00</news:publication_date>
-      <news:title>Fon skandalının merkez üssü Söğütözü: Rejim fena sallandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/jorge-jesus-cristiano-ronaldo-kriziyle-ilgili-her-seyi-acik.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T00:46:52+03:00</news:publication_date>
-      <news:title>Jorge Jesus, Cristiano Ronaldo kriziyle ilgili her şeyi açıklıyor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/deprem-uzmani-sener-usumezsoy-acik-adres-verdi-65-ila-7-bu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T00:15:16+03:00</news:publication_date>
-      <news:title>Deprem uzmanı Şener Üşümezsoy açık adres verdi: 6,5 ila 7 büyüklüğünde…</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/akpnin-tahsilat-carki-yoksulun-girtlaginda-hayati-yazicin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T00:10:00+03:00</news:publication_date>
-      <news:title>AKP’nin tahsilat çarkı yoksulun gırtlağında: Hayati Yazıcı’nın fon şüphelisi oğlu icralık borçlulardan servet kazandı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/02/ronaldosuz-portekiz-danimarkada-sov-yapti.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T00:03:22+03:00</news:publication_date>
-      <news:title>Ronaldo&#x27;suz Portekiz, Danimarka&#x27;da şov yaptı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/haber/2026/10/01/son-dakika-gullunun-olumune-iliskin-davada-ilk-durusma-i.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-01T23:23:00+03:00</news:publication_date>
-      <news:title>SON DAKİKA | GÜLLÜ&#x27;NÜN ÖLÜMÜNE İLİŞKİN DAVADA İLK DURUŞMA! İşte Tuğyan Ülkem Gülter hakkında verilen karar...</news:title>
+      <news:publication_date>2026-10-02T06:33:07+03:00</news:publication_date>
+      <news:title>Trump’la Hayırlı İşler!..</news:title>
     </news:news>
   </url>
 </urlset>
