@@ -80,11 +80,46 @@
     
     <div class="container">
         <div class="status-bar">
-            <span>📅 Ankara Haber - 03.10.2026 (5 Haber)</span>
+            <span>📅 Ankara Haber - 03.10.2026 (7 Haber)</span>
             <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
         </div>
         <main>
             
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ankara-haber/2026/10/03/" class="badge">Ankara Haber</a>
+                    <span class="source">İhlas Haber Ajansı</span>
+                    <span class="time">21:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ankara-haber/2026/10/03/59-tsyd-ankara-kupasinin-sahibi-ankara-keciorengucu-oldu-i.html">59. TSYD Ankara Kupası’nın sahibi Ankara Keçiörengücü oldu İhlas Haber Ajansı</a>
+                </h2>
+                <p class="news-summary">59. TSYD Ankara Kupası’nın sahibi Ankara Keçiörengücü oldu İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/ankara-haber/2026/10/03/59-tsyd-ankara-kupasinin-sahibi-ankara-keciorengucu-oldu-i.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/ankara-haber/2026/10/03/" class="badge">Ankara Haber</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">20:04</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/ankara-haber/2026/10/03/beypazarinda-ultra-trail-yarismasinin-ikincisi-gerceklest.html">Beypazarı'nda "Ultra Trail Yarışması"nın ikincisi gerçekleştirildi</a>
+                </h2>
+                <p class="news-summary">Beypazarı'nda "Ultra Trail Yarışması"nın ikincisi gerçekleştirildi  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/ankara-haber/2026/10/03/beypazarinda-ultra-trail-yarismasinin-ikincisi-gerceklest.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
             <article class="news-card">
                 <div class="card-header">
                     <a href="/ankara-haber/2026/10/03/" class="badge">Ankara Haber</a>
@@ -115,11 +150,6 @@
                 </div>
             </article>
             
-   <div class="ad-container">
-       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
-        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
-   </div>
-    
             <article class="news-card">
                 <div class="card-header">
                     <a href="/ankara-haber/2026/10/03/" class="badge">Ankara Haber</a>
@@ -199,6 +229,31 @@
             </div>
         </div>
     </footer>
+
+    <!-- KVKK & GDPR ÇEREZ İZİN BANDI -->
+    <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #1c1e21; color: #ffffff; padding: 15px 20px; z-index: 99999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); font-size: 13px; line-height: 1.5; border-top: 3px solid #0056b3;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+            <div style="flex: 1; min-width: 280px;">
+                🍪 <strong>Çerez Kullanımı ve KVKK Bilgilendirmesi:</strong> Sitemizde deneyiminizi iyileştirmek, içerik ve reklamları kişiselleştirmek ve trafik analizi yapmak amacıyla çerezler (cookies) kullanılmaktadır. Sitemizi kullanmaya devam ederek KVKK / GDPR standartlarına uygun çerez kullanımını kabul etmiş sayılırsınız.
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="acceptCookieConsent()" style="background-color: #0056b3; color: white; border: none; padding: 8px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; transition: background 0.2s;">Kabul Et</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookieConsent() {
+            localStorage.setItem('cookieConsentAccepted', 'true');
+            document.getElementById('cookieConsentBanner').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookieConsentAccepted')) {
+                document.getElementById('cookieConsentBanner').style.display = 'block';
+            }
+        });
+    </script>
     
 </body>
 </html>
