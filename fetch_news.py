@@ -670,7 +670,7 @@ def fetch_and_generate():
 </head>
 
 <body>
-
+{whos_amung_us_code}
     <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
     <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
     
@@ -713,7 +713,7 @@ def fetch_and_generate():
                 </ul>
             </div>
 
-            {whos_amung_us_code}
+            
         </article>
     </div>
 
