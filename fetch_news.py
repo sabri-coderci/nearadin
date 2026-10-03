@@ -441,30 +441,8 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 
 def fetch_and_generate():
     CATEGORIES = {
-        "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/search?q=g%C3%BCndem&hl=tr&gl=TR&ceid=TR:tr"},
-        "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/search?q=d%C3%BCnya&hl=tr&gl=TR&ceid=TR:tr"},
-        "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/search?q=ekonomi&hl=tr&gl=TR&ceid=TR:tr"},
-        "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/search?q=teknoloji&hl=tr&gl=TR&ceid=TR:tr"},
-        "sanayi": {"name": "Sanayi", "url": "https://news.google.com/rss/search?q=sanayi&hl=tr&gl=TR&ceid=TR:tr"},
-        "spor": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor&hl=tr&gl=TR&ceid=TR:tr"},
-        "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k&hl=tr&gl=TR&ceid=TR:tr"},
-        "hava-durumu": {"name": "Hava Durumu", "url": "https://news.google.com/rss/search?q=hava+durumu&hl=tr&gl=TR&ceid=TR:tr"},
-        "deprem": {"name": "Deprem", "url": "https://news.google.com/rss/search?q=deprem&hl=tr&gl=TR&ceid=TR:tr"},
-        "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/search?q=bilim&hl=tr&gl=TR&ceid=TR:tr"},
-        "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"},
-        "otomobil": {"name": "Otomobil", "url": "https://news.google.com/rss/search?q=otomobil+OR+araba&hl=tr&gl=TR&ceid=TR:tr"},
-        "turizm": {"name": "Turizm", "url": "https://news.google.com/rss/search?q=turizm&hl=tr&gl=TR&ceid=TR:tr"},
-        "burclar": {"name": "Burçlar", "url": "https://news.google.com/rss/search?q=bur%C3%A7lar&hl=tr&gl=TR&ceid=TR:tr"},
-        "hisseler": {"name": "Hisseler", "url": "https://news.google.com/rss/search?q=hisse&hl=tr&gl=TR&ceid=TR:tr"},
-        "filmler": {"name": "Filmler", "url": "https://news.google.com/rss/search?q=filmler&hl=tr&gl=TR&ceid=TR:tr"},
         "son-dakika": {"name": "Son Dakika", "url": "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"},
-        "istanbul-haber": {"name": "İstanbul Haber", "url": "https://news.google.com/rss/search?q=istanbul+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "ankara-haber": {"name": "Ankara Haber", "url": "https://news.google.com/rss/search?q=ankara+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "izmir-haber": {"name": "İzmir Haber", "url": "https://news.google.com/rss/search?q=izmir+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "yerel-haber": {"name": "Yerel Haber", "url": "https://news.google.com/rss/search?q=yerel+haber&hl=tr&gl=TR&ceid=TR:tr"},
         "kar-tatili": {"name": "Kar Tatili", "url": "https://news.google.com/rss/search?q=kar+tatili&hl=tr&gl=TR&ceid=TR:tr"},
-        "zam": {"name": "Zam", "url": "https://news.google.com/rss/search?q=zam&hl=tr&gl=TR&ceid=TR:tr"},
-        "canli-maclar": {"name": "Canlı Maçlar", "url": "https://news.google.com/rss/search?q=canl%C4%B1+ma%C3%A7+izle&hl=tr&gl=TR&ceid=TR:tr"},
     }
 
     headers = {
