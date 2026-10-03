@@ -718,6 +718,108 @@ def fetch_and_generate():
     </div>
 
     {footer_html}
+
+<!-- Çerez İzin Paneli (Cookie Banner) -->
+<style>
+  #cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 500px;
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    z-index: 999999;
+    display: none;
+  }
+  #cookie-banner p {
+    margin: 0 0 14px 0;
+  }
+  #cookie-banner a {
+    color: #38bdf8;
+    text-decoration: underline;
+  }
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .cookie-btn {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .cookie-btn-accept {
+    background: #22c55e;
+    color: #ffffff;
+  }
+  .cookie-btn-reject {
+    background: #475569;
+    color: #ffffff;
+  }
+  .cookie-btn:hover {
+    opacity: 0.9;
+  }
+</style>
+
+<div id="cookie-banner">
+  <p>
+    Sitemizde deneyiminizi iyileştirmek, trafiği analiz etmek ve kişiselleştirilmiş içerik sunmak için çerezler kullanıyoruz. KVKK ve GDPR kapsamında detaylı bilgi için <a href="/gizlilik-politikasi.html" target="_blank">Gizlilik ve Çerez Politikası</a> sayfamızı inceleyebilirsiniz.
+  </p>
+  <div class="cookie-buttons">
+    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Kabul Et</button>
+    <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Reddet</button>
+  </div>
+</div>
+
+<script>
+  // Çerez İzin Yönetimi
+  function checkCookieConsent() {
+    var consent = localStorage.getItem('user_cookie_consent');
+    if (consent === 'granted') {
+      loadTrackingScripts();
+    } else if (!consent) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  }
+
+  function acceptCookies() {
+    localStorage.setItem('user_cookie_consent', 'granted');
+    document.getElementById('cookie-banner').style.display = 'none';
+    loadTrackingScripts();
+  }
+
+  function rejectCookies() {
+    localStorage.setItem('user_cookie_consent', 'denied');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  // Takip/Pazarlama kodlarını yalnızca onay verildiğinde yükleyen fonksiyon
+  function loadTrackingScripts() {
+    if (window.trackingScriptsLoaded) return;
+    window.trackingScriptsLoaded = true;
+
+    // DTScout / Takip Kodunuz Buradan Yüklenir
+    var script = document.createElement('script');
+    script.src = "data:text/javascript;base64,YOUR_TRACKING_SCRIPT_HERE"; // veya harici .js dosyanız
+    
+    // Eğer bir üstte verdiğiniz JS kodunu çalıştırmak istiyorsanız:
+    // Dinamik script oluşturarak sayfaya ekleyebilirsiniz.
+  }
+
+  // Sayfa yüklendiğinde kontrol et
+  document.addEventListener("DOMContentLoaded", checkCookieConsent);
+</script>
+
 </body>
 </html>'''
 
