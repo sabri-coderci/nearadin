@@ -295,7 +295,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
                 45: "🌫️ Sisli",
                 48: "🌫️ Kırağılı Sis",
                 51: "🌧️ Hafif Çisenti",
-                53: "🌧️️ Çisenti",
+                53: "🌧 Çisenti",
                 55: "🌧️ Yoğun Çisenti",
                 61: "🌧️ Hafif Yağmurlu",
                 63: "🌧️ Yağmurlu",
@@ -1110,6 +1110,7 @@ def fetch_and_generate():
     share_on_twitter(news_list)
 
     print("İşlem tamamlandı. Özgün içerikler oluşturuldu ve kategoriler güncellendi.")
+
 
 if __name__ == "__main__":
     fetch_and_generate()
