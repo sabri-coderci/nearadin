@@ -8,6 +8,57 @@ import html
 import json
 import tweepy
 from email.utils import parsedate_to_datetime
+from google import genai
+from google.genai import types
+
+# --- GEMINI API İSTEMCİSİ KURULUMU ---
+gemini_client = None
+if os.getenv("GEMINI_API_KEY"):
+    try:
+        gemini_client = genai.Client()
+        print("Gemini API bağlantısı başarılı.")
+    except Exception as e:
+        print(f"Gemini istemcisi başlatılamadı: {e}")
+
+
+def rewrite_news_with_gemini(title, desc, category_name):
+    """
+    Haber başlığı ve özet metnini Gemini API kullanarak SEO uyumlu,
+    özgün ve anahtar kelime zenginliği barındıran tam haber metnine dönüştürür.
+    """
+    if not gemini_client:
+        return desc
+
+    prompt = f"""
+Aşağıdaki haber özetini kullanarak özgün, ilgi çekici ve SEO uyumlu bir haber metni yaz.
+
+Kategori: {category_name}
+Haber Başlığı: {title}
+Mevcut Özet/Gelişme: {desc}
+
+Yazım Kuralları:
+1. Haberi 3-4 paragraf halinde detaylandırarak yaz.
+2. Metin içinde haber konusuna uygun anahtar kelimeleri ve eş anlamlılarını doğal bir şekilde geçir.
+3. Tamamen özgün ve haber dili standartlarına (3. şahıs anlatımı, resmi/akıcı dil) uygun olsun.
+4. Başlık veya markdown başlığı (##, ###) ekleme; doğrudan paragraf metnini üret.
+5. Sadece Türkçe yanıt ver.
+"""
+    try:
+        response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.7,
+                max_output_tokens=800
+            )
+        )
+        if response and response.text:
+            return response.text.strip().replace("\n", "<br><br>")
+    except Exception as e:
+        print(f"Gemini metin özgünleştirme hatası ({title[:30]}...): {e}")
+
+    return desc
+
 
 def slugify(text):
     text = text.lower()
@@ -105,7 +156,7 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
-                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀ Hava Durumu</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
                 <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
             </ul>
@@ -244,7 +295,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
                 45: "🌫️ Sisli",
                 48: "🌫️ Kırağılı Sis",
                 51: "🌧️ Hafif Çisenti",
-                53: "🌧️ Çisenti",
+                53: "🌧️️ Çisenti",
                 55: "🌧️ Yoğun Çisenti",
                 61: "🌧️ Hafif Yağmurlu",
                 63: "🌧️ Yağmurlu",
@@ -323,8 +374,6 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         f.write(weather_html)
 
 
-#def fetch_and_generate():
-   
 def fetch_and_generate():
     CATEGORIES = {
         "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/search?q=g%C3%BCndem&hl=tr&gl=TR&ceid=TR:tr"},
@@ -334,7 +383,7 @@ def fetch_and_generate():
         "sanayi": {"name": "Sanayi", "url": "https://news.google.com/rss/search?q=sanayi&hl=tr&gl=TR&ceid=TR:tr"},
         "spor": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor&hl=tr&gl=TR&ceid=TR:tr"},
         "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k&hl=tr&gl=TR&ceid=TR:tr"},
-         "hava-durumu": {"name": "Hava Durumu", "url": "https://news.google.com/rss/search?q=hava+durumu&hl=tr&gl=TR&ceid=TR:tr"},
+        "hava-durumu": {"name": "Hava Durumu", "url": "https://news.google.com/rss/search?q=hava+durumu&hl=tr&gl=TR&ceid=TR:tr"},
         "deprem": {"name": "Deprem", "url": "https://news.google.com/rss/search?q=deprem&hl=tr&gl=TR&ceid=TR:tr"},
         "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/search?q=bilim&hl=tr&gl=TR&ceid=TR:tr"},
         "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"},
@@ -344,26 +393,14 @@ def fetch_and_generate():
         "hisseler": {"name": "Hisseler", "url": "https://news.google.com/rss/search?q=hisse&hl=tr&gl=TR&ceid=TR:tr"},
         "filmler": {"name": "Filmler", "url": "https://news.google.com/rss/search?q=filmler&hl=tr&gl=TR&ceid=TR:tr"},
         "son-dakika": {"name": "Son Dakika", "url": "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"},
-        "istanbul-haber ": {"name": "İstanbul Haber", "url": "https://news.google.com/rss/search?q=istanbul+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "ankara-haber ": {"name": "Ankara Haber", "url": "https://news.google.com/rss/search?q=ankara+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "izmir-haber ": {"name": "İzmir Haber", "url": "https://news.google.com/rss/search?q=izmir+haber&hl=tr&gl=TR&ceid=TR:tr"},
-        "yerel-haber ": {"name": "Yerel Haber", "url": "https://news.google.com/rss/search?q=yerel+haber&hl=tr&gl=TR&ceid=TR:tr"},
+        "istanbul-haber": {"name": "İstanbul Haber", "url": "https://news.google.com/rss/search?q=istanbul+haber&hl=tr&gl=TR&ceid=TR:tr"},
+        "ankara-haber": {"name": "Ankara Haber", "url": "https://news.google.com/rss/search?q=ankara+haber&hl=tr&gl=TR&ceid=TR:tr"},
+        "izmir-haber": {"name": "İzmir Haber", "url": "https://news.google.com/rss/search?q=izmir+haber&hl=tr&gl=TR&ceid=TR:tr"},
+        "yerel-haber": {"name": "Yerel Haber", "url": "https://news.google.com/rss/search?q=yerel+haber&hl=tr&gl=TR&ceid=TR:tr"},
         "kar-tatili": {"name": "Kar Tatili", "url": "https://news.google.com/rss/search?q=kar+tatili&hl=tr&gl=TR&ceid=TR:tr"},
         "zam": {"name": "Zam", "url": "https://news.google.com/rss/search?q=zam&hl=tr&gl=TR&ceid=TR:tr"},
         "canli-maclar": {"name": "Canlı Maçlar", "url": "https://news.google.com/rss/search?q=canl%C4%B1+ma%C3%A7+izle&hl=tr&gl=TR&ceid=TR:tr"},
     }
-
-    
-    #CATEGORIES = {
-       # "gundem": {"name": "Gündem", "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=tr&gl=TR&ceid=TR:tr"},
-       # "dunya": {"name": "Dünya", "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr"},
-       # "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr"},
-       # "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr"},
-       # "spor": {"name": "Spor", "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr"},
-       # "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr"},
-       # "bilim": {"name": "Bilim", "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"},
-       # "bitcoin": {"name": "Bitcoin", "url": "https://news.google.com/rss/search?q=kripto+OR+bitcoin&hl=tr&gl=TR&ceid=TR:tr"}
-   # }
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -458,6 +495,9 @@ def fetch_and_generate():
             clean_title = parts[0]
             source_name = parts[1]
 
+        # --- GEMINI İLE METNİ ÖZGÜNLEŞTİRME VE DÜZENLEME ---
+        rewritten_desc = rewrite_news_with_gemini(clean_title, clean_desc, cat_name)
+
         dt_tr = pub_datetime.astimezone(tz_tr)
         time_str = dt_tr.strftime("%H:%M")
         date_folder = dt_tr.strftime("%Y/%m/%d")
@@ -475,7 +515,8 @@ def fetch_and_generate():
             "idx": idx,
             "title": clean_title,
             "original_link": original_link,
-            "desc": clean_desc,
+            "desc": rewritten_desc,
+            "short_desc": clean_desc,
             "source": source_name,
             "time": time_str,
             "date_str": date_str,
@@ -525,20 +566,20 @@ def fetch_and_generate():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{news['title']} - nearadin.net</title>
-    <meta name="description" content="{news['desc'][:150]}..." />
+    <meta name="description" content="{news['short_desc'][:150]}..." />
     <link rel="canonical" href="{news['full_url']}" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{news['title']}" />
-    <meta name="twitter:description" content="{news['desc'][:150]}..." />
+    <meta name="twitter:description" content="{news['short_desc'][:150]}..." />
     <meta name="twitter:site" content="@nearadin2026" />
     <meta name="twitter:image" content="https://nearadin.net/1789249176325.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{news['title']}" />
-    <meta property="og:description" content="{news['desc'][:150]}..." />
+    <meta property="og:description" content="{news['short_desc'][:150]}..." />
     <meta property="og:url" content="{news['full_url']}" />
     <meta property="og:image" content="https://nearadin.net/1789249176325.png" />
 
@@ -547,7 +588,7 @@ def fetch_and_generate():
       "@context": "https://schema.org",
       "@type": "NewsArticle",
       "headline": "{news['title']}",
-      "description": "{news['desc'][:150]}...",
+      "description": "{news['short_desc'][:150]}...",
       "datePublished": "{news['iso_date']}",
       "dateModified": "{news['iso_date']}",
       "mainEntityOfPage": "{news['full_url']}",
@@ -599,7 +640,6 @@ def fetch_and_generate():
     <div class="container">
         <article class="article-card">
             <div class="meta-info">
-                <!-- TIKLANABİLİR KIRMIZI KATEGORİ ROZETİ -->
                 <a href="{news['category_link']}" class="badge">{news['category_name']}</a>
                 <span>Tarih: <strong>{news['date_str']} - {news['time']}</strong></span>
                 <span>Kaynak: <strong>{news['source']}</strong></span>
@@ -645,7 +685,6 @@ def fetch_and_generate():
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(detail_html)
 
-        # Kart Üzerinde Tıklanabilir Rozet
         news_cards_html += f'''
         <article class="news-card">
             <div class="card-header">
@@ -656,7 +695,7 @@ def fetch_and_generate():
             <h2 class="news-title">
                 <a href="{news['internal_link']}">{news['title']}</a>
             </h2>
-            <p class="news-summary">{news['desc']}</p>
+            <p class="news-summary">{news['short_desc']}</p>
             <div class="card-footer">
                 <a href="{news['internal_link']}" class="read-btn">Detayı Oku →</a>
             </div>
@@ -692,6 +731,7 @@ def fetch_and_generate():
 
         day_cards_html = ""
         for idx, d_news in enumerate(accumulated_news):
+            short_summary = d_news.get('short_desc', d_news['desc'])
             day_cards_html += f'''
             <article class="news-card">
                 <div class="card-header">
@@ -702,7 +742,7 @@ def fetch_and_generate():
                 <h2 class="news-title">
                     <a href="{d_news['internal_link']}">{d_news['title']}</a>
                 </h2>
-                <p class="news-summary">{d_news['desc']}</p>
+                <p class="news-summary">{short_summary}</p>
                 <div class="card-footer">
                     <a href="{d_news['internal_link']}" class="read-btn">Detayı Oku →</a>
                 </div>
@@ -771,7 +811,7 @@ def fetch_and_generate():
                 <h2 class="news-title">
                     <a href="{d_news['internal_link']}">{d_news['title']}</a>
                 </h2>
-                <p class="news-summary">{d_news['desc']}</p>
+                <p class="news-summary">{d_news['short_desc']}</p>
                 <div class="card-footer">
                     <a href="{d_news['internal_link']}" class="read-btn">Detayı Oku →</a>
                 </div>
@@ -780,13 +820,6 @@ def fetch_and_generate():
 
         cat_page_html = f'''<!DOCTYPE html>
 <html lang="tr">
-          <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{news['title']}" />
-    <meta name="twitter:description" content="{news['desc'][:150]}..." />
-    <meta name="twitter:site" content="@nearadin2026" />
-    <meta name="twitter:image" content="https://nearadin.net/1789249176325.png" />
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -867,8 +900,6 @@ def fetch_and_generate():
     <div class="container">
         <div class="status-bar">
             <span>Kaynak: <strong>Tüm Kategoriler Akışı</strong></span>
-          
-            
             <span>Son Güncelleme: <strong>{last_update}</strong></span>
         </div>
 
@@ -921,7 +952,6 @@ def fetch_and_generate():
     <priority>0.9</priority>
   </url>\n'''
 
-    # --- ARŞİV SAYFASI OLUŞTURMA (KATEGORİ BAZLI GRUPLANDIRMA VE ACCORDION YAPISI) ---
     category_archives = {cat_slug: {} for cat_slug in CATEGORIES.keys()}
 
     for cat_slug in CATEGORIES.keys():
@@ -1079,7 +1109,7 @@ def fetch_and_generate():
     # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
     share_on_twitter(news_list)
 
-    print("İşlem tamamlandı. Kategoriye özel arşivler başarıyla güncellendi.")
+    print("İşlem tamamlandı. Özgün içerikler oluşturuldu ve kategoriler güncellendi.")
 
 if __name__ == "__main__":
     fetch_and_generate()
