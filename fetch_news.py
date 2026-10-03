@@ -222,7 +222,7 @@ def get_header_html(title_text="nearadin.net - SON DAKİKA"):
     '''
 
 def get_footer_html():
-    """Tüm Sayfalarda Ortak Kullanılan Standart Footer Bileşeni"""
+    """Tüm Sayfalarda Ortak Kullanılan Footer ve KVKK/GDPR Çerez Onay Yapısı"""
     return '''
     <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
         <div style="max-width: 680px; margin: 0 auto;">
@@ -250,6 +250,31 @@ def get_footer_html():
             </div>
         </div>
     </footer>
+
+    <!-- KVKK & GDPR ÇEREZ İZİN BANDI -->
+    <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #1c1e21; color: #ffffff; padding: 15px 20px; z-index: 99999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); font-size: 13px; line-height: 1.5; border-top: 3px solid #0056b3;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+            <div style="flex: 1; min-width: 280px;">
+                🍪 <strong>Çerez Kullanımı ve KVKK Bilgilendirmesi:</strong> Sitemizde deneyiminizi iyileştirmek, içerik ve reklamları kişiselleştirmek ve trafik analizi yapmak amacıyla çerezler (cookies) kullanılmaktadır. Sitemizi kullanmaya devam ederek KVKK / GDPR standartlarına uygun çerez kullanımını kabul etmiş sayılırsınız.
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="acceptCookieConsent()" style="background-color: #0056b3; color: white; border: none; padding: 8px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; transition: background 0.2s;">Kabul Et</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookieConsent() {
+            localStorage.setItem('cookieConsentAccepted', 'true');
+            document.getElementById('cookieConsentBanner').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookieConsentAccepted')) {
+                document.getElementById('cookieConsentBanner').style.display = 'block';
+            }
+        });
+    </script>
     '''
 
 
@@ -329,7 +354,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
         function getWeatherDescription(code) {{
             const descriptions = {{
                 0: "🌞 Açık / Güneşli",
-                1: "🌤️ Çoğunlukla Açık",
+                1: "🌤️️ Çoğunlukla Açık",
                 2: "⛅ Parçalı Bulutlu",
                 3: "☁️ Çok Bulutlu",
                 45: "🌫️ Sisli",
@@ -337,9 +362,9 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
                 51: "🌧️ Hafif Çisenti",
                 53: "🌧 Çisenti",
                 55: "🌧️ Yoğun Çisenti",
-                61: "🌧️ Hafif Yağmurlu",
-                63: "🌧️ Yağmurlu",
-                65: "🌧️️ Şiddetli Yağmur",
+                61: "🌧 Hafif Yağmurlu",
+                63: "🌧️️ Yağmurlu",
+                65: "🌧 Şiddetli Yağmur",
                 71: "❄️ Hafif Karlı",
                 73: "❄️ Karlı",
                 75: "❄️ Yoğun Kar Yağışlı",
@@ -1149,7 +1174,7 @@ def fetch_and_generate():
     # --- X (TWITTER) OTOMATİK PAYLAŞIM ---
     share_on_twitter(news_list)
 
-    print("İşlem tamamlandı. Özgün içerikler oluşturuldu ve kategoriler güncellendi.")
+    print("İşlem tamamlandı. Özgün içerikler ve KVKK çerez bandı ile sayfalar güncellendi.")
 
 
 if __name__ == "__main__":
