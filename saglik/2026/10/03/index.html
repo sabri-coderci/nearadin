@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sağlık - 03.10.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Sağlık kategorisinde 03.10.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .badge:hover { background: #ffd0cc; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç izle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Sağlık - 03.10.2026 (39 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">18:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/video-saglik-bakanligi-maliyetleri-kontrol-altina-almak-i.html">[Video] Sağlık Bakanlığı, maliyetleri kontrol altına almak için merkezi ulusal ilaç tedarik sistemini uygulamaya koyacak.</a>
+                </h2>
+                <p class="news-summary">[Video] Sağlık Bakanlığı, maliyetleri kontrol altına almak için merkezi ulusal ilaç tedarik sistemini uygulamaya koyacak.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/video-saglik-bakanligi-maliyetleri-kontrol-altina-almak-i.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">tibbiyebulteni.com</span>
+                    <span class="time">18:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/nhs-nasil-calisiyor-ingiltere-saglik-sistemi.html">NHS Nasıl Çalışıyor? İngiltere Sağlık Sistemi</a>
+                </h2>
+                <p class="news-summary">NHS Nasıl Çalışıyor? İngiltere Sağlık Sistemi  tibbiyebulteni.com</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/nhs-nasil-calisiyor-ingiltere-saglik-sistemi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">18:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/uzman-isimden-kritik-uyari-bebek-sagligi-acisindan-onemli.html">Uzman isimden kritik uyarı: 'Bebek sağlığı açısından önemli'</a>
+                </h2>
+                <p class="news-summary">Uzman isimden kritik uyarı: 'Bebek sağlığı açısından önemli'  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/uzman-isimden-kritik-uyari-bebek-sagligi-acisindan-onemli.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">memurlar.net</span>
+                    <span class="time">18:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/memisoglu-turkiyenin-saglik-altyapisini-bastan-asagi-yenil.html">Memişoğlu: Türkiye'nin sağlık altyapısını baştan aşağı yeniledik</a>
+                </h2>
+                <p class="news-summary">Memişoğlu: Türkiye'nin sağlık altyapısını baştan aşağı yeniledik  memurlar.net</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/memisoglu-turkiyenin-saglik-altyapisini-bastan-asagi-yenil.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">18:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/toplum-temelli-yasli-bakimi.html">Toplum temelli yaşlı bakımı</a>
+                </h2>
+                <p class="news-summary">Toplum temelli yaşlı bakımı  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/toplum-temelli-yasli-bakimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Habertürk</span>
+                    <span class="time">18:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/erzurumda-saglik-calisanlari-151-haftadir-gazze-icin-yuruyo.html">Erzurum'da sağlık çalışanları 151 haftadır Gazze için yürüyor</a>
+                </h2>
+                <p class="news-summary">Erzurum'da sağlık çalışanları 151 haftadır Gazze için yürüyor  Habertürk</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/erzurumda-saglik-calisanlari-151-haftadir-gazze-icin-yuruyo.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/gunluk-saglik-burc-yorumuna-gore-4-ekim-pazar-gunun-nasil-ge.html">Günlük Sağlık Burç Yorumuna Göre 4 Ekim Pazar Günün Nasıl Geçecek?</a>
+                </h2>
+                <p class="news-summary">Günlük Sağlık Burç Yorumuna Göre 4 Ekim Pazar Günün Nasıl Geçecek?  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/gunluk-saglik-burc-yorumuna-gore-4-ekim-pazar-gunun-nasil-ge.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-kova-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Kova Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Kova Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-kova-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-balik-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Balık Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Balık Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-balik-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-oglak-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Oğlak Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Oğlak Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-oglak-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-akrep-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Akrep Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Akrep Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-akrep-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-basak-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Başak Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Başak Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-basak-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-terazi-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Terazi Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Terazi Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-terazi-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-aslan-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Aslan Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Aslan Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-aslan-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-ikizler-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar İkizler Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar İkizler Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-ikizler-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-yengec-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Yengeç Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Yengeç Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-yengec-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-yay-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Yay Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Yay Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-yay-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-boga-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Boğa Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Boğa Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-boga-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-koc-burcu-gunluk-saglik-burc-yorumu.html">4 Ekim Pazar Koç Burcu Günlük Sağlık Burç Yorumu</a>
+                </h2>
+                <p class="news-summary">4 Ekim Pazar Koç Burcu Günlük Sağlık Burç Yorumu  Onedio</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-ekim-pazar-koc-burcu-gunluk-saglik-burc-yorumu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Yeni Alanya</span>
+                    <span class="time">17:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/yeni-alanya-gazetesi-alanya-haber-son-dakika-alanya-haber.html">Yeni Alanya Gazetesi - Alanya Haber, Son Dakika Alanya Haberleri</a>
+                </h2>
+                <p class="news-summary">Yeni Alanya Gazetesi - Alanya Haber, Son Dakika Alanya Haberleri  Yeni Alanya</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/yeni-alanya-gazetesi-alanya-haber-son-dakika-alanya-haber.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Haberci TV</span>
+                    <span class="time">17:51</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/mugla-il-saglik-muduru-dalaman-ve-fethiyede-saglik-tesisler.html">Muğla İl Sağlık Müdürü Dalaman ve Fethiye’de sağlık tesislerini inceledi</a>
+                </h2>
+                <p class="news-summary">Muğla İl Sağlık Müdürü Dalaman ve Fethiye’de sağlık tesislerini inceledi  Haberci TV</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/mugla-il-saglik-muduru-dalaman-ve-fethiyede-saglik-tesisler.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">17:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/saglik-bakani-memisoglu-sanliurfa-sehir-hastanesinin-acilis.html">Sağlık Bakanı Memişoğlu, Şanlıurfa Şehir Hastanesinin açılışında konuştu:</a>
+                </h2>
+                <p class="news-summary">Sağlık Bakanı Memişoğlu, Şanlıurfa Şehir Hastanesinin açılışında konuştu:  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/saglik-bakani-memisoglu-sanliurfa-sehir-hastanesinin-acilis.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">17:02</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/genc-yasta-kazanilan-o-aliskanlik-kireclenmeyi-onluyor.html">Genç yaşta kazanılan o alışkanlık kireçlenmeyi önlüyor!</a>
+                </h2>
+                <p class="news-summary">Genç yaşta kazanılan o alışkanlık kireçlenmeyi önlüyor!  Sabah</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/genc-yasta-kazanilan-o-aliskanlik-kireclenmeyi-onluyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">hibya.com</span>
+                    <span class="time">16:52</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/bakan-memisoglu-saglik-teknolojilerini-kendimiz-uretecegiz.html">Bakan Memişoğlu: Sağlık teknolojilerini kendimiz üreteceğiz</a>
+                </h2>
+                <p class="news-summary">Bakan Memişoğlu: Sağlık teknolojilerini kendimiz üreteceğiz  hibya.com</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/bakan-memisoglu-saglik-teknolojilerini-kendimiz-uretecegiz.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">edirnesonhaber.com</span>
+                    <span class="time">16:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/genel-saglik-isten-kesan-devlet-hastanesi-sorunlarina-tepki.html">Genel Sağlık-İş’ten Keşan Devlet Hastanesi sorunlarına tepki</a>
+                </h2>
+                <p class="news-summary">Genel Sağlık-İş’ten Keşan Devlet Hastanesi sorunlarına tepki  edirnesonhaber.com</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/genel-saglik-isten-kesan-devlet-hastanesi-sorunlarina-tepki.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">16:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/tup-bebek-tedavisinde-sperm-kalitesine-yapay-zeka-destegi.html">Tüp bebek tedavisinde sperm kalitesine yapay zeka desteği</a>
+                </h2>
+                <p class="news-summary">Tüp bebek tedavisinde sperm kalitesine yapay zeka desteği  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/tup-bebek-tedavisinde-sperm-kalitesine-yapay-zeka-destegi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">16:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/60-yas-uzerindeki-herkesi-ilgilendiriyor-sinsi-tehlike-icin.html">60 yaş üzerindeki herkesi ilgilendiriyor: Sinsi tehlike için kritik uyarı</a>
+                </h2>
+                <p class="news-summary">60 yaş üzerindeki herkesi ilgilendiriyor: Sinsi tehlike için kritik uyarı  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/60-yas-uzerindeki-herkesi-ilgilendiriyor-sinsi-tehlike-icin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">KLASS Magazin</span>
+                    <span class="time">16:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/derin-akozbek-ve-merve-ak-london-assist-health-saglik-tu.html">Derin Aközbek Ve Merve Ak : London Assıst Health: “Sağlık Turizminde Daha Fazla Seçenek Değil, Daha Doğru Seçim”</a>
+                </h2>
+                <p class="news-summary">Derin Aközbek Ve Merve Ak : London Assıst Health: “Sağlık Turizminde Daha Fazla Seçenek Değil, Daha Doğru Seçim”  KLASS Magazin</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/derin-akozbek-ve-merve-ak-london-assist-health-saglik-tu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Mersin Haberci Gazetesi</span>
+                    <span class="time">16:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/mersin-saglik-icin-yurudu.html">Mersin sağlık için yürüdü</a>
+                </h2>
+                <p class="news-summary">Mersin sağlık için yürüdü  Mersin Haberci Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/mersin-saglik-icin-yurudu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Saray Medya</span>
+                    <span class="time">16:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/turkiyede-kisi-basina-saglik-basvurusu-132ye-cikti.html">Türkiye'de kişi başına sağlık başvurusu 13,2'ye çıktı</a>
+                </h2>
+                <p class="news-summary">Türkiye'de kişi başına sağlık başvurusu 13,2'ye çıktı  Saray Medya</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/turkiyede-kisi-basina-saglik-basvurusu-132ye-cikti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Son Dakika</span>
+                    <span class="time">15:50</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/aydin-nazillide-kadinlara-saglik-guvenlik-ve-mahremiyet-eg.html">Aydın Nazilli'de kadınlara sağlık, güvenlik ve mahremiyet eğitimi verildi</a>
+                </h2>
+                <p class="news-summary">Aydın Nazilli'de kadınlara sağlık, güvenlik ve mahremiyet eğitimi verildi  Son Dakika</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/aydin-nazillide-kadinlara-saglik-guvenlik-ve-mahremiyet-eg.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">A Haber</span>
+                    <span class="time">15:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/guneydoguya-modern-saglik-ussu-sanliurfa-sehir-hastanesi-a.html">Güneydoğu’ya modern sağlık üssü! Şanlıurfa Şehir Hastanesi açılıyor: Kurdeleyi Başkan Erdoğan kesecek</a>
+                </h2>
+                <p class="news-summary">Güneydoğu’ya modern sağlık üssü! Şanlıurfa Şehir Hastanesi açılıyor: Kurdeleyi Başkan Erdoğan kesecek  A Haber</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/guneydoguya-modern-saglik-ussu-sanliurfa-sehir-hastanesi-a.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Evrensel.net</span>
+                    <span class="time">15:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/el-kavrama-gucu-hangi-saglik-sorunlariyla-iliskili.html">El kavrama gücü hangi sağlık sorunlarıyla ilişkili?</a>
+                </h2>
+                <p class="news-summary">El kavrama gücü hangi sağlık sorunlarıyla ilişkili?  Evrensel.net</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/el-kavrama-gucu-hangi-saglik-sorunlariyla-iliskili.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">İhlas Haber Ajansı</span>
+                    <span class="time">15:10</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/prof-dr-ozkaya-turkiyede-kisi-basina-saglik-basvurusu-1.html">Prof. Dr. Özkaya: "Türkiye’de kişi başına sağlık başvurusu 13,2’ye yükseldi" İhlas Haber Ajansı</a>
+                </h2>
+                <p class="news-summary">Prof. Dr. Özkaya: "Türkiye’de kişi başına sağlık başvurusu 13,2’ye yükseldi" İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/prof-dr-ozkaya-turkiyede-kisi-basina-saglik-basvurusu-1.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Stratejik Düşünce Enstitüsü</span>
+                    <span class="time">15:04</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/avrupa-hastanelerinin-saglik-sisteminin-muhtemel-bir-savasa.html">Avrupa Hastanelerinin Sağlık Sisteminin Muhtemel Bir Savaşa Hazır Olmadığı Açıklandı</a>
+                </h2>
+                <p class="news-summary">Avrupa Hastanelerinin Sağlık Sisteminin Muhtemel Bir Savaşa Hazır Olmadığı Açıklandı  Stratejik Düşünce Enstitüsü</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/avrupa-hastanelerinin-saglik-sisteminin-muhtemel-bir-savasa.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">gzt26.com</span>
+                    <span class="time">15:02</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/nazan-aksaray-saglik-sistemini-elestirdi-saglik-hak-olmakt.html">Nazan Aksaray sağlık sistemini eleştirdi: “Sağlık hak olmaktan çıkarıldı”</a>
+                </h2>
+                <p class="news-summary">Nazan Aksaray sağlık sistemini eleştirdi: “Sağlık hak olmaktan çıkarıldı”  gzt26.com</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/nazan-aksaray-saglik-sistemini-elestirdi-saglik-hak-olmakt.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Türk Tabipleri Birliği</span>
+                    <span class="time">14:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/ekolojik-yikim-ve-saglik-tehditlerine-karsi-halklarin-iklim.html">Ekolojik Yıkım ve Sağlık Tehditlerine Karşı Halkların İklim Zirvesi’ndeyiz!</a>
+                </h2>
+                <p class="news-summary">Ekolojik Yıkım ve Sağlık Tehditlerine Karşı Halkların İklim Zirvesi’ndeyiz!  Türk Tabipleri Birliği</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/ekolojik-yikim-ve-saglik-tehditlerine-karsi-halklarin-iklim.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Giynik Gazetesi</span>
+                    <span class="time">14:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/4-koruyucu-saglik-zirvesi-duzenlendi.html">4. Koruyucu Sağlık Zirvesi düzenlendi</a>
+                </h2>
+                <p class="news-summary">4. Koruyucu Sağlık Zirvesi düzenlendi  Giynik Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/4-koruyucu-saglik-zirvesi-duzenlendi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/saglik/2026/10/03/" class="badge">Sağlık</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">14:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/saglik/2026/10/03/hastalarin-kendi-satin-aldiklari-ilaclar-ve-tibbi-ekipmanlar.html">Hastaların kendi satın aldıkları ilaçlar ve tıbbi ekipmanların sağlık sigortası tarafından karşılanabilmesi için hangi şartları yerine getirmeleri gerekir?</a>
+                </h2>
+                <p class="news-summary">Hastaların kendi satın aldıkları ilaçlar ve tıbbi ekipmanların sağlık sigortası tarafından karşılanabilmesi için hangi şartları yerine getirmeleri gerekir?  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/saglik/2026/10/03/hastalarin-kendi-satin-aldiklari-ilaclar-ve-tibbi-ekipmanlar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

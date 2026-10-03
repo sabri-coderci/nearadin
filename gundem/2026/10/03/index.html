@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gündem - 03.10.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Gündem kategorisinde 03.10.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .badge:hover { background: #ffd0cc; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç izle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀️ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Gündem - 03.10.2026 (56 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">19:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/gezi-teknesine-gocmen-kacakciligi-operasyonu.html">Gezi teknesine göçmen kaçakçılığı operasyonu</a>
+                </h2>
+                <p class="news-summary">Gezi teknesine göçmen kaçakçılığı operasyonu  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/gezi-teknesine-gocmen-kacakciligi-operasyonu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Posta</span>
+                    <span class="time">19:12</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-ak-parti-sanliurfa-il-baskanligi-yeni.html">Cumhurbaşkanı Erdoğan, AK Parti Şanlıurfa İl Başkanlığı yeni hizmet binasını açtı</a>
+                </h2>
+                <p class="news-summary">Cumhurbaşkanı Erdoğan, AK Parti Şanlıurfa İl Başkanlığı yeni hizmet binasını açtı  Posta</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-ak-parti-sanliurfa-il-baskanligi-yeni.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Para Analiz</span>
+                    <span class="time">19:10</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-sanliurfada-fon-sorusturmasi-hakkind.html">Cumhurbaşkanı Erdoğan, Şanlıurfa'da Fon Soruşturması Hakkında Konuştu: "Birinci Önceliğimiz Türkiye Ekonomisine Zarar Gelmesin" — ParaAnaliz.com</a>
+                </h2>
+                <p class="news-summary">Cumhurbaşkanı Erdoğan, Şanlıurfa'da Fon Soruşturması Hakkında Konuştu: "Birinci Önceliğimiz Türkiye Ekonomisine Zarar Gelmesin" — ParaAnaliz.com  Para Analiz</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-sanliurfada-fon-sorusturmasi-hakkind.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">19:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/dto-bodrumda-3-orhan-dinc-donemi-basladi.html">DTO Bodrum’da 3. Orhan Dinç dönemi başladı</a>
+                </h2>
+                <p class="news-summary">DTO Bodrum’da 3. Orhan Dinç dönemi başladı  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/dto-bodrumda-3-orhan-dinc-donemi-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">19:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/taslicanin-yoresel-degerleri-festivalle-bulustu.html">Taşlıca’nın yöresel değerleri festivalle buluştu</a>
+                </h2>
+                <p class="news-summary">Taşlıca’nın yöresel değerleri festivalle buluştu  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/taslicanin-yoresel-degerleri-festivalle-bulustu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">akhisargozde.com</span>
+                    <span class="time">18:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/atsoda-sandiktan-5-beyaz-2-mavi-3-bagimsiz-cikti.html">ATSO’DA SANDIKTAN 5 BEYAZ, 2 MAVİ, 3 BAĞIMSIZ ÇIKTI</a>
+                </h2>
+                <p class="news-summary">ATSO’DA SANDIKTAN 5 BEYAZ, 2 MAVİ, 3 BAĞIMSIZ ÇIKTI  akhisargozde.com</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/atsoda-sandiktan-5-beyaz-2-mavi-3-bagimsiz-cikti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Posta</span>
+                    <span class="time">18:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/yalova-adliyesinde-yolsuzluk-teslim-alindi-dediler-para.html">Yalova Adliyesi'nde yolsuzluk! 'Teslim alındı' dediler, parayı kamu bütçesinden çektiler</a>
+                </h2>
+                <p class="news-summary">Yalova Adliyesi'nde yolsuzluk! 'Teslim alındı' dediler, parayı kamu bütçesinden çektiler  Posta</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/yalova-adliyesinde-yolsuzluk-teslim-alindi-dediler-para.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Gaziantep Postası</span>
+                    <span class="time">18:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/mhk-sorusturmasinda-ferhat-gundogdu-tutuklandi.html">MHK soruşturmasında Ferhat Gündoğdu tutuklandı</a>
+                </h2>
+                <p class="news-summary">MHK soruşturmasında Ferhat Gündoğdu tutuklandı  Gaziantep Postası</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/mhk-sorusturmasinda-ferhat-gundogdu-tutuklandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Gaziantep Postası</span>
+                    <span class="time">18:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/gtbde-secim-heyecani-basladi-kazanan-gaziantep-olacak.html">GTB’de Seçim Heyecanı Başladı: “Kazanan Gaziantep Olacak”</a>
+                </h2>
+                <p class="news-summary">GTB’de Seçim Heyecanı Başladı: “Kazanan Gaziantep Olacak”  Gaziantep Postası</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/gtbde-secim-heyecani-basladi-kazanan-gaziantep-olacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Posta</span>
+                    <span class="time">18:41</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/canakkale-gokceada-feribot-seferleri-iptal-edildi.html">Çanakkale - Gökçeada feribot seferleri iptal edildi</a>
+                </h2>
+                <p class="news-summary">Çanakkale - Gökçeada feribot seferleri iptal edildi  Posta</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/canakkale-gokceada-feribot-seferleri-iptal-edildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Gaziantep Postası</span>
+                    <span class="time">18:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/ataydan-buyukleblebiciye-basari-dilegi.html">Atay’dan Büyükleblebici’ye başarı dileği</a>
+                </h2>
+                <p class="news-summary">Atay’dan Büyükleblebici’ye başarı dileği  Gaziantep Postası</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/ataydan-buyukleblebiciye-basari-dilegi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Gaziantep Postası</span>
+                    <span class="time">18:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/gaziantepte-sanayi-odasinda-oy-verme-suruyor.html">Gaziantep’te sanayi odasında oy verme sürüyor</a>
+                </h2>
+                <p class="news-summary">Gaziantep’te sanayi odasında oy verme sürüyor  Gaziantep Postası</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/gaziantepte-sanayi-odasinda-oy-verme-suruyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Manşet Haber</span>
+                    <span class="time">18:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/erdogan-sanliurfaya-saglikta-61-milyar-liralik-yatirim.html">Erdoğan: Şanlıurfa’ya sağlıkta 61 milyar liralık yatırım</a>
+                </h2>
+                <p class="news-summary">Erdoğan: Şanlıurfa’ya sağlıkta 61 milyar liralık yatırım  Manşet Haber</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/erdogan-sanliurfaya-saglikta-61-milyar-liralik-yatirim.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Manşet İzmir</span>
+                    <span class="time">18:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/kuzey-kore-yapay-zekayla-entegre-edilmis-fuze-firlattigini.html">Kuzey Kore, yapay zekayla entegre edilmiş füze fırlattığını duyurdu</a>
+                </h2>
+                <p class="news-summary">Kuzey Kore, yapay zekayla entegre edilmiş füze fırlattığını duyurdu  Manşet İzmir</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/kuzey-kore-yapay-zekayla-entegre-edilmis-fuze-firlattigini.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Manşet İzmir</span>
+                    <span class="time">18:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/haftada-sadece-bir-gun-kuvvet-antrenmani-yapmak-kas-kaybini.html">"Haftada sadece bir gün kuvvet antrenmanı yapmak kas kaybını durdurabiliyor"</a>
+                </h2>
+                <p class="news-summary">"Haftada sadece bir gün kuvvet antrenmanı yapmak kas kaybını durdurabiliyor"  Manşet İzmir</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/haftada-sadece-bir-gun-kuvvet-antrenmani-yapmak-kas-kaybini.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Yeni Asır</span>
+                    <span class="time">18:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/canli-baskan-erdogandan-onemli-aciklamalar.html">CANLI | Başkan Erdoğan’dan önemli açıklamalar</a>
+                </h2>
+                <p class="news-summary">CANLI | Başkan Erdoğan’dan önemli açıklamalar  Yeni Asır</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/canli-baskan-erdogandan-onemli-aciklamalar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">17:50</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/gol-kenarinda-erkek-cesedi-bulundu.html">Göl kenarında erkek cesedi bulundu</a>
+                </h2>
+                <p class="news-summary">Göl kenarında erkek cesedi bulundu  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/gol-kenarinda-erkek-cesedi-bulundu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/anok-fest26-otomobil-tutkunlari-icin-ankarada-basladi.html">ANOK Fest’26 otomobil tutkunları için Ankara’da başladı</a>
+                </h2>
+                <p class="news-summary">ANOK Fest’26 otomobil tutkunları için Ankara’da başladı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/anok-fest26-otomobil-tutkunlari-icin-ankarada-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/golbasi-belediyesinden-eylul-ayinda-22-bin-500-ton-asfalt-se.html">Gölbaşı Belediyesinden eylül ayında 22 bin 500 ton asfalt serimi</a>
+                </h2>
+                <p class="news-summary">Gölbaşı Belediyesinden eylül ayında 22 bin 500 ton asfalt serimi  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/golbasi-belediyesinden-eylul-ayinda-22-bin-500-ton-asfalt-se.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/konya-cevre-yolu-ile-mevcut-kesim-24-dakika-kisalacak.html">Konya Çevre Yolu ile mevcut kesim 24 dakika kısalacak</a>
+                </h2>
+                <p class="news-summary">Konya Çevre Yolu ile mevcut kesim 24 dakika kısalacak  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/konya-cevre-yolu-ile-mevcut-kesim-24-dakika-kisalacak.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/bakan-guler-azerbaycan-programinin-ardindan-teknofeste-kat.html">Bakan Güler, Azerbaycan programının ardından TEKNOFEST’e katıldı</a>
+                </h2>
+                <p class="news-summary">Bakan Güler, Azerbaycan programının ardından TEKNOFEST’e katıldı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/bakan-guler-azerbaycan-programinin-ardindan-teknofeste-kat.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/turkiye-ile-fransa-arasinda-savunma-is-birligi-yol-haritasi.html">Türkiye ile Fransa arasında ’Savunma İş Birliği Yol Haritası’ imzalandı</a>
+                </h2>
+                <p class="news-summary">Türkiye ile Fransa arasında ’Savunma İş Birliği Yol Haritası’ imzalandı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/turkiye-ile-fransa-arasinda-savunma-is-birligi-yol-haritasi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/tarsusta-arazi-yollarinda-bakim-ve-duzenleme-calismasi.html">Tarsus’ta arazi yollarında bakım ve düzenleme çalışması</a>
+                </h2>
+                <p class="news-summary">Tarsus’ta arazi yollarında bakım ve düzenleme çalışması  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/tarsusta-arazi-yollarinda-bakim-ve-duzenleme-calismasi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Para Analiz</span>
+                    <span class="time">17:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/bakan-simsek-dis-ticaret-rakamlarini-degerlendirdi-cari-ac.html">Bakan Şimşek, Dış Ticaret Rakamlarını Değerlendirdi: Cari Açık Yönetilebilir Seviyede, İhracatçıya Destek Sürecek</a>
+                </h2>
+                <p class="news-summary">Bakan Şimşek, Dış Ticaret Rakamlarını Değerlendirdi: Cari Açık Yönetilebilir Seviyede, İhracatçıya Destek Sürecek  Para Analiz</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/bakan-simsek-dis-ticaret-rakamlarini-degerlendirdi-cari-ac.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Posta</span>
+                    <span class="time">17:30</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogandan-fon-sorusturmasi-aciklamasi.html">Cumhurbaşkanı Erdoğan'dan fon soruşturması açıklaması!</a>
+                </h2>
+                <p class="news-summary">Cumhurbaşkanı Erdoğan'dan fon soruşturması açıklaması!  Posta</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogandan-fon-sorusturmasi-aciklamasi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">17:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/karaman-fk-evinde-agir-yenilgi-aldi.html">Karaman FK evinde ağır yenilgi aldı</a>
+                </h2>
+                <p class="news-summary">Karaman FK evinde ağır yenilgi aldı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/karaman-fk-evinde-agir-yenilgi-aldi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Manşet Haber</span>
+                    <span class="time">17:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-sanliurfa-sehir-hastanesinin-acilisind.html">Cumhurbaşkanı Erdoğan Şanlıurfa Şehir Hastanesinin açılışında konuşuyor</a>
+                </h2>
+                <p class="news-summary">Cumhurbaşkanı Erdoğan Şanlıurfa Şehir Hastanesinin açılışında konuşuyor  Manşet Haber</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumhurbaskani-erdogan-sanliurfa-sehir-hastanesinin-acilisind.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Yeni Asır</span>
+                    <span class="time">17:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/baskan-erdogandan-sanliurfa-sehir-hastanesi-acilis-torenind.html">Başkan Erdoğan’dan Şanlıurfa Şehir Hastanesi açılış töreninde önemli açıklamalar</a>
+                </h2>
+                <p class="news-summary">Başkan Erdoğan’dan Şanlıurfa Şehir Hastanesi açılış töreninde önemli açıklamalar  Yeni Asır</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/baskan-erdogandan-sanliurfa-sehir-hastanesi-acilis-torenind.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">16:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/musiad-karamanda-dost-meclisi-toplandi-geri-sayim-basladi.html">MÜSİAD Karaman’da Dost Meclisi toplandı! Geri sayım başladı</a>
+                </h2>
+                <p class="news-summary">MÜSİAD Karaman’da Dost Meclisi toplandı! Geri sayım başladı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/musiad-karamanda-dost-meclisi-toplandi-geri-sayim-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">16:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/bakan-bayraktar-butce-gorusmeleri-sonrasinda-meclisimizin.html">Bakan Bayraktar: Bütçe görüşmeleri sonrasında Meclis'imizin gündemine getirmeyi hedefliyoruz</a>
+                </h2>
+                <p class="news-summary">Bakan Bayraktar: Bütçe görüşmeleri sonrasında Meclis'imizin gündemine getirmeyi hedefliyoruz  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/bakan-bayraktar-butce-gorusmeleri-sonrasinda-meclisimizin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Yeni Yaşam Gazetesi</span>
+                    <span class="time">16:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/imrali-heyeti-kurtulmus-gorusmesi-gundem-izleme-kurulu.html">İmralı Heyeti – Kurtulmuş görüşmesi: Gündem izleme kurulu</a>
+                </h2>
+                <p class="news-summary">İmralı Heyeti – Kurtulmuş görüşmesi: Gündem izleme kurulu  Yeni Yaşam Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/imrali-heyeti-kurtulmus-gorusmesi-gundem-izleme-kurulu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">16:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/fuhus-operasyonunda-4-tutuklama.html">Fuhuş operasyonunda 4 tutuklama</a>
+                </h2>
+                <p class="news-summary">Fuhuş operasyonunda 4 tutuklama  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/fuhus-operasyonunda-4-tutuklama.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Onedio</span>
+                    <span class="time">15:58</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/es-arayisiyla-gundem-olan-midyeci-ahmet-evlendi-restoranind.html">Eş Arayışıyla Gündem Olan Midyeci Ahmet Evlendi: Restoranında 10 Gün Her Şey Bedava!</a>
+                </h2>
+                <p class="news-summary">Eş Arayışıyla Gündem Olan Midyeci Ahmet Evlendi: Restoranında 10 Gün Her Şey Bedava!  Onedio</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/es-arayisiyla-gundem-olan-midyeci-ahmet-evlendi-restoranind.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">A Haber</span>
+                    <span class="time">15:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/baskan-erdogandan-teknofest-guneydoguda-dorduncu-gun-mesaj.html">Başkan Erdoğan'dan TEKNOFEST Güneydoğu’da dördüncü gün mesajı: Türkiye'nin geleceği emin ellerde</a>
+                </h2>
+                <p class="news-summary">Başkan Erdoğan'dan TEKNOFEST Güneydoğu’da dördüncü gün mesajı: Türkiye'nin geleceği emin ellerde  A Haber</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/baskan-erdogandan-teknofest-guneydoguda-dorduncu-gun-mesaj.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">10haber.net</span>
+                    <span class="time">15:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumartesi-anneleri-1123-haftada-sordu-ibrahim-gundem-35.html">» Cumartesi Anneleri 1123. haftada sordu: İbrahim Gündem 35 yıldır nerede?</a>
+                </h2>
+                <p class="news-summary">» Cumartesi Anneleri 1123. haftada sordu: İbrahim Gündem 35 yıldır nerede?  10haber.net</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumartesi-anneleri-1123-haftada-sordu-ibrahim-gundem-35.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">15:32</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/tuzlada-isci-konteynerlerinde-cikan-yangin-sonduruldu.html">Tuzla’da işçi konteynerlerinde çıkan yangın söndürüldü</a>
+                </h2>
+                <p class="news-summary">Tuzla’da işçi konteynerlerinde çıkan yangın söndürüldü  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/tuzlada-isci-konteynerlerinde-cikan-yangin-sonduruldu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">15:31</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/luks-kruvaziyer-bodruma-yanasti.html">Lüks kruvaziyer Bodrum’a yanaştı</a>
+                </h2>
+                <p class="news-summary">Lüks kruvaziyer Bodrum’a yanaştı  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/luks-kruvaziyer-bodruma-yanasti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Cumhuriyet</span>
+                    <span class="time">15:25</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/cumartesi-anneleri-1123-haftada-sordu-ibrahim-gundem-35-yi.html">Cumartesi Anneleri 1123. haftada sordu: İbrahim Gündem 35 yıldır nerede?</a>
+                </h2>
+                <p class="news-summary">Cumartesi Anneleri 1123. haftada sordu: İbrahim Gündem 35 yıldır nerede?  Cumhuriyet</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/cumartesi-anneleri-1123-haftada-sordu-ibrahim-gundem-35-yi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">15:24</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/baskan-erdogan-teknofest-2026-guneydoguda-turkiyenin-gele.html">Başkan Erdoğan TEKNOFEST 2026 Güneydoğu'da: Türkiye'nin geleceği emin ellerdedir</a>
+                </h2>
+                <p class="news-summary">Başkan Erdoğan TEKNOFEST 2026 Güneydoğu'da: Türkiye'nin geleceği emin ellerdedir  Sabah</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/baskan-erdogan-teknofest-2026-guneydoguda-turkiyenin-gele.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">15:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/galipoglundan-esnafa-makul-fiyat-ve-kaliteli-hizmet-cagri.html">Galipoğlu’ndan Esnafa “makul fiyat ve kaliteli hizmet” çağrısı</a>
+                </h2>
+                <p class="news-summary">Galipoğlu’ndan Esnafa “makul fiyat ve kaliteli hizmet” çağrısı  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/galipoglundan-esnafa-makul-fiyat-ve-kaliteli-hizmet-cagri.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">15:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/son-dakika-ankara-kulislerinde-carpici-iddia-izmir-buyukse.html">SON DAKİKA… Ankara kulislerinde çarpıcı iddia! İzmir Büyükşehir Belediye Başkanı Cemil Tugay AK Parti’ye katılıyor: Tarih belli oldu!</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA… Ankara kulislerinde çarpıcı iddia! İzmir Büyükşehir Belediye Başkanı Cemil Tugay AK Parti’ye katılıyor: Tarih belli oldu!  Sabah</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/son-dakika-ankara-kulislerinde-carpici-iddia-izmir-buyukse.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">15:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/son-dakika-atasehir-belediyesine-yolsuzluk-operasyonu-13.html">SON DAKİKA… Ataşehir Belediyesi'ne yolsuzluk operasyonu! 13 şüpheli gözaltında: Lüks mağazalardan hediye kartı döviz cinsi rüşvet…</a>
+                </h2>
+                <p class="news-summary">SON DAKİKA… Ataşehir Belediyesi'ne yolsuzluk operasyonu! 13 şüpheli gözaltında: Lüks mağazalardan hediye kartı döviz cinsi rüşvet…  Sabah</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/son-dakika-atasehir-belediyesine-yolsuzluk-operasyonu-13.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">BoldMedya</span>
+                    <span class="time">15:04</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/ailesi-35-yildir-kaybedilen-ibrahim-gundemin-kemiklerini-ar.html">Ailesi 35 yıldır kaybedilen İbrahim Gündem’in kemiklerini arıyor</a>
+                </h2>
+                <p class="news-summary">Ailesi 35 yıldır kaybedilen İbrahim Gündem’in kemiklerini arıyor  BoldMedya</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/ailesi-35-yildir-kaybedilen-ibrahim-gundemin-kemiklerini-ar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">15:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/a-milli-takimin-belcika-maglubiyeti-avrupa-basininda-gundem.html">A Milli Takım'ın Belçika mağlubiyeti Avrupa basınında gündem oldu! 'Arda Güler sürekli kabus yaşıyor'</a>
+                </h2>
+                <p class="news-summary">A Milli Takım'ın Belçika mağlubiyeti Avrupa basınında gündem oldu! 'Arda Güler sürekli kabus yaşıyor'  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/a-milli-takimin-belcika-maglubiyeti-avrupa-basininda-gundem.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Ege Telgraf</span>
+                    <span class="time">14:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/yeni-parti-balcova-kongresinde-gundem-fon-krizi-gucten-ik.html">YENİ Parti Balçova Kongresi’nde gündem fon krizi! Güç’ten iktidara sert sözler</a>
+                </h2>
+                <p class="news-summary">YENİ Parti Balçova Kongresi’nde gündem fon krizi! Güç’ten iktidara sert sözler  Ege Telgraf</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/yeni-parti-balcova-kongresinde-gundem-fon-krizi-gucten-ik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">14:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/imrali-heyeti-cumhurbaskani-yardimcisi-yilmaz-ile-gorustu.html">İmralı Heyeti, Cumhurbaşkanı Yardımcısı Yılmaz ile görüştü</a>
+                </h2>
+                <p class="news-summary">İmralı Heyeti, Cumhurbaşkanı Yardımcısı Yılmaz ile görüştü  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/imrali-heyeti-cumhurbaskani-yardimcisi-yilmaz-ile-gorustu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">A Haber</span>
+                    <span class="time">14:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/sanliurfada-teknofest-coskusu-bakan-goktas-a-haberde-konu.html">Şanlıurfa'da TEKNOFEST coşkusu: Bakan Göktaş A Haber'de konuştu</a>
+                </h2>
+                <p class="news-summary">Şanlıurfa'da TEKNOFEST coşkusu: Bakan Göktaş A Haber'de konuştu  A Haber</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/sanliurfada-teknofest-coskusu-bakan-goktas-a-haberde-konu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">14:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/16-ilde-deas-operasyonu-51-supheli-yakalandi.html">16 ilde DEAŞ operasyonu: 51 şüpheli yakalandı</a>
+                </h2>
+                <p class="news-summary">16 ilde DEAŞ operasyonu: 51 şüpheli yakalandı  Sabah</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/16-ilde-deas-operasyonu-51-supheli-yakalandi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Mynet Finans</span>
+                    <span class="time">14:22</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/pusula-portfoy-yoneticisi-serdar-pazinin-aylar-onceki-yazis.html">Pusula Portföy yöneticisi Serdar Pazı’nın aylar önceki yazısı gündem oldu: "Etkilerini göreceğiz" - Finans haberlerinin doğru adresi - Mynet Finans Haber</a>
+                </h2>
+                <p class="news-summary">Pusula Portföy yöneticisi Serdar Pazı’nın aylar önceki yazısı gündem oldu: "Etkilerini göreceğiz" - Finans haberlerinin doğru adresi - Mynet Finans Haber  Mynet Finans</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/pusula-portfoy-yoneticisi-serdar-pazinin-aylar-onceki-yazis.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">14:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/mazgallarda-binlerce-izmarit-temizlendi.html">Mazgallarda binlerce izmarit temizlendi</a>
+                </h2>
+                <p class="news-summary">Mazgallarda binlerce izmarit temizlendi  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/mazgallarda-binlerce-izmarit-temizlendi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">14:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/karamanli-uretici-icin-depolamada-yeni-donem-basladi.html">Karamanlı üretici için depolamada yeni dönem başladı</a>
+                </h2>
+                <p class="news-summary">Karamanlı üretici için depolamada yeni dönem başladı  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/karamanli-uretici-icin-depolamada-yeni-donem-basladi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Karaman Gündem</span>
+                    <span class="time">14:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/karaman-avrupa-projesine-girdi.html">Karaman Avrupa projesine girdi</a>
+                </h2>
+                <p class="news-summary">Karaman Avrupa projesine girdi  Karaman Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/karaman-avrupa-projesine-girdi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">14:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/ozgur-ozel-hedefimiz-adil-esit-hakkaniyetli-bir-duzen-ku.html">Özgür Özel: Hedefimiz, adil, eşit, hakkaniyetli bir düzen kurmaktır</a>
+                </h2>
+                <p class="news-summary">Özgür Özel: Hedefimiz, adil, eşit, hakkaniyetli bir düzen kurmaktır  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/ozgur-ozel-hedefimiz-adil-esit-hakkaniyetli-bir-duzen-ku.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">14:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/meahta-tesis-guvenligi-icin-bina-turu-gerceklestirildi.html">MEAH’ta tesis güvenliği için bina turu gerçekleştirildi</a>
+                </h2>
+                <p class="news-summary">MEAH’ta tesis güvenliği için bina turu gerçekleştirildi  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/meahta-tesis-guvenligi-icin-bina-turu-gerceklestirildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Bodrum Gündem</span>
+                    <span class="time">14:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/yeni-ogrenciler-gelin-tanis-olalim-projesiyle-muglayi-kes.html">Yeni öğrenciler "Gelin Tanış Olalım" projesiyle Muğla’yı keşfetti</a>
+                </h2>
+                <p class="news-summary">Yeni öğrenciler "Gelin Tanış Olalım" projesiyle Muğla’yı keşfetti  Bodrum Gündem</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/yeni-ogrenciler-gelin-tanis-olalim-projesiyle-muglayi-kes.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/gundem/2026/10/03/" class="badge">Gündem</a>
+                    <span class="source">Posta</span>
+                    <span class="time">14:09</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/gundem/2026/10/03/bir-cocuk-beklerken-eve-4-bebekle-donduler-heyecanliyiz-ve.html">Bir çocuk beklerken eve 4 bebekle döndüler! 'Heyecanlıyız ve şaşkınız' - Gündem Haberleri</a>
+                </h2>
+                <p class="news-summary">Bir çocuk beklerken eve 4 bebekle döndüler! 'Heyecanlıyız ve şaşkınız' - Gündem Haberleri  Posta</p>
+                <div class="card-footer">
+                    <a href="/gundem/2026/10/03/bir-cocuk-beklerken-eve-4-bebekle-donduler-heyecanliyiz-ve.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
