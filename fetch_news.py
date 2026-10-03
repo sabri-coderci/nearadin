@@ -6,12 +6,22 @@ import re
 import os
 import html
 import json
+import time
 import tweepy
 from email.utils import parsedate_to_datetime
 from google import genai
 from google.genai import types
+from groq import Groq
 
-# --- GEMINI API İSTEMCİSİ KURULUMU ---
+# --- AI İSTEMCİLERİ KURULUMU ---
+groq_client = None
+if os.getenv("GROQ_API_KEY"):
+    try:
+        groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        print("Groq API bağlantısı başarılı.")
+    except Exception as e:
+        print(f"Groq istemcisi başlatılamadı: {e}")
+
 gemini_client = None
 if os.getenv("GEMINI_API_KEY"):
     try:
@@ -20,14 +30,18 @@ if os.getenv("GEMINI_API_KEY"):
     except Exception as e:
         print(f"Gemini istemcisi başlatılamadı: {e}")
 
+# Limit aşımlarında boşuna istek atmamak için bayraklar
+groq_quota_exceeded = False
+gemini_quota_exceeded = False
 
-def rewrite_news_with_gemini(title, desc, category_name):
+
+def rewrite_news_with_ai(title, desc, category_name):
     """
-    Haber başlığı ve özet metnini Gemini API kullanarak SEO uyumlu,
-    özgün ve anahtar kelime zenginliği barındıran tam haber metnine dönüştürür.
+    Önce ücretsiz ve yüksek kotalı Groq (Llama 3.3 70B) kullanır.
+    Groq başarısız veya limitsiz ise Gemini 2.5 Flash Lite modeline geçer.
+    Hata durumunda veya kotalar dolduğunda orijinal özete düşer.
     """
-    if not gemini_client:
-        return desc
+    global groq_quota_exceeded, gemini_quota_exceeded
 
     prompt = f"""
 Aşağıdaki haber özetini kullanarak özgün, ilgi çekici ve SEO uyumlu bir haber metni yaz.
@@ -43,20 +57,46 @@ Yazım Kuralları:
 4. Başlık veya markdown başlığı (##, ###) ekleme; doğrudan paragraf metnini üret.
 5. Sadece Türkçe yanıt ver.
 """
-    try:
-        response = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.7,
-                max_output_tokens=800
-            )
-        )
-        if response and response.text:
-            return response.text.strip().replace("\n", "<br><br>")
-    except Exception as e:
-        print(f"Gemini metin özgünleştirme hatası ({title[:30]}...): {e}")
 
+    # 1. TERCİH: GROQ API (Llama 3.3 70B)
+    if groq_client and not groq_quota_exceeded:
+        try:
+            completion = groq_client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7,
+                max_tokens=800
+            )
+            if completion and completion.choices[0].message.content:
+                return completion.choices[0].message.content.strip().replace("\n", "<br><br>")
+        except Exception as e:
+            if "429" in str(e) or "rate_limit" in str(e).lower():
+                print("⚠️ Groq API limiti doldu, Gemini modeline geçiliyor...")
+                groq_quota_exceeded = True
+            else:
+                print(f"Groq API hatası ({title[:30]}...): {e}")
+
+    # 2. TERCİH: GEMINI API (gemini-2.5-flash-lite - Yüksek Ücretsiz Kota)
+    if gemini_client and not gemini_quota_exceeded:
+        try:
+            response = gemini_client.models.generate_content(
+                model="gemini-2.5-flash-lite",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.7,
+                    max_output_tokens=800
+                )
+            )
+            if response and response.text:
+                return response.text.strip().replace("\n", "<br><br>")
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                print("⚠️ Gemini API kotası da doldu. Orijinal özet metni kullanılacak.")
+                gemini_quota_exceeded = True
+            else:
+                print(f"Gemini API hatası ({title[:30]}...): {e}")
+
+    # Yapay zeka servisleri çalışmazsa orijinal açıklamayı döndür
     return desc
 
 
@@ -299,7 +339,7 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
                 55: "🌧️ Yoğun Çisenti",
                 61: "🌧️ Hafif Yağmurlu",
                 63: "🌧️ Yağmurlu",
-                65: "🌧️ Şiddetli Yağmur",
+                65: "🌧️️ Şiddetli Yağmur",
                 71: "❄️ Hafif Karlı",
                 73: "❄️ Karlı",
                 75: "❄️ Yoğun Kar Yağışlı",
@@ -495,8 +535,8 @@ def fetch_and_generate():
             clean_title = parts[0]
             source_name = parts[1]
 
-        # --- GEMINI İLE METNİ ÖZGÜNLEŞTİRME VE DÜZENLEME ---
-        rewritten_desc = rewrite_news_with_gemini(clean_title, clean_desc, cat_name)
+        # --- YAPAY ZEKA İLE METNİ ÖZGÜNLEŞTİRME VE DÜZENLEME ---
+        rewritten_desc = rewrite_news_with_ai(clean_title, clean_desc, cat_name)
 
         dt_tr = pub_datetime.astimezone(tz_tr)
         time_str = dt_tr.strftime("%H:%M")
