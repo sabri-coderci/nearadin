@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknoloji - 04.10.2026 Haberleri - nearadin.net</title>
+    <meta name="description" content="Teknoloji kategorisinde 04.10.2026 gününe ait tüm son dakika haberleri." />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.5; }
+        .container { max-width: 680px; margin: 0 auto; padding: 12px; min-height: 80vh; }
+        .status-bar { background: white; border-radius: 8px; padding: 12px 15px; margin-bottom: 15px; font-size: 14px; font-weight: bold; color: #0056b3; border: 1px solid #e4e6eb; display: flex; justify-content: space-between; align-items: center; }
+        .news-card { background: white; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #e4e6eb; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; }
+        .badge { background: #ffebe9; color: #d93025; font-weight: bold; padding: 2px 6px; border-radius: 4px; font-size: 11px; text-transform: uppercase; text-decoration: none; }
+        .badge:hover { background: #ffd0cc; }
+        .source { font-weight: 600; color: #4b4f56; }
+        .time { color: #8d949e; margin-left: auto; }
+        .news-title { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+        .news-title a { color: #050505; text-decoration: none; }
+        .news-summary { font-size: 13px; color: #4b4f56; line-height: 1.4; margin-bottom: 12px; }
+        .card-footer { display: flex; justify-content: flex-end; }
+        .read-btn { color: #1877f2; font-weight: 600; text-decoration: none; font-size: 13px; }
+        .ad-container { margin-bottom: 12px; text-align: center; width: 100%; overflow: hidden; }
+        .ad-container:empty { display: none !important; }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #0056b3; color: white; padding: 12px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold;">nearadin.net - SON DAKİKA</a>
+        <button id="hamburgerBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0 5px; outline: none;">☰</button>
+        
+        <nav id="dropdownNav" style="display: none; position: absolute; top: 100%; right: 0; background: white; width: 230px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 0 0 8px 8px; border: 1px solid #e4e6eb;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Anasayfa</a></li>
+                
+                <!-- KATEGORİLER -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">📰 Haber Kategorileri</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/gundem/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📌 Gündem</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/spor/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Spor</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/ekonomi/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📈 Ekonomi</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/teknoloji/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">💻 Teknoloji</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/dunya/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🌍 Dünya</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/saglik/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Sağlık</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/bilim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔬 Bilim</a></li>
+
+                <!-- SERVİSLER VE ARAÇLAR -->
+                <li style="background-color: #f7f8fa; padding: 8px 16px; font-size: 11px; font-weight: bold; color: #65676b; text-transform: uppercase; border-bottom: 1px solid #f0f2f5;">🛠️ Servisler ve Araçlar</li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-sonuclari/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç Sonuçları</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/canli-mac-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">⚽ Canlı Maç izle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/arsiv/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📅 Günlük Arşiv</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/nobetci-eczane/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🏥 Nöbetçi Eczane</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/son-depremler/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🔴 Son Depremler</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/namaz-vakitleri/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🕌 Namaz Vakitleri</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/kripto-para/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">🪙 Kripto Piyasası</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/hava-durumu/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">☀ Hava Durumu</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/film-izle/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📺 Film İzle</a></li>
+                <li style="border-bottom: 1px solid #f0f2f5;"><a href="/iletisim/" style="display: block; padding: 10px 16px; color: #1c1e21; text-decoration: none; font-size: 14px;">📨 İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('dropdownNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!nav.contains(e.target) && e.target !== btn) {
+                        nav.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div class="container">
+        <div class="status-bar">
+            <span>📅 Teknoloji - 04.10.2026 (75 Haber)</span>
+            <a href="/arsiv/" style="color: #1877f2; text-decoration: none; font-size: 12px;">← Tüm Arşiv</a>
+        </div>
+        <main>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Yeni Şafak</span>
+                    <span class="time">17:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bayraktardan-teknofest-guneydoguda-dikkat-ceken-mesaj-ter.html">Bayraktar'dan TEKNOFEST Güneydoğu'da dikkat çeken mesaj: Tersine beyin göçü başladı</a>
+                </h2>
+                <p class="news-summary">Bayraktar'dan TEKNOFEST Güneydoğu'da dikkat çeken mesaj: Tersine beyin göçü başladı  Yeni Şafak</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bayraktardan-teknofest-guneydoguda-dikkat-ceken-mesaj-ter.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">17:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/better-choice-awards-2026-yenilikci-urunleri-cozumleri-ve.html">Better Choice Awards 2026, yenilikçi ürünleri, çözümleri ve markaları ödüllendiriyor.</a>
+                </h2>
+                <p class="news-summary">Better Choice Awards 2026, yenilikçi ürünleri, çözümleri ve markaları ödüllendiriyor.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/better-choice-awards-2026-yenilikci-urunleri-cozumleri-ve.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+   <div class="ad-container">
+       <ins data-publisher="adm-pub-342021502" data-ad-network="6938571fadda546eb28ca492" class="adm-ads-area"></ins>
+        <script type="text/javascript" src="https://static.cdn.admatic.com.tr/showad/showad.min.js"></script>
+   </div>
+    
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">İstanbul Ticaret Gazetesi</span>
+                    <span class="time">17:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/turk-muhendislerden-uydu-takibinde-yeni-teknoloji-450-kilom.html">Türk mühendislerden uydu takibinde yeni teknoloji: 450 kilometreden haberleşiyor</a>
+                </h2>
+                <p class="news-summary">Türk mühendislerden uydu takibinde yeni teknoloji: 450 kilometreden haberleşiyor  İstanbul Ticaret Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/turk-muhendislerden-uydu-takibinde-yeni-teknoloji-450-kilom.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">16:42</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/turk-muhendislerin-gelistirdigi-pozisyoner-hava-araclarini-v.html">Türk mühendislerin geliştirdiği pozisyoner hava araçlarını ve uyduları takip ediyor</a>
+                </h2>
+                <p class="news-summary">Türk mühendislerin geliştirdiği pozisyoner hava araçlarını ve uyduları takip ediyor  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/turk-muhendislerin-gelistirdigi-pozisyoner-hava-araclarini-v.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">16:41</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofestte-genclere-hava-trafik-kontrolorlugu-deneyimi.html">TEKNOFEST'te gençlere hava trafik kontrolörlüğü deneyimi</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST'te gençlere hava trafik kontrolörlüğü deneyimi  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofestte-genclere-hava-trafik-kontrolorlugu-deneyimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">DHA | Demirören Haber Ajansı</span>
+                    <span class="time">16:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguya-ziyaretci-akini-yuruyus-zorlasti-tr.html">TEKNOFEST Güneydoğu'ya ziyaretçi akını; yürüyüş zorlaştı, trafik kilitlendi</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu'ya ziyaretçi akını; yürüyüş zorlaştı, trafik kilitlendi  DHA | Demirören Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguya-ziyaretci-akini-yuruyus-zorlasti-tr.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">16:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/inovasyonu-tesvik-etmek-ve-bilim-ve-teknolojinin-degerini-ar.html">İnovasyonu teşvik etmek ve bilim ve teknolojinin değerini artırmak için yeterince güçlü teşviklere ihtiyacımız var.</a>
+                </h2>
+                <p class="news-summary">İnovasyonu teşvik etmek ve bilim ve teknolojinin değerini artırmak için yeterince güçlü teşviklere ihtiyacımız var.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/inovasyonu-tesvik-etmek-ve-bilim-ve-teknolojinin-degerini-ar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">16:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/denizi-olmayan-konyada-gelistirilen-insansiz-deniz-araci-te.html">Denizi olmayan Konya'da geliştirilen insansız deniz aracı TEKNOFEST'te dereceye girdi</a>
+                </h2>
+                <p class="news-summary">Denizi olmayan Konya'da geliştirilen insansız deniz aracı TEKNOFEST'te dereceye girdi  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/denizi-olmayan-konyada-gelistirilen-insansiz-deniz-araci-te.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">16:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/inovasyon-somut-sonuclar-ve-deger-uretmelidir.html">İnovasyon somut sonuçlar ve değer üretmelidir.</a>
+                </h2>
+                <p class="news-summary">İnovasyon somut sonuçlar ve değer üretmelidir.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/inovasyon-somut-sonuclar-ve-deger-uretmelidir.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">16:18</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bu-uc-temel-unsuru-bir-araya-getirmek-inovasyon-icin-ivme-y.html">Bu üç temel unsuru bir araya getirmek, inovasyon için ivme yaratır.</a>
+                </h2>
+                <p class="news-summary">Bu üç temel unsuru bir araya getirmek, inovasyon için ivme yaratır.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bu-uc-temel-unsuru-bir-araya-getirmek-inovasyon-icin-ivme-y.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">16:17</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogunun-son-gununde-robotlarin-gosterisi-ilg.html">TEKNOFEST Güneydoğu'nun son gününde robotların gösterisi ilgi gördü</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu'nun son gününde robotların gösterisi ilgi gördü  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogunun-son-gununde-robotlarin-gosterisi-ilg.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Çankırı Postası</span>
+                    <span class="time">16:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/cankirinin-tuzu-teknoloji-festivalinde-gorucuye-cikti.html">Çankırı’nın tuzu teknoloji festivalinde görücüye çıktı</a>
+                </h2>
+                <p class="news-summary">Çankırı’nın tuzu teknoloji festivalinde görücüye çıktı  Çankırı Postası</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/cankirinin-tuzu-teknoloji-festivalinde-gorucuye-cikti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">16:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitabi-2026-bilim-teknoloji-ve-inovasyon-k.html">Vietnam Kırmızı Kitabı, 2026 Bilim, Teknoloji ve İnovasyon Kitapları dalında Birincilik Ödülü'nü kazandı.</a>
+                </h2>
+                <p class="news-summary">Vietnam Kırmızı Kitabı, 2026 Bilim, Teknoloji ve İnovasyon Kitapları dalında Birincilik Ödülü'nü kazandı.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitabi-2026-bilim-teknoloji-ve-inovasyon-k.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Rudaw</span>
+                    <span class="time">16:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/italyada-robot-beyni-gelistiren-kurt-kadin-bilim-insani-d.html">İtalya’da 'Robot beyni' geliştiren Kürt kadın bilim insanı dünyanın en iyi 28 araştırmacısı arasına girdi</a>
+                </h2>
+                <p class="news-summary">İtalya’da 'Robot beyni' geliştiren Kürt kadın bilim insanı dünyanın en iyi 28 araştırmacısı arasına girdi  Rudaw</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/italyada-robot-beyni-gelistiren-kurt-kadin-bilim-insani-d.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">16:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-genel-sekreteri-nart-sanliurfali-vatandaslarimizi.html">TEKNOFEST Genel Sekreteri Nart: Şanlıurfalı vatandaşlarımızın gösterdiği teveccüh çok kıymetliydi</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Genel Sekreteri Nart: Şanlıurfalı vatandaşlarımızın gösterdiği teveccüh çok kıymetliydi  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-genel-sekreteri-nart-sanliurfali-vatandaslarimizi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">CNN Türk</span>
+                    <span class="time">15:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/tarimda-yeni-donem-teknoloji-tarlada-bakan-yumakli-detayla.html">Tarımda yeni dönem: Teknoloji tarlada! Bakan Yumaklı detayları CNN TÜRK'te anlattı</a>
+                </h2>
+                <p class="news-summary">Tarımda yeni dönem: Teknoloji tarlada! Bakan Yumaklı detayları CNN TÜRK'te anlattı  CNN Türk</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/tarimda-yeni-donem-teknoloji-tarlada-bakan-yumakli-detayla.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Aksiyon.com.TR</span>
+                    <span class="time">15:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/adalet-teknoloji-ve-mizan-vurgusu-13-bediuzzaman-sempozyu.html">adalet, teknoloji ve mizan vurgusu: 13. bediüzzaman sempozyumu'nda öne çıkanlar</a>
+                </h2>
+                <p class="news-summary">adalet, teknoloji ve mizan vurgusu: 13. bediüzzaman sempozyumu'nda öne çıkanlar  Aksiyon.com.TR</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/adalet-teknoloji-ve-mizan-vurgusu-13-bediuzzaman-sempozyu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">ssbulten.com.tr</span>
+                    <span class="time">15:19</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguda-mill-teknoloji-coskusu.html">TEKNOFEST Güneydoğu’da Millî Teknoloji Coşkusu!</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu’da Millî Teknoloji Coşkusu!  ssbulten.com.tr</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguda-mill-teknoloji-coskusu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">14:53</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/gelex-electric-adini-gelex-industries-olarak-degistirerek-e.html">GELEX Electric, adını GELEX Industries olarak değiştirerek endüstri ve teknoloji alanına genişliyor.</a>
+                </h2>
+                <p class="news-summary">GELEX Electric, adını GELEX Industries olarak değiştirerek endüstri ve teknoloji alanına genişliyor.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/gelex-electric-adini-gelex-industries-olarak-degistirerek-e.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">14:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/atis-egitiminde-maliyet-ve-riski-azaltan-sistem-teknofest-gu.html">Atış eğitiminde maliyet ve riski azaltan sistem TEKNOFEST Güneydoğu'da tanıtıldı</a>
+                </h2>
+                <p class="news-summary">Atış eğitiminde maliyet ve riski azaltan sistem TEKNOFEST Güneydoğu'da tanıtıldı  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/atis-egitiminde-maliyet-ve-riski-azaltan-sistem-teknofest-gu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Fokus+</span>
+                    <span class="time">14:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-sanliurfa-2026-ziyaretci-kaydi-nasil-yapilir-tari.html">TEKNOFEST Şanlıurfa 2026 Ziyaretçi Kaydı Nasıl Yapılır? Tarih, Program ve Giriş Şartları</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Şanlıurfa 2026 Ziyaretçi Kaydı Nasıl Yapılır? Tarih, Program ve Giriş Şartları  Fokus+</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-sanliurfa-2026-ziyaretci-kaydi-nasil-yapilir-tari.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">14:45</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/mehmetcikin-gozcusu-pars-izci-8x8-kbrn-gorevlerinde-kritik.html">Mehmetçik'in gözcüsü PARS İZCİ 8x8, KBRN görevlerinde kritik rol üstleniyor</a>
+                </h2>
+                <p class="news-summary">Mehmetçik'in gözcüsü PARS İZCİ 8x8, KBRN görevlerinde kritik rol üstleniyor  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/mehmetcikin-gozcusu-pars-izci-8x8-kbrn-gorevlerinde-kritik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Paratic Haber</span>
+                    <span class="time">14:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/wall-streette-teknoloji-ruzgari-nasdaq-rekor-tazeledi.html">Wall Street’te teknoloji rüzgarı: Nasdaq rekor tazeledi</a>
+                </h2>
+                <p class="news-summary">Wall Street’te teknoloji rüzgarı: Nasdaq rekor tazeledi  Paratic Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/wall-streette-teknoloji-ruzgari-nasdaq-rekor-tazeledi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Tokat Haber</span>
+                    <span class="time">14:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/togu-teknofeste-damga-vurdu-640-ogrenci-teknoloji-icin-yar.html">TOGÜ TEKNOFEST’e Damga Vurdu: 640 Öğrenci Teknoloji İçin Yarıştı</a>
+                </h2>
+                <p class="news-summary">TOGÜ TEKNOFEST’e Damga Vurdu: 640 Öğrenci Teknoloji İçin Yarıştı  Tokat Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/togu-teknofeste-damga-vurdu-640-ogrenci-teknoloji-icin-yar.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">14:27</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogu-sanliurfa-turizmini-hareketlendirdi.html">TEKNOFEST Güneydoğu, Şanlıurfa turizmini hareketlendirdi</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu, Şanlıurfa turizmini hareketlendirdi  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogu-sanliurfa-turizmini-hareketlendirdi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">14:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/kulturel-mirasin-korunmasinda-dijital-teknoloji-anilar-icin.html">Kültürel mirasın korunmasında dijital teknoloji: Anılar için 'sigorta'</a>
+                </h2>
+                <p class="news-summary">Kültürel mirasın korunmasında dijital teknoloji: Anılar için 'sigorta'  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/kulturel-mirasin-korunmasinda-dijital-teknoloji-anilar-icin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">14:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/turk-yildizlari-teknofest-guneydogunun-coskusunu-artirdi.html">Türk Yıldızları TEKNOFEST Güneydoğu'nun coşkusunu artırdı</a>
+                </h2>
+                <p class="news-summary">Türk Yıldızları TEKNOFEST Güneydoğu'nun coşkusunu artırdı  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/turk-yildizlari-teknofest-guneydogunun-coskusunu-artirdi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Memurlar.Net</span>
+                    <span class="time">14:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/ozvar-acikladi-teknoloji-odakli-tarim-programlarinda-100-d.html">Özvar açıkladı: Teknoloji odaklı tarım programlarında %100 doluluk oranı</a>
+                </h2>
+                <p class="news-summary">Özvar açıkladı: Teknoloji odaklı tarım programlarında %100 doluluk oranı  Memurlar.Net</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/ozvar-acikladi-teknoloji-odakli-tarim-programlarinda-100-d.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Aksiyon.com.TR</span>
+                    <span class="time">14:12</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/aydin-sehir-hastanesine-tuseb-teknoloji-transfer-ofisi-geliy.html">Aydın şehir hastanesine TÜSEB teknoloji transfer ofisi geliyor</a>
+                </h2>
+                <p class="news-summary">Aydın şehir hastanesine TÜSEB teknoloji transfer ofisi geliyor  Aksiyon.com.TR</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/aydin-sehir-hastanesine-tuseb-teknoloji-transfer-ofisi-geliy.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Uzmanpara</span>
+                    <span class="time">14:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-yumakli-ciftciye-hap-gibi-bilgi-verecek-sistem-geli.html">Bakan Yumaklı: Çiftçiye "hap gibi" bilgi verecek sistem geliyor</a>
+                </h2>
+                <p class="news-summary">Bakan Yumaklı: Çiftçiye "hap gibi" bilgi verecek sistem geliyor  Uzmanpara</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-yumakli-ciftciye-hap-gibi-bilgi-verecek-sistem-geli.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">İhlas Haber Ajansı</span>
+                    <span class="time">14:08</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/aydin-sehir-hastanesinde-tuseb-teknoloji-transfer-ofisi-kur.html">Aydın Şehir Hastanesi’nde TÜSEB Teknoloji Transfer Ofisi kuruluyor İhlas Haber Ajansı</a>
+                </h2>
+                <p class="news-summary">Aydın Şehir Hastanesi’nde TÜSEB Teknoloji Transfer Ofisi kuruluyor İhlas Haber Ajansı  İhlas Haber Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/aydin-sehir-hastanesinde-tuseb-teknoloji-transfer-ofisi-kur.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">13:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitap-serisi-bilim-ve-teknoloji-kitaplari-k.html">Vietnam Kırmızı Kitap serisi, bilim ve teknoloji kitapları kategorisinde birincilik ödülünü kazandı.</a>
+                </h2>
+                <p class="news-summary">Vietnam Kırmızı Kitap serisi, bilim ve teknoloji kitapları kategorisinde birincilik ödülünü kazandı.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitap-serisi-bilim-ve-teknoloji-kitaplari-k.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">13:54</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/isletmeler-fabrikalarindaki-emisyonlari-azaltmak-icin-tekno.html">İşletmeler, fabrikalarındaki emisyonları azaltmak için teknoloji kullanıyor.</a>
+                </h2>
+                <p class="news-summary">İşletmeler, fabrikalarındaki emisyonları azaltmak için teknoloji kullanıyor.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/isletmeler-fabrikalarindaki-emisyonlari-azaltmak-icin-tekno.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">13:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/jandarmanin-hava-gosterileri-teknofest-guneydogu-etkinlikle.html">Jandarmanın hava gösterileri, TEKNOFEST Güneydoğu etkinliklerine renk kattı</a>
+                </h2>
+                <p class="news-summary">Jandarmanın hava gösterileri, TEKNOFEST Güneydoğu etkinliklerine renk kattı  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/jandarmanin-hava-gosterileri-teknofest-guneydogu-etkinlikle.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">insaatyatirim.com</span>
+                    <span class="time">13:35</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/ng-kutahya-seramikin-ileri-teknoloji-yatirimlarindaki-globa.html">NG Kütahya Seramik’in İleri Teknoloji Yatırımlarındaki Global Başarısı TECNAwards’ta Ödüllendirildi</a>
+                </h2>
+                <p class="news-summary">NG Kütahya Seramik’in İleri Teknoloji Yatırımlarındaki Global Başarısı TECNAwards’ta Ödüllendirildi  insaatyatirim.com</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/ng-kutahya-seramikin-ileri-teknoloji-yatirimlarindaki-globa.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">13:31</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-genclerde-sivil-havacilik-farkindaligini-artiriyor.html">TEKNOFEST gençlerde sivil havacılık farkındalığını artırıyor</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST gençlerde sivil havacılık farkındalığını artırıyor  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-genclerde-sivil-havacilik-farkindaligini-artiriyor.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">13:23</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/2025-2026-doneminde-bilim-ve-teknoloji-ile-yeniligin-pratik.html">2025-2026 döneminde, bilim ve teknoloji ile yeniliğin pratikte uygulanma oranı %100'e ulaşacaktır.</a>
+                </h2>
+                <p class="news-summary">2025-2026 döneminde, bilim ve teknoloji ile yeniliğin pratikte uygulanma oranı %100'e ulaşacaktır.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/2025-2026-doneminde-bilim-ve-teknoloji-ile-yeniligin-pratik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">A Haber</span>
+                    <span class="time">13:16</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-yuzde-87-yerli-ay-araci-2027de-gonderilecek.html">Bakan Kacır: Yüzde 87 yerli Ay aracı 2027’de gönderilecek</a>
+                </h2>
+                <p class="news-summary">Bakan Kacır: Yüzde 87 yerli Ay aracı 2027’de gönderilecek  A Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-yuzde-87-yerli-ay-araci-2027de-gonderilecek.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">13:07</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/ekonominin-ve-toplumun-tamaminda-inovasyonu-guclu-bir-sekild.html">Ekonominin ve toplumun tamamında inovasyonu güçlü bir şekilde teşvik edin.</a>
+                </h2>
+                <p class="news-summary">Ekonominin ve toplumun tamamında inovasyonu güçlü bir şekilde teşvik edin.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/ekonominin-ve-toplumun-tamaminda-inovasyonu-guclu-bir-sekild.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">12:37</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogunun-son-gununde-hava-gosterileri-yapildi.html">TEKNOFEST Güneydoğu'nun son gününde hava gösterileri yapıldı</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu'nun son gününde hava gösterileri yapıldı  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydogunun-son-gununde-hava-gosterileri-yapildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">12:20</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/dijital-teknoloji-ve-yapay-zekada-uzmanlasmayi-tesvik-eden-2.html">Dijital teknoloji ve yapay zekada uzmanlaşmayı teşvik eden 2026 Yaşam Boyu Öğrenme Haftası'nı başlatıyoruz.</a>
+                </h2>
+                <p class="news-summary">Dijital teknoloji ve yapay zekada uzmanlaşmayı teşvik eden 2026 Yaşam Boyu Öğrenme Haftası'nı başlatıyoruz.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/dijital-teknoloji-ve-yapay-zekada-uzmanlasmayi-tesvik-eden-2.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Haber 7</span>
+                    <span class="time">12:15</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/corumlu-ogrenciler-odulunu-cumhurbaskani-erdoganin-elinden.html">Çorumlu öğrenciler ödülünü Cumhurbaşkanı Erdoğan'ın elinden aldı</a>
+                </h2>
+                <p class="news-summary">Çorumlu öğrenciler ödülünü Cumhurbaşkanı Erdoğan'ın elinden aldı  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/corumlu-ogrenciler-odulunu-cumhurbaskani-erdoganin-elinden.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Yeniçağ Gazetesi</span>
+                    <span class="time">12:12</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/isvec-devinin-teknoloji-ussu-turkiye-yollarinda-elektrikli.html">İsveç devinin teknoloji üssü Türkiye yollarında: Elektrikli Volvo ES90 satışa çıktı</a>
+                </h2>
+                <p class="news-summary">İsveç devinin teknoloji üssü Türkiye yollarında: Elektrikli Volvo ES90 satışa çıktı  Yeniçağ Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/isvec-devinin-teknoloji-ussu-turkiye-yollarinda-elektrikli.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">12:03</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/iletisim-sektorunde-en-fazla-sikayet-internet-hizmetlerine-g.html">İletişim sektöründe en fazla şikayet internet hizmetlerine geldi</a>
+                </h2>
+                <p class="news-summary">İletişim sektöründe en fazla şikayet internet hizmetlerine geldi  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/iletisim-sektorunde-en-fazla-sikayet-internet-hizmetlerine-g.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">11:05</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-inovasyon-ve-dijital-donusumden-kaynakla.html">Bilim ve teknoloji, inovasyon ve dijital dönüşümden kaynaklanan yeni büyüme itici güçleri.</a>
+                </h2>
+                <p class="news-summary">Bilim ve teknoloji, inovasyon ve dijital dönüşümden kaynaklanan yeni büyüme itici güçleri.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-inovasyon-ve-dijital-donusumden-kaynakla.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">10:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/mekong-deltasindaki-buyumenin-kalitesi-uzerinde-somut-bir-e.html">Mekong Deltası'ndaki büyümenin kalitesi üzerinde somut bir etki yaratan özel çözümler bulmak.</a>
+                </h2>
+                <p class="news-summary">Mekong Deltası'ndaki büyümenin kalitesi üzerinde somut bir etki yaratan özel çözümler bulmak.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/mekong-deltasindaki-buyumenin-kalitesi-uzerinde-somut-bir-e.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Erzurum Pusula Gazetesi</span>
+                    <span class="time">10:59</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilim-erzurumdan-teknofestte-teknoloji-atolyesi.html">Bilim Erzurum'dan TEKNOFEST'te teknoloji atölyesi</a>
+                </h2>
+                <p class="news-summary">Bilim Erzurum'dan TEKNOFEST'te teknoloji atölyesi  Erzurum Pusula Gazetesi</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilim-erzurumdan-teknofestte-teknoloji-atolyesi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">10:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilimsel-inovasyon-yarismasi-ve-2026-bilim-ve-teknoloji-i.html">"Bilimsel İnovasyon" yarışması ve 2026 Bilim ve Teknoloji, İnovasyon ve Dijital Dönüşüm Kitap Ödülleri'nin ödüllerinin takdimi.</a>
+                </h2>
+                <p class="news-summary">"Bilimsel İnovasyon" yarışması ve 2026 Bilim ve Teknoloji, İnovasyon ve Dijital Dönüşüm Kitap Ödülleri'nin ödüllerinin takdimi.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilimsel-inovasyon-yarismasi-ve-2026-bilim-ve-teknoloji-i.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">10:47</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/abdden-cine-kacirilan-nvidia-cipleriyle-ilgili-sorunlar-bu.html">ABD'den Çİn'e kaçırılan NVidia çipleriyle ilgili sorunlar büyüyor</a>
+                </h2>
+                <p class="news-summary">ABD'den Çİn'e kaçırılan NVidia çipleriyle ilgili sorunlar büyüyor  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/abdden-cine-kacirilan-nvidia-cipleriyle-ilgili-sorunlar-bu.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">10:43</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitabi-serisi-2026-bilim-ve-teknoloji-kit.html">"Vietnam Kırmızı Kitabı" serisi, 2026 Bilim ve Teknoloji Kitap Ödülleri'nde birincilik ödülünü kazandı.</a>
+                </h2>
+                <p class="news-summary">"Vietnam Kırmızı Kitabı" serisi, 2026 Bilim ve Teknoloji Kitap Ödülleri'nde birincilik ödülünü kazandı.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/vietnam-kirmizi-kitabi-serisi-2026-bilim-ve-teknoloji-kit.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">10:41</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/2026-bilim-teknoloji-inovasyon-ve-dijital-donusum-kitap-od.html">2026 Bilim, Teknoloji, İnovasyon ve Dijital Dönüşüm Kitap Ödülleri'nde on eser ödüle layık görüldü.</a>
+                </h2>
+                <p class="news-summary">2026 Bilim, Teknoloji, İnovasyon ve Dijital Dönüşüm Kitap Ödülleri'nde on eser ödüle layık görüldü.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/2026-bilim-teknoloji-inovasyon-ve-dijital-donusum-kitap-od.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Takvim</span>
+                    <span class="time">10:38</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/gozler-sanliurfada-teknofest-guneydoguda-son-gun-etkinlik.html">Gözler Şanlıurfa’da: TEKNOFEST Güneydoğu’da son gün etkinlikleri başladı!</a>
+                </h2>
+                <p class="news-summary">Gözler Şanlıurfa’da: TEKNOFEST Güneydoğu’da son gün etkinlikleri başladı!  Takvim</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/gozler-sanliurfada-teknofest-guneydoguda-son-gun-etkinlik.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">10:29</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-alaninda-one-cikan-10-kitap-odullendirild.html">Bilim ve teknoloji alanında öne çıkan 10 kitap ödüllendirildi.</a>
+                </h2>
+                <p class="news-summary">Bilim ve teknoloji alanında öne çıkan 10 kitap ödüllendirildi.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-alaninda-one-cikan-10-kitap-odullendirild.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Uzmanpara</span>
+                    <span class="time">10:29</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-radyo-d-canli-yayininda-teknofesti-anlatti.html">Bakan Kacır, Radyo D canlı yayınında TEKNOFEST’i anlattı</a>
+                </h2>
+                <p class="news-summary">Bakan Kacır, Radyo D canlı yayınında TEKNOFEST’i anlattı  Uzmanpara</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-radyo-d-canli-yayininda-teknofesti-anlatti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Gazete Vatan</span>
+                    <span class="time">10:14</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-tekin-demiroren-medya-ve-teknoloji-mtali-ziyaret-ett.html">Bakan Tekin, Demirören Medya ve Teknoloji MTAL'i ziyaret etti, öğrencilerin sorularını yanıtladı</a>
+                </h2>
+                <p class="news-summary">Bakan Tekin, Demirören Medya ve Teknoloji MTAL'i ziyaret etti, öğrencilerin sorularını yanıtladı  Gazete Vatan</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-tekin-demiroren-medya-ve-teknoloji-mtali-ziyaret-ett.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Ege Postası</span>
+                    <span class="time">09:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/efes-selcukta-sempozyumun-son-gunu-insan-bilgi-ve-teknolo.html">Efes Selçuk'ta sempozyumun son günü: İnsan, bilgi ve teknoloji konuşuldu</a>
+                </h2>
+                <p class="news-summary">Efes Selçuk'ta sempozyumun son günü: İnsan, bilgi ve teknoloji konuşuldu  Ege Postası</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/efes-selcukta-sempozyumun-son-gunu-insan-bilgi-ve-teknolo.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">NTV Haber</span>
+                    <span class="time">09:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/eski-openai-guvenlik-sorumlusundan-yapay-zeka-guvenlik-test.html">Eski OpenAI güvenlik sorumlusundan "yapay zeka güvenlik testlerinden kaçabilir" uyarısı</a>
+                </h2>
+                <p class="news-summary">Eski OpenAI güvenlik sorumlusundan "yapay zeka güvenlik testlerinden kaçabilir" uyarısı  NTV Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/eski-openai-guvenlik-sorumlusundan-yapay-zeka-guvenlik-test.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Haber 7</span>
+                    <span class="time">09:34</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/geri-sayim-basladi-turksat-7a-icin-tarih-verildi.html">Geri sayım başladı! Türksat 7A için tarih verildi...</a>
+                </h2>
+                <p class="news-summary">Geri sayım başladı! Türksat 7A için tarih verildi...  Haber 7</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/geri-sayim-basladi-turksat-7a-icin-tarih-verildi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">09:28</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofestte-son-gun-heyecani.html">TEKNOFEST'te son gün heyecanı</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST'te son gün heyecanı  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofestte-son-gun-heyecani.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">TeknoTalk</span>
+                    <span class="time">08:33</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/simart-teknoloji-ankaradaki-yeni-uretim-ussunu-acti.html">Şımart Teknoloji Ankara’daki yeni üretim üssünü açtı</a>
+                </h2>
+                <p class="news-summary">Şımart Teknoloji Ankara’daki yeni üretim üssünü açtı  TeknoTalk</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/simart-teknoloji-ankaradaki-yeni-uretim-ussunu-acti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">08:31</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknoloji-alaninda-yaparak-pratik-yaparak-ve-ustalasarak-og.html">Teknoloji alanında yaparak, pratik yaparak ve ustalaşarak öğrenme ruhunu teşvik etmek.</a>
+                </h2>
+                <p class="news-summary">Teknoloji alanında yaparak, pratik yaparak ve ustalaşarak öğrenme ruhunu teşvik etmek.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknoloji-alaninda-yaparak-pratik-yaparak-ve-ustalasarak-og.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">08:13</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-alanindaki-burslara-iliskin-en-son-duzenl.html">Bilim ve teknoloji alanındaki burslara ilişkin en son düzenlemeler.</a>
+                </h2>
+                <p class="news-summary">Bilim ve teknoloji alanındaki burslara ilişkin en son düzenlemeler.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-alanindaki-burslara-iliskin-en-son-duzenl.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">ogretmenler.net</span>
+                    <span class="time">08:10</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/marifet-projesi-hayata-geciyor-imam-hatip-okullarinda-tekno.html">MARİFET Projesi Hayata Geçiyor: İmam Hatip Okullarında Teknoloji, Yapay Zekâ ve Üretim Ekosistemi Kuruluyor</a>
+                </h2>
+                <p class="news-summary">MARİFET Projesi Hayata Geçiyor: İmam Hatip Okullarında Teknoloji, Yapay Zekâ ve Üretim Ekosistemi Kuruluyor  ogretmenler.net</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/marifet-projesi-hayata-geciyor-imam-hatip-okullarinda-tekno.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">08:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-bakani-bilgi-verimlilik-ve-teknolojiye.html">Bilim ve Teknoloji Bakanı: Bilgi, verimlilik ve teknolojiye hakimiyet yoluyla daha fazla değer yaratmalıyız.</a>
+                </h2>
+                <p class="news-summary">Bilim ve Teknoloji Bakanı: Bilgi, verimlilik ve teknolojiye hakimiyet yoluyla daha fazla değer yaratmalıyız.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bilim-ve-teknoloji-bakani-bilgi-verimlilik-ve-teknolojiye.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">07:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/arastirma-sonuclarinin-ticarilestirilmesindeki-darbogazlarin.html">Araştırma sonuçlarının ticarileştirilmesindeki darboğazların ortadan kaldırılması.</a>
+                </h2>
+                <p class="news-summary">Araştırma sonuçlarının ticarileştirilmesindeki darboğazların ortadan kaldırılması.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/arastirma-sonuclarinin-ticarilestirilmesindeki-darbogazlarin.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Milliyet</span>
+                    <span class="time">07:01</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-ve-varank-demiroren-medya-standini-ziyaret-etti.html">Bakan Kacır ve varank, Demirören Medya standını ziyaret etti: ‘Gençlerimizi teknoloji ile buluşturuyoruz’</a>
+                </h2>
+                <p class="news-summary">Bakan Kacır ve varank, Demirören Medya standını ziyaret etti: ‘Gençlerimizi teknoloji ile buluşturuyoruz’  Milliyet</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-kacir-ve-varank-demiroren-medya-standini-ziyaret-etti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Sabah</span>
+                    <span class="time">06:57</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/her-yasa-teknoloji-deneyimi.html">Her yaşa teknoloji deneyimi</a>
+                </h2>
+                <p class="news-summary">Her yaşa teknoloji deneyimi  Sabah</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/her-yasa-teknoloji-deneyimi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Vietnam.vn</span>
+                    <span class="time">06:39</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-vu-hai-quan-japonya-ile-isbirligi-yapilacak-uc-alani.html">Bakan Vu Hai Quan, Japonya ile işbirliği yapılacak üç alanı önerdi: eğitim, araştırma ve teknoloji.</a>
+                </h2>
+                <p class="news-summary">Bakan Vu Hai Quan, Japonya ile işbirliği yapılacak üç alanı önerdi: eğitim, araştırma ve teknoloji.  Vietnam.vn</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-vu-hai-quan-japonya-ile-isbirligi-yapilacak-uc-alani.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Yeni Şafak</span>
+                    <span class="time">04:00</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/cepteki-acil-yardim-sistemi.html">Cepteki acil yardım sistemi</a>
+                </h2>
+                <p class="news-summary">Cepteki acil yardım sistemi  Yeni Şafak</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/cepteki-acil-yardim-sistemi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">03:48</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/turk-yildizlari-teknofest-guneydoguda-gosteri-ucusu-yapti.html">Türk Yıldızları TEKNOFEST Güneydoğu'da gösteri uçuşu yaptı</a>
+                </h2>
+                <p class="news-summary">Türk Yıldızları TEKNOFEST Güneydoğu'da gösteri uçuşu yaptı  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/turk-yildizlari-teknofest-guneydoguda-gosteri-ucusu-yapti.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">FintekWins</span>
+                    <span class="time">02:49</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/oduyo-deloitte-teknoloji-fast-50ye-girdi.html">Ödüyo Deloitte Teknoloji Fast 50’ye Girdi</a>
+                </h2>
+                <p class="news-summary">Ödüyo Deloitte Teknoloji Fast 50’ye Girdi  FintekWins</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/oduyo-deloitte-teknoloji-fast-50ye-girdi.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Yeni Mesaj</span>
+                    <span class="time">00:46</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknoloji-ve-mahremiyet-arasindaki-kritik-denge.html">Teknoloji ve mahremiyet arasındaki kritik denge</a>
+                </h2>
+                <p class="news-summary">Teknoloji ve mahremiyet arasındaki kritik denge  Yeni Mesaj</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknoloji-ve-mahremiyet-arasindaki-kritik-denge.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">00:21</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguda-birinci-olan-gencler-projeleriyle-gel.html">TEKNOFEST Güneydoğu'da birinci olan gençler projeleriyle geleceğe hazırlanıyor</a>
+                </h2>
+                <p class="news-summary">TEKNOFEST Güneydoğu'da birinci olan gençler projeleriyle geleceğe hazırlanıyor  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/teknofest-guneydoguda-birinci-olan-gencler-projeleriyle-gel.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">Anadolu Ajansı</span>
+                    <span class="time">00:11</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/ticaret-bakani-bolat-ihracatimizi-daha-yuksek-katma-degerli.html">Ticaret Bakanı Bolat: İhracatımızı daha yüksek katma değerli ve teknoloji yoğun bir yapıya kavuşturmak temel önceliğimiz</a>
+                </h2>
+                <p class="news-summary">Ticaret Bakanı Bolat: İhracatımızı daha yüksek katma değerli ve teknoloji yoğun bir yapıya kavuşturmak temel önceliğimiz  Anadolu Ajansı</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/ticaret-bakani-bolat-ihracatimizi-daha-yuksek-katma-degerli.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-header">
+                    <a href="/teknoloji/2026/10/04/" class="badge">Teknoloji</a>
+                    <span class="source">TRT Haber</span>
+                    <span class="time">00:06</span>
+                </div>
+                <h2 class="news-title">
+                    <a href="/teknoloji/2026/10/04/bakan-goktas-cocuklarimizin-ureten-bireyler-olmasini-cok-on.html">Bakan Göktaş: Çocuklarımızın üreten bireyler olmasını çok önemsiyoruz</a>
+                </h2>
+                <p class="news-summary">Bakan Göktaş: Çocuklarımızın üreten bireyler olmasını çok önemsiyoruz  TRT Haber</p>
+                <div class="card-footer">
+                    <a href="/teknoloji/2026/10/04/bakan-goktas-cocuklarimizin-ureten-bireyler-olmasini-cok-on.html" class="read-btn">Detayı Oku →</a>
+                </div>
+            </article>
+            
+        </main>
+        
+    <div style="text-align: center; margin: 20px 0;">
+        <script id="_wauelp">var _wau = _wau || []; _wau.push(["dynamic", "tgui40zwet", "elp", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+    </div>
+    
+    </div>
+    
+    <footer style="background-color: #1c1e21; color: #90949c; padding: 30px 15px; margin-top: 40px; font-size: 13px; line-height: 1.6; clear: both;">
+        <div style="max-width: 680px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="color: #fff; font-size: 16px; margin-bottom: 10px;">nearadin.net</h3>
+                    <p>Türkiye ve dünyadan en güncel son dakika haberleri, anlık gelişmeler ve canlı servis haber akış platformu.</p>
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <h4 style="color: #fff; font-size: 14px; margin-bottom: 10px;">Hızlı Menü</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="/" style="color: #617085; text-decoration: none;">Anasayfa</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/gundem/" style="color: #617085; text-decoration: none;">Gündem</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/spor/" style="color: #617085; text-decoration: none;">Spor</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/ekonomi/" style="color: #617085; text-decoration: none;">Ekonomi</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/teknoloji/" style="color: #617085; text-decoration: none;">Teknoloji</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/arsiv/" style="color: #617085; text-decoration: none;">📅 Günlük Arşiv</a></li>
+                        <li style="margin-bottom: 5px;"><a href="/sitemap.xml" style="color: #617085; text-decoration: none;">🔗Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 12px; color: #65676b;">
+                <p style="margin-bottom: 8px;">Takip Edin: <a href="https://x.com/nearadin2026" target="_blank" rel="nofollow" style="color: #1877f2; text-decoration: none; font-weight: bold;">@nearadin2026 (X / Twitter)</a></p>
+                <p>© 2026 nearadin.net - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- KVKK & GDPR ÇEREZ İZİN BANDI -->
+    <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #1c1e21; color: #ffffff; padding: 15px 20px; z-index: 99999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); font-size: 13px; line-height: 1.5; border-top: 3px solid #0056b3;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+            <div style="flex: 1; min-width: 280px;">
+                🍪 <strong>Çerez Kullanımı ve KVKK Bilgilendirmesi:</strong> Sitemizde deneyiminizi iyileştirmek, içerik ve reklamları kişiselleştirmek ve trafik analizi yapmak amacıyla çerezler (cookies) kullanılmaktadır. Sitemizi kullanmaya devam ederek KVKK / GDPR standartlarına uygun çerez kullanımını kabul etmiş sayılırsınız.
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="acceptCookieConsent()" style="background-color: #0056b3; color: white; border: none; padding: 8px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; transition: background 0.2s;">Kabul Et</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookieConsent() {
+            localStorage.setItem('cookieConsentAccepted', 'true');
+            document.getElementById('cookieConsentBanner').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookieConsentAccepted')) {
+                document.getElementById('cookieConsentBanner').style.display = 'block';
+            }
+        });
+    </script>
+    
+</body>
+</html>
