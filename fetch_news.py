@@ -442,6 +442,15 @@ def generate_weather_page(header_html, footer_html, whos_amung_us_code, admatic_
 def fetch_and_generate():
     CATEGORIES = {
         "son-dakika": {"name": "Son Dakika", "url": "https://news.google.com/rss/search?q=son+dakika&hl=tr&gl=TR&ceid=TR:tr"},
+        "spor-haber": {"name": "Spor", "url": "https://news.google.com/rss/search?q=spor+haber&hl=tr&gl=TR&ceid=TR:tr"},
+        "teknoloji": {"name": "Teknoloji", "url": "https://news.google.com/rss/search?q=teknoloji&hl=tr&gl=TR&ceid=TR:tr"},
+        "kultur-turizm": {"name": "Kültür & Turizm", "url": "https://news.google.com/rss/search?q=k%C3%BClt%C3%BCr+turizm&oq=k%C3%BClt%C3%BCr+turizm&hl=tr&gl=TR&ceid=TR:tr"},
+        "hava-durumu": {"name": "Hava", "url": "https://news.google.com/rss/search?q=hava+durumu&hl=tr&gl=TR&ceid=TR:tr"},
+        "televizyon": {"name": "TV", "url": "https://news.google.com/rss/search?q=televizyon&hl=tr&gl=TR&ceid=TR:tr"},
+        "ekonomi": {"name": "Ekonomi", "url": "https://news.google.com/rss/search?q=ekonomi&hl=tr&gl=TR&ceid=TR:tr"},
+        "saglik": {"name": "Sağlık", "url": "https://news.google.com/rss/search?q=sağlık&hl=tr&gl=TR&ceid=TR:tr"},
+        "ucuz-bilet": {"name": "Ucuzluk", "url": "https://news.google.com/rss/search?q=ucuz+bilet&hl=tr&gl=TR&ceid=TR:tr"},
+        "yazilim": {"name": "Yazılım", "url": "https://news.google.com/rss/search?q=yazılım&hl=tr&gl=TR&ceid=TR:tr"},
     }
 
     headers = {
