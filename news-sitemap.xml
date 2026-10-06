@@ -68,17 +68,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/10/06/israil-ateskes-dinlemedi-lubnani-vurdu.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-06T18:25:41+03:00</news:publication_date>
-      <news:title>İsrail ateşkes dinlemedi: Lübnan&#x27;ı vurdu</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/son-dakika/2026/10/06/son-dakika-fon-skandalina-adi-karisan-akpli-hayati-yazici.html</loc>
     <news:news>
       <news:publication>
@@ -178,17 +167,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nearadin.net/son-dakika/2026/10/06/son-dakika-depremler-listesi-6-ekim-2026-az-once-deprem-mi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-06T18:05:50+03:00</news:publication_date>
-      <news:title>SON DAKİKA DEPREMLER LİSTESİ 6 EKİM 2026 | Az önce deprem mi oldu? AFAD ve Kandilli Rasathanesi son açıklamaları</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nearadin.net/son-dakika/2026/10/06/son-dakika-i-fon-sorusturmasinda-flas-gelisme-ak-partiden.html</loc>
     <news:news>
       <news:publication>
@@ -208,17 +186,6 @@
       </news:publication>
       <news:publication_date>2026-10-06T18:00:18+03:00</news:publication_date>
       <news:title>Ripple finans deviyle ortaklığını genişletti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/10/06/yagis-sonrasi-boluda-kanlica-mantarinin-kilosu-500-600-lira.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-06T17:50:12+03:00</news:publication_date>
-      <news:title>Yağış sonrası Bolu&#x27;da kanlıca mantarının kilosu 500-600 liradan alıcı buluyor</news:title>
     </news:news>
   </url>
   <url>
@@ -428,6 +395,17 @@
       </news:publication>
       <news:publication_date>2026-10-06T16:07:00+03:00</news:publication_date>
       <news:title>Kubilay Kaan Kundakçı cinayeti davası | Aleyna Kalaycıoğlu hakkında tahliye talebi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nearadin.net/son-dakika/2026/10/06/son-dakika-tff-olaganustu-toplandi-montella-apar-topar-ri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-06T16:05:00+03:00</news:publication_date>
+      <news:title>Son Dakika | TFF olağanüstü toplandı: Montella apar topar Riva&#x27;ya gitti</news:title>
     </news:news>
   </url>
   <url>
@@ -805,6 +783,17 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nearadin.net/son-dakika/2026/10/06/suudi-arabistanda-havalimanlarina-saldiri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>nearadin.net</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-06T11:00:00+03:00</news:publication_date>
+      <news:title>Suudi Arabistan&#x27;da havalimanlarına saldırı</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nearadin.net/son-dakika/2026/10/06/son-dakika-balikesirde-dehset-sacan-deprem-kucuk-olcekli.html</loc>
     <news:news>
       <news:publication>
@@ -1044,17 +1033,6 @@
       </news:publication>
       <news:publication_date>2026-10-06T07:43:00+03:00</news:publication_date>
       <news:title>Son dakika... Bayraklı Belediyesi’ne operasyon: Eski Başkan Serdar Sandal hakkında da gözaltı kararı</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nearadin.net/son-dakika/2026/10/06/bayrakli-belediyesine-yolsuzluk-sorusturmasi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>nearadin.net</news:name>
-        <news:language>tr</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-06T07:37:00+03:00</news:publication_date>
-      <news:title>Bayraklı Belediyesi&#x27;ne yolsuzluk soruşturması</news:title>
     </news:news>
   </url>
   <url>
